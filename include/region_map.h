@@ -12,7 +12,8 @@ enum RegionMapType
     REGION_MAP_KANTO,
     REGION_MAP_SEVII123,
     REGION_MAP_SEVII45,
-    REGION_MAP_SEVII67
+    REGION_MAP_SEVII67,
+    REGION_MAP_JOHTO, // Super Emerald
 };
 
 enum
@@ -143,5 +144,7 @@ void SetFlyDestination(struct RegionMap* regionMap);
 
 extern const struct RegionMapLocation gRegionMapEntries[];
 extern const struct RegionMapInfo gRegionMapInfos[];
+
+void SE_SetJohtoVisitedFlag(void);
 
 #endif //GUARD_REGION_MAP_H

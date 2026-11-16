@@ -1,4 +1,5 @@
 #include "global.h"
+#include "region_map.h"
 #include "bug_contest.h"
 #include "script.h"
 #include "event_data.h"
@@ -449,6 +450,7 @@ static void SE_UpdateKantoWorldState(void)
 static void SE_UpdateJohtoWorldState(void)
 {
     if (!IsInJohto()) return;
+    SE_SetJohtoVisitedFlag();
     if (!FlagGet(FLAG_SE_JOHTO_INITIALIZED))
         RunScriptImmediately(SE_EventScript_InitJohto);
     else if (VarGet(VAR_SE_JOHTO_STATE_VERSION) < SE_JOHTO_STATE_VERSION)

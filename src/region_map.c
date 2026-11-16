@@ -92,6 +92,7 @@ static void RegionMap_SetBG2XAndBG2Y(s16 x, s16 y);
 static void InitMapBasedOnPlayerLocation(void);
 static void RegionMap_InitializeStateBasedOnSSTidalLocation(void);
 static u8 GetMapsecType(mapsec_u16_t mapSecId);
+static u8 SE_GetJohtoMapsecType(mapsec_u16_t mapSecId);
 static mapsec_u16_t CorrectSpecialMapSecId_Internal(mapsec_u16_t mapSecId);
 static mapsec_u16_t GetTerraOrMarineCaveMapSecId(void);
 static void GetMarineCaveCoords(u16 *x, u16 *y);
@@ -137,6 +138,7 @@ static const u8 sRegionMapPlayerIcon_LeafGfx[] = INCGFX_U8("graphics/pokenav/reg
 #include "data/region_map/region_map_layout_sevii123.h"
 #include "data/region_map/region_map_layout_sevii45.h"
 #include "data/region_map/region_map_layout_sevii67.h"
+#include "data/region_map/region_map_layout_johto.h"
 #include "data/region_map/region_map_entries.h"
 
 static const mapsec_u16_t sRegionMap_SpecialPlaceLocations[][2] =
@@ -325,8 +327,26 @@ static const u16 ALIGNED(4) sRegionMapSevii67_Pal[] = INCGFX_U16("graphics/poken
 static const u32 sRegionMapSevii67_Gfx[] = INCGFX_U32("graphics/pokenav/region_map/map_sevii_67.png", ".8bpp.smol");
 static const u32 sRegionMapSevii67_Tilemap[] = INCGFX_U32("graphics/pokenav/region_map/map_sevii_67.bin", ".smolTM");
 
+// Super Emerald: Johto map from Pokemon Heart & Soul
+static const u16 ALIGNED(4) sPokedexAreaMapJohto_Pal[] = INCGFX_U16("graphics/pokedex/region_map_johto.pal", ".gbapal");
+static const u32 sPokedexAreaMapJohto_Gfx[] = INCGFX_U32("graphics/pokedex/region_map_johto.png", ".8bpp.smol");
+static const u32 sPokedexAreaMapJohto_Tilemap[] = INCGFX_U32("graphics/pokedex/region_map_johto.bin", ".smolTM");
+static const u16 ALIGNED(4) sRegionMapJohto_Pal[] = INCGFX_U16("graphics/pokenav/region_map/map_johto.pal", ".gbapal");
+static const u32 sRegionMapJohto_Gfx[] = INCGFX_U32("graphics/pokenav/region_map/map_johto.png", ".8bpp.smol");
+static const u32 sRegionMapJohto_Tilemap[] = INCGFX_U32("graphics/pokenav/region_map/map_johto.bin", ".smolTM");
+
 const struct RegionMapInfo gRegionMapInfos[] =
 {
+    [REGION_MAP_JOHTO]    =
+    {
+        .dexMapPalette = sPokedexAreaMapJohto_Pal,
+        .dexMapGfx = sPokedexAreaMapJohto_Gfx,
+        .dexMapTilemap = sPokedexAreaMapJohto_Tilemap,
+        .dexMapPaletteSize = sizeof(sPokedexAreaMapJohto_Pal),
+        .regionMapPalette = sRegionMapJohto_Pal,
+        .regionMapGfx = sRegionMapJohto_Gfx,
+        .regionMapTilemap = sRegionMapJohto_Tilemap,
+    },
     [REGION_MAP_HOENN]    =
     {
         .dexMapPalette = sPokedexAreaMap_Pal,
@@ -381,6 +401,20 @@ const struct RegionMapInfo gRegionMapInfos[] =
 
 static const u8 sMapHealLocations[][3] =
 {
+    [MAPSEC_NEW_BARK_TOWN] = {MAP_GROUP(MAP_NEW_BARK_TOWN_HNS), MAP_NUM(MAP_NEW_BARK_TOWN_HNS), HEAL_LOCATION_NEW_BARK_TOWN_HNS},
+    [MAPSEC_CHERRYGROVE_CITY] = {MAP_GROUP(MAP_CHERRYGROVE_CITY_HNS), MAP_NUM(MAP_CHERRYGROVE_CITY_HNS), HEAL_LOCATION_CHERRYGROVE_CITY_HNS},
+    [MAPSEC_VIOLET_CITY] = {MAP_GROUP(MAP_VIOLET_CITY_HNS), MAP_NUM(MAP_VIOLET_CITY_HNS), HEAL_LOCATION_VIOLET_CITY_HNS},
+    [MAPSEC_AZALEA_TOWN] = {MAP_GROUP(MAP_AZALEA_TOWN_HNS), MAP_NUM(MAP_AZALEA_TOWN_HNS), HEAL_LOCATION_AZALEA_TOWN_HNS},
+    [MAPSEC_GOLDENROD_CITY] = {MAP_GROUP(MAP_GOLDENROD_CITY_HNS), MAP_NUM(MAP_GOLDENROD_CITY_HNS), HEAL_LOCATION_GOLDENROD_CITY_HNS},
+    [MAPSEC_ECRUTEAK_CITY] = {MAP_GROUP(MAP_ECRUTEAK_CITY_HNS), MAP_NUM(MAP_ECRUTEAK_CITY_HNS), HEAL_LOCATION_ECRUTEAK_CITY_HNS},
+    [MAPSEC_OLIVINE_CITY] = {MAP_GROUP(MAP_OLIVINE_CITY_HNS), MAP_NUM(MAP_OLIVINE_CITY_HNS), HEAL_LOCATION_OLIVINE_CITY_HNS},
+    [MAPSEC_CIANWOOD_CITY] = {MAP_GROUP(MAP_CIANWOOD_CITY_HNS), MAP_NUM(MAP_CIANWOOD_CITY_HNS), HEAL_LOCATION_CIANWOOD_CITY_HNS},
+    [MAPSEC_SAFARI_ZONE_GATE] = {MAP_GROUP(MAP_SAFARI_ZONE_GATE_HNS), MAP_NUM(MAP_SAFARI_ZONE_GATE_HNS), HEAL_LOCATION_SAFARI_ZONE_GATE_HNS},
+    [MAPSEC_MAHOGANY_TOWN] = {MAP_GROUP(MAP_MAHOGANYTOWN_HNS), MAP_NUM(MAP_MAHOGANYTOWN_HNS), HEAL_LOCATION_MAHOGANY_TOWN_HNS},
+    [MAPSEC_LAKE_OF_RAGE] = {MAP_GROUP(MAP_LAKE_OF_RAGE_HNS), MAP_NUM(MAP_LAKE_OF_RAGE_HNS), HEAL_LOCATION_LAKE_OF_RAGE_HNS},
+    [MAPSEC_BLACKTHORN_CITY] = {MAP_GROUP(MAP_BLACKTHORN_CITY_HNS), MAP_NUM(MAP_BLACKTHORN_CITY_HNS), HEAL_LOCATION_BLACKTHORN_CITY_HNS},
+    [MAPSEC_MT_SILVER] = {MAP_GROUP(MAP_MT_SILVER_OUTSIDE_HNS), MAP_NUM(MAP_MT_SILVER_OUTSIDE_HNS), HEAL_LOCATION_MT_SILVER_HNS},
+    [MAPSEC_ROUTE_26] = {MAP_GROUP(MAP_ROUTE26NORTH_HNS), MAP_NUM(MAP_ROUTE26NORTH_HNS), HEAL_LOCATION_ROUTE26NORTH_HNS},
     [MAPSEC_LITTLEROOT_TOWN] = {MAP_GROUP(MAP_LITTLEROOT_TOWN), MAP_NUM(MAP_LITTLEROOT_TOWN), HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F},
     [MAPSEC_OLDALE_TOWN] = {MAP_GROUP(MAP_OLDALE_TOWN), MAP_NUM(MAP_OLDALE_TOWN), HEAL_LOCATION_OLDALE_TOWN},
     [MAPSEC_DEWFORD_TOWN] = {MAP_GROUP(MAP_DEWFORD_TOWN), MAP_NUM(MAP_DEWFORD_TOWN), HEAL_LOCATION_DEWFORD_TOWN},
@@ -1164,6 +1198,8 @@ enum RegionMapType GetRegionMapType(u32 mapSecId)
 {
     switch (GetRegionForSectionId(mapSecId))
     {
+    case REGION_JOHTO:
+        return REGION_MAP_JOHTO;
     case REGION_KANTO:
         switch (GetKantoSubregion(mapSecId))
         {
@@ -1194,6 +1230,8 @@ static mapsec_u16_t GetMapSecIdAt(u16 x, u16 y)
 
     switch (GetCurrentRegion())
     {
+    case REGION_JOHTO:
+        return sRegionMapSections_Johto[y][x];
     case REGION_KANTO:
         switch (GetKantoSubregion(gMapHeader.regionMapSectionId))
         {
@@ -1503,7 +1541,7 @@ static u8 GetMapsecType(mapsec_u16_t mapSecId)
     case MAPSEC_ROUTE_10_POKECENTER:
         return FlagGet(FLAG_WORLD_MAP_ROUTE10_POKEMON_CENTER_1F) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
     default:
-        return MAPSECTYPE_ROUTE;
+        return SE_GetJohtoMapsecType(mapSecId);
     }
 }
 
@@ -1872,7 +1910,7 @@ u8 *GetMapName(u8 *dest, mapsec_u16_t regionMapId, u16 padLength)
     {
         str = GetSecretBaseMapName(dest);
     }
-    else if (regionMapId < MAPSEC_NONE)
+    else if (IsValidMapSec(regionMapId)) // Super Emerald: Johto sections too
     {
         str = StringCopy(dest, gRegionMapEntries[regionMapId].name);
     }
@@ -2139,6 +2177,20 @@ struct FlyLocation
 
 static const struct FlyLocation sFlyLocations[] =
 {
+    { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_NEW_BARK_TOWN, .flag = FLAG_SE_VISITED_NEW_BARK_TOWN },
+    { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_CHERRYGROVE_CITY, .flag = FLAG_SE_VISITED_CHERRYGROVE_CITY },
+    { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_VIOLET_CITY, .flag = FLAG_SE_VISITED_VIOLET_CITY },
+    { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_AZALEA_TOWN, .flag = FLAG_SE_VISITED_AZALEA_TOWN },
+    { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_GOLDENROD_CITY, .flag = FLAG_SE_VISITED_GOLDENROD_CITY },
+    { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_ECRUTEAK_CITY, .flag = FLAG_SE_VISITED_ECRUTEAK_CITY },
+    { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_OLIVINE_CITY, .flag = FLAG_SE_VISITED_OLIVINE_CITY },
+    { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_CIANWOOD_CITY, .flag = FLAG_SE_VISITED_CIANWOOD_CITY },
+    { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_SAFARI_ZONE_GATE, .flag = FLAG_SE_VISITED_SAFARI_ZONE_GATE },
+    { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_MAHOGANY_TOWN, .flag = FLAG_SE_VISITED_MAHOGANY_TOWN },
+    { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_LAKE_OF_RAGE, .flag = FLAG_SE_VISITED_LAKE_OF_RAGE },
+    { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_BLACKTHORN_CITY, .flag = FLAG_SE_VISITED_BLACKTHORN_CITY },
+    { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_MT_SILVER, .flag = FLAG_SE_VISITED_MT_SILVER },
+    { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_ROUTE_26, .flag = FLAG_SE_VISITED_ROUTE_26 },
     {
         .regionMapType = REGION_MAP_HOENN,
         .mapsec = MAPSEC_LITTLEROOT_TOWN,
@@ -2527,4 +2579,27 @@ void SetFlyDestination(struct RegionMap* regionMap)
         SetWarpDestinationToHealLocation(flyDestination);
     else
         SetWarpDestinationToMapWarp(sMapHealLocations[regionMap->mapSecId][0], sMapHealLocations[regionMap->mapSecId][1], WARP_ID_NONE);
+}
+
+// Super Emerald: Johto towns become Fly destinations the first time the player enters them
+void SE_SetJohtoVisitedFlag(void)
+{
+    u32 i;
+    for (i = 0; i < ARRAY_COUNT(sFlyLocations); i++)
+    {
+        if (sFlyLocations[i].regionMapType == REGION_MAP_JOHTO && sFlyLocations[i].mapsec == gMapHeader.regionMapSectionId)
+            FlagSet(sFlyLocations[i].flag);
+    }
+}
+
+// Super Emerald: Johto towns are cities on the region map; flyable once visited
+static u8 SE_GetJohtoMapsecType(mapsec_u16_t mapSecId)
+{
+    u32 i;
+    for (i = 0; i < ARRAY_COUNT(sFlyLocations); i++)
+    {
+        if (sFlyLocations[i].regionMapType == REGION_MAP_JOHTO && sFlyLocations[i].mapsec == mapSecId)
+            return FlagGet(sFlyLocations[i].flag) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
+    }
+    return MAPSECTYPE_ROUTE;
 }
