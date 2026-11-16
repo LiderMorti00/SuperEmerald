@@ -49,12 +49,12 @@ PokemonLeague_BrunosRoom_EventScript_Bruno::
 	goto_if_set FLAG_DEFEATED_BRUNO, PokemonLeague_BrunosRoom_EventScript_PostBattle
 	famechecker FAMECHECKER_BRUNO, 0
 	famechecker FAMECHECKER_BRUNO, 1
-	call_if_unset FLAG_SE_KANTO_CHAMPION, PokemonLeague_BrunosRoom_EventScript_Intro
-	call_if_set FLAG_SE_KANTO_CHAMPION, PokemonLeague_BrunosRoom_EventScript_RematchIntro
+	call_if_unset FLAG_SE_KANTO_COMPLETE, PokemonLeague_BrunosRoom_EventScript_Intro
+	call_if_set FLAG_SE_KANTO_COMPLETE, PokemonLeague_BrunosRoom_EventScript_RematchIntro
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
-	call_if_unset FLAG_SE_KANTO_CHAMPION, PokemonLeague_BrunosRoom_EventScript_Battle
-	call_if_set FLAG_SE_KANTO_CHAMPION, PokemonLeague_BrunosRoom_EventScript_Rematch
+	call_if_unset FLAG_SE_KANTO_COMPLETE, PokemonLeague_BrunosRoom_EventScript_Battle
+	call_if_set FLAG_SE_KANTO_COMPLETE, PokemonLeague_BrunosRoom_EventScript_Rematch
 	clearflag FLAG_TEMP_5
 	goto PokemonLeague_BrunosRoom_EventScript_DefeatedBruno
 	end
@@ -113,36 +113,33 @@ PokemonLeague_BrunosRoom_EventScript_BrunoLookAwayDown::
 	return
 
 PokemonLeague_BrunosRoom_Text_Intro::
-	.string "I am BRUNO of the ELITE FOUR!\p"
-	.string "Through rigorous training, people\n"
-	.string "and POKéMON can become stronger\l"
-	.string "without limit.\p"
-	.string "I've lived and trained with my\n"
-	.string "fighting POKéMON!\l"
-	.string "And that will never change!\p"
-	.string "{PLAYER}!\p"
-	.string "We will grind you down with our\n"
-	.string "superior power!\p"
-	.string "Hoo hah!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "Fwahahahaha!\p"
+	.string "I am KOGA of the ELITE FOUR.\p"
+	.string "I live in the shadows, a ninja!\p"
+	.string "My intricate style will confound\n"
+	.string "and destroy you!\p"
+	.string "Confusion, sleep, poison…\n"
+	.string "Prepare to be the victim of my\l"
+	.string "sinister technique!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_BrunosRoom_Text_RematchIntro::
-	.string "I am BRUNO of the ELITE FOUR!\p"
-	.string "Through rigorous training, people\n"
-	.string "and POKéMON can become stronger\l"
-	.string "without limit.\p"
-	.string "I've lived and trained with my\n"
-	.string "fighting POKéMON!\l"
-	.string "And that will never change!\p"
-	.string "{PLAYER}!\p"
-	.string "We will grind you down with our\n"
-	.string "superior power!\p"
-	.string "Hoo hah!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "Fwahahahaha!\p"
+	.string "So, you have returned to face\n"
+	.string "KOGA of the ELITE FOUR!\p"
+	.string "My daughter JANINE told me of\n"
+	.string "your battle in FUCHSIA.\p"
+	.string "Now it is my turn.\n"
+	.string "Prepare yourself!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_BrunosRoom_Text_Defeat::
-	.string "Why?\n"
-	.string "How could I lose?$"
+	.string "Ah!\n"
+	.string "You have proven your worth!$"
 
 PokemonLeague_BrunosRoom_Text_PostBattle::
-	.string "My job is done.\n"
-	.string "Go face your next challenge.$"
+	.string "I subjected you to everything I\n"
+	.string "could muster.\p"
+	.string "But my efforts failed.\n"
+	.string "I must hone my skills.\p"
+	.string "Go on to the next room, and put\n"
+	.string "your abilities to the test!$"
 

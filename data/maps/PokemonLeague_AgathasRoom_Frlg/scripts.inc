@@ -50,12 +50,12 @@ PokemonLeague_AgathasRoom_EventScript_Agatha::
 	famechecker FAMECHECKER_AGATHA, 0
 	famechecker FAMECHECKER_AGATHA, 4
 	famechecker FAMECHECKER_OAK, 4
-	call_if_unset FLAG_SE_KANTO_CHAMPION, PokemonLeague_AgathasRoom_EventScript_Intro
-	call_if_set FLAG_SE_KANTO_CHAMPION, PokemonLeague_AgathasRoom_EventScript_RematchIntro
+	call_if_unset FLAG_SE_KANTO_COMPLETE, PokemonLeague_AgathasRoom_EventScript_Intro
+	call_if_set FLAG_SE_KANTO_COMPLETE, PokemonLeague_AgathasRoom_EventScript_RematchIntro
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
-	call_if_unset FLAG_SE_KANTO_CHAMPION, PokemonLeague_AgathasRoom_EventScript_Battle
-	call_if_set FLAG_SE_KANTO_CHAMPION, PokemonLeague_AgathasRoom_EventScript_Rematch
+	call_if_unset FLAG_SE_KANTO_COMPLETE, PokemonLeague_AgathasRoom_EventScript_Battle
+	call_if_set FLAG_SE_KANTO_COMPLETE, PokemonLeague_AgathasRoom_EventScript_Rematch
 	clearflag FLAG_TEMP_5
 	goto PokemonLeague_AgathasRoom_EventScript_DefeatedAgatha
 	end
@@ -89,38 +89,26 @@ PokemonLeague_AgathasRoom_EventScript_DefeatedAgatha::
 	end
 
 PokemonLeague_AgathasRoom_Text_Intro::
-	.string "I am KAREN of the ELITE FOUR.\p"
-	.string "You're {PLAYER}?\n"
-	.string "How amusing.\p"
-	.string "I love DARK-type POKéMON.\p"
-	.string "I find their wild, tough image to\n"
-	.string "be so appealing.\p"
-	.string "And they're so strong.\p"
-	.string "Think you can take them?\n"
-	.string "Just try to entertain me.\p"
-	.string "Let's go.{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "I am BRUNO of the ELITE FOUR!\p"
+	.string "Through rigorous training, people\n"
+	.string "and POKéMON can become stronger.\p"
+	.string "I've weight trained with my\n"
+	.string "POKéMON for years.\p"
+	.string "Our power will crush you!\p"
+	.string "Hoo hah!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_AgathasRoom_Text_RematchIntro::
-	.string "I am KAREN of the ELITE FOUR.\p"
-	.string "So, the CHAMPION has come back.\n"
-	.string "How amusing.\p"
-	.string "My DARK-type POKéMON have grown\n"
-	.string "even tougher since our last battle.\p"
-	.string "Let's see if you can still keep up.\p"
-	.string "Let's go.{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "So you're back, {PLAYER}!\p"
+	.string "My POKéMON and I never stopped\n"
+	.string "training after our last battle.\p"
+	.string "Show me your power once more!\p"
+	.string "Hoo hah!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_AgathasRoom_Text_Defeat::
-	.string "Well, aren't you good.\n"
-	.string "I like that in a TRAINER.$"
+	.string "Why? How could we lose?$"
 
 PokemonLeague_AgathasRoom_Text_PostBattle::
-	.string "Strong POKéMON.\p"
-	.string "Weak POKéMON.\p"
-	.string "That is only the selfish perception\n"
-	.string "of people.\p"
-	.string "Truly skilled TRAINERS should try\n"
-	.string "to win with their favorites.\p"
-	.string "I like your style.\n"
-	.string "You understand what's important.\p"
-	.string "Go on--the CHAMPION is waiting.$"
+	.string "Having lost, I have no right to\n"
+	.string "say anything…\p"
+	.string "Go face your next challenge!$"
 

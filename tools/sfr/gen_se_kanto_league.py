@@ -6,13 +6,15 @@ Data: pret/pokeheartgold files/poketool/trainer/trainers.json (path as first arg
 
 Levels:
 - Gym Leaders: HGSS 44-60 -> 55-65   (55 + (L - 44) x 0.625)
-- Elite Four:  HGSS 40-50 -> 65-75   (L + 25)
-- Champion Red: HGSS 80-88 -> 72-80  (L - 8)
-- League rematch after Red (_2 slots): HGSS rematch teams, 60-75 -> 70-79 (70 + (L - 60) x 0.6)
+- Elite Four (Johto League):  HGSS 40-47 -> 62-69   (L + 22)
+- Champion Lance: HGSS 46-50 -> 66-70  (L + 20)
+- Red (Mt. Silver): HGSS 80-88 -> 72-80  (L - 8)
+- League rematch after Kanto (_2 / REMATCH slots): HGSS rematch teams, 58-75 -> 69-79 (70 + (L - 60) x 0.6)
 - Gym Leader rematches after Red: HGSS rematch teams, 48-72 -> 70-78 (70 + (L - 48) / 3)
 
 Trainer slots reused: Giovanni -> Blue (Viridian), Koga -> Janine (Fuchsia),
-Lorelei -> Koga, Agatha -> Karen, the Champion slots -> Red. The Gym Leader rematches
+Lorelei -> Will, Bruno -> Koga, Agatha -> Bruno, Lance -> Karen, the Champion slots -> Lance;
+Red is TRAINER_SE_RED. The Gym Leader rematches
 use TRAINER_SFR_<LEADER>_REMATCH (src/data/trainers.party) and TRAINER_SE_BLUE_REMATCH.
 
 Usage (repo root): python3 tools/sfr/gen_se_kanto_league.py <pokeheartgold>/files/poketool/trainer/trainers.json
@@ -30,7 +32,8 @@ MOVE_FIX = {'MOVE_FAINT_ATTACK': 'MOVE_FEINT_ATTACK', 'MOVE_HI_JUMP_KICK': 'MOVE
             'MOVE_VICEGRIP': 'MOVE_VISE_GRIP', 'MOVE_DOUBLESLAP': 'MOVE_DOUBLE_SLAP'}
 
 leader = lambda l: round(55 + (l - 44) * 0.625)
-elite = lambda l: l + 25
+elite = lambda l: l + 22
+lance = lambda l: l + 20
 red = lambda l: l - 8
 elite2 = lambda l: round(70 + (l - 60) * 0.6)
 leader2 = lambda l: round(70 + (l - 48) / 3)
@@ -45,18 +48,30 @@ JOBS = [
     (258, 'TRAINER_LEADER_SABRINA', leader, {}),
     (259, 'TRAINER_LEADER_BLAINE', leader, {}),
     (261, 'TRAINER_LEADER_GIOVANNI', leader, {'Name': 'BLUE', 'Pic': 'Champion Rival Frlg'}),
-    (247, 'TRAINER_ELITE_FOUR_LORELEI', elite, {'Name': 'KOGA', 'Pic': 'Leader Koga Frlg'}),
-    (418, 'TRAINER_ELITE_FOUR_BRUNO', elite, {}),
-    (246, 'TRAINER_ELITE_FOUR_AGATHA', elite, {'Name': 'KAREN', 'Pic': 'Elite Four Karen', 'Gender': 'Female'}),
-    (244, 'TRAINER_ELITE_FOUR_LANCE', elite, {}),
-    (703, 'TRAINER_ELITE_FOUR_LORELEI_2', elite2, {'Name': 'KOGA', 'Pic': 'Leader Koga Frlg'}),
-    (704, 'TRAINER_ELITE_FOUR_BRUNO_2', elite2, {}),
-    (705, 'TRAINER_ELITE_FOUR_AGATHA_2', elite2, {'Name': 'KAREN', 'Pic': 'Elite Four Karen', 'Gender': 'Female'}),
-    (701, 'TRAINER_ELITE_FOUR_LANCE_2', elite2, {}),
+    # Indigo League = Johto League (HGSS Elite Four, Lance champion). The FRLG room slots are reused:
+    # Lorelei's room -> Will, Bruno's -> Koga, Agatha's -> Bruno, Lance's -> Karen, Champion -> Lance.
+    (245, 'TRAINER_ELITE_FOUR_LORELEI', elite, {'Name': 'WILL', 'Pic': 'Elite Four Will'}),
+    (247, 'TRAINER_ELITE_FOUR_BRUNO', elite, {'Name': 'KOGA', 'Pic': 'Elite Four Koga Hgss'}),
+    (418, 'TRAINER_ELITE_FOUR_AGATHA', elite, {'Name': 'BRUNO', 'Pic': 'Elite Four Bruno Hgss', 'Gender': 'Male'}),
+    (246, 'TRAINER_ELITE_FOUR_LANCE', elite, {'Name': 'KAREN', 'Pic': 'Elite Four Karen Hgss', 'Gender': 'Female'}),
+    (702, 'TRAINER_ELITE_FOUR_LORELEI_2', elite2, {'Name': 'WILL', 'Pic': 'Elite Four Will'}),
+    (703, 'TRAINER_ELITE_FOUR_BRUNO_2', elite2, {'Name': 'KOGA', 'Pic': 'Elite Four Koga Hgss'}),
+    (704, 'TRAINER_ELITE_FOUR_AGATHA_2', elite2, {'Name': 'BRUNO', 'Pic': 'Elite Four Bruno Hgss', 'Gender': 'Male'}),
+    (705, 'TRAINER_ELITE_FOUR_LANCE_2', elite2, {'Name': 'KAREN', 'Pic': 'Elite Four Karen Hgss', 'Gender': 'Female'}),
 ]
-for t in ('FIRST', 'REMATCH'):
-    for s in ('SQUIRTLE', 'BULBASAUR', 'CHARMANDER'):
-        JOBS.append((260, f'TRAINER_CHAMPION_{t}_{s}', red, {'Name': 'RED', 'Pic': 'Red'}))
+for s_ in ('SQUIRTLE', 'BULBASAUR', 'CHARMANDER'):
+    JOBS.append((244, f'TRAINER_CHAMPION_FIRST_{s_}', lance, {'Name': 'LANCE', 'Pic': 'Champion Lance Hgss'}))
+    JOBS.append((701, f'TRAINER_CHAMPION_REMATCH_{s_}', elite2, {'Name': 'LANCE', 'Pic': 'Champion Lance Hgss'}))
+# Red waits at the top of Mt. Silver (hand-made Johto trainer, src/data/trainers_se_johto.party).
+SE_JOHTO_PARTY = 'src/data/trainers_se_johto.party'
+RED_HEADER = '''Name: RED
+Class: Pkmn Trainer 1
+Pic: Red
+Gender: Male
+Music: Serious
+Items: Full Restore / Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability'''
 REMATCH_HEADER = '''Name: {name}
 Class: Leader Frlg
 Pic: {pic}
@@ -133,6 +148,10 @@ def main(src):
         body = '\n\n'.join(mon_lines(p, leader2, valid_moves, valid_items) for p in hg[idx]['party'])
         em = set_block(em, tid, REMATCH_HEADER.format(name=name, pic=pic, gender=gender), body)
     open(EM_PARTY, 'w').write(em)
+    se = open(SE_JOHTO_PARTY).read()
+    body = '\n\n'.join(mon_lines(p, red, valid_moves, valid_items) for p in hg[260]['party'])
+    se = set_block(se, 'TRAINER_SE_RED', RED_HEADER, body)
+    open(SE_JOHTO_PARTY, 'w').write(se)
     print('Kanto Gym Leaders, Elite Four, Red and Gym Leader rematches written')
 
 

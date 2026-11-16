@@ -10636,6 +10636,19 @@
       "layout_version": "frlg"
     },
     {
+      "id": "LAYOUT_RECEPTION_GATE_HNS",
+      "name": "ReceptionGate_hns_Layout",
+      "width": 22,
+      "height": 21,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Johto_Building_Hns",
+      "secondary_tileset": "gTileset_PokemonCenter_White_Hns",
+      "border_filepath": "data/layouts/ReceptionGate_hns/border.bin",
+      "blockdata_filepath": "data/layouts/ReceptionGate_hns/map.bin",
+      "layout_version": "frlg"
+    },
+    {
       "id": "LAYOUT_ROUTE27_HNS",
       "name": "Route27_hns_Layout",
       "width": 160,

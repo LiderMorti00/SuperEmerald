@@ -8,6 +8,9 @@
 #define FLAG_SE_TALKED_OLIVINE_NEIGHBOR      0x2702
 #define FLAG_SE_JOHTO_LEAGUE_CLEARED         0x2703 // Johto League beaten: Kanto opens
 #define FLAG_SE_RECEIVED_CANALAVE_TICKET     0x2704
+#define FLAG_SE_HIDE_KANTO_GATE_GUARD        0x2705 // League Reception Gate guard toward Route 22, hidden after the Johto League
+#define FLAG_SE_KANTO_COMPLETE               0x2706 // all eight Kanto badges: League rematch, Mt. Silver
+#define FLAG_SE_HIDE_SILVER_GATE_GUARD       0x2707 // League Reception Gate guard toward Route 28 / Mt. Silver
 #define FLAG_SE_RECEIVED_JOHTO_TM1          0x2710
 #define FLAG_SE_RECEIVED_JOHTO_TM2          0x2711
 #define FLAG_SE_RECEIVED_JOHTO_TM3          0x2712

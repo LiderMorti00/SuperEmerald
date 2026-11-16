@@ -103,12 +103,12 @@ PokemonLeague_LancesRoom_EventScript_Lance::
 	goto_if_set FLAG_DEFEATED_LANCE, PokemonLeague_LancesRoom_EventScript_PostBattle
 	famechecker FAMECHECKER_LANCE, 0
 	famechecker FAMECHECKER_LANCE, 1
-	call_if_unset FLAG_SE_KANTO_CHAMPION, PokemonLeague_LancesRoom_EventScript_Intro
-	call_if_set FLAG_SE_KANTO_CHAMPION, PokemonLeague_LancesRoom_EventScript_RematchIntro
+	call_if_unset FLAG_SE_KANTO_COMPLETE, PokemonLeague_LancesRoom_EventScript_Intro
+	call_if_set FLAG_SE_KANTO_COMPLETE, PokemonLeague_LancesRoom_EventScript_RematchIntro
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
-	call_if_unset FLAG_SE_KANTO_CHAMPION, PokemonLeague_LancesRoom_EventScript_Battle
-	call_if_set FLAG_SE_KANTO_CHAMPION, PokemonLeague_LancesRoom_EventScript_Rematch
+	call_if_unset FLAG_SE_KANTO_COMPLETE, PokemonLeague_LancesRoom_EventScript_Battle
+	call_if_set FLAG_SE_KANTO_COMPLETE, PokemonLeague_LancesRoom_EventScript_Rematch
 	clearflag FLAG_TEMP_5
 	goto PokemonLeague_LancesRoom_EventScript_DefeatedLance
 	end
@@ -165,54 +165,35 @@ PokemonLeague_LancesRoom_Movement_LanceMoveOutOfWayRight::
 	step_end
 
 PokemonLeague_LancesRoom_Text_Intro::
-	.string "Ah! I've heard about you,\n"
-	.string "{PLAYER}!\p"
-	.string "I lead the ELITE FOUR.\p"
-	.string "You can call me LANCE the dragon\n"
-	.string "TRAINER.\p"
-	.string "You know that dragons are\n"
-	.string "mythical POKéMON.\p"
-	.string "They're hard to catch and raise,\n"
-	.string "but their powers are superior.\p"
-	.string "They're virtually indestructible.\n"
-	.string "There's no being clever with them.\p"
-	.string "Well, are you ready to lose?\p"
-	.string "Your LEAGUE challenge ends with\n"
-	.string "me, {PLAYER}!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "I'm KAREN of the ELITE FOUR.\p"
+	.string "You're {PLAYER}? How amusing.\p"
+	.string "I love dark-type POKéMON.\p"
+	.string "I find their wild, tough image\n"
+	.string "so appealing. And they're so\l"
+	.string "strong.\p"
+	.string "Think you can take them?\n"
+	.string "Just try to entertain me.{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_LancesRoom_Text_RematchIntro::
-	.string "Ah!\n"
-	.string "So, you've returned, {PLAYER}!\p"
-	.string "I lead the ELITE FOUR.\p"
-	.string "You can call me LANCE the dragon\n"
-	.string "TRAINER.\p"
-	.string "You know that dragons are\n"
-	.string "mythical POKéMON.\p"
-	.string "They're hard to catch and raise,\n"
-	.string "but their powers are superior.\p"
-	.string "They're virtually indestructible.\n"
-	.string "There's no being clever with them.\p"
-	.string "Well, are you ready to lose?\p"
-	.string "Your LEAGUE challenge ends with\n"
-	.string "me, {PLAYER}!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "Well, well. {PLAYER} again.\p"
+	.string "Strong POKéMON. Weak POKéMON.\n"
+	.string "That is only the selfish\l"
+	.string "perception of people.\p"
+	.string "Truly skilled TRAINERS should try\n"
+	.string "to win with their favorites.\p"
+	.string "Show me how far you have come!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_LancesRoom_Text_Defeat::
-	.string "That's it!\p"
-	.string "I hate to admit it, but you are a\n"
-	.string "POKéMON master!$"
+	.string "Well, aren't you good.\n"
+	.string "I like that in a TRAINER.$"
 
 PokemonLeague_LancesRoom_Text_PostBattle::
-	.string "I still can't believe my dragons\n"
-	.string "lost to you, {PLAYER}.\p"
-	.string "You are now the POKéMON LEAGUE\n"
-	.string "CHAMPION!\p"
-	.string "…Or, you would have been, but\n"
-	.string "you have one more challenge left.\p"
-	.string "There is one more TRAINER to face!\n"
-	.string "His name is…\p"
-	.string "{RIVAL}!\p"
-	.string "He beat the ELITE FOUR before\n"
-	.string "you.\p"
-	.string "He is the real POKéMON LEAGUE\n"
-	.string "CHAMPION.$"
+	.string "Strong POKéMON. Weak POKéMON.\n"
+	.string "That is only the selfish\l"
+	.string "perception of people.\p"
+	.string "Truly skilled TRAINERS should try\n"
+	.string "to win with their favorites.\p"
+	.string "I like your style. You understand\n"
+	.string "what's important.\p"
+	.string "Go on--the CHAMPION is waiting.$"
 

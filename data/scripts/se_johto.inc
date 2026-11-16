@@ -491,3 +491,165 @@ SE_Text_ClairPost:
 
 SE_Text_ReceivedClairBadge:
 	.string "{PLAYER} received the RISINGBADGE\nfrom CLAIR.$"
+
+@ ---------------------------------------------------------------------------
+@ Pokemon League Reception Gate (Route 26 / Route 22 / Route 23 / Route 28)
+SE_EventScript_ReceptionGateOnTransition::
+	call SE_EventScript_UpdateKantoComplete
+	call_if_set FLAG_SE_KANTO_COMPLETE, SE_EventScript_HideSilverGateGuard
+	call_if_set FLAG_SE_JOHTO_LEAGUE_CLEARED, SE_EventScript_HideKantoGateGuard
+	call SE_EventScript_CheckJohtoBadges
+	call_if_eq VAR_RESULT, TRUE, SE_EventScript_ReceptionGateOpen
+	end
+
+SE_EventScript_ReceptionGateOpen::
+	setvar VAR_TEMP_1, 1
+	return
+
+SE_EventScript_HideSilverGateGuard::
+	setflag FLAG_SE_HIDE_SILVER_GATE_GUARD
+	return
+
+SE_EventScript_HideKantoGateGuard::
+	setflag FLAG_SE_HIDE_KANTO_GATE_GUARD
+	return
+
+@ VAR_RESULT = TRUE if the player has all eight Johto badges
+SE_EventScript_CheckJohtoBadges::
+	setvar VAR_RESULT, FALSE
+	goto_if_unset FLAG_JOHTO_BADGE1_GET, Common_EventScript_NopReturn
+	goto_if_unset FLAG_JOHTO_BADGE2_GET, Common_EventScript_NopReturn
+	goto_if_unset FLAG_JOHTO_BADGE3_GET, Common_EventScript_NopReturn
+	goto_if_unset FLAG_JOHTO_BADGE4_GET, Common_EventScript_NopReturn
+	goto_if_unset FLAG_JOHTO_BADGE5_GET, Common_EventScript_NopReturn
+	goto_if_unset FLAG_JOHTO_BADGE6_GET, Common_EventScript_NopReturn
+	goto_if_unset FLAG_JOHTO_BADGE7_GET, Common_EventScript_NopReturn
+	goto_if_unset FLAG_JOHTO_BADGE8_GET, Common_EventScript_NopReturn
+	setvar VAR_RESULT, TRUE
+	return
+
+@ Sets FLAG_SE_KANTO_COMPLETE once the player holds all eight Kanto badges
+SE_EventScript_UpdateKantoComplete::
+	goto_if_set FLAG_SE_KANTO_COMPLETE, Common_EventScript_NopReturn
+	goto_if_unset FLAG_BADGE09_GET, Common_EventScript_NopReturn
+	goto_if_unset FLAG_BADGE10_GET, Common_EventScript_NopReturn
+	goto_if_unset FLAG_BADGE11_GET, Common_EventScript_NopReturn
+	goto_if_unset FLAG_BADGE12_GET, Common_EventScript_NopReturn
+	goto_if_unset FLAG_BADGE13_GET, Common_EventScript_NopReturn
+	goto_if_unset FLAG_BADGE14_GET, Common_EventScript_NopReturn
+	goto_if_unset FLAG_BADGE15_GET, Common_EventScript_NopReturn
+	goto_if_unset FLAG_BADGE16_GET, Common_EventScript_NopReturn
+	setflag FLAG_SE_KANTO_COMPLETE
+	return
+
+SE_EventScript_ReceptionGateBadgeCheck::
+	lockall
+	playse SE_PIN
+	applymovement LOCALID_RECEPTIONGATE_OFFICER, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_RECEPTIONGATE_OFFICER, Common_Movement_WalkInPlaceFasterRight
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+	msgbox SE_Text_ReceptionGateNotEnoughBadges, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, SE_Movement_WalkDown1
+	waitmovement 0
+	releaseall
+	end
+
+SE_EventScript_ReceptionGateOfficer::
+	lock
+	faceplayer
+	call SE_EventScript_CheckJohtoBadges
+	goto_if_eq VAR_RESULT, TRUE, SE_EventScript_ReceptionGateOfficerOK
+	msgbox SE_Text_ReceptionGateNotEnoughBadges, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_ReceptionGateOfficerOK::
+	msgbox SE_Text_ReceptionGateEightBadges, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_ReceptionGateSilverGuard::
+	msgbox SE_Text_ReceptionGateSilverGuard, MSGBOX_NPC
+	end
+
+SE_EventScript_ReceptionGateKantoGuard::
+	msgbox SE_Text_ReceptionGateKantoGuard, MSGBOX_NPC
+	end
+
+SE_Text_ReceptionGateNotEnoughBadges:
+	.string "Only TRAINERS who have all eight\n"
+	.string "JOHTO GYM BADGES may challenge\l"
+	.string "the POKéMON LEAGUE.\p"
+	.string "I'm sorry, but you can't go\n"
+	.string "through yet.$"
+
+SE_Text_ReceptionGateEightBadges:
+	.string "You have all eight JOHTO BADGES!\p"
+	.string "VICTORY ROAD lies ahead, past\n"
+	.string "ROUTE 23. Good luck!$"
+
+SE_Text_ReceptionGateSilverGuard:
+	.string "MT. SILVER is home to very\n"
+	.string "dangerous wild POKéMON.\p"
+	.string "Only TRAINERS who have earned all\n"
+	.string "eight KANTO GYM BADGES may enter.$"
+
+SE_Text_ReceptionGateKantoGuard:
+	.string "ROUTE 22 leads to VIRIDIAN CITY\n"
+	.string "in KANTO.\p"
+	.string "The way is only open to the\n"
+	.string "CHAMPION of the POKéMON LEAGUE.$"
+
+@ ---------------------------------------------------------------------------
+@ Hall of Fame (hall_of_fame_frlg.inc): the first time is the Johto League, the second
+@ (after all eight Kanto badges) is the stronger League rematch.
+SE_EventScript_LeagueCleared::
+	call_if_set FLAG_SE_KANTO_COMPLETE, SE_EventScript_KantoLeagueCleared
+	setflag FLAG_SE_JOHTO_LEAGUE_CLEARED
+	setflag FLAG_SE_HIDE_KANTO_GATE_GUARD
+	return
+
+SE_EventScript_KantoLeagueCleared::
+	setflag FLAG_SE_KANTO_CHAMPION
+	setflag FLAG_HIDE_CERULEAN_CAVE_GUARD @ as in HGSS, Cerulean Cave opens after the rematch
+	return
+
+SE_EventScript_HallOfFameRespawn::
+	goto_if_set FLAG_SE_KANTO_COMPLETE, SE_EventScript_HallOfFameRespawnKanto
+	setrespawn HEAL_LOCATION_NEW_BARK_TOWN_HNS
+	return
+
+SE_EventScript_HallOfFameRespawnKanto::
+	setrespawn HEAL_LOCATION_PALLET_TOWN
+	return
+
+@ ---------------------------------------------------------------------------
+@ Red at the summit of Mt. Silver
+SE_EventScript_MtSilverRed::
+	lock
+	faceplayer
+	goto_if_defeated TRAINER_SE_RED, SE_EventScript_MtSilverRedDefeated
+	msgbox SE_Text_MtSilverRedIntro, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_SE_RED, SE_Text_MtSilverRedDefeat
+	msgbox SE_Text_MtSilverRedIntro, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_MtSilverRedDefeated::
+	msgbox SE_Text_MtSilverRedIntro, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_MtSilverRedIntro:
+	.string "…\n"
+	.string "…$"
+
+SE_Text_MtSilverRedDefeat:
+	.string "…$"
+
+SE_Movement_WalkDown1:
+	walk_down
+	step_end

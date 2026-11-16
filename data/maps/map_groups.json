@@ -1349,7 +1349,8 @@
   ],
   "gMapGroup_IndoorKantoRoutes_Hns": [
     "Route26_House1_hns",
-    "Route26_House2_hns"
+    "Route26_House2_hns",
+    "ReceptionGate_hns"
   ],
   "gMapGroup_Dungeons_Hns": [
     "DarkCave_SouthSide_hns",

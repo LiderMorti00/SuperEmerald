@@ -50,40 +50,20 @@ PokemonLeague_ChampionsRoom_EventScript_EnterRoom::
 	applymovement LOCALID_PLAYER, PokemonLeague_ChampionsRoom_Movement_PlayerEnter
 	waitmovement 0
 	delay 20
-	call_if_unset FLAG_SE_KANTO_CHAMPION, PokemonLeague_ChampionsRoom_EventScript_Intro
-	call_if_set FLAG_SE_KANTO_CHAMPION, PokemonLeague_ChampionsRoom_EventScript_RematchIntro
+	call_if_unset FLAG_SE_KANTO_COMPLETE, PokemonLeague_ChampionsRoom_EventScript_Intro
+	call_if_set FLAG_SE_KANTO_COMPLETE, PokemonLeague_ChampionsRoom_EventScript_RematchIntro
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
 	savebgm MUS_VICTORY_GYM_LEADER
-	call_if_unset FLAG_SE_KANTO_CHAMPION, PokemonLeague_ChampionsRoom_EventScript_Battle
-	call_if_set FLAG_SE_KANTO_CHAMPION, PokemonLeague_ChampionsRoom_EventScript_Rematch
+	call_if_unset FLAG_SE_KANTO_COMPLETE, PokemonLeague_ChampionsRoom_EventScript_Battle
+	call_if_set FLAG_SE_KANTO_COMPLETE, PokemonLeague_ChampionsRoom_EventScript_Rematch
 	setflag FLAG_TEMP_4
 	clearflag FLAG_TEMP_5
 	setflag FLAG_DEFEATED_CHAMP
 	setflag FLAG_TEMP_4
 	msgbox PokemonLeague_ChampionsRoom_Text_PostBattle
-	playbgm MUS_RG_SLOW_PALLET, 0
-	addobject LOCALID_CHAMPIONS_ROOM_PROF_OAK
-	msgbox PokemonLeague_ChampionsRoom_Text_OakPlayer
 	closemessage
-	applymovement LOCALID_PLAYER, PokemonLeague_ChampionsRoom_Movement_PlayerWatchOakEnter
-	applymovement LOCALID_KANTO_CHAMPIONS_ROOM_RIVAL, PokemonLeague_ChampionsRoom_Movement_RivalWatchOakEnter
-	applymovement LOCALID_CHAMPIONS_ROOM_PROF_OAK, PokemonLeague_ChampionsRoom_Movement_OakEnter
-	waitmovement 0
-	delay 25
-	msgbox PokemonLeague_ChampionsRoom_Text_OakCongratulations
-	applymovement LOCALID_CHAMPIONS_ROOM_PROF_OAK, Common_Movement_WalkInPlaceFasterRight
-	applymovement LOCALID_KANTO_CHAMPIONS_ROOM_RIVAL, Common_Movement_WalkInPlaceFasterLeft
-	waitmovement 0
-	msgbox PokemonLeague_ChampionsRoom_Text_OakImDisappointedRival
-	closemessage
-	applymovement LOCALID_CHAMPIONS_ROOM_PROF_OAK, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
-	delay 20
-	msgbox PokemonLeague_ChampionsRoom_Text_OakPlayerComeWithMe
-	closemessage
-	delay 13
-	applymovement LOCALID_CHAMPIONS_ROOM_PROF_OAK, PokemonLeague_ChampionsRoom_Movement_OakExit
+	applymovement LOCALID_KANTO_CHAMPIONS_ROOM_RIVAL, PokemonLeague_ChampionsRoom_Movement_LanceExit
 	applymovement LOCALID_PLAYER, PokemonLeague_ChampionsRoom_Movement_PlayerExit
 	waitmovement 0
 	setvar VAR_TEMP_1, 1
@@ -152,6 +132,19 @@ PokemonLeague_ChampionsRoom_Movement_PlayerEnter::
 	walk_up
 	walk_up
 	walk_up
+	step_end
+
+PokemonLeague_ChampionsRoom_Movement_LanceExit::
+	walk_left
+	walk_up
+	walk_up
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	delay_8
+	set_invisible
 	step_end
 
 PokemonLeague_ChampionsRoom_Movement_PlayerExit::
@@ -223,16 +216,31 @@ PokemonLeague_ChampionsRoom_Movement_RivalWatchOakEnter::
 	step_end
 
 PokemonLeague_ChampionsRoom_Text_Intro::
-	.string "…\p"
-	.string "…\p"
-	.string "…!$"
+	.string "LANCE: I've been waiting for you,\n"
+	.string "{PLAYER}!\p"
+	.string "I knew that you, with your skills,\n"
+	.string "would eventually reach me here.\p"
+	.string "There's no need for words now.\p"
+	.string "We will battle to determine who is\n"
+	.string "the stronger of the two of us.\p"
+	.string "As the most powerful TRAINER and\n"
+	.string "as the POKéMON LEAGUE CHAMPION…\p"
+	.string "I, LANCE the dragon master,\n"
+	.string "accept your challenge!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_ChampionsRoom_Text_RematchIntro::
-	.string "…\p"
-	.string "…!$"
+	.string "LANCE: {PLAYER}!\n"
+	.string "So you've conquered KANTO too.\p"
+	.string "My dragons have grown stronger\n"
+	.string "while you were away.\p"
+	.string "Come! Show me the power of a\n"
+	.string "TRAINER who has seen three regions!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_ChampionsRoom_Text_Defeat::
-	.string "…$"
+	.string "…It's over.\p"
+	.string "But it's an odd feeling. I'm not\n"
+	.string "angry that I lost. In fact, I feel\l"
+	.string "happy.$"
 
 PokemonLeague_ChampionsRoom_Text_Victory::
 	.string "はーはッ！\n"
@@ -246,8 +254,15 @@ PokemonLeague_ChampionsRoom_Text_Victory::
 	.string "はーッ！　はーはッはッ！$"
 
 PokemonLeague_ChampionsRoom_Text_PostBattle::
-	.string "…\p"
-	.string "…$"
+	.string "LANCE: …Whew.\p"
+	.string "You have become truly powerful,\n"
+	.string "{PLAYER}.\p"
+	.string "Your POKéMON have responded to\n"
+	.string "your strong and upstanding nature.\p"
+	.string "As a TRAINER, you will continue to\n"
+	.string "grow strong with your POKéMON.\p"
+	.string "{PLAYER}, come with me.\n"
+	.string "There's something I want to show you.$"
 
 PokemonLeague_ChampionsRoom_Text_OakPlayer::
 	.string "OAK: {PLAYER}!$"

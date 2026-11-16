@@ -129,7 +129,7 @@
       "x": 12,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE26NORTH_HNS",
+      "dest_map": "MAP_RECEPTION_GATE_HNS",
       "dest_warp_id": "0"
     }
   ],

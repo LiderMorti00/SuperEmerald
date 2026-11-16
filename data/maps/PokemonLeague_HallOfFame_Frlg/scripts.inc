@@ -35,7 +35,7 @@ PokemonLeague_HallOfFame_EventScript_EnterRoom::
 	delay 40
 	setvar VAR_TEMP_1, 1
 	call EventScript_SetDefeatedEliteFourFlagsVars
-	setrespawn HEAL_LOCATION_PALLET_TOWN
+	call SE_EventScript_HallOfFameRespawn
 	fadescreenspeed FADE_TO_BLACK, 24
 	special EnterHallOfFame
 	waitstate
@@ -54,17 +54,14 @@ PokemonLeague_HallOfFame_Movement_EnterRoom::
 	step_end
 
 PokemonLeague_HallOfFame_Text_OakCongratulations::
-	.string "OAK: Er-hem!\n"
-	.string "Congratulations, {PLAYER}!\p"
-	.string "This floor is the POKéMON HALL OF\n"
-	.string "FAME.\p"
-	.string "POKéMON LEAGUE CHAMPIONS are\n"
-	.string "honored for their exploits here.\p"
-	.string "Their POKéMON are also recorded in\n"
-	.string "the HALL OF FAME.\p"
-	.string "{PLAYER}!\p"
-	.string "You have worked hard to become\n"
-	.string "the new LEAGUE CHAMPION.\p"
+	.string "LANCE: This is the POKéMON\n"
+	.string "HALL OF FAME.\p"
+	.string "Here we honor the LEAGUE\n"
+	.string "CHAMPIONS for all eternity.\p"
+	.string "Their courageous POKéMON are also\n"
+	.string "inducted here.\p"
+	.string "Today, I am honored to welcome\n"
+	.string "a new CHAMPION, {PLAYER}.\p"
 	.string "Congratulations, {PLAYER}, you and\n"
 	.string "your POKéMON are HALL OF FAMERS!$"
 

@@ -5574,9 +5574,9 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Double Team
 
 === TRAINER_ELITE_FOUR_LORELEI ===
-Name: KOGA
+Name: WILL
 Class: Elite Four Frlg
-Pic: Leader Koga Frlg
+Pic: Elite Four Will
 Gender: Male
 Music: Serious
 Items: Full Restore / Full Restore / Full Restore
@@ -5584,50 +5584,50 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 Mugshot: Purple
 
-Ariados
-Level: 65
+Xatu
+Level: 62
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Poison Jab
-- Spider Web
-- Baton Pass
-- Giga Drain
-
-Venomoth
-Level: 66
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Supersonic
-- Gust
+- U Turn
+- Me First
+- Confuse Ray
 - Psychic
-- Toxic
 
-Forretress
-Level: 68
+Jynx
+Level: 63
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Protect
-- Swift
-- Explosion
-- Toxic Spikes
+- Double Slap
+- Lovely Kiss
+- Ice Punch
+- Psychic
 
-Muk @ Black Sludge
-Level: 67
+Exeggutor
+Level: 63
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Minimize
-- Screech
-- Gunk Shot
-- Toxic
+- Reflect
+- Hypnosis
+- Egg Bomb
+- Psychic
 
-Crobat @ Sitrus Berry
-Level: 69
+Slowbro
+Level: 63
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Double Team
-- Quick Attack
-- Wing Attack
-- Poison Fang
+- Curse
+- Amnesia
+- Water Pulse
+- Psychic
+
+Xatu @ Sitrus Berry
+Level: 64
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Aerial Ace
+- Ominous Wind
+- Confuse Ray
+- Psychic
 
 === TRAINER_ELITE_FOUR_BRUNO ===
-Name: BRUNO
+Name: KOGA
 Class: Elite Four Frlg
-Pic: Elite Four Bruno Frlg
+Pic: Elite Four Koga Hgss
 Gender: Male
 Music: Serious
 Items: Full Restore / Full Restore / Full Restore
@@ -5635,8 +5635,59 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 Mugshot: Green
 
+Ariados
+Level: 62
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Poison Jab
+- Spider Web
+- Baton Pass
+- Giga Drain
+
+Venomoth
+Level: 63
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Supersonic
+- Gust
+- Psychic
+- Toxic
+
+Forretress
+Level: 65
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Protect
+- Swift
+- Explosion
+- Toxic Spikes
+
+Muk @ Black Sludge
+Level: 64
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Minimize
+- Screech
+- Gunk Shot
+- Toxic
+
+Crobat @ Sitrus Berry
+Level: 66
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Double Team
+- Quick Attack
+- Wing Attack
+- Poison Fang
+
+=== TRAINER_ELITE_FOUR_AGATHA ===
+Name: BRUNO
+Class: Elite Four Frlg
+Pic: Elite Four Bruno Hgss
+Gender: Male
+Music: Serious
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+Mugshot: Pink
+
 Hitmontop
-Level: 67
+Level: 64
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Counter
 - Quick Attack
@@ -5644,7 +5695,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Triple Kick
 
 Hitmonlee
-Level: 67
+Level: 64
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Swagger
 - Focus Energy
@@ -5652,7 +5703,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Blaze Kick
 
 Hitmonchan
-Level: 67
+Level: 64
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Thunder Punch
 - Ice Punch
@@ -5660,7 +5711,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Bullet Punch
 
 Onix
-Level: 68
+Level: 65
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Dragon Breath
 - Earthquake
@@ -5668,26 +5719,26 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Rock Slide
 
 Machamp @ Sitrus Berry
-Level: 71
+Level: 68
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Rock Slide
 - Foresight
 - Revenge
 - Cross Chop
 
-=== TRAINER_ELITE_FOUR_AGATHA ===
+=== TRAINER_ELITE_FOUR_LANCE ===
 Name: KAREN
 Class: Elite Four Frlg
-Pic: Elite Four Karen
+Pic: Elite Four Karen Hgss
 Gender: Female
 Music: Serious
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
-Mugshot: Pink
+Mugshot: Blue
 
 Umbreon
-Level: 67
+Level: 64
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Double Team
 - Confuse Ray
@@ -5695,7 +5746,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Payback
 
 Vileplume
-Level: 67
+Level: 64
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Stun Spore
 - Acid
@@ -5703,7 +5754,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Petal Dance
 
 Gengar
-Level: 70
+Level: 67
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Lick
 - Spite
@@ -5711,7 +5762,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Destiny Bond
 
 Murkrow
-Level: 69
+Level: 66
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Pluck
 - Whirlwind
@@ -5719,71 +5770,12 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Feint Attack
 
 Houndoom @ Sitrus Berry
-Level: 72
+Level: 69
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Nasty Plot
 - Dark Pulse
 - Flamethrower
 - Crunch
-
-=== TRAINER_ELITE_FOUR_LANCE ===
-Name: LANCE
-Class: Elite Four Frlg
-Pic: Elite Four Lance Frlg
-Gender: Male
-Music: Serious
-Items: Full Restore / Full Restore / Full Restore
-Double Battle: No
-AI: Check Bad Move / Try To Faint / Check Viability
-Mugshot: Blue
-
-Gyarados
-Level: 71
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Flail
-- Dragon Pulse
-- Waterfall
-- Ice Fang
-
-Dragonite
-Level: 74
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder Wave
-- Dragon Rush
-- Thunder
-- Hyper Beam
-
-Dragonite
-Level: 74
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Thunder Wave
-- Dragon Rush
-- Blizzard
-- Hyper Beam
-
-Aerodactyl
-Level: 73
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Aerial Ace
-- Crunch
-- Rock Slide
-- Thunder Fang
-
-Charizard
-Level: 73
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Shadow Claw
-- Air Slash
-- Dragon Claw
-- Fire Fang
-
-Dragonite @ Sitrus Berry
-Level: 75
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Fire Blast
-- Safeguard
-- Outrage
-- Hyper Beam
 
 === TRAINER_LEADER_BROCK ===
 Name: BROCK
@@ -6586,9 +6578,9 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Scary Face
 
 === TRAINER_CHAMPION_FIRST_SQUIRTLE ===
-Name: RED
+Name: LANCE
 Class: Champion Frlg
-Pic: Red
+Pic: Champion Lance Hgss
 Gender: Male
 Music: Serious
 Items: Full Restore / Full Restore / Full Restore / Full Restore
@@ -6596,58 +6588,58 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 Mugshot: Yellow
 
-Pikachu @ Light Ball
-Level: 80
+Gyarados
+Level: 66
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Volt Tackle
-- Iron Tail
-- Quick Attack
-- Thunderbolt
+- Flail
+- Dragon Pulse
+- Waterfall
+- Ice Fang
 
-Lapras
-Level: 72
+Dragonite
+Level: 69
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunder Wave
+- Dragon Rush
+- Thunder
+- Hyper Beam
+
+Dragonite
+Level: 69
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunder Wave
+- Dragon Rush
 - Blizzard
-- Brine
-- Psychic
-- Body Slam
+- Hyper Beam
 
-Snorlax
-Level: 74
+Aerodactyl
+Level: 68
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Shadow Ball
+- Aerial Ace
 - Crunch
-- Blizzard
-- Giga Impact
-
-Venusaur
-Level: 76
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sludge Bomb
-- Giga Drain
-- Sleep Powder
-- Frenzy Plant
+- Rock Slide
+- Thunder Fang
 
 Charizard
-Level: 76
+Level: 68
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Flare Blitz
+- Shadow Claw
 - Air Slash
-- Blast Burn
-- Dragon Pulse
+- Dragon Claw
+- Fire Fang
 
-Blastoise
-Level: 76
+Dragonite @ Sitrus Berry
+Level: 70
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Focus Blast
-- Hydro Cannon
-- Blizzard
-- Flash Cannon
+- Fire Blast
+- Safeguard
+- Outrage
+- Hyper Beam
 
 === TRAINER_CHAMPION_FIRST_BULBASAUR ===
-Name: RED
+Name: LANCE
 Class: Champion Frlg
-Pic: Red
+Pic: Champion Lance Hgss
 Gender: Male
 Music: Serious
 Items: Full Restore / Full Restore / Full Restore / Full Restore
@@ -6655,58 +6647,58 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 Mugshot: Yellow
 
-Pikachu @ Light Ball
-Level: 80
+Gyarados
+Level: 66
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Volt Tackle
-- Iron Tail
-- Quick Attack
-- Thunderbolt
+- Flail
+- Dragon Pulse
+- Waterfall
+- Ice Fang
 
-Lapras
-Level: 72
+Dragonite
+Level: 69
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunder Wave
+- Dragon Rush
+- Thunder
+- Hyper Beam
+
+Dragonite
+Level: 69
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunder Wave
+- Dragon Rush
 - Blizzard
-- Brine
-- Psychic
-- Body Slam
+- Hyper Beam
 
-Snorlax
-Level: 74
+Aerodactyl
+Level: 68
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Shadow Ball
+- Aerial Ace
 - Crunch
-- Blizzard
-- Giga Impact
-
-Venusaur
-Level: 76
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sludge Bomb
-- Giga Drain
-- Sleep Powder
-- Frenzy Plant
+- Rock Slide
+- Thunder Fang
 
 Charizard
-Level: 76
+Level: 68
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Flare Blitz
+- Shadow Claw
 - Air Slash
-- Blast Burn
-- Dragon Pulse
+- Dragon Claw
+- Fire Fang
 
-Blastoise
-Level: 76
+Dragonite @ Sitrus Berry
+Level: 70
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Focus Blast
-- Hydro Cannon
-- Blizzard
-- Flash Cannon
+- Fire Blast
+- Safeguard
+- Outrage
+- Hyper Beam
 
 === TRAINER_CHAMPION_FIRST_CHARMANDER ===
-Name: RED
+Name: LANCE
 Class: Champion Frlg
-Pic: Red
+Pic: Champion Lance Hgss
 Gender: Male
 Music: Serious
 Items: Full Restore / Full Restore / Full Restore / Full Restore
@@ -6714,53 +6706,53 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 Mugshot: Yellow
 
-Pikachu @ Light Ball
-Level: 80
+Gyarados
+Level: 66
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Volt Tackle
-- Iron Tail
-- Quick Attack
-- Thunderbolt
+- Flail
+- Dragon Pulse
+- Waterfall
+- Ice Fang
 
-Lapras
-Level: 72
+Dragonite
+Level: 69
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunder Wave
+- Dragon Rush
+- Thunder
+- Hyper Beam
+
+Dragonite
+Level: 69
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunder Wave
+- Dragon Rush
 - Blizzard
-- Brine
-- Psychic
-- Body Slam
+- Hyper Beam
 
-Snorlax
-Level: 74
+Aerodactyl
+Level: 68
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Shadow Ball
+- Aerial Ace
 - Crunch
-- Blizzard
-- Giga Impact
-
-Venusaur
-Level: 76
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sludge Bomb
-- Giga Drain
-- Sleep Powder
-- Frenzy Plant
+- Rock Slide
+- Thunder Fang
 
 Charizard
-Level: 76
+Level: 68
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Flare Blitz
+- Shadow Claw
 - Air Slash
-- Blast Burn
-- Dragon Pulse
+- Dragon Claw
+- Fire Fang
 
-Blastoise
-Level: 76
+Dragonite @ Sitrus Berry
+Level: 70
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Focus Blast
-- Hydro Cannon
-- Blizzard
-- Flash Cannon
+- Fire Blast
+- Safeguard
+- Outrage
+- Hyper Beam
 
 === TRAINER_CHANNELER_PATRICIA ===
 Name: PATRICIA
@@ -11111,15 +11103,74 @@ Luvdisc
 Level: 57
 
 === TRAINER_ELITE_FOUR_LORELEI_2 ===
-Name: KOGA
+Name: WILL
 Class: Elite Four Frlg
-Pic: Leader Koga Frlg
+Pic: Elite Four Will
 Gender: Male
 Music: Serious
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: No
 AI: Smart Trainer
 Mugshot: Purple
+
+Bronzong
+Level: 69
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Reflect
+- Payback
+- Gravity
+- Psychic
+
+Jynx
+Level: 70
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Fake Tears
+- Lovely Kiss
+- Blizzard
+- Dream Eater
+
+Grumpig
+Level: 69
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Confuse Ray
+- Signal Beam
+- Power Gem
+- Psychic
+
+Slowbro
+Level: 70
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Curse
+- Amnesia
+- Body Slam
+- Psychic
+
+Gardevoir
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Focus Blast
+- Charge Beam
+- Calm Mind
+- Psychic
+
+Xatu @ Sitrus Berry
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Quick Attack
+- Shadow Ball
+- Confuse Ray
+- Psychic
+
+=== TRAINER_ELITE_FOUR_BRUNO_2 ===
+Name: KOGA
+Class: Elite Four Frlg
+Pic: Elite Four Koga Hgss
+Gender: Male
+Music: Serious
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Smart Trainer
+Mugshot: Green
 
 Skuntank
 Level: 71
@@ -11169,16 +11220,16 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Pain Split
 - Sludge Bomb
 
-=== TRAINER_ELITE_FOUR_BRUNO_2 ===
+=== TRAINER_ELITE_FOUR_AGATHA_2 ===
 Name: BRUNO
 Class: Elite Four Frlg
-Pic: Elite Four Bruno Frlg
+Pic: Elite Four Bruno Hgss
 Gender: Male
 Music: Serious
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: No
 AI: Smart Trainer
-Mugshot: Green
+Mugshot: Pink
 
 Hitmontop
 Level: 71
@@ -11228,16 +11279,16 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Counter
 - Iron Tail
 
-=== TRAINER_ELITE_FOUR_AGATHA_2 ===
+=== TRAINER_ELITE_FOUR_LANCE_2 ===
 Name: KAREN
 Class: Elite Four Frlg
-Pic: Elite Four Karen
+Pic: Elite Four Karen Hgss
 Gender: Female
 Music: Serious
 Items: Full Restore / Full Restore / Full Restore
 Double Battle: No
 AI: Smart Trainer
-Mugshot: Pink
+Mugshot: Blue
 
 Weavile
 Level: 71
@@ -11287,16 +11338,16 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Confuse Ray
 - Sucker Punch
 
-=== TRAINER_ELITE_FOUR_LANCE_2 ===
+=== TRAINER_CHAMPION_REMATCH_SQUIRTLE ===
 Name: LANCE
-Class: Elite Four Frlg
-Pic: Elite Four Lance Frlg
+Class: Champion Frlg
+Pic: Champion Lance Hgss
 Gender: Male
 Music: Serious
-Items: Full Restore / Full Restore / Full Restore
+Items: Full Restore / Full Restore / Full Restore / Full Restore
 Double Battle: No
 AI: Smart Trainer
-Mugshot: Blue
+Mugshot: Yellow
 
 Salamence @ Lum Berry
 Level: 77
@@ -11346,69 +11397,10 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Draco Meteor
 - Hyper Beam
 
-=== TRAINER_CHAMPION_REMATCH_SQUIRTLE ===
-Name: RED
-Class: Champion Frlg
-Pic: Red
-Gender: Male
-Music: Serious
-Items: Full Restore / Full Restore / Full Restore / Full Restore
-Double Battle: No
-AI: Smart Trainer
-Mugshot: Yellow
-
-Pikachu @ Light Ball
-Level: 80
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Volt Tackle
-- Iron Tail
-- Quick Attack
-- Thunderbolt
-
-Lapras
-Level: 72
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Blizzard
-- Brine
-- Psychic
-- Body Slam
-
-Snorlax
-Level: 74
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Shadow Ball
-- Crunch
-- Blizzard
-- Giga Impact
-
-Venusaur
-Level: 76
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sludge Bomb
-- Giga Drain
-- Sleep Powder
-- Frenzy Plant
-
-Charizard
-Level: 76
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Flare Blitz
-- Air Slash
-- Blast Burn
-- Dragon Pulse
-
-Blastoise
-Level: 76
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Focus Blast
-- Hydro Cannon
-- Blizzard
-- Flash Cannon
-
 === TRAINER_CHAMPION_REMATCH_BULBASAUR ===
-Name: RED
+Name: LANCE
 Class: Champion Frlg
-Pic: Red
+Pic: Champion Lance Hgss
 Gender: Male
 Music: Serious
 Items: Full Restore / Full Restore / Full Restore / Full Restore
@@ -11416,58 +11408,58 @@ Double Battle: No
 AI: Smart Trainer
 Mugshot: Yellow
 
-Pikachu @ Light Ball
-Level: 80
+Salamence @ Lum Berry
+Level: 77
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Volt Tackle
-- Iron Tail
-- Quick Attack
-- Thunderbolt
+- Flamethrower
+- Shadow Claw
+- Dragon Claw
+- Rest
 
-Lapras
-Level: 72
+Gyarados
+Level: 75
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Blizzard
-- Brine
-- Psychic
-- Body Slam
+- Thunder Wave
+- Ice Fang
+- Waterfall
+- Dragon Dance
 
-Snorlax
-Level: 74
+Garchomp
+Level: 77
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Shadow Ball
-- Crunch
-- Blizzard
-- Giga Impact
+- Swords Dance
+- Outrage
+- Earthquake
+- Roar
 
-Venusaur
-Level: 76
+Altaria
+Level: 78
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sludge Bomb
-- Giga Drain
-- Sleep Powder
-- Frenzy Plant
+- Perish Song
+- Dragon Breath
+- Double Team
+- Hyper Beam
 
 Charizard
-Level: 76
+Level: 75
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Flare Blitz
+- Flamethrower
 - Air Slash
-- Blast Burn
-- Dragon Pulse
+- Dragon Claw
+- Hyper Beam
 
-Blastoise
-Level: 76
+Dragonite @ Sitrus Berry
+Level: 79
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Focus Blast
-- Hydro Cannon
-- Blizzard
-- Flash Cannon
+- Fire Blast
+- Safeguard
+- Draco Meteor
+- Hyper Beam
 
 === TRAINER_CHAMPION_REMATCH_CHARMANDER ===
-Name: RED
+Name: LANCE
 Class: Champion Frlg
-Pic: Red
+Pic: Champion Lance Hgss
 Gender: Male
 Music: Serious
 Items: Full Restore / Full Restore / Full Restore / Full Restore
@@ -11475,53 +11467,53 @@ Double Battle: No
 AI: Smart Trainer
 Mugshot: Yellow
 
-Pikachu @ Light Ball
-Level: 80
+Salamence @ Lum Berry
+Level: 77
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Volt Tackle
-- Iron Tail
-- Quick Attack
-- Thunderbolt
+- Flamethrower
+- Shadow Claw
+- Dragon Claw
+- Rest
 
-Lapras
-Level: 72
+Gyarados
+Level: 75
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Blizzard
-- Brine
-- Psychic
-- Body Slam
+- Thunder Wave
+- Ice Fang
+- Waterfall
+- Dragon Dance
 
-Snorlax
-Level: 74
+Garchomp
+Level: 77
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Shadow Ball
-- Crunch
-- Blizzard
-- Giga Impact
+- Swords Dance
+- Outrage
+- Earthquake
+- Roar
 
-Venusaur
-Level: 76
+Altaria
+Level: 78
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Sludge Bomb
-- Giga Drain
-- Sleep Powder
-- Frenzy Plant
+- Perish Song
+- Dragon Breath
+- Double Team
+- Hyper Beam
 
 Charizard
-Level: 76
+Level: 75
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Flare Blitz
+- Flamethrower
 - Air Slash
-- Blast Burn
-- Dragon Pulse
+- Dragon Claw
+- Hyper Beam
 
-Blastoise
-Level: 76
+Dragonite @ Sitrus Berry
+Level: 79
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Focus Blast
-- Hydro Cannon
-- Blizzard
-- Flash Cannon
+- Fire Blast
+- Safeguard
+- Draco Meteor
+- Hyper Beam
 
 === TRAINER_CUE_BALL_PAXTON ===
 Name: PAXTON

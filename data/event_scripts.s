@@ -1174,6 +1174,7 @@ gStdScripts_End::
 	.include "data/maps/MtSilver_PokemonCenter_hns/scripts.inc"
 	.include "data/maps/Route26_House1_hns/scripts.inc"
 	.include "data/maps/Route26_House2_hns/scripts.inc"
+	.include "data/maps/ReceptionGate_hns/scripts.inc"
 	.include "data/maps/DarkCave_SouthSide_hns/scripts.inc"
 	.include "data/maps/DarkCave_NorthSide_hns/scripts.inc"
 	.include "data/maps/SproutTower_1F_hns/scripts.inc"

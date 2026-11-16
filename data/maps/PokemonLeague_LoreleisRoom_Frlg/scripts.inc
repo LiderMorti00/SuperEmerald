@@ -42,6 +42,7 @@ PokemonLeague_LoreleisRoom_OnFrame::
 
 PokemonLeague_LoreleisRoom_EventScript_EnterRoom::
 	lockall
+	call SE_EventScript_UpdateKantoComplete @ Super Emerald: League rematch after Kanto
 	call PokemonLeague_EventScript_EnterRoom
 	setvar VAR_MAP_SCENE_POKEMON_LEAGUE, 1
 	releaseall
@@ -54,12 +55,12 @@ PokemonLeague_LoreleisRoom_EventScript_Lorelei::
 	goto_if_set FLAG_DEFEATED_LORELEI, PokemonLeague_LoreleisRoom_EventScript_PostBattle
 	famechecker FAMECHECKER_LORELEI, 0
 	famechecker FAMECHECKER_LORELEI, 1
-	call_if_unset FLAG_SE_KANTO_CHAMPION, PokemonLeague_LoreleisRoom_EventScript_Intro
-	call_if_set FLAG_SE_KANTO_CHAMPION, PokemonLeague_LoreleisRoom_EventScript_RematchIntro
+	call_if_unset FLAG_SE_KANTO_COMPLETE, PokemonLeague_LoreleisRoom_EventScript_Intro
+	call_if_set FLAG_SE_KANTO_COMPLETE, PokemonLeague_LoreleisRoom_EventScript_RematchIntro
 	setflag FLAG_TEMP_3
 	setflag FLAG_TEMP_5
-	call_if_unset FLAG_SE_KANTO_CHAMPION, PokemonLeague_LoreleisRoom_EventScript_Battle
-	call_if_set FLAG_SE_KANTO_CHAMPION, PokemonLeague_LoreleisRoom_EventScript_Rematch
+	call_if_unset FLAG_SE_KANTO_COMPLETE, PokemonLeague_LoreleisRoom_EventScript_Battle
+	call_if_set FLAG_SE_KANTO_COMPLETE, PokemonLeague_LoreleisRoom_EventScript_Rematch
 	clearflag FLAG_TEMP_5
 	goto PokemonLeague_LoreleisRoom_EventScript_DefeatedLorelei
 	end
@@ -93,36 +94,31 @@ PokemonLeague_LoreleisRoom_EventScript_DefeatedLorelei::
 	end
 
 PokemonLeague_LoreleisRoom_Text_Intro::
-	.string "Fwahahahaha!\p"
-	.string "I am KOGA of the ELITE FOUR.\p"
-	.string "I live in shadows, a ninja!\p"
-	.string "My intricate style will confound\n"
-	.string "and destroy you!\p"
-	.string "Confusion, sleep, poison…\n"
-	.string "Prepare to be the victim of my\l"
-	.string "sinister technique!\p"
-	.string "Fwahahahaha!\n"
-	.string "POKéMON is not merely about brute\l"
-	.string "force--you shall see soon enough!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "Welcome to the POKéMON LEAGUE,\n"
+	.string "{PLAYER}.\p"
+	.string "Allow me to introduce myself.\n"
+	.string "I am WILL of the ELITE FOUR.\p"
+	.string "I trained my psychic powers all\n"
+	.string "over the world.\p"
+	.string "I can sense it… You've come a long\n"
+	.string "way from HOENN, haven't you?\p"
+	.string "Losing is not an option for me.\n"
+	.string "Let's begin!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_LoreleisRoom_Text_RematchIntro::
-	.string "Fwahahahaha!\p"
-	.string "So, the CHAMPION returns to face\n"
-	.string "KOGA of the ELITE FOUR!\p"
-	.string "My daughter JANINE told me of\n"
-	.string "your battle in FUCHSIA.\p"
-	.string "Now it is my turn.\n"
-	.string "Prepare yourself!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "So you've returned, {PLAYER}.\p"
+	.string "Since our last battle, I have\n"
+	.string "sharpened my mind even further.\p"
+	.string "My POKéMON foresaw this moment.\n"
+	.string "This time, I will not lose!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_LoreleisRoom_Text_Defeat::
-	.string "Ah!\n"
-	.string "You have proven your worth!$"
+	.string "I… I can't…\n"
+	.string "believe it…$"
 
 PokemonLeague_LoreleisRoom_Text_PostBattle::
-	.string "I subjected you to everything I\n"
-	.string "could muster.\p"
-	.string "But my efforts failed.\n"
-	.string "I must hone my skills.\p"
-	.string "Go on to the next room, and put\n"
-	.string "your abilities to the test!$"
+	.string "I can't accept defeat so easily…\p"
+	.string "But you are strong. Go on.\p"
+	.string "Three more of the ELITE FOUR are\n"
+	.string "waiting for you ahead.$"
 
