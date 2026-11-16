@@ -1620,6 +1620,20 @@ SurvivalArea_Battleground_EventScript_SNMira_AskAgain2::
 SurvivalArea_Battleground_EventScript_SNMira_Text_AskBattleAgain2::
 	.string "Mira: You will battle Mira?$"
 
+SurvivalArea_Battleground_EventScript_SNBuckIntro::
+	lock
+	faceplayer
+	msgbox SurvivalArea_Battleground_Text_SNBuckIntro, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_SN_BG_BUCK_LEFT
+	sn_walkto VAR_LAST_TALKED, 7, 8, SN_SPEED_NORMAL, 0, 0, 0
+	waitmovement 0
+	playse SE_EXIT
+	removeobject VAR_LAST_TALKED
+	setflag FLAG_SN_HIDE_BG_BUCK_INTRO
+	release
+	end
+
 SurvivalArea_Battleground_Text_SNBuckIntro::
 	.string "Buck: My place is open only to the\n"
 	.string "toughest Trainers--I’m serious.\p"
@@ -1628,7 +1642,3 @@ SurvivalArea_Battleground_Text_SNBuckIntro::
 	.string "Well, I’m off to the Battle Frontier.\p"
 	.string "I feel like seeing how far I can go up\n"
 	.string "the Tower.$"
-
-SE_S_SurvivalArea_Battleground_SurvivalArea_Battleground_EventScript_SNBuckIntro::
-	msgbox SurvivalArea_Battleground_Text_SNBuckIntro, MSGBOX_NPC
-	end

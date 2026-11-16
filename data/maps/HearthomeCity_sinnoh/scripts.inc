@@ -2,6 +2,45 @@ HearthomeCity_sinnoh_MapScripts::
 	.byte 0
 
 
+HearthomeCity_EventScript_PtNpc1::
+	lock
+	faceplayer
+	msgbox HearthomeCity_Text_PtNpc1, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HearthomeCity_EventScript_PtNpc1_No
+	msgbox HearthomeCity_Text_PtNpc1_Yes, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto LOCALID_HEARTHOME_FISHERMAN, 30, 13, SN_SPEED_NORMAL, DIR_WEST, 0, 0
+	sn_walkto OBJ_EVENT_ID_PLAYER, 29, 13, SN_SPEED_NORMAL, DIR_NORTH, 0, 1
+	waitmovement LOCALID_HEARTHOME_FISHERMAN
+	waitmovement OBJ_EVENT_ID_PLAYER
+	msgbox HearthomeCity_Text_SNContestHall, MSGBOX_DEFAULT
+	msgbox HearthomeCity_Text_SNHappy, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto LOCALID_HEARTHOME_FISHERMAN, 37, 34, SN_SPEED_NORMAL, DIR_SOUTH, 0, 0
+	waitmovement LOCALID_HEARTHOME_FISHERMAN
+	release
+	end
+
+HearthomeCity_Text_SNHappy::
+	.string "It makes me happy knowing I’ve helped\n"
+	.string "another person.$"
+
+HearthomeCity_Text_SNContestHall::
+	.string "This is the Contest Hall. Please, do go\n"
+	.string "inside.$"
+
+HearthomeCity_Text_PtNpc1_Yes::
+	.string "Ah. Please follow me.$"
+
+HearthomeCity_EventScript_PtNpc1_No::
+	msgbox HearthomeCity_Text_PtNpc1_No, MSGBOX_DEFAULT
+	release
+	end
+
+HearthomeCity_Text_PtNpc1_No::
+	.string "Oh, I do apologize. I should mind my\n"
+	.string "own business.$"
+
 HearthomeCity_Text_PtNpc1::
 	.string "I'm visiting here all the way from the\n"
 	.string "Hoenn region.\p"
@@ -13,10 +52,6 @@ HearthomeCity_Text_PtNpc1::
 	.string "generosity to a complete stranger.\p"
 	.string "Now, may I offer you the courtesy of\n"
 	.string "showing you to the Contest Hall?$"
-
-SE_S_HearthomeCity_HearthomeCity_EventScript_PtNpc1::
-	msgbox HearthomeCity_Text_PtNpc1, MSGBOX_NPC
-	end
 
 HearthomeCity_EventScript_PtNpc2::
 	msgbox HearthomeCity_Text_PtNpc2, MSGBOX_NPC
@@ -220,15 +255,39 @@ HearthomeCity_EventScript_PtNpc17::
 HearthomeCity_Text_PtNpc17_0::
 	.string "Papa! Mama!$"
 
+HearthomeCity_EventScript_SNKeira::
+	lock
+	faceplayer
+	msgbox HearthomeCity_EventScript_SNKeira_T1, MSGBOX_DEFAULT
+	closemessage
+	playmoncry SPECIES_BUNEARY, CRY_MODE_NORMAL
+	waitmoncry
+	msgbox HearthomeCity_EventScript_SNKeira_T2, MSGBOX_DEFAULT
+	removeobject LOCALID_SN_BUNEARY
+	msgbox HearthomeCity_EventScript_SNKeira_T3, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_SN_MET_KEIRA
+	sn_walkto LOCALID_SN_KEIRA, 8, 46, SN_SPEED_NORMAL, 0, 0, 0
+	waitmovement LOCALID_SN_KEIRA
+	removeobject LOCALID_SN_KEIRA
+	setflag FLAG_SN_HIDE_KEIRA
+	release
+	end
+
+HearthomeCity_EventScript_SNKeira_T3::
+	.string "I’m Keira! I’m a POKéMON Contest Judge.\p"
+	.string "Be sure to drop by the Contest Hall so\n"
+	.string "I can thank you properly!$"
+
+HearthomeCity_EventScript_SNKeira_T2::
+	.string "Baby BUNEARY, back into the Poké Ball\n"
+	.string "you go!$"
+
 HearthomeCity_EventScript_SNKeira_T1::
 	.string "Oh, thank goodness that you happened\n"
 	.string "to be there!\p"
 	.string "If it weren’t for you, who knows how\n"
 	.string "far away my BUNEARY could have run...$"
-
-SE_S_HearthomeCity_HearthomeCity_EventScript_SNKeira::
-	msgbox HearthomeCity_EventScript_SNKeira_T1, MSGBOX_NPC
-	end
 
 HearthomeCity_EventScript_SNGymBlock::
 	msgbox HearthomeCity_EventScript_SNGymBlock_T, MSGBOX_NPC

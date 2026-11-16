@@ -47,7 +47,7 @@
       "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SE_S_EternaCity_GalacticBuilding_RotomsRoom_EternaCity_GalacticBuilding_RotomsRoom_EventScript_SNAppliance2"
+      "script": "EternaCity_GalacticBuilding_RotomsRoom_EventScript_SNAppliance2"
     },
     {
       "type": "sign",
@@ -55,7 +55,7 @@
       "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SE_S_EternaCity_GalacticBuilding_RotomsRoom_EternaCity_GalacticBuilding_RotomsRoom_EventScript_SNAppliance1"
+      "script": "EternaCity_GalacticBuilding_RotomsRoom_EventScript_SNAppliance1"
     },
     {
       "type": "sign",
@@ -63,7 +63,7 @@
       "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SE_S_EternaCity_GalacticBuilding_RotomsRoom_EternaCity_GalacticBuilding_RotomsRoom_EventScript_SNAppliance3"
+      "script": "EternaCity_GalacticBuilding_RotomsRoom_EventScript_SNAppliance3"
     },
     {
       "type": "sign",
@@ -71,7 +71,7 @@
       "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SE_S_EternaCity_GalacticBuilding_RotomsRoom_EternaCity_GalacticBuilding_RotomsRoom_EventScript_SNAppliance4"
+      "script": "EternaCity_GalacticBuilding_RotomsRoom_EventScript_SNAppliance4"
     },
     {
       "type": "sign",
@@ -79,7 +79,7 @@
       "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SE_S_EternaCity_GalacticBuilding_RotomsRoom_EternaCity_GalacticBuilding_RotomsRoom_EventScript_SNAppliance5"
+      "script": "EternaCity_GalacticBuilding_RotomsRoom_EventScript_SNAppliance5"
     },
     {
       "type": "sign",
@@ -87,7 +87,7 @@
       "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SE_S_EternaCity_GalacticBuilding_RotomsRoom_EternaCity_GalacticBuilding_RotomsRoom_EventScript_SNNormal"
+      "script": "EternaCity_GalacticBuilding_RotomsRoom_EventScript_SNNormal"
     }
   ]
 }

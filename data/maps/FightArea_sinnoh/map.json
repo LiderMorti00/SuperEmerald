@@ -219,7 +219,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_FightArea_FightArea_EventScript_SNMulti",
+      "script": "FightArea_EventScript_SNMulti",
       "flag": "FLAG_SN_HIDE_FA_MULTI"
     },
     {
@@ -248,7 +248,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_FightArea_FightArea_EventScript_SNMulti",
+      "script": "FightArea_EventScript_SNMulti",
       "flag": "FLAG_SN_HIDE_FA_MULTI"
     },
     {
@@ -263,7 +263,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_FightArea_FightArea_EventScript_SNMulti",
+      "script": "FightArea_EventScript_SNMulti",
       "flag": "FLAG_SN_HIDE_FA_MULTI"
     },
     {

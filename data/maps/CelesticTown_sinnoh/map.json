@@ -92,7 +92,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_CelesticTown_CelesticTown_EventScript_SNCEL_GRUNT",
+      "script": "CelesticTown_EventScript_SNCEL_GRUNT",
       "flag": "FLAG_SN_HIDE_CEL_GRUNT"
     },
     {
@@ -107,7 +107,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_CelesticTown_CelesticTown_EventScript_SNCynthia",
+      "script": "CelesticTown_EventScript_SNCynthia",
       "flag": "FLAG_SN_HIDE_CEL_CYNTHIA"
     },
     {

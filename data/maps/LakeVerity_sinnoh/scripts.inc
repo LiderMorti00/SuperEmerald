@@ -2,6 +2,100 @@ LakeVerity_sinnoh_MapScripts::
 	.byte 0
 
 
+Sinnoh_EventScript_BufferCounterpartName::
+	checkplayergender
+	goto_if_eq VAR_RESULT, MALE, Sinnoh_EventScript_BufferDawn
+	bufferstring STR_VAR_1, Sinnoh_Text_Lucas
+	return
+
+Sinnoh_Text_Lucas::
+	.string "LUCAS$"
+
+Sinnoh_EventScript_BufferDawn::
+	bufferstring STR_VAR_1, Sinnoh_Text_Dawn
+	return
+
+Sinnoh_Text_Dawn::
+	.string "DAWN$"
+
+LakeVerity_EventScript_Scene::
+	lockall
+	applymovement LOCALID_LAKE_BARRY, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox LakeVerity_Text_Cyrus, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_LAKE_BARRY, Common_Movement_FaceUp
+	applymovement LOCALID_LAKE_CYRUS, LakeVerity_Movement_SNCyrusTurn
+	waitmovement 0
+	sn_walktoplayer LOCALID_LAKE_CYRUS, SN_SPEED_NORMAL
+	waitmovement 0
+	sn_playerface LOCALID_LAKE_CYRUS
+	waitmovement LOCALID_PLAYER
+	msgbox LakeVerity_Text_Cyrus2, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto LOCALID_LAKE_CYRUS, 38, 43, SN_SPEED_NORMAL
+	waitmovement 0
+	removeobject LOCALID_LAKE_CYRUS
+	applymovement LOCALID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	playmoncry SPECIES_MESPRIT, CRY_MODE_NORMAL
+	waitmoncry
+	msgbox LakeVerity_Text_Cry, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_LAKE_BARRY, Common_Movement_ExclamationMark
+	waitmovement 0
+	sn_walktoplayer LOCALID_LAKE_BARRY, SN_SPEED_FAST
+	waitmovement 0
+	sn_playerface LOCALID_LAKE_BARRY
+	waitmovement LOCALID_PLAYER
+	msgbox LakeVerity_Text_Barry, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto LOCALID_LAKE_BARRY, 39, 43, SN_SPEED_FAST
+	waitmovement 0
+	removeobject LOCALID_LAKE_BARRY
+	setflag FLAG_HIDE_LAKE_VERITY_ROWAN
+	setvar VAR_SN_SINNOH_STORY, 7
+	releaseall
+	end
+
+LakeVerity_Text_Barry::
+	.string "{RIVAL}: What was that about? Weird\n"
+	.string "guy...\p"
+	.string "{RIVAL}: OK, {PLAYER}! Let’s catch\n"
+	.string "that legendary POKéMON!\p"
+	.string "{RIVAL}: ! Did you hear that,\n"
+	.string "{PLAYER}?!\p"
+	.string "That was the legendary POKéMON\n"
+	.string "crying! That had to be it!\p"
+	.string "OK! This is our chance! Let’s catch it!\p"
+	.string "...Wait! What...?!\p"
+	.string "We don’t have anything on us!\p"
+	.string "You know, POKé BALLS! P-O-K-accent-E\n"
+	.string "Balls!\p"
+	.string "If we don’t have those, we can’t catch\n"
+	.string "POKéMON or take them around with us!\p"
+	.string "...Do you think Prof. Rowan’d give us\n"
+	.string "some if we asked him?\p"
+	.string "You know, you remember what he said,\n"
+	.string "don’t you?\p"
+	.string "He said to visit him at his lab if we\n"
+	.string "needed anything.\p"
+	.string "OK, {PLAYER}! I’ll race you!\p"
+	.string "First one to the professor’s lab in\n"
+	.string "Sandgem Town rules!$"
+
+LakeVerity_Text_Cry::
+	.string "Kyauuun!$"
+
+LakeVerity_Text_Cyrus2::
+	.string "???: Allow me to pass. Step aside.$"
+
+LakeVerity_Movement_SNCyrusTurn::
+	delay_16
+	face_down
+	delay_8
+	step_end
+
 LakeVerity_Text_Cyrus::
 	.string "???: ...The flowing time... ...The\n"
 	.string "expanding space...\p"
@@ -10,8 +104,9 @@ LakeVerity_Text_Cyrus::
 	.string "Until then, sleep while you can,\n"
 	.string "legendary POKéMON of the lake bed...$"
 
-SE_S_LakeVerity_LakeVerity_EventScript_Scene::
-	msgbox LakeVerity_Text_Cyrus, MSGBOX_NPC
+LakeVerity_EventScript_SNVERITY_MARS::
+	trainerbattle_single TRAINER_BENJAMIN_4_SINNOH, LakeVerity_EventScript_SNVERITY_MARS_Intro, LakeVerity_EventScript_SNVERITY_MARS_Defeat, LakeVerity_EventScript_SNVERITY_MARS_Won
+	msgbox LakeVerity_EventScript_SNVERITY_MARS_Post, MSGBOX_AUTOCLOSE
 	end
 
 LakeVerity_EventScript_SNVERITY_MARS_Post::
@@ -33,9 +128,111 @@ LakeVerity_EventScript_SNVERITY_MARS_Post::
 	.string "You can look forward to what plans\n"
 	.string "Team Galactic has for them!$"
 
-SE_S_LakeVerity_LakeVerity_EventScript_SNVERITY_MARS::
-	msgbox LakeVerity_EventScript_SNVERITY_MARS_Post, MSGBOX_NPC
+LakeVerity_EventScript_SNVERITY_MARS_Won::
+	lock
+	msgbox LakeVerity_Text_SNMarsDefeat2, MSGBOX_DEFAULT
+	msgbox LakeVerity_EventScript_SNVERITY_MARS_Post, MSGBOX_DEFAULT
+	msgbox LakeVerity_Text_SNPullingOut, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto VAR_LAST_TALKED, 39, 43, SN_SPEED_FAST, 0, 0, 0
+	waitmovement 0
+	removeobject VAR_LAST_TALKED
+	setflag FLAG_SN_HIDE_VERITY_MARS
+	call Sinnoh_EventScript_BufferCounterpartName
+	msgbox LakeVerity_Text_SNAfterMars1, MSGBOX_DEFAULT
+	checkplayergender
+	call_if_eq VAR_RESULT, MALE, LakeVerity_Text_SNAfterMars2_ScrD
+	call_if_eq VAR_RESULT, FEMALE, LakeVerity_Text_SNAfterMars2_ScrL
+	release
 	end
+
+LakeVerity_Text_SNAfterMars2_ScrL::
+	msgbox LakeVerity_Text_SNAfterMars2_Lu, MSGBOX_DEFAULT
+	return
+
+LakeVerity_Text_SNAfterMars2_Lu::
+	.string "{STR_VAR_1}: {PLAYER}, what’s Team\n"
+	.string "Galactic up to?\p"
+	.string "They’d better not harm the POKéMON\n"
+	.string "they took from the lakes...$"
+
+LakeVerity_Text_SNAfterMars2_ScrD::
+	checkplayergender
+	call_if_eq VAR_RESULT, FEMALE, LakeVerity_Text_SNAfterMars2_SNLucasCall
+	call_if_ne VAR_RESULT, FEMALE, LakeVerity_Text_SNAfterMars2_SNDawnCall
+	return
+
+LakeVerity_Text_SNAfterMars2_SNDawnCall::
+	msgbox LakeVerity_Text_SNAfterMars2, MSGBOX_DEFAULT
+	return
+
+LakeVerity_Text_SNAfterMars2::
+	.string "{STR_VAR_1}: {PLAYER}, what is Team\n"
+	.string "Galactic up to?\p"
+	.string "Are the abducted POKéMON of the lakes\n"
+	.string "going to be OK?$"
+
+LakeVerity_Text_SNAfterMars2_SNLucasCall::
+	msgbox LakeVerity_Text_SNAfterMars2_SNLu, MSGBOX_DEFAULT
+	return
+
+LakeVerity_Text_SNAfterMars2_SNLu::
+	.string "{STR_VAR_1}: {PLAYER}, what’s Team\n"
+	.string "Galactic up to?\p"
+	.string "They’d better not harm the POKéMON\n"
+	.string "they took from the lakes...$"
+
+LakeVerity_Text_SNAfterMars1::
+	.string "Rowan: I see... This also occurred at\n"
+	.string "Lake Valor...\p"
+	.string "Another legendary POKéMON was taken\n"
+	.string "away by Team Galactic...\p"
+	.string "Both of you went up against\n"
+	.string "full-fledged criminals...\p"
+	.string "The fact that you’re unharmed is\n"
+	.string "reason enough to celebrate.\p"
+	.string "...But what about {RIVAL}?\p"
+	.string "What is happening at Lake Acuity? Is\n"
+	.string "{RIVAL} safe?\p"
+	.string "Rowan: {PLAYER}, I need you to go to\n"
+	.string "Lake Acuity right away.\p"
+	.string "I’m worried about {RIVAL}.$"
+
+LakeVerity_Text_SNPullingOut::
+	.string "Team! We’re pulling out! The boss is\n"
+	.string "waiting at the HQ!$"
+
+LakeVerity_Text_SNMarsDefeat2::
+	.string "Mars: So, first the windworks, and now\n"
+	.string "Lake Verity that I owe you for!\p"
+	.string "This shouldn’t be happening to Team\n"
+	.string "Galactic’s Commander...\p"
+	.string "...Calm down, Mars... I’ve done my part in\n"
+	.string "all of this...\p"
+	.string "My mission was to transport the lake’s\n"
+	.string "POKéMON to our HQ...\p"
+	.string "...That’s right! I accomplished my\n"
+	.string "mission without a problem!$"
+
+LakeVerity_EventScript_SNVERITY_MARS_Defeat::
+	.string "I lost again...$"
+
+LakeVerity_EventScript_SNVERITY_MARS_Intro::
+	.string "Mars: That face...! It brings back bad\n"
+	.string "memories!\p"
+	.string "I’m talking about the windworks!\p"
+	.string "I caught a whole lot of trouble for\n"
+	.string "that little incident.\p"
+	.string "What’s with that look on your face?\n"
+	.string "You do remember me, don’t you?\p"
+	.string "Fine, whatever. I’ll tell you who I am\n"
+	.string "again!\p"
+	.string "I’m Mars, one of Team Galactic’s\n"
+	.string "Commanders.\p"
+	.string "So, what is it? Are you some\n"
+	.string "lovey-dovey couple to the rescue?\p"
+	.string "Not a chance! Not even a teeny one!\n"
+	.string "You’re all going down!$"
 
 LakeVerity_EventScript_SNVERITY_GRUNT1::
 	trainerbattle_single TRAINER_BENJAMIN_5_SINNOH, LakeVerity_EventScript_SNVERITY_GRUNT1_Intro, LakeVerity_EventScript_SNVERITY_GRUNT1_Defeat, LakeVerity_EventScript_SNVERITY_GRUNT1_Won

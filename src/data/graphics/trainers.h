@@ -637,13 +637,25 @@ const u16 gTrainerPalette_ChampionLanceHgss[] = INCGFX_U16("graphics/trainers/fr
 
 
 
+
+
+
+
+
+
 // Super Emerald: Sinnoh begin
 const u32 gTrainerFrontPic_SinnohLucas[] = INCGFX_U32("graphics/trainers/front_pics/sinnoh/lucas.png", ".4bpp.smol");
 const u16 gTrainerPalette_SinnohLucas[] = INCGFX_U16("graphics/trainers/front_pics/sinnoh/lucas.png", ".gbapal");
+const u8 gTrainerBackPic_SinnohLucas[] = INCGFX_U8("graphics/trainers/back_pics/sinnoh/lucas.png", ".4bpp");
+const u16 gTrainerBackPicPalette_SinnohLucas[] = INCGFX_U16("graphics/trainers/back_pics/sinnoh/lucas.png", ".gbapal");
 const u32 gTrainerFrontPic_SinnohDawn[] = INCGFX_U32("graphics/trainers/front_pics/sinnoh/dawn.png", ".4bpp.smol");
 const u16 gTrainerPalette_SinnohDawn[] = INCGFX_U16("graphics/trainers/front_pics/sinnoh/dawn.png", ".gbapal");
+const u8 gTrainerBackPic_SinnohDawn[] = INCGFX_U8("graphics/trainers/back_pics/sinnoh/dawn.png", ".4bpp");
+const u16 gTrainerBackPicPalette_SinnohDawn[] = INCGFX_U16("graphics/trainers/back_pics/sinnoh/dawn.png", ".gbapal");
 const u32 gTrainerFrontPic_SinnohBarry[] = INCGFX_U32("graphics/trainers/front_pics/sinnoh/barry.png", ".4bpp.smol");
 const u16 gTrainerPalette_SinnohBarry[] = INCGFX_U16("graphics/trainers/front_pics/sinnoh/barry.png", ".gbapal");
+const u8 gTrainerBackPic_SinnohBarry[] = INCGFX_U8("graphics/trainers/back_pics/sinnoh/barry.png", ".4bpp");
+const u16 gTrainerBackPicPalette_SinnohBarry[] = INCGFX_U16("graphics/trainers/back_pics/sinnoh/barry.png", ".gbapal");
 const u32 gTrainerFrontPic_SinnohBugCatcher[] = INCGFX_U32("graphics/trainers/front_pics/sinnoh/bug_catcher.png", ".4bpp.smol");
 const u16 gTrainerPalette_SinnohBugCatcher[] = INCGFX_U16("graphics/trainers/front_pics/sinnoh/bug_catcher.png", ".gbapal");
 const u32 gTrainerFrontPic_SinnohAromaLady[] = INCGFX_U32("graphics/trainers/front_pics/sinnoh/aroma_lady.png", ".4bpp.smol");
@@ -760,6 +772,16 @@ const u32 gTrainerFrontPic_SinnohCommanderSaturn[] = INCGFX_U32("graphics/traine
 const u16 gTrainerPalette_SinnohCommanderSaturn[] = INCGFX_U16("graphics/trainers/front_pics/sinnoh/commander_saturn.png", ".gbapal");
 const u32 gTrainerFrontPic_SinnohGalacticBossCyrus[] = INCGFX_U32("graphics/trainers/front_pics/sinnoh/galactic_boss_cyrus.png", ".4bpp.smol");
 const u16 gTrainerPalette_SinnohGalacticBossCyrus[] = INCGFX_U16("graphics/trainers/front_pics/sinnoh/galactic_boss_cyrus.png", ".gbapal");
+const u8 gTrainerBackPic_SinnohCheryl[] = INCGFX_U8("graphics/trainers/back_pics/sinnoh/cheryl.png", ".4bpp");
+const u16 gTrainerBackPicPalette_SinnohCheryl[] = INCGFX_U16("graphics/trainers/back_pics/sinnoh/cheryl.png", ".gbapal");
+const u8 gTrainerBackPic_SinnohRiley[] = INCGFX_U8("graphics/trainers/back_pics/sinnoh/riley.png", ".4bpp");
+const u16 gTrainerBackPicPalette_SinnohRiley[] = INCGFX_U16("graphics/trainers/back_pics/sinnoh/riley.png", ".gbapal");
+const u8 gTrainerBackPic_SinnohMarley[] = INCGFX_U8("graphics/trainers/back_pics/sinnoh/marley.png", ".4bpp");
+const u16 gTrainerBackPicPalette_SinnohMarley[] = INCGFX_U16("graphics/trainers/back_pics/sinnoh/marley.png", ".gbapal");
+const u8 gTrainerBackPic_SinnohBuck[] = INCGFX_U8("graphics/trainers/back_pics/sinnoh/buck.png", ".4bpp");
+const u16 gTrainerBackPicPalette_SinnohBuck[] = INCGFX_U16("graphics/trainers/back_pics/sinnoh/buck.png", ".gbapal");
+const u8 gTrainerBackPic_SinnohMira[] = INCGFX_U8("graphics/trainers/back_pics/sinnoh/mira.png", ".4bpp");
+const u16 gTrainerBackPicPalette_SinnohMira[] = INCGFX_U16("graphics/trainers/back_pics/sinnoh/mira.png", ".gbapal");
 // Super Emerald: Sinnoh end
 const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
 {
@@ -1498,14 +1520,17 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     [TRAINER_PIC_SINNOH_LUCAS] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_SinnohLucas, gTrainerPalette_SinnohLucas),
+        .backPic = TRAINER_BACK_PIC(4, gTrainerBackPic_SinnohLucas, gTrainerBackPicPalette_SinnohLucas, sBackAnims_Hoenn),
     },
     [TRAINER_PIC_SINNOH_DAWN] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_SinnohDawn, gTrainerPalette_SinnohDawn),
+        .backPic = TRAINER_BACK_PIC(4, gTrainerBackPic_SinnohDawn, gTrainerBackPicPalette_SinnohDawn, sBackAnims_Hoenn),
     },
     [TRAINER_PIC_SINNOH_BARRY] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_SinnohBarry, gTrainerPalette_SinnohBarry),
+        .backPic = TRAINER_BACK_PIC(4, gTrainerBackPic_SinnohBarry, gTrainerBackPicPalette_SinnohBarry, sBackAnims_Hoenn),
     },
     [TRAINER_PIC_SINNOH_BUG_CATCHER] =
     {
@@ -1738,6 +1763,26 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     [TRAINER_PIC_SINNOH_GALACTIC_BOSS_CYRUS] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_SinnohGalacticBossCyrus, gTrainerPalette_SinnohGalacticBossCyrus),
+    },
+    [TRAINER_PIC_SINNOH_CHERYL] =
+    {
+        .backPic = TRAINER_BACK_PIC(4, gTrainerBackPic_SinnohCheryl, gTrainerBackPicPalette_SinnohCheryl, sBackAnims_Hoenn),
+    },
+    [TRAINER_PIC_SINNOH_RILEY] =
+    {
+        .backPic = TRAINER_BACK_PIC(4, gTrainerBackPic_SinnohRiley, gTrainerBackPicPalette_SinnohRiley, sBackAnims_Hoenn),
+    },
+    [TRAINER_PIC_SINNOH_MARLEY] =
+    {
+        .backPic = TRAINER_BACK_PIC(4, gTrainerBackPic_SinnohMarley, gTrainerBackPicPalette_SinnohMarley, sBackAnims_Hoenn),
+    },
+    [TRAINER_PIC_SINNOH_BUCK] =
+    {
+        .backPic = TRAINER_BACK_PIC(4, gTrainerBackPic_SinnohBuck, gTrainerBackPicPalette_SinnohBuck, sBackAnims_Hoenn),
+    },
+    [TRAINER_PIC_SINNOH_MIRA] =
+    {
+        .backPic = TRAINER_BACK_PIC(4, gTrainerBackPic_SinnohMira, gTrainerBackPicPalette_SinnohMira, sBackAnims_Hoenn),
     },
     // Super Emerald: Sinnoh end
 };

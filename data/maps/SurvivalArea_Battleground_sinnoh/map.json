@@ -223,7 +223,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_SurvivalArea_Battleground_SurvivalArea_Battleground_EventScript_SNBuckIntro",
+      "script": "SurvivalArea_Battleground_EventScript_SNBuckIntro",
       "flag": "FLAG_SN_HIDE_BG_BUCK_INTRO"
     }
   ],

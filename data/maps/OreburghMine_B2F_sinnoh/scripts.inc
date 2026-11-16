@@ -2,14 +2,37 @@ OreburghMine_B2F_sinnoh_MapScripts::
 	.byte 0
 
 
+OreburghMine_B2F_EventScript_Roark::
+	lock
+	faceplayer
+	msgbox OreburghMine_B2F_Text_Roark, MSGBOX_DEFAULT
+	closemessage
+	playse SE_M_ROCK_THROW
+	waitse
+	msgbox OreburghMine_B2F_Text_SNRoark2, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto LOCALID_MINE_ROARK, 27, 24, SN_SPEED_NORMAL, 0, 0, 0
+	waitmovement LOCALID_MINE_ROARK
+	removeobject LOCALID_MINE_ROARK
+	setflag FLAG_HIDE_MINE_ROARK
+	clearflag FLAG_HIDE_GYM_ROARK
+	setvar VAR_SN_SINNOH_STORY, 18
+	release
+	end
+
+OreburghMine_B2F_Text_SNRoark2::
+	.string "ROARK: Fallen boulders need to be\n"
+	.string "smashed so they’re out of the way.\p"
+	.string "If you could get the Badge from the\n"
+	.string "Gym in town, you’d be able\p"
+	.string "to do this too.\p"
+	.string "Of course, you’d have to beat the Gym\n"
+	.string "Leader first. That’d be me!$"
+
 OreburghMine_B2F_Text_Roark::
 	.string "ROARK: OK, stand back and watch this.\p"
 	.string "Using the hidden move Rock Smash, a\n"
 	.string "boulder blocking your way...$"
-
-SE_S_OreburghMine_B2F_OreburghMine_B2F_EventScript_Roark::
-	msgbox OreburghMine_B2F_Text_Roark, MSGBOX_NPC
-	end
 
 OreburghMine_B2F_EventScript_Mason::
 	trainerbattle_single TRAINER_MARY_SINNOH, OreburghMine_B2F_Text_MasonIntro, OreburghMine_B2F_Text_MasonDefeat

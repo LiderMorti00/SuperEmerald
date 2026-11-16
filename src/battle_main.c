@@ -426,6 +426,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_DOUBLE_TEAM] = { _("DOUBLE TEAM"), 15 },
     [TRAINER_CLASS_GALACTIC_COMMANDER] = { _("COMMANDER"), 30 },
     [TRAINER_CLASS_JOGGER] = { _("JOGGER"), 4 },
+    [TRAINER_CLASS_MAID] = { _("MAID"), 10 },
     [TRAINER_CLASS_PI] = { _("P.I."), 10 },
     [TRAINER_CLASS_POKE_KID] = { _("POKé KID"), 2 },
     [TRAINER_CLASS_POLICEMAN] = { _("POLICEMAN"), 10 },

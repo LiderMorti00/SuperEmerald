@@ -1,185 +1,29 @@
 # Sinnoh import report
 
-stats: {'kept': 1706, 'fallback': 129, 'warp_external': 2, 'item_substituted': 10, 'berry_trees': 110, 'wild_tables': 253, 'heal_locations': 18}
+stats: {'kept': 1859, 'warp_external': 2, 'item_substituted': 13, 'fallback': 8, 'berry_trees': 110, 'wild_tables': 253, 'heal_locations': 18}
 
-missing classes/pics: []
+missing classes/pics: [('class', 'TRAINER_CLASS_MAID')]
 
 fallback reasons:
-     36 cmd sn_walkto
-     27 var VAR_SINNOH_STORY
-     16 var VAR_SN_HONEY_TREE
-     10 special SinnohRestaurantCouple
-      9 var VAR_STARTER_MON
-      9 cmd checkfollowernpc
-      6 cmd sn_walktoplayer
-      6 special SinnohPartyHasRotom
-      4 item ITEM_SECRET_POTION
-      2 item ITEM_COUPON_1
-      2 item ITEM_LUNAR_WING
-      2 const ITEM_HM_STRENGTH
+      3 var VAR_SINNOH_HAS_POKEMON
       2 special SinnohAddRoamer
-      2 cmd setfollowernpc
-      2 cmd trainerbattle_two_trainers_sn
-      2 special SinnohUnownFormsCount
-      1 item ITEM_COUPON_2
-      1 item ITEM_COUPON_3
-      1 special SinnohPartyHasSpecies
-      1 const ITEM_HM_WATERFALL
-      1 item ITEM_SUITE_KEY
-      1 special SinnohPartyMaxRibbons
-      1 const ITEM_HM_ROCK_SMASH
-      1 special SinnohTrophyGardenPick
-      1 cmd sn_playerface
       1 special SinnohDailyOutbreak
-      1 var VAR_POKELOT_PRIZE_ITEM
-      1 const INGAME_TRADE_KAZZA
       1 const TRAINER_ROARK_1
-      1 const ITEM_TM_AERIAL_ACE
-      1 const INGAME_TRADE_CHARAP
-      1 const ITEM_TM_SECRET_POWER
-      1 flag FLAG_SYS_PC_LANETTE
-      1 special SinnohNewsPressPick
       1 const COINS_PRICE_500
       1 const DOLL_COINS
-      1 const ITEM_TM_ICE_BEAM
-      1 var VAR_SLATEPORT_FAN_CLUB_STATE
-      1 special SinnohMarshBinoculars
-      1 const ITEM_HM_SURF
-      1 const INGAME_TRADE_GASPAR
-      1 special SinnohSpaTreatment
+      1 const TM_ICE_BEAM_COINS
 
 fallbacks:
-  SandgemTown SandgemTown_EventScript_Escort (var VAR_SINNOH_STORY)
-  SandgemTown SandgemTown_EventScript_Rowan (var VAR_SINNOH_STORY)
-  JubilifeCity JubilifeCity_EventScript_Clown1 (item ITEM_COUPON_1)
-  JubilifeCity JubilifeCity_EventScript_Clown2 (item ITEM_COUPON_2)
-  JubilifeCity JubilifeCity_EventScript_Clown3 (item ITEM_COUPON_3)
-  JubilifeCity JubilifeCity_EventScript_President (item ITEM_COUPON_1)
-  OreburghCity OreburghCity_EventScript_SNBarryPost (cmd sn_walkto)
-  FloaromaTown FloaromaTown_EventScript_PtNpc4 (special SinnohPartyHasSpecies)
-  EternaCity EternaCity_EventScript_Barry (var VAR_SINNOH_STORY)
-  EternaCity EternaCity_EventScript_Statue (var VAR_SINNOH_STORY)
-  EternaCity EternaCity_EventScript_SNCynthiaEgg (cmd sn_walkto)
-  HearthomeCity HearthomeCity_EventScript_PtNpc1 (cmd sn_walkto)
-  HearthomeCity HearthomeCity_EventScript_SNKeira (cmd sn_walkto)
   HearthomeCity warp MAP_LILYCOVE_CITY_CONTEST_LOBBY (external warp)
-  SolaceonTown SolaceonTown_EventScript_SNBarry (cmd sn_walkto)
-  CelesticTown CelesticTown_EventScript_SNCEL_GRUNT (cmd sn_walkto)
-  CelesticTown CelesticTown_EventScript_SNCynthia (cmd sn_walkto)
-  VeilstoneCity VeilstoneCity_EventScript_SNWHCP (cmd sn_walkto)
-  VeilstoneCity VeilstoneCity_EventScript_SNKeyGrunt (cmd sn_walkto)
-  VeilstoneCity VeilstoneCity_EventScript_SNKeyGrunt_Looker (cmd sn_walkto)
-  PastoriaCity PastoriaCity_EventScript_SNBarry (var VAR_STARTER_MON)
-  PastoriaCity PastoriaCity_EventScript_SNGrunt (cmd sn_walkto)
-  PastoriaCity PastoriaCity_EventScript_SNWakeA (cmd sn_walkto)
-  PastoriaCity PastoriaCity_EventScript_SNBomb (cmd sn_walkto)
-  CanalaveCity CanalaveCity_EventScript_PtNpc1 (var VAR_SINNOH_STORY)
-  CanalaveCity CanalaveCity_EventScript_PtNpc2 (var VAR_SINNOH_STORY)
-  CanalaveCity CanalaveCity_EventScript_PtNpc3 (var VAR_SINNOH_STORY)
-  CanalaveCity CanalaveCity_EventScript_PtNpc4 (var VAR_SINNOH_STORY)
-  CanalaveCity CanalaveCity_EventScript_PtNpc5 (var VAR_SINNOH_STORY)
-  CanalaveCity CanalaveCity_EventScript_SailorEldritch (item ITEM_LUNAR_WING)
-  CanalaveCity CanalaveCity_EventScript_SNBarry (const ITEM_HM_STRENGTH)
-  SnowpointCity SnowpointCity_EventScript_SNCynthia (cmd sn_walkto)
-  SunyshoreCity SunyshoreCity_EventScript_SNJasmine (const ITEM_HM_WATERFALL)
-  SunyshoreCity SunyshoreCity_EventScript_SNBarry8 (cmd sn_walkto)
-  Route201 Route201_EventScript_Barry (var VAR_SINNOH_STORY)
-  Route202 Route202_EventScript_SNRadarCP (cmd sn_walkto)
-  Route205_North Route205_North_EventScript_SNHoneyTree (var VAR_SN_HONEY_TREE)
-  Route205_South Route205_South_EventScript_SNHoneyTree (var VAR_SN_HONEY_TREE)
-  Route206 Route206_EventScript_SNHoneyTree (var VAR_SN_HONEY_TREE)
-  Route207 Route207_EventScript_SNCounterpart (cmd sn_walkto)
-  Route208 Route208_EventScript_SNHoneyTree (var VAR_SN_HONEY_TREE)
-  Route209 Route209_EventScript_SNHoneyTree (var VAR_SN_HONEY_TREE)
-  Route210_South Route210_South_EventScript_SNPsyduck (item ITEM_SECRET_POTION)
-  Route210_South Route210_South_EventScript_SNCynthiaCharm (cmd sn_walkto)
-  Route212_North Route212_North_EventScript_SNHoneyTree (var VAR_SN_HONEY_TREE)
-  Route213 Route213_EventScript_SNBomb_Looker (cmd sn_walkto)
-  Route213 Route213_EventScript_SNHoneyTree (var VAR_SN_HONEY_TREE)
-  Route214 Route214_EventScript_SNHoneyTree (var VAR_SN_HONEY_TREE)
-  Route215 Route215_EventScript_SNHoneyTree (var VAR_SN_HONEY_TREE)
-  Route217 Route217_EventScript_SNMaylene (cmd sn_walkto)
-  Route221 Route221_EventScript_SNHoneyTree (var VAR_SN_HONEY_TREE)
-  Route222 Route222_EventScript_SNHoneyTree (var VAR_SN_HONEY_TREE)
-  Route224 Route224_EventScript_SNOak (cmd sn_walktoplayer)
-  ValorLakefront ValorLakefront_EventScript_SNCynthia (cmd sn_walktoplayer)
-  ValorLakefront ValorLakefront_EventScript_SNSuiteLady (item ITEM_SUITE_KEY)
-  ValorLakefront ValorLakefront_EventScript_SNHoneyTree (var VAR_SN_HONEY_TREE)
-  FightArea FightArea_EventScript_SNMulti (var VAR_STARTER_MON)
-  SurvivalArea SurvivalArea_EventScript_SNBarry (var VAR_STARTER_MON)
-  ResortArea ResortArea_EventScript_SNSyndicate (special SinnohPartyMaxRibbons)
-  LakeVerity LakeVerity_EventScript_Scene (cmd sn_walktoplayer)
-  LakeVerity LakeVerity_EventScript_SNVERITY_MARS (cmd sn_walkto)
-  LakeAcuity LakeAcuity_EventScript_SNScene (cmd sn_walktoplayer)
-  ValleyWindworks ValleyWindworks_EventScript_SNHoneyTree (var VAR_SN_HONEY_TREE)
-  EternaForest EternaForest_EventScript_Cheryl (var VAR_SINNOH_STORY)
-  EternaForest EternaForest_EventScript_SNHoneyTree (var VAR_SN_HONEY_TREE)
-  FloaromaMeadow FloaromaMeadow_EventScript_SNHoneyTree (var VAR_SN_HONEY_TREE)
-  IronIsland IronIsland_EventScript_SNRiley (const ITEM_HM_STRENGTH)
-  FuegoIronworks FuegoIronworks_EventScript_SNHoneyTree (var VAR_SN_HONEY_TREE)
+  Route201 Route201_EventScript_Barry (var VAR_SINNOH_HAS_POKEMON)
   FullmoonIsland_Forest FullmoonIsland_Forest_EventScript_SNCRESSELIA (special SinnohAddRoamer)
-  OreburghGate_1F OreburghGate_1F_EventScript_HikerHM (const ITEM_HM_ROCK_SMASH)
-  OreburghMine_B2F OreburghMine_B2F_EventScript_Roark (cmd sn_walkto)
-  MtCoronet_1F_South MtCoronet_1F_South_EventScript_SNCyrus (cmd sn_walkto)
-  IronIsland_B2F_Left IronIsland_B2F_Left_EventScript_SNIronGrunts (cmd checkfollowernpc)
-  IronIsland_B2F_Left IronIsland_B2F_Left_EventScript_SNRiley (cmd setfollowernpc)
-  WaywardCave_1F WaywardCave_1F_EventScript_SNMira (cmd setfollowernpc)
-  MtCoronet_2F MtCoronet_2F_EventScript_SNLooker (cmd sn_walkto)
-  SpearPillar SpearPillar_EventScript_SNSPGrunts (cmd trainerbattle_two_trainers_sn)
-  SpearPillar SpearPillar_EventScript_SNSPCommanders (var VAR_STARTER_MON)
-  SpearPillar SpearPillar_EventScript_SNCyrus (var VAR_SINNOH_STORY)
   LakeVerity_Cavern LakeVerity_Cavern_EventScript_SNMESPRIT (special SinnohAddRoamer)
-  LakeVerity_Cavern LakeVerity_Cavern_EventScript_SNRowan (cmd sn_walkto)
-  ManiacTunnel ManiacTunnel_EventScript_SNManiac (special SinnohUnownFormsCount)
-  StarkMountain_Room3 StarkMountain_Room3_EventScript_SNCharon (cmd checkfollowernpc)
-  Route209_Access Route209_Access_EventScript_SNBarry (var VAR_STARTER_MON)
-  ValleyWindoworks_Indoor ValleyWindoworks_Indoor_EventScript_Mars (var VAR_SINNOH_STORY)
-  ValleyWindoworks_Indoor ValleyWindoworks_Indoor_EventScript_Worker (var VAR_SINNOH_STORY)
-  ValorLakefront_Restaurant ValorLakefront_Restaurant_EventScript_SNT0 (special SinnohRestaurantCouple)
-  ValorLakefront_Restaurant ValorLakefront_Restaurant_EventScript_SNT1 (special SinnohRestaurantCouple)
-  ValorLakefront_Restaurant ValorLakefront_Restaurant_EventScript_SNT2 (special SinnohRestaurantCouple)
-  ValorLakefront_Restaurant ValorLakefront_Restaurant_EventScript_SNT3 (special SinnohRestaurantCouple)
-  ValorLakefront_Restaurant ValorLakefront_Restaurant_EventScript_SNT4 (special SinnohRestaurantCouple)
-  PokemonMansion PokemonMansion_EventScript_PtNpc3 (cmd sn_walkto)
-  PokemonMansion_Office PokemonMansion_Office_EventScript_SNBacklot (special SinnohTrophyGardenPick)
-  TwinleafTown_MainHouse_1F TwinleafTown_MainHouse_1F_EventScript_Mom (var VAR_SINNOH_STORY)
-  TwinleafTown_MainHouse_2F TwinleafTown_MainHouse_2F_EventScript_Barry (cmd sn_playerface)
-  Twinleaf_Town_RivalsHouse_F1 Twinleaf_Town_RivalsHouse_F1_EventScript_PtNpc1 (var VAR_SINNOH_STORY)
-  Twinleaf_Town_RivalsHouse_F2 Twinleaf_Town_RivalsHouse_F2_EventScript_Barry (var VAR_SINNOH_STORY)
   SandgemTown_RivalHouse_F1 SandgemTown_RivalHouse_F1_EventScript_PtNpc2 (special SinnohDailyOutbreak)
-  JubilifeCity_JubilifeTV_F1 JubilifeCity_JubilifeTV_F1_EventScript_SNLottery (var VAR_POKELOT_PRIZE_ITEM)
-  OreburghCity_Flat2_F1 OreburghCity_Flat2_F1_EventScript_SNTradeKazza (const INGAME_TRADE_KAZZA)
   OreburghCity_Gym OreburghCity_Gym_EventScript_Roark (const TRAINER_ROARK_1)
-  FloaromaTown_House1 FloaromaTown_House1_EventScript_TMGirl (const ITEM_TM_AERIAL_ACE)
-  EternaCity_Flat1_F1 EternaCity_Flat1_F1_EventScript_SNTradeCharap (const INGAME_TRADE_CHARAP)
-  EternaCity_UndergroundManHouse EternaCity_UndergroundManHouse_EventScript_UndergroundMan (const ITEM_TM_SECRET_POWER)
-  EternaCity_Gym EternaCity_Gym_EventScript_Gardenia (var VAR_SINNOH_STORY)
-  EternaCity_GalacticBuilding_4F EternaCity_GalacticBuilding_4F_EventScript_Jupiter (var VAR_SINNOH_STORY)
-  EternaCity_GalacticBuilding_RotomsRoom EternaCity_GalacticBuilding_RotomsRoom_EventScript_SNAppliance2 (special SinnohPartyHasRotom)
-  EternaCity_GalacticBuilding_RotomsRoom EternaCity_GalacticBuilding_RotomsRoom_EventScript_SNAppliance1 (special SinnohPartyHasRotom)
-  EternaCity_GalacticBuilding_RotomsRoom EternaCity_GalacticBuilding_RotomsRoom_EventScript_SNAppliance3 (special SinnohPartyHasRotom)
-  EternaCity_GalacticBuilding_RotomsRoom EternaCity_GalacticBuilding_RotomsRoom_EventScript_SNAppliance4 (special SinnohPartyHasRotom)
-  EternaCity_GalacticBuilding_RotomsRoom EternaCity_GalacticBuilding_RotomsRoom_EventScript_SNAppliance5 (special SinnohPartyHasRotom)
-  EternaCity_GalacticBuilding_RotomsRoom EternaCity_GalacticBuilding_RotomsRoom_EventScript_SNNormal (special SinnohPartyHasRotom)
-  HearthomeCity_House1 HearthomeCity_House1_EventScript_SNBebe (flag FLAG_SYS_PC_LANETTE)
-  SolaceonTown_NewsPress SolaceonTown_NewsPress_EventScript_SNEditor (special SinnohNewsPressPick)
   VeilstoneCity_GameCorner VeilstoneCity_GameCorner_EventScript_CoinsClerk (const COINS_PRICE_500)
   VeilstoneCity_GameCorner VeilstoneCity_GameCorner_EventScript_PrizeCornerDolls (const DOLL_COINS)
-  VeilstoneCity_GameCorner VeilstoneCity_GameCorner_EventScript_PrizeCornerTMs (const ITEM_TM_ICE_BEAM)
-  GalacticHQ_4F GalacticHQ_4F_EventScript_SNCyrus (var VAR_SINNOH_STORY)
-  GalacticHQ_Hall GalacticHQ_Hall_EventScript_SNSpeech (cmd sn_walkto)
-  PastoriaCity_House2 PastoriaCity_House2_EventScript_SNScarfGuy (var VAR_SLATEPORT_FAN_CLUB_STATE)
-  PastoriaCity_GreatMarshGate PastoriaCity_GreatMarshGate_EventScript_SNBinoculars (special SinnohMarshBinoculars)
-  CelesticTown_Ruins CelesticTown_Ruins_EventScript_SNElder (const ITEM_HM_SURF)
-  CanalaveCity_Library_F1 CanalaveCity_Library_F1_EventScript_PtNpc3 (cmd sn_walkto)
-  CanalaveCity_Library_F3 CanalaveCity_Library_F3_EventScript_SNRowan (cmd sn_walkto)
-  CanalaveCity_House3 CanalaveCity_House3_EventScript_PtNpc1 (item ITEM_LUNAR_WING)
-  SnowpointCity_House1 SnowpointCity_House1_EventScript_SNTradeGaspar (const INGAME_TRADE_GASPAR)
-  SunyshoreCity_VistaLighthouse SunyshoreCity_VistaLighthouse_EventScript_SNVolkner (cmd sn_walkto)
-  PokemonLeague_NorthPokemonCenter_1F PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry (var VAR_STARTER_MON)
+  VeilstoneCity_GameCorner VeilstoneCity_GameCorner_EventScript_PrizeCornerTMs (const TM_ICE_BEAM_COINS)
   FightArea_FrontierGate warp MAP_BATTLE_FRONTIER_OUTSIDE_WEST (external warp)
-  SurvivalArea_Battleground SurvivalArea_Battleground_EventScript_SNBuckIntro (cmd sn_walkto)
-  ResortArea_RibbonSyndicate_F2 ResortArea_RibbonSyndicate_F2_EventScript_SNSpa (special SinnohSpaTreatment)
 
 objects with visibility flags (decide post-story state):
   TwinleafTown FLAG_SN_HIDE_TWINLEAF_BARRY OBJ_EVENT_GFX_SINNOH_BARRY LOCALID_TWINLEAF_BARRY

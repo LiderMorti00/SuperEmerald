@@ -42,7 +42,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_EternaCity_EternaCity_EventScript_Barry",
+      "script": "EternaCity_EventScript_Barry",
       "flag": "FLAG_HIDE_ETERNA_BARRY"
     },
     {
@@ -57,7 +57,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_EternaCity_EternaCity_EventScript_Statue",
+      "script": "EternaCity_EventScript_Statue",
       "flag": "FLAG_HIDE_ETERNA_STATUE"
     },
     {
@@ -72,7 +72,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_EternaCity_EternaCity_EventScript_Statue",
+      "script": "EternaCity_EventScript_Statue",
       "flag": "FLAG_HIDE_ETERNA_STATUE"
     },
     {
@@ -87,7 +87,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_EternaCity_EternaCity_EventScript_Statue",
+      "script": "EternaCity_EventScript_Statue",
       "flag": "FLAG_HIDE_ETERNA_STATUE"
     },
     {
@@ -354,7 +354,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_EternaCity_EternaCity_EventScript_SNCynthiaEgg",
+      "script": "EternaCity_EventScript_SNCynthiaEgg",
       "flag": "FLAG_SN_HIDE_ETERNA_CYNTHIA_EGG"
     },
     {

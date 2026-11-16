@@ -187,15 +187,40 @@ OreburghCity_Text_SNBarryAgain::
 	.string "If you want to take the Gym challenge,\n"
 	.string "you have to go down to the mine.$"
 
+OreburghCity_EventScript_SNBarryPost::
+	lockall
+	msgbox OreburghCity_Text_SNPost1, MSGBOX_DEFAULT
+	msgbox OreburghCity_Text_SNPost2, MSGBOX_DEFAULT
+	msgbox OreburghCity_Text_SNPost3, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_SN_ORE_BARRY_POST
+	sn_walkto LOCALID_SN_ORE_BARRY_POST, 22, 22, SN_SPEED_FAST, 0, 0, 0
+	waitmovement LOCALID_SN_ORE_BARRY_POST
+	removeobject LOCALID_SN_ORE_BARRY_POST
+	setflag FLAG_SN_HIDE_ORE_BARRY_POST
+	releaseall
+	end
+
+OreburghCity_Text_SNPost3::
+	.string "{RIVAL}: So, I’m going back to\n"
+	.string "Jubilife City. Next stop, the Eterna\l"
+	.string "Gym Badge!\p"
+	.string "Ten seconds before I dash!\p"
+	.string "Nine...\p"
+	.string "Bah! Who’s got time to count?!$"
+
+OreburghCity_Text_SNPost2::
+	.string "{RIVAL}: So, yeah, I went to Route\n"
+	.string "207, but you can’t go there without a\l"
+	.string "Bicycle.\p"
+	.string "I made my team battle and toughened\n"
+	.string "them up, so it wasn’t a waste.$"
+
 OreburghCity_Text_SNPost1::
 	.string "{RIVAL}: Whoops! {PLAYER}! You got\n"
 	.string "the Gym Badge, huh?\p"
 	.string "Eterna City is the next place with a\n"
 	.string "Gym that gives away Badges, right?$"
-
-SE_S_OreburghCity_OreburghCity_EventScript_SNBarryPost::
-	msgbox OreburghCity_Text_SNPost1, MSGBOX_NPC
-	end
 
 OreburghCity_EventScript_Sign4::
 	msgbox OreburghCity_Text_Sign4, MSGBOX_SIGN

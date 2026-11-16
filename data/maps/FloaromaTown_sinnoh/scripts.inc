@@ -49,6 +49,24 @@ FloaromaTown_Text_PtNpc3::
 	.string "Those GALACTIC guys went to the\n"
 	.string "meadow past these flowers here...$"
 
+FloaromaTown_EventScript_SNGracideaDone::
+	msgbox FloaromaTown_Text_SNGracideaLong, MSGBOX_DEFAULT
+	release
+	end
+
+FloaromaTown_EventScript_PtNpc4::
+	lock
+	faceplayer
+	goto_if_set FLAG_SN_RECEIVED_GRACIDEA, FloaromaTown_EventScript_SNGracideaDone
+	setvar VAR_0x8004, SPECIES_SHAYMIN
+	special SinnohPartyHasSpecies
+	goto_if_eq VAR_RESULT, FALSE, FloaromaTown_EventScript_SNGracideaAsk
+	msgbox FloaromaTown_Text_SNHaveGracidea, MSGBOX_DEFAULT
+	giveitem ITEM_GRACIDEA
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SN_RECEIVED_GRACIDEA
+	goto FloaromaTown_EventScript_SNGracideaDone
+
 FloaromaTown_Text_SNHaveGracidea::
 	.string "Oh, a SHAYMIN?\p"
 	.string "If you have that POKéMON, then you\n"
@@ -57,9 +75,28 @@ FloaromaTown_Text_SNHaveGracidea::
 	.string "I’ve got a whole bunch, so you can have\n"
 	.string "some.$"
 
-SE_S_FloaromaTown_FloaromaTown_EventScript_PtNpc4::
-	msgbox FloaromaTown_Text_SNHaveGracidea, MSGBOX_NPC
+FloaromaTown_EventScript_SNGracideaAsk::
+	msgbox FloaromaTown_Text_SNGracideaAskT, MSGBOX_DEFAULT
+	release
 	end
+
+FloaromaTown_Text_SNGracideaAskT::
+	.string "Do you know about Gracidea flowers?\p"
+	.string "They’re given as bouquets to express\n"
+	.string "feelings of gratitude.\p"
+	.string "It’s an enduring tradition around\n"
+	.string "these parts.$"
+
+FloaromaTown_Text_SNGracideaLong::
+	.string "Gracidea flowers have been around a\n"
+	.string "long time in this region.\p"
+	.string "They’re given as bouquets to express\n"
+	.string "feelings of gratitude.\p"
+	.string "Isn’t that charming?\p"
+	.string "With these Gracidea flowers you don’t\n"
+	.string "need to say thanks with words.\p"
+	.string "You can, instead, demonstrate your\n"
+	.string "gratitude with a bouquet. How nice!$"
 
 FloaromaTown_EventScript_PtNpc5::
 	msgbox FloaromaTown_Text_PtNpc5, MSGBOX_NPC

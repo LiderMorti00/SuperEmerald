@@ -32,7 +32,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_ResortArea_ResortArea_EventScript_SNSyndicate",
+      "script": "ResortArea_EventScript_SNSyndicate",
       "flag": "FLAG_SN_HIDE_SYND_GUARD"
     },
     {

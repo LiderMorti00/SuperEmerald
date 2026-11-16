@@ -25,7 +25,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_PastoriaCity_House2_PastoriaCity_House2_EventScript_SNScarfGuy",
+      "script": "PastoriaCity_House2_EventScript_SNScarfGuy",
       "flag": "0"
     },
     {

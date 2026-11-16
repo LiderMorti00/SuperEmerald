@@ -181,15 +181,57 @@ Route210_South_Text_MarcoIntro::
 	.string "on the ranch.\p"
 	.string "I'm right proud of them!$"
 
-Route210_South_EventScript_SNPsyduck_Ask::
-	.string "The PSYDUCK are standing firm. They\n"
-	.string "aren’t inclined to move.\p"
-	.string "Would you like to use the\n"
-	.string "SecretPotion?$"
-
-SE_S_Route210_South_Route210_South_EventScript_SNPsyduck::
-	msgbox Route210_South_EventScript_SNPsyduck_Ask, MSGBOX_NPC
+Route210_South_EventScript_SNPsyduck::
+	lock
+	faceplayer
+	playmoncry SPECIES_PSYDUCK, CRY_MODE_NORMAL
+	waitmoncry
+	checkitem ITEM_SECRET_POTION
+	goto_if_eq VAR_RESULT, FALSE, Route210_South_EventScript_SNPsyduck_Firm
+	msgbox Route210_South_EventScript_SNPsyduck_Ask, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route210_South_EventScript_SNPsyduck_End
+	msgbox Route210_South_EventScript_SNPsyduck_Used, MSGBOX_DEFAULT
+	closemessage
+	removeitem ITEM_SECRET_POTION
+	setflag FLAG_SN_PSYDUCK_GONE
+	setflag FLAG_SN_USED_SECRETPOTION
+	setflag FLAG_SN_HIDE_PSYDUCK
+	sn_walkto LOCALID_SN_PSYDUCK_1, 30, 47, SN_SPEED_FAST, 0, 0, 0
+	sn_walkto LOCALID_SN_PSYDUCK_2, 30, 47, SN_SPEED_FAST, 0, 0, 1
+	sn_walkto LOCALID_SN_PSYDUCK_3, 25, 30, SN_SPEED_FAST, 0, 0, 2
+	sn_walkto LOCALID_SN_PSYDUCK_4, 24, 31, SN_SPEED_FAST, 0, 0, 3
+	waitmovement LOCALID_SN_PSYDUCK_1
+	waitmovement LOCALID_SN_PSYDUCK_2
+	waitmovement LOCALID_SN_PSYDUCK_3
+	waitmovement LOCALID_SN_PSYDUCK_4
+	removeobject LOCALID_SN_PSYDUCK_1
+	removeobject LOCALID_SN_PSYDUCK_2
+	removeobject LOCALID_SN_PSYDUCK_3
+	removeobject LOCALID_SN_PSYDUCK_4
+	clearflag FLAG_SN_HIDE_R210_CYNTHIA
+	addobject LOCALID_SN_R210_CYNTHIA
+	goto Route210_South_EventScript_SNCynthiaCharm
 	end
+
+Route210_South_EventScript_SNCynthiaCharm::
+	lock
+	faceplayer
+	msgbox Route210_South_EventScript_SNCynthiaCharm_T1, MSGBOX_DEFAULT
+	giveitem ITEM_ULTRA_BALL
+	setflag FLAG_SN_RECEIVED_OLD_CHARM
+	msgbox Route210_South_EventScript_SNCynthiaCharm_T2, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto LOCALID_SN_R210_CYNTHIA, 30, 47, SN_SPEED_NORMAL, 0, 0, 0
+	waitmovement LOCALID_SN_R210_CYNTHIA
+	removeobject LOCALID_SN_R210_CYNTHIA
+	setflag FLAG_SN_HIDE_R210_CYNTHIA
+	release
+	end
+
+Route210_South_EventScript_SNCynthiaCharm_T2::
+	.string "I know I’m asking a big favor of you.\p"
+	.string "But I really want you to do it. Will you\n"
+	.string "go to Celestic Town for me?$"
 
 Route210_South_EventScript_SNCynthiaCharm_T1::
 	.string "Cynthia: Oh, good. You used the\n"
@@ -205,9 +247,28 @@ Route210_South_EventScript_SNCynthiaCharm_T1::
 	.string "between here and Celestic Town, so\p"
 	.string "it will be worth your while to go.$"
 
-SE_S_Route210_South_Route210_South_EventScript_SNCynthiaCharm::
-	msgbox Route210_South_EventScript_SNCynthiaCharm_T1, MSGBOX_NPC
+Route210_South_EventScript_SNPsyduck_Used::
+	.string "{PLAYER} used the SecretPotion!\p"
+	.string "The PSYDUCK appear to be cured of\n"
+	.string "their chronic headache!$"
+
+Route210_South_EventScript_SNPsyduck_End::
+	release
 	end
+
+Route210_South_EventScript_SNPsyduck_Ask::
+	.string "The PSYDUCK are standing firm. They\n"
+	.string "aren’t inclined to move.\p"
+	.string "Would you like to use the\n"
+	.string "SecretPotion?$"
+
+Route210_South_EventScript_SNPsyduck_Firm::
+	msgbox Route210_South_EventScript_SNPsyduck_FirmT, MSGBOX_DEFAULT
+	goto Route210_South_EventScript_SNPsyduck_End
+
+Route210_South_EventScript_SNPsyduck_FirmT::
+	.string "The PSYDUCK are standing firm. They\n"
+	.string "aren’t inclined to move at all.$"
 
 Route210_South_EventScript_SNPtACETRAINERF::
 	msgbox Route210_South_EventScript_SNPtACETRAINERF_Text, MSGBOX_NPC

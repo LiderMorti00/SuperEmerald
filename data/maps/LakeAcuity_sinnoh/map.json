@@ -55,7 +55,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_LakeAcuity_LakeAcuity_EventScript_SNScene",
+      "script": "LakeAcuity_EventScript_SNScene",
       "flag": "FLAG_SN_HIDE_ACUITY_JUPITER"
     },
     {

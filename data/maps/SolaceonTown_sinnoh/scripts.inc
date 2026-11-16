@@ -113,15 +113,38 @@ SolaceonTown_EventScript_SNMonPachirisu::
 SolaceonTown_EventScript_SNMonPachirisu_Text::
 	.string "PACHIRISU: Pachi! Pachiri!$"
 
+SolaceonTown_EventScript_SNBarry::
+	lockall
+	msgbox SolaceonTown_Text_SNBarry1, MSGBOX_DEFAULT
+	msgbox SolaceonTown_Text_SNBarry2, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_SN_SOLACEON_BARRY
+	sn_walkto LOCALID_SN_SOL_BARRY, 18, 26, SN_SPEED_FAST, 0, 0, 0
+	waitmovement LOCALID_SN_SOL_BARRY
+	removeobject LOCALID_SN_SOL_BARRY
+	setflag FLAG_SN_HIDE_SOL_BARRY
+	releaseall
+	end
+
+SolaceonTown_Text_SNBarry2::
+	.string "{RIVAL}: Huh? What the...\p"
+	.string "What’s this all about?\p"
+	.string "...I got some Seals, but I forgot to put\n"
+	.string "them on.\p"
+	.string "Oh, right. It’s because I was at the\n"
+	.string "ruins.\p"
+	.string "The ruins here are cool. You have to\n"
+	.string "check it out.\p"
+	.string "I even found a Hidden Machine. It was\n"
+	.string "Defog!\p"
+	.string "Anyway, I’ll battle you another time.\n"
+	.string "See ya!$"
+
 SolaceonTown_Text_SNBarry1::
 	.string "{RIVAL}: Yahoo!\p"
 	.string "{RIVAL}: Hey, {PLAYER}!\p"
 	.string "I got something cool. I’ll show you as a\n"
 	.string "special favor!$"
-
-SE_S_SolaceonTown_SolaceonTown_EventScript_SNBarry::
-	msgbox SolaceonTown_Text_SNBarry1, MSGBOX_NPC
-	end
 
 SolaceonTown_EventScript_PtSign1::
 	msgbox SolaceonTown_Text_PtSign1, MSGBOX_SIGN

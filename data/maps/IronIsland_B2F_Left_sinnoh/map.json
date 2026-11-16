@@ -221,7 +221,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_IronIsland_B2F_Left_IronIsland_B2F_Left_EventScript_SNIronGrunts",
+      "script": "IronIsland_B2F_Left_EventScript_SNIronGrunts",
       "flag": "FLAG_SN_HIDE_IRON_GRUNT1",
       "local_id": "LOCALID_SN_IRON_GRUNT1"
     },
@@ -236,7 +236,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_IronIsland_B2F_Left_IronIsland_B2F_Left_EventScript_SNIronGrunts",
+      "script": "IronIsland_B2F_Left_EventScript_SNIronGrunts",
       "flag": "FLAG_SN_HIDE_IRON_GRUNT2",
       "local_id": "LOCALID_SN_IRON_GRUNT2"
     },
@@ -251,7 +251,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_IronIsland_B2F_Left_IronIsland_B2F_Left_EventScript_SNRiley",
+      "script": "IronIsland_B2F_Left_EventScript_SNRiley",
       "flag": "FLAG_SN_HIDE_IRON_RILEY_B2F",
       "local_id": "LOCALID_SN_IRON_RILEY_B2F"
     }

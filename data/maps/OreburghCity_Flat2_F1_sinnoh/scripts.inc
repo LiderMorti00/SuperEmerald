@@ -2,12 +2,49 @@ OreburghCity_Flat2_F1_sinnoh_MapScripts::
 	.byte 0
 
 
+OreburghCity_Flat2_F1_EventScript_SNTradeKazza::
+	lock
+	faceplayer
+	goto_if_set FLAG_SN_TRADE_KAZZA, OreburghCity_Flat2_F1_EventScript_SNTradeKazza_Done
+	ingame_trade INGAME_TRADE_KAZZA, OreburghCity_Flat2_F1_EventScript_SNTradeKazza_Ask, OreburghCity_Flat2_F1_EventScript_SNTradeKazza_No, OreburghCity_Flat2_F1_EventScript_SNTradeKazza_Wrong, OreburghCity_Flat2_F1_EventScript_SNTradeKazza_Thanks
+	setflag FLAG_SN_TRADE_KAZZA
+	release
+	end
+
+OreburghCity_Flat2_F1_EventScript_SNTradeKazza_Thanks::
+	.string "Thank you! Please take good care of my\n"
+	.string "POKéMON!$"
+
+OreburghCity_Flat2_F1_EventScript_SNTradeKazza_Wrong::
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox OreburghCity_Flat2_F1_EventScript_SNTradeKazza_WrongT, MSGBOX_DEFAULT
+	release
+	end
+
 OreburghCity_Flat2_F1_EventScript_SNTradeKazza_WrongT::
 	.string "That’s not a {STR_VAR_1}...$"
 
-SE_S_OreburghCity_Flat2_F1_OreburghCity_Flat2_F1_EventScript_SNTradeKazza::
-	msgbox OreburghCity_Flat2_F1_EventScript_SNTradeKazza_WrongT, MSGBOX_NPC
+OreburghCity_Flat2_F1_EventScript_SNTradeKazza_No::
+	msgbox OreburghCity_Flat2_F1_EventScript_SNTradeKazza_NoT, MSGBOX_DEFAULT
+	release
 	end
+
+OreburghCity_Flat2_F1_EventScript_SNTradeKazza_NoT::
+	.string "Oh... That’s too bad.$"
+
+OreburghCity_Flat2_F1_EventScript_SNTradeKazza_Ask::
+	.string "Do you have a {STR_VAR_1}? Would you\n"
+	.string "trade it for my {STR_VAR_2}?$"
+
+OreburghCity_Flat2_F1_EventScript_SNTradeKazza_Done::
+	msgbox OreburghCity_Flat2_F1_EventScript_SNTradeKazza_DoneT, MSGBOX_DEFAULT
+	release
+	end
+
+OreburghCity_Flat2_F1_EventScript_SNTradeKazza_DoneT::
+	.string "Our POKéMON are getting along great\n"
+	.string "with their new Trainers, don’t you\l"
+	.string "think?$"
 
 OreburghCity_Flat2_F1_EventScript_PtNpc2::
 	lock

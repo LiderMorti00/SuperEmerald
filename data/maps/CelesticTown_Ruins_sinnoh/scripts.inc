@@ -2,6 +2,25 @@ CelesticTown_Ruins_sinnoh_MapScripts::
 	.byte 0
 
 
+CelesticTown_Ruins_EventScript_SNElder::
+	call CelesticTown_Ruins_EventScript_SNCharm
+	lock
+	faceplayer
+	goto_if_set FLAG_SN_RECEIVED_HM_SURF, CelesticTown_Ruins_EventScript_SNElderDone
+	goto_if_not_defeated TRAINER_ELLIOT_2_SINNOH, CelesticTown_Ruins_EventScript_SNElderDone
+	msgbox CelesticTown_Ruins_Text_SNElder1, MSGBOX_DEFAULT
+	giveitem ITEM_HM_SURF
+	setflag FLAG_SN_RECEIVED_HM_SURF
+	msgbox CelesticTown_Ruins_Text_SNElder2, MSGBOX_DEFAULT
+	release
+	end
+
+CelesticTown_Ruins_Text_SNElder2::
+	.string "Elder: If a POKéMON learns Surf, it can\n"
+	.string "carry you across water and the sea.\p"
+	.string "You’ve been a great help. That’s my\n"
+	.string "thanks for it.$"
+
 CelesticTown_Ruins_Text_SNElder1::
 	.string "Elder: That cave painting isn’t\n"
 	.string "protected simply because it’s old.\p"
@@ -23,9 +42,62 @@ CelesticTown_Ruins_Text_SNElder1::
 	.string "It belonged to my granddaughter, but\n"
 	.string "she doesn’t use it anymore.$"
 
-SE_S_CelesticTown_Ruins_CelesticTown_Ruins_EventScript_SNElder::
-	msgbox CelesticTown_Ruins_Text_SNElder1, MSGBOX_NPC
+CelesticTown_Ruins_EventScript_SNElderDone::
+	msgbox CelesticTown_Ruins_Text_PtNpc1_0, MSGBOX_DEFAULT
+	release
 	end
+
+CelesticTown_Ruins_Text_PtNpc1_0::
+	.string "That cave painting isn’t protected\n"
+	.string "simply because it’s old.\p"
+	.string "We’ve preserved it because we value\n"
+	.string "the memories that it represents.\p"
+	.string "It is a legacy of people and POKéMON\n"
+	.string "beyond measure.\p"
+	.string "A man who fails to understand that...\n"
+	.string "What world could he dream of?$"
+
+CelesticTown_Ruins_EventScript_SNCharmEnd::
+	return
+
+CelesticTown_Ruins_EventScript_SNCharm::
+	checkitem ITEM_ULTRA_BALL
+	goto_if_eq VAR_RESULT, FALSE, CelesticTown_Ruins_EventScript_SNCharmEnd
+	lock
+	faceplayer
+	msgbox CelesticTown_Ruins_Text_SNCharm, MSGBOX_DEFAULT
+	removeitem ITEM_ULTRA_BALL
+	playse SE_SUCCESS
+	msgbox CelesticTown_Ruins_Text_SNCharm2, MSGBOX_DEFAULT
+	msgbox CelesticTown_Ruins_Text_SNCharm3, MSGBOX_DEFAULT
+	release
+	goto CelesticTown_Ruins_EventScript_SNCharmEnd
+
+CelesticTown_Ruins_Text_SNCharm3::
+	.string "This Old Charm is something made in\n"
+	.string "Celestic Town long, long ago.\p"
+	.string "It was made in honor of a mythical\n"
+	.string "deity said to have created Sinnoh.\p"
+	.string "These Old Charms are still discovered\n"
+	.string "now and again.\p"
+	.string "Since you’re in Celestic Town, why not\n"
+	.string "look around inside the ruins?$"
+
+CelesticTown_Ruins_Text_SNCharm2::
+	.string "{PLAYER} handed over the Old Charm to\n"
+	.string "the elder.$"
+
+CelesticTown_Ruins_Text_SNCharm::
+	.string "Oh, you were magnificent! Aren’t you\n"
+	.string "quite the Trainer?\p"
+	.string "As the elder of Celestic Town, I give\n"
+	.string "you my thanks.\p"
+	.string "Oh? That Old Charm... May I see that,\n"
+	.string "dear?\p"
+	.string "... What’s that?\p"
+	.string "You say Cynthia entrusted you with it\n"
+	.string "to deliver to me?\p"
+	.string "That Cynthia... She’s my granddaughter.$"
 
 CelesticTown_Ruins_EventScript_SNCyrus_Ask::
 	msgbox CelesticTown_Ruins_Text_SNCyrusAsk, MSGBOX_YESNO

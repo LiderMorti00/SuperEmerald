@@ -4,8 +4,6 @@
 @ Petalburg Gym: Norman gives the Johto Ticket after the Hoenn League
 SE_EventScript_NormanTickets::
 	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TICKET, SE_EventScript_NormanJohtoTicket
-	goto_if_unset FLAG_SE_JOHTO_LEAGUE_CLEARED, Common_EventScript_NopReturn
-	goto_if_unset FLAG_SE_RECEIVED_CANALAVE_TICKET, SE_EventScript_NormanCanalaveTicket
 	return
 
 SE_EventScript_NormanJohtoTicket::
@@ -881,7 +879,7 @@ SE_EventScript_MagnetTrainGoldenrod::
 	closemessage
 	playse SE_DOOR
 	fadescreen FADE_TO_BLACK
-	warp MAP_SAFFRON_CITY, 16, 12
+	warp MAP_SAFFRON_CITY_MAGNET_TRAIN_STATION, 16, 21
 	waitstate
 	release
 	end
@@ -899,6 +897,14 @@ SE_EventScript_MagnetTrainSaffron::
 	waitstate
 	release
 	end
+
+SE_EventScript_SaffronStationNpc::
+	msgbox SE_Text_SaffronStationNpc, MSGBOX_NPC
+	end
+
+SE_Text_SaffronStationNpc:
+	.string "The MAGNET TRAIN links SAFFRON CITY\n"
+	.string "and GOLDENROD CITY in no time!$"
 
 SE_EventScript_MagnetTrainClosed::
 	msgbox SE_Text_MagnetTrainClosed, MSGBOX_DEFAULT

@@ -38,6 +38,45 @@ MtCoronet_2F_Text_PtNpc1_1::
 	.string "It is a little something I obtained in\n"
 	.string "an investigation long ago.$"
 
+MtCoronet_2F_EventScript_SNLooker::
+	lock
+	faceplayer
+	msgbox MtCoronet_2F_Text_SNLooker1, MSGBOX_DEFAULT
+	msgbox MtCoronet_2F_Text_SNLooker2, MSGBOX_DEFAULT
+	giveitem ITEM_FULL_RESTORE, 2
+	msgbox MtCoronet_2F_Text_SNLooker3, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_SN_CORONET_LOOKER
+	sn_walkto LOCALID_SN_CORONET_LOOKER, 12, 5, SN_SPEED_NORMAL, 0, 0, 0
+	waitmovement LOCALID_SN_CORONET_LOOKER
+	removeobject LOCALID_SN_CORONET_LOOKER
+	setflag FLAG_SN_HIDE_CORONET_LOOKER
+	release
+	end
+
+MtCoronet_2F_Text_SNLooker3::
+	.string "Looker: Please! You must stop Team\n"
+	.string "Galactic!$"
+
+MtCoronet_2F_Text_SNLooker2::
+	.string "Looker: ... ...\p"
+	.string "Hahaha! You can relax now.\p"
+	.string "You see, I understand. You are far\n"
+	.string "superior to me.\p"
+	.string "As are the Commanders. Cyrus, too,\n"
+	.string "naturally.\p"
+	.string "Team Galactic is beyond my reach...\p"
+	.string "Please, you must stop them! For only\n"
+	.string "you are able!\p"
+	.string "All I can do now is give you this.\p"
+	.string "It is a little something I obtained in\n"
+	.string "an investigation long ago.\p"
+	.string "Looker: Please, stop Team Galactic! For\n"
+	.string "only you are able!\p"
+	.string "All I can do now is give you this.\p"
+	.string "It is a little something I obtained in\n"
+	.string "an investigation long ago.$"
+
 MtCoronet_2F_Text_SNLooker1::
 	.string "Looker: Observe, if you will, that hole.\p"
 	.string "There was once a cave painting that\n"
@@ -54,7 +93,3 @@ MtCoronet_2F_Text_SNLooker1::
 	.string "the next step.\p"
 	.string "Are you Trainer enough to advance?\n"
 	.string "Show me, if you will!$"
-
-SE_S_MtCoronet_2F_MtCoronet_2F_EventScript_SNLooker::
-	msgbox MtCoronet_2F_Text_SNLooker1, MSGBOX_NPC
-	end

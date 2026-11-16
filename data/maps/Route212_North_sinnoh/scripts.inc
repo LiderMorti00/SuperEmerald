@@ -186,9 +186,40 @@ Route212_North_Text_PtNpc2::
 	.string "If you want to lure rare POKéMON, you\n"
 	.string "have to find an attractive tree.$"
 
-SE_S_Route212_North_Route212_North_EventScript_SNHoneyTree::
-	msgbox SN_HoneyTree_Text_Wait, MSGBOX_NPC
+Route212_North_EventScript_SNHoneyTree::
+	lock
+	goto_if_ne VAR_SN_HONEY_TREE, 9, Route212_North_EventScript_SNHoneyTree_Fresh
+	special SinnohHoneyReady
+	goto_if_eq VAR_RESULT, TRUE, Route212_North_EventScript_SNHoneyTree_Battle
+	msgbox SN_HoneyTree_Text_Wait, MSGBOX_DEFAULT
+	release
 	end
+
+Route212_North_EventScript_SNHoneyTree_Battle::
+	setvar VAR_SN_HONEY_TREE, 0
+	setwildbattle SPECIES_WURMPLE, 5
+	special SinnohHoneyTreeMon
+	msgbox SN_HoneyTree_Text_Mon, MSGBOX_DEFAULT
+	closemessage
+	dowildbattle
+	release
+	end
+
+Route212_North_EventScript_SNHoneyTree_End::
+	release
+	end
+
+Route212_North_EventScript_SNHoneyTree_Fresh::
+	msgbox SN_HoneyTree_Text_Scent, MSGBOX_DEFAULT
+	checkitem ITEM_HONEY
+	goto_if_eq VAR_RESULT, FALSE, Route212_North_EventScript_SNHoneyTree_End
+	msgbox SN_HoneyTree_Text_Ask, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route212_North_EventScript_SNHoneyTree_End
+	removeitem ITEM_HONEY
+	setvar VAR_SN_HONEY_TREE, 9
+	special SinnohHoneySlather
+	msgbox SN_HoneyTree_Text_Done, MSGBOX_DEFAULT
+	goto Route212_North_EventScript_SNHoneyTree_End
 
 Route212_North_EventScript_PtSign1::
 	msgbox Route212_North_Text_PtSign1, MSGBOX_SIGN

@@ -1,4 +1,5 @@
 #include "global.h"
+#include "sinnoh_specials.h"
 #include "battle_setup.h"
 #include "battle_pike.h"
 #include "battle_pyramid.h"
@@ -564,7 +565,10 @@ bool8 TryGenerateWildMon(const struct WildPokemonInfo *wildMonInfo, enum WildPok
     if (gMapHeader.mapLayoutId != LAYOUT_BATTLE_FRONTIER_BATTLE_PIKE_ROOM_WILD_MONS && flags & WILD_CHECK_KEEN_EYE && !IsAbilityAllowingEncounter(level))
         return FALSE;
 
-    CreateWildMon(wildMonInfo->wildPokemon[wildMonIndex].species, level);
+    if (area == WILD_AREA_LAND && SinnohTrophyGardenOverride() != SPECIES_NONE) // Super Emerald: Trophy Garden's daily Pokémon
+        CreateWildMon(VarGet(VAR_SN_TROPHY_SPECIES), level);
+    else
+        CreateWildMon(wildMonInfo->wildPokemon[wildMonIndex].species, level);
     return TRUE;
 }
 

@@ -180,6 +180,73 @@ WaywardCave_1F_Text_LorenzoIntro::
 	.string "They gave me gas, and now I can’t stop\n"
 	.string "burping! Bluurrf!$"
 
+WaywardCave_1F_EventScript_SNMira::
+	lock
+	faceplayer
+	playse SE_PIN
+	goto_if_set FLAG_SN_MIRA_MET, WaywardCave_1F_EventScript_SNMira_Again
+	msgbox WaywardCave_1F_EventScript_SNMira_T1, MSGBOX_DEFAULT
+	goto WaywardCave_1F_EventScript_SNMira_Join
+
+WaywardCave_1F_EventScript_SNMira_Join::
+	closemessage
+	setflag FLAG_SN_MIRA_MET
+	setfollowernpc LOCALID_SN_MIRA, FNPC_ALL_LAND, WaywardCave_1F_EventScript_SNMiraTalk, PARTNER_MIRA
+	playfanfare MUS_OBTAIN_ITEM
+	message WaywardCave_1F_EventScript_SNMira_T3
+	waitfanfare
+	waitmessage
+	msgbox WaywardCave_1F_EventScript_SNMira_T4, MSGBOX_DEFAULT
+	special HealPlayerParty
+	release
+	end
+
+WaywardCave_1F_EventScript_SNMira_T4::
+	.string "Mira: I’ll keep your POKéMON healthy all\n"
+	.string "the time!$"
+
+WaywardCave_1F_EventScript_SNMira_T3::
+	.string "{PLAYER} decided to go with Mira!$"
+
+WaywardCave_1F_EventScript_SNMiraTalk::
+	lock
+	random 3
+	switch VAR_RESULT
+	case 0, WaywardCave_1F_EventScript_SNMiraTalk0
+	case 1, WaywardCave_1F_EventScript_SNMiraTalk1
+	msgbox WaywardCave_1F_EventScript_SNMira_T7, MSGBOX_DEFAULT
+	goto WaywardCave_1F_EventScript_SNMiraTalkEnd
+
+WaywardCave_1F_EventScript_SNMiraTalkEnd::
+	special HealPlayerParty
+	release
+	end
+
+WaywardCave_1F_EventScript_SNMira_T7::
+	.string "Mira: {PLAYER}, did you get to be so\n"
+	.string "good because you’re always with\p"
+	.string "your POKéMON?\p"
+	.string "Yes! That has to be it! Mira will try\n"
+	.string "like you!$"
+
+WaywardCave_1F_EventScript_SNMiraTalk1::
+	msgbox WaywardCave_1F_EventScript_SNMira_T6, MSGBOX_DEFAULT
+	goto WaywardCave_1F_EventScript_SNMiraTalkEnd
+
+WaywardCave_1F_EventScript_SNMira_T6::
+	.string "Mira: This cave... It’s so easy to get\n"
+	.string "confused.\p"
+	.string "Do you know where we are?$"
+
+WaywardCave_1F_EventScript_SNMiraTalk0::
+	msgbox WaywardCave_1F_EventScript_SNMira_T5, MSGBOX_DEFAULT
+	goto WaywardCave_1F_EventScript_SNMiraTalkEnd
+
+WaywardCave_1F_EventScript_SNMira_T5::
+	.string "Mira: I like helpful POKéMON moves like\n"
+	.string "Growl and Minimize.\p"
+	.string "Those kinds of moves are my favorites.$"
+
 WaywardCave_1F_EventScript_SNMira_T1::
 	.string "I’m Mira...\p"
 	.string "I was catching POKéMON, and then I got\n"
@@ -187,6 +254,10 @@ WaywardCave_1F_EventScript_SNMira_T1::
 	.string "I’m so scared...\p"
 	.string "Please! Please take me to the exit!$"
 
-SE_S_WaywardCave_1F_WaywardCave_1F_EventScript_SNMira::
-	msgbox WaywardCave_1F_EventScript_SNMira_T1, MSGBOX_NPC
-	end
+WaywardCave_1F_EventScript_SNMira_Again::
+	msgbox WaywardCave_1F_EventScript_SNMira_T2, MSGBOX_DEFAULT
+	goto WaywardCave_1F_EventScript_SNMira_Join
+
+WaywardCave_1F_EventScript_SNMira_T2::
+	.string "Trainer, your name is {PLAYER}?\p"
+	.string "My name is Mira. I like your name!$"

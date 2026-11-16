@@ -84,7 +84,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_ValorLakefront_ValorLakefront_EventScript_SNCynthia",
+      "script": "ValorLakefront_EventScript_SNCynthia",
       "flag": "FLAG_SN_HIDE_VALOR_CYNTHIA"
     },
     {
@@ -112,7 +112,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_ValorLakefront_ValorLakefront_EventScript_SNSuiteLady",
+      "script": "ValorLakefront_EventScript_SNSuiteLady",
       "flag": "0"
     },
     {
@@ -126,7 +126,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_ValorLakefront_ValorLakefront_EventScript_SNHoneyTree",
+      "script": "ValorLakefront_EventScript_SNHoneyTree",
       "flag": "0"
     },
     {
@@ -141,7 +141,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_ValorLakefront_ValorLakefront_EventScript_SNCynthia",
+      "script": "ValorLakefront_EventScript_SNCynthia",
       "flag": "FLAG_SN_HIDE_VALOR_BARRY"
     },
     {

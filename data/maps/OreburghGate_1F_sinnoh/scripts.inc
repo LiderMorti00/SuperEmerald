@@ -46,6 +46,28 @@ OreburghGate_1F_Text_PtNpc1::
 	.string "All right! Now you can use the hidden\n"
 	.string "move Rock Smash on small boulders!$"
 
+OreburghGate_1F_EventScript_HikerHM::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_OREBURGH_GATE_HM, OreburghGate_1F_EventScript_HikerAfter
+	msgbox OreburghGate_1F_Text_Hiker, MSGBOX_DEFAULT
+	giveitem ITEM_HM_ROCK_SMASH
+	setflag FLAG_RECEIVED_OREBURGH_GATE_HM
+	msgbox OreburghGate_1F_Text_HikerAfter, MSGBOX_DEFAULT
+	release
+	end
+
+OreburghGate_1F_Text_HikerAfter::
+	.string "That Hidden Machine, or HM for short,\n"
+	.string "contains the hidden move Rock Smash.\p"
+	.string "A POKéMON learning Rock Smash can\n"
+	.string "smash small boulders in the field.\p"
+	.string "But the Trainer has to have the Gym\n"
+	.string "Badge from Oreburgh City.\p"
+	.string "If you don’t have that Badge, you can’t\n"
+	.string "make a POKéMON use the hidden\p"
+	.string "move Rock Smash outside of battle.$"
+
 OreburghGate_1F_Text_Hiker::
 	.string "That sparkling new POKéTCH! Your\n"
 	.string "awkwardness as a traveler!\p"
@@ -56,6 +78,7 @@ OreburghGate_1F_Text_Hiker::
 	.string "So, let me make a gift of this Hidden\n"
 	.string "Machine to you!$"
 
-SE_S_OreburghGate_1F_OreburghGate_1F_EventScript_HikerHM::
-	msgbox OreburghGate_1F_Text_Hiker, MSGBOX_NPC
+OreburghGate_1F_EventScript_HikerAfter::
+	msgbox OreburghGate_1F_Text_HikerAfter, MSGBOX_DEFAULT
+	release
 	end

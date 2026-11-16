@@ -466,6 +466,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivedJohtoStarter::
 LittlerootTown_ProfessorBirchsLab_EventScript_Birch::
 	lock
 	faceplayer
+	call SE_EventScript_BirchCanalaveTicket @ Super Emerald: ticket to Sinnoh after the Johto League
 	goto_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 5, LittlerootTown_ProfessorBirchsLab_EventScript_CanHaveAnyOneOfRarePokemon
 	goto_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, LittlerootTown_ProfessorBirchsLab_EventScript_GrassyPatchWaiting
 	goto_if_unset FLAG_HAS_MATCH_CALL, LittlerootTown_ProfessorBirchsLab_EventScript_TryRatePokedexOrRegister

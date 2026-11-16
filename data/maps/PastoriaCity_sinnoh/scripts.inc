@@ -89,6 +89,51 @@ PastoriaCity_Text_PtNpc7::
 	.string "The owner, Mr. Backlot, likes to brag\n"
 	.string "about his herd of rare POKéMON.$"
 
+PastoriaCity_EventScript_SNBarry_B0::
+	trainerbattle_no_intro TRAINER_CALVIN_3_SINNOH, PastoriaCity_EventScript_SNBarry_Defeat
+	goto PastoriaCity_EventScript_SNBarry_After
+
+PastoriaCity_EventScript_SNBarry::
+	lock
+	faceplayer
+	msgbox PastoriaCity_EventScript_SNBarry_Intro, MSGBOX_DEFAULT
+	closemessage
+	switch VAR_SN_STARTER_MON
+	case 0, PastoriaCity_EventScript_SNBarry_B0
+	case 1, PastoriaCity_EventScript_SNBarry_B1
+	case 2, PastoriaCity_EventScript_SNBarry_B2
+	goto PastoriaCity_EventScript_SNBarry_B0
+
+PastoriaCity_EventScript_SNBarry_B2::
+	trainerbattle_no_intro TRAINER_CALVIN_5_SINNOH, PastoriaCity_EventScript_SNBarry_Defeat
+	goto PastoriaCity_EventScript_SNBarry_After
+
+PastoriaCity_EventScript_SNBarry_After::
+	msgbox PastoriaCity_EventScript_SNBarry_Post, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto VAR_LAST_TALKED, 20, 18, SN_SPEED_FAST, 0, 0, 0
+	waitmovement VAR_LAST_TALKED
+	removeobject VAR_LAST_TALKED
+	setflag FLAG_SN_HIDE_PAST_BARRY
+	release
+	end
+
+PastoriaCity_EventScript_SNBarry_Post::
+	.string "BARRY: Heh, yeah, maybe you did get a\n"
+	.string "bit tougher since last time.\p"
+	.string "That even shocked me a bit, so yeah, I\n"
+	.string "got beat ’cause I was careless.\p"
+	.string "Oh, yeah, I joined Mr. Wake as an\n"
+	.string "apprentice!\p"
+	.string "Like, I want my own theme song!$"
+
+PastoriaCity_EventScript_SNBarry_Defeat::
+	.string "BARRY: Wh-what?! I lost?!$"
+
+PastoriaCity_EventScript_SNBarry_B1::
+	trainerbattle_no_intro TRAINER_CALVIN_4_SINNOH, PastoriaCity_EventScript_SNBarry_Defeat
+	goto PastoriaCity_EventScript_SNBarry_After
+
 PastoriaCity_EventScript_SNBarry_Intro::
 	.string "BARRY: Whoops!\p"
 	.string "Hehehe! I’m not always going to plow\n"
@@ -98,9 +143,36 @@ PastoriaCity_EventScript_SNBarry_Intro::
 	.string "I’ll test you and your POKéMON out to\n"
 	.string "see how buff and tough you are!$"
 
-SE_S_PastoriaCity_PastoriaCity_EventScript_SNBarry::
-	msgbox PastoriaCity_EventScript_SNBarry_Intro, MSGBOX_NPC
+PastoriaCity_EventScript_SNGrunt::
+	lock
+	faceplayer
+	msgbox PastoriaCity_Text_SNGrunt1, MSGBOX_DEFAULT
+	msgbox PastoriaCity_Text_SNGrunt2, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto LOCALID_SN_PAST_GRUNT, 46, 9, SN_SPEED_NORMAL, 0, 0, 0
+	waitmovement LOCALID_SN_PAST_GRUNT
+	removeobject LOCALID_SN_PAST_GRUNT
+	setflag FLAG_SN_HIDE_PAST_GRUNT
+	msgbox PastoriaCity_Text_SNGrunt3, MSGBOX_DEFAULT
+	release
 	end
+
+PastoriaCity_Text_SNGrunt3::
+	.string "The Galactic grunt ran off toward\n"
+	.string "ROUTE 213 and VALOR LAKEFRONT!$"
+
+PastoriaCity_Text_SNGrunt2::
+	.string "Grunt: What’ve I done, you’re asking?\n"
+	.string "Well, technically speaking, it wasn’t\l"
+	.string "me.\p"
+	.string "The package that arrived, see, that\n"
+	.string "was a bomb, named the Galactic Bomb.\p"
+	.string "Me, I was told to push the button. So I\n"
+	.string "did. Like, “Poink!”\p"
+	.string "Oh, that’s right! Mustn’t forget! The\n"
+	.string "test results need reporting!\p"
+	.string "Cheerio, then! You daft codger, your\n"
+	.string "mask’s absurd!$"
 
 PastoriaCity_Text_SNGrunt1::
 	.string "What’s with you? Stop chasing after\n"
@@ -112,28 +184,144 @@ PastoriaCity_Text_SNGrunt1::
 	.string "All right, do I make myself clear? Don’t\n"
 	.string "you dare follow me!$"
 
-SE_S_PastoriaCity_PastoriaCity_EventScript_SNGrunt::
-	msgbox PastoriaCity_Text_SNGrunt1, MSGBOX_NPC
+PastoriaCity_EventScript_SNWakeA::
+	lock
+	faceplayer
+	msgbox PastoriaCity_Text_SNWA1, MSGBOX_DEFAULT
+	msgbox PastoriaCity_Text_SNWA2, MSGBOX_DEFAULT
+	msgbox PastoriaCity_Text_SNWA3, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SN_PAST_WAKE_A, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox PastoriaCity_Text_SNWA4, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto LOCALID_SN_PAST_WAKE_A, 15, 26, SN_SPEED_NORMAL, 0, 0, 0
+	sn_walkto LOCALID_SN_PAST_BARRY_A, 21, 19, SN_SPEED_FAST, 0, 0, 1
+	waitmovement LOCALID_SN_PAST_WAKE_A
+	waitmovement LOCALID_SN_PAST_BARRY_A
+	removeobject LOCALID_SN_PAST_WAKE_A
+	removeobject LOCALID_SN_PAST_BARRY_A
+	setflag FLAG_SN_HIDE_PAST_WAKE_A
+	setflag FLAG_SN_PAST_WAKE_A
+	clearflag FLAG_SN_HIDE_PAST_BOMB
+	addobject LOCALID_SN_PAST_WAKE_B
+	addobject LOCALID_SN_PAST_BARRY_B
+	msgbox PastoriaCity_Text_SNWA5, MSGBOX_DEFAULT
+	release
 	end
+
+PastoriaCity_Text_SNWA5::
+	.string "They rushed off toward the Great\n"
+	.string "Marsh!$"
+
+PastoriaCity_Text_SNWA4::
+	.string "Wake: WHAAAAT?!\p"
+	.string "No one messes with Pastoria! Not on my\n"
+	.string "watch!\p"
+	.string "{RIVAL}: Hey! Master! Wait!$"
+
+PastoriaCity_Text_SNWA3::
+	.string "{RIVAL}: It doesn’t matter. I made\n"
+	.string "you my master! I decided!\p"
+	.string "But forget that! There’s trouble\n"
+	.string "brewing!\p"
+	.string "There’s a Team Galactic goon in front\n"
+	.string "of the Observatory Gate.\p"
+	.string "He said something about using a bomb!$"
+
+PastoriaCity_Text_SNWA2::
+	.string "Wake: ...Listen, kid. I know your father.\n"
+	.string "I won’t deny that.\p"
+	.string "But I don’t recall ever taking you on\n"
+	.string "as an apprentice. Not in the least.\p"
+	.string "Wake: Besides, you two don’t need me.\p"
+	.string "You can become strong on your own\n"
+	.string "without being my apprentice.$"
 
 PastoriaCity_Text_SNWA1::
 	.string "Wake: What’s this racket, then? Oh, it’s\n"
 	.string "you two.\p"
 	.string "{RIVAL}: Oh, Master!$"
 
-SE_S_PastoriaCity_PastoriaCity_EventScript_SNWakeA::
-	msgbox PastoriaCity_Text_SNWA1, MSGBOX_NPC
+PastoriaCity_EventScript_SNBomb::
+	lock
+	msgbox PastoriaCity_Text_SNWB1, MSGBOX_DEFAULT
+	closemessage
+	playse SE_M_EXPLOSION
+	setvar VAR_0x8004, 2
+	setvar VAR_0x8005, 3
+	setvar VAR_0x8006, 12
+	setvar VAR_0x8007, 3
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special ShakeCamera
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	msgbox PastoriaCity_Text_SNWB2, MSGBOX_DEFAULT
+	clearflag FLAG_SN_HIDE_PAST_GRUNT
+	addobject LOCALID_SN_PAST_GRUNT
+	applymovement LOCALID_SN_PAST_WAKE_B, Common_Movement_ExclamationMark
+	applymovement LOCALID_SN_PAST_BARRY_B, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox PastoriaCity_Text_SNWB3, MSGBOX_DEFAULT
+	msgbox PastoriaCity_Text_SNGrunt2, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto LOCALID_SN_PAST_GRUNT, 48, 12, SN_SPEED_FAST, 0, 0, 0
+	waitmovement LOCALID_SN_PAST_GRUNT
+	removeobject LOCALID_SN_PAST_GRUNT
+	setflag FLAG_SN_HIDE_PAST_GRUNT
+	msgbox PastoriaCity_Text_SNGrunt3, MSGBOX_DEFAULT
+	msgbox PastoriaCity_Text_SNGreatMarsh, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SN_PAST_WAKE_B, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox PastoriaCity_Text_SNDoNotFollow, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto LOCALID_SN_PAST_WAKE_B, 36, 8, SN_SPEED_FAST, 0, 0, 0
+	waitmovement LOCALID_SN_PAST_WAKE_B
+	playse SE_EXIT
+	removeobject LOCALID_SN_PAST_WAKE_B
+	sn_walkto LOCALID_SN_PAST_BARRY_B, 36, 9, SN_SPEED_FAST, DIR_SOUTH, 0, 0
+	waitmovement LOCALID_SN_PAST_BARRY_B
+	sn_playerface LOCALID_SN_PAST_BARRY_B, 1
+	waitmovement OBJ_EVENT_ID_PLAYER
+	msgbox PastoriaCity_Text_SNWB4, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_SN_PAST_BOMB_DONE
+	removeobject LOCALID_SN_PAST_BARRY_B
+	setflag FLAG_SN_HIDE_PAST_BOMB
+	clearflag FLAG_SN_HIDE_PAST_BARRY_GUARD
+	addobject LOCALID_SN_PAST_BARRY_GUARD
+	release
 	end
+
+PastoriaCity_Text_SNWB4::
+	.string "{RIVAL}: Hey! {PLAYER}! You go after\n"
+	.string "that Galactic goon!\p"
+	.string "I’m staying here like Master said!\n"
+	.string "Gotta keep others from going in!\p"
+	.string "Don’t let that Galactic guy get away!$"
+
+PastoriaCity_Text_SNDoNotFollow::
+	.string "You two! Do NOT follow me! Don’t let\n"
+	.string "anyone else in, either!\p"
+	.string "There’d be big trouble if there’s any of\n"
+	.string "that bomb left!$"
+
+PastoriaCity_Text_SNGreatMarsh::
+	.string "Wake: The Great Marsh is invaluable...$"
+
+PastoriaCity_Text_SNWB3::
+	.string "Grunt: Fweh! That was rough.\p"
+	.string "Wake: YOU! What’ve you done?!$"
+
+PastoriaCity_Text_SNWB2::
+	.string "DDDOOOMMM!!$"
 
 PastoriaCity_Text_SNWB1::
 	.string "{RIVAL}: Hey!\p"
 	.string "What am I, chopped liver? Don’t forget\n"
 	.string "I’m here, too!\p"
 	.string "Wake: So, where’s this Galac...$"
-
-SE_S_PastoriaCity_PastoriaCity_EventScript_SNBomb::
-	msgbox PastoriaCity_Text_SNWB1, MSGBOX_NPC
-	end
 
 PastoriaCity_EventScript_SNPtSCIENTISTM::
 	msgbox PastoriaCity_EventScript_SNPtSCIENTISTM_Text, MSGBOX_NPC
@@ -162,13 +350,6 @@ PastoriaCity_EventScript_SNBarryGuard::
 	msgbox PastoriaCity_Text_SNWB4, MSGBOX_DEFAULT
 	release
 	end
-
-PastoriaCity_Text_SNWB4::
-	.string "{RIVAL}: Hey! {PLAYER}! You go after\n"
-	.string "that Galactic goon!\p"
-	.string "I’m staying here like Master said!\n"
-	.string "Gotta keep others from going in!\p"
-	.string "Don’t let that Galactic guy get away!$"
 
 PastoriaCity_Text_SNWhyArentYouGone::
 	.string "{RIVAL}: What’s the matter?! Why\n"

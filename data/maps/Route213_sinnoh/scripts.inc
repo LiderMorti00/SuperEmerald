@@ -238,6 +238,33 @@ Route213_EventScript_SNBomb_T1::
 	.string "Therefore, our boss, who made this, is a\n"
 	.string "scientific mechanical genius!$"
 
+Route213_EventScript_SNBomb_Looker::
+	lock
+	faceplayer
+	msgbox Route213_EventScript_SNBomb_L1, MSGBOX_DEFAULT
+	msgbox Route213_EventScript_SNBomb_L2, MSGBOX_DEFAULT
+	msgbox Route213_EventScript_SNBomb_L3, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto LOCALID_SN_BOMB_GRUNT, 52, 0, SN_SPEED_NORMAL, 0, 0, 0
+	sn_walkto LOCALID_SN_BOMB_LOOKER, 52, 0, SN_SPEED_NORMAL, 0, 0, 1
+	waitmovement LOCALID_SN_BOMB_GRUNT
+	waitmovement LOCALID_SN_BOMB_LOOKER
+	removeobject LOCALID_SN_BOMB_GRUNT
+	removeobject LOCALID_SN_BOMB_LOOKER
+	setflag FLAG_SN_HIDE_BOMB
+	release
+	end
+
+Route213_EventScript_SNBomb_L3::
+	.string "Ach! This will not do! Wait! Wait, I say!$"
+
+Route213_EventScript_SNBomb_L2::
+	.string "Oh, no, no, no! How did I miss it?\p"
+	.string "Ah, Looker, this time you have made a\n"
+	.string "mistake of the ages!\p"
+	.string "The man, who I have seen running away,\n"
+	.string "he was the bearer of the bomb!$"
+
 Route213_EventScript_SNBomb_L1::
 	.string "Looker: Hello, my friend!\p"
 	.string "The cargo that the Team Galactic\n"
@@ -251,13 +278,40 @@ Route213_EventScript_SNBomb_L1::
 	.string "In other words, that is the Team\n"
 	.string "Galactic!$"
 
-SE_S_Route213_Route213_EventScript_SNBomb_Looker::
-	msgbox Route213_EventScript_SNBomb_L1, MSGBOX_NPC
+Route213_EventScript_SNHoneyTree::
+	lock
+	goto_if_ne VAR_SN_HONEY_TREE, 10, Route213_EventScript_SNHoneyTree_Fresh
+	special SinnohHoneyReady
+	goto_if_eq VAR_RESULT, TRUE, Route213_EventScript_SNHoneyTree_Battle
+	msgbox SN_HoneyTree_Text_Wait, MSGBOX_DEFAULT
+	release
 	end
 
-SE_S_Route213_Route213_EventScript_SNHoneyTree::
-	msgbox SN_HoneyTree_Text_Wait, MSGBOX_NPC
+Route213_EventScript_SNHoneyTree_Battle::
+	setvar VAR_SN_HONEY_TREE, 0
+	setwildbattle SPECIES_WURMPLE, 5
+	special SinnohHoneyTreeMon
+	msgbox SN_HoneyTree_Text_Mon, MSGBOX_DEFAULT
+	closemessage
+	dowildbattle
+	release
 	end
+
+Route213_EventScript_SNHoneyTree_End::
+	release
+	end
+
+Route213_EventScript_SNHoneyTree_Fresh::
+	msgbox SN_HoneyTree_Text_Scent, MSGBOX_DEFAULT
+	checkitem ITEM_HONEY
+	goto_if_eq VAR_RESULT, FALSE, Route213_EventScript_SNHoneyTree_End
+	msgbox SN_HoneyTree_Text_Ask, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route213_EventScript_SNHoneyTree_End
+	removeitem ITEM_HONEY
+	setvar VAR_SN_HONEY_TREE, 10
+	special SinnohHoneySlather
+	msgbox SN_HoneyTree_Text_Done, MSGBOX_DEFAULT
+	goto Route213_EventScript_SNHoneyTree_End
 
 Route213_EventScript_PtSign1::
 	msgbox Route213_Text_PtSign1, MSGBOX_SIGN

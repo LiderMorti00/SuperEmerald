@@ -90,6 +90,31 @@ SnowpointCity_Text_PtNpc5_0::
 	.string "She says I have to start by making\n"
 	.string "friends with POKéMON.$"
 
+SnowpointCity_EventScript_SNCynthia::
+	lock
+	faceplayer
+	msgbox SnowpointCity_Text_SNCyn1, MSGBOX_DEFAULT
+	msgbox SnowpointCity_Text_SNCyn2, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_SN_SNOWPOINT_CYNTHIA
+	sn_walkto LOCALID_SN_SNOW_CYNTHIA, 16, 53, SN_SPEED_NORMAL, 0, 0, 0
+	waitmovement LOCALID_SN_SNOW_CYNTHIA
+	removeobject LOCALID_SN_SNOW_CYNTHIA
+	setflag FLAG_SN_HIDE_SNOW_CYNTHIA
+	release
+	end
+
+SnowpointCity_Text_SNCyn2::
+	.string "Cynthia: I want you to keep traveling\n"
+	.string "to many far-off places.\p"
+	.string "I want you to keep meeting all kinds of\n"
+	.string "people and POKéMON.\p"
+	.string "I came all the way here just so I could\n"
+	.string "say that to you.\p"
+	.string "Your horizons will expand again if you\n"
+	.string "visit the Fight Area as well.\p"
+	.string "I hope our paths cross again!$"
+
 SnowpointCity_Text_SNCyn1::
 	.string "Cynthia: I thought you would come. I’m\n"
 	.string "glad I waited for you!\p"
@@ -107,10 +132,6 @@ SnowpointCity_Text_SNCyn1::
 	.string "where everyone is smiling.\p"
 	.string "The world could be so much better if we\n"
 	.string "all tried to make it that way.$"
-
-SE_S_SnowpointCity_SnowpointCity_EventScript_SNCynthia::
-	msgbox SnowpointCity_Text_SNCyn1, MSGBOX_NPC
-	end
 
 SnowpointCity_EventScript_SNPtSNOWPOINTNPCM::
 	msgbox SnowpointCity_EventScript_SNPtSNOWPOINTNPCM_Text, MSGBOX_NPC

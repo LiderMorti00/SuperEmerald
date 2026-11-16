@@ -129,9 +129,40 @@ Route221_Text_ShannonIntro::
 	.string "Really? So you think you can beat me?\n"
 	.string "I'm an Ace Trainer, you do realize?$"
 
-SE_S_Route221_Route221_EventScript_SNHoneyTree::
-	msgbox SN_HoneyTree_Text_Wait, MSGBOX_NPC
+Route221_EventScript_SNHoneyTree::
+	lock
+	goto_if_ne VAR_SN_HONEY_TREE, 14, Route221_EventScript_SNHoneyTree_Fresh
+	special SinnohHoneyReady
+	goto_if_eq VAR_RESULT, TRUE, Route221_EventScript_SNHoneyTree_Battle
+	msgbox SN_HoneyTree_Text_Wait, MSGBOX_DEFAULT
+	release
 	end
+
+Route221_EventScript_SNHoneyTree_Battle::
+	setvar VAR_SN_HONEY_TREE, 0
+	setwildbattle SPECIES_WURMPLE, 5
+	special SinnohHoneyTreeMon
+	msgbox SN_HoneyTree_Text_Mon, MSGBOX_DEFAULT
+	closemessage
+	dowildbattle
+	release
+	end
+
+Route221_EventScript_SNHoneyTree_End::
+	release
+	end
+
+Route221_EventScript_SNHoneyTree_Fresh::
+	msgbox SN_HoneyTree_Text_Scent, MSGBOX_DEFAULT
+	checkitem ITEM_HONEY
+	goto_if_eq VAR_RESULT, FALSE, Route221_EventScript_SNHoneyTree_End
+	msgbox SN_HoneyTree_Text_Ask, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route221_EventScript_SNHoneyTree_End
+	removeitem ITEM_HONEY
+	setvar VAR_SN_HONEY_TREE, 14
+	special SinnohHoneySlather
+	msgbox SN_HoneyTree_Text_Done, MSGBOX_DEFAULT
+	goto Route221_EventScript_SNHoneyTree_End
 
 Route221_EventScript_PtSign1::
 	msgbox Route221_Text_PtSign1, MSGBOX_SIGN

@@ -30,6 +30,7 @@ struct DoorGraphics
     enum DoorSize size:8;
     const void *tiles;
     const void *palettes;
+    bool8 altTileStart; // Super Emerald: Johto (HnS) doors use free tiles of the Johto primary tileset
 };
 
 struct DoorAnimFrame
@@ -345,8 +346,11 @@ static const u8 sDoorAnimPalettes_TrainerTowerLobbyElevator[] = {8, 8, 2, 2, 2, 
 static const u8 sDoorAnimPalettes_TrainerTowerRoofElevator[] = {11, 11, 2, 2, 2, 2, 2, 2};
 
 
+#include "data/field_door_regions_gfx.h"
+
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 {
+#include "data/field_door_regions_table.h" // Super Emerald: Johto and Sinnoh doors
 // Super Fire Red: Emerald and FRLG doors are both available (was #if !IS_FRLG)
     {
         .metatileNum = METATILE_General_Door,
@@ -1033,7 +1037,9 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 // NOTE: The tiles of a door's animation must be copied to VRAM because they are not already part of any given tileset.
 //       This means that if there are any pre-existing tiles in this copied region that are visible when the door
 //       animation is played they will be overwritten.
-#define DOOR_TILE_START_SIZE1 (NUM_TILES_TOTAL - 8)
+#define DOOR_TILE_START_SIZE1_EMERALD (NUM_TILES_TOTAL - 8)
+#define DOOR_TILE_START_HNS 434
+#define DOOR_TILE_START_SIZE1 (gfx->altTileStart ? DOOR_TILE_START_HNS : DOOR_TILE_START_SIZE1_EMERALD)
 #define DOOR_TILE_START_SIZE2 (NUM_TILES_TOTAL - 16)
 
 static void CopyDoorTilesToVram(const struct DoorGraphics *gfx, const struct DoorAnimFrame *frame)

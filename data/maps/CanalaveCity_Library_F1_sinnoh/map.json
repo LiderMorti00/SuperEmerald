@@ -53,7 +53,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_CanalaveCity_Library_F1_CanalaveCity_Library_F1_EventScript_PtNpc3",
+      "script": "CanalaveCity_Library_F1_EventScript_PtNpc3",
       "flag": "FLAG_SN_HIDE_LIB_LUCIAN",
       "local_id": "LOCALID_LIB_LUCIAN"
     }

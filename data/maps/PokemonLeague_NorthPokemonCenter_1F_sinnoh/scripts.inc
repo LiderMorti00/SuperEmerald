@@ -137,6 +137,54 @@ PokemonLeague_NorthPokemonCenter_1F_Text_PtNpc1::
 	.string "row, you have to start from\p"
 	.string "the first one again.$"
 
+PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_B0::
+	trainerbattle_no_intro TRAINER_MARIA_1_SINNOH, PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_Defeat
+	goto PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_After
+
+PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry::
+	lock
+	faceplayer
+	msgbox PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_Intro, MSGBOX_DEFAULT
+	closemessage
+	switch VAR_SN_STARTER_MON
+	case 0, PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_B0
+	case 1, PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_B1
+	case 2, PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_B2
+	goto PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_B0
+
+PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_B2::
+	trainerbattle_no_intro TRAINER_MARIA_3_SINNOH, PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_Defeat
+	goto PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_After
+
+PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_After::
+	msgbox PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_Post, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto VAR_LAST_TALKED, 8, 11, SN_SPEED_FAST, 0, 0, 0
+	waitmovement VAR_LAST_TALKED
+	removeobject VAR_LAST_TALKED
+	setflag FLAG_SN_HIDE_LEAGUE_BARRY
+	release
+	end
+
+PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_Post::
+	.string "{RIVAL}: I guess I’m not ready for the\n"
+	.string "POKéMON League if I’m losing\p"
+	.string "to you!\p"
+	.string "Darn it! You watch, though!\p"
+	.string "I’ll get tougher and win my way through\n"
+	.string "the POKéMON League!\p"
+	.string "Because I’m going to become the\n"
+	.string "Champion, the toughest Trainer!\p"
+	.string "{PLAYER}! You’d better not lose to\n"
+	.string "anyone before me!$"
+
+PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_Defeat::
+	.string "BARRY: Aww... You’re just too tough!$"
+
+PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_B1::
+	trainerbattle_no_intro TRAINER_MARIA_2_SINNOH, PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_Defeat
+	goto PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_After
+
 PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_Intro::
 	.string "{RIVAL}: Hold it! Don’t go off without\n"
 	.string "me!\p"
@@ -145,10 +193,6 @@ PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_Intro::
 	.string "That’s why I’m here, too.\p"
 	.string "Let’s see who’s more worthy of making\n"
 	.string "the challenge with a battle!$"
-
-SE_S_PokemonLeague_NorthPokemonCenter_1F_PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry::
-	msgbox PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_Intro, MSGBOX_NPC
-	end
 
 PokemonLeague_NorthPokemonCenter_1F_EventScript_SNPtLEAGUENORTHACETRAINERF::
 	msgbox PokemonLeague_NorthPokemonCenter_1F_EventScript_SNPtLEAGUENORTHACETRAINERF_Text, MSGBOX_NPC

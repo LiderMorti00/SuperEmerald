@@ -1055,6 +1055,12 @@ enum __attribute__((packed)) Item
     ITEM_SILVER_WING = 875, // Super Emerald: calls Lugia at the Whirl Islands
     ITEM_RAINBOW_WING = 876, // Super Emerald: calls Ho-Oh to the Tin Tower
     ITEM_CANALAVE_TICKET = 877, // Super Emerald: ship from Slateport to Canalave City (Sinnoh)
+    ITEM_COUPON_1 = 878, // Super Emerald: Sinnoh key item
+    ITEM_COUPON_2 = 879, // Super Emerald: Sinnoh key item
+    ITEM_COUPON_3 = 880, // Super Emerald: Sinnoh key item
+    ITEM_SECRET_POTION = 881, // Super Emerald: Sinnoh key item
+    ITEM_LUNAR_WING = 882, // Super Emerald: Sinnoh key item
+    ITEM_SUITE_KEY = 883, // Super Emerald: Sinnoh key item
 
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,

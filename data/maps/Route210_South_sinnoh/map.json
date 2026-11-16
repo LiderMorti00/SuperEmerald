@@ -308,7 +308,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_Route210_South_Route210_South_EventScript_SNPsyduck",
+      "script": "Route210_South_EventScript_SNPsyduck",
       "flag": "FLAG_SN_HIDE_PSYDUCK"
     },
     {
@@ -323,7 +323,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_Route210_South_Route210_South_EventScript_SNPsyduck",
+      "script": "Route210_South_EventScript_SNPsyduck",
       "flag": "FLAG_SN_HIDE_PSYDUCK"
     },
     {
@@ -338,7 +338,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_Route210_South_Route210_South_EventScript_SNPsyduck",
+      "script": "Route210_South_EventScript_SNPsyduck",
       "flag": "FLAG_SN_HIDE_PSYDUCK"
     },
     {
@@ -353,7 +353,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_Route210_South_Route210_South_EventScript_SNPsyduck",
+      "script": "Route210_South_EventScript_SNPsyduck",
       "flag": "FLAG_SN_HIDE_PSYDUCK"
     },
     {
@@ -368,7 +368,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_Route210_South_Route210_South_EventScript_SNCynthiaCharm",
+      "script": "Route210_South_EventScript_SNCynthiaCharm",
       "flag": "FLAG_SN_HIDE_R210_CYNTHIA"
     },
     {

@@ -25,7 +25,7 @@
       "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_CanalaveCity_House3_CanalaveCity_House3_EventScript_PtNpc1",
+      "script": "CanalaveCity_House3_EventScript_PtNpc1",
       "flag": "0",
       "local_id": "LOCALID_ELDRITCH_BOY"
     },

@@ -120,6 +120,51 @@ Route207_Text_PtNpc1::
 	.string "You don't have a Bicycle? There's a\n"
 	.string "Cycle Shop in ETERNA CITY.$"
 
+Route207_EventScript_SNCounterpart_Main::
+	call Sinnoh_EventScript_BufferCounterpartName
+	checkplayergender
+	goto_if_eq VAR_RESULT, FEMALE, Route207_EventScript_SNCounterpart_Lucas
+	msgbox Route207_EventScript_SNCounterpart_D1, MSGBOX_DEFAULT
+	giveitem ITEM_VS_SEEKER
+	giveitem ITEM_DOWSING_MACHINE
+	msgbox Route207_EventScript_SNCounterpart_D2, MSGBOX_DEFAULT
+	goto Route207_EventScript_SNCounterpart_End
+
+Route207_EventScript_SNCounterpart::
+	lock
+	faceplayer
+	goto Route207_EventScript_SNCounterpart_Main
+
+Route207_EventScript_SNCounterpart_End::
+	setflag FLAG_SN_RECEIVED_VS_SEEKER
+	closemessage
+	sn_walkto LOCALID_R207_COUNTERPART, 21, 0, SN_SPEED_NORMAL, 0, 0, 0
+	waitmovement LOCALID_R207_COUNTERPART
+	removeobject LOCALID_R207_COUNTERPART
+	setflag FLAG_SN_HIDE_R207_COUNTERPART
+	releaseall
+	end
+
+Route207_EventScript_SNCounterpart_D2::
+	.string "{STR_VAR_1}: Using that Vs. Seeker, you\n"
+	.string "can find Trainers who want a rematch\p"
+	.string "with you.\p"
+	.string "Oh, {PLAYER}, do you also have a\n"
+	.string "POKéTCH?\p"
+	.string "Yup, you do. You can have this too,\n"
+	.string "then.\p"
+	.string "You deserve it for all your hard work,\n"
+	.string "{PLAYER}.\p"
+	.string "{STR_VAR_1}: The Dowsing Machine is\n"
+	.string "something you should touch often.\p"
+	.string "It will tell you if there is an item on\n"
+	.string "the ground that you can’t see.\p"
+	.string "I think there’s something here, even.\n"
+	.string "You should try it out.\p"
+	.string "OK, let’s keep working on our\n"
+	.string "POKéDEXes.\p"
+	.string "Professor Rowan is counting on us!$"
+
 Route207_EventScript_SNCounterpart_D1::
 	.string "{STR_VAR_1}: Hi, {PLAYER}! How’s your\n"
 	.string "POKéDEX coming along?\p"
@@ -133,9 +178,46 @@ Route207_EventScript_SNCounterpart_D1::
 	.string "I’m impressed, {PLAYER}. You know what’s\n"
 	.string "important.$"
 
-SE_S_Route207_Route207_EventScript_SNCounterpart::
-	msgbox Route207_EventScript_SNCounterpart_D1, MSGBOX_NPC
-	end
+Route207_EventScript_SNCounterpart_Lucas::
+	msgbox Route207_EventScript_SNCounterpart_L1, MSGBOX_DEFAULT
+	giveitem ITEM_VS_SEEKER
+	giveitem ITEM_DOWSING_MACHINE
+	msgbox Route207_EventScript_SNCounterpart_L2, MSGBOX_DEFAULT
+	goto Route207_EventScript_SNCounterpart_End
+
+Route207_EventScript_SNCounterpart_L2::
+	.string "{STR_VAR_1}: Using that Vs. Seeker, you\n"
+	.string "can find Trainers who want to battle\l"
+	.string "with\p"
+	.string "you again.\p"
+	.string "{PLAYER}, what about a POKéTCH? Do you\n"
+	.string "have one?\p"
+	.string "Yup, you do. You can have this too,\n"
+	.string "then.\p"
+	.string "You deserve it for all of your effort,\n"
+	.string "{PLAYER}.\p"
+	.string "{STR_VAR_1}: The Dowsing Machine is...\n"
+	.string "Just try touching it.\p"
+	.string "It’ll alert you if there is an unseeable\n"
+	.string "item on the ground.\p"
+	.string "Try it out now. I think there’s\n"
+	.string "something here.\p"
+	.string "OK, keep working on your POKéDEX.\n"
+	.string "Professor Rowan is counting on us!$"
+
+Route207_EventScript_SNCounterpart_L1::
+	.string "{STR_VAR_1}: Hey, {PLAYER}! How’s your\n"
+	.string "POKéDEX coming along?\p"
+	.string "Me? I’m always doing great! ...I wish...\p"
+	.string "But that’s not important.\p"
+	.string "Lately, I’ve been experimenting with a\n"
+	.string "couple of neat tools.\p"
+	.string "{PLAYER}, I’ll share with you. Choose a\n"
+	.string "hand!\p"
+	.string "{STR_VAR_1}: Oh yeah. You want the Vs.\n"
+	.string "Seeker.\p"
+	.string "Yup, {PLAYER}, you know what’s\n"
+	.string "important.$"
 
 Route207_EventScript_PtSign1::
 	msgbox Route207_Text_PtSign1, MSGBOX_SIGN

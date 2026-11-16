@@ -81,12 +81,21 @@ PastoriaCity_GreatMarshGate_Text_SNFirst::
 	.string "Welcome to the Great Marsh! Is this\n"
 	.string "your first Safari Game?$"
 
+PastoriaCity_GreatMarshGate_EventScript_SNBinoculars::
+	lockall
+	msgbox PastoriaCity_GreatMarshGate_EventScript_SNBinoculars_T1, MSGBOX_DEFAULT
+	special SinnohMarshBinoculars
+	msgbox PastoriaCity_GreatMarshGate_EventScript_SNBinoculars_T2, MSGBOX_DEFAULT
+	releaseall
+	end
+
+PastoriaCity_GreatMarshGate_EventScript_SNBinoculars_T2::
+	.string "{PLAYER} looked through the\n"
+	.string "binoculars... A wild {STR_VAR_1} can be\l"
+	.string "seen in the Great Marsh today!$"
+
 PastoriaCity_GreatMarshGate_EventScript_SNBinoculars_T1::
 	.string "Use a pair of binoculars to look out\n"
 	.string "over the Great Marsh.\p"
 	.string "You can see what kinds of POKéMON can\n"
 	.string "be caught, and where they are.$"
-
-SE_S_PastoriaCity_GreatMarshGate_PastoriaCity_GreatMarshGate_EventScript_SNBinoculars::
-	msgbox PastoriaCity_GreatMarshGate_EventScript_SNBinoculars_T1, MSGBOX_SIGN
-	end

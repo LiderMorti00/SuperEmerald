@@ -16,17 +16,19 @@ def strip(s):
 S_TR = read(sin('include/constants/trainers.h'))
 S_GFX = read(sin('src/data/graphics/trainers.h'))
 pics = [p for p in re.findall(r'^\s+(TRAINER_PIC_SINNOH_\w+),', S_TR, re.M)
-        if re.search(r'\[%s\] =\s*\{\s*\.frontPic' % p, S_GFX)]  # partners only have back pics
+        if re.search(r'\[%s\] =\s*\{' % p, S_GFX)]   # front pics, and back pics for the battle partners
 gfx_lines, table = [], []
 for p in pics:
-    m = re.search(r'\[%s\] =\s*\{\s*\.frontPic = TRAINER_FRONT_PIC\((\w+), (\w+)\)' % p, S_GFX)
-    for sym in m.groups():
-        line = re.search(r'const u(?:16|32) %s\[\] = [^\n]+' % sym, S_GFX).group(0)
+    body = re.search(r'\[%s\] =\s*\{(.*?)\n    \},' % p, S_GFX, re.S).group(1)
+    for sym in re.findall(r'\b(gTrainer(?:FrontPic|Palette|BackPic|BackPicPalette)_\w+)', body):
+        line = re.search(r'const u(?:8|16|32) %s\[\] = [^\n]+' % sym, S_GFX).group(0)
+        if line in gfx_lines:
+            continue
         f = re.search(r'"([^"]+)"', line).group(1)
         os.makedirs(os.path.dirname(ours(f)), exist_ok=True)
         shutil.copyfile(sin(f), ours(f))
         gfx_lines.append(line)
-    table.append('    [%s] =\n    {\n        .frontPic = TRAINER_FRONT_PIC(%s, %s),\n    },\n' % (p, m.group(1), m.group(2)))
+    table.append('    [%s] =\n    {%s\n    },\n' % (p, body.rstrip()))
 
 # classes used by the imported Sinnoh trainers that we lack
 O_TR = strip(read(ours('include/constants/trainers.h')))

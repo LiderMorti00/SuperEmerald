@@ -75,7 +75,7 @@ j = load('PokemonLeague_HallOfFameRoom'); obj(j, 'OBJ_EVENT_GFX_SINNOH_CYNTHIA')
 # --- Rowan's lab
 m = 'SandgemTown_RowansLab'; j = load(m)
 r = obj(j, 'OBJ_EVENT_GFX_SINNOH_ROWAN'); r['script'] = 'SE_EventScript_Rowan'
-a = obj(j, 'OBJ_EVENT_GFX_VAR_0'); a.update(graphics_id='OBJ_EVENT_GFX_SINNOH_DAWN', script='SE_EventScript_RowanAssistant', flag='0')
+a = next(o for o in j['object_events'] if o['graphics_id'] in ('OBJ_EVENT_GFX_VAR_0', 'OBJ_EVENT_GFX_SINNOH_DAWN')); a.update(graphics_id='OBJ_EVENT_GFX_SINNOH_DAWN', script='SE_EventScript_RowanAssistant', flag='0')
 save(m, j)
 
 # --- Canalave: the sailor and Dawn
@@ -168,3 +168,15 @@ for sp in ('MESPRIT', 'CRESSELIA'):
             '\tgoto Common_EventScript_LegendaryFlewAway']
 write(ours('data/scripts/se_sinnoh_legendaries.inc'), '\n'.join(out) + '\n')
 print('patched')
+
+# --- doors that led outside Sinnoh (Lilycove contest, Battle Frontier): make them solid
+L = {l['id']: l for l in json.load(open(ours('data/layouts/layouts.json')))['layouts'] if 'id' in l}
+for m in ('HearthomeCity', 'FightArea_FrontierGate'):
+    j = load(m); lay = L[j['layout']]; w = lay['width']
+    p = ours(lay['blockdata_filepath']); d = bytearray(open(p, 'rb').read())
+    for wp in j['warp_events']:
+        if wp['dest_map'] == j['id']:
+            i = 2 * (wp['y'] * w + wp['x'])
+            d[i + 1] |= 0x04      # collision bit (0x0400)
+    open(p, 'wb').write(d)
+print('blocked external doors')

@@ -2,14 +2,19 @@ PastoriaCity_House2_sinnoh_MapScripts::
 	.byte 0
 
 
+PastoriaCity_House2_EventScript_SNScarfGuy::
+	lock
+	faceplayer
+	goto_if_ne VAR_SLATEPORT_FAN_CLUB_STATE, 0, SlateportCity_PokemonFanClub_EventScript_ChairmanTryAssessPokemon
+	setvar VAR_SLATEPORT_FAN_CLUB_STATE, 1
+	msgbox PastoriaCity_House2_Text_SNScarf, MSGBOX_DEFAULT
+	goto SlateportCity_PokemonFanClub_EventScript_ChairmanAssessLeadMon
+	end
+
 PastoriaCity_House2_Text_SNScarf::
 	.string "Howdy, there!\p"
 	.string "Let me examine your POKéMON to see if\n"
 	.string "it’s worthy of a scarf!$"
-
-SE_S_PastoriaCity_House2_PastoriaCity_House2_EventScript_SNScarfGuy::
-	msgbox PastoriaCity_House2_Text_SNScarf, MSGBOX_NPC
-	end
 
 PastoriaCity_House2_EventScript_PtNpc2::
 	lock

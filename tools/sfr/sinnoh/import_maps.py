@@ -119,9 +119,15 @@ for f in glob.glob(sin('include/constants/*.h')):
 S_TRAINERS = set(re.findall(r'#define\s+(TRAINER_\w+)\s+\d+', read(sin('include/constants/opponents.h'))))
 BADGES = {'FLAG_BADGE0%d_GET' % i: 'FLAG_SINNOH_BADGE%d_GET' % i for i in range(1, 9)}
 ALLOWED_VARS = {'VAR_RESULT', 'VAR_FACING', 'VAR_LAST_TALKED', 'VAR_ITEM_ID'} | {'VAR_0x80%02X' % i for i in range(0x0C)} \
-               | {'VAR_TEMP_%X' % i for i in range(16)}
+               | {'VAR_TEMP_%X' % i for i in range(16)} \
+               | {'VAR_SN_HONEY_TREE', 'VAR_SN_HONEY_DAY', 'VAR_SN_TROPHY_SPECIES', 'VAR_POKELOT_PRIZE_ITEM',
+                  'VAR_SLATEPORT_FAN_CLUB_STATE', 'VAR_DAYS', 'VAR_POKELOT_PRIZE_PLACE', 'VAR_OBJ_GFX_ID_0'}
+# Sinnoh repo vars that live under another name here (include/constants/vars.h)
+VAR_RENAME = {'VAR_SINNOH_STORY': 'VAR_SN_SINNOH_STORY', 'VAR_STARTER_MON': 'VAR_SN_STARTER_MON'}
+ALLOWED_VARS |= set(VAR_RENAME)
 SAFE_OUR_FLAGS = {'FLAG_TEMP_%X' % i for i in range(1, 0x20)} | {'FLAG_SYS_POKEMON_GET', 'FLAG_SYS_POKEDEX_GET',
-                  'FLAG_SYS_GAME_CLEAR', 'FLAG_SYS_CTRL_OBJ_DELETE', 'FLAG_SYS_NATIONAL_DEX', 'FLAG_SYS_POKENAV_GET'}
+                  'FLAG_SYS_GAME_CLEAR', 'FLAG_SYS_CTRL_OBJ_DELETE', 'FLAG_SYS_NATIONAL_DEX', 'FLAG_SYS_POKENAV_GET',
+                  'FLAG_SYS_PC_LANETTE'}
 MUSIC_MAP = {'MUS_DPP_POKECENTER': 'MUS_POKE_CENTER', 'MUS_LITTLEROOT_TEST': 'MUS_DPP_TWINLEAF', 'MUS_NONE': 'MUS_DPP_TWINLEAF'}
 SKIP_GFX = set()
 
@@ -170,7 +176,7 @@ def check_line(line, local_ids):
     if not code or code.startswith('.string'):
         return None
     cmd = code.split()[0].rstrip(',')
-    if cmd not in OUR_MACROS or 'followernpc' in cmd:   # NPC followers are off here
+    if cmd not in OUR_MACROS:
         return 'cmd ' + cmd
     args = code[len(cmd):]
     if cmd in ('special', 'specialvar'):
@@ -205,13 +211,13 @@ def check_line(line, local_ids):
                 continue
             return 'map ' + t      # an Emerald map in a Sinnoh script
         if t.startswith('ITEM_') and t not in VALID_ITEMS and not t.startswith(('ITEM_USE_', 'ITEM_NONE')):
-            if cmd in ('finditem', 'giveitem'):
-                continue      # replaced by convert_line
-            return 'item ' + t
+            continue          # replaced by convert_line (item_sub)
         if t.startswith('LOCALID_') and t not in OUR_CONST:
             return 'localid ' + t
         if t in ('TRUE', 'FALSE', 'YES', 'NO', 'ON', 'OFF'):
             continue
+        if t.startswith('ITEM_'):
+            continue      # valid, or replaced by convert_line
         if re.fullmatch(r'[A-Z][A-Z0-9_]+', t) and t not in OUR_CONST:
             return 'const ' + t
     return None
@@ -219,6 +225,8 @@ def check_line(line, local_ids):
 def convert_line(line):
     def rep(m):
         t = m.group(1)
+        if t in VAR_RENAME:
+            return VAR_RENAME[t]
         if t.startswith('FLAG_') and (t in S_FLAGS or t in BADGES) and t not in SAFE_OUR_FLAGS and not t.startswith('FLAG_TEMP_'):
             return flag_name(t)
         if t.startswith('MUS_'):
@@ -451,7 +459,7 @@ for h, o in sinnoh_flags.items():
     if o.startswith('FLAG_SINNOH_BADGE'):
         continue
     lines.append('#define %-55s 0x%04x // Sinnoh repo %s' % (o, 0x2A00 + n, h)); n += 1
-assert n < 0x380, n   # 0x2D80-0x2DFF: hand-made Super Emerald Sinnoh flags
+assert n < 0x400, n   # 0x2A00-0x2DFF (hand-made Super Emerald Sinnoh flags are at 0x3200+)
 lines += ['', '#endif // GUARD_CONSTANTS_FLAGS_SINNOH_H', '']
 write(ours('include/constants/flags_sinnoh.h'), '\n'.join(lines))
 
@@ -571,10 +579,27 @@ for i, (t, n) in enumerate(sinnoh_trainers.items()):
     else:
         pb.append('=== %s ===\nName: TRAINER\nClass: Pkmn Trainer 1\nPic: Youngster Frlg\nGender: Male\nMusic: Male\nDouble Battle: No\nAI: Check Bad Move\n\nBidoof\nLevel: 50\n' % n)
         STATS['trainer_missing_party'] += 1
-assert len(sinnoh_trainers) < 512 - 32
+print("sinnoh trainers", len(sinnoh_trainers)); assert len(sinnoh_trainers) < 1024 - 32
 tl.append('#define TRAINERS_COUNT_SINNOH_IMPORT %d' % len(sinnoh_trainers))
 write(ours('include/constants/opponents_sinnoh_list.h'), '\n'.join(tl) + '\n')
 write(ours('src/data/trainers_sinnoh.party'), '\n'.join(pb))
+
+# ---------------------------------------------------------------- battle partners (NPC followers)
+sp_party = read(sin('src/data/battle_partners.party'))
+sp_blocks = [b for b in re.split(r'\n(?==== )', sp_party) if b.startswith('===')]
+names, out_p = [], []
+for b in sp_blocks:
+    n = re.match(r'=== (\w+) ===', b).group(1)
+    if n in ('PARTNER_NONE', 'PARTNER_STEVEN'):
+        continue
+    names.append(n)
+    out_p.append(fix_block(b.rstrip(), n) + '\n')
+p_ = ours('src/data/battle_partners.party')
+keep = [b.rstrip() + '\n' for b in re.split(r'\n(?==== )', read(p_)) if re.match(r'=== (PARTNER_NONE|PARTNER_STEVEN) ===', b)]
+write(p_, '\n'.join(keep + out_p))
+h_ = ours('include/constants/battle_partner.h'); s_ = read(h_)
+s_ = re.sub(r'#define PARTNER_STEVEN 1\n.*?#define PARTNER_COUNT \d+\n', '#define PARTNER_STEVEN 1\n' + ''.join('#define %s %d // Super Emerald: Sinnoh\n' % (n, 2 + i) for i, n in enumerate(names)) + '#define PARTNER_COUNT %d\n' % (2 + len(names)), s_, flags=re.S)
+write(h_, s_)
 
 # ---------------------------------------------------------------- wild encounters
 def curve(L):

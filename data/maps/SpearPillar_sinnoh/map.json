@@ -26,7 +26,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_SpearPillar_SpearPillar_EventScript_SNSPGrunts",
+      "script": "SpearPillar_EventScript_SNSPGrunts",
       "flag": "FLAG_SN_HIDE_SP_GRUNT1"
     },
     {
@@ -41,7 +41,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_SpearPillar_SpearPillar_EventScript_SNSPCommanders",
+      "script": "SpearPillar_EventScript_SNSPCommanders",
       "flag": "FLAG_SN_HIDE_SP_MARS"
     },
     {
@@ -56,7 +56,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_SpearPillar_SpearPillar_EventScript_SNSPGrunts",
+      "script": "SpearPillar_EventScript_SNSPGrunts",
       "flag": "FLAG_SN_HIDE_SP_GRUNT2"
     },
     {
@@ -71,7 +71,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_SpearPillar_SpearPillar_EventScript_SNSPCommanders",
+      "script": "SpearPillar_EventScript_SNSPCommanders",
       "flag": "FLAG_SN_HIDE_SP_JUPITER"
     },
     {
@@ -85,7 +85,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_SpearPillar_SpearPillar_EventScript_SNCyrus",
+      "script": "SpearPillar_EventScript_SNCyrus",
       "flag": "FLAG_SN_HIDE_SP_CYRUS"
     },
     {

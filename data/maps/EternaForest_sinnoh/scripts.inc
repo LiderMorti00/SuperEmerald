@@ -2,6 +2,38 @@ EternaForest_sinnoh_MapScripts::
 	.byte 0
 
 
+EternaForest_EventScript_Cheryl::
+	lockall
+	goto_if_ne VAR_SN_SINNOH_STORY, 22, EternaForest_EventScript_CherylEnd
+	applymovement LOCALID_FOREST_CHERYL, Common_Movement_FacePlayer
+	waitmovement 0
+	goto_if_set FLAG_SN_CHERYL_MET, EternaForest_EventScript_SNCherylAgain
+	setflag FLAG_SN_CHERYL_MET
+	msgbox EternaForest_Text_CherylAsk, MSGBOX_DEFAULT
+	goto EternaForest_EventScript_SNCherylGo
+
+EternaForest_EventScript_CherylEnd::
+	releaseall
+	end
+
+EternaForest_EventScript_SNCherylGo::
+	closemessage
+	special HealPlayerParty
+	setfollowernpc LOCALID_FOREST_CHERYL, FNPC_ALL_LAND, EternaForest_EventScript_CherylHeal, PARTNER_CHERYL
+	setvar VAR_SN_SINNOH_STORY, 23
+	goto EternaForest_EventScript_CherylEnd
+
+EternaForest_EventScript_CherylHeal::
+	lock
+	msgbox EternaForest_Text_CherylHeal, MSGBOX_DEFAULT
+	special HealPlayerParty
+	release
+	end
+
+EternaForest_Text_CherylHeal::
+	.string "Cheryl: I’ll keep your POKéMON in\n"
+	.string "perfect health.$"
+
 EternaForest_Text_CherylAsk::
 	.string "Hello, my name’s Cheryl. And you are...?\p"
 	.string "OK, so your name is {PLAYER}. I’m\n"
@@ -16,9 +48,15 @@ EternaForest_Text_CherylAsk::
 	.string "Please, may I go through with you?\p"
 	.string "{PLAYER} decided to go with Cheryl!$"
 
-SE_S_EternaForest_EternaForest_EventScript_Cheryl::
-	msgbox EternaForest_Text_CherylAsk, MSGBOX_NPC
-	end
+EternaForest_EventScript_SNCherylAgain::
+	msgbox EternaForest_Text_SNCherylAgain, MSGBOX_DEFAULT
+	goto EternaForest_EventScript_SNCherylGo
+
+EternaForest_Text_SNCherylAgain::
+	.string "Cheryl: Oh, hi, {PLAYER}! I’ve been\n"
+	.string "waiting like I said.\p"
+	.string "Let’s get through this forest\n"
+	.string "together.$"
 
 EternaForest_EventScript_Jack::
 	trainerbattle_single TRAINER_JODY_SINNOH, EternaForest_Text_JackIntro, EternaForest_Text_JackDefeat
@@ -161,9 +199,40 @@ EternaForest_Text_PtNpc1::
 	.string "Bug POKéMON are great, you know? They\n"
 	.string "grow really fast!$"
 
-SE_S_EternaForest_EternaForest_EventScript_SNHoneyTree::
-	msgbox SN_HoneyTree_Text_Wait, MSGBOX_NPC
+EternaForest_EventScript_SNHoneyTree::
+	lock
+	goto_if_ne VAR_SN_HONEY_TREE, 18, EternaForest_EventScript_SNHoneyTree_Fresh
+	special SinnohHoneyReady
+	goto_if_eq VAR_RESULT, TRUE, EternaForest_EventScript_SNHoneyTree_Battle
+	msgbox SN_HoneyTree_Text_Wait, MSGBOX_DEFAULT
+	release
 	end
+
+EternaForest_EventScript_SNHoneyTree_Battle::
+	setvar VAR_SN_HONEY_TREE, 0
+	setwildbattle SPECIES_WURMPLE, 5
+	special SinnohHoneyTreeMon
+	msgbox SN_HoneyTree_Text_Mon, MSGBOX_DEFAULT
+	closemessage
+	dowildbattle
+	release
+	end
+
+EternaForest_EventScript_SNHoneyTree_End::
+	release
+	end
+
+EternaForest_EventScript_SNHoneyTree_Fresh::
+	msgbox SN_HoneyTree_Text_Scent, MSGBOX_DEFAULT
+	checkitem ITEM_HONEY
+	goto_if_eq VAR_RESULT, FALSE, EternaForest_EventScript_SNHoneyTree_End
+	msgbox SN_HoneyTree_Text_Ask, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, EternaForest_EventScript_SNHoneyTree_End
+	removeitem ITEM_HONEY
+	setvar VAR_SN_HONEY_TREE, 18
+	special SinnohHoneySlather
+	msgbox SN_HoneyTree_Text_Done, MSGBOX_DEFAULT
+	goto EternaForest_EventScript_SNHoneyTree_End
 
 EternaForest_EventScript_SNGardenia::
 	lock

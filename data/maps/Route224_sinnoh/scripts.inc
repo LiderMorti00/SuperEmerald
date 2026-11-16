@@ -201,6 +201,87 @@ Route224_EventScript_SNShaymin_Ran::
 	goto Common_EventScript_LegendaryFlewAway
 	end
 
+Route224_EventScript_SNOak::
+	lock
+	faceplayer
+	msgbox Route224_Text_SNOak1, MSGBOX_DEFAULT
+	msgbox Route224_Text_SNOak2, MSGBOX_DEFAULT
+	closemessage
+	clearflag FLAG_SN_HIDE_R224_MARLEY
+	addobject LOCALID_SN_R224_MARLEY
+	sn_walktoplayer LOCALID_SN_R224_MARLEY, SN_SPEED_NORMAL, 0, 0
+	waitmovement LOCALID_SN_R224_MARLEY
+	sn_playerface LOCALID_SN_R224_MARLEY, 1
+	waitmovement OBJ_EVENT_ID_PLAYER
+	msgbox Route224_Text_SNMarley1, MSGBOX_DEFAULT
+	msgbox Route224_Text_SNMarley2, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	msgbox Route224_Text_SNOak3, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_SN_ROUTE224_TABLET
+	playse SE_M_HEAL_BELL
+	waitse
+	clearflag FLAG_SN_HIDE_SHAYMIN
+	addobject LOCALID_SN_SHAYMIN
+	playmoncry SPECIES_SHAYMIN, CRY_MODE_NORMAL
+	waitmoncry
+	msgbox Route224_Text_SNOak4, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto LOCALID_SN_R224_MARLEY, 39, 18, SN_SPEED_NORMAL, 0, 0, 0
+	waitmovement LOCALID_SN_R224_MARLEY
+	removeobject LOCALID_SN_R224_MARLEY
+	setflag FLAG_SN_HIDE_R224_MARLEY
+	sn_walkto LOCALID_SN_R224_OAK, 57, 36, SN_SPEED_NORMAL, 0, 0, 0
+	waitmovement LOCALID_SN_R224_OAK
+	removeobject LOCALID_SN_R224_OAK
+	setflag FLAG_SN_HIDE_R224_OAK
+	release
+	end
+
+Route224_Text_SNOak4::
+	.string "Oak: ?! What was that POKéMON?\p"
+	.string "Is it somehow connected to the stone\n"
+	.string "tablet?\p"
+	.string "Hmm... Where did that POKéMON go? Its\n"
+	.string "destination is intriguing...$"
+
+Route224_Text_SNOak3::
+	.string "{PLAYER} engraved a message of thanks\n"
+	.string "to everyone met on the journey...$"
+
+Route224_Text_SNMarley2::
+	.string "Marley: That stone tablet... It has a\n"
+	.string "strange feel to it...$"
+
+Route224_Text_SNMarley1::
+	.string "Marley: I... I don’t like to talk...\p"
+	.string "I choose my words carefully, but they\n"
+	.string "may still hurt someone accidentally...\p"
+	.string "When I think of that, I clam up...\p"
+	.string "That’s why I think this certain\n"
+	.string "POKéMON is so wonderful.\p"
+	.string "It’s a POKéMON that conveys the\n"
+	.string "feelings of gratitude in a nice way...$"
+
+Route224_Text_SNOak2::
+	.string "Oak: I tried deciphering the\n"
+	.string "engravings on the stone tablet.\p"
+	.string "Apparently, it is for a Trainer to\n"
+	.string "engrave his or her thoughts after\p"
+	.string "growing as a person on an adventure.\p"
+	.string "A Trainer fitting that description\n"
+	.string "would be you.\p"
+	.string "That’s why I’m asking you for your help.\p"
+	.string "You’ve met many people and POKéMON;\n"
+	.string "you’ve experienced many things that\p"
+	.string "shaped you into the person you are.\p"
+	.string "I want you to sincerely tell me who\n"
+	.string "affected you the most.\p"
+	.string "Tell me, to whom do you most want to\n"
+	.string "say your thanks?$"
+
 Route224_Text_SNOak1::
 	.string "Oak: Ah, {PLAYER}! It’s good to see you!\p"
 	.string "Without any further ado, I’d like you\n"
@@ -209,7 +290,3 @@ Route224_Text_SNOak1::
 	.string "discovered in the Kanto region.\p"
 	.string "I want to ask for your help in solving\n"
 	.string "the mystery behind this.$"
-
-SE_S_Route224_Route224_EventScript_SNOak::
-	msgbox Route224_Text_SNOak1, MSGBOX_NPC
-	end

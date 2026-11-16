@@ -221,9 +221,40 @@ Route222_Text_PtNpc1::
 	.string "Now I get annoyed if I can't beat my\n"
 	.string "record by even an inch...$"
 
-SE_S_Route222_Route222_EventScript_SNHoneyTree::
-	msgbox SN_HoneyTree_Text_Wait, MSGBOX_NPC
+Route222_EventScript_SNHoneyTree::
+	lock
+	goto_if_ne VAR_SN_HONEY_TREE, 15, Route222_EventScript_SNHoneyTree_Fresh
+	special SinnohHoneyReady
+	goto_if_eq VAR_RESULT, TRUE, Route222_EventScript_SNHoneyTree_Battle
+	msgbox SN_HoneyTree_Text_Wait, MSGBOX_DEFAULT
+	release
 	end
+
+Route222_EventScript_SNHoneyTree_Battle::
+	setvar VAR_SN_HONEY_TREE, 0
+	setwildbattle SPECIES_WURMPLE, 5
+	special SinnohHoneyTreeMon
+	msgbox SN_HoneyTree_Text_Mon, MSGBOX_DEFAULT
+	closemessage
+	dowildbattle
+	release
+	end
+
+Route222_EventScript_SNHoneyTree_End::
+	release
+	end
+
+Route222_EventScript_SNHoneyTree_Fresh::
+	msgbox SN_HoneyTree_Text_Scent, MSGBOX_DEFAULT
+	checkitem ITEM_HONEY
+	goto_if_eq VAR_RESULT, FALSE, Route222_EventScript_SNHoneyTree_End
+	msgbox SN_HoneyTree_Text_Ask, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route222_EventScript_SNHoneyTree_End
+	removeitem ITEM_HONEY
+	setvar VAR_SN_HONEY_TREE, 15
+	special SinnohHoneySlather
+	msgbox SN_HoneyTree_Text_Done, MSGBOX_DEFAULT
+	goto Route222_EventScript_SNHoneyTree_End
 
 Route222_EventScript_PtSign1::
 	msgbox Route222_Text_PtSign1, MSGBOX_SIGN

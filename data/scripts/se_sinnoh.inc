@@ -2,28 +2,40 @@
 
 @ ---------------------------------------------------------------------------
 @ Norman's Canalave Ticket (after the Johto League) and the ship from Slateport
-SE_EventScript_NormanCanalaveTicket::
-	msgbox SE_Text_NormanCanalaveTicket, MSGBOX_DEFAULT
+SE_EventScript_BirchCanalaveTicket::
+	goto_if_unset FLAG_SE_JOHTO_LEAGUE_CLEARED, Common_EventScript_NopReturn
+	goto_if_set FLAG_SE_RECEIVED_CANALAVE_TICKET, Common_EventScript_NopReturn
+	msgbox SE_Text_BirchCanalaveTicket, MSGBOX_DEFAULT
 	giveitem ITEM_CANALAVE_TICKET
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_BirchCanalaveTicketBagFull
 	setflag FLAG_SE_RECEIVED_CANALAVE_TICKET
-	msgbox SE_Text_NormanCanalaveTicketExplain, MSGBOX_DEFAULT
+	msgbox SE_Text_BirchCanalaveTicketExplain, MSGBOX_DEFAULT
 	release
 	end
 
-SE_Text_NormanCanalaveTicket:
-	.string "NORMAN: The CHAMPION of JOHTO, too!\n"
-	.string "You keep surprising me, {PLAYER}.\p"
-	.string "An old friend of mine, PROF. ROWAN,\n"
-	.string "studies POKéMON in SINNOH.\p"
-	.string "He would love to meet a TRAINER\n"
-	.string "like you. Take this with you.$"
+SE_EventScript_BirchCanalaveTicketBagFull::
+	call Common_EventScript_BagIsFull
+	release
+	end
 
-SE_Text_NormanCanalaveTicketExplain:
-	.string "NORMAN: That CANALAVE TICKET is for\n"
-	.string "the ship from SLATEPORT to CANALAVE\l"
-	.string "CITY, in SINNOH.\p"
+SE_Text_BirchCanalaveTicket:
+	.string "PROF. BIRCH: {PLAYER}! You're the\n"
+	.string "CHAMPION of JOHTO now, too?\l"
+	.string "That's incredible!\p"
+	.string "Listen, I have a friend who is a\n"
+	.string "POKéMON PROFESSOR in SINNOH.\l"
+	.string "His name is PROF. ROWAN.\p"
+	.string "I told him all about you, and he\n"
+	.string "said he'd love to meet you.\p"
+	.string "So I got you this. Here!$"
+
+SE_Text_BirchCanalaveTicketExplain:
+	.string "PROF. BIRCH: That CANALAVE TICKET\n"
+	.string "is for the ship from SLATEPORT to\l"
+	.string "CANALAVE CITY, in SINNOH.\p"
 	.string "PROF. ROWAN's lab is in SANDGEM\n"
-	.string "TOWN. Say hello to him for me!$"
+	.string "TOWN. He looks stern, but he's a\l"
+	.string "great researcher. Say hi for me!$"
 
 SE_EventScript_SlateportOfferJohtoSinnoh::
 	message SE_Text_SlateportWhere
@@ -149,6 +161,7 @@ SE_EventScript_RowanChoose::
 
 SE_EventScript_RowanTurtwig::
 	setvar VAR_SE_SINNOH_STARTER, 1
+	setvar VAR_SN_STARTER_MON, 0
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_TURTWIG
 	bufferspeciesname STR_VAR_1, SPECIES_TURTWIG
 	givemon SPECIES_TURTWIG, 45, ITEM_EVERSTONE
@@ -156,6 +169,7 @@ SE_EventScript_RowanTurtwig::
 
 SE_EventScript_RowanChimchar::
 	setvar VAR_SE_SINNOH_STARTER, 2
+	setvar VAR_SN_STARTER_MON, 1
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_CHIMCHAR
 	bufferspeciesname STR_VAR_1, SPECIES_CHIMCHAR
 	givemon SPECIES_CHIMCHAR, 45, ITEM_EVERSTONE
@@ -163,6 +177,7 @@ SE_EventScript_RowanChimchar::
 
 SE_EventScript_RowanPiplup::
 	setvar VAR_SE_SINNOH_STARTER, 3
+	setvar VAR_SN_STARTER_MON, 2
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_PIPLUP
 	bufferspeciesname STR_VAR_1, SPECIES_PIPLUP
 	givemon SPECIES_PIPLUP, 45, ITEM_EVERSTONE

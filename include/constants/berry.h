@@ -174,6 +174,12 @@ enum __attribute__((__packed__)) Flavor
 
 
 
+
+
+
+
+
+
 // Super Emerald: Sinnoh begin (Sinnoh berry trees, in SaveBlock3)
 #define BERRY_TREE_SINNOH_FLOAROMATOWN_1 128
 #define BERRY_TREE_SINNOH_FLOAROMATOWN_2 129

@@ -1659,11 +1659,12 @@
 // Super Emerald: extended flags for Johto and Sinnoh, stored at the end of SaveBlock1
 // (gSaveBlock1Ptr->extFlags) so older saves keep their layout. Plain numbers on purpose.
 #define EXT_FLAGS_START                         0x2000
-#define EXT_FLAGS_COUNT                         0x1000
+#define EXT_FLAGS_COUNT                         0x1300
 #define JOHTO_FLAGS_START                       0x2000 // events, 0x800 flags
 #define JOHTO_TRAINER_FLAGS_START               0x2800 // 512 trainers
 #define SINNOH_FLAGS_START                      0x2A00 // events, 0x400 flags
-#define SINNOH_TRAINER_FLAGS_START              0x2E00 // 512 trainers
+#define SINNOH_TRAINER_FLAGS_START              0x2E00 // 1024 trainers
+#define SE_SINNOH_FLAGS_START                   0x3200 // hand-made Super Emerald Sinnoh flags (flags_se_sinnoh.h)
 
 #define SPECIAL_FLAGS_START                     0x4000
 #define FLAG_HIDE_MAP_NAME_POPUP                (SPECIAL_FLAGS_START + 0x0)

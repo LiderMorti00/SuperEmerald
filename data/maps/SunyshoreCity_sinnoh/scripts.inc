@@ -50,6 +50,29 @@ SunyshoreCity_Text_PtNpc5::
 	.string "POKéMON adapt to live there.\p"
 	.string "That's what we all do to survive.$"
 
+SunyshoreCity_EventScript_SNJasmine::
+	lock
+	faceplayer
+	msgbox SunyshoreCity_EventScript_SNJasmine_T1, MSGBOX_DEFAULT
+	giveitem ITEM_HM_WATERFALL
+	setflag FLAG_SN_RECEIVED_HM_WATERFALL
+	msgbox SunyshoreCity_EventScript_SNJasmine_T2, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto VAR_LAST_TALKED, 17, 9, SN_SPEED_NORMAL, 0, 0, 0
+	waitmovement VAR_LAST_TALKED
+	removeobject VAR_LAST_TALKED
+	setflag FLAG_SN_HIDE_JASMINE
+	release
+	end
+
+SunyshoreCity_EventScript_SNJasmine_T2::
+	.string "...That Hidden Machine... It contains\n"
+	.string "Waterfall.\p"
+	.string "If you use it, you can get to the\n"
+	.string "POKéMON League.\p"
+	.string "...Um... I... I don’t know how I should say\n"
+	.string "this, but good luck.$"
+
 SunyshoreCity_EventScript_SNJasmine_T1::
 	.string "...Er...um... M-my name is Jasmine, and I’m\n"
 	.string "a Gym Leader.\p"
@@ -59,10 +82,6 @@ SunyshoreCity_EventScript_SNJasmine_T1::
 	.string "...Er...um... It would be nice if you knew\n"
 	.string "about\p"
 	.string "the Johto region...$"
-
-SE_S_SunyshoreCity_SunyshoreCity_EventScript_SNJasmine::
-	msgbox SunyshoreCity_EventScript_SNJasmine_T1, MSGBOX_NPC
-	end
 
 SunyshoreCity_EventScript_SNFlint::
 	lock
@@ -134,6 +153,19 @@ SunyshoreCity_EventScript_SNFlint_T4::
 	.string "All right, hotshot! I’ll be waiting at\n"
 	.string "the POKéMON League!$"
 
+SunyshoreCity_EventScript_SNBarry8::
+	lock
+	faceplayer
+	msgbox SunyshoreCity_Text_SNBarry8, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_SN_SUNYSHORE_BARRY
+	sn_walkto LOCALID_SN_SUNY_BARRY, 17, 9, SN_SPEED_FAST, 0, 0, 0
+	waitmovement LOCALID_SN_SUNY_BARRY
+	removeobject LOCALID_SN_SUNY_BARRY
+	setflag FLAG_SN_HIDE_SUNY_BARRY
+	release
+	end
+
 SunyshoreCity_Text_SNBarry8::
 	.string "{RIVAL}: Hey! {PLAYER}!\p"
 	.string "What the...\p"
@@ -141,10 +173,6 @@ SunyshoreCity_Text_SNBarry8::
 	.string "of Sinnoh!\p"
 	.string "Aww, you... That’s wicked! I envy you!\p"
 	.string "But don’t think you’ve won!$"
-
-SE_S_SunyshoreCity_SunyshoreCity_EventScript_SNBarry8::
-	msgbox SunyshoreCity_Text_SNBarry8, MSGBOX_NPC
-	end
 
 SunyshoreCity_EventScript_PtSign1::
 	msgbox SunyshoreCity_Text_PtSign1, MSGBOX_SIGN

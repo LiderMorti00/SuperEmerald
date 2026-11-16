@@ -49,14 +49,298 @@ CanalaveCity_Library_F3_Text_PtNpc2_1::
 	.string "Even though the tremor has ended, my\n"
 	.string "knees still feel like jelly...$"
 
+CanalaveCity_Library_F3_EventScript_SNRowan::
+	lockall
+	applymovement LOCALID_SN_LIB_ROWAN, Common_Movement_FaceDown
+	applymovement LOCALID_SN_LIB_COUNTERPART, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox CanalaveCity_Library_F3_Text_SNLOutta, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SN_LIB_BARRY, CanalaveCity_Library_F3_Movement_SNRunUpTurn
+	waitmovement 0
+	msgbox CanalaveCity_Library_F3_Text_SNLDots, MSGBOX_DEFAULT
+	msgbox CanalaveCity_Library_F3_Text_SNLGetIt, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SN_LIB_BARRY, Common_Movement_WalkDown
+	waitmovement 0
+	applymovement LOCALID_SN_LIB_BARRY, Common_Movement_FaceUp
+	waitmovement 0
+	msgbox CanalaveCity_Library_F3_Text_SNLEveryone, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SN_LIB_ROWAN, CanalaveCity_Library_F3_Movement_SNRowanPace
+	waitmovement 0
+	msgbox CanalaveCity_Library_F3_Text_SNLStudy, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SN_LIB_ROWAN, CanalaveCity_Library_F3_Movement_SNRowanBack
+	waitmovement 0
+	msgbox CanalaveCity_Library_F3_Text_SNLHelp, MSGBOX_DEFAULT
+	msgbox CanalaveCity_Library_F3_Text_SNLNoDex, MSGBOX_DEFAULT
+	msgbox CanalaveCity_Library_F3_Text_SNLBolted, MSGBOX_DEFAULT
+	checkplayergender
+	goto_if_eq VAR_RESULT, FEMALE, CanalaveCity_Library_F3_EventScript_SNL_CountL
+	msgbox CanalaveCity_Library_F3_Text_SNLCountD, MSGBOX_DEFAULT
+	goto CanalaveCity_Library_F3_EventScript_SNL_CountN
+
+CanalaveCity_Library_F3_EventScript_SNL_CountN::
+	msgbox CanalaveCity_Library_F3_Text_SNLIndiv, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SN_LIB_ROWAN, Common_Movement_FaceLeft
+	applymovement LOCALID_SN_LIB_COUNTERPART, Common_Movement_FaceRight
+	waitmovement 0
+	checkplayergender
+	goto_if_eq VAR_RESULT, FEMALE, CanalaveCity_Library_F3_EventScript_SNL_VerityL
+	msgbox CanalaveCity_Library_F3_Text_SNLVerityD, MSGBOX_DEFAULT
+	goto CanalaveCity_Library_F3_EventScript_SNL_VerityN
+
+CanalaveCity_Library_F3_EventScript_SNL_VerityN::
+	checkplayergender
+	goto_if_eq VAR_RESULT, FEMALE, CanalaveCity_Library_F3_EventScript_SNL_DoL
+	msgbox CanalaveCity_Library_F3_Text_SNLDoD, MSGBOX_DEFAULT
+	goto CanalaveCity_Library_F3_EventScript_SNL_DoN
+
+CanalaveCity_Library_F3_EventScript_SNL_DoN::
+	closemessage
+	applymovement LOCALID_SN_LIB_ROWAN, Common_Movement_FaceRight
+	applymovement LOCALID_SN_LIB_BARRY, Common_Movement_FaceLeft
+	applymovement LOCALID_SN_LIB_COUNTERPART, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox CanalaveCity_Library_F3_Text_SNLAcuity, MSGBOX_DEFAULT
+	msgbox CanalaveCity_Library_F3_Text_SNLYeah, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SN_LIB_ROWAN, Common_Movement_FaceDown
+	applymovement LOCALID_SN_LIB_BARRY, Common_Movement_FaceUp
+	waitmovement 0
+	msgbox CanalaveCity_Library_F3_Text_SNLValor, MSGBOX_DEFAULT
+	closemessage
+	playse SE_M_EXPLOSION
+	setvar VAR_0x8004, 2
+	setvar VAR_0x8005, 3
+	setvar VAR_0x8006, 12
+	setvar VAR_0x8007, 3
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special ShakeCamera
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	msgbox CanalaveCity_Library_F3_Text_SNLBoom, MSGBOX_DEFAULT
+	msgbox CanalaveCity_Library_F3_Text_SNLUnharmed, MSGBOX_DEFAULT
+	msgbox CanalaveCity_Library_F3_Text_SNLWhat, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto LOCALID_SN_LIB_BARRY, 8, 4, SN_SPEED_FAST, DIR_NORTH, 0, 0
+	waitmovement LOCALID_SN_LIB_BARRY
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	msgbox CanalaveCity_Library_F3_Text_SNLNews, MSGBOX_DEFAULT
+	closemessage
+	applymovement LOCALID_SN_LIB_BARRY, Common_Movement_FaceDown
+	waitmovement 0
+	msgbox CanalaveCity_Library_F3_Text_SNLExplosion, MSGBOX_DEFAULT
+	msgbox CanalaveCity_Library_F3_Text_SNLOutside, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto LOCALID_SN_LIB_COUNTERPART, 1, 2, SN_SPEED_NORMAL, 0, 0, 0
+	sn_walkto LOCALID_SN_LIB_BARRY, 2, 2, SN_SPEED_FAST, 0, 0, 1
+	waitmovement LOCALID_SN_LIB_BARRY
+	removeobject LOCALID_SN_LIB_BARRY
+	waitmovement LOCALID_SN_LIB_COUNTERPART
+	removeobject LOCALID_SN_LIB_COUNTERPART
+	sn_walkto LOCALID_SN_LIB_ROWAN, 2, 3, SN_SPEED_NORMAL, DIR_SOUTH, 0, 2
+	waitmovement LOCALID_SN_LIB_ROWAN
+	sn_playerface LOCALID_SN_LIB_ROWAN, 1
+	waitmovement OBJ_EVENT_ID_PLAYER
+	msgbox CanalaveCity_Library_F3_Text_SNLLeave, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto LOCALID_SN_LIB_ROWAN, 1, 2, SN_SPEED_NORMAL, 0, 0, 2
+	waitmovement LOCALID_SN_LIB_ROWAN
+	playse SE_EXIT
+	removeobject LOCALID_SN_LIB_ROWAN
+	setflag FLAG_SN_HIDE_LIB_ROWAN
+	setvar VAR_SN_SINNOH_STORY, 31
+	setflag FLAG_SN_LAKE_VALOR_EXPLODED
+	setflag FLAG_SN_LAKE_VALOR_EXPLODED_2
+	setflag FLAG_SN_LAKE_VALOR_EXPLODED_3
+	setflag FLAG_SN_LAKE_VALOR_EXPLODED_4
+	releaseall
+	end
+
+CanalaveCity_Library_F3_Text_SNLLeave::
+	.string "Rowan: {PLAYER}. You should leave now,\n"
+	.string "too.\p"
+	.string "...There may be aftershocks, however.\n"
+	.string "Be alert always.$"
+
+CanalaveCity_Library_F3_Text_SNLOutside::
+	.string "Rowan: Hmm... But why at Lake Valor...?\p"
+	.string "Let’s get outside. I’m concerned about\n"
+	.string "the town.\p"
+	.string "You kids, be careful going down the\n"
+	.string "stairs.$"
+
+CanalaveCity_Library_F3_Text_SNLExplosion::
+	.string "{RIVAL}: Gramps! They said it was an\n"
+	.string "explosion?!$"
+
+CanalaveCity_Library_F3_Text_SNLNews::
+	.string "Announcer: What you’ve just witnessed\n"
+	.string "is actual footage from the scene.\p"
+	.string "It was taken by a cameraman who\n"
+	.string "happened to be there.\p"
+	.string "Newscaster: It’s certainly impressive.\p"
+	.string "Who knows what the explosion could\n"
+	.string "expose at the lake?$"
+
+CanalaveCity_Library_F3_Text_SNLWhat::
+	.string "{RIVAL}: What was that about?!\p"
+	.string "No, wait, I mean, TV! The TV! News!\n"
+	.string "Anything!$"
+
+CanalaveCity_Library_F3_Text_SNLUnharmed::
+	.string "Rowan: ... ...Has it stopped?\p"
+	.string "Are all of you unharmed?$"
+
+CanalaveCity_Library_F3_Text_SNLBoom::
+	.string "DDDOOOMMM!!$"
+
+CanalaveCity_Library_F3_Text_SNLValor::
+	.string "Rowan: Very well. I’m counting on you.\p"
+	.string "And that leaves {PLAYER} with Lake\n"
+	.string "Valor.\p"
+	.string "The lake is between Veilstone and\n"
+	.string "Pastoria, if memory serves...$"
+
+CanalaveCity_Library_F3_Text_SNLYeah::
+	.string "{RIVAL}: Uh... Yeah, of course!\n"
+	.string "Gramps, you know how to call it!\p"
+	.string "You can tell I’m the hotness!\p"
+	.string "And, you know what? I was going to\n"
+	.string "catch those legendary POKéMON for\l"
+	.string "you.\p"
+	.string "You know, as thanks for giving us our\n"
+	.string "POKéMON back on Route 201.\p"
+	.string "...Even though I forgot completely\n"
+	.string "about it until just now.$"
+
+CanalaveCity_Library_F3_Text_SNLAcuity::
+	.string "Rowan: {RIVAL}, I want you to\n"
+	.string "investigate Lake Acuity.\p"
+	.string "That would take you almost to\n"
+	.string "Snowpoint City.\p"
+	.string "The road there is harsh. I need a tough\n"
+	.string "Trainer to go.$"
+
+CanalaveCity_Library_F3_Text_SNLDoD::
+	.string "Dawn: Will do!$"
+
+CanalaveCity_Library_F3_EventScript_SNL_DoL::
+	msgbox CanalaveCity_Library_F3_Text_SNLDoL, MSGBOX_DEFAULT
+	goto CanalaveCity_Library_F3_EventScript_SNL_DoN
+
+CanalaveCity_Library_F3_Text_SNLDoL::
+	.string "Lucas: Yes, sir!$"
+
+CanalaveCity_Library_F3_Text_SNLVerityD::
+	.string "Rowan: Dawn, you go to Lake Verity.$"
+
+CanalaveCity_Library_F3_EventScript_SNL_VerityL::
+	msgbox CanalaveCity_Library_F3_Text_SNLVerityL, MSGBOX_DEFAULT
+	goto CanalaveCity_Library_F3_EventScript_SNL_VerityN
+
+CanalaveCity_Library_F3_Text_SNLVerityL::
+	.string "Rowan: Lucas, you go to Lake Verity.$"
+
+CanalaveCity_Library_F3_Text_SNLIndiv::
+	.string "Rowan: Hm! I would have made all of you\n"
+	.string "go regardless... Anyway.\p"
+	.string "Now, there are three lakes.\n"
+	.string "Fortuitously, there are three of you.\p"
+	.string "You should therefore split up and\n"
+	.string "investigate the lakes individually.$"
+
+CanalaveCity_Library_F3_Text_SNLCountD::
+	.string "Dawn: You can count on me! It will help\n"
+	.string "with my POKéDEX, too.\p"
+	.string "{PLAYER}, you’ll go, too, won’t you?$"
+
+CanalaveCity_Library_F3_EventScript_SNL_CountL::
+	msgbox CanalaveCity_Library_F3_Text_SNLCountL, MSGBOX_DEFAULT
+	goto CanalaveCity_Library_F3_EventScript_SNL_CountN
+
+CanalaveCity_Library_F3_Text_SNLCountL::
+	.string "Lucas: You bet, Professor!\p"
+	.string "This will add to the POKéDEX database\n"
+	.string "and help advance your\p"
+	.string "research.$"
+
+CanalaveCity_Library_F3_Text_SNLBolted::
+	.string "Rowan: ...And who was it that bolted\n"
+	.string "from the lab before I had a chance\p"
+	.string "to give you a POKéDEX?\p"
+	.string "But that’s water under the bridge!\p"
+	.string "Seeing POKéMON with your own eyes is\n"
+	.string "important for you in becoming a better\p"
+	.string "Trainer, too.$"
+
+CanalaveCity_Library_F3_Text_SNLNoDex::
+	.string "{RIVAL}: What are you saying? I\n"
+	.string "didn’t get a POKéDEX!$"
+
+CanalaveCity_Library_F3_Text_SNLHelp::
+	.string "This is where you three come in.\p"
+	.string "In the three lakes of Sinnoh, there are\n"
+	.string "said to be mirage POKéMON.\p"
+	.string "If we can obtain data on them, it may\n"
+	.string "shed some light on how the\p"
+	.string "process of POKéMON evolution works.\p"
+	.string "I need help from each one of you on\n"
+	.string "this grand undertaking.\p"
+	.string "Help me find these POKéMON that are\n"
+	.string "considered to be mirages.$"
+
+CanalaveCity_Library_F3_Movement_SNRowanBack::
+	walk_left
+	face_down
+	step_end
+
+CanalaveCity_Library_F3_Text_SNLStudy::
+	.string "But the more I study, the more\n"
+	.string "mysteries appear and multiply.\p"
+	.string "POKéMON that evolve, and those that\n"
+	.string "don’t...\p"
+	.string "What makes them different from each\n"
+	.string "other?\p"
+	.string "Do those that are immature as living\n"
+	.string "beings evolve to ones more mature?\p"
+	.string "If so, what do we make of the legendary\n"
+	.string "POKéMON that don’t evolve?\p"
+	.string "Are we to assume that the legendary\n"
+	.string "POKéMON are complete as creatures?$"
+
+CanalaveCity_Library_F3_Movement_SNRowanPace::
+	walk_right
+	face_down
+	step_end
+
+CanalaveCity_Library_F3_Text_SNLEveryone::
+	.string "Rowan: Hm! Everyone’s here finally.\n"
+	.string "{PLAYER}, everyone, listen.\p"
+	.string "You may have forgotten already, but I\n"
+	.string "study the evolution of POKéMON.$"
+
+CanalaveCity_Library_F3_Text_SNLGetIt::
+	.string "{RIVAL}: ...OK... I get it...$"
+
+CanalaveCity_Library_F3_Text_SNLDots::
+	.string "Rowan: ... ...\p"
+	.string "... ...\p"
+	.string "... ...$"
+
+CanalaveCity_Library_F3_Movement_SNRunUpTurn::
+	walk_fast_up
+	face_down
+	step_end
+
 CanalaveCity_Library_F3_Text_SNLOutta::
 	.string "{RIVAL}: OK, gramps! I brought\n"
 	.string "{PLAYER} like I said!\p"
 	.string "All right, I’ll be outta here!$"
-
-SE_S_CanalaveCity_Library_F3_CanalaveCity_Library_F3_EventScript_SNRowan::
-	msgbox CanalaveCity_Library_F3_Text_SNLOutta, MSGBOX_NPC
-	end
 
 CanalaveCity_Library_F3_EventScript_PtSign1::
 	goto CanalaveCity_Library_F3_EventScript_SNBookSinnohMyth

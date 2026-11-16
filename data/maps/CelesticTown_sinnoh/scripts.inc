@@ -27,6 +27,55 @@ CelesticTown_Text_PtNpc3::
 	.string "Instead, you can buy and sell items in\n"
 	.string "this house here.$"
 
+CelesticTown_EventScript_SNCEL_GRUNT::
+	lock
+	faceplayer
+	msgbox CelesticTown_Text_SNWillYouMess, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CelesticTown_EventScript_SNCEL_GRUNT_No
+	msgbox CelesticTown_EventScript_SNCEL_GRUNT_Intro, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_ELLIOT_1_SINNOH, CelesticTown_EventScript_SNCEL_GRUNT_Defeat
+	msgbox CelesticTown_EventScript_SNCEL_GRUNT_Post, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto VAR_LAST_TALKED, 30, 27, SN_SPEED_FAST, 0, 0, 0
+	waitmovement 0
+	removeobject VAR_LAST_TALKED
+	setflag FLAG_SN_HIDE_CEL_GRUNT
+	sn_walkto LOCALID_SN_CEL_ELDER_OUT, 18, 13, SN_SPEED_NORMAL, 0, 0, 0
+	waitmovement LOCALID_SN_CEL_ELDER_OUT
+	playse SE_EXIT
+	removeobject LOCALID_SN_CEL_ELDER_OUT
+	setflag FLAG_SN_HIDE_CEL_ELDER_OUT
+	release
+	end
+
+CelesticTown_EventScript_SNCEL_GRUNT_Post::
+	.string "Too much to handle... I can’t do\n"
+	.string "anything here...\p"
+	.string "This place is nothing! I’ll be happily\n"
+	.string "rid of this place!$"
+
+CelesticTown_EventScript_SNCEL_GRUNT_Defeat::
+	.string "Too much to handle...$"
+
+CelesticTown_EventScript_SNCEL_GRUNT_Intro::
+	.string "You dare to oppose Team Galactic?\p"
+	.string "That means you’re taking on the world...\n"
+	.string "No, the universe, even!$"
+
+CelesticTown_EventScript_SNCEL_GRUNT_No::
+	msgbox CelesticTown_Text_SNVerySmart, MSGBOX_DEFAULT
+	release
+	end
+
+CelesticTown_Text_SNVerySmart::
+	.string "That’s right! Very smart! You know\n"
+	.string "what’s good for you!\p"
+	.string "Team Galactic has come out to the\n"
+	.string "boonies like this for everyone’s sake.\p"
+	.string "Your cooperation is appreciated. Now,\n"
+	.string "where is my partner...?$"
+
 CelesticTown_Text_SNWillYouMess::
 	.string "This town is insignificant! There’s\n"
 	.string "nothing of value here.\p"
@@ -37,18 +86,49 @@ CelesticTown_Text_SNWillYouMess::
 	.string "So, what’s it going to be? Are you going\n"
 	.string "to mess with me?$"
 
-SE_S_CelesticTown_CelesticTown_EventScript_SNCEL_GRUNT::
-	msgbox CelesticTown_Text_SNWillYouMess, MSGBOX_NPC
+CelesticTown_EventScript_SNCynthia::
+	lock
+	faceplayer
+	msgbox CelesticTown_EventScript_SNCynthia_T1, MSGBOX_DEFAULT
+	msgbox CelesticTown_EventScript_SNCynthia_T2, MSGBOX_DEFAULT
+	msgbox CelesticTown_EventScript_SNCynthia_T3, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto LOCALID_SN_CEL_CYNTHIA, 18, 13, SN_SPEED_NORMAL, 0, 0, 0
+	waitmovement LOCALID_SN_CEL_CYNTHIA
+	removeobject LOCALID_SN_CEL_CYNTHIA
+	setflag FLAG_SN_HIDE_CEL_CYNTHIA
+	release
 	end
+
+CelesticTown_EventScript_SNCynthia_T3::
+	.string "By the way, were the ruins fun to\n"
+	.string "explore?\p"
+	.string "If you’re interested, there is a library\n"
+	.string "in Canalave City.\p"
+	.string "It’s stocked with ancient books. You\n"
+	.string "can look up Sinnoh history there.\p"
+	.string "It might help you complete your\n"
+	.string "POKéDEX, too.\p"
+	.string "The quickest way to Canalave City is\n"
+	.string "to go west from Jubilife City.$"
+
+CelesticTown_EventScript_SNCynthia_T2::
+	.string "But those Team Galactic people...! I\n"
+	.string "thought they were harmless.\p"
+	.string "The bizarre ways they dress, and all\n"
+	.string "their wild claims about making a new\p"
+	.string "universe...\p"
+	.string "I thought it was just silly talk.\n"
+	.string "Nothing to take seriously.\p"
+	.string "But they’re surprisingly more trouble\n"
+	.string "than expected.\p"
+	.string "Trying to monopolize POKéMON just\n"
+	.string "isn’t acceptable!$"
 
 CelesticTown_EventScript_SNCynthia_T1::
 	.string "Cynthia: Was everything all right here?\p"
 	.string "You saw those strange people with a\n"
 	.string "Galactic Bomb, didn’t you?$"
-
-SE_S_CelesticTown_CelesticTown_EventScript_SNCynthia::
-	msgbox CelesticTown_EventScript_SNCynthia_T1, MSGBOX_NPC
-	end
 
 CelesticTown_EventScript_SNElderOut::
 	msgbox CelesticTown_Text_SNOddSpaceman, MSGBOX_NPC

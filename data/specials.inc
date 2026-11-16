@@ -649,3 +649,31 @@ gSpecials::
 	def_special UpdateTrainerCardPhotoIcons
 	def_special StickerManGetBragFlags
 	def_special CheckAddCoins
+	@ Super Emerald: specials of LiderMorti00's Sinnoh repo (src/sinnoh_specials.c, src/sinnoh_scene.c)
+	def_special SinnohRotomAppliance
+	def_special SinnohPartyHasRotom
+	def_special SinnohRandomFossil
+	def_special SinnohLeadMonIsCute
+	def_special SinnohNewsPressPick
+	def_special SinnohPartyHasSpecies
+	def_special SinnohTrophyGardenPick
+	def_special SinnohHoneyTreeMon
+	def_special SinnohMarshBinoculars
+	def_special SinnohHoneyReady
+	def_special SinnohHoneySlather
+	def_special SinnohDayOfWeek
+	def_special SinnohBattlegroundSelect
+	def_special SinnohBattlegroundMsgSet
+	def_special SinnohMaidTarget
+	def_special SinnohAddBattleTurns
+	def_special SinnohRestaurantSetup
+	def_special SinnohRestaurantCouple
+	def_special SinnohRestaurantVariant
+	def_special SinnohPartyMaxRibbons
+	def_special SinnohSpaTreatment
+	def_special SinnohUnownFormsCount
+	def_special SinnohCountAllMons
+	def_special SinnohPathToPlayer
+	def_special SinnohPathTo
+	def_special SinnohPlayerFaceObject
+	def_special SinnohGetObjectPos

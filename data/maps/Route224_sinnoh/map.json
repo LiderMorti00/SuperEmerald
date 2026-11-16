@@ -332,7 +332,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_Route224_Route224_EventScript_SNOak",
+      "script": "Route224_EventScript_SNOak",
       "flag": "FLAG_SN_HIDE_R224_OAK"
     },
     {

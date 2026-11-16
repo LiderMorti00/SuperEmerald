@@ -16164,6 +16164,102 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_SSTicket,
         .iconPalette = gItemIconPalette_SSTicket,
     },
+
+    [ITEM_COUPON_1] =
+    {
+        .name = ITEM_NAME("Coupon 1"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A coupon from the\n"
+            "POKéNAV campaign.\n"
+            "Collect all three!"),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_SSTicket,
+        .iconPalette = gItemIconPalette_SSTicket,
+    },
+
+    [ITEM_COUPON_2] =
+    {
+        .name = ITEM_NAME("Coupon 2"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A coupon from the\n"
+            "POKéNAV campaign.\n"
+            "Collect all three!"),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_SSTicket,
+        .iconPalette = gItemIconPalette_SSTicket,
+    },
+
+    [ITEM_COUPON_3] =
+    {
+        .name = ITEM_NAME("Coupon 3"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A coupon from the\n"
+            "POKéNAV campaign.\n"
+            "Collect all three!"),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_SSTicket,
+        .iconPalette = gItemIconPalette_SSTicket,
+    },
+
+    [ITEM_SECRET_POTION] =
+    {
+        .name = ITEM_NAME("SecretPotion"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A fantastic medicine\n"
+            "dispensed by the\n"
+            "Pokémon CENTER."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_Potion,
+        .iconPalette = gItemIconPalette_Potion,
+    },
+
+    [ITEM_LUNAR_WING] =
+    {
+        .name = ITEM_NAME("Lunar Wing"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A feather that\n"
+            "glows like the moon.\n"
+            "It wards off dreams."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_PrettyFeather,
+        .iconPalette = gItemIconPalette_PrettyFeather,
+    },
+
+    [ITEM_SUITE_KEY] =
+    {
+        .name = ITEM_NAME("Suite Key"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A key to a suite\n"
+            "at the Hotel Grand\n"
+            "Lake."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_KeyToRoom1,
+        .iconPalette = gItemIconPalette_Key,
+    },
 };
 
 #undef ITEM_NAME
