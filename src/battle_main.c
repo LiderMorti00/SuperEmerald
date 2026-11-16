@@ -1,4 +1,5 @@
 #include "global.h"
+#include "regions.h"
 #include "battle.h"
 #include "battle_anim.h"
 #include "battle_ai_main.h"
@@ -5099,7 +5100,13 @@ static void HandleEndTurn_BattleWon(void)
         BattleStopLowHpSound();
         gBattlescriptCurrInstr = BattleScript_LocalTrainerBattleWon;
 
-        switch (GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA))
+        if (GetCurrentRegion() == REGION_JOHTO) // Super Emerald: HGSS victory themes
+        {
+            enum TrainerClassID cls = GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA);
+            PlayBGM((cls == TRAINER_CLASS_LEADER || cls == TRAINER_CLASS_ELITE_FOUR || cls == TRAINER_CLASS_CHAMPION)
+                    ? MUS_HG_VICTORY_GYM_LEADER : MUS_HG_VICTORY_TRAINER);
+        }
+        else switch (GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA))
         {
         case TRAINER_CLASS_ELITE_FOUR:
         case TRAINER_CLASS_CHAMPION:

@@ -67,7 +67,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_J_GoldenrodCity_Gym_hns_GoldenrodCity_Gym_EventScript_Whitney",
+      "script": "SE_EventScript_JohtoLeader_Whitney",
       "flag": "0"
     },
     {

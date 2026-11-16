@@ -209,3 +209,285 @@ SE_Text_OlivineNeighbor:
 SE_Text_OlivineNeighborAgain:
 	.string "This house will always be your\n"
 	.string "home too, {PLAYER}.$"
+
+@ ---------------------------------------------------------------------------
+@ Johto Gym Leaders (Super Emerald teams, HGSS-era Gym badges)
+SE_EventScript_JohtoLeader_Falkner::
+	trainerbattle_single TRAINER_SE_LEADER_FALKNER, SE_Text_FalknerIntro, SE_Text_FalknerDefeat, SE_EventScript_FalknerDefeated, NO_MUSIC
+	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM1, SE_EventScript_FalknerGiveTM
+	msgbox SE_Text_FalknerPost, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_FalknerDefeated::
+	message SE_Text_ReceivedFalknerBadge
+	waitmessage
+	call Common_EventScript_PlayGymBadgeFanfare
+	setflag FLAG_JOHTO_BADGE1_GET
+	goto SE_EventScript_FalknerGiveTM
+	end
+
+SE_EventScript_FalknerGiveTM::
+	giveitem ITEM_TM_STEEL_WING
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SE_RECEIVED_JOHTO_TM1
+	msgbox SE_Text_FalknerPost, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_FalknerIntro:
+	.string "I'm FALKNER, the VIOLET CITY GYM\nLEADER!\pPeople say you can clip a FLYING-\ntype's wings with a jolt of\lelectricity…\pI won't let anyone say that about\nmy magnificent bird POKéMON!$"
+
+SE_Text_FalknerDefeat:
+	.string "…Darn! My dad's cherished bird\nPOKéMON… All right. Take this.$"
+
+SE_Text_FalknerPost:
+	.string "There are POKéMON GYMS in cities\nall over JOHTO.\pI'm going to train harder and become\nthe greatest bird master!$"
+
+SE_Text_ReceivedFalknerBadge:
+	.string "{PLAYER} received the ZEPHYRBADGE\nfrom FALKNER.$"
+
+SE_EventScript_JohtoLeader_Bugsy::
+	trainerbattle_single TRAINER_SE_LEADER_BUGSY, SE_Text_BugsyIntro, SE_Text_BugsyDefeat, SE_EventScript_BugsyDefeated, NO_MUSIC
+	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM2, SE_EventScript_BugsyGiveTM
+	msgbox SE_Text_BugsyPost, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_BugsyDefeated::
+	message SE_Text_ReceivedBugsyBadge
+	waitmessage
+	call Common_EventScript_PlayGymBadgeFanfare
+	setflag FLAG_JOHTO_BADGE2_GET
+	goto SE_EventScript_BugsyGiveTM
+	end
+
+SE_EventScript_BugsyGiveTM::
+	giveitem ITEM_TM_GIGA_DRAIN
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SE_RECEIVED_JOHTO_TM2
+	msgbox SE_Text_BugsyPost, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_BugsyIntro:
+	.string "I'm BUGSY! I never lose when it\ncomes to bug POKéMON.\pMy research is going to make me the\nauthority on bug POKéMON!\pLet me demonstrate what I've learned\nfrom my studies.$"
+
+SE_Text_BugsyDefeat:
+	.string "Whoa, amazing! You're an expert on\nPOKéMON! My research isn't complete\lyet. OK, you win. Take this badge.$"
+
+SE_Text_BugsyPost:
+	.string "Bug POKéMON are deep. There are\nmany mysteries to be explored.\pStudy your favorites thoroughly.$"
+
+SE_Text_ReceivedBugsyBadge:
+	.string "{PLAYER} received the HIVEBADGE\nfrom BUGSY.$"
+
+SE_EventScript_JohtoLeader_Whitney::
+	trainerbattle_single TRAINER_SE_LEADER_WHITNEY, SE_Text_WhitneyIntro, SE_Text_WhitneyDefeat, SE_EventScript_WhitneyDefeated, NO_MUSIC
+	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM3, SE_EventScript_WhitneyGiveTM
+	msgbox SE_Text_WhitneyPost, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_WhitneyDefeated::
+	message SE_Text_ReceivedWhitneyBadge
+	waitmessage
+	call Common_EventScript_PlayGymBadgeFanfare
+	setflag FLAG_JOHTO_BADGE3_GET
+	goto SE_EventScript_WhitneyGiveTM
+	end
+
+SE_EventScript_WhitneyGiveTM::
+	giveitem ITEM_TM_ATTRACT
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SE_RECEIVED_JOHTO_TM3
+	msgbox SE_Text_WhitneyPost, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_WhitneyIntro:
+	.string "Hi! I'm WHITNEY!\pEveryone was into POKéMON, so I got\ninto it too! POKéMON are super cute!\pI only use FAIRY-type POKéMON now.\nAren't they the cutest?\pYou want to battle? I'm warning you\n--I'm good!$"
+
+SE_Text_WhitneyDefeat:
+	.string "Waaah! My precious FAIRIES…\n…Sniff… OK, OK. Here's your badge.$"
+
+SE_Text_WhitneyPost:
+	.string "Ah, that was a blast! I can't wait\nto show you how much stronger my\lfairies get next time!$"
+
+SE_Text_ReceivedWhitneyBadge:
+	.string "{PLAYER} received the PLAINBADGE\nfrom WHITNEY.$"
+
+SE_EventScript_JohtoLeader_Morty::
+	trainerbattle_single TRAINER_SE_LEADER_MORTY, SE_Text_MortyIntro, SE_Text_MortyDefeat, SE_EventScript_MortyDefeated, NO_MUSIC
+	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM4, SE_EventScript_MortyGiveTM
+	msgbox SE_Text_MortyPost, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_MortyDefeated::
+	message SE_Text_ReceivedMortyBadge
+	waitmessage
+	call Common_EventScript_PlayGymBadgeFanfare
+	setflag FLAG_JOHTO_BADGE4_GET
+	goto SE_EventScript_MortyGiveTM
+	end
+
+SE_EventScript_MortyGiveTM::
+	giveitem ITEM_TM_SHADOW_BALL
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SE_RECEIVED_JOHTO_TM4
+	msgbox SE_Text_MortyPost, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_MortyIntro:
+	.string "Good of you to have come.\pHere in ECRUTEAK, POKéMON have\nbeen revered.\pI've trained here since I was a\nchild, to see what cannot be seen.\pLet me show you what I've learned.$"
+
+SE_Text_MortyDefeat:
+	.string "I'm not good enough yet…\nAll right. This badge is yours.$"
+
+SE_Text_MortyPost:
+	.string "I see… Your journey has taken you\nto far-away places.\pAnd you have witnessed much more\nthan I have.$"
+
+SE_Text_ReceivedMortyBadge:
+	.string "{PLAYER} received the FOGBADGE\nfrom MORTY.$"
+
+SE_EventScript_JohtoLeader_Chuck::
+	trainerbattle_single TRAINER_SE_LEADER_CHUCK, SE_Text_ChuckIntro, SE_Text_ChuckDefeat, SE_EventScript_ChuckDefeated, NO_MUSIC
+	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM5, SE_EventScript_ChuckGiveTM
+	msgbox SE_Text_ChuckPost, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_ChuckDefeated::
+	message SE_Text_ReceivedChuckBadge
+	waitmessage
+	call Common_EventScript_PlayGymBadgeFanfare
+	setflag FLAG_JOHTO_BADGE5_GET
+	goto SE_EventScript_ChuckGiveTM
+	end
+
+SE_EventScript_ChuckGiveTM::
+	giveitem ITEM_TM_FOCUS_PUNCH
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SE_RECEIVED_JOHTO_TM5
+	msgbox SE_Text_ChuckPost, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_ChuckIntro:
+	.string "WAHAHAH!\pSo you've come this far!\pLet me tell you, I'm tough!\pMy POKéMON will crush stones and\nshatter bones! Watch this!\pHah! … … … Let's go!$"
+
+SE_Text_ChuckDefeat:
+	.string "Wha? Huh? I lost?\nHow about that! You're worthy of\lthe STORMBADGE!$"
+
+SE_Text_ChuckPost:
+	.string "WAHAHAH! I enjoyed battling you!\pBut a loss is a loss!\pFrom now on, I'm going to train\n24 hours a day!$"
+
+SE_Text_ReceivedChuckBadge:
+	.string "{PLAYER} received the STORMBADGE\nfrom CHUCK.$"
+
+SE_EventScript_JohtoLeader_Jasmine::
+	trainerbattle_single TRAINER_SE_LEADER_JASMINE, SE_Text_JasmineIntro, SE_Text_JasmineDefeat, SE_EventScript_JasmineDefeated, NO_MUSIC
+	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM6, SE_EventScript_JasmineGiveTM
+	msgbox SE_Text_JasminePost, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_JasmineDefeated::
+	message SE_Text_ReceivedJasmineBadge
+	waitmessage
+	call Common_EventScript_PlayGymBadgeFanfare
+	setflag FLAG_JOHTO_BADGE6_GET
+	goto SE_EventScript_JasmineGiveTM
+	end
+
+SE_EventScript_JasmineGiveTM::
+	giveitem ITEM_TM_IRON_TAIL
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SE_RECEIVED_JOHTO_TM6
+	msgbox SE_Text_JasminePost, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_JasmineIntro:
+	.string "{PLAYER}… You came.\pI've been waiting for this ever\nsince we were little.\pI use the… the clang! STEEL type!\pPlease, show me how strong you've\nbecome. I won't hold back.$"
+
+SE_Text_JasmineDefeat:
+	.string "…You really are amazing, {PLAYER}.\nPlease take this badge.$"
+
+SE_Text_JasminePost:
+	.string "Fighting you felt like the old days,\nwhen we raced to the LIGHTHOUSE.\pCome back and visit, OK? Olivine\nwill always be your home.$"
+
+SE_Text_ReceivedJasmineBadge:
+	.string "{PLAYER} received the MINERALBADGE\nfrom JASMINE.$"
+
+SE_EventScript_JohtoLeader_Pryce::
+	trainerbattle_single TRAINER_SE_LEADER_PRYCE, SE_Text_PryceIntro, SE_Text_PryceDefeat, SE_EventScript_PryceDefeated, NO_MUSIC
+	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM7, SE_EventScript_PryceGiveTM
+	msgbox SE_Text_PrycePost, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_PryceDefeated::
+	message SE_Text_ReceivedPryceBadge
+	waitmessage
+	call Common_EventScript_PlayGymBadgeFanfare
+	setflag FLAG_JOHTO_BADGE7_GET
+	goto SE_EventScript_PryceGiveTM
+	end
+
+SE_EventScript_PryceGiveTM::
+	giveitem ITEM_TM_HAIL
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SE_RECEIVED_JOHTO_TM7
+	msgbox SE_Text_PrycePost, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_PryceIntro:
+	.string "POKéMON have many experiences in\ntheir lives, just like we do.\pI, too, have seen and suffered\nmuch in my life.\pSince I am your elder, let me show\nyou what I mean.$"
+
+SE_Text_PryceDefeat:
+	.string "Ah, I am impressed by your prowess.\nYou have earned the GLACIERBADGE.$"
+
+SE_Text_PrycePost:
+	.string "When the ice and snow melt, spring\narrives.\pYou and your POKéMON will be\ntogether for many years to come.$"
+
+SE_Text_ReceivedPryceBadge:
+	.string "{PLAYER} received the GLACIERBADGE\nfrom PRYCE.$"
+
+SE_EventScript_JohtoLeader_Clair::
+	trainerbattle_single TRAINER_SE_LEADER_CLAIR, SE_Text_ClairIntro, SE_Text_ClairDefeat, SE_EventScript_ClairDefeated, NO_MUSIC
+	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM8, SE_EventScript_ClairGiveTM
+	msgbox SE_Text_ClairPost, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_ClairDefeated::
+	message SE_Text_ReceivedClairBadge
+	waitmessage
+	call Common_EventScript_PlayGymBadgeFanfare
+	setflag FLAG_JOHTO_BADGE8_GET
+	goto SE_EventScript_ClairGiveTM
+	end
+
+SE_EventScript_ClairGiveTM::
+	giveitem ITEM_TM_DRAGON_CLAW
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SE_RECEIVED_JOHTO_TM8
+	msgbox SE_Text_ClairPost, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_ClairIntro:
+	.string "I am CLAIR.\pThe world's best dragon master.\pI can hold my own against even the\nPOKéMON LEAGUE's ELITE FOUR.\pDo you still want to take me on?\n…Fine. Let's do it!$"
+
+SE_Text_ClairDefeat:
+	.string "I lost?\pI don't believe it. There must be\nsome mistake… Fine. Take the\lRISINGBADGE.$"
+
+SE_Text_ClairPost:
+	.string "With all eight JOHTO badges, the\nPOKéMON LEAGUE awaits you.\pHead east of NEW BARK TOWN, through\nROUTE 27 and the TOHJO FALLS.$"
+
+SE_Text_ReceivedClairBadge:
+	.string "{PLAYER} received the RISINGBADGE\nfrom CLAIR.$"

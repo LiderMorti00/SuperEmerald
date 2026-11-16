@@ -5134,6 +5134,22 @@ u16 GetBattleBGM(void)
         else
             trainerClass = GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA);
 
+        // Super Emerald: HeartGold/SoulSilver battle themes in Johto
+        if (GetCurrentRegion() == REGION_JOHTO)
+        {
+            switch (trainerClass)
+            {
+            case TRAINER_CLASS_LEADER:
+            case TRAINER_CLASS_ELITE_FOUR:
+            case TRAINER_CLASS_CHAMPION:
+                return MUS_HG_VS_GYM_LEADER;
+            case TRAINER_CLASS_RIVAL:
+                return MUS_HG_VS_RIVAL;
+            default:
+                return MUS_HG_VS_TRAINER;
+            }
+        }
+
         switch (trainerClass)
         {
         case TRAINER_CLASS_AQUA_LEADER:
@@ -5178,6 +5194,8 @@ u16 GetBattleBGM(void)
     }
     else
     {
+        if (GetCurrentRegion() == REGION_JOHTO)
+            return MUS_HG_VS_WILD;
         if (GetCurrentRegion() == REGION_KANTO)
             return MUS_RG_VS_WILD;
         else

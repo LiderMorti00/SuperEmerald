@@ -25,7 +25,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_J_VioletCity_Gym_hns_VioletCity_Gym_EventScript_Falkner",
+      "script": "SE_EventScript_JohtoLeader_Falkner",
       "flag": "FLAG_HIDE_JOHTO_GYM_LEADERS"
     },
     {

@@ -1,0 +1,407 @@
+=== TRAINER_SE_LEADER_FALKNER ===
+Name: FALKNER
+Class: Leader
+Pic: Leader Falkner
+Gender: Male
+Music: Male
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Noctowl
+Level: 58
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Air Slash
+- Extrasensory
+- Hypnosis
+- Roost
+
+Xatu
+Level: 58
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Psychic
+- Air Slash
+- Confuse Ray
+- Roost
+
+Dodrio
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Drill Peck
+- Jump Kick
+- Tri Attack
+- Agility
+
+Swellow
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Brave Bird
+- Facade
+- Quick Attack
+- U Turn
+
+Pidgeot @ Sitrus Berry
+Level: 61
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hurricane
+- Heat Wave
+- Roost
+- Tailwind
+
+=== TRAINER_SE_LEADER_BUGSY ===
+Name: BUGSY
+Class: Leader
+Pic: Leader Bugsy
+Gender: Male
+Music: Male
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Ariados
+Level: 58
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Poison Jab
+- Sucker Punch
+- Sticky Web
+- Toxic Spikes
+
+Yanmega
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Bug Buzz
+- Air Slash
+- Ancient Power
+- Protect
+
+Pinsir
+Level: 58
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- X Scissor
+- Earthquake
+- Stone Edge
+- Swords Dance
+
+Heracross
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Megahorn
+- Close Combat
+- Stone Edge
+- Night Slash
+
+Scizor @ Sitrus Berry
+Level: 61
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Bullet Punch
+- X Scissor
+- Swords Dance
+- Roost
+
+=== TRAINER_SE_LEADER_WHITNEY ===
+Name: WHITNEY
+Class: Leader
+Pic: Leader Whitney
+Gender: Female
+Music: Female
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Granbull
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Play Rough
+- Crunch
+- Close Combat
+- Thunder Wave
+
+Slurpuff
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Play Rough
+- Drain Punch
+- Cotton Guard
+- Calm Mind
+
+Aromatisse
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Moonblast
+- Psychic
+- Calm Mind
+- Aromatherapy
+
+Florges
+Level: 60
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Moonblast
+- Petal Blizzard
+- Psychic
+- Synthesis
+
+Sylveon
+Level: 60
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Moonblast
+- Hyper Voice
+- Shadow Ball
+- Calm Mind
+
+Clefable @ Sitrus Berry
+Level: 62
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Moonblast
+- Meteor Mash
+- Moonlight
+- Calm Mind
+
+=== TRAINER_SE_LEADER_MORTY ===
+Name: MORTY
+Class: Leader
+Pic: Leader Morty
+Gender: Male
+Music: Intense
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Drifblim
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shadow Ball
+- Air Slash
+- Will O Wisp
+- Baton Pass
+
+Mismagius
+Level: 60
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shadow Ball
+- Mystical Fire
+- Dazzling Gleam
+- Nasty Plot
+
+Dusknoir
+Level: 60
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shadow Punch
+- Ice Punch
+- Earthquake
+- Will O Wisp
+
+Chandelure
+Level: 60
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shadow Ball
+- Flamethrower
+- Energy Ball
+- Calm Mind
+
+Gengar @ Sitrus Berry
+Level: 62
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shadow Ball
+- Sludge Bomb
+- Focus Blast
+- Hypnosis
+
+=== TRAINER_SE_LEADER_CHUCK ===
+Name: CHUCK
+Class: Leader
+Pic: Leader Chuck
+Gender: Male
+Music: Intense
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Hitmontop
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Triple Kick
+- Close Combat
+- Sucker Punch
+- Rapid Spin
+
+Hitmonlee
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- High Jump Kick
+- Blaze Kick
+- Stone Edge
+- Bulk Up
+
+Hitmonchan
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Drain Punch
+- Ice Punch
+- Thunder Punch
+- Mach Punch
+
+Machamp
+Level: 60
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dynamic Punch
+- Stone Edge
+- Knock Off
+- Bullet Punch
+
+Poliwrath @ Sitrus Berry
+Level: 62
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Waterfall
+- Close Combat
+- Ice Punch
+- Bulk Up
+
+=== TRAINER_SE_LEADER_JASMINE ===
+Name: JASMINE
+Class: Leader
+Pic: Leader Jasmine
+Gender: Female
+Music: Female
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Skarmory
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Brave Bird
+- Iron Head
+- Spikes
+- Roost
+
+Forretress
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Gyro Ball
+- Volt Switch
+- Spikes
+- Rapid Spin
+
+Magnezone
+Level: 60
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Flash Cannon
+- Thunderbolt
+- Volt Switch
+- Thunder Wave
+
+Metagross
+Level: 60
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Meteor Mash
+- Zen Headbutt
+- Earthquake
+- Bullet Punch
+
+Steelix @ Sitrus Berry
+Level: 62
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Iron Tail
+- Earthquake
+- Stone Edge
+- Curse
+
+=== TRAINER_SE_LEADER_PRYCE ===
+Name: PRYCE
+Class: Leader
+Pic: Leader Pryce
+Gender: Male
+Music: Intense
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Dewgong
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Ice Beam
+- Surf
+- Perish Song
+- Rest
+
+Weavile
+Level: 60
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Ice Shard
+- Night Slash
+- Icicle Crash
+- Swords Dance
+
+Walrein
+Level: 60
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Blizzard
+- Surf
+- Body Slam
+- Rest
+
+Glaceon
+Level: 60
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Blizzard
+- Shadow Ball
+- Water Pulse
+- Hail
+
+Mamoswine @ Sitrus Berry
+Level: 62
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Earthquake
+- Icicle Crash
+- Ice Shard
+- Stone Edge
+
+=== TRAINER_SE_LEADER_CLAIR ===
+Name: CLAIR
+Class: Leader
+Pic: Leader Clair
+Gender: Female
+Music: Female
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Altaria
+Level: 60
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dragon Pulse
+- Moonblast
+- Flamethrower
+- Roost
+
+Flygon
+Level: 60
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Earthquake
+- Dragon Claw
+- U Turn
+- Fire Punch
+
+Garchomp
+Level: 61
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Earthquake
+- Dragon Claw
+- Stone Edge
+- Swords Dance
+
+Dragonite
+Level: 62
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Outrage
+- Extreme Speed
+- Fire Punch
+- Dragon Dance
+
+Kingdra @ Sitrus Berry
+Level: 63
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dragon Pulse
+- Hydro Pump
+- Ice Beam
+- Rain Dance

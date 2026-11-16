@@ -9,4 +9,21 @@
 
 #include "constants/opponents_johto_list.h"
 
+// Super Emerald: hand-made Johto trainers (src/data/trainers_se_johto.party), after the HnS ones.
+#define SE_JOHTO_TRAINER_ID_START (JOHTO_TRAINER_ID_START + TRAINERS_COUNT_JOHTO_HNS)
+#define TRAINER_SE_LEADER_FALKNER      1869
+#define TRAINER_SE_LEADER_BUGSY        1870
+#define TRAINER_SE_LEADER_WHITNEY      1871
+#define TRAINER_SE_LEADER_MORTY        1872
+#define TRAINER_SE_LEADER_CHUCK        1873
+#define TRAINER_SE_LEADER_JASMINE      1874
+#define TRAINER_SE_LEADER_PRYCE        1875
+#define TRAINER_SE_LEADER_CLAIR        1876
+#define SE_JOHTO_TRAINERS_COUNT 8
+#define TRAINERS_COUNT_JOHTO (TRAINERS_COUNT_JOHTO_HNS + SE_JOHTO_TRAINERS_COUNT)
+
+#if SE_JOHTO_TRAINER_ID_START != 1869
+#error "Super Emerald: update the TRAINER_SE_* ids in opponents_johto.h"
+#endif
+
 #endif // GUARD_CONSTANTS_OPPONENTS_JOHTO_H

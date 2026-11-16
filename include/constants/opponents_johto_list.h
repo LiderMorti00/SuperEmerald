@@ -236,4 +236,4 @@
 #define TRAINER_COLIN_HNS                        1866
 #define TRAINER_CASSIE_HNS                       1867
 #define TRAINER_CLYDE_HNS                        1868
-#define TRAINERS_COUNT_JOHTO 237
+#define TRAINERS_COUNT_JOHTO_HNS 237

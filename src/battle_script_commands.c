@@ -1,4 +1,5 @@
 #include "global.h"
+#include "regions.h"
 #include "battle.h"
 #include "battle_hold_effects.h"
 #include "battle_message.h"
@@ -1809,7 +1810,7 @@ static void Cmd_getexp(void)
                     && !gBattleStruct->wildVictorySong)
                 {
                     BattleStopLowHpSound();
-                    PlayBGM(MUS_VICTORY_WILD);
+                    PlayBGM(GetCurrentRegion() == REGION_JOHTO ? MUS_HG_VICTORY_WILD : MUS_VICTORY_WILD);
                     gBattleStruct->wildVictorySong++;
                 }
 
