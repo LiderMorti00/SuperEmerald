@@ -1,4 +1,5 @@
 RuinsOfAlph_PuzzleAndRewardChambers_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, RuinsOfAlph_PuzzleAndRewardChambers_OnLoad
 	.byte 0
 
 
@@ -307,3 +308,214 @@ RuinsOfAlph_PuzzleAndRewardChambers_EventScript_RewardAerodactyl::
 	setflag FLAG_AERODACTYL_BROUGHT
 	release
 	end
+
+@ Super Emerald: sliding puzzles restored from Heart & Soul
+RuinsOfAlph_PuzzleAndRewardChambers_OnLoad::
+	call_if_set FLAG_COMPLETED_KABUTO_PUZZLE, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_KabutoHole
+	call_if_set FLAG_COMPLETED_OMANYTE_PUZZLE, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_OmanyteHole
+	call_if_set FLAG_COMPLETED_AERODACTYL_PUZZLE, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_AerodactylHole
+	call_if_set FLAG_COMPLETED_HOOH_PUZZLE, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_HoohHole
+
+	call_if_set FLAG_KABUTO_BROUGHT, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_KabutoDoor
+	call_if_set FLAG_OMANYTE_BROUGHT, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_OmanyteDoor
+	call_if_set FLAG_AERODACTYL_BROUGHT, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_AerodactylDoor
+	call_if_set FLAG_HOOH_BROUGHT, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_HoohDoor
+	end
+
+RuinsOfAlph_PuzzleAndRewardChambers_MapScript_KabutoHole::
+	setmetatile 20, 5, 0x302, FALSE
+	setmetatile 21, 5, 0x303, FALSE
+	return
+RuinsOfAlph_PuzzleAndRewardChambers_MapScript_OmanyteHole::
+	setmetatile 4, 22, 0x302, FALSE
+	setmetatile 5, 22, 0x303, FALSE
+	return
+RuinsOfAlph_PuzzleAndRewardChambers_MapScript_AerodactylHole::
+	setmetatile 20, 22, 0x302, FALSE
+	setmetatile 21, 22, 0x303, FALSE
+	return
+RuinsOfAlph_PuzzleAndRewardChambers_MapScript_HoohHole::
+	setmetatile 4, 5, 0x302, FALSE
+	setmetatile 5, 5, 0x303, FALSE
+	return
+
+
+RuinsOfAlph_PuzzleAndRewardChambers_MapScript_KabutoDoor::
+	setmetatile 21, 1, 0x308, FALSE 
+	return
+RuinsOfAlph_PuzzleAndRewardChambers_MapScript_OmanyteDoor::
+	setmetatile 5, 18, 0x308, FALSE 
+	return
+RuinsOfAlph_PuzzleAndRewardChambers_MapScript_AerodactylDoor::
+	setmetatile 21, 18, 0x308, FALSE 
+	return
+RuinsOfAlph_PuzzleAndRewardChambers_MapScript_HoohDoor::
+	setmetatile 5, 1, 0x308, FALSE 
+	return
+
+
+RuinsOfAlph_PuzzleAndRewardChambers_EventScript_KabutoPuzzle::
+	fadescreen FADE_TO_BLACK
+	setvar VAR_0x8004, SLIDING_PUZZLE_KABUTO
+	goto_if_set FLAG_COMPLETED_KABUTO_PUZZLE, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_KabutoPuzzleCompleted
+	setvar VAR_0x8005, FALSE // or TRUE if you want to display the solved puzzle
+	special DoSlidingPuzzle
+	waitstate
+	goto_if_eq VAR_RESULT, TRUE, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_KabutoSuccess
+	end
+RuinsOfAlph_PuzzleAndRewardChambers_EventScript_KabutoPuzzleCompleted::
+	setvar VAR_0x8005, TRUE // or TRUE if you want to display the solved puzzle
+	special DoSlidingPuzzle
+	waitstate
+	end
+RuinsOfAlph_PuzzleAndRewardChambers_MapScript_KabutoSuccess::
+	setflag FLAG_COMPLETED_KABUTO_PUZZLE
+	setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 1  @ horizontal pan
+	setvar VAR_0x8006, 20  @ num shakes
+	setvar VAR_0x8007, 6  @ shake delay
+	special ShakeCamera
+	waitstate
+	setmetatile 20, 5, 0x302, FALSE
+	setmetatile 21, 5, 0x303, FALSE
+	playse SE_CLICK
+	special DrawWholeMapView
+	delay 30
+	clearflag FLAG_ITEM_DOME_FOSSIL
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_PuzzleAndRewardChambers_Movement_Fall
+	delay 30
+	special SpawnCameraObject
+	removeobject OBJ_EVENT_ID_PLAYER
+	playse SE_FALL
+	delay 60
+	warphole MAP_RUINS_OF_ALPH_B1F_HNS
+	waitstate
+	release
+	end
+
+
+RuinsOfAlph_PuzzleAndRewardChambers_Movement_Fall:
+	walk_in_place_fast_up
+	walk_in_place_fast_up
+	walk_in_place_fast_up
+	step_end
+
+RuinsOfAlph_PuzzleAndRewardChambers_EventScript_OmanytePuzzle::
+	fadescreen FADE_TO_BLACK
+	setvar VAR_0x8004, SLIDING_PUZZLE_OMANYTE
+	goto_if_set FLAG_COMPLETED_OMANYTE_PUZZLE, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_OmanytePuzzleCompleted
+	setvar VAR_0x8005, FALSE // or TRUE if you want to display the solved puzzle
+	special DoSlidingPuzzle
+	waitstate
+	goto_if_eq VAR_RESULT, TRUE, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_OmanyteSuccess
+	end
+RuinsOfAlph_PuzzleAndRewardChambers_EventScript_OmanytePuzzleCompleted::
+	setvar VAR_0x8005, TRUE // or TRUE if you want to display the solved puzzle
+	special DoSlidingPuzzle
+	waitstate
+	end
+RuinsOfAlph_PuzzleAndRewardChambers_MapScript_OmanyteSuccess::
+	setflag FLAG_COMPLETED_OMANYTE_PUZZLE
+	setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 1  @ horizontal pan
+	setvar VAR_0x8006, 20  @ num shakes
+	setvar VAR_0x8007, 6  @ shake delay
+	special ShakeCamera
+	waitstate
+	setmetatile 4, 22, 0x302, FALSE
+	setmetatile 5, 22, 0x303, FALSE
+	playse SE_CLICK
+	special DrawWholeMapView
+	delay 30
+	clearflag FLAG_ITEM_HELIX_FOSSIL
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_PuzzleAndRewardChambers_Movement_Fall
+	delay 30
+	special SpawnCameraObject
+	removeobject OBJ_EVENT_ID_PLAYER
+	playse SE_FALL
+	delay 60
+	warphole MAP_RUINS_OF_ALPH_B1F_HNS
+	waitstate
+	release
+	end
+
+
+RuinsOfAlph_PuzzleAndRewardChambers_EventScript_AerodactylPuzzle::
+	fadescreen FADE_TO_BLACK
+	setvar VAR_0x8004, SLIDING_PUZZLE_AERODACTYL
+	goto_if_set FLAG_COMPLETED_AERODACTYL_PUZZLE, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_AerodactylPuzzleCompleted
+	setvar VAR_0x8005, FALSE // or TRUE if you want to display the solved puzzle
+	special DoSlidingPuzzle
+	waitstate
+	goto_if_eq VAR_RESULT, TRUE, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_AerodactylSuccess
+	end
+RuinsOfAlph_PuzzleAndRewardChambers_EventScript_AerodactylPuzzleCompleted::
+	setvar VAR_0x8005, TRUE // or TRUE if you want to display the solved puzzle
+	special DoSlidingPuzzle
+	waitstate
+	end
+RuinsOfAlph_PuzzleAndRewardChambers_MapScript_AerodactylSuccess::
+	setflag FLAG_COMPLETED_AERODACTYL_PUZZLE
+	setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 1  @ horizontal pan
+	setvar VAR_0x8006, 20  @ num shakes
+	setvar VAR_0x8007, 6  @ shake delay
+	special ShakeCamera
+	waitstate
+	setmetatile 20, 22, 0x302, FALSE
+	setmetatile 21, 22, 0x303, FALSE
+	playse SE_CLICK
+	special DrawWholeMapView
+	delay 30
+	clearflag FLAG_ITEM_OLD_AMBER
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_PuzzleAndRewardChambers_Movement_Fall
+	delay 30
+	special SpawnCameraObject
+	removeobject OBJ_EVENT_ID_PLAYER
+	playse SE_FALL
+	delay 60
+	warphole MAP_RUINS_OF_ALPH_B1F_HNS
+	waitstate
+	release
+	end
+
+
+RuinsOfAlph_PuzzleAndRewardChambers_EventScript_HooHPuzzle::
+	fadescreen FADE_TO_BLACK
+	setvar VAR_0x8004, SLIDING_PUZZLE_HO_OH
+	goto_if_set FLAG_COMPLETED_HOOH_PUZZLE, RuinsOfAlph_PuzzleAndRewardChambers_EventScript_HoohPuzzleCompleted
+	setvar VAR_0x8005, FALSE // or TRUE if you want to display the solved puzzle
+	special DoSlidingPuzzle
+	waitstate
+	goto_if_eq VAR_RESULT, TRUE, RuinsOfAlph_PuzzleAndRewardChambers_MapScript_HoohSuccess
+	end
+RuinsOfAlph_PuzzleAndRewardChambers_EventScript_HoohPuzzleCompleted::
+	setvar VAR_0x8005, TRUE // or TRUE if you want to display the solved puzzle
+	special DoSlidingPuzzle
+	waitstate
+	end
+RuinsOfAlph_PuzzleAndRewardChambers_MapScript_HoohSuccess::
+	setflag FLAG_COMPLETED_HOOH_PUZZLE
+	setvar VAR_0x8004, 1  @ vertical pan
+	setvar VAR_0x8005, 1  @ horizontal pan
+	setvar VAR_0x8006, 20  @ num shakes
+	setvar VAR_0x8007, 6  @ shake delay
+	special ShakeCamera
+	waitstate
+	setmetatile 4, 5, 0x302, FALSE
+	setmetatile 5, 5, 0x303, FALSE
+	playse SE_CLICK
+	special DrawWholeMapView
+	delay 30
+	clearflag FLAG_ITEM_GS_BALL
+	applymovement OBJ_EVENT_ID_PLAYER, RuinsOfAlph_PuzzleAndRewardChambers_Movement_Fall
+	delay 30
+	special SpawnCameraObject
+	removeobject OBJ_EVENT_ID_PLAYER
+	playse SE_FALL
+	delay 60
+	warphole MAP_RUINS_OF_ALPH_B1F_HNS
+	waitstate
+	release
+	end
+

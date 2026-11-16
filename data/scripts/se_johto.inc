@@ -1260,3 +1260,49 @@ SE_Text_KurtFast:
 
 SE_Text_KurtLevel:
 	.string "LEVEL BALL$"
+
+@ ---------------------------------------------------------------------------
+@ Headbutt trees (Johto): a POKéMON that knows HEADBUTT shakes the tree; wild
+@ POKéMON come from the map's rock smash table, as in Heart & Soul.
+SE_EventScript_Headbutt::
+	lockall
+	special SE_CheckPartyHeadbutt
+	goto_if_eq VAR_RESULT, PARTY_SIZE, SE_EventScript_HeadbuttNoMon
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	msgbox SE_Text_HeadbuttAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SE_EventScript_HeadbuttEnd
+	msgbox SE_Text_HeadbuttUsed, MSGBOX_DEFAULT
+	closemessage
+	playse SE_M_HEADBUTT
+	waitse
+	special RockSmashWildEncounter
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_HeadbuttNothing
+	waitstate
+	releaseall
+	end
+
+SE_EventScript_HeadbuttNothing::
+	msgbox SE_Text_HeadbuttNothing, MSGBOX_DEFAULT
+SE_EventScript_HeadbuttEnd::
+	releaseall
+	end
+
+SE_EventScript_HeadbuttNoMon::
+	msgbox SE_Text_HeadbuttNoMon, MSGBOX_DEFAULT
+	releaseall
+	end
+
+SE_Text_HeadbuttAsk:
+	.string "A POKéMON could be in this tree.\n"
+	.string "Want {STR_VAR_1} to use HEADBUTT?$"
+
+SE_Text_HeadbuttUsed:
+	.string "{STR_VAR_1} used HEADBUTT!$"
+
+SE_Text_HeadbuttNothing:
+	.string "Nope. Nothing…$"
+
+SE_Text_HeadbuttNoMon:
+	.string "A POKéMON could be in this tree.\n"
+	.string "A POKéMON that knows HEADBUTT\l"
+	.string "could shake it.$"

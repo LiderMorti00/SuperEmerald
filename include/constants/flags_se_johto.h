@@ -30,5 +30,8 @@
 
 #define FLAG_SE_BEASTS_RELEASED              0x2720 // Raikou and Entei roam Johto after the Burned Tower
 #define FLAG_SE_HIDE_TIN_TOWER_SUICUNE       0x2721
+#define FLAG_COMPLETED_OMANYTE_PUZZLE        0x2722 // Ruins of Alph (Kabuto is FLAG_COMPLETED_KABUTO_PUZZLE)
+#define FLAG_COMPLETED_AERODACTYL_PUZZLE     0x2723
+#define FLAG_COMPLETED_HOOH_PUZZLE           0x2724
 
 #endif // GUARD_CONSTANTS_FLAGS_SE_JOHTO_H

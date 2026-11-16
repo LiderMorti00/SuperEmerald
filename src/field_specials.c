@@ -5805,3 +5805,21 @@ void SE_KurtMakeBalls(void)
     }
     gSpecialVar_Result = count;
 }
+
+// Super Emerald: VAR_RESULT = first party slot whose Pokemon knows Headbutt, or PARTY_SIZE
+void SE_CheckPartyHeadbutt(void)
+{
+    u32 i;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        struct Pokemon *mon = &gPlayerParty[i];
+        if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_NONE)
+            break;
+        if (!GetMonData(mon, MON_DATA_IS_EGG) && MonKnowsMove(mon, MOVE_HEADBUTT))
+        {
+            gSpecialVar_Result = i;
+            return;
+        }
+    }
+    gSpecialVar_Result = PARTY_SIZE;
+}

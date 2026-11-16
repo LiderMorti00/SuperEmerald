@@ -491,7 +491,7 @@
       "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SE_J_RuinsOfAlph_PuzzleAndRewardChambers_hns_RuinsOfAlph_PuzzleAndRewardChambers_EventScript_HooHPuzzle"
+      "script": "RuinsOfAlph_PuzzleAndRewardChambers_EventScript_HooHPuzzle"
     },
     {
       "type": "sign",
@@ -499,7 +499,7 @@
       "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SE_J_RuinsOfAlph_PuzzleAndRewardChambers_hns_RuinsOfAlph_PuzzleAndRewardChambers_EventScript_KabutoPuzzle"
+      "script": "RuinsOfAlph_PuzzleAndRewardChambers_EventScript_KabutoPuzzle"
     },
     {
       "type": "sign",
@@ -507,7 +507,7 @@
       "y": 21,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SE_J_RuinsOfAlph_PuzzleAndRewardChambers_hns_RuinsOfAlph_PuzzleAndRewardChambers_EventScript_OmanytePuzzle"
+      "script": "RuinsOfAlph_PuzzleAndRewardChambers_EventScript_OmanytePuzzle"
     },
     {
       "type": "sign",
@@ -515,7 +515,7 @@
       "y": 21,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SE_J_RuinsOfAlph_PuzzleAndRewardChambers_hns_RuinsOfAlph_PuzzleAndRewardChambers_EventScript_AerodactylPuzzle"
+      "script": "RuinsOfAlph_PuzzleAndRewardChambers_EventScript_AerodactylPuzzle"
     },
     {
       "type": "sign",

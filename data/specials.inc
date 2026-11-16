@@ -316,6 +316,8 @@ gSpecials::
 	def_special InitRoamer
 	def_special StartJohtoBeasts
 	def_special SE_KurtMakeBalls
+	def_special SE_CheckPartyHeadbutt
+	def_special DoSlidingPuzzle
 	def_special TryUpdateRusturfTunnelState
 	def_special IsGrassTypeInParty
 	def_special DoContestHallWarp, waitstate=1
