@@ -459,6 +459,150 @@
       "map": "MAP_ROUTE26NORTH_HNS",
       "x": 12,
       "y": 6
+    },
+    {
+      "id": "HEAL_LOCATION_SANDGEM_TOWN_SINNOH",
+      "map": "MAP_SANDGEM_TOWN_SINNOH",
+      "x": 17,
+      "y": 9,
+      "respawn_map": "MAP_SANDGEM_TOWN_POKEMON_CENTER_1F_SINNOH",
+      "respawn_npc": "LOCALID_SANDGEM_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_JUBILIFE_CITY_SINNOH",
+      "map": "MAP_JUBILIFE_CITY_SINNOH",
+      "x": 55,
+      "y": 37,
+      "respawn_map": "MAP_JUBILIFE_CITY_POKEMON_CENTER_1F_SINNOH",
+      "respawn_npc": "LOCALID_JUBILIFE_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_OREBURGH_CITY_SINNOH",
+      "map": "MAP_OREBURGH_CITY_SINNOH",
+      "x": 51,
+      "y": 23,
+      "respawn_map": "MAP_OREBURGH_CITY_POKEMON_CENTER_1F_SINNOH",
+      "respawn_npc": "LOCALID_OREBURGH_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_FLOAROMA_TOWN_SINNOH",
+      "map": "MAP_FLOAROMA_TOWN_SINNOH",
+      "x": 18,
+      "y": 29,
+      "respawn_map": "MAP_FLOAROMA_TOWN_POKEMON_CENTER_1F_SINNOH",
+      "respawn_npc": "LOCALID_FLOAROMA_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_ETERNA_CITY_SINNOH",
+      "map": "MAP_ETERNA_CITY_SINNOH",
+      "x": 16,
+      "y": 18,
+      "respawn_map": "MAP_ETERNA_CITY_POKEMON_CENTER_F1_SINNOH",
+      "respawn_npc": "LOCALID_ETERNA_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_HEARTHOME_CITY_SINNOH",
+      "map": "MAP_HEARTHOME_CITY_SINNOH",
+      "x": 14,
+      "y": 20,
+      "respawn_map": "MAP_HEARTHOME_CITY_POKEMON_CENTER_1F_SINNOH",
+      "respawn_npc": "LOCALID_HEARTHOME_CITY_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_SOLACEON_TOWN_SINNOH",
+      "map": "MAP_SOLACEON_TOWN_SINNOH",
+      "x": 24,
+      "y": 25,
+      "respawn_map": "MAP_SOLACEON_TOWN_POKEMON_CENTER_1F_SINNOH",
+      "respawn_npc": "LOCALID_SOLACEON_TOWN_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_VEILSTONE_CITY_SINNOH",
+      "map": "MAP_VEILSTONE_CITY_SINNOH",
+      "x": 41,
+      "y": 37,
+      "respawn_map": "MAP_VEILSTONE_CITY_POKEMON_CENTER_1F_SINNOH",
+      "respawn_npc": "LOCALID_VEILSTONE_CITY_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_PASTORIA_CITY_SINNOH",
+      "map": "MAP_PASTORIA_CITY_SINNOH",
+      "x": 26,
+      "y": 15,
+      "respawn_map": "MAP_PASTORIA_CITY_POKEMON_CENTER_1F_SINNOH",
+      "respawn_npc": "LOCALID_PASTORIA_CITY_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_CELESTIC_TOWN_SINNOH",
+      "map": "MAP_CELESTIC_TOWN_SINNOH",
+      "x": 27,
+      "y": 28,
+      "respawn_map": "MAP_CELESTIC_TOWN_POKEMON_CENTER_1F_SINNOH",
+      "respawn_npc": "LOCALID_CELESTIC_TOWN_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_CANALAVE_CITY_SINNOH",
+      "map": "MAP_CANALAVE_CITY_SINNOH",
+      "x": 28,
+      "y": 23,
+      "respawn_map": "MAP_CANALAVE_CITY_POKEMON_CENTER_1F_SINNOH",
+      "respawn_npc": "LOCALID_CANALAVE_CITY_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_SNOWPOINT_CITY_SINNOH",
+      "map": "MAP_SNOWPOINT_CITY_SINNOH",
+      "x": 29,
+      "y": 46,
+      "respawn_map": "MAP_SNOWPOINT_CITY_POKEMON_CENTER_1F_SINNOH",
+      "respawn_npc": "LOCALID_SNOWPOINT_CITY_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_SUNYSHORE_CITY_SINNOH",
+      "map": "MAP_SUNYSHORE_CITY_SINNOH",
+      "x": 32,
+      "y": 43,
+      "respawn_map": "MAP_SUNYSHORE_CITY_POKEMON_CENTER_1F_SINNOH",
+      "respawn_npc": "LOCALID_SUNYSHORE_CITY_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_POKEMON_LEAGUE_SOUTH_POKEMON_CENTER_1F_SINNOH",
+      "map": "MAP_POKMON_LEAGUE_SINNOH",
+      "x": 11,
+      "y": 59,
+      "respawn_map": "MAP_POKEMON_LEAGUE_SOUTH_POKEMON_CENTER_1F_SINNOH",
+      "respawn_npc": "LOCALID_POKEMON_LEAGUE_SOUTH_POKEMON_CENTER_1F_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_FIGHT_AREA_SINNOH",
+      "map": "MAP_FIGHT_AREA_SINNOH",
+      "x": 39,
+      "y": 15,
+      "respawn_map": "MAP_FIGHT_AREA_POKEMON_CENTER_1F_SINNOH",
+      "respawn_npc": "LOCALID_FIGHT_AREA_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_SURVIVAL_AREA_SINNOH",
+      "map": "MAP_SURVIVAL_AREA_SINNOH",
+      "x": 17,
+      "y": 19,
+      "respawn_map": "MAP_SURVIVAL_AREA_POKEMON_CENTER_1F_SINNOH",
+      "respawn_npc": "LOCALID_SURVIVAL_AREA_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_RESORT_AREA_SINNOH",
+      "map": "MAP_RESORT_AREA_SINNOH",
+      "x": 9,
+      "y": 11,
+      "respawn_map": "MAP_RESORT_AREA_POKEMON_CENTER_1F_SINNOH",
+      "respawn_npc": "LOCALID_RESORT_AREA_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_POKEMON_LEAGUE_NORTH_SINNOH",
+      "map": "MAP_POKMON_LEAGUE_SINNOH",
+      "x": 16,
+      "y": 14,
+      "respawn_map": "MAP_POKEMON_LEAGUE_NORTH_POKEMON_CENTER_1F_SINNOH",
+      "respawn_npc": "LOCALID_POKEMON_LEAGUE_NORTH_POKEMON_CENTER_1F_LEAGUE_NURSE"
     }
   ]
 }

@@ -4623,7 +4623,7 @@ static void DebugAction_BerryFunctions_Ready(u8 taskId)
     {
         if (gObjectEvents[i].movementType == MOVEMENT_TYPE_BERRY_TREE_GROWTH)
         {
-            tree = &gSaveBlock1Ptr->berryTrees[GetObjectEventBerryTreeId(i)];
+            tree = GetBerryTreeInfo(GetObjectEventBerryTreeId(i));
             if (tree->stage != BERRY_STAGE_NO_BERRY)
             {
                 tree->stage = BERRY_STAGE_BERRIES - 1;
@@ -4645,7 +4645,7 @@ static void DebugAction_BerryFunctions_NextStage(u8 taskId)
     {
         if (gObjectEvents[i].movementType == MOVEMENT_TYPE_BERRY_TREE_GROWTH)
         {
-            tree = &gSaveBlock1Ptr->berryTrees[GetObjectEventBerryTreeId(i)];
+            tree = GetBerryTreeInfo(GetObjectEventBerryTreeId(i));
             BerryTreeGrow(tree);
         }
     }
@@ -4668,8 +4668,8 @@ static void DebugAction_BerryFunctions_Pests(u8 taskId)
     {
         if (gObjectEvents[i].movementType == MOVEMENT_TYPE_BERRY_TREE_GROWTH)
         {
-            if (gSaveBlock1Ptr->berryTrees[GetObjectEventBerryTreeId(i)].stage != BERRY_STAGE_PLANTED)
-                gSaveBlock1Ptr->berryTrees[GetObjectEventBerryTreeId(i)].pests = TRUE;
+            if ((*GetBerryTreeInfo(GetObjectEventBerryTreeId(i))).stage != BERRY_STAGE_PLANTED)
+                (*GetBerryTreeInfo(GetObjectEventBerryTreeId(i))).pests = TRUE;
         }
     }
 
@@ -4691,7 +4691,7 @@ static void DebugAction_BerryFunctions_Weeds(u8 taskId)
     {
         if (gObjectEvents[i].movementType == MOVEMENT_TYPE_BERRY_TREE_GROWTH)
         {
-            gSaveBlock1Ptr->berryTrees[GetObjectEventBerryTreeId(i)].weeds = TRUE;
+            (*GetBerryTreeInfo(GetObjectEventBerryTreeId(i))).weeds = TRUE;
         }
     }
 

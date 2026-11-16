@@ -1433,3 +1433,4 @@ void InitTilesetAnim_CeladonGym(void)
 }
 
 #include "data/tilesets/hns/tileset_anims.h" // Super Emerald: Johto (HnS)
+#include "data/tilesets/sinnoh/tileset_anims.h" // Super Emerald: Sinnoh

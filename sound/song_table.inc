@@ -612,6 +612,44 @@ gSongTable::
 	song mus_hg_victory_wild, MUSIC_PLAYER_BGM, 0
 	song mus_hg_victory_gym_leader, MUSIC_PLAYER_BGM, 0
 	song mus_hg_encounter_rival, MUSIC_PLAYER_BGM, 0
+@ Super Emerald: Sinnoh begin
+	song mus_dpp_twinleaf, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_lake, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_route201, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_jubilife, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_lab, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_route203, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_oreburgh, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_floaroma, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_route205, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_eterna_forest, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_eterna, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_old_chateau, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_mt_coronet, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_hearthome, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_veilstone, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_galactic_hq, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_canalave, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_snowpoint, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_sunyshore, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_route216, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_route210, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_route213, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_victory_road, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_league_outside, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_league_inside, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_cycling, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_vs_wild, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_victory_wild, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_vs_dialga_palkia, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_vs_cynthia, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_sandgem, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_pastoria, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_route206, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_route209, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_route225, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_route228, MUSIC_PLAYER_BGM, 0
+@ Super Emerald: Sinnoh end
 @ Super Emerald: HnS end
 	song ph_trap_blend, MUSIC_PLAYER_SE2, 2
 	song ph_trap_held, MUSIC_PLAYER_SE2, 2

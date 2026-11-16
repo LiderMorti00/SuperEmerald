@@ -244,6 +244,8 @@ const struct Trainer gTrainers[DIFFICULTY_COUNT][TRAINERS_COUNT] =
 #include "data/trainers_frlg.h" // Super Fire Red: Kanto trainers, IDs offset by KANTO_TRAINER_ID_START
 #include "data/trainers_johto.h" // Super Emerald: Johto trainers (HnS), IDs from JOHTO_TRAINER_ID_START
 #include "data/trainers_se_johto.h" // Super Emerald: Johto Gym Leaders and other hand-made trainers
+#include "data/trainers_sinnoh.h" // Super Emerald: Sinnoh trainers (LiderMorti00's Sinnoh repo), IDs from SINNOH_TRAINER_ID_START
+#include "data/trainers_se_sinnoh.h" // Super Emerald: Sinnoh Gym Leaders, League and other hand-made trainers
 #endif
 };
 #if B_VAR_DIFFICULTY == 0

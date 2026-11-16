@@ -4,6 +4,7 @@
 #include "constants/battle_partner.h"
 #include "constants/opponents_frlg.h"
 #include "constants/opponents_johto.h"
+#include "constants/opponents_sinnoh.h"
 
 #define TRAINER_NONE                          0
 #define TRAINER_SAWYER_1                      1
@@ -890,8 +891,8 @@
 #define MAX_TRAINERS_COUNT                  MAX_TRAINERS_COUNT_FRLG
 #else
 // Super Fire Red: Emerald trainers first, then the Kanto ones (see opponents_frlg.h)
-#define TRAINERS_COUNT                      (JOHTO_TRAINER_ID_START + TRAINERS_COUNT_JOHTO) // Super Emerald: + Johto
-#define MAX_TRAINERS_COUNT                  (JOHTO_TRAINER_ID_START + MAX_TRAINERS_COUNT_JOHTO)
+#define TRAINERS_COUNT                      (SINNOH_TRAINER_ID_START + TRAINERS_COUNT_SINNOH) // Super Emerald: + Johto + Sinnoh
+#define MAX_TRAINERS_COUNT                  (SINNOH_TRAINER_ID_START + MAX_TRAINERS_COUNT_SINNOH)
 #endif
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 

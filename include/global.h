@@ -280,6 +280,8 @@ struct PokeblockFeeder
 #include "constants/items.h"
 #define ITEM_FLAGS_COUNT ((ITEMS_COUNT / 8) + ((ITEMS_COUNT % 8) ? 1 : 0))
 
+#include "global.berry.h" // Super Emerald: SaveBlock3 holds the Sinnoh berry trees
+
 struct SaveBlock3
 {
 #if OW_USE_FAKE_RTC
@@ -295,6 +297,7 @@ struct SaveBlock3
     u8 dexNavSearchLevels[NUM_SPECIES];
 #endif
     u8 dexNavChain;
+    struct BerryTree berryTreesExt[BERRY_TREES_COUNT_EXT]; // Super Emerald: Sinnoh berry trees
 #if APRICORN_TREE_COUNT > 0
     u8 apricornTrees[NUM_APRICORN_TREE_BYTES];
 #endif
@@ -1158,7 +1161,7 @@ struct SaveBlock1
     /*0x1270*/ u8 flags[NUM_FLAG_BYTES];
     /*0x139C*/ u16 vars[VARS_COUNT];
     /*0x159C*/ u32 gameStats[NUM_GAME_STATS];
-    /*0x169C*/ struct BerryTree berryTrees[BERRY_TREES_COUNT];
+    /*0x169C*/ struct BerryTree berryTrees[BERRY_TREES_COUNT_SAVE1];
     /*0x1A9C*/ struct SecretBase secretBases[SECRET_BASES_COUNT];
     /*0x271C*/ u8 playerRoomDecorations[DECOR_MAX_PLAYERS_HOUSE];
     /*0x2728*/ u8 playerRoomDecorationPositions[DECOR_MAX_PLAYERS_HOUSE];

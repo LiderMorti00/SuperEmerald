@@ -1643,7 +1643,9 @@
 #if IS_FRLG
 #define TRAINER_FLAG(trainerId) (TRAINER_FLAGS_START + (trainerId))
 #else
-#define TRAINER_FLAG(trainerId) ((trainerId) >= JOHTO_TRAINER_ID_START                               \
+#define TRAINER_FLAG(trainerId) ((trainerId) >= SINNOH_TRAINER_ID_START                              \
+                                 ? (SINNOH_TRAINER_FLAGS_START + (trainerId) - SINNOH_TRAINER_ID_START) \
+                                 : (trainerId) >= JOHTO_TRAINER_ID_START                               \
                                  ? (JOHTO_TRAINER_FLAGS_START + (trainerId) - JOHTO_TRAINER_ID_START) \
                                  : (trainerId) >= KANTO_TRAINER_ID_START                               \
                                  ? (KANTO_TRAINER_FLAGS_START + (trainerId) - KANTO_TRAINER_ID_START) \
@@ -1688,6 +1690,8 @@
 #include "constants/flags_kanto.h"
 #include "constants/flags_johto.h"
 #include "constants/flags_se_johto.h"
+#include "constants/flags_sinnoh.h"
+#include "constants/flags_se_sinnoh.h"
 #if KANTO_FLAGS_START != (DAILY_FLAGS_END + 1)
 #error "Super Fire Red: Emerald flags changed, run tools/sfr/gen_kanto_flags.py"
 #endif

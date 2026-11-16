@@ -1,0 +1,8971 @@
+=== TRAINER_BILLY_SINNOH ===
+Name: TRISTAN
+Class: Youngster
+Pic: Youngster Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STARAPTOR
+Level: 48
+
+=== TRAINER_JOEY_SINNOH ===
+Name: NATALIE
+Class: Lass
+Pic: Lass Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BIBAREL
+Level: 48
+
+=== TRAINER_TIMMY_SINNOH ===
+Name: LOGAN
+Class: Youngster
+Pic: Youngster Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BURMY
+Level: 48
+
+=== TRAINER_EDDIE_SINNOH ===
+Name: SEBASTIAN
+Class: Youngster
+Pic: Youngster Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MACHAMP
+Level: 49
+
+=== TRAINER_ALLEN_SINNOH ===
+Name: MICHAEL
+Class: Youngster
+Pic: Youngster Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_KRICKETUNE
+Level: 48
+
+SPECIES_CROBAT
+Level: 48
+
+=== TRAINER_DILLON_SINNOH ===
+Name: KAITLIN
+Class: Lass
+Pic: Lass Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BIBAREL
+Level: 48
+
+SPECIES_ROSERADE
+Level: 48
+
+SPECIES_STARAPTOR
+Level: 48
+
+SPECIES_ALAKAZAM
+Level: 48
+
+=== TRAINER_JAYLEN_SINNOH ===
+Name: DALLAS
+Class: Youngster
+Pic: Youngster Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_LUXRAY
+Level: 49
+
+=== TRAINER_TRAVIS_SINNOH ===
+Name: MADELINE
+Class: Lass
+Pic: Lass Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLDUCK
+Level: 49
+
+=== TRAINER_MARCEL_SINNOH ===
+Name: SARAH
+Class: Lass
+Pic: Lass Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_LUXRAY
+Level: 48
+
+=== TRAINER_ALBERTO_SINNOH ===
+Name: SAMANTHA
+Class: Lass
+Pic: Lass Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ROSERADE
+Level: 48
+
+=== TRAINER_ED_SINNOH ===
+Name: TYLER
+Class: Youngster
+Pic: Youngster Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GYARADOS
+Level: 49
+
+=== TRAINER_DECLAN_SINNOH ===
+Name: BRANDON
+Class: Bug Catcher
+Pic: Sinnoh Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BEAUTIFLY
+Level: 49
+
+SPECIES_KRICKETUNE
+Level: 50
+
+=== TRAINER_FREDRICK_SINNOH ===
+Name: TAYLOR
+Class: Aroma Lady
+Pic: Sinnoh Aroma Lady
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ROSERADE
+Level: 49
+
+SPECIES_CHERRIM_OVERCAST
+Level: 50
+
+=== TRAINER_ZANDER_SINNOH ===
+Name: LIV & LIZ
+Class: Twins
+Pic: Twins Frlg
+Gender: Female
+Music: Female
+Double Battle: Yes
+AI: Basic Trainer
+
+SPECIES_PACHIRISU
+Level: 50
+
+SPECIES_PACHIRISU
+Level: 50
+
+=== TRAINER_SHELBY_2_SINNOH ===
+Name: LIV AND LI
+Class: TRAINER_CLASS_TWINS
+Pic: TRAINER_PIC_TWINS_FRLG
+Gender: Female
+Music: Twins
+Double Battle: Yes
+AI: Basic Trainer
+
+SPECIES_PACHIRISU
+Level: 50
+
+SPECIES_PACHIRISU
+Level: 50
+
+=== TRAINER_JULIE_SINNOH ===
+Name: ANDREW
+Class: Fisherman
+Pic: Fisherman Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GYARADOS
+Level: 49
+
+SPECIES_GYARADOS
+Level: 49
+
+SPECIES_GYARADOS
+Level: 50
+
+SPECIES_GYARADOS
+Level: 50
+
+SPECIES_GYARADOS
+Level: 50
+
+SPECIES_GYARADOS
+Level: 51
+
+=== TRAINER_PATRICIA_SINNOH ===
+Name: JOSEPH
+Class: Fisherman
+Pic: Fisherman Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SEAKING
+Level: 51
+
+=== TRAINER_SAMUEL_SINNOH ===
+Name: ZACHARY
+Class: Fisherman
+Pic: Fisherman Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GYARADOS
+Level: 50
+
+SPECIES_SEAKING
+Level: 51
+
+SPECIES_GYARADOS
+Level: 50
+
+=== TRAINER_LEAH_SINNOH ===
+Name: DANIEL
+Class: Hiker
+Pic: Sinnoh Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLEM
+Level: 49
+
+SPECIES_GOLEM
+Level: 50
+
+SPECIES_GOLEM
+Level: 50
+
+=== TRAINER_FELIX_SINNOH ===
+Name: ELIZABETH
+Class: Aroma Lady
+Pic: Sinnoh Aroma Lady
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ROSERADE
+Level: 50
+
+=== TRAINER_VIOLET_SINNOH ===
+Name: JACOB
+Class: Camper
+Pic: Camper Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_RAPIDASH
+Level: 50
+
+=== TRAINER_CHIP_SINNOH ===
+Name: SIENA
+Class: Picnicker
+Pic: Picnicker Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BIBAREL
+Level: 50
+
+SPECIES_PACHIRISU
+Level: 50
+
+=== TRAINER_FOSTER_SINNOH ===
+Name: NICHOLAS
+Class: Hiker
+Pic: Sinnoh Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STEELIX
+Level: 50
+
+=== TRAINER_AUSTINA_SINNOH ===
+Name: KELSEY
+Class: Battle Girl
+Pic: Sinnoh Battle Girl
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MACHAMP
+Level: 51
+
+=== TRAINER_GWEN_SINNOH ===
+Name: KARINA
+Class: Picnicker
+Pic: Picnicker Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_EMPOLEON
+Level: 50
+
+=== TRAINER_SIMON_SINNOH ===
+Name: ZACKARY
+Class: Camper
+Pic: Camper Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_AMBIPOM
+Level: 50
+
+=== TRAINER_GRUNT_AQUA_HIDEOUT_1_SINNOH ===
+Name: AXEL
+Class: TRAINER_CLASS_CYCLIST
+Pic: TRAINER_PIC_SINNOH_CYCLIST_M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_RAICHU
+Level: 52
+
+=== TRAINER_GRUNT_SEAFLOOR_CAVERN_1_SINNOH ===
+Name: MEGAN
+Class: TRAINER_CLASS_CYCLIST
+Pic: TRAINER_PIC_CYCLING_TRIATHLETE_F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STARAPTOR
+Level: 52
+
+=== TRAINER_ISABELLA_SINNOH ===
+Name: JAMES
+Class: TRAINER_CLASS_CYCLIST
+Pic: TRAINER_PIC_SINNOH_CYCLIST_M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_RAPIDASH
+Level: 52
+
+=== TRAINER_JONATHAN_SINNOH ===
+Name: NICOLE
+Class: TRAINER_CLASS_CYCLIST
+Pic: TRAINER_PIC_CYCLING_TRIATHLETE_F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STARAPTOR
+Level: 51
+
+SPECIES_STARAPTOR
+Level: 52
+
+SPECIES_STARAPTOR
+Level: 52
+
+=== TRAINER_GRUNT_WEATHER_INST_1_SINNOH ===
+Name: JOHN
+Class: TRAINER_CLASS_CYCLIST
+Pic: TRAINER_PIC_SINNOH_CYCLIST_M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STARAPTOR
+Level: 52
+
+SPECIES_STARAPTOR
+Level: 52
+
+=== TRAINER_GRUNT_MUSEUM_1_SINNOH ===
+Name: KAYLA
+Class: TRAINER_CLASS_CYCLIST
+Pic: TRAINER_PIC_CYCLING_TRIATHLETE_F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_RAICHU
+Level: 52
+
+=== TRAINER_GRUNT_SPACE_CENTER_1_SINNOH ===
+Name: RYAN
+Class: TRAINER_CLASS_CYCLIST
+Pic: TRAINER_PIC_SINNOH_CYCLIST_M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_LUXRAY
+Level: 52
+
+=== TRAINER_GRUNT_MT_PYRE_1_SINNOH ===
+Name: RACHEL
+Class: TRAINER_CLASS_CYCLIST
+Pic: TRAINER_PIC_CYCLING_TRIATHLETE_F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_RAPIDASH
+Level: 52
+
+SPECIES_LUXRAY
+Level: 52
+
+=== TRAINER_GRUNT_AQUA_HIDEOUT_6_SINNOH ===
+Name: THEODORE
+Class: TRAINER_CLASS_HIKER
+Pic: TRAINER_PIC_SINNOH_HIKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STEELIX
+Level: 52
+
+SPECIES_STEELIX
+Level: 52
+
+=== TRAINER_MATT_SINNOH ===
+Name: ANTHONY
+Class: TRAINER_CLASS_CAMPER
+Pic: TRAINER_PIC_CAMPER_FRLG
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_INFERNAPE
+Level: 53
+
+=== TRAINER_SHELLY_WEATHER_INSTITUTE_SINNOH ===
+Name: LAUREN
+Class: TRAINER_CLASS_PICNICKER
+Pic: TRAINER_PIC_PICNICKER_FRLG
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PACHIRISU
+Level: 53
+- MOVE_SPARK
+- MOVE_QUICK_ATTACK
+- MOVE_CHARM
+
+=== TRAINER_SHELLY_SEAFLOOR_CAVERN_SINNOH ===
+Name: AUSTIN
+Class: TRAINER_CLASS_YOUNGSTER
+Pic: TRAINER_PIC_YOUNGSTER_FRLG
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_FLOATZEL
+Level: 52
+
+SPECIES_LUXRAY
+Level: 52
+
+SPECIES_GLISCOR
+Level: 52
+
+=== TRAINER_ARCHIE_SINNOH ===
+Name: JUSTIN
+Class: TRAINER_CLASS_HIKER
+Pic: TRAINER_PIC_SINNOH_HIKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLEM
+Level: 52
+
+SPECIES_PROBOPASS
+Level: 52
+
+=== TRAINER_VINCENT_SINNOH ===
+Name: KEVIN
+Class: TRAINER_CLASS_HIKER
+Pic: TRAINER_PIC_SINNOH_HIKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLEM
+Level: 51
+
+SPECIES_GOLEM
+Level: 51
+
+SPECIES_STEELIX
+Level: 52
+
+SPECIES_GOLEM
+Level: 52
+
+=== TRAINER_LEROY_SINNOH ===
+Name: HELEN
+Class: TRAINER_CLASS_BATTLE_GIRL
+Pic: TRAINER_PIC_SINNOH_BATTLE_GIRL
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MACHAMP
+Level: 52
+
+SPECIES_MEDICHAM
+Level: 52
+
+=== TRAINER_EDGAR_SINNOH ===
+Name: ROBERT
+Class: TRAINER_CLASS_HIKER
+Pic: TRAINER_PIC_SINNOH_HIKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PROBOPASS
+Level: 53
+
+=== TRAINER_ALBERT_SINNOH ===
+Name: ALEXANDER
+Class: TRAINER_CLASS_HIKER
+Pic: TRAINER_PIC_SINNOH_HIKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLEM
+Level: 57
+
+SPECIES_PROBOPASS
+Level: 58
+
+=== TRAINER_KINDRA_SINNOH ===
+Name: JONATHAN
+Class: TRAINER_CLASS_HIKER
+Pic: TRAINER_PIC_SINNOH_HIKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STEELIX
+Level: 53
+
+=== TRAINER_TAMMY_SINNOH ===
+Name: KYLE
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MACHAMP
+Level: 53
+
+=== TRAINER_TASHA_SINNOH ===
+Name: CODY
+Class: TRAINER_CLASS_FISHERMAN
+Pic: TRAINER_PIC_FISHERMAN_FRLG
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_WHISCASH
+Level: 56
+
+SPECIES_GYARADOS
+Level: 56
+
+=== TRAINER_NAOMI_SINNOH ===
+Name: HANNAH
+Class: TRAINER_CLASS_AROMA_LADY
+Pic: TRAINER_PIC_SINNOH_AROMA_LADY
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ROSERADE
+Level: 52
+
+SPECIES_VESPIQUEN
+Level: 53
+
+=== TRAINER_MELISSA_SINNOH ===
+Name: WILLIAM
+Class: TRAINER_CLASS_ARTIST
+Pic: TRAINER_PIC_SINNOH_ARTIST
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MR_MIME
+Level: 52
+
+SPECIES_SUDOWOODO
+Level: 52
+
+=== TRAINER_SHEILA_SINNOH ===
+Name: ALBERT
+Class: TRAINER_CLASS_PKMN_BREEDER
+Pic: TRAINER_PIC_SINNOH_BREEDER_M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ROSERADE
+Level: 52
+
+SPECIES_SUDOWOODO
+Level: 52
+
+SPECIES_RAICHU
+Level: 52
+
+SPECIES_JOLTEON
+Level: 52
+
+=== TRAINER_SHIRLEY_SINNOH ===
+Name: JENNIFER
+Class: TRAINER_CLASS_PKMN_BREEDER
+Pic: TRAINER_PIC_SINNOH_BREEDER_F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ROSERADE
+Level: 52
+
+SPECIES_MR_MIME
+Level: 52
+
+SPECIES_CLEFABLE
+Level: 52
+
+SPECIES_JOLTEON
+Level: 52
+
+=== TRAINER_MOLLIE_SINNOH ===
+Name: SHELLEY
+Class: TRAINER_CLASS_COWGIRL
+Pic: TRAINER_PIC_PICNICKER_FRLG
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_RAPIDASH
+Level: 53
+
+=== TRAINER_GARRET_SINNOH ===
+Name: RICHARD
+Class: TRAINER_CLASS_JOGGER
+Pic: TRAINER_PIC_RUNNING_TRIATHLETE_M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_LUXRAY
+Level: 53
+
+=== TRAINER_MARK_SINNOH ===
+Name: RAUL
+Class: TRAINER_CLASS_JOGGER
+Pic: TRAINER_PIC_RUNNING_TRIATHLETE_M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STARAPTOR
+Level: 53
+
+=== TRAINER_GRUNT_MT_CHIMNEY_1_SINNOH ===
+Name: DANIELLE
+Class: TRAINER_CLASS_POKE_KID
+Pic: TRAINER_PIC_SINNOH_POKE_KID
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_RAICHU
+Level: 53
+
+=== TRAINER_LUIS_SINNOH ===
+Name: EMMA & LIL
+Class: TRAINER_CLASS_TWINS
+Pic: TRAINER_PIC_TWINS_FRLG
+Gender: Female
+Music: Twins
+Double Battle: Yes
+AI: Basic Trainer
+
+SPECIES_SUDOWOODO
+Level: 53
+
+SPECIES_MR_MIME
+Level: 53
+
+=== TRAINER_DOMINIK_SINNOH ===
+Name: TY & SUE
+Class: TRAINER_CLASS_YOUNG_COUPLE
+Pic: TRAINER_PIC_YOUNG_COUPLE_FRLG
+Gender: Female
+Music: Girl
+Double Battle: Yes
+AI: Basic Trainer
+
+SPECIES_LOPUNNY
+Level: 53
+- MOVE_FORESIGHT
+- MOVE_JUMP_KICK
+- MOVE_QUICK_ATTACK
+- MOVE_DEFENSE_CURL
+
+SPECIES_FLOATZEL
+Level: 53
+- MOVE_AQUA_JET
+- MOVE_SWIFT
+- MOVE_PURSUIT
+- MOVE_SONIC_BOOM
+
+=== TRAINER_DOUGLAS_SINNOH ===
+Name: ERNEST
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SCIZOR
+Level: 55
+- MOVE_SLASH
+- MOVE_WING_ATTACK
+- MOVE_PURSUIT
+- MOVE_QUICK_ATTACK
+
+SPECIES_PROBOPASS
+Level: 55
+- MOVE_THUNDER_WAVE
+- MOVE_ROCK_SLIDE
+- MOVE_MAGNET_BOMB
+- MOVE_IRON_DEFENSE
+
+SPECIES_LUXRAY
+Level: 56
+- MOVE_THUNDERBOLT
+- MOVE_CRUNCH
+- MOVE_SWAGGER
+- MOVE_DOUBLE_TEAM
+
+=== TRAINER_DARRIN_SINNOH ===
+Name: ALYSSA
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_AMBIPOM
+Level: 55
+- MOVE_SWIFT
+- MOVE_WATER_PULSE
+- MOVE_SHOCK_WAVE
+- MOVE_AERIAL_ACE
+
+SPECIES_FARIGIRAF
+Level: 55
+- MOVE_DOUBLE_HIT
+- MOVE_PSYBEAM
+- MOVE_ASSURANCE
+- MOVE_LIGHT_SCREEN
+
+SPECIES_TORTERRA
+Level: 56
+- MOVE_MEGA_DRAIN
+- MOVE_BITE
+- MOVE_CURSE
+
+=== TRAINER_JEROME_SINNOH ===
+Name: JOEL
+Class: TRAINER_CLASS_NINJA_BOY
+Pic: TRAINER_PIC_NINJA_BOY
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CROBAT
+Level: 55
+
+SPECIES_DRAPION
+Level: 55
+
+SPECIES_SKUNTANK
+Level: 55
+
+SPECIES_CROBAT
+Level: 55
+
+=== TRAINER_MATTHEW_SINNOH ===
+Name: NATHAN
+Class: TRAINER_CLASS_NINJA_BOY
+Pic: TRAINER_PIC_NINJA_BOY
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SKUNTANK
+Level: 55
+
+SPECIES_CROBAT
+Level: 55
+
+=== TRAINER_DAVID_SINNOH ===
+Name: DAVIDO
+Class: TRAINER_CLASS_NINJA_BOY
+Pic: TRAINER_PIC_NINJA_BOY
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MOTHIM
+Level: 56
+
+=== TRAINER_SPENCER_SINNOH ===
+Name: PATRICK
+Class: TRAINER_CLASS_DRAGON_TAMER
+Pic: TRAINER_PIC_SINNOH_DRAGON_TAMER
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GARCHOMP
+Level: 56
+
+=== TRAINER_ROLAND_SINNOH ===
+Name: BRIANNA
+Class: TRAINER_CLASS_BIRD_KEEPER
+Pic: TRAINER_PIC_SINNOH_BIRD_KEEPER
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_NOCTOWL
+Level: 55
+
+SPECIES_NOCTOWL
+Level: 56
+
+=== TRAINER_NOLEN_SINNOH ===
+Name: ZAC & JEN
+Class: TRAINER_CLASS_DOUBLE_TEAM
+Pic: TRAINER_PIC_COOL_COUPLE_FRLG
+Gender: Male
+Music: Cool
+Double Battle: Yes
+AI: Basic Trainer
+
+SPECIES_GYARADOS
+Level: 57
+
+SPECIES_RAICHU
+Level: 57
+
+=== TRAINER_STAN_SINNOH ===
+Name: BRIAN
+Class: TRAINER_CLASS_VETERAN
+Pic: TRAINER_PIC_EXPERT_M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TANGROWTH
+Level: 55
+- MOVE_INGRAIN
+- MOVE_GIGA_DRAIN
+- MOVE_ANCIENT_POWER
+- MOVE_TOXIC
+
+SPECIES_RAPIDASH
+Level: 55
+- MOVE_FIRE_SPIN
+- MOVE_STOMP
+- MOVE_TAKE_DOWN
+
+SPECIES_FLOATZEL
+Level: 55
+- MOVE_AQUA_JET
+- MOVE_WHIRLPOOL
+- MOVE_PURSUIT
+- MOVE_QUICK_ATTACK
+
+=== TRAINER_BARRY_SINNOH ===
+Name: ADAM
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MACHAMP
+Level: 56
+
+=== TRAINER_DEAN_SINNOH ===
+Name: FABIAN
+Class: TRAINER_CLASS_NINJA_BOY
+Pic: TRAINER_PIC_NINJA_BOY
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TOXICROAK
+Level: 55
+
+SPECIES_TOXICROAK
+Level: 55
+
+=== TRAINER_RODNEY_SINNOH ===
+Name: BRENNAN
+Class: TRAINER_CLASS_NINJA_BOY
+Pic: TRAINER_PIC_NINJA_BOY
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CROBAT
+Level: 55
+
+SPECIES_DRAPION
+Level: 55
+
+=== TRAINER_RICHARD_SINNOH ===
+Name: TERI & TIA
+Class: TRAINER_CLASS_TWINS
+Pic: TRAINER_PIC_TWINS_FRLG
+Gender: Female
+Music: Twins
+Double Battle: Yes
+AI: Basic Trainer
+
+SPECIES_RAICHU
+Level: 53
+
+SPECIES_CLEFABLE
+Level: 53
+
+=== TRAINER_HERMAN_SINNOH ===
+Name: BRUCE
+Class: TRAINER_CLASS_NINJA_BOY
+Pic: TRAINER_PIC_NINJA_BOY
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SKUNTANK
+Level: 56
+
+=== TRAINER_SANTIAGO_SINNOH ===
+Name: WYATT
+Class: TRAINER_CLASS_JOGGER
+Pic: TRAINER_PIC_RUNNING_TRIATHLETE_M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_RAICHU
+Level: 53
+
+=== TRAINER_GILBERT_SINNOH ===
+Name: KAHLIL
+Class: TRAINER_CLASS_PKMN_BREEDER
+Pic: TRAINER_PIC_SINNOH_BREEDER_M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ELECTIVIRE
+Level: 53
+
+SPECIES_BLISSEY
+Level: 53
+
+=== TRAINER_FRANKLIN_SINNOH ===
+Name: AMBER
+Class: TRAINER_CLASS_PKMN_BREEDER
+Pic: TRAINER_PIC_SINNOH_BREEDER_F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MAGMORTAR
+Level: 53
+
+SPECIES_TOGEKISS
+Level: 53
+
+=== TRAINER_KEVIN_SINNOH ===
+Name: AVA & MATT
+Class: TRAINER_CLASS_BELLE_AND_PA
+Pic: TRAINER_PIC_SR_AND_JR
+Gender: Female
+Music: Twins
+Double Battle: Yes
+AI: Basic Trainer
+
+SPECIES_RAPIDASH
+Level: 53
+
+SPECIES_RAPIDASH
+Level: 53
+
+=== TRAINER_JACK_SINNOH ===
+Name: MARCO
+Class: TRAINER_CLASS_RANCHER
+Pic: TRAINER_PIC_HIKER_FRLG
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_RAPIDASH
+Level: 53
+
+=== TRAINER_DUDLEY_SINNOH ===
+Name: KATHERINE
+Class: TRAINER_CLASS_BIRD_KEEPER
+Pic: TRAINER_PIC_SINNOH_BIRD_KEEPER
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_NOCTOWL
+Level: 56
+
+=== TRAINER_CHAD_SINNOH ===
+Name: NICK
+Class: TRAINER_CLASS_NINJA_BOY
+Pic: TRAINER_PIC_NINJA_BOY
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_DRAPION
+Level: 55
+
+SPECIES_TOXICROAK
+Level: 55
+
+=== TRAINER_HITOSHI_SINNOH ===
+Name: SEAN
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TOXICROAK
+Level: 55
+
+SPECIES_MEDICHAM
+Level: 55
+
+SPECIES_MACHAMP
+Level: 55
+
+=== TRAINER_KIYO_SINNOH ===
+Name: HARRY
+Class: TRAINER_CLASS_RUIN_MANIAC
+Pic: TRAINER_PIC_SINNOH_RUIN_MANIAC
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BRONZONG
+Level: 54
+
+SPECIES_BRONZONG
+Level: 55
+
+SPECIES_BRONZONG
+Level: 55
+
+=== TRAINER_KOICHI_SINNOH ===
+Name: ALEXANDRA
+Class: TRAINER_CLASS_BIRD_KEEPER
+Pic: TRAINER_PIC_SINNOH_BIRD_KEEPER
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STARAPTOR
+Level: 51
+
+SPECIES_NOCTOWL
+Level: 51
+
+=== TRAINER_YUJI_SINNOH ===
+Name: LOUIS
+Class: TRAINER_CLASS_HIKER
+Pic: TRAINER_PIC_SINNOH_HIKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLEM
+Level: 50
+
+SPECIES_STEELIX
+Level: 52
+
+=== TRAINER_DAISUKE_SINNOH ===
+Name: ZACH
+Class: TRAINER_CLASS_NINJA_BOY
+Pic: TRAINER_PIC_NINJA_BOY
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CROBAT
+Level: 50
+
+SPECIES_CROBAT
+Level: 50
+
+SPECIES_CROBAT
+Level: 50
+
+=== TRAINER_ATSUSHI_SINNOH ===
+Name: JASON
+Class: TRAINER_CLASS_RICH_BOY
+Pic: TRAINER_PIC_SINNOH_RICH_BOY
+Gender: Male
+Music: Rich
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_EMPOLEON
+Level: 54
+
+=== TRAINER_GRUNT_AQUA_HIDEOUT_7_SINNOH ===
+Name: MELISSA
+Class: TRAINER_CLASS_LADY
+Pic: TRAINER_PIC_SINNOH_LADY
+Gender: Female
+Music: Rich
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CHERRIM_OVERCAST
+Level: 54
+
+=== TRAINER_GRUNT_AQUA_HIDEOUT_8_SINNOH ===
+Name: JEREMY
+Class: TRAINER_CLASS_GENTLEMAN
+Pic: TRAINER_PIC_GENTLEMAN_FRLG
+Gender: Male
+Music: Rich
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CHATOT
+Level: 54
+
+=== TRAINER_DREW_SINNOH ===
+Name: REINA
+Class: TRAINER_CLASS_SOCIALITE
+Pic: TRAINER_PIC_SINNOH_SOCIALITE
+Gender: Female
+Music: Rich
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ROSERADE
+Level: 54
+
+=== TRAINER_BEAU_SINNOH ===
+Name: BOBBY
+Class: TRAINER_CLASS_POLICEMAN
+Pic: TRAINER_PIC_SINNOH_POLICEMAN
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_NOCTOWL
+Level: 53
+
+SPECIES_MACHAMP
+Level: 54
+
+=== TRAINER_LARRY_SINNOH ===
+Name: ALEX
+Class: TRAINER_CLASS_POLICEMAN
+Pic: TRAINER_PIC_SINNOH_POLICEMAN
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_NOCTOWL
+Level: 54
+
+SPECIES_MACHAMP
+Level: 54
+
+=== TRAINER_SHANE_SINNOH ===
+Name: DYLAN
+Class: TRAINER_CLASS_POLICEMAN
+Pic: TRAINER_PIC_SINNOH_POLICEMAN
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_NOCTOWL
+Level: 54
+
+SPECIES_MACHAMP
+Level: 53
+
+=== TRAINER_JUSTIN_SINNOH ===
+Name: CALEB
+Class: TRAINER_CLASS_POLICEMAN
+Pic: TRAINER_PIC_SINNOH_POLICEMAN
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_NOCTOWL
+Level: 53
+
+SPECIES_MACHAMP
+Level: 54
+
+=== TRAINER_BRENT_SINNOH ===
+Name: JUAN
+Class: TRAINER_CLASS_FISHERMAN
+Pic: TRAINER_PIC_FISHERMAN_FRLG
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GYARADOS
+Level: 55
+
+=== TRAINER_DONALD_SINNOH ===
+Name: JOSH
+Class: TRAINER_CLASS_FISHERMAN
+Pic: TRAINER_PIC_FISHERMAN_FRLG
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SEAKING
+Level: 54
+
+SPECIES_SEAKING
+Level: 54
+
+=== TRAINER_TAYLOR_SINNOH ===
+Name: TRAVIS
+Class: TRAINER_CLASS_FISHERMAN
+Pic: TRAINER_PIC_FISHERMAN_FRLG
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_WHISCASH
+Level: 53
+
+SPECIES_WHISCASH
+Level: 54
+
+SPECIES_GYARADOS
+Level: 54
+
+SPECIES_WHISCASH
+Level: 54
+
+=== TRAINER_DEREK_SINNOH ===
+Name: TAYLOR
+Class: TRAINER_CLASS_PKMN_RANGER
+Pic: TRAINER_PIC_SINNOH_RANGER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CARNIVINE
+Level: 54
+
+SPECIES_LUXRAY
+Level: 55
+
+=== TRAINER_EDWARD_SINNOH ===
+Name: ALLISON
+Class: TRAINER_CLASS_PKMN_RANGER
+Pic: TRAINER_PIC_SINNOH_RANGER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_AZUMARILL
+Level: 55
+
+SPECIES_LEAFEON
+Level: 55
+
+=== TRAINER_WILLIAM_SINNOH ===
+Name: JEFFREY
+Class: TRAINER_CLASS_PKMN_RANGER
+Pic: TRAINER_PIC_SINNOH_RANGER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_INFERNAPE
+Level: 55
+
+=== TRAINER_JOSHUA_SINNOH ===
+Name: DANNY
+Class: TRAINER_CLASS_POLICEMAN
+Pic: TRAINER_PIC_SINNOH_POLICEMAN
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_NOCTOWL
+Level: 54
+
+SPECIES_MACHAMP
+Level: 54
+
+=== TRAINER_JACLYN_SINNOH ===
+Name: STEFANO
+Class: TRAINER_CLASS_SCIENTIST
+Pic: TRAINER_PIC_SINNOH_SCIENTIST
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ALAKAZAM
+Level: 55
+- MOVE_PSYBEAM
+- MOVE_DISABLE
+- MOVE_KINESIS
+- MOVE_ICE_PUNCH
+
+=== TRAINER_KAYLA_SINNOH ===
+Name: DEAN
+Class: TRAINER_CLASS_COLLECTOR
+Pic: TRAINER_PIC_SINNOH_COLLECTOR
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_UMBREON
+Level: 54
+
+SPECIES_ESPEON
+Level: 54
+
+=== TRAINER_ALEXIS_SINNOH ===
+Name: SHAUN
+Class: TRAINER_CLASS_SCIENTIST
+Pic: TRAINER_PIC_SINNOH_SCIENTIST
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MAGNEZONE
+Level: 55
+- MOVE_SPARK
+- MOVE_MAGNET_BOMB
+
+SPECIES_ALAKAZAM
+Level: 54
+- MOVE_PSYBEAM
+- MOVE_DISABLE
+- MOVE_KINESIS
+- MOVE_THUNDER_PUNCH
+
+=== TRAINER_MICAH_SINNOH ===
+Name: ALEXA
+Class: TRAINER_CLASS_PARASOL_LADY
+Pic: TRAINER_PIC_SINNOH_PARASOL_LADY
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SEAKING
+Level: 54
+
+SPECIES_BIBAREL
+Level: 54
+
+=== TRAINER_THOMAS_SINNOH ===
+Name: SABRINA
+Class: TRAINER_CLASS_PARASOL_LADY
+Pic: TRAINER_PIC_SINNOH_PARASOL_LADY
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_QUAGSIRE
+Level: 54
+
+SPECIES_QUAGSIRE
+Level: 54
+
+=== TRAINER_PAUL_SINNOH ===
+Name: SHELTIN
+Class: TRAINER_CLASS_SWIMMER_M
+Pic: TRAINER_PIC_SWIMMER_M_FRLG
+Gender: Male
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GYARADOS
+Level: 55
+
+SPECIES_GYARADOS
+Level: 55
+
+SPECIES_GYARADOS
+Level: 55
+
+=== TRAINER_GEORGIA_SINNOH ===
+Name: EVAN
+Class: TRAINER_CLASS_SWIMMER_M
+Pic: TRAINER_PIC_SWIMMER_M_FRLG
+Gender: Male
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLDUCK
+Level: 55
+
+SPECIES_GOLDUCK
+Level: 56
+
+=== TRAINER_KATE_AND_JOY_SINNOH ===
+Name: MARY
+Class: TRAINER_CLASS_SWIMMER_F
+Pic: TRAINER_PIC_SWIMMER_F_FRLG
+Gender: Female
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_LUMINEON
+Level: 56
+
+SPECIES_PELIPPER
+Level: 56
+
+=== TRAINER_VICTOR_SINNOH ===
+Name: HALEY
+Class: TRAINER_CLASS_SWIMMER_F
+Pic: TRAINER_PIC_SWIMMER_F_FRLG
+Gender: Female
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLDUCK
+Level: 55
+
+SPECIES_AZUMARILL
+Level: 56
+
+=== TRAINER_COLTON_SINNOH ===
+Name: JARED
+Class: TRAINER_CLASS_TUBER_M
+Pic: TRAINER_PIC_TUBER_M
+Gender: Male
+Music: Girl
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SHELLOS
+Level: 54
+
+SPECIES_SHELLOS
+Level: 54
+
+SPECIES_SHELLOS
+Level: 54
+
+=== TRAINER_VICTORIA_SINNOH ===
+Name: CHELSEA
+Class: TRAINER_CLASS_TUBER_F
+Pic: TRAINER_PIC_TUBER_F_FRLG
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_AZUMARILL
+Level: 54
+
+=== TRAINER_VANESSA_SINNOH ===
+Name: CYNDY
+Class: TRAINER_CLASS_BEAUTY
+Pic: TRAINER_PIC_SINNOH_BEAUTY
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PURUGLY
+Level: 55
+
+=== TRAINER_VICKY_SINNOH ===
+Name: KENNETH
+Class: TRAINER_CLASS_FISHERMAN
+Pic: TRAINER_PIC_FISHERMAN_FRLG
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_OCTILLERY
+Level: 54
+
+SPECIES_OCTILLERY
+Level: 54
+
+SPECIES_GYARADOS
+Level: 54
+
+=== TRAINER_QUINCY_SINNOH ===
+Name: PAUL
+Class: TRAINER_CLASS_SAILOR
+Pic: TRAINER_PIC_SAILOR_FRLG
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TENTACRUEL
+Level: 55
+
+SPECIES_PELIPPER
+Level: 55
+
+SPECIES_MACHAMP
+Level: 56
+
+=== TRAINER_KATELYNN_SINNOH ===
+Name: CARLOS
+Class: TRAINER_CLASS_PI
+Pic: TRAINER_PIC_GENTLEMAN_FRLG
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SEAKING
+Level: 55
+- MOVE_HORN_DRILL
+- MOVE_FLAIL
+
+=== TRAINER_ANDREW_SINNOH ===
+Name: DOUGLAS
+Class: TRAINER_CLASS_COLLECTOR
+Pic: TRAINER_PIC_SINNOH_COLLECTOR
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_JOLTEON
+Level: 53
+
+SPECIES_VAPOREON
+Level: 53
+
+SPECIES_FLAREON
+Level: 53
+
+=== TRAINER_IVAN_SINNOH ===
+Name: BRADY
+Class: TRAINER_CLASS_COLLECTOR
+Pic: TRAINER_PIC_SINNOH_COLLECTOR
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_DRAPION
+Level: 52
+
+SPECIES_TANGROWTH
+Level: 52
+
+SPECIES_YANMEGA
+Level: 52
+
+SPECIES_CARNIVINE
+Level: 52
+
+SPECIES_TOXICROAK
+Level: 52
+
+SPECIES_TROPIUS
+Level: 52
+
+=== TRAINER_CLAUDE_SINNOH ===
+Name: BRYAN
+Class: TRAINER_CLASS_RUIN_MANIAC
+Pic: TRAINER_PIC_SINNOH_RUIN_MANIAC
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BRONZONG
+Level: 53
+
+SPECIES_RAMPARDOS
+Level: 54
+
+=== TRAINER_NED_SINNOH ===
+Name: RONALD
+Class: TRAINER_CLASS_RUIN_MANIAC
+Pic: TRAINER_PIC_SINNOH_RUIN_MANIAC
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BASTIODON
+Level: 54
+
+=== TRAINER_DALE_SINNOH ===
+Name: JAMAL
+Class: TRAINER_CLASS_COLLECTOR
+Pic: TRAINER_PIC_SINNOH_COLLECTOR
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PORYGON_Z
+Level: 54
+
+=== TRAINER_NOLAN_SINNOH ===
+Name: DEVON
+Class: TRAINER_CLASS_BEAUTY
+Pic: TRAINER_PIC_SINNOH_BEAUTY
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_WORMADAM
+Level: 53
+
+SPECIES_WORMADAM
+Level: 53
+
+SPECIES_WORMADAM
+Level: 53
+
+=== TRAINER_BARNY_SINNOH ===
+Name: MITCHELL
+Class: TRAINER_CLASS_PSYCHIC
+Pic: TRAINER_PIC_SINNOH_PSYCHIC_M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_DUSKNOIR
+Level: 54
+
+SPECIES_ALAKAZAM
+Level: 54
+
+=== TRAINER_WADE_SINNOH ===
+Name: ABIGAIL
+Class: TRAINER_CLASS_PSYCHIC
+Pic: TRAINER_PIC_SINNOH_PSYCHIC_F
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CHIMECHO
+Level: 53
+
+SPECIES_DRIFBLIM
+Level: 54
+
+SPECIES_GARDEVOIR
+Level: 54
+
+=== TRAINER_CARTER_SINNOH ===
+Name: DEREK
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TOXICROAK
+Level: 54
+
+=== TRAINER_RONALD_SINNOH ===
+Name: GREGORY
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MACHAMP
+Level: 53
+
+SPECIES_MACHAMP
+Level: 53
+
+SPECIES_MACHAMP
+Level: 53
+
+=== TRAINER_JACOB_SINNOH ===
+Name: NATHANIEL
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TOXICROAK
+Level: 52
+
+SPECIES_MEDICHAM
+Level: 53
+
+SPECIES_MACHAMP
+Level: 53
+
+=== TRAINER_ANTHONY_SINNOH ===
+Name: SCOTT
+Class: TRAINER_CLASS_JOGGER
+Pic: TRAINER_PIC_RUNNING_TRIATHLETE_M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STARAPTOR
+Level: 54
+
+=== TRAINER_JASMINE_SINNOH ===
+Name: CALVIN
+Class: TRAINER_CLASS_RUIN_MANIAC
+Pic: TRAINER_PIC_SINNOH_RUIN_MANIAC
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BRONZONG
+Level: 53
+
+SPECIES_BASTIODON
+Level: 53
+
+=== TRAINER_CAMDEN_SINNOH ===
+Name: DENNIS
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GLISCOR
+Level: 53
+- MOVE_SCREECH
+- MOVE_FAINT_ATTACK
+- MOVE_QUICK_ATTACK
+- MOVE_POISON_STING
+
+SPECIES_FLOATZEL
+Level: 53
+- MOVE_AQUA_JET
+- MOVE_SWIFT
+- MOVE_PURSUIT
+- MOVE_QUICK_ATTACK
+
+SPECIES_DRIFBLIM
+Level: 54
+- MOVE_SWALLOW
+- MOVE_GUST
+- MOVE_STOCKPILE
+- MOVE_OMINOUS_WIND
+
+=== TRAINER_DEMETRIUS_SINNOH ===
+Name: MAYA
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ROSERADE
+Level: 53
+- MOVE_TOXIC_SPIKES
+- MOVE_GIGA_DRAIN
+- MOVE_LEECH_SEED
+
+SPECIES_GARDEVOIR
+Level: 53
+- MOVE_PSYCHIC
+- MOVE_MAGICAL_LEAF
+- MOVE_CALM_MIND
+- MOVE_DOUBLE_TEAM
+
+SPECIES_LICKILICKY
+Level: 54
+- MOVE_SUPERSONIC
+- MOVE_STOMP
+- MOVE_ROLLOUT
+- MOVE_DEFENSE_CURL
+
+=== TRAINER_CHASE_SINNOH ===
+Name: CRAIG
+Class: TRAINER_CLASS_JOGGER
+Pic: TRAINER_PIC_RUNNING_TRIATHLETE_M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_LUXRAY
+Level: 53
+
+SPECIES_LUXRAY
+Level: 53
+
+=== TRAINER_ISOBEL_SINNOH ===
+Name: BLAKE
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_SNOW_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_AMBIPOM
+Level: 57
+- MOVE_DOUBLE_HIT
+- MOVE_U_TURN
+- MOVE_SAND_ATTACK
+- MOVE_SCREECH
+
+SPECIES_PORYGON_Z
+Level: 58
+- MOVE_PSYBEAM
+- MOVE_SIGNAL_BEAM
+- MOVE_CONVERSION_2
+- MOVE_RECOVER
+
+=== TRAINER_DONNY_SINNOH ===
+Name: LAURA
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_SNOW_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TROPIUS
+Level: 58
+- MOVE_AIR_SLASH
+- MOVE_BODY_SLAM
+- MOVE_MAGICAL_LEAF
+- MOVE_SWEET_SCENT
+
+=== TRAINER_TALIA_SINNOH ===
+Name: PHILIP
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MACHAMP
+Level: 58
+
+=== TRAINER_ALLISON_SINNOH ===
+Name: BRADLEY
+Class: TRAINER_CLASS_SKIER
+Pic: TRAINER_PIC_SINNOH_SKIER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GLALIE
+Level: 57
+
+SPECIES_MAMOSWINE
+Level: 57
+
+SPECIES_ABOMASNOW
+Level: 57
+
+=== TRAINER_AARON_SINNOH ===
+Name: GARRETT
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_SNOW_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MR_MIME
+Level: 57
+- MOVE_PSYBEAM
+- MOVE_MIMIC
+- MOVE_REFLECT
+- MOVE_LIGHT_SCREEN
+
+SPECIES_DUSKNOIR
+Level: 57
+- MOVE_WILL_O_WISP
+- MOVE_SHADOW_PUNCH
+- MOVE_PURSUIT
+- MOVE_CONFUSE_RAY
+
+SPECIES_SCIZOR
+Level: 57
+- MOVE_SLASH
+- MOVE_X_SCISSOR
+- MOVE_QUICK_ATTACK
+- MOVE_FURY_CUTTER
+
+=== TRAINER_PERRY_SINNOH ===
+Name: MARIA
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_SNOW_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLDUCK
+Level: 57
+- MOVE_WATER_PULSE
+- MOVE_CONFUSION
+- MOVE_DISABLE
+- MOVE_SCREECH
+
+SPECIES_RAPIDASH
+Level: 57
+- MOVE_FIRE_BLAST
+- MOVE_TAKE_DOWN
+- MOVE_FURY_ATTACK
+- MOVE_WILL_O_WISP
+
+SPECIES_SUDOWOODO
+Level: 57
+- MOVE_ROCK_SLIDE
+- MOVE_LOW_KICK
+- MOVE_FLAIL
+- MOVE_ENDURE
+
+=== TRAINER_HUGH_SINNOH ===
+Name: KAITLYN
+Class: TRAINER_CLASS_SKIER
+Pic: TRAINER_PIC_SINNOH_SKIER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MAMOSWINE
+Level: 57
+
+SPECIES_ABOMASNOW
+Level: 57
+
+=== TRAINER_PHIL_SINNOH ===
+Name: EDWARD
+Class: TRAINER_CLASS_SKIER
+Pic: TRAINER_PIC_SINNOH_SKIER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_WEAVILE
+Level: 57
+
+=== TRAINER_PRESLEY_SINNOH ===
+Name: ANDREA
+Class: TRAINER_CLASS_SKIER
+Pic: TRAINER_PIC_SINNOH_SKIER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ABOMASNOW
+Level: 57
+
+=== TRAINER_COLIN_SINNOH ===
+Name: SHAWN
+Class: TRAINER_CLASS_SKIER
+Pic: TRAINER_PIC_SINNOH_SKIER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ABOMASNOW
+Level: 56
+
+SPECIES_ABOMASNOW
+Level: 57
+
+SPECIES_ABOMASNOW
+Level: 57
+
+=== TRAINER_BENNY_SINNOH ===
+Name: LEXIE
+Class: TRAINER_CLASS_SKIER
+Pic: TRAINER_PIC_SINNOH_SKIER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MAMOSWINE
+Level: 57
+
+SPECIES_GLACEON
+Level: 57
+
+=== TRAINER_CHESTER_SINNOH ===
+Name: BJORN
+Class: TRAINER_CLASS_SKIER
+Pic: TRAINER_PIC_SINNOH_SKIER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MAMOSWINE
+Level: 57
+
+SPECIES_WEAVILE
+Level: 57
+
+=== TRAINER_ALEX_SINNOH ===
+Name: MADISON
+Class: TRAINER_CLASS_SKIER
+Pic: TRAINER_PIC_SINNOH_SKIER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GLALIE
+Level: 57
+
+=== TRAINER_BECK_SINNOH ===
+Name: MATTHEW
+Class: TRAINER_CLASS_NINJA_BOY
+Pic: TRAINER_PIC_NINJA_BOY
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CROBAT
+Level: 57
+
+=== TRAINER_YASU_SINNOH ===
+Name: ETHAN
+Class: TRAINER_CLASS_NINJA_BOY
+Pic: TRAINER_PIC_NINJA_BOY
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_DRAPION
+Level: 57
+
+SPECIES_CROBAT
+Level: 57
+
+=== TRAINER_TAKASHI_SINNOH ===
+Name: LUKE
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TOXICROAK
+Level: 57
+
+SPECIES_LUCARIO
+Level: 57
+
+SPECIES_MACHAMP
+Level: 57
+
+=== TRAINER_DIANNE_SINNOH ===
+Name: DALTON
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_SNOW_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ELECTIVIRE
+Level: 58
+- MOVE_THUNDERBOLT
+- MOVE_SWIFT
+- MOVE_QUICK_ATTACK
+- MOVE_THUNDER_WAVE
+
+SPECIES_MAGMORTAR
+Level: 58
+- MOVE_FLAMETHROWER
+- MOVE_FAINT_ATTACK
+- MOVE_SMOG
+- MOVE_WILL_O_WISP
+
+=== TRAINER_JANI_SINNOH ===
+Name: OLIVIA
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_SNOW_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GARDEVOIR
+Level: 57
+- MOVE_FUTURE_SIGHT
+- MOVE_PSYCHIC
+- MOVE_MAGICAL_LEAF
+- MOVE_LUCKY_CHANT
+
+SPECIES_SEAKING
+Level: 57
+- MOVE_WATERFALL
+- MOVE_POISON_JAB
+- MOVE_SUPERSONIC
+- MOVE_AQUA_RING
+
+SPECIES_LOPUNNY
+Level: 57
+- MOVE_DIZZY_PUNCH
+- MOVE_QUICK_ATTACK
+- MOVE_JUMP_KICK
+- MOVE_SHADOW_BALL
+
+=== TRAINER_LUNG_SINNOH ===
+Name: TONY
+Class: TRAINER_CLASS_GUITARIST
+Pic: TRAINER_PIC_SINNOH_GUITARIST
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_KRICKETUNE
+Level: 56
+
+SPECIES_MAGNEZONE
+Level: 56
+
+=== TRAINER_CORA_SINNOH ===
+Name: SKYLER
+Class: TRAINER_CLASS_SAILOR
+Pic: TRAINER_PIC_SAILOR_FRLG
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MANTINE
+Level: 55
+
+SPECIES_MACHAMP
+Level: 56
+
+=== TRAINER_PAULA_SINNOH ===
+Name: MIGUEL
+Class: TRAINER_CLASS_FISHERMAN
+Pic: TRAINER_PIC_FISHERMAN_FRLG
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GYARADOS
+Level: 56
+
+SPECIES_GYARADOS
+Level: 56
+
+=== TRAINER_CLARISSA_SINNOH ===
+Name: LUC
+Class: TRAINER_CLASS_FISHERMAN
+Pic: TRAINER_PIC_FISHERMAN_FRLG
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_OCTILLERY
+Level: 55
+
+SPECIES_OCTILLERY
+Level: 55
+
+SPECIES_OCTILLERY
+Level: 55
+
+SPECIES_GYARADOS
+Level: 55
+
+SPECIES_OCTILLERY
+Level: 55
+
+=== TRAINER_ANGELICA_SINNOH ===
+Name: TRENTON
+Class: TRAINER_CLASS_TUBER_M
+Pic: TRAINER_PIC_TUBER_M
+Gender: Male
+Music: Girl
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SHELLOS
+Level: 55
+
+SPECIES_SHELLOS
+Level: 56
+
+=== TRAINER_BEVERLY_SINNOH ===
+Name: MARIEL
+Class: TRAINER_CLASS_TUBER_F
+Pic: TRAINER_PIC_TUBER_F_FRLG
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_AZUMARILL
+Level: 55
+
+SPECIES_AZUMARILL
+Level: 56
+
+=== TRAINER_IMANI_SINNOH ===
+Name: ERIK
+Class: TRAINER_CLASS_SWIMMER_M
+Pic: TRAINER_PIC_SWIMMER_M_FRLG
+Gender: Male
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TENTACRUEL
+Level: 56
+
+=== TRAINER_KYLA_SINNOH ===
+Name: VINCENT
+Class: TRAINER_CLASS_SWIMMER_M
+Pic: TRAINER_PIC_SWIMMER_M_FRLG
+Gender: Male
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PELIPPER
+Level: 56
+
+SPECIES_GASTRODON
+Level: 56
+
+=== TRAINER_DENISE_SINNOH ===
+Name: JESSICA
+Class: TRAINER_CLASS_SWIMMER_F
+Pic: TRAINER_PIC_SWIMMER_F_FRLG
+Gender: Female
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SEAKING
+Level: 55
+
+SPECIES_SEAKING
+Level: 55
+
+SPECIES_SEAKING
+Level: 55
+
+SPECIES_SEAKING
+Level: 56
+
+=== TRAINER_BETH_SINNOH ===
+Name: ERICA
+Class: TRAINER_CLASS_SWIMMER_F
+Pic: TRAINER_PIC_SWIMMER_F_FRLG
+Gender: Female
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_LUMINEON
+Level: 56
+
+=== TRAINER_TARA_SINNOH ===
+Name: ADRIAN
+Class: TRAINER_CLASS_SWIMMER_M
+Pic: TRAINER_PIC_SWIMMER_M_FRLG
+Gender: Male
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_OCTILLERY
+Level: 55
+
+SPECIES_TENTACRUEL
+Level: 55
+
+SPECIES_OCTILLERY
+Level: 56
+
+=== TRAINER_MISSY_SINNOH ===
+Name: KATELYN
+Class: TRAINER_CLASS_SWIMMER_F
+Pic: TRAINER_PIC_SWIMMER_F_FRLG
+Gender: Female
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_FLOATZEL
+Level: 55
+- MOVE_AQUA_JET
+- MOVE_SONIC_BOOM
+- MOVE_QUICK_ATTACK
+- MOVE_ATTRACT
+
+SPECIES_MEDICHAM
+Level: 55
+- MOVE_CONFUSION
+- MOVE_BRICK_BREAK
+- MOVE_MEDITATE
+- MOVE_LIGHT_SCREEN
+
+SPECIES_SEAKING
+Level: 55
+- MOVE_WATER_PULSE
+- MOVE_HORN_ATTACK
+- MOVE_AQUA_RING
+- MOVE_CAPTIVATE
+
+=== TRAINER_ALICE_SINNOH ===
+Name: CLAIRE
+Class: TRAINER_CLASS_SWIMMER_F
+Pic: TRAINER_PIC_SWIMMER_F_FRLG
+Gender: Female
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_FLOATZEL
+Level: 56
+
+=== TRAINER_GRACE_SINNOH ===
+Name: DILLON
+Class: TRAINER_CLASS_SWIMMER_M
+Pic: TRAINER_PIC_SWIMMER_M_FRLG
+Gender: Male
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_OCTILLERY
+Level: 56
+
+SPECIES_FLOATZEL
+Level: 56
+
+=== TRAINER_TANYA_SINNOH ===
+Name: VANESSA
+Class: TRAINER_CLASS_SWIMMER_F
+Pic: TRAINER_PIC_SWIMMER_F_FRLG
+Gender: Female
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLDUCK
+Level: 56
+
+=== TRAINER_SHARON_SINNOH ===
+Name: CORY
+Class: TRAINER_CLASS_FISHERMAN
+Pic: TRAINER_PIC_FISHERMAN_FRLG
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_LUMINEON
+Level: 55
+
+SPECIES_LUMINEON
+Level: 55
+
+SPECIES_LUMINEON
+Level: 56
+
+=== TRAINER_NIKKI_SINNOH ===
+Name: IVAN
+Class: TRAINER_CLASS_COLLECTOR
+Pic: TRAINER_PIC_SINNOH_COLLECTOR
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TOGEKISS
+Level: 56
+
+=== TRAINER_BRENDA_SINNOH ===
+Name: JAKE
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STARAPTOR
+Level: 56
+- MOVE_TAKE_DOWN
+- MOVE_AERIAL_ACE
+- MOVE_ENDEAVOR
+- MOVE_QUICK_ATTACK
+
+SPECIES_FARIGIRAF
+Level: 57
+- MOVE_DOUBLE_HIT
+- MOVE_PSYCHIC
+
+=== TRAINER_KATIE_SINNOH ===
+Name: SHANNON
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CHERRIM
+Level: 56
+- MOVE_PETAL_DANCE
+- MOVE_MAGICAL_LEAF
+- MOVE_LEECH_SEED
+
+SPECIES_AZUMARILL
+Level: 56
+- MOVE_DOUBLE_EDGE
+- MOVE_BUBBLE_BEAM
+- MOVE_AQUA_RING
+
+SPECIES_LOPUNNY
+Level: 56
+- MOVE_JUMP_KICK
+- MOVE_QUICK_ATTACK
+- MOVE_CHARM
+
+=== TRAINER_SUSIE_SINNOH ===
+Name: BRETT
+Class: TRAINER_CLASS_FISHERMAN
+Pic: TRAINER_PIC_FISHERMAN_FRLG
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GYARADOS
+Level: 59
+
+SPECIES_LUMINEON
+Level: 58
+
+SPECIES_MILOTIC
+Level: 58
+
+=== TRAINER_KARA_SINNOH ===
+Name: ALEC
+Class: TRAINER_CLASS_FISHERMAN
+Pic: TRAINER_PIC_FISHERMAN_FRLG
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GYARADOS
+Level: 58
+
+SPECIES_GYARADOS
+Level: 59
+
+=== TRAINER_DANA_SINNOH ===
+Name: GEORGE
+Class: TRAINER_CLASS_FISHERMAN
+Pic: TRAINER_PIC_FISHERMAN_FRLG
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GYARADOS
+Level: 58
+
+SPECIES_LUMINEON
+Level: 58
+
+SPECIES_OCTILLERY
+Level: 58
+
+SPECIES_GYARADOS
+Level: 58
+
+=== TRAINER_SIENNA_SINNOH ===
+Name: COLE
+Class: TRAINER_CLASS_FISHERMAN
+Pic: TRAINER_PIC_FISHERMAN_FRLG
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GYARADOS
+Level: 59
+
+SPECIES_OCTILLERY
+Level: 58
+
+SPECIES_GYARADOS
+Level: 59
+
+=== TRAINER_DEBRA_SINNOH ===
+Name: NICOLA
+Class: TRAINER_CLASS_BEAUTY
+Pic: TRAINER_PIC_SINNOH_BEAUTY
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_LOPUNNY
+Level: 59
+
+=== TRAINER_LINDA_SINNOH ===
+Name: CONNER
+Class: TRAINER_CLASS_TUBER_M
+Pic: TRAINER_PIC_TUBER_M
+Gender: Male
+Music: Girl
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_OCTILLERY
+Level: 59
+
+=== TRAINER_KAYLEE_SINNOH ===
+Name: TREY
+Class: TRAINER_CLASS_RICH_BOY
+Pic: TRAINER_PIC_SINNOH_RICH_BOY
+Gender: Male
+Music: Rich
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_LUXRAY
+Level: 59
+
+=== TRAINER_LAUREL_SINNOH ===
+Name: LUTHER
+Class: TRAINER_CLASS_SAILOR
+Pic: TRAINER_PIC_SAILOR_FRLG
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PELIPPER
+Level: 58
+
+SPECIES_MACHAMP
+Level: 58
+
+SPECIES_GASTRODON
+Level: 59
+
+=== TRAINER_CARLEE_SINNOH ===
+Name: THOMAS
+Class: TRAINER_CLASS_POLICEMAN
+Pic: TRAINER_PIC_SINNOH_POLICEMAN
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_NOCTOWL
+Level: 59
+
+SPECIES_MACHAMP
+Level: 59
+
+=== TRAINER_HEIDI_SINNOH ===
+Name: HOLLY
+Class: TRAINER_CLASS_TUBER_F
+Pic: TRAINER_PIC_TUBER_F_FRLG
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_OCTILLERY
+Level: 59
+
+=== TRAINER_BECKY_SINNOH ===
+Name: MARC
+Class: TRAINER_CLASS_SAILOR
+Pic: TRAINER_PIC_SAILOR_FRLG
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MANTINE
+Level: 59
+
+=== TRAINER_CAROL_SINNOH ===
+Name: WESLEY
+Class: TRAINER_CLASS_SWIMMER_M
+Pic: TRAINER_PIC_SWIMMER_M_FRLG
+Gender: Male
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_FLOATZEL
+Level: 59
+
+SPECIES_TENTACRUEL
+Level: 59
+
+=== TRAINER_NANCY_SINNOH ===
+Name: RICARDO
+Class: TRAINER_CLASS_SWIMMER_M
+Pic: TRAINER_PIC_SWIMMER_M_FRLG
+Gender: Male
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TENTACRUEL
+Level: 59
+
+=== TRAINER_MARTHA_SINNOH ===
+Name: FRANCISCO
+Class: TRAINER_CLASS_SWIMMER_M
+Pic: TRAINER_PIC_SWIMMER_M_FRLG
+Gender: Male
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TENTACRUEL
+Level: 58
+
+SPECIES_GOLDUCK
+Level: 59
+
+=== TRAINER_CEDRIC_SINNOH ===
+Name: COLTON
+Class: TRAINER_CLASS_SWIMMER_M
+Pic: TRAINER_PIC_SWIMMER_M_FRLG
+Gender: Male
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PELIPPER
+Level: 58
+
+SPECIES_OCTILLERY
+Level: 59
+
+SPECIES_PELIPPER
+Level: 59
+
+=== TRAINER_IRENE_SINNOH ===
+Name: TROY
+Class: TRAINER_CLASS_SWIMMER_M
+Pic: TRAINER_PIC_SWIMMER_M_FRLG
+Gender: Male
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GYARADOS
+Level: 59
+
+=== TRAINER_GINA_AND_MIA_1_SINNOH ===
+Name: OSCAR
+Class: TRAINER_CLASS_SWIMMER_M
+Pic: TRAINER_PIC_SWIMMER_M_FRLG
+Gender: Male
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MANTINE
+Level: 58
+
+SPECIES_OCTILLERY
+Level: 58
+
+SPECIES_MANTINE
+Level: 59
+
+=== TRAINER_MIU_AND_YUKI_SINNOH ===
+Name: MIRANDA
+Class: TRAINER_CLASS_SWIMMER_F
+Pic: TRAINER_PIC_SWIMMER_F_FRLG
+Gender: Female
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_LUMINEON
+Level: 59
+
+=== TRAINER_HUEY_SINNOH ===
+Name: AUBREE
+Class: TRAINER_CLASS_SWIMMER_F
+Pic: TRAINER_PIC_SWIMMER_F_FRLG
+Gender: Female
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BIBAREL
+Level: 59
+
+SPECIES_AZUMARILL
+Level: 59
+
+=== TRAINER_EDMOND_SINNOH ===
+Name: PAIGE
+Class: TRAINER_CLASS_SWIMMER_F
+Pic: TRAINER_PIC_SWIMMER_F_FRLG
+Gender: Female
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_AZUMARILL
+Level: 58
+
+SPECIES_PELIPPER
+Level: 58
+
+SPECIES_GOLDUCK
+Level: 59
+
+=== TRAINER_DWAYNE_SINNOH ===
+Name: CRYSTAL
+Class: TRAINER_CLASS_SWIMMER_F
+Pic: TRAINER_PIC_SWIMMER_F_FRLG
+Gender: Female
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PELIPPER
+Level: 58
+
+SPECIES_SEAKING
+Level: 59
+
+=== TRAINER_LEONARD_SINNOH ===
+Name: CASSANDRA
+Class: TRAINER_CLASS_SWIMMER_F
+Pic: TRAINER_PIC_SWIMMER_F_FRLG
+Gender: Female
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_LUMINEON
+Level: 59
+
+SPECIES_PELIPPER
+Level: 58
+
+=== TRAINER_DUNCAN_SINNOH ===
+Name: GABRIELLE
+Class: TRAINER_CLASS_SWIMMER_F
+Pic: TRAINER_PIC_SWIMMER_F_FRLG
+Gender: Female
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLDUCK
+Level: 59
+
+=== TRAINER_JAZMYN_SINNOH ===
+Name: ZACHARIAH
+Class: TRAINER_CLASS_SAILOR
+Pic: TRAINER_PIC_SAILOR_FRLG
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PELIPPER
+Level: 58
+
+SPECIES_MACHAMP
+Level: 58
+
+SPECIES_GASTRODON
+Level: 59
+
+=== TRAINER_JONAS_SINNOH ===
+Name: RUBEN
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SHIFTRY
+Level: 62
+- MOVE_EXTRASENSORY
+- MOVE_FAKE_OUT
+- MOVE_FAINT_ATTACK
+- MOVE_RAZOR_LEAF
+
+SPECIES_GYARADOS
+Level: 63
+- MOVE_AQUA_TAIL
+- MOVE_HYDRO_PUMP
+- MOVE_DRAGON_DANCE
+- MOVE_ICE_FANG
+
+=== TRAINER_KAYLEY_SINNOH ===
+Name: MAXWELL
+Class: TRAINER_CLASS_PSYCHIC
+Pic: TRAINER_PIC_SINNOH_PSYCHIC_M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MISMAGIUS
+Level: 63
+
+SPECIES_GENGAR
+Level: 62
+
+=== TRAINER_AURON_SINNOH ===
+Name: CARL
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_HITMONCHAN
+Level: 62
+
+SPECIES_HITMONLEE
+Level: 63
+
+=== TRAINER_KELVIN_SINNOH ===
+Name: ARMANDO
+Class: TRAINER_CLASS_VETERAN
+Pic: TRAINER_PIC_EXPERT_M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MUK
+Level: 61
+- MOVE_ACID_ARMOR
+- MOVE_TOXIC
+- MOVE_SLUDGE_BOMB
+- MOVE_DARK_PULSE
+
+SPECIES_MIGHTYENA
+Level: 61
+- MOVE_SUCKER_PUNCH
+- MOVE_TAUNT
+- MOVE_ASSURANCE
+- MOVE_TAKE_DOWN
+
+SPECIES_LICKILICKY
+Level: 62
+- MOVE_POWER_WHIP
+- MOVE_GIGA_IMPACT
+- MOVE_SURF
+- MOVE_FIRE_BLAST
+
+=== TRAINER_MARLEY_SINNOH ===
+Name: BRITTNEY
+Class: TRAINER_CLASS_PSYCHIC
+Pic: TRAINER_PIC_SINNOH_PSYCHIC_F
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_HYPNO
+Level: 62
+
+SPECIES_ALAKAZAM
+Level: 63
+
+=== TRAINER_REYNA_SINNOH ===
+Name: JAMIE
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_METAGROSS
+Level: 64
+- MOVE_METEOR_MASH
+- MOVE_HAMMER_ARM
+- MOVE_PSYCHIC
+- MOVE_MAGNET_RISE
+
+=== TRAINER_HUDSON_SINNOH ===
+Name: LARRY
+Class: TRAINER_CLASS_RUIN_MANIAC
+Pic: TRAINER_PIC_SINNOH_RUIN_MANIAC
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_AERODACTYL
+Level: 63
+
+=== TRAINER_CONOR_SINNOH ===
+Name: HAYDEN
+Class: TRAINER_CLASS_DRAGON_TAMER
+Pic: TRAINER_PIC_SINNOH_DRAGON_TAMER
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ALTARIA
+Level: 62
+
+SPECIES_KINGDRA
+Level: 62
+
+=== TRAINER_HECTOR_SINNOH ===
+Name: RODOLFO
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STARMIE
+Level: 62
+- MOVE_WATER_PULSE
+- MOVE_RECOVER
+- MOVE_PSYCHIC
+- MOVE_SWIFT
+
+SPECIES_FLYGON
+Level: 62
+- MOVE_DRAGON_BREATH
+- MOVE_EARTHQUAKE
+- MOVE_FAINT_ATTACK
+- MOVE_SCREECH
+
+=== TRAINER_TABITHA_MOSSDEEP_SINNOH ===
+Name: ASHLEE
+Class: TRAINER_CLASS_PKMN_RANGER
+Pic: TRAINER_PIC_SINNOH_RANGER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_LINOONE
+Level: 62
+
+SPECIES_ARBOK
+Level: 62
+
+=== TRAINER_WALLY_VR_1_SINNOH ===
+Name: AUDREY
+Class: TRAINER_CLASS_BIRD_KEEPER
+Pic: TRAINER_PIC_SINNOH_BIRD_KEEPER
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SWELLOW
+Level: 61
+
+SPECIES_FARFETCHD
+Level: 61
+
+SPECIES_PIDGEOT
+Level: 62
+
+=== TRAINER_TIANA_SINNOH ===
+Name: DAISY
+Class: TRAINER_CLASS_PSYCHIC
+Pic: TRAINER_PIC_SINNOH_PSYCHIC_F
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SLOWBRO
+Level: 61
+
+SPECIES_SLOWBRO
+Level: 62
+
+=== TRAINER_JANICE_SINNOH ===
+Name: GEOFFREY
+Class: TRAINER_CLASS_DRAGON_TAMER
+Pic: TRAINER_PIC_SINNOH_DRAGON_TAMER
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GARCHOMP
+Level: 61
+
+SPECIES_ALTARIA
+Level: 62
+
+=== TRAINER_BRENDAN_ROUTE_119_MUDKIP_SINNOH ===
+Name: DEANNA
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_AMPHAROS
+Level: 62
+- MOVE_DISCHARGE
+- MOVE_POWER_GEM
+- MOVE_SIGNAL_BEAM
+- MOVE_LIGHT_SCREEN
+
+SPECIES_TROPIUS
+Level: 62
+- MOVE_SOLAR_BEAM
+- MOVE_AIR_SLASH
+- MOVE_SYNTHESIS
+- MOVE_SUNNY_DAY
+
+=== TRAINER_VIVI_SINNOH ===
+Name: DWAYNE
+Class: TRAINER_CLASS_PKMN_RANGER
+Pic: TRAINER_PIC_SINNOH_RANGER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SKARMORY
+Level: 62
+
+SPECIES_GOLDUCK
+Level: 62
+
+SPECIES_DONPHAN
+Level: 62
+
+=== TRAINER_SALLY_SINNOH ===
+Name: QUINN
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PINSIR
+Level: 62
+- MOVE_SUPERPOWER
+- MOVE_X_SCISSOR
+- MOVE_SWORDS_DANCE
+- MOVE_ROCK_TOMB
+
+SPECIES_LANTURN
+Level: 62
+- MOVE_DISCHARGE
+- MOVE_SIGNAL_BEAM
+- MOVE_SURF
+- MOVE_CONFUSE_RAY
+
+=== TRAINER_BRENDAN_ROUTE_119_TREECKO_SINNOH ===
+Name: LYDIA
+Class: TRAINER_CLASS_SWIMMER_F
+Pic: TRAINER_PIC_SWIMMER_F_FRLG
+Gender: Female
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_AZUMARILL
+Level: 62
+
+SPECIES_WALREIN
+Level: 62
+
+SPECIES_WAILORD
+Level: 62
+
+=== TRAINER_ROBIN_SINNOH ===
+Name: GRAHAM
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_HITMONCHAN
+Level: 62
+
+SPECIES_HITMONCHAN
+Level: 63
+
+=== TRAINER_RICK_SINNOH ===
+Name: GENEVA
+Class: TRAINER_CLASS_BIRD_KEEPER
+Pic: TRAINER_PIC_SINNOH_BIRD_KEEPER
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_FEAROW
+Level: 62
+
+SPECIES_XATU
+Level: 63
+
+=== TRAINER_BRENDAN_ROUTE_119_TORCHIC_SINNOH ===
+Name: STANLEY
+Class: TRAINER_CLASS_DRAGON_TAMER
+Pic: TRAINER_PIC_SINNOH_DRAGON_TAMER
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_DRAGONITE
+Level: 62
+
+SPECIES_ALTARIA
+Level: 63
+
+=== TRAINER_MAY_ROUTE_103_MUDKIP_SINNOH ===
+Name: WADE
+Class: TRAINER_CLASS_SWIMMER_M
+Pic: TRAINER_PIC_SWIMMER_M_FRLG
+Gender: Male
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SHARPEDO
+Level: 61
+
+SPECIES_SHARPEDO
+Level: 61
+
+SPECIES_SHARPEDO
+Level: 62
+
+=== TRAINER_MAY_ROUTE_110_MUDKIP_SINNOH ===
+Name: SAUL
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TAUROS
+Level: 64
+- MOVE_THRASH
+- MOVE_ZEN_HEADBUTT
+- MOVE_SWAGGER
+- MOVE_PAYBACK
+
+=== TRAINER_MAY_ROUTE_119_MUDKIP_SINNOH ===
+Name: FELICIA
+Class: TRAINER_CLASS_PKMN_RANGER
+Pic: TRAINER_PIC_SINNOH_RANGER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_JUMPLUFF
+Level: 63
+
+SPECIES_LOPUNNY
+Level: 63
+
+=== TRAINER_MAY_ROUTE_103_TREECKO_SINNOH ===
+Name: GRIFFIN
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BRELOOM
+Level: 63
+- MOVE_SPORE
+- MOVE_MACH_PUNCH
+- MOVE_SEED_BOMB
+- MOVE_SKY_UPPERCUT
+
+SPECIES_MEDICHAM
+Level: 63
+- MOVE_DETECT
+- MOVE_PSYCHIC
+- MOVE_HI_JUMP_KICK
+- MOVE_ICE_PUNCH
+
+=== TRAINER_MAY_ROUTE_110_TREECKO_SINNOH ===
+Name: MIKAYLA
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SEVIPER
+Level: 62
+- MOVE_NIGHT_SLASH
+- MOVE_POISON_FANG
+- MOVE_WRING_OUT
+- MOVE_GLARE
+
+SPECIES_PERSIAN
+Level: 62
+- MOVE_NIGHT_SLASH
+- MOVE_POWER_GEM
+- MOVE_FAINT_ATTACK
+- MOVE_FAKE_OUT
+
+SPECIES_ABSOL
+Level: 62
+- MOVE_NIGHT_SLASH
+- MOVE_PSYCHO_CUT
+- MOVE_SLASH
+- MOVE_QUICK_ATTACK
+
+=== TRAINER_MAY_ROUTE_119_TREECKO_SINNOH ===
+Name: JOSE
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLDUCK
+Level: 62
+- MOVE_HYDRO_PUMP
+- MOVE_BRICK_BREAK
+- MOVE_ZEN_HEADBUTT
+- MOVE_SCREECH
+
+SPECIES_SANDSLASH
+Level: 62
+- MOVE_EARTHQUAKE
+- MOVE_CRUSH_CLAW
+- MOVE_POISON_JAB
+- MOVE_SAND_TOMB
+
+SPECIES_MANECTRIC
+Level: 63
+- MOVE_THUNDER_FANG
+- MOVE_FIRE_FANG
+- MOVE_QUICK_ATTACK
+- MOVE_GIGA_IMPACT
+
+=== TRAINER_MAY_ROUTE_103_TORCHIC_SINNOH ===
+Name: MOIRA
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SANDSLASH
+Level: 62
+- MOVE_SLASH
+- MOVE_GYRO_BALL
+- MOVE_DIG
+- MOVE_X_SCISSOR
+
+SPECIES_GASTRODON
+Level: 62
+- MOVE_MUDDY_WATER
+- MOVE_RECOVER
+- MOVE_BODY_SLAM
+- MOVE_PROTECT
+
+SPECIES_CLAYDOL
+Level: 63
+- MOVE_EARTHQUAKE
+- MOVE_PSYCHIC
+- MOVE_ANCIENT_POWER
+- MOVE_COSMIC_POWER
+
+=== TRAINER_MAY_ROUTE_110_TORCHIC_SINNOH ===
+Name: KYLER
+Class: TRAINER_CLASS_PKMN_RANGER
+Pic: TRAINER_PIC_SINNOH_RANGER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_EXEGGUTOR
+Level: 62
+
+SPECIES_ZANGOOSE
+Level: 62
+
+SPECIES_EMPOLEON
+Level: 63
+
+=== TRAINER_MAY_ROUTE_119_TORCHIC_SINNOH ===
+Name: KRISTA
+Class: TRAINER_CLASS_PKMN_RANGER
+Pic: TRAINER_PIC_SINNOH_RANGER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_AGGRON
+Level: 63
+
+SPECIES_MAROWAK
+Level: 63
+
+=== TRAINER_DAVIS_SINNOH ===
+Name: KEEGAN
+Class: TRAINER_CLASS_DRAGON_TAMER
+Pic: TRAINER_PIC_SINNOH_DRAGON_TAMER
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_FLYGON
+Level: 62
+
+SPECIES_FLYGON
+Level: 63
+
+=== TRAINER_MITCHELL_SINNOH ===
+Name: CORBIN
+Class: TRAINER_CLASS_PSYCHIC
+Pic: TRAINER_PIC_SINNOH_PSYCHIC_M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_XATU
+Level: 62
+
+SPECIES_GALLADE
+Level: 62
+
+=== TRAINER_HALLE_SINNOH ===
+Name: MEAGAN
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_DELCATTY
+Level: 63
+- MOVE_FAKE_OUT
+- MOVE_CAPTIVATE
+- MOVE_FAINT_ATTACK
+- MOVE_DOUBLE_EDGE
+
+SPECIES_ABOMASNOW
+Level: 63
+- MOVE_ICE_SHARD
+- MOVE_AVALANCHE
+- MOVE_RAZOR_LEAF
+- MOVE_WATER_PULSE
+
+=== TRAINER_GARRISON_SINNOH ===
+Name: DAVON
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_HITMONCHAN
+Level: 62
+
+SPECIES_HARIYAMA
+Level: 62
+
+SPECIES_MACHAMP
+Level: 63
+
+=== TRAINER_LORENZO_SINNOH ===
+Name: DESHAWN
+Class: TRAINER_CLASS_PKMN_RANGER
+Pic: TRAINER_PIC_SINNOH_RANGER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SPINDA
+Level: 62
+
+SPECIES_KECLEON
+Level: 62
+
+SPECIES_GRANBULL
+Level: 62
+
+=== TRAINER_SEBASTIAN_SINNOH ===
+Name: FELIX
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_DUSKNOIR
+Level: 62
+- MOVE_SHADOW_SNEAK
+- MOVE_PAYBACK
+- MOVE_CURSE
+- MOVE_WILL_O_WISP
+
+SPECIES_SALAMENCE
+Level: 62
+- MOVE_DRAGON_CLAW
+- MOVE_AERIAL_ACE
+- MOVE_ZEN_HEADBUTT
+- MOVE_CRUNCH
+
+=== TRAINER_JENNA_SINNOH ===
+Name: DANA
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MIGHTYENA
+Level: 62
+- MOVE_CRUNCH
+- MOVE_SUCKER_PUNCH
+- MOVE_IRON_TAIL
+- MOVE_SCARY_FACE
+
+SPECIES_GARDEVOIR
+Level: 62
+- MOVE_PSYCHIC
+- MOVE_MAGICAL_LEAF
+- MOVE_SHOCK_WAVE
+- MOVE_SHADOW_BALL
+
+=== TRAINER_SOPHIA_SINNOH ===
+Name: SANDRA
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_DUGTRIO
+Level: 62
+
+SPECIES_RAICHU
+Level: 62
+
+SPECIES_NINETALES
+Level: 62
+
+=== TRAINER_JULIO_SINNOH ===
+Name: GLENN
+Class: TRAINER_CLASS_SWIMMER_M
+Pic: TRAINER_PIC_SWIMMER_M_FRLG
+Gender: Male
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_OCTILLERY
+Level: 61
+
+SPECIES_POLIWRATH
+Level: 61
+
+=== TRAINER_GRUNT_UNUSED_SINNOH ===
+Name: JOANNA
+Class: TRAINER_CLASS_SWIMMER_F
+Pic: TRAINER_PIC_SWIMMER_F_FRLG
+Gender: Female
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_LUVDISC
+Level: 61
+
+SPECIES_LAPRAS
+Level: 62
+
+=== TRAINER_GRUNT_JAGGED_PASS_SINNOH ===
+Name: KURT
+Class: TRAINER_CLASS_SWIMMER_M
+Pic: TRAINER_PIC_SWIMMER_M_FRLG
+Gender: Male
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_KINGLER
+Level: 61
+
+SPECIES_CRAWDAUNT
+Level: 61
+
+SPECIES_KINGLER
+Level: 62
+
+=== TRAINER_LEONARDO_SINNOH ===
+Name: SOPHIA
+Class: TRAINER_CLASS_SWIMMER_F
+Pic: TRAINER_PIC_SWIMMER_F_FRLG
+Gender: Female
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_DELIBIRD
+Level: 61
+
+SPECIES_MANTINE
+Level: 61
+
+=== TRAINER_ATHENA_SINNOH ===
+Name: SAM
+Class: TRAINER_CLASS_SWIMMER_M
+Pic: TRAINER_PIC_SWIMMER_M_FRLG
+Gender: Male
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_WALREIN
+Level: 61
+
+SPECIES_GASTRODON
+Level: 61
+
+=== TRAINER_HARRISON_SINNOH ===
+Name: MALLORY
+Class: TRAINER_CLASS_SWIMMER_F
+Pic: TRAINER_PIC_SWIMMER_F_FRLG
+Gender: Female
+Music: Swimmer
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MASQUERAIN
+Level: 61
+
+SPECIES_LUDICOLO
+Level: 62
+
+=== TRAINER_ROBERT_2_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TOXICROAK
+Level: 55
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_BENJAMIN_5_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TOXICROAK
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_ABIGAIL_1_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PURUGLY
+Level: 56
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+- MOVE_FURY_SWIPES
+- MOVE_FEINT_ATTACK
+- MOVE_GROWL
+- MOVE_FAKE_OUT
+
+SPECIES_CROBAT
+Level: 56
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+- MOVE_AIR_CUTTER
+- MOVE_WING_ATTACK
+- MOVE_BITE
+- MOVE_SUPERSONIC
+
+SPECIES_HONCHKROW
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+- MOVE_FEINT_ATTACK
+- MOVE_NIGHT_SHADE
+- MOVE_WING_ATTACK
+
+=== TRAINER_ABIGAIL_2_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SKUNTANK
+Level: 56
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_HOUNDOOM
+Level: 56
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_ABIGAIL_3_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_HOUNDOOM
+Level: 56
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_PURUGLY
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_CHARLIE_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: Sinnoh Galactic Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PURUGLY
+Level: 50
+
+=== TRAINER_JODY_SINNOH ===
+Name: JACK
+Class: Bug Catcher
+Pic: Sinnoh Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BEAUTIFLY
+Level: 50
+- Tackle
+- String Shot
+- Poison Sting
+
+SPECIES_BEAUTIFLY
+Level: 50
+- Tackle
+- String Shot
+- Poison Sting
+- Harden
+
+SPECIES_BEAUTIFLY
+Level: 51
+- Tackle
+- Poison Sting
+- Absorb
+- Gust
+
+=== TRAINER_WENDY_SINNOH ===
+Name: BRIANA
+Class: Lass
+Pic: Lass Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PACHIRISU
+Level: 51
+
+=== TRAINER_KEIRA_SINNOH ===
+Name: LINDSEY
+Class: Psychic
+Pic: Sinnoh Psychic F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ALAKAZAM
+Level: 51
+- Hidden Power
+
+=== TRAINER_JENNIFER_SINNOH ===
+Name: ELIJAH
+Class: Psychic
+Pic: Sinnoh Psychic M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ALAKAZAM
+Level: 51
+- Hidden Power
+
+=== TRAINER_HOPE_SINNOH ===
+Name: PHILLIP
+Class: Bug Catcher
+Pic: Sinnoh Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BEAUTIFLY
+Level: 50
+- Tackle
+- String Shot
+- Poison Sting
+
+SPECIES_DUSTOX
+Level: 50
+- Tackle
+- String Shot
+- Poison Sting
+- Harden
+
+SPECIES_DUSTOX
+Level: 51
+- Tackle
+- Poison Sting
+- Confusion
+- Gust
+
+=== TRAINER_SHANNON_SINNOH ===
+Name: DONALD
+Class: Bug Catcher
+Pic: Sinnoh Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BURMY
+Level: 50
+
+SPECIES_BURMY
+Level: 50
+
+=== TRAINER_MICHELLE_SINNOH ===
+Name: KODY
+Class: Psychic
+Pic: Sinnoh Psychic M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MEDICHAM
+Level: 51
+- Confusion
+- Bide
+- Meditate
+
+=== TRAINER_CAROLINE_SINNOH ===
+Name: RACHAEL
+Class: Psychic
+Pic: Sinnoh Psychic F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLDUCK
+Level: 51
+- Confusion
+- Water Gun
+- Scratch
+
+=== TRAINER_RANDALL_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: Sinnoh Galactic Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SKUNTANK
+Level: 50
+
+=== TRAINER_PARKER_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: Sinnoh Galactic Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CROBAT
+Level: 50
+
+SPECIES_CROBAT
+Level: 50
+
+=== TRAINER_CINDY_2_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CROBAT
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_CINDY_3_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PURUGLY
+Level: 56
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_HONCHKROW
+Level: 56
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_CINDY_4_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TOXICROAK
+Level: 56
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_PURUGLY
+Level: 56
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_SKUNTANK
+Level: 56
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_HOUNDOOM
+Level: 56
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_FERNANDO_1_SINNOH ===
+Name: DARIEN
+Class: TRAINER_CLASS_DRAGON_TAMER
+Pic: TRAINER_PIC_SINNOH_DRAGON_TAMER
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_DRAGONITE
+Level: 64
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+=== TRAINER_AUTUMN_SINNOH ===
+Name: DIANA
+Class: Picnicker
+Pic: Picnicker Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BIBAREL
+Level: 49
+
+=== TRAINER_TED_SINNOH ===
+Name: CURTIS
+Class: Camper
+Pic: Camper Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STARAPTOR
+Level: 48
+
+SPECIES_LUXRAY
+Level: 48
+
+=== TRAINER_JEFFREY_2_SINNOH ===
+Name: GRANT
+Class: TRAINER_CLASS_VETERAN
+Pic: TRAINER_PIC_EXPERT_M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_LUCARIO
+Level: 56
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- MOVE_FORCE_PALM
+- MOVE_QUICK_ATTACK
+- MOVE_COUNTER
+- MOVE_SCREECH
+
+SPECIES_STARAPTOR
+Level: 56
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- MOVE_AERIAL_ACE
+- MOVE_TAKE_DOWN
+- MOVE_QUICK_ATTACK
+- MOVE_GROWL
+
+SPECIES_GOLEM
+Level: 56
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- MOVE_EARTHQUAKE
+- MOVE_ROCK_SLIDE
+- MOVE_ROCK_POLISH
+- MOVE_DEFENSE_CURL
+
+=== TRAINER_MARY_SINNOH ===
+Name: MASON
+Class: Worker
+Pic: Sinnoh Worker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLEM
+Level: 49
+
+=== TRAINER_ALIX_SINNOH ===
+Name: COLIN
+Class: Worker
+Pic: Sinnoh Worker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLEM
+Level: 48
+
+SPECIES_MACHAMP
+Level: 49
+
+=== TRAINER_GRUNT_SEAFLOOR_CAVERN_2_SINNOH ===
+Name: KARL
+Class: TRAINER_CLASS_RUIN_MANIAC
+Pic: TRAINER_PIC_SINNOH_RUIN_MANIAC
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLEM
+Level: 52
+
+SPECIES_GOLEM
+Level: 52
+
+SPECIES_BRONZONG
+Level: 53
+
+=== TRAINER_ROSE_3_SINNOH ===
+Name: LAWRENCE
+Class: TRAINER_CLASS_CAMPER
+Pic: TRAINER_PIC_CAMPER_FRLG
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_AMBIPOM
+Level: 56
+
+SPECIES_FLOATZEL
+Level: 57
+
+=== TRAINER_ROSE_4_SINNOH ===
+Name: SUMMER
+Class: TRAINER_CLASS_PICNICKER
+Pic: TRAINER_PIC_PICNICKER_FRLG
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_RAICHU
+Level: 57
+
+=== TRAINER_ROSE_5_SINNOH ===
+Name: DAMON
+Class: TRAINER_CLASS_HIKER
+Pic: TRAINER_PIC_SINNOH_HIKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PROBOPASS
+Level: 56
+
+SPECIES_STEELIX
+Level: 56
+
+SPECIES_STEELIX
+Level: 56
+
+=== TRAINER_DUSTY_1_SINNOH ===
+Name: MAURICE
+Class: TRAINER_CLASS_HIKER
+Pic: TRAINER_PIC_SINNOH_HIKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLEM
+Level: 56
+
+SPECIES_RHYPERIOR
+Level: 56
+
+=== TRAINER_DUSTY_2_SINNOH ===
+Name: KENDAL
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TOXICROAK
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_DUSTY_3_SINNOH ===
+Name: TYLER
+Class: TRAINER_CLASS_BATTLE_GIRL
+Pic: TRAINER_PIC_SINNOH_BATTLE_GIRL
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MEDICHAM
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_DUSTY_4_SINNOH ===
+Name: BRENDON
+Class: TRAINER_CLASS_WORKER
+Pic: TRAINER_PIC_SINNOH_WORKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLEM
+Level: 56
+
+SPECIES_GOLEM
+Level: 56
+
+SPECIES_MACHAMP
+Level: 57
+
+=== TRAINER_DUSTY_5_SINNOH ===
+Name: QUENTIN
+Class: TRAINER_CLASS_WORKER
+Pic: TRAINER_PIC_SINNOH_WORKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MAGNEZONE
+Level: 56
+
+SPECIES_MACHAMP
+Level: 56
+
+SPECIES_GOLEM
+Level: 56
+
+=== TRAINER_LOLA_1_SINNOH ===
+Name: JONAH
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_QUAGSIRE
+Level: 56
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+SPECIES_STARAPTOR
+Level: 57
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+SPECIES_HIPPOWDON
+Level: 57
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+=== TRAINER_LOLA_2_SINNOH ===
+Name: BRENDA
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_LOPUNNY
+Level: 57
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+SPECIES_GARDEVOIR
+Level: 57
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+SPECIES_MEDICHAM
+Level: 56
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+=== TRAINER_LOLA_3_SINNOH ===
+Name: NOEL
+Class: TRAINER_CLASS_WORKER
+Pic: TRAINER_PIC_SINNOH_WORKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MAGNEZONE
+Level: 56
+
+SPECIES_MAGNEZONE
+Level: 57
+
+=== TRAINER_LOLA_4_SINNOH ===
+Name: BRADEN
+Class: TRAINER_CLASS_WORKER
+Pic: TRAINER_PIC_SINNOH_WORKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STEELIX
+Level: 57
+
+=== TRAINER_RICKY_3_SINNOH ===
+Name: DIEGO
+Class: TRAINER_CLASS_CAMPER
+Pic: TRAINER_PIC_CAMPER_FRLG
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_AMBIPOM
+Level: 53
+
+=== TRAINER_RICKY_4_SINNOH ===
+Name: TORI
+Class: TRAINER_CLASS_PICNICKER
+Pic: TRAINER_PIC_PICNICKER_FRLG
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLDUCK
+Level: 53
+
+=== TRAINER_RICKY_5_SINNOH ===
+Name: CASSIDY
+Class: TRAINER_CLASS_LASS
+Pic: TRAINER_PIC_LASS_FRLG
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_LOPUNNY
+Level: 53
+
+=== TRAINER_WILTON_1_SINNOH ===
+Name: WAYNE
+Class: TRAINER_CLASS_YOUNGSTER
+Pic: TRAINER_PIC_YOUNGSTER_FRLG
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STARAPTOR
+Level: 51
+
+SPECIES_SHELLOS
+Level: 52
+
+SPECIES_RAPIDASH
+Level: 52
+
+=== TRAINER_WILTON_2_SINNOH ===
+Name: REGINALD
+Class: TRAINER_CLASS_HIKER
+Pic: TRAINER_PIC_SINNOH_HIKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLEM
+Level: 52
+
+SPECIES_GOLEM
+Level: 52
+
+=== TRAINER_WILTON_3_SINNOH ===
+Name: TERRY
+Class: TRAINER_CLASS_COLLECTOR
+Pic: TRAINER_PIC_SINNOH_COLLECTOR
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GARCHOMP
+Level: 53
+
+=== TRAINER_WILTON_4_SINNOH ===
+Name: ANA
+Class: TRAINER_CLASS_PICNICKER
+Pic: TRAINER_PIC_PICNICKER_FRLG
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_NOCTOWL
+Level: 53
+
+=== TRAINER_WILTON_5_SINNOH ===
+Name: PARKER
+Class: TRAINER_CLASS_CAMPER
+Pic: TRAINER_PIC_CAMPER_FRLG
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_FLOATZEL
+Level: 52
+- MOVE_WATER_GUN
+- MOVE_SWIFT
+- MOVE_QUICK_ATTACK
+
+SPECIES_LUXRAY
+Level: 52
+- MOVE_SPARK
+- MOVE_BITE
+
+=== TRAINER_BROOKE_1_SINNOH ===
+Name: GERALD
+Class: TRAINER_CLASS_RUIN_MANIAC
+Pic: TRAINER_PIC_SINNOH_RUIN_MANIAC
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLEM
+Level: 52
+
+SPECIES_BRONZONG
+Level: 52
+
+=== TRAINER_BROOKE_2_SINNOH ===
+Name: LORENZO
+Class: TRAINER_CLASS_HIKER
+Pic: TRAINER_PIC_SINNOH_HIKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STEELIX
+Level: 53
+
+=== TRAINER_BROOKE_3_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TOXICROAK
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_SKUNTANK
+Level: 58
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_TOXICROAK
+Level: 58
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_BROOKE_4_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CROBAT
+Level: 59
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_BROOKE_5_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_HONCHKROW
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_PURUGLY
+Level: 58
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_HONCHKROW
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_VALERIE_1_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SKUNTANK
+Level: 59
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_VALERIE_2_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_HONCHKROW
+Level: 59
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_VALERIE_3_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SKUNTANK
+Level: 58
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_CROBAT
+Level: 58
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_VALERIE_4_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_HOUNDOOM
+Level: 58
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_CROBAT
+Level: 58
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_HOUNDOOM
+Level: 58
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_VALERIE_5_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_HOUNDOOM
+Level: 58
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_PURUGLY
+Level: 58
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_CINDY_1_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PURUGLY
+Level: 58
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_CROBAT
+Level: 58
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_GRUNT_SPACE_CENTER_2_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CROBAT
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_TOXICROAK
+Level: 58
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_HONCHKROW
+Level: 58
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_BENJAMIN_3_SINNOH ===
+Name: SATURN
+Class: TRAINER_CLASS_GALACTIC_COMMANDER
+Pic: TRAINER_PIC_SINNOH_COMMANDER_SATURN
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CROBAT
+Level: 57
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_AIR_CUTTER
+- MOVE_BITE
+- MOVE_TOXIC
+- MOVE_SUPERSONIC
+
+SPECIES_BRONZONG
+Level: 57
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_GYRO_BALL
+- MOVE_SHADOW_BALL
+- MOVE_ROCK_TOMB
+- MOVE_IRON_DEFENSE
+
+SPECIES_TOXICROAK @ ITEM_SITRUS_BERRY
+Level: 58
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_POISON_JAB
+- MOVE_REVENGE
+- MOVE_MUD_BOMB
+- MOVE_FEINT_ATTACK
+
+=== TRAINER_CINDY_5_SINNOH ===
+Name: BRYCE
+Class: TRAINER_CLASS_PSYCHIC
+Pic: TRAINER_PIC_SINNOH_PSYCHIC_M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GENGAR
+Level: 59
+
+SPECIES_GARDEVOIR
+Level: 59
+
+SPECIES_GENGAR
+Level: 59
+
+=== TRAINER_CINDY_6_SINNOH ===
+Name: MILES
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MACHAMP
+Level: 60
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_JESSICA_1_SINNOH ===
+Name: HANA
+Class: TRAINER_CLASS_BIRD_KEEPER
+Pic: TRAINER_PIC_SINNOH_BIRD_KEEPER
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_NOCTOWL
+Level: 59
+
+SPECIES_TOGEKISS
+Level: 60
+
+=== TRAINER_JESSICA_2_SINNOH ===
+Name: MARIAH
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BLISSEY
+Level: 59
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_DOUBLE_EDGE
+- MOVE_SING
+- MOVE_SOFT_BOILED
+- MOVE_LIGHT_SCREEN
+
+SPECIES_GLALIE
+Level: 59
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_ICE_BEAM
+- MOVE_CRUNCH
+- MOVE_HEADBUTT
+- MOVE_SHADOW_BALL
+
+SPECIES_MAGNEZONE
+Level: 60
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_DISCHARGE
+- MOVE_FLASH_CANNON
+- MOVE_THUNDER_WAVE
+- MOVE_BARRIER
+
+=== TRAINER_JESSICA_3_SINNOH ===
+Name: EDGAR
+Class: TRAINER_CLASS_VETERAN
+Pic: TRAINER_PIC_EXPERT_M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PORYGON_Z
+Level: 59
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- MOVE_HYPER_BEAM
+- MOVE_SIGNAL_BEAM
+- MOVE_PSYCHIC
+- MOVE_THUNDERBOLT
+
+SPECIES_TANGROWTH
+Level: 59
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- MOVE_POWER_WHIP
+- MOVE_MEGA_DRAIN
+- MOVE_TOXIC
+- MOVE_SLAM
+
+SPECIES_EMPOLEON
+Level: 59
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- MOVE_BRINE
+- MOVE_DRILL_PECK
+- MOVE_METAL_CLAW
+- MOVE_GROWL
+
+=== TRAINER_JESSICA_4_SINNOH ===
+Name: CLINTON
+Class: TRAINER_CLASS_DRAGON_TAMER
+Pic: TRAINER_PIC_SINNOH_DRAGON_TAMER
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GARCHOMP
+Level: 59
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+SPECIES_ALTARIA
+Level: 59
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+SPECIES_GARCHOMP
+Level: 60
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+=== TRAINER_JESSICA_5_SINNOH ===
+Name: OMAR
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MAMOSWINE
+Level: 59
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_BLIZZARD
+- MOVE_ICE_FANG
+- MOVE_ROCK_SLIDE
+- MOVE_GIGA_IMPACT
+
+SPECIES_MOTHIM
+Level: 59
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_SILVER_WIND
+- MOVE_AIR_SLASH
+- MOVE_PSYCHIC
+- MOVE_TOXIC
+
+SPECIES_RAMPARDOS
+Level: 60
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_HEAD_SMASH
+- MOVE_ZEN_HEADBUTT
+- MOVE_ANCIENT_POWER
+- MOVE_SCREECH
+
+=== TRAINER_WINSTON_1_SINNOH ===
+Name: SYDNEY
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CLEFABLE
+Level: 60
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_METEOR_MASH
+- MOVE_REFLECT
+- MOVE_LIGHT_SCREEN
+- MOVE_GRAVITY
+
+SPECIES_TORTERRA
+Level: 60
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_EARTHQUAKE
+- MOVE_CRUNCH
+- MOVE_LEECH_SEED
+- MOVE_SYNTHESIS
+
+=== TRAINER_WINSTON_2_SINNOH ===
+Name: CLAYTON
+Class: TRAINER_CLASS_VETERAN
+Pic: TRAINER_PIC_EXPERT_M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STARAPTOR
+Level: 60
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- MOVE_BRAVE_BIRD
+- MOVE_QUICK_ATTACK
+- MOVE_DOUBLE_TEAM
+- MOVE_GROWL
+
+SPECIES_LICKILICKY
+Level: 60
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- MOVE_SLAM
+- MOVE_POWER_WHIP
+- MOVE_EARTHQUAKE
+- MOVE_BRICK_BREAK
+
+=== TRAINER_WINSTON_3_SINNOH ===
+Name: AL AND KAY
+Class: TRAINER_CLASS_DOUBLE_TEAM
+Pic: TRAINER_PIC_COOL_COUPLE_FRLG
+Gender: Male
+Music: Cool
+Double Battle: Yes
+AI: Basic Trainer
+
+SPECIES_STARAPTOR
+Level: 61
+- MOVE_CLOSE_COMBAT
+- MOVE_BRAVE_BIRD
+- MOVE_GROWL
+- MOVE_QUICK_ATTACK
+
+SPECIES_AMBIPOM
+Level: 61
+- MOVE_DOUBLE_HIT
+- MOVE_AERIAL_ACE
+- MOVE_SHOCK_WAVE
+- MOVE_WATER_PULSE
+
+=== TRAINER_WINSTON_4_SINNOH ===
+Name: JO AND PAT
+Class: TRAINER_CLASS_DOUBLE_TEAM
+Pic: TRAINER_PIC_COOL_COUPLE_FRLG
+Gender: Male
+Music: Cool
+Double Battle: Yes
+AI: Basic Trainer
+
+SPECIES_LUMINEON
+Level: 61
+- MOVE_WATER_PULSE
+- MOVE_AQUA_RING
+- MOVE_CAPTIVATE
+- MOVE_SILVER_WIND
+
+SPECIES_RAPIDASH
+Level: 61
+- MOVE_FIRE_BLAST
+- MOVE_STOMP
+- MOVE_QUICK_ATTACK
+- MOVE_IRON_TAIL
+
+=== TRAINER_WINSTON_5_SINNOH ===
+Name: ONDREJ
+Class: TRAINER_CLASS_DRAGON_TAMER
+Pic: TRAINER_PIC_SINNOH_DRAGON_TAMER
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ALTARIA
+Level: 59
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+SPECIES_GARCHOMP
+Level: 60
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+=== TRAINER_STEVE_1_SINNOH ===
+Name: VALENCIA
+Class: TRAINER_CLASS_PSYCHIC
+Pic: TRAINER_PIC_SINNOH_PSYCHIC_F
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CHIMECHO
+Level: 59
+
+SPECIES_ABSOL
+Level: 59
+
+SPECIES_DUSKNOIR
+Level: 59
+
+=== TRAINER_THALIA_1_SINNOH ===
+Name: HENRY
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_RHYPERIOR
+Level: 60
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_STONE_EDGE
+- MOVE_EARTHQUAKE
+- MOVE_HAMMER_ARM
+- MOVE_TAKE_DOWN
+
+SPECIES_CARNIVINE
+Level: 60
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_WRING_OUT
+- MOVE_CRUNCH
+- MOVE_FEINT_ATTACK
+- MOVE_INGRAIN
+
+=== TRAINER_STEVE_2_SINNOH ===
+Name: MICAH
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_METAGROSS
+Level: 62
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_BULLET_PUNCH
+- MOVE_ZEN_HEADBUTT
+- MOVE_PURSUIT
+- MOVE_METEOR_MASH
+
+SPECIES_LUDICOLO
+Level: 62
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_WATER_PULSE
+- MOVE_ZEN_HEADBUTT
+- MOVE_ENERGY_BALL
+- MOVE_FAKE_OUT
+
+=== TRAINER_STEVE_3_SINNOH ===
+Name: BRANDI
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MAROWAK
+Level: 62
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_BONE_RUSH
+- MOVE_STONE_EDGE
+- MOVE_SWORDS_DANCE
+- MOVE_ENDEAVOR
+
+SPECIES_KANGASKHAN
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_DIZZY_PUNCH
+- MOVE_CRUNCH
+- MOVE_OUTRAGE
+- MOVE_EARTHQUAKE
+
+=== TRAINER_STEVE_4_SINNOH ===
+Name: DESIREE
+Class: TRAINER_CLASS_PSYCHIC
+Pic: TRAINER_PIC_SINNOH_PSYCHIC_F
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MR_MIME
+Level: 62
+- MOVE_PSYCHIC
+- MOVE_REFLECT
+- MOVE_LIGHT_SCREEN
+- MOVE_DRAIN_PUNCH
+
+SPECIES_MISMAGIUS
+Level: 62
+- MOVE_SHADOW_BALL
+- MOVE_MAGICAL_LEAF
+- MOVE_AERIAL_ACE
+- MOVE_SHOCK_WAVE
+
+=== TRAINER_STEVE_5_SINNOH ===
+Name: LANDON
+Class: TRAINER_CLASS_PSYCHIC
+Pic: TRAINER_PIC_SINNOH_PSYCHIC_M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BANETTE
+Level: 61
+- MOVE_SHADOW_BALL
+- MOVE_WILL_O_WISP
+- MOVE_SUCKER_PUNCH
+- MOVE_CONFUSE_RAY
+
+SPECIES_ALAKAZAM
+Level: 62
+- MOVE_PSYCHIC
+- MOVE_FUTURE_SIGHT
+- MOVE_RECOVER
+- MOVE_FOCUS_BLAST
+
+=== TRAINER_TONY_1_SINNOH ===
+Name: EDDIE
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ANNIHILAPE
+Level: 61
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_MACHAMP
+Level: 61
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_INFERNAPE
+Level: 62
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_TONY_2_SINNOH ===
+Name: TERRELL
+Class: TRAINER_CLASS_VETERAN
+Pic: TRAINER_PIC_EXPERT_M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PARASECT
+Level: 61
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- MOVE_X_SCISSOR
+- MOVE_GIGA_DRAIN
+- MOVE_SPORE
+- MOVE_SLASH
+
+SPECIES_RHYPERIOR
+Level: 62
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- MOVE_HAMMER_ARM
+- MOVE_STONE_EDGE
+- MOVE_EARTHQUAKE
+- MOVE_MEGAHORN
+
+SPECIES_MAGMORTAR
+Level: 62
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- MOVE_FIRE_BLAST
+- MOVE_CONFUSE_RAY
+- MOVE_IRON_TAIL
+- MOVE_FOCUS_BLAST
+
+=== TRAINER_TONY_3_SINNOH ===
+Name: ARTHUR
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GASTRODON
+Level: 62
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_MUDDY_WATER
+- MOVE_RECOVER
+- MOVE_TOXIC
+- MOVE_WATER_PULSE
+
+SPECIES_BEEDRILL
+Level: 62
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_POISON_JAB
+- MOVE_U_TURN
+- MOVE_AERIAL_ACE
+- MOVE_SWORDS_DANCE
+
+SPECIES_ELECTRODE
+Level: 62
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_THUNDERBOLT
+- MOVE_HYPER_BEAM
+- MOVE_ENDURE
+- MOVE_EXPLOSION
+
+=== TRAINER_TONY_4_SINNOH ===
+Name: CLARICE
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SWALOT
+Level: 61
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_GUNK_SHOT
+- MOVE_YAWN
+- MOVE_BODY_SLAM
+- MOVE_PROTECT
+
+SPECIES_NINETALES
+Level: 62
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_WILL_O_WISP
+- MOVE_FLAMETHROWER
+- MOVE_DARK_PULSE
+- MOVE_EXTRASENSORY
+
+SPECIES_MAGNEZONE
+Level: 62
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_FLASH_CANNON
+- MOVE_MIRROR_COAT
+- MOVE_DISCHARGE
+- MOVE_HYPER_BEAM
+
+=== TRAINER_TONY_5_SINNOH ===
+Name: DEANDRE
+Class: TRAINER_CLASS_PSYCHIC
+Pic: TRAINER_PIC_SINNOH_PSYCHIC_M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_DUSKNOIR
+Level: 62
+- MOVE_SHADOW_PUNCH
+- MOVE_FIRE_PUNCH
+- MOVE_ICE_PUNCH
+- MOVE_THUNDER_PUNCH
+
+=== TRAINER_NOB_1_SINNOH ===
+Name: KENDRA
+Class: TRAINER_CLASS_PSYCHIC
+Pic: TRAINER_PIC_SINNOH_PSYCHIC_F
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CHIMECHO
+Level: 61
+- MOVE_EXTRASENSORY
+- MOVE_SHADOW_BALL
+- MOVE_ENERGY_BALL
+- MOVE_CHARGE_BEAM
+
+SPECIES_GENGAR
+Level: 61
+- MOVE_SHADOW_PUNCH
+- MOVE_DARK_PULSE
+- MOVE_CONFUSE_RAY
+- MOVE_TOXIC
+
+SPECIES_GENGAR
+Level: 62
+- MOVE_SHADOW_BALL
+- MOVE_DARK_PULSE
+- MOVE_FRUSTRATION
+- MOVE_SLUDGE_BOMB
+
+=== TRAINER_NOB_2_SINNOH ===
+Name: AUTUMN
+Class: TRAINER_CLASS_BIRD_KEEPER
+Pic: TRAINER_PIC_SINNOH_BIRD_KEEPER
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_HONCHKROW
+Level: 62
+
+SPECIES_XATU
+Level: 62
+
+=== TRAINER_NOB_3_SINNOH ===
+Name: JOE
+Class: TRAINER_CLASS_DRAGON_TAMER
+Pic: TRAINER_PIC_SINNOH_DRAGON_TAMER
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_DRAGONITE
+Level: 61
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+SPECIES_GARCHOMP
+Level: 62
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+=== TRAINER_NOB_4_SINNOH ===
+Name: WILLIE
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_HERACROSS
+Level: 62
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_MACHAMP
+Level: 62
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_NOB_5_SINNOH ===
+Name: BRENDEN
+Class: TRAINER_CLASS_VETERAN
+Pic: TRAINER_PIC_EXPERT_M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_FORRETRESS
+Level: 62
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- MOVE_FLASH_CANNON
+- MOVE_ROCK_SLIDE
+- MOVE_STEALTH_ROCK
+- MOVE_TOXIC_SPIKES
+
+SPECIES_GYARADOS
+Level: 62
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- MOVE_EARTHQUAKE
+- MOVE_AQUA_TAIL
+- MOVE_ICE_FANG
+- MOVE_DRAGON_PULSE
+
+SPECIES_HIPPOWDON
+Level: 62
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- MOVE_DIG
+- MOVE_CRUNCH
+- MOVE_PROTECT
+- MOVE_REST
+
+=== TRAINER_TIMOTHY_1_SINNOH ===
+Name: OLIVER
+Class: TRAINER_CLASS_YOUNGSTER
+Pic: TRAINER_PIC_YOUNGSTER_FRLG
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MOTHIM
+Level: 52
+
+SPECIES_WHISCASH
+Level: 52
+
+SPECIES_CHATOT
+Level: 52
+
+=== TRAINER_TIMOTHY_2_SINNOH ===
+Name: LEONARD
+Class: TRAINER_CLASS_POKEFAN
+Pic: TRAINER_PIC_SINNOH_POKEFAN_M
+Gender: Male
+Music: Twins
+Items: ITEM_FULL_HEAL / ITEM_SUPER_POTION
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_RAICHU @ ITEM_SITRUS_BERRY
+Level: 52
+
+SPECIES_RAICHU @ ITEM_SITRUS_BERRY
+Level: 52
+
+SPECIES_RAICHU @ ITEM_SITRUS_BERRY
+Level: 53
+
+=== TRAINER_TIMOTHY_3_SINNOH ===
+Name: KIRBY
+Class: TRAINER_CLASS_BIKER_FRLG
+Pic: TRAINER_PIC_BIKER_FRLG
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CLEFABLE
+Level: 53
+
+=== TRAINER_TIMOTHY_4_SINNOH ===
+Name: REBEKAH
+Class: TRAINER_CLASS_POKEFAN
+Pic: TRAINER_PIC_SINNOH_POKEFAN_F
+Gender: Female
+Music: Twins
+Items: ITEM_FULL_HEAL / ITEM_SUPER_POTION
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SUDOWOODO @ ITEM_SITRUS_BERRY
+Level: 53
+
+=== TRAINER_TIMOTHY_5_SINNOH ===
+Name: MIKE AND N
+Class: TRAINER_CLASS_YOUNG_COUPLE
+Pic: TRAINER_PIC_YOUNG_COUPLE_FRLG
+Gender: Female
+Music: Girl
+Double Battle: Yes
+AI: Basic Trainer
+
+SPECIES_HONCHKROW
+Level: 53
+
+SPECIES_MISMAGIUS
+Level: 53
+
+=== TRAINER_SHELBY_1_SINNOH ===
+Name: BETH AND B
+Class: TRAINER_CLASS_BELLE_AND_PA
+Pic: TRAINER_PIC_SR_AND_JR
+Gender: Female
+Music: Twins
+Double Battle: Yes
+AI: Basic Trainer
+
+SPECIES_RAPIDASH
+Level: 53
+
+SPECIES_RAPIDASH
+Level: 53
+
+=== TRAINER_SOPHIE_SINNOH ===
+Name: MARS
+Class: TRAINER_CLASS_GALACTIC_COMMANDER
+Pic: TRAINER_PIC_SINNOH_COMMANDER_MARS
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BRONZONG
+Level: 63
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_GYRO_BALL
+- MOVE_EXTRASENSORY
+- MOVE_LIGHT_SCREEN
+- MOVE_CONFUSE_RAY
+
+SPECIES_CROBAT
+Level: 63
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_AIR_CUTTER
+- MOVE_BITE
+- MOVE_POISON_FANG
+- MOVE_CONFUSE_RAY
+
+SPECIES_PURUGLY @ ITEM_SITRUS_BERRY
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_SLASH
+- MOVE_SHADOW_CLAW
+- MOVE_AERIAL_ACE
+- MOVE_HYPNOSIS
+
+=== TRAINER_COBY_SINNOH ===
+Name: JUPITER
+Class: TRAINER_CLASS_GALACTIC_COMMANDER
+Pic: TRAINER_PIC_SINNOH_COMMANDER_JUPITER
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BRONZONG
+Level: 63
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_GYRO_BALL
+- MOVE_EXTRASENSORY
+- MOVE_ROCK_SLIDE
+- MOVE_REFLECT
+
+SPECIES_CROBAT
+Level: 63
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_SLUDGE_BOMB
+- MOVE_AIR_CUTTER
+- MOVE_GIGA_DRAIN
+- MOVE_MEAN_LOOK
+
+SPECIES_SKUNTANK @ ITEM_SITRUS_BERRY
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_NIGHT_SLASH
+- MOVE_POISON_JAB
+- MOVE_FLAMETHROWER
+- MOVE_SMOKESCREEN
+
+=== TRAINER_DALTON_1_SINNOH ===
+Name: KEENAN
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ANNIHILAPE
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+SPECIES_ELECTIVIRE
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+SPECIES_BANETTE
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+=== TRAINER_DALTON_2_SINNOH ===
+Name: KASSANDRA
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_JUMPLUFF
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_MEMENTO
+- MOVE_GIGA_DRAIN
+- MOVE_TOXIC
+- MOVE_BOUNCE
+
+SPECIES_STEELIX
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_STONE_EDGE
+- MOVE_EARTHQUAKE
+- MOVE_IRON_TAIL
+- MOVE_DRAGON_BREATH
+
+SPECIES_AMPHAROS
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_THUNDER_PUNCH
+- MOVE_POWER_GEM
+- MOVE_SIGNAL_BEAM
+- MOVE_FIRE_PUNCH
+
+=== TRAINER_BERNIE_4_SINNOH ===
+Name: STEFAN
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TYRANITAR
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+SPECIES_TORTERRA
+Level: 64
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+=== TRAINER_BERNIE_5_SINNOH ===
+Name: JASMIN
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_DRAPION
+Level: 64
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_CROSS_POISON
+- MOVE_CRUNCH
+- MOVE_X_SCISSOR
+- MOVE_AERIAL_ACE
+
+=== TRAINER_ETHAN_1_SINNOH ===
+Name: DRAKE
+Class: TRAINER_CLASS_DRAGON_TAMER
+Pic: TRAINER_PIC_SINNOH_DRAGON_TAMER
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GARCHOMP
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+SPECIES_GARCHOMP
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+SPECIES_DRAGONITE
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+=== TRAINER_ETHAN_2_SINNOH ===
+Name: JARRETT
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MACHAMP
+Level: 64
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+- MOVE_CROSS_CHOP
+- MOVE_FIRE_PUNCH
+- MOVE_ICE_PUNCH
+- MOVE_THUNDER_PUNCH
+
+=== TRAINER_DALTON_3_SINNOH ===
+Name: SKYLAR
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_EXPLOUD
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_HYPER_VOICE
+- MOVE_BITE
+- MOVE_SUPERSONIC
+- MOVE_SCREECH
+
+SPECIES_RAMPARDOS
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_HEAD_SMASH
+- MOVE_ZEN_HEADBUTT
+- MOVE_ANCIENT_POWER
+- MOVE_SCREECH
+
+SPECIES_PELIPPER
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_AIR_SLASH
+- MOVE_WATER_PULSE
+- MOVE_ROOST
+- MOVE_QUICK_ATTACK
+
+=== TRAINER_DALTON_4_SINNOH ===
+Name: NATASHA
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_WIGGLYTUFF
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_HYPER_VOICE
+- MOVE_REFLECT
+- MOVE_LIGHT_SCREEN
+- MOVE_SHADOW_BALL
+
+SPECIES_GARDEVOIR
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_PSYCHIC
+- MOVE_MAGICAL_LEAF
+- MOVE_CALM_MIND
+- MOVE_FOCUS_BLAST
+
+SPECIES_MEDICHAM
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_RECOVER
+- MOVE_FORCE_PALM
+- MOVE_PSYCHIC
+- MOVE_ROCK_SLIDE
+
+=== TRAINER_DALTON_5_SINNOH ===
+Name: CHELSEY
+Class: TRAINER_CLASS_PSYCHIC
+Pic: TRAINER_PIC_SINNOH_PSYCHIC_F
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_LUNATONE
+Level: 63
+
+SPECIES_GARDEVOIR
+Level: 63
+
+=== TRAINER_BERNIE_1_SINNOH ===
+Name: STERLING
+Class: TRAINER_CLASS_PSYCHIC
+Pic: TRAINER_PIC_SINNOH_PSYCHIC_M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SOLROCK
+Level: 63
+
+SPECIES_GALLADE
+Level: 63
+
+=== TRAINER_BERNIE_2_SINNOH ===
+Name: KRYSTAL
+Class: TRAINER_CLASS_BIRD_KEEPER
+Pic: TRAINER_PIC_SINNOH_BIRD_KEEPER
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STARAPTOR
+Level: 62
+
+SPECIES_FEAROW
+Level: 63
+
+SPECIES_NOCTOWL
+Level: 63
+
+=== TRAINER_BERNIE_3_SINNOH ===
+Name: RAY
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BRELOOM
+Level: 63
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+- MOVE_SEED_BOMB
+- MOVE_MACH_PUNCH
+- MOVE_SKY_UPPERCUT
+- MOVE_SPORE
+
+SPECIES_TOXICROAK
+Level: 63
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+- MOVE_SLUDGE_BOMB
+- MOVE_NASTY_PLOT
+- MOVE_FOCUS_BLAST
+- MOVE_DARK_PULSE
+
+=== TRAINER_ETHAN_3_SINNOH ===
+Name: ABEL
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GLALIE
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_HAIL
+- MOVE_ICE_BEAM
+- MOVE_SHEER_COLD
+- MOVE_CRUNCH
+
+SPECIES_CROBAT
+Level: 64
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_AIR_SLASH
+- MOVE_POISON_FANG
+- MOVE_CONFUSE_RAY
+- MOVE_SHADOW_BALL
+
+=== TRAINER_ETHAN_4_SINNOH ===
+Name: MONIQUE
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_LUXRAY
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_DISCHARGE
+- MOVE_CRUNCH
+- MOVE_THUNDER_WAVE
+- MOVE_FACADE
+
+SPECIES_URSALUNA
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_HAMMER_ARM
+- MOVE_STONE_EDGE
+- MOVE_SWORDS_DANCE
+- MOVE_GIGA_IMPACT
+
+SPECIES_GLISCOR
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_AERIAL_ACE
+- MOVE_X_SCISSOR
+- MOVE_EARTHQUAKE
+- MOVE_QUICK_ATTACK
+
+=== TRAINER_ETHAN_5_SINNOH ===
+Name: HARLAN
+Class: TRAINER_CLASS_VETERAN
+Pic: TRAINER_PIC_EXPERT_M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_RATICATE
+Level: 63
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- MOVE_ENDEAVOR
+- MOVE_SUPER_FANG
+- MOVE_CRUNCH
+- MOVE_QUICK_ATTACK
+
+SPECIES_DRIFBLIM
+Level: 63
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- MOVE_EXPLOSION
+- MOVE_SHADOW_BALL
+- MOVE_TOXIC
+- MOVE_FLY
+
+SPECIES_SHIFTRY
+Level: 63
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- MOVE_LEAF_STORM
+- MOVE_FEINT_ATTACK
+- MOVE_EXTRASENSORY
+- MOVE_QUICK_ATTACK
+
+=== TRAINER_JEFFREY_1_SINNOH ===
+Name: KENNY
+Class: TRAINER_CLASS_DRAGON_TAMER
+Pic: TRAINER_PIC_SINNOH_DRAGON_TAMER
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SALAMENCE
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+SPECIES_SALAMENCE
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+SPECIES_FLYGON
+Level: 63
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+=== TRAINER_GEORGE_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: Sinnoh Galactic Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CROBAT
+Level: 50
+
+=== TRAINER_BERKE_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: Sinnoh Galactic Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PURUGLY
+Level: 50
+
+SPECIES_SKUNTANK
+Level: 50
+
+=== TRAINER_GRUNT_AQUA_HIDEOUT_2_SINNOH ===
+Name: FERNANDO
+Class: TRAINER_CLASS_COLLECTOR
+Pic: TRAINER_PIC_SINNOH_COLLECTOR
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_HERACROSS
+Level: 54
+
+=== TRAINER_GRUNT_AQUA_HIDEOUT_3_SINNOH ===
+Name: EDWIN
+Class: TRAINER_CLASS_COLLECTOR
+Pic: TRAINER_PIC_SINNOH_COLLECTOR
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SNORLAX
+Level: 54
+
+=== TRAINER_GRUNT_AQUA_HIDEOUT_4_SINNOH ===
+Name: KATI
+Class: TRAINER_CLASS_LADY
+Pic: TRAINER_PIC_SINNOH_WAITRESS
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CLEFABLE
+Level: 54
+
+=== TRAINER_SAWYER_1_SINNOH ===
+Name: JANET
+Class: TRAINER_CLASS_POKE_KID
+Pic: TRAINER_PIC_SINNOH_POKE_KID
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_RAICHU
+Level: 58
+
+SPECIES_RAICHU
+Level: 58
+
+=== TRAINER_LOLA_5_SINNOH ===
+Name: DILLAN
+Class: TRAINER_CLASS_WORKER
+Pic: TRAINER_PIC_SINNOH_WORKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MACHAMP
+Level: 56
+
+SPECIES_MACHAMP
+Level: 56
+
+=== TRAINER_RICKY_1_SINNOH ===
+Name: HOLDEN
+Class: TRAINER_CLASS_WORKER
+Pic: TRAINER_PIC_SINNOH_WORKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MAGNEZONE
+Level: 55
+
+SPECIES_MAGNEZONE
+Level: 55
+
+SPECIES_MAGNEZONE
+Level: 55
+
+=== TRAINER_RICKY_2_SINNOH ===
+Name: CONRAD
+Class: TRAINER_CLASS_WORKER
+Pic: TRAINER_PIC_SINNOH_WORKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MAGMORTAR
+Level: 56
+
+=== TRAINER_DAISY_SINNOH ===
+Name: HARRISON
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STARAPTOR
+Level: 48
+
+=== TRAINER_JOHANNA_SINNOH ===
+Name: CHRISTINE
+Class: School Kid
+Pic: Sinnoh School Kid F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BIBAREL
+Level: 48
+
+=== TRAINER_JOSH_SINNOH ===
+Name: JONATHON
+Class: Youngster
+Pic: Youngster Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLEM
+Level: 50
+- Tackle
+- Defense Curl
+
+=== TRAINER_TOMMY_SINNOH ===
+Name: DARIUS
+Class: Youngster
+Pic: Youngster Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GOLEM
+Level: 49
+- Tackle
+- Defense Curl
+
+SPECIES_STEELIX
+Level: 49
+- Rock Throw
+- Tackle
+- Harden
+
+=== TRAINER_VITO_SINNOH ===
+Name: CAROLINE
+Class: Lass
+Pic: Lass Frlg
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CHERRIM_OVERCAST
+Level: 51
+
+SPECIES_ROSERADE
+Level: 51
+
+=== TRAINER_OWEN_SINNOH ===
+Name: JENNA
+Class: Aroma Lady
+Pic: Sinnoh Aroma Lady
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ROSERADE
+Level: 51
+
+SPECIES_ROSERADE
+Level: 51
+
+SPECIES_ROSERADE
+Level: 51
+
+=== TRAINER_WARREN_SINNOH ===
+Name: ANGELA
+Class: Aroma Lady
+Pic: Sinnoh Aroma Lady
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ROSERADE
+Level: 52
+
+=== TRAINER_CLARENCE_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CROBAT
+Level: 51
+
+SPECIES_SKUNTANK
+Level: 51
+
+=== TRAINER_TERRY_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CROBAT
+Level: 51
+
+SPECIES_PURUGLY
+Level: 52
+
+=== TRAINER_GRUNT_SPACE_CENTER_6_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TOXICROAK
+Level: 52
+
+=== TRAINER_GRUNT_SPACE_CENTER_7_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PURUGLY
+Level: 52
+
+=== TRAINER_BRENDAN_RUSTBORO_TREECKO_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SKUNTANK
+Level: 51
+
+SPECIES_TOXICROAK
+Level: 51
+
+SPECIES_PURUGLY
+Level: 51
+
+=== TRAINER_BRENDAN_RUSTBORO_MUDKIP_SINNOH ===
+Name: TRAVON
+Class: TRAINER_CLASS_SCIENTIST
+Pic: TRAINER_PIC_SINNOH_SCIENTIST
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ALAKAZAM
+Level: 52
+- MOVE_CONFUSION
+
+=== TRAINER_JEFFREY_4_SINNOH ===
+Name: DONNY
+Class: TRAINER_CLASS_YOUNGSTER
+Pic: TRAINER_PIC_YOUNGSTER_FRLG
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GENGAR
+Level: 52
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_SUCKER_PUNCH
+- MOVE_NIGHT_SHADE
+- MOVE_CONFUSE_RAY
+- MOVE_CURSE
+
+SPECIES_DRIFBLIM
+Level: 53
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_SPIT_UP
+- MOVE_SWALLOW
+- MOVE_STOCKPILE
+
+=== TRAINER_JEFFREY_5_SINNOH ===
+Name: MOLLY
+Class: TRAINER_CLASS_LASS
+Pic: TRAINER_PIC_LASS_FRLG
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MISMAGIUS
+Level: 53
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_PAIN_SPLIT
+- MOVE_PSYBEAM
+- MOVE_CONFUSE_RAY
+
+=== TRAINER_CAMERON_1_SINNOH ===
+Name: MACKENZIE
+Class: TRAINER_CLASS_SCHOOL_KID
+Pic: TRAINER_PIC_SINNOH_SCHOOL_KID_F
+Gender: Female
+Music: Girl
+Items: ITEM_SUPER_POTION
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_DRIFBLIM
+Level: 52
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_PAYBACK
+- MOVE_GUST
+- MOVE_ASTONISH
+- MOVE_MINIMIZE
+
+SPECIES_DRIFBLIM
+Level: 52
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_SPIT_UP
+- MOVE_SWALLOW
+- MOVE_STOCKPILE
+
+=== TRAINER_CAMERON_2_SINNOH ===
+Name: ALLEN
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GENGAR
+Level: 52
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_NIGHT_SHADE
+- MOVE_SUCKER_PUNCH
+- MOVE_CURSE
+- MOVE_CONFUSE_RAY
+
+SPECIES_GENGAR
+Level: 53
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_NIGHT_SHADE
+- MOVE_SUCKER_PUNCH
+- MOVE_HYPNOSIS
+- MOVE_CONFUSE_RAY
+
+SPECIES_GENGAR
+Level: 53
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_SHADOW_BALL
+- MOVE_CONFUSE_RAY
+- MOVE_CURSE
+- MOVE_MEAN_LOOK
+
+=== TRAINER_CAMERON_3_SINNOH ===
+Name: CHANCE
+Class: TRAINER_CLASS_SCHOOL_KID
+Pic: TRAINER_PIC_SCHOOL_KID_M
+Gender: Male
+Music: Male
+Items: ITEM_X_DEFENSE
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GENGAR
+Level: 53
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_NIGHT_SHADE
+- MOVE_SUCKER_PUNCH
+- MOVE_CONFUSE_RAY
+- MOVE_HYPNOSIS
+
+=== TRAINER_CAMERON_4_SINNOH ===
+Name: CATHERINE
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GENGAR
+Level: 53
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_NIGHT_SHADE
+- MOVE_CONFUSE_RAY
+- MOVE_SUCKER_PUNCH
+- MOVE_CURSE
+
+SPECIES_MISMAGIUS
+Level: 53
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_PSYBEAM
+- MOVE_PAIN_SPLIT
+- MOVE_CONFUSE_RAY
+- MOVE_SPITE
+
+=== TRAINER_JEFFREY_3_SINNOH ===
+Name: FANTINA
+Class: TRAINER_CLASS_LEADER
+Pic: TRAINER_PIC_SINNOH_LEADER_FANTINA
+Gender: Female
+Music: Female
+Items: ITEM_SUPER_POTION / ITEM_SUPER_POTION
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_DUSKNOIR
+Level: 53
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- MOVE_WILL_O_WISP
+- MOVE_PURSUIT
+- MOVE_SHADOW_SNEAK
+- MOVE_FUTURE_SIGHT
+
+SPECIES_GENGAR
+Level: 53
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- MOVE_SHADOW_CLAW
+- MOVE_SUCKER_PUNCH
+- MOVE_HYPNOSIS
+- MOVE_CONFUSE_RAY
+
+SPECIES_MISMAGIUS @ ITEM_SITRUS_BERRY
+Level: 54
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+- MOVE_SHADOW_BALL
+- MOVE_PSYBEAM
+- MOVE_MAGICAL_LEAF
+- MOVE_CONFUSE_RAY
+
+=== TRAINER_KATELYN_1_SINNOH ===
+Name: FANTINA
+Class: TRAINER_CLASS_LEADER
+Pic: TRAINER_PIC_SINNOH_LEADER_FANTINA
+Gender: Female
+Music: Female
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_CHANDELURE
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+SPECIES_BANETTE
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_SHADOW_CLAW
+- MOVE_FEINT_ATTACK
+- MOVE_THUNDERBOLT
+- MOVE_WILL_O_WISP
+
+SPECIES_POLTEAGEIST_PHONY
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+SPECIES_HOUNDSTONE
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+SPECIES_BASCULEGION_M
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+SPECIES_GENGAR @ ITEM_SITRUS_BERRY
+Level: 65
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_SHADOW_BALL
+- MOVE_PSYCHIC
+- MOVE_FOCUS_BLAST
+- MOVE_THUNDER
+
+=== TRAINER_JACKI_1_SINNOH ===
+Name: COLBY
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MACHAMP
+Level: 53
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+- MOVE_KARATE_CHOP
+- MOVE_LEER
+- MOVE_FORESIGHT
+
+SPECIES_MACHAMP
+Level: 54
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+- MOVE_LOW_KICK
+- MOVE_FORESIGHT
+
+SPECIES_MACHAMP
+Level: 54
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+- MOVE_SUBMISSION
+- MOVE_LEER
+- MOVE_FORESIGHT
+
+=== TRAINER_CAMERON_5_SINNOH ===
+Name: MAYLENE
+Class: TRAINER_CLASS_LEADER
+Pic: TRAINER_PIC_SINNOH_LEADER_MAYLENE
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_MEDICHAM
+Level: 54
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_DRAIN_PUNCH
+- MOVE_CONFUSION
+- MOVE_ROCK_TOMB
+- MOVE_FAKE_OUT
+
+SPECIES_MACHAMP
+Level: 55
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_KARATE_CHOP
+- MOVE_ROCK_TOMB
+- MOVE_STRENGTH
+- MOVE_FOCUS_ENERGY
+
+SPECIES_LUCARIO
+Level: 55
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_DRAIN_PUNCH
+- MOVE_FORCE_PALM
+- MOVE_METAL_CLAW
+- MOVE_BONE_RUSH
+
+=== TRAINER_JACKI_2_SINNOH ===
+Name: DARREN
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MACHAMP
+Level: 54
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+- MOVE_KARATE_CHOP
+- MOVE_FORESIGHT
+
+SPECIES_MEDICHAM
+Level: 54
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+- MOVE_CONFUSION
+- MOVE_FORCE_PALM
+
+SPECIES_MACHAMP
+Level: 54
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+- MOVE_KARATE_CHOP
+- MOVE_FORESIGHT
+
+=== TRAINER_JACKI_3_SINNOH ===
+Name: JEFFERY
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_HERACROSS
+Level: 54
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+- MOVE_BRICK_BREAK
+- MOVE_AERIAL_ACE
+- MOVE_LEER
+
+=== TRAINER_BRENDEN_SINNOH ===
+Name: BRENDEN
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_MACHAMP
+Level: 50
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+=== TRAINER_JACKI_4_SINNOH ===
+Name: RAFAEL
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TOXICROAK
+Level: 54
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+- MOVE_SWAGGER
+- MOVE_REVENGE
+- MOVE_FEINT_ATTACK
+
+SPECIES_MACHAMP
+Level: 54
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+- MOVE_KARATE_CHOP
+- MOVE_FORESIGHT
+
+=== TRAINER_LILITH_SINNOH ===
+Name: LILITH
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_MEDICHAM
+Level: 50
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+
+=== TRAINER_KATELYN_2_SINNOH ===
+Name: MAYLENE
+Class: TRAINER_CLASS_LEADER
+Pic: TRAINER_PIC_SINNOH_LEADER_MAYLENE
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_PANGORO
+Level: 65
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+SPECIES_HITMONTOP
+Level: 64
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_TRIPLE_KICK
+- MOVE_AERIAL_ACE
+- MOVE_QUICK_ATTACK
+- MOVE_FAKE_OUT
+
+SPECIES_HERACROSS
+Level: 64
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+
+SPECIES_BRELOOM
+Level: 64
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_STONE_EDGE
+- MOVE_SPORE
+- MOVE_MACH_PUNCH
+- MOVE_SEED_BOMB
+
+SPECIES_MACHAMP
+Level: 65
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_CROSS_CHOP
+- MOVE_ROCK_CLIMB
+- MOVE_EARTHQUAKE
+- MOVE_STONE_EDGE
+
+SPECIES_LUCARIO
+Level: 65
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_DRAIN_PUNCH
+- MOVE_CLOSE_COMBAT
+- MOVE_EXTREME_SPEED
+- MOVE_BONE_RUSH
+
+=== TRAINER_GRUNT_SEAFLOOR_CAVERN_3_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PURUGLY
+Level: 58
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_GABRIELLE_1_SINNOH ===
+Name: FREDRICK
+Class: TRAINER_CLASS_SCIENTIST
+Pic: TRAINER_PIC_SINNOH_SCIENTIST
+Gender: Male
+Music: Suspicious
+Items: ITEM_X_DEFENSE
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GARDEVOIR
+Level: 58
+- MOVE_PSYCHIC
+- MOVE_MAGICAL_LEAF
+- MOVE_HYPNOSIS
+- MOVE_FUTURE_SIGHT
+
+SPECIES_ALAKAZAM
+Level: 58
+- MOVE_PSYCHIC
+- MOVE_PSYCHO_CUT
+- MOVE_THUNDER_WAVE
+- MOVE_RECOVER
+
+=== TRAINER_GRUNT_SEAFLOOR_CAVERN_4_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PURUGLY
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_HONCHKROW
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_TOXICROAK
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_GRUNT_WEATHER_INST_2_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CROBAT
+Level: 58
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_CROBAT
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_GRUNT_WEATHER_INST_3_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CROBAT
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_HOUNDOOM
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_GRUNT_MUSEUM_2_SINNOH ===
+Name: DARRIUS
+Class: TRAINER_CLASS_SCIENTIST
+Pic: TRAINER_PIC_SINNOH_SCIENTIST
+Gender: Male
+Music: Suspicious
+Items: ITEM_X_SP_ATK
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PORYGON_Z
+Level: 58
+- MOVE_PSYCHIC
+- MOVE_SIGNAL_BEAM
+- MOVE_ICE_BEAM
+- MOVE_TRI_ATTACK
+
+=== TRAINER_GRUNT_MT_PYRE_2_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_HONCHKROW
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_SKUNTANK
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_GRUNT_MT_PYRE_3_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SKUNTANK
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_TOXICROAK
+Level: 58
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_GRUNT_WEATHER_INST_4_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_TOXICROAK
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_SKUNTANK
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_PURUGLY
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_GRUNT_AQUA_HIDEOUT_5_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SKUNTANK
+Level: 58
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_ROSE_1_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CROBAT
+Level: 58
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_ROSE_2_SINNOH ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_HOUNDOOM
+Level: 57
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+SPECIES_HONCHKROW
+Level: 58
+IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
+
+=== TRAINER_ABIGAIL_4_SINNOH ===
+Name: SATURN
+Class: TRAINER_CLASS_GALACTIC_COMMANDER
+Pic: TRAINER_PIC_SINNOH_COMMANDER_SATURN
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_CROBAT
+Level: 58
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_AIR_CUTTER
+- MOVE_BITE
+- MOVE_POISON_FANG
+- MOVE_CONFUSE_RAY
+
+SPECIES_BRONZONG
+Level: 58
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_GYRO_BALL
+- MOVE_EXTRASENSORY
+- MOVE_SHADOW_BALL
+- MOVE_CONFUSE_RAY
+
+SPECIES_TOXICROAK @ ITEM_SITRUS_BERRY
+Level: 59
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_POISON_JAB
+- MOVE_BRICK_BREAK
+- MOVE_X_SCISSOR
+- MOVE_FEINT_ATTACK
+
+=== TRAINER_WALTER_1_SINNOH ===
+Name: JACKY
+Class: TRAINER_CLASS_TUBER_M
+Pic: TRAINER_PIC_TUBER_M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BIBAREL
+Level: 55
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_WATER_GUN
+- MOVE_ROLLOUT
+- MOVE_HYPER_FANG
+- MOVE_YAWN
+
+=== TRAINER_WALTER_2_SINNOH ===
+Name: DAMIAN
+Class: TRAINER_CLASS_SAILOR
+Pic: TRAINER_PIC_SAILOR_FRLG
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PELIPPER
+Level: 55
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_WATER_PULSE
+- MOVE_WING_ATTACK
+- MOVE_QUICK_ATTACK
+
+SPECIES_PELIPPER
+Level: 55
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_WATER_PULSE
+- MOVE_WING_ATTACK
+- MOVE_QUICK_ATTACK
+
+=== TRAINER_WALTER_3_SINNOH ===
+Name: CAITLYN
+Class: TRAINER_CLASS_TUBER_F
+Pic: TRAINER_PIC_TUBER_F_FRLG
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_AZUMARILL
+Level: 54
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_WATER_GUN
+- MOVE_SLAM
+- MOVE_CHARM
+
+SPECIES_AZUMARILL
+Level: 55
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_BUBBLE_BEAM
+- MOVE_ROLLOUT
+- MOVE_DEFENSE_CURL
+- MOVE_AQUA_RING
+
+SPECIES_AZUMARILL
+Level: 55
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_BUBBLE_BEAM
+- MOVE_DOUBLE_EDGE
+- MOVE_ROLLOUT
+- MOVE_AQUA_RING
+
+=== TRAINER_WALTER_4_SINNOH ===
+Name: SAMSON
+Class: TRAINER_CLASS_SAILOR
+Pic: TRAINER_PIC_SAILOR_FRLG
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PELIPPER
+Level: 55
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_WATER_PULSE
+- MOVE_WING_ATTACK
+- MOVE_SUPERSONIC
+
+SPECIES_SHELLOS
+Level: 55
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_WATER_PULSE
+- MOVE_MUD_BOMB
+- MOVE_RAIN_DANCE
+
+SPECIES_GOLDUCK
+Level: 55
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_FURY_SWIPES
+- MOVE_CONFUSION
+- MOVE_WATER_PULSE
+
+=== TRAINER_WALTER_5_SINNOH ===
+Name: ERICK
+Class: TRAINER_CLASS_FISHERMAN
+Pic: TRAINER_PIC_FISHERMAN_FRLG
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SEAKING
+Level: 54
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_WATER_PULSE
+- MOVE_PECK
+- MOVE_FLAIL
+- MOVE_SUPERSONIC
+
+SPECIES_SEAKING
+Level: 55
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_WATER_PULSE
+- MOVE_FURY_ATTACK
+- MOVE_FLAIL
+- MOVE_SUPERSONIC
+
+SPECIES_GYARADOS
+Level: 55
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_THRASH
+- MOVE_BITE
+
+=== TRAINER_JERRY_1_SINNOH ===
+Name: WALTER
+Class: TRAINER_CLASS_FISHERMAN
+Pic: TRAINER_PIC_FISHERMAN_FRLG
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_WHISCASH
+Level: 56
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_WATER_PULSE
+- MOVE_MAGNITUDE
+
+=== TRAINER_JACKI_5_SINNOH ===
+Name: WAKE
+Class: TRAINER_CLASS_LEADER
+Pic: TRAINER_PIC_SINNOH_LEADER_WAKE
+Gender: Male
+Music: Male
+Items: ITEM_HYPER_POTION / ITEM_HYPER_POTION
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_GYARADOS
+Level: 56
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- MOVE_WATERFALL
+- MOVE_BRINE
+- MOVE_BITE
+- MOVE_TWISTER
+
+SPECIES_QUAGSIRE
+Level: 56
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- MOVE_MUD_SHOT
+- MOVE_ROCK_TOMB
+- MOVE_WATER_PULSE
+- MOVE_YAWN
+
+SPECIES_FLOATZEL @ ITEM_SITRUS_BERRY
+Level: 57
+IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
+- MOVE_BRINE
+- MOVE_ICE_FANG
+- MOVE_CRUNCH
+- MOVE_AQUA_JET
+
+=== TRAINER_KATELYN_3_SINNOH ===
+Name: WAKE
+Class: TRAINER_CLASS_LEADER
+Pic: TRAINER_PIC_SINNOH_LEADER_WAKE
+Gender: Male
+Music: Male
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_CARRACOSTA
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+SPECIES_SHARPEDO
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_AQUA_JET
+- MOVE_NIGHT_SLASH
+- MOVE_SLASH
+- MOVE_ENDURE
+
+SPECIES_QUAGSIRE
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_EARTHQUAKE
+- MOVE_STONE_EDGE
+- MOVE_YAWN
+- MOVE_SURF
+
+SPECIES_GYARADOS
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_AQUA_TAIL
+- MOVE_AVALANCHE
+- MOVE_BITE
+- MOVE_GIGA_IMPACT
+
+SPECIES_FLOATZEL
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_BRINE
+- MOVE_ICE_FANG
+- MOVE_CRUNCH
+- MOVE_AQUA_JET
+
+SPECIES_LUDICOLO @ ITEM_SITRUS_BERRY
+Level: 65
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_SURF
+- MOVE_ICE_BEAM
+- MOVE_ENERGY_BALL
+- MOVE_FOCUS_BLAST
+
+=== TRAINER_ELLIOT_2_SINNOH ===
+Name: CYRUS
+Class: TRAINER_CLASS_BOSS_FRLG
+Pic: TRAINER_PIC_SINNOH_GALACTIC_BOSS_CYRUS
+Gender: Male
+Music: Aqua
+Items: ITEM_HYPER_POTION
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_WEAVILE
+Level: 56
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_SLASH
+- MOVE_ICE_PUNCH
+- MOVE_QUICK_ATTACK
+- MOVE_SCREECH
+
+SPECIES_CROBAT
+Level: 56
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_POISON_FANG
+- MOVE_AIR_CUTTER
+- MOVE_BITE
+- MOVE_SUPERSONIC
+
+SPECIES_HONCHKROW @ ITEM_SITRUS_BERRY
+Level: 57
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_DRILL_PECK
+- MOVE_NIGHT_SHADE
+- MOVE_ASTONISH
+- MOVE_FEINT_ATTACK
+
+=== TRAINER_JERRY_3_SINNOH ===
+Name: DAVID
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STEELIX
+Level: 56
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+- MOVE_IRON_TAIL
+- MOVE_ROCK_SLIDE
+- MOVE_SANDSTORM
+- MOVE_SCREECH
+
+SPECIES_STEELIX
+Level: 57
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+- MOVE_IRON_TAIL
+- MOVE_ROCK_SLIDE
+- MOVE_SANDSTORM
+- MOVE_SCREECH
+
+=== TRAINER_JERRY_4_SINNOH ===
+Name: JACKSON
+Class: TRAINER_CLASS_WORKER
+Pic: TRAINER_PIC_SINNOH_WORKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MAGNEZONE
+Level: 56
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_MAGNET_BOMB
+- MOVE_SPARK
+- MOVE_THUNDER_WAVE
+
+SPECIES_MAGNEZONE
+Level: 56
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_MAGNET_BOMB
+- MOVE_SPARK
+- MOVE_THUNDER_WAVE
+
+SPECIES_MAGNEZONE
+Level: 56
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_MAGNET_BOMB
+- MOVE_SPARK
+- MOVE_THUNDER_WAVE
+
+=== TRAINER_JERRY_5_SINNOH ===
+Name: GARY
+Class: TRAINER_CLASS_WORKER
+Pic: TRAINER_PIC_SINNOH_WORKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MAGNEZONE
+Level: 57
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_SPARK
+- MOVE_MAGNET_BOMB
+
+=== TRAINER_KAREN_1_SINNOH ===
+Name: RICKY
+Class: TRAINER_CLASS_BLACK_BELT
+Pic: TRAINER_PIC_BLACK_BELT_FRLG
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_STEELIX
+Level: 57
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+- MOVE_IRON_TAIL
+- MOVE_TAUNT
+- MOVE_TORMENT
+- MOVE_SCREECH
+
+=== TRAINER_KAREN_2_SINNOH ===
+Name: CESAR
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SCIZOR
+Level: 58
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_METAL_CLAW
+- MOVE_X_SCISSOR
+- MOVE_SLASH
+- MOVE_PURSUIT
+
+=== TRAINER_KAREN_3_SINNOH ===
+Name: GERARDO
+Class: TRAINER_CLASS_WORKER
+Pic: TRAINER_PIC_SINNOH_WORKER
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MAGNEZONE
+Level: 56
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_SUPERSONIC
+- MOVE_MAGNET_BOMB
+- MOVE_SPARK
+
+SPECIES_MAGNEZONE
+Level: 56
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_THUNDER_WAVE
+- MOVE_MAGNET_BOMB
+- MOVE_SPARK
+
+=== TRAINER_KAREN_4_SINNOH ===
+Name: BREANNA
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_BRONZONG
+Level: 56
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_GYRO_BALL
+- MOVE_EXTRASENSORY
+- MOVE_CONFUSE_RAY
+
+SPECIES_BRONZONG
+Level: 57
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_GYRO_BALL
+- MOVE_EXTRASENSORY
+- MOVE_CONFUSE_RAY
+
+SPECIES_BRONZONG
+Level: 57
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_GYRO_BALL
+- MOVE_EXTRASENSORY
+- MOVE_CONFUSE_RAY
+
+=== TRAINER_JERRY_2_SINNOH ===
+Name: BYRON
+Class: TRAINER_CLASS_LEADER
+Pic: TRAINER_PIC_SINNOH_LEADER_BYRON
+Gender: Male
+Music: Male
+Items: ITEM_HYPER_POTION / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_MAGNEZONE
+Level: 57
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_FLASH_CANNON
+- MOVE_THUNDERBOLT
+- MOVE_TRI_ATTACK
+- MOVE_METAL_SOUND
+
+SPECIES_STEELIX
+Level: 57
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_FLASH_CANNON
+- MOVE_ICE_FANG
+- MOVE_EARTHQUAKE
+- MOVE_SANDSTORM
+
+SPECIES_BASTIODON @ ITEM_SITRUS_BERRY
+Level: 58
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_METAL_BURST
+- MOVE_STONE_EDGE
+- MOVE_IRON_DEFENSE
+- MOVE_TAUNT
+
+=== TRAINER_KATELYN_4_SINNOH ===
+Name: BYRON
+Class: TRAINER_CLASS_LEADER
+Pic: TRAINER_PIC_SINNOH_LEADER_BYRON
+Gender: Male
+Music: Male
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_KLEFKI
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+SPECIES_SKARMORY
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_NIGHT_SLASH
+- MOVE_DRILL_PECK
+- MOVE_ROCK_TOMB
+- MOVE_STEALTH_ROCK
+
+SPECIES_STEELIX
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_GYRO_BALL
+- MOVE_ICE_FANG
+- MOVE_DRAGON_BREATH
+- MOVE_SANDSTORM
+
+SPECIES_MAGNEZONE
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_FLASH_CANNON
+- MOVE_THUNDERBOLT
+- MOVE_SUPERSONIC
+- MOVE_THUNDER_WAVE
+
+SPECIES_BASTIODON
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_METAL_BURST
+- MOVE_ANCIENT_POWER
+- MOVE_IRON_DEFENSE
+- MOVE_REST
+
+SPECIES_AGGRON @ ITEM_SITRUS_BERRY
+Level: 65
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_METAL_BURST
+- MOVE_STONE_EDGE
+- MOVE_EARTHQUAKE
+- MOVE_AVALANCHE
+
+=== TRAINER_KAREN_5_SINNOH ===
+Name: CANDICE
+Class: TRAINER_CLASS_LEADER
+Pic: TRAINER_PIC_SINNOH_LEADER_CANDICE
+Gender: Female
+Music: Female
+Items: ITEM_HYPER_POTION / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_WEAVILE
+Level: 58
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_SLASH
+- MOVE_AERIAL_ACE
+- MOVE_FEINT_ATTACK
+- MOVE_ICE_SHARD
+
+SPECIES_MAMOSWINE
+Level: 58
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_AVALANCHE
+- MOVE_STONE_EDGE
+- MOVE_EARTHQUAKE
+- MOVE_HAIL
+
+SPECIES_ABOMASNOW
+Level: 58
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_AVALANCHE
+- MOVE_WOOD_HAMMER
+- MOVE_WATER_PULSE
+- MOVE_FOCUS_BLAST
+
+SPECIES_FROSLASS @ ITEM_SITRUS_BERRY
+Level: 59
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_BLIZZARD
+- MOVE_DOUBLE_TEAM
+- MOVE_SHADOW_BALL
+- MOVE_PSYCHIC
+
+=== TRAINER_ANNA_AND_MEG_1_SINNOH ===
+Name: ANTON
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_SNOW_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GLALIE
+Level: 59
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_ICE_BEAM
+- MOVE_CRUNCH
+
+=== TRAINER_ANNA_AND_MEG_2_SINNOH ===
+Name: SAVANNAH
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_SNOW_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_GLALIE
+Level: 57
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_ICE_FANG
+- MOVE_CRUNCH
+- MOVE_HAIL
+- MOVE_PROTECT
+
+SPECIES_GLALIE
+Level: 58
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_ICE_FANG
+- MOVE_CRUNCH
+- MOVE_HAIL
+- MOVE_PROTECT
+
+SPECIES_GLALIE
+Level: 58
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_ICE_FANG
+- MOVE_CRUNCH
+- MOVE_HAIL
+- MOVE_PROTECT
+
+=== TRAINER_ANNA_AND_MEG_3_SINNOH ===
+Name: ALICIA
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_SNOW_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_WEAVILE
+Level: 58
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_ICY_WIND
+- MOVE_SLASH
+- MOVE_SCREECH
+- MOVE_FEINT_ATTACK
+
+SPECIES_WEAVILE
+Level: 59
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_ICY_WIND
+- MOVE_SLASH
+- MOVE_SCREECH
+- MOVE_FEINT_ATTACK
+
+=== TRAINER_ANNA_AND_MEG_4_SINNOH ===
+Name: ISAIAH
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_SNOW_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MAMOSWINE
+Level: 59
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_EARTHQUAKE
+- MOVE_FURY_ATTACK
+- MOVE_ICE_FANG
+- MOVE_ANCIENT_POWER
+
+=== TRAINER_ANNA_AND_MEG_5_SINNOH ===
+Name: BRENNA
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_SNOW_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_WEAVILE
+Level: 58
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_ICE_SHARD
+- MOVE_SLASH
+- MOVE_FEINT_ATTACK
+- MOVE_QUICK_ATTACK
+
+SPECIES_GLALIE
+Level: 58
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_ICE_FANG
+- MOVE_CRUNCH
+- MOVE_HAIL
+
+SPECIES_ABOMASNOW
+Level: 58
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+- MOVE_ICE_SHARD
+- MOVE_WOOD_HAMMER
+- MOVE_INGRAIN
+- MOVE_GRASS_WHISTLE
+
+=== TRAINER_MIGUEL_1_SINNOH ===
+Name: SERGIO
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_SNOW_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ABOMASNOW
+Level: 58
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_ICE_SHARD
+- MOVE_SWAGGER
+- MOVE_ICY_WIND
+- MOVE_WOOD_HAMMER
+
+SPECIES_WEAVILE
+Level: 58
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_ICY_WIND
+- MOVE_SLASH
+- MOVE_FEINT_ATTACK
+- MOVE_QUICK_ATTACK
+
+=== TRAINER_KATELYN_5_SINNOH ===
+Name: CANDICE
+Class: TRAINER_CLASS_LEADER
+Pic: TRAINER_PIC_SINNOH_LEADER_CANDICE
+Gender: Female
+Music: Female
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_ARCTOVISH
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+SPECIES_WEAVILE
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_AVALANCHE
+- MOVE_SLASH
+- MOVE_FEINT_ATTACK
+- MOVE_TAUNT
+
+SPECIES_MAMOSWINE
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_AVALANCHE
+- MOVE_ANCIENT_POWER
+- MOVE_EARTHQUAKE
+- MOVE_HAIL
+
+SPECIES_ABOMASNOW
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_AVALANCHE
+- MOVE_WOOD_HAMMER
+- MOVE_GRASS_WHISTLE
+- MOVE_INGRAIN
+
+SPECIES_FROSLASS
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_BLIZZARD
+- MOVE_CONFUSE_RAY
+- MOVE_OMINOUS_WIND
+- MOVE_HAIL
+
+SPECIES_GLACEON @ ITEM_SITRUS_BERRY
+Level: 65
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_BLIZZARD
+- MOVE_MIRROR_COAT
+- MOVE_SHADOW_BALL
+- MOVE_WATER_PULSE
+
+=== TRAINER_MIGUEL_3_SINNOH ===
+Name: TIERA
+Class: TRAINER_CLASS_SCHOOL_KID
+Pic: TRAINER_PIC_SINNOH_SCHOOL_KID_F
+Gender: Female
+Music: Girl
+Items: ITEM_HYPER_POTION
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PACHIRISU
+Level: 60
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_LAST_RESORT
+- MOVE_SUPER_FANG
+- MOVE_DISCHARGE
+- MOVE_SWEET_KISS
+
+=== TRAINER_MIGUEL_4_SINNOH ===
+Name: FORREST
+Class: TRAINER_CLASS_SCHOOL_KID
+Pic: TRAINER_PIC_SCHOOL_KID_M
+Gender: Male
+Music: Male
+Items: ITEM_X_SPEED
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MAGNEZONE
+Level: 60
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_THUNDERBOLT
+- MOVE_TRI_ATTACK
+- MOVE_MIRROR_SHOT
+
+=== TRAINER_MIGUEL_5_SINNOH ===
+Name: JERRY
+Class: TRAINER_CLASS_GUITARIST
+Pic: TRAINER_PIC_SINNOH_GUITARIST
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_MAGNEZONE
+Level: 59
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+SPECIES_LUXRAY
+Level: 59
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+SPECIES_LUXRAY
+Level: 59
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+=== TRAINER_ISABEL_1_SINNOH ===
+Name: MEGHAN
+Class: TRAINER_CLASS_POKE_KID
+Pic: TRAINER_PIC_SINNOH_POKE_KID
+Gender: Female
+Music: Girl
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_RAICHU
+Level: 58
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+SPECIES_RAICHU
+Level: 58
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+SPECIES_RAICHU
+Level: 58
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+SPECIES_RAICHU
+Level: 58
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+=== TRAINER_ISABEL_2_SINNOH ===
+Name: DESTINY
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_F
+Gender: Female
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ELECTIVIRE
+Level: 60
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_THUNDERBOLT
+- MOVE_SHOCK_WAVE
+- MOVE_QUICK_ATTACK
+- MOVE_IRON_TAIL
+
+SPECIES_RAICHU
+Level: 60
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_THUNDERBOLT
+- MOVE_DIG
+- MOVE_THUNDER_WAVE
+- MOVE_LIGHT_SCREEN
+
+=== TRAINER_ISABEL_3_SINNOH ===
+Name: PRESTON
+Class: TRAINER_CLASS_GUITARIST
+Pic: TRAINER_PIC_SINNOH_GUITARIST
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_LUXRAY
+Level: 59
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+SPECIES_LUXRAY
+Level: 59
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+
+=== TRAINER_ISABEL_4_SINNOH ===
+Name: LONNIE
+Class: TRAINER_CLASS_GUITARIST
+Pic: TRAINER_PIC_SINNOH_GUITARIST
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_RAICHU
+Level: 60
+IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
+- MOVE_THUNDERBOLT
+- MOVE_SLAM
+- MOVE_THUNDER_WAVE
+- MOVE_QUICK_ATTACK
+
+=== TRAINER_ISABEL_5_SINNOH ===
+Name: ZACHERY
+Class: TRAINER_CLASS_ACE_TRAINER
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Cool
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ELECTIVIRE
+Level: 60
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_THUNDERBOLT
+- MOVE_SHOCK_WAVE
+- MOVE_QUICK_ATTACK
+- MOVE_IRON_TAIL
+
+SPECIES_MAGNEZONE
+Level: 60
+IVs: 7 HP / 7 Atk / 7 Def / 7 SpA / 7 SpD / 7 Spe
+- MOVE_THUNDERBOLT
+- MOVE_TRI_ATTACK
+- MOVE_MIRROR_SHOT
+
+=== TRAINER_MIGUEL_2_SINNOH ===
+Name: VOLKNER
+Class: TRAINER_CLASS_LEADER
+Pic: TRAINER_PIC_SINNOH_LEADER_VOLKNER
+Gender: Male
+Music: Male
+Items: ITEM_HYPER_POTION / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_JOLTEON
+Level: 59
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_THUNDER_WAVE
+- MOVE_CHARGE_BEAM
+- MOVE_IRON_TAIL
+- MOVE_QUICK_ATTACK
+
+SPECIES_RAICHU
+Level: 59
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_CHARGE_BEAM
+- MOVE_FOCUS_BLAST
+- MOVE_SIGNAL_BEAM
+- MOVE_QUICK_ATTACK
+
+SPECIES_LUXRAY
+Level: 60
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_ICE_FANG
+- MOVE_THUNDER_FANG
+- MOVE_CRUNCH
+- MOVE_FIRE_FANG
+
+SPECIES_ELECTIVIRE @ ITEM_SITRUS_BERRY
+Level: 61
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- MOVE_THUNDER_PUNCH
+- MOVE_FIRE_PUNCH
+- MOVE_QUICK_ATTACK
+- MOVE_GIGA_IMPACT
+
+=== TRAINER_NICOLAS_1_SINNOH ===
+Name: VOLKNER
+Class: TRAINER_CLASS_LEADER
+Pic: TRAINER_PIC_SINNOH_LEADER_VOLKNER
+Gender: Male
+Music: Male
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_AMPHAROS
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+SPECIES_JOLTEON
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_PIN_MISSILE
+- MOVE_CHARGE_BEAM
+- MOVE_DOUBLE_KICK
+- MOVE_QUICK_ATTACK
+
+SPECIES_VIKAVOLT
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+SPECIES_LUXRAY
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_ICE_FANG
+- MOVE_THUNDER_FANG
+- MOVE_CRUNCH
+- MOVE_FIRE_FANG
+
+SPECIES_LANTURN
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_DISCHARGE
+- MOVE_SIGNAL_BEAM
+- MOVE_SURF
+- MOVE_ICE_BEAM
+
+SPECIES_ELECTIVIRE @ ITEM_SITRUS_BERRY
+Level: 65
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_THUNDER_PUNCH
+- MOVE_FIRE_PUNCH
+- MOVE_BRICK_BREAK
+- MOVE_GIGA_IMPACT
+
+=== TRAINER_SIDNEY_SINNOH ===
+Name: AARON
+Class: TRAINER_CLASS_ELITE_FOUR
+Pic: TRAINER_PIC_SINNOH_ELITE_FOUR_AARON
+Gender: Male
+Music: Elite Four
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_YANMEGA
+Level: 60
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_AIR_SLASH
+- MOVE_BUG_BUZZ
+- MOVE_U_TURN
+- MOVE_DOUBLE_TEAM
+
+SPECIES_SCIZOR
+Level: 60
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_IRON_HEAD
+- MOVE_X_SCISSOR
+- MOVE_NIGHT_SLASH
+- MOVE_QUICK_ATTACK
+
+SPECIES_VESPIQUEN
+Level: 61
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_ATTACK_ORDER
+- MOVE_DEFEND_ORDER
+- MOVE_HEAL_ORDER
+- MOVE_POWER_GEM
+
+SPECIES_HERACROSS
+Level: 61
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_MEGAHORN
+- MOVE_CLOSE_COMBAT
+- MOVE_NIGHT_SLASH
+- MOVE_STONE_EDGE
+
+SPECIES_DRAPION @ ITEM_SITRUS_BERRY
+Level: 61
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_X_SCISSOR
+- MOVE_CROSS_POISON
+- MOVE_ICE_FANG
+- MOVE_AERIAL_ACE
+
+=== TRAINER_NICOLAS_2_SINNOH ===
+Name: AARON
+Class: TRAINER_CLASS_ELITE_FOUR
+Pic: TRAINER_PIC_SINNOH_ELITE_FOUR_AARON
+Gender: Male
+Music: Elite Four
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_DURANT
+Level: 66
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+SPECIES_YANMEGA
+Level: 65
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_AIR_SLASH
+- MOVE_BUG_BUZZ
+- MOVE_U_TURN
+- MOVE_DOUBLE_TEAM
+
+SPECIES_VIKAVOLT
+Level: 65
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+
+SPECIES_SHUCKLE
+Level: 65
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+
+SPECIES_HERACROSS
+Level: 66
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_MEGAHORN
+- MOVE_CLOSE_COMBAT
+- MOVE_NIGHT_SLASH
+- MOVE_STONE_EDGE
+
+SPECIES_DRAPION @ ITEM_SITRUS_BERRY
+Level: 66
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_X_SCISSOR
+- MOVE_CROSS_POISON
+- MOVE_ICE_FANG
+- MOVE_AERIAL_ACE
+
+=== TRAINER_PHOEBE_SINNOH ===
+Name: BERTHA
+Class: TRAINER_CLASS_ELITE_FOUR
+Pic: TRAINER_PIC_SINNOH_ELITE_FOUR_BERTHA
+Gender: Female
+Music: Elite Four
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_WHISCASH
+Level: 61
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_EARTH_POWER
+- MOVE_AQUA_TAIL
+- MOVE_ZEN_HEADBUTT
+- MOVE_SANDSTORM
+
+SPECIES_GLISCOR
+Level: 61
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_EARTHQUAKE
+- MOVE_ICE_FANG
+- MOVE_FIRE_FANG
+- MOVE_THUNDER_FANG
+
+SPECIES_HIPPOWDON
+Level: 61
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_EARTHQUAKE
+- MOVE_STONE_EDGE
+- MOVE_CRUNCH
+- MOVE_YAWN
+
+SPECIES_GOLEM
+Level: 61
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_EARTHQUAKE
+- MOVE_FIRE_PUNCH
+- MOVE_THUNDER_PUNCH
+- MOVE_SANDSTORM
+
+SPECIES_RHYPERIOR @ ITEM_SITRUS_BERRY
+Level: 62
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_EARTHQUAKE
+- MOVE_ROCK_WRECKER
+- MOVE_MEGAHORN
+- MOVE_AVALANCHE
+
+=== TRAINER_NICOLAS_3_SINNOH ===
+Name: BERTHA
+Class: TRAINER_CLASS_ELITE_FOUR
+Pic: TRAINER_PIC_SINNOH_ELITE_FOUR_BERTHA
+Gender: Female
+Music: Elite Four
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_NIDOQUEEN
+Level: 66
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+SPECIES_WHISCASH
+Level: 65
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_EARTH_POWER
+- MOVE_AQUA_TAIL
+- MOVE_ZEN_HEADBUTT
+- MOVE_SANDSTORM
+
+SPECIES_MAMOSWINE
+Level: 66
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+
+SPECIES_GOLURK
+Level: 66
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+
+SPECIES_GOLEM
+Level: 66
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_EARTHQUAKE
+- MOVE_FIRE_PUNCH
+- MOVE_THUNDER_PUNCH
+- MOVE_SANDSTORM
+
+SPECIES_RHYPERIOR @ ITEM_SITRUS_BERRY
+Level: 67
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_EARTHQUAKE
+- MOVE_ROCK_WRECKER
+- MOVE_MEGAHORN
+- MOVE_AVALANCHE
+
+=== TRAINER_GLACIA_SINNOH ===
+Name: FLINT
+Class: TRAINER_CLASS_ELITE_FOUR
+Pic: TRAINER_PIC_SINNOH_ELITE_FOUR_FLINT
+Gender: Male
+Music: Elite Four
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_HOUNDOOM
+Level: 61
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_FLAMETHROWER
+- MOVE_SLUDGE_BOMB
+- MOVE_DARK_PULSE
+- MOVE_SUNNY_DAY
+
+SPECIES_FLAREON
+Level: 62
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_OVERHEAT
+- MOVE_GIGA_IMPACT
+- MOVE_QUICK_ATTACK
+- MOVE_WILL_O_WISP
+
+SPECIES_RAPIDASH
+Level: 61
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_FLARE_BLITZ
+- MOVE_SOLAR_BEAM
+- MOVE_BOUNCE
+- MOVE_SUNNY_DAY
+
+SPECIES_INFERNAPE
+Level: 62
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_FLARE_BLITZ
+- MOVE_THUNDER_PUNCH
+- MOVE_MACH_PUNCH
+- MOVE_EARTHQUAKE
+
+SPECIES_MAGMORTAR @ ITEM_SITRUS_BERRY
+Level: 63
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_FLAMETHROWER
+- MOVE_THUNDERBOLT
+- MOVE_SOLAR_BEAM
+- MOVE_HYPER_BEAM
+
+=== TRAINER_NICOLAS_4_SINNOH ===
+Name: FLINT
+Class: TRAINER_CLASS_ELITE_FOUR
+Pic: TRAINER_PIC_SINNOH_ELITE_FOUR_FLINT
+Gender: Male
+Music: Elite Four
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_SCOVILLAIN
+Level: 67
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+SPECIES_GRENINJA
+Level: 66
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+
+SPECIES_HEATMOR
+Level: 67
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+
+SPECIES_ARMAROUGE
+Level: 66
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+
+SPECIES_TORKOAL
+Level: 67
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+
+SPECIES_MAGMORTAR @ ITEM_SITRUS_BERRY
+Level: 67
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_FLAMETHROWER
+- MOVE_THUNDERBOLT
+- MOVE_SOLAR_BEAM
+- MOVE_HYPER_BEAM
+
+=== TRAINER_DRAKE_SINNOH ===
+Name: LUCIAN
+Class: TRAINER_CLASS_ELITE_FOUR
+Pic: TRAINER_PIC_SINNOH_ELITE_FOUR_LUCIAN
+Gender: Male
+Music: Elite Four
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_MR_MIME
+Level: 61
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_PSYCHIC
+- MOVE_THUNDERBOLT
+- MOVE_REFLECT
+- MOVE_LIGHT_SCREEN
+
+SPECIES_ESPEON
+Level: 62
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_PSYCHIC
+- MOVE_SHADOW_BALL
+- MOVE_QUICK_ATTACK
+- MOVE_SIGNAL_BEAM
+
+SPECIES_BRONZONG
+Level: 62
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_PSYCHIC
+- MOVE_GYRO_BALL
+- MOVE_EARTHQUAKE
+- MOVE_CALM_MIND
+
+SPECIES_ALAKAZAM
+Level: 62
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_PSYCHIC
+- MOVE_ENERGY_BALL
+- MOVE_FOCUS_BLAST
+- MOVE_RECOVER
+
+SPECIES_GALLADE @ ITEM_SITRUS_BERRY
+Level: 63
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_DRAIN_PUNCH
+- MOVE_PSYCHO_CUT
+- MOVE_LEAF_BLADE
+- MOVE_STONE_EDGE
+
+=== TRAINER_NICOLAS_5_SINNOH ===
+Name: LUCIAN
+Class: TRAINER_CLASS_ELITE_FOUR
+Pic: TRAINER_PIC_SINNOH_ELITE_FOUR_LUCIAN
+Gender: Male
+Music: Elite Four
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_INDEEDEE_M
+Level: 67
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+
+SPECIES_MR_MIME
+Level: 66
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_PSYCHIC
+- MOVE_THUNDERBOLT
+- MOVE_REFLECT
+- MOVE_LIGHT_SCREEN
+
+SPECIES_HATTERENE
+Level: 67
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+
+SPECIES_BRONZONG
+Level: 66
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_PSYCHIC
+- MOVE_GYRO_BALL
+- MOVE_EARTHQUAKE
+- MOVE_CALM_MIND
+
+SPECIES_ALAKAZAM
+Level: 67
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_PSYCHIC
+- MOVE_ENERGY_BALL
+- MOVE_FOCUS_BLAST
+- MOVE_RECOVER
+
+SPECIES_GALLADE @ ITEM_SITRUS_BERRY
+Level: 68
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_DRAIN_PUNCH
+- MOVE_PSYCHO_CUT
+- MOVE_LEAF_BLADE
+- MOVE_STONE_EDGE
+
+=== TRAINER_CHARLOTTE_SINNOH ===
+Name: ROARK
+Class: TRAINER_CLASS_PKMN_TRAINER_1
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Male
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_AERODACTYL
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_STONE_EDGE
+- MOVE_AERIAL_ACE
+- MOVE_EARTHQUAKE
+- MOVE_DRAGON_CLAW
+
+SPECIES_PROBOPASS
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_EARTH_POWER
+- MOVE_STEALTH_ROCK
+- MOVE_DISCHARGE
+- MOVE_STONE_EDGE
+
+SPECIES_GOLEM
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_STONE_EDGE
+- MOVE_EARTHQUAKE
+- MOVE_BRICK_BREAK
+- MOVE_FLAMETHROWER
+
+SPECIES_RAMPARDOS
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_HEAD_SMASH
+- MOVE_ZEN_HEADBUTT
+- MOVE_AVALANCHE
+- MOVE_EARTHQUAKE
+
+SPECIES_TYRANITAR @ ITEM_SITRUS_BERRY
+Level: 65
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_STONE_EDGE
+- MOVE_CRUNCH
+- MOVE_AERIAL_ACE
+- MOVE_FIRE_FANG
+
+=== TRAINER_DEANDRE_SINNOH ===
+Name: GARDENIA
+Class: TRAINER_CLASS_PKMN_TRAINER_1
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Male
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_JUMPLUFF
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_SILVER_WIND
+- MOVE_TOXIC
+- MOVE_SUNNY_DAY
+- MOVE_BOUNCE
+
+SPECIES_CHERRIM
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_SOLAR_BEAM
+- MOVE_TOXIC
+- MOVE_SUNNY_DAY
+- MOVE_LEECH_SEED
+
+SPECIES_BELLOSSOM
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_DRAIN_PUNCH
+- MOVE_GIGA_DRAIN
+- MOVE_INGRAIN
+- MOVE_SUNNY_DAY
+
+SPECIES_TORTERRA
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_WOOD_HAMMER
+- MOVE_CRUNCH
+- MOVE_EARTHQUAKE
+- MOVE_STONE_EDGE
+
+SPECIES_ROSERADE @ ITEM_SITRUS_BERRY
+Level: 65
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_SHADOW_BALL
+- MOVE_LEAF_STORM
+- MOVE_SLUDGE_BOMB
+- MOVE_HYPER_BEAM
+
+=== TRAINER_GRUNT_MAGMA_HIDEOUT_1_SINNOH ===
+Name: FANTINA
+Class: TRAINER_CLASS_LEADER
+Pic: TRAINER_PIC_SINNOH_LEADER_FANTINA
+Gender: Female
+Music: Female
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_BANETTE
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_SHADOW_CLAW
+- MOVE_FEINT_ATTACK
+- MOVE_THUNDERBOLT
+- MOVE_WILL_O_WISP
+
+SPECIES_DRIFBLIM
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_OMINOUS_WIND
+- MOVE_PSYCHIC
+- MOVE_SILVER_WIND
+- MOVE_BATON_PASS
+
+SPECIES_DUSKNOIR
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_ROCK_SLIDE
+- MOVE_SHADOW_PUNCH
+- MOVE_DOUBLE_TEAM
+- MOVE_PROTECT
+
+SPECIES_MISMAGIUS
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_SHADOW_BALL
+- MOVE_PSYCHIC
+- MOVE_MAGICAL_LEAF
+- MOVE_THUNDERBOLT
+
+SPECIES_GENGAR @ ITEM_SITRUS_BERRY
+Level: 65
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_SHADOW_BALL
+- MOVE_PSYCHIC
+- MOVE_FOCUS_BLAST
+- MOVE_THUNDER
+
+=== TRAINER_GRUNT_MAGMA_HIDEOUT_2_SINNOH ===
+Name: MAYLENE
+Class: TRAINER_CLASS_LEADER
+Pic: TRAINER_PIC_SINNOH_LEADER_MAYLENE
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_HITMONTOP
+Level: 64
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_TRIPLE_KICK
+- MOVE_AERIAL_ACE
+- MOVE_QUICK_ATTACK
+- MOVE_FAKE_OUT
+
+SPECIES_MEDICHAM
+Level: 64
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_FIRE_PUNCH
+- MOVE_ICE_PUNCH
+- MOVE_THUNDER_PUNCH
+- MOVE_HIGH_JUMP_KICK
+
+SPECIES_BRELOOM
+Level: 64
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_STONE_EDGE
+- MOVE_SPORE
+- MOVE_MACH_PUNCH
+- MOVE_SEED_BOMB
+
+SPECIES_MACHAMP
+Level: 65
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_CROSS_CHOP
+- MOVE_ROCK_CLIMB
+- MOVE_EARTHQUAKE
+- MOVE_STONE_EDGE
+
+SPECIES_LUCARIO
+Level: 65
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- MOVE_DRAIN_PUNCH
+- MOVE_CLOSE_COMBAT
+- MOVE_EXTREME_SPEED
+- MOVE_BONE_RUSH
+
+=== TRAINER_GRUNT_MAGMA_HIDEOUT_3_SINNOH ===
+Name: WAKE
+Class: TRAINER_CLASS_LEADER
+Pic: TRAINER_PIC_SINNOH_LEADER_WAKE
+Gender: Male
+Music: Male
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_SHARPEDO
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_AQUA_JET
+- MOVE_NIGHT_SLASH
+- MOVE_SLASH
+- MOVE_ENDURE
+
+SPECIES_QUAGSIRE
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_EARTHQUAKE
+- MOVE_STONE_EDGE
+- MOVE_YAWN
+- MOVE_SURF
+
+SPECIES_GYARADOS
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_AQUA_TAIL
+- MOVE_AVALANCHE
+- MOVE_BITE
+- MOVE_GIGA_IMPACT
+
+SPECIES_FLOATZEL
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_BRINE
+- MOVE_ICE_FANG
+- MOVE_CRUNCH
+- MOVE_AQUA_JET
+
+SPECIES_LUDICOLO @ ITEM_SITRUS_BERRY
+Level: 65
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_SURF
+- MOVE_ICE_BEAM
+- MOVE_ENERGY_BALL
+- MOVE_FOCUS_BLAST
+
+=== TRAINER_GRUNT_MAGMA_HIDEOUT_4_SINNOH ===
+Name: BYRON
+Class: TRAINER_CLASS_LEADER
+Pic: TRAINER_PIC_SINNOH_LEADER_BYRON
+Gender: Male
+Music: Male
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_SKARMORY
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_NIGHT_SLASH
+- MOVE_DRILL_PECK
+- MOVE_ROCK_TOMB
+- MOVE_STEALTH_ROCK
+
+SPECIES_STEELIX
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_GYRO_BALL
+- MOVE_ICE_FANG
+- MOVE_DRAGON_BREATH
+- MOVE_SANDSTORM
+
+SPECIES_MAGNEZONE
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_FLASH_CANNON
+- MOVE_THUNDERBOLT
+- MOVE_SUPERSONIC
+- MOVE_THUNDER_WAVE
+
+SPECIES_BASTIODON
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_METAL_BURST
+- MOVE_ANCIENT_POWER
+- MOVE_IRON_DEFENSE
+- MOVE_REST
+
+SPECIES_AGGRON @ ITEM_SITRUS_BERRY
+Level: 65
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_METAL_BURST
+- MOVE_STONE_EDGE
+- MOVE_EARTHQUAKE
+- MOVE_AVALANCHE
+
+=== TRAINER_GRUNT_MAGMA_HIDEOUT_5_SINNOH ===
+Name: CANDICE
+Class: TRAINER_CLASS_LEADER
+Pic: TRAINER_PIC_SINNOH_LEADER_CANDICE
+Gender: Female
+Music: Female
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_WEAVILE
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_AVALANCHE
+- MOVE_SLASH
+- MOVE_FEINT_ATTACK
+- MOVE_TAUNT
+
+SPECIES_MAMOSWINE
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_AVALANCHE
+- MOVE_ANCIENT_POWER
+- MOVE_EARTHQUAKE
+- MOVE_HAIL
+
+SPECIES_ABOMASNOW
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_AVALANCHE
+- MOVE_WOOD_HAMMER
+- MOVE_GRASS_WHISTLE
+- MOVE_INGRAIN
+
+SPECIES_FROSLASS
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_BLIZZARD
+- MOVE_CONFUSE_RAY
+- MOVE_OMINOUS_WIND
+- MOVE_HAIL
+
+SPECIES_GLACEON @ ITEM_SITRUS_BERRY
+Level: 65
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_BLIZZARD
+- MOVE_MIRROR_COAT
+- MOVE_SHADOW_BALL
+- MOVE_WATER_PULSE
+
+=== TRAINER_GRUNT_MAGMA_HIDEOUT_6_SINNOH ===
+Name: VOLKNER
+Class: TRAINER_CLASS_LEADER
+Pic: TRAINER_PIC_SINNOH_LEADER_VOLKNER
+Gender: Male
+Music: Male
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Smart Trainer
+
+SPECIES_JOLTEON
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_PIN_MISSILE
+- MOVE_CHARGE_BEAM
+- MOVE_DOUBLE_KICK
+- MOVE_QUICK_ATTACK
+
+SPECIES_RAICHU
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_CHARGE_BEAM
+- MOVE_BRICK_BREAK
+- MOVE_THUNDER_WAVE
+- MOVE_LIGHT_SCREEN
+
+SPECIES_LUXRAY
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_ICE_FANG
+- MOVE_THUNDER_FANG
+- MOVE_CRUNCH
+- MOVE_FIRE_FANG
+
+SPECIES_LANTURN
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_DISCHARGE
+- MOVE_SIGNAL_BEAM
+- MOVE_SURF
+- MOVE_ICE_BEAM
+
+SPECIES_ELECTIVIRE @ ITEM_SITRUS_BERRY
+Level: 65
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_THUNDER_PUNCH
+- MOVE_FIRE_PUNCH
+- MOVE_BRICK_BREAK
+- MOVE_GIGA_IMPACT
+
+=== TRAINER_GRUNT_MAGMA_HIDEOUT_7_SINNOH ===
+Name: BUCK
+Class: TRAINER_CLASS_PKMN_TRAINER_1
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Male
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_SHUCKLE
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_REST
+- MOVE_TOXIC
+- MOVE_PROTECT
+- MOVE_SANDSTORM
+
+SPECIES_UMBREON
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_DARK_PULSE
+- MOVE_PSYCHIC
+- MOVE_CONFUSE_RAY
+- MOVE_DOUBLE_TEAM
+
+SPECIES_TORKOAL
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_EARTHQUAKE
+- MOVE_WILL_O_WISP
+- MOVE_ERUPTION
+- MOVE_PROTECT
+
+SPECIES_DUSKNOIR
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_FIRE_PUNCH
+- MOVE_ICE_PUNCH
+- MOVE_THUNDER_PUNCH
+- MOVE_SHADOW_BALL
+
+SPECIES_CLAYDOL @ ITEM_SITRUS_BERRY
+Level: 65
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_EARTH_POWER
+- MOVE_PSYCHIC
+- MOVE_ANCIENT_POWER
+- MOVE_CALM_MIND
+
+=== TRAINER_GRUNT_MAGMA_HIDEOUT_8_SINNOH ===
+Name: CHERYL
+Class: TRAINER_CLASS_PKMN_TRAINER_1
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Male
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_WOBBUFFET
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_COUNTER
+- MOVE_MIRROR_COAT
+- MOVE_SAFEGUARD
+- MOVE_ENCORE
+
+SPECIES_DRIFBLIM
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_TOXIC
+- MOVE_OMINOUS_WIND
+- MOVE_FLY
+- MOVE_PROTECT
+
+SPECIES_HARIYAMA
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_CLOSE_COMBAT
+- MOVE_EARTHQUAKE
+- MOVE_BULLET_PUNCH
+- MOVE_STONE_EDGE
+
+SPECIES_WAILORD
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_WATER_SPOUT
+- MOVE_BRINE
+- MOVE_EARTHQUAKE
+- MOVE_AVALANCHE
+
+SPECIES_BLISSEY @ ITEM_SITRUS_BERRY
+Level: 65
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_SOFT_BOILED
+- MOVE_COUNTER
+- MOVE_PSYCHIC
+- MOVE_TOXIC
+
+=== TRAINER_GRUNT_MAGMA_HIDEOUT_9_SINNOH ===
+Name: RILEY
+Class: TRAINER_CLASS_PKMN_TRAINER_1
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Male
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_ABSOL
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_PSYCHO_CUT
+- MOVE_NIGHT_SLASH
+- MOVE_SWORDS_DANCE
+- MOVE_QUICK_ATTACK
+
+SPECIES_URSALUNA
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_AVALANCHE
+- MOVE_SLASH
+- MOVE_AERIAL_ACE
+- MOVE_SHADOW_CLAW
+
+SPECIES_METAGROSS
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_METEOR_MASH
+- MOVE_ZEN_HEADBUTT
+- MOVE_HAMMER_ARM
+- MOVE_BULLET_PUNCH
+
+SPECIES_SALAMENCE
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_DRAGON_CLAW
+- MOVE_CRUNCH
+- MOVE_FIRE_FANG
+- MOVE_THUNDER_FANG
+
+SPECIES_LUCARIO @ ITEM_SITRUS_BERRY
+Level: 65
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_EXTREME_SPEED
+- MOVE_CLOSE_COMBAT
+- MOVE_BONE_RUSH
+- MOVE_BLAZE_KICK
+
+=== TRAINER_GRUNT_MAGMA_HIDEOUT_10_SINNOH ===
+Name: MARLEY
+Class: TRAINER_CLASS_PKMN_TRAINER_1
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Male
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_NINJASK
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_X_SCISSOR
+- MOVE_AERIAL_ACE
+- MOVE_SWORDS_DANCE
+- MOVE_SLASH
+
+SPECIES_ELECTRODE
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_HYPER_BEAM
+- MOVE_THUNDER
+- MOVE_THUNDER_WAVE
+- MOVE_DOUBLE_TEAM
+
+SPECIES_CROBAT
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_AIR_SLASH
+- MOVE_POISON_FANG
+- MOVE_CONFUSE_RAY
+- MOVE_DOUBLE_TEAM
+
+SPECIES_WEAVILE
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_ICE_SHARD
+- MOVE_NIGHT_SLASH
+- MOVE_ICE_PUNCH
+- MOVE_AERIAL_ACE
+
+SPECIES_ARCANINE @ ITEM_SITRUS_BERRY
+Level: 65
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_EXTREME_SPEED
+- MOVE_FLARE_BLITZ
+- MOVE_CRUNCH
+- MOVE_THUNDER_FANG
+
+=== TRAINER_GRUNT_MAGMA_HIDEOUT_11_SINNOH ===
+Name: MIRA
+Class: TRAINER_CLASS_PKMN_TRAINER_1
+Pic: TRAINER_PIC_SINNOH_ACE_TRAINER_M
+Gender: Male
+Music: Male
+Items: ITEM_FULL_RESTORE / ITEM_FULL_RESTORE
+Double Battle: No
+AI: Basic Trainer
+
+SPECIES_PORYGON_Z
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_TRI_ATTACK
+- MOVE_PSYCHIC
+- MOVE_THUNDERBOLT
+- MOVE_DARK_PULSE
+
+SPECIES_GENGAR
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_SHADOW_BALL
+- MOVE_PSYCHIC
+- MOVE_SLUDGE_BOMB
+- MOVE_ENERGY_BALL
+
+SPECIES_MAGNEZONE
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_THUNDER
+- MOVE_FLASH_CANNON
+- MOVE_THUNDER_WAVE
+- MOVE_HYPER_BEAM
+
+SPECIES_TOGEKISS
+Level: 64
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_EXTREME_SPEED
+- MOVE_AIR_SLASH
+- MOVE_AURA_SPHERE
+- MOVE_PSYCHIC
+
+SPECIES_ALAKAZAM @ ITEM_SITRUS_BERRY
+Level: 65
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- MOVE_PSYCHIC
+- MOVE_FOCUS_BLAST
+- MOVE_CALM_MIND
+- MOVE_HYPER_BEAM

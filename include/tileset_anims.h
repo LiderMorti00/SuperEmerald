@@ -15,6 +15,8 @@ void InitTilesetAnim_Mauville(void);
 void InitTilesetAnim_Lavaridge(void);
 // Super Emerald: Johto (HnS)
 void InitTilesetAnim_JohtoGeneral(void);
+void InitTilesetAnim_General_Sinnoh(void);
+void InitTilesetAnim_EternaGym(void);
 void InitTilesetAnim_NationalPark(void);
 void InitTilesetAnim_EcruteakTheater(void);
 void InitTilesetAnim_AzaleaTownGym(void);
