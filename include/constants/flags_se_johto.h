@@ -11,6 +11,9 @@
 #define FLAG_SE_HIDE_KANTO_GATE_GUARD        0x2705 // League Reception Gate guard toward Route 22, hidden after the Johto League
 #define FLAG_SE_KANTO_COMPLETE               0x2706 // all eight Kanto badges: League rematch, Mt. Silver
 #define FLAG_SE_HIDE_SILVER_GATE_GUARD       0x2707 // League Reception Gate guard toward Route 28 / Mt. Silver
+#define FLAG_SE_HIDE_ORO_NEWBARK             0x2708
+#define FLAG_SE_HIDE_ORO_GOLDENROD           0x2709
+#define FLAG_SE_HIDE_ORO_VICTORY_ROAD        0x270A
 #define FLAG_SE_RECEIVED_JOHTO_TM1          0x2710
 #define FLAG_SE_RECEIVED_JOHTO_TM2          0x2711
 #define FLAG_SE_RECEIVED_JOHTO_TM3          0x2712

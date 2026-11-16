@@ -653,3 +653,181 @@ SE_Text_MtSilverRedDefeat:
 SE_Movement_WalkDown1:
 	walk_down
 	step_end
+
+@ ---------------------------------------------------------------------------
+@ Oro (Gold of New Bark), the Johto rival. He picks the starter strong against the
+@ player's Johto starter (VAR_SE_JOHTO_STARTER: 1 Cyndaquil, 2 Totodile, 3 Chikorita).
+@ VAR_SE_ORO_STATE: 1 after New Bark, 2 after Goldenrod, 3 after Victory Road.
+
+SE_EventScript_OroNewBarkOnTransition::
+	goto_if_ne VAR_SE_ORO_STATE, 0, SE_EventScript_OroHideNewBark
+	clearflag FLAG_SE_HIDE_ORO_NEWBARK
+	return
+
+SE_EventScript_OroHideNewBark::
+	setflag FLAG_SE_HIDE_ORO_NEWBARK
+	return
+
+SE_EventScript_OroNewBark::
+	lock
+	faceplayer
+	playbgm MUS_HG_ENCOUNTER_RIVAL, FALSE
+	msgbox SE_Text_OroNewBarkIntro, MSGBOX_DEFAULT
+	goto_if_eq VAR_SE_JOHTO_STARTER, 2, SE_EventScript_OroNewBarkMeganium
+	goto_if_eq VAR_SE_JOHTO_STARTER, 3, SE_EventScript_OroNewBarkTyphlosion
+	trainerbattle_no_intro TRAINER_SE_ORO_1_FERALIGATR, SE_Text_OroNewBarkDefeat
+	goto SE_EventScript_OroNewBarkWon
+
+SE_EventScript_OroNewBarkMeganium::
+	trainerbattle_no_intro TRAINER_SE_ORO_1_MEGANIUM, SE_Text_OroNewBarkDefeat
+	goto SE_EventScript_OroNewBarkWon
+
+SE_EventScript_OroNewBarkTyphlosion::
+	trainerbattle_no_intro TRAINER_SE_ORO_1_TYPHLOSION, SE_Text_OroNewBarkDefeat
+	goto SE_EventScript_OroNewBarkWon
+
+SE_EventScript_OroNewBarkWon::
+	msgbox SE_Text_OroNewBarkAfter, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_SE_ORO_STATE, 1
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_NEWBARK_SE_ORO
+	setflag FLAG_SE_HIDE_ORO_NEWBARK
+	fadescreen FADE_FROM_BLACK
+	release
+	end
+
+SE_EventScript_OroGoldenrodOnTransition::
+	goto_if_ne VAR_SE_ORO_STATE, 1, SE_EventScript_OroHideGoldenrod
+	clearflag FLAG_SE_HIDE_ORO_GOLDENROD
+	return
+
+SE_EventScript_OroHideGoldenrod::
+	setflag FLAG_SE_HIDE_ORO_GOLDENROD
+	return
+
+SE_EventScript_OroGoldenrod::
+	lock
+	faceplayer
+	playbgm MUS_HG_ENCOUNTER_RIVAL, FALSE
+	msgbox SE_Text_OroGoldenrodIntro, MSGBOX_DEFAULT
+	goto_if_eq VAR_SE_JOHTO_STARTER, 2, SE_EventScript_OroGoldenrodMeganium
+	goto_if_eq VAR_SE_JOHTO_STARTER, 3, SE_EventScript_OroGoldenrodTyphlosion
+	trainerbattle_no_intro TRAINER_SE_ORO_2_FERALIGATR, SE_Text_OroGoldenrodDefeat
+	goto SE_EventScript_OroGoldenrodWon
+
+SE_EventScript_OroGoldenrodMeganium::
+	trainerbattle_no_intro TRAINER_SE_ORO_2_MEGANIUM, SE_Text_OroGoldenrodDefeat
+	goto SE_EventScript_OroGoldenrodWon
+
+SE_EventScript_OroGoldenrodTyphlosion::
+	trainerbattle_no_intro TRAINER_SE_ORO_2_TYPHLOSION, SE_Text_OroGoldenrodDefeat
+	goto SE_EventScript_OroGoldenrodWon
+
+SE_EventScript_OroGoldenrodWon::
+	msgbox SE_Text_OroGoldenrodAfter, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_SE_ORO_STATE, 2
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_GOLDENROD_SE_ORO
+	setflag FLAG_SE_HIDE_ORO_GOLDENROD
+	fadescreen FADE_FROM_BLACK
+	release
+	end
+
+SE_EventScript_OroVictoryRoadOnTransition::
+	goto_if_ge VAR_SE_ORO_STATE, 3, SE_EventScript_OroHideVictoryRoad
+	clearflag FLAG_SE_HIDE_ORO_VICTORY_ROAD
+	return
+
+SE_EventScript_OroHideVictoryRoad::
+	setflag FLAG_SE_HIDE_ORO_VICTORY_ROAD
+	return
+
+SE_EventScript_OroVictoryRoad::
+	lock
+	faceplayer
+	playbgm MUS_HG_ENCOUNTER_RIVAL, FALSE
+	msgbox SE_Text_OroVictoryRoadIntro, MSGBOX_DEFAULT
+	goto_if_eq VAR_SE_JOHTO_STARTER, 2, SE_EventScript_OroVictoryRoadMeganium
+	goto_if_eq VAR_SE_JOHTO_STARTER, 3, SE_EventScript_OroVictoryRoadTyphlosion
+	trainerbattle_no_intro TRAINER_SE_ORO_3_FERALIGATR, SE_Text_OroVictoryRoadDefeat
+	goto SE_EventScript_OroVictoryRoadWon
+
+SE_EventScript_OroVictoryRoadMeganium::
+	trainerbattle_no_intro TRAINER_SE_ORO_3_MEGANIUM, SE_Text_OroVictoryRoadDefeat
+	goto SE_EventScript_OroVictoryRoadWon
+
+SE_EventScript_OroVictoryRoadTyphlosion::
+	trainerbattle_no_intro TRAINER_SE_ORO_3_TYPHLOSION, SE_Text_OroVictoryRoadDefeat
+	goto SE_EventScript_OroVictoryRoadWon
+
+SE_EventScript_OroVictoryRoadWon::
+	msgbox SE_Text_OroVictoryRoadAfter, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_SE_ORO_STATE, 3
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_ROUTE23_SE_ORO
+	setflag FLAG_SE_HIDE_ORO_VICTORY_ROAD
+	fadescreen FADE_FROM_BLACK
+	release
+	end
+
+SE_Text_OroNewBarkIntro:
+	.string "Hey! You're {PLAYER}, right?\p"
+	.string "I'm ORO. I live here in\n"
+	.string "NEW BARK TOWN.\p"
+	.string "My mom says your family lived in\n"
+	.string "OLIVINE before moving to HOENN.\p"
+	.string "And now you're the HOENN CHAMPION?\n"
+	.string "No way I'm letting that slide!\p"
+	.string "I'm going to beat every JOHTO GYM\n"
+	.string "before you do. But first…\p"
+	.string "Let's see what a CHAMPION's got!$"
+
+SE_Text_OroNewBarkDefeat:
+	.string "Whoa… You're the real deal.$"
+
+SE_Text_OroNewBarkAfter:
+	.string "Okay, I lost this time.\p"
+	.string "But JOHTO is my turf! I'll train\n"
+	.string "harder than anyone and catch up.\p"
+	.string "See you around, {PLAYER}!$"
+
+SE_Text_OroGoldenrodIntro:
+	.string "{PLAYER}! Fancy meeting you in\n"
+	.string "GOLDENROD!\p"
+	.string "I've been training non-stop since\n"
+	.string "NEW BARK. My team is way stronger.\p"
+	.string "This time, I'm winning!$"
+
+SE_Text_OroGoldenrodDefeat:
+	.string "Again?! Come on…$"
+
+SE_Text_OroGoldenrodAfter:
+	.string "You're tough, {PLAYER}.\p"
+	.string "But I can feel it, I'm getting\n"
+	.string "closer every time.\p"
+	.string "I'll see you at the POKéMON\n"
+	.string "LEAGUE. Don't you dare lose\l"
+	.string "before then!$"
+
+SE_Text_OroVictoryRoadIntro:
+	.string "There you are, {PLAYER}!\p"
+	.string "Past VICTORY ROAD is the POKéMON\n"
+	.string "LEAGUE.\p"
+	.string "I'm not going to let you through\n"
+	.string "without one more battle.\p"
+	.string "Everything I've got. Let's go!$"
+
+SE_Text_OroVictoryRoadDefeat:
+	.string "…That's it. You win.\n"
+	.string "I mean it this time.$"
+
+SE_Text_OroVictoryRoadAfter:
+	.string "You and your POKéMON trust each\n"
+	.string "other completely. I get it now.\p"
+	.string "Go beat the ELITE FOUR and LANCE.\n"
+	.string "Show them what a TRAINER from\l"
+	.string "OLIVINE can do!\p"
+	.string "I'll be cheering for you.$"
