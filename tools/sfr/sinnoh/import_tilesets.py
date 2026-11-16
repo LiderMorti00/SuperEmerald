@@ -90,3 +90,6 @@ void InitTilesetAnim_General_Sinnoh(void)
 '''
 write(ours('src/data/tilesets/sinnoh/tileset_anims.h'), anim)
 print('tilesets', len(needed))
+# our maps use triple-layer metatiles: convert the copies
+import subprocess
+subprocess.run([sys.executable, ours('tools/sfr/convert_triple_layer.py')], check=True, stdout=subprocess.DEVNULL)

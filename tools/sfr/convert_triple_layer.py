@@ -18,7 +18,7 @@ EMPTY = [0, 0, 0, 0]
 
 done = 0
 for root, _, files in os.walk('data/tilesets'):
-    if 'metatiles.bin' not in files or 'metatile_attributes.bin' not in files:
+    if 'metatiles.bin' not in files or 'metatile_attributes.bin' not in files or root.endswith('_hns'):  # HnS: converted by its importer
         continue
     mt = open(os.path.join(root, 'metatiles.bin'), 'rb').read()
     at = open(os.path.join(root, 'metatile_attributes.bin'), 'rb').read()
