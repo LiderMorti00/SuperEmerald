@@ -354,6 +354,12 @@ static void FindMapsWithMon(enum Species species)
             case MAP_GROUP_SPECIAL_AREA_FRLG:
                 SetSpecialMapHasMon(gWildMonHeaders[i].mapGroup, gWildMonHeaders[i].mapNum);
                 break;
+            default: // Super Emerald: Johto (and later Sinnoh) map groups
+                if (gWildMonHeaders[i].mapGroup == MAP_GROUP(MAP_ROUTE29_HNS))
+                    SetAreaHasMon(gWildMonHeaders[i].mapGroup, gWildMonHeaders[i].mapNum);
+                else if (GetRegionForSectionId(headerSectionId) != REGION_HOENN && GetRegionForSectionId(headerSectionId) != REGION_KANTO)
+                    SetSpecialMapHasMon(gWildMonHeaders[i].mapGroup, gWildMonHeaders[i].mapNum);
+                break;
             }
         }
     }
@@ -391,7 +397,7 @@ static void SetSpecialMapHasMon(u16 mapGroup, u16 mapNum)
     if (sPokedexAreaScreen->numSpecialAreas < MAX_AREA_MARKERS)
     {
         mapsec_u16_t regionMapSectionId = GetRegionMapSectionId(mapGroup, mapNum);
-        if (regionMapSectionId < MAPSEC_NONE)
+        if (IsValidMapSec(regionMapSectionId))
         {
             // Don't highlight the area if it's a moving area (Marine/Terra Cave)
             for (i = 0; i < ARRAY_COUNT(sMovingRegionMapSections); i++)
