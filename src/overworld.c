@@ -1,4 +1,5 @@
 #include "global.h"
+#include "bug_contest.h"
 #include "regions.h"
 #include "overworld.h"
 #include "battle_pyramid.h"
@@ -1964,6 +1965,29 @@ void CB2_NewGame(void)
     // Wall clock now track local time so we set it to 10AM to match initial wall clock time
     RtcCalcLocalTimeOffset(0, 10, 0, 0);
 #endif
+}
+
+// Super Emerald: losing in the Bug-Catching Contest (from Heart & Soul): reload the
+// park and run the contest's white-out script instead of going to a Pokemon Center.
+void CB2_BugContestWhiteOut(void)
+{
+    u8 state;
+
+    if (++gMain.state >= 120)
+    {
+        FieldClearVBlankHBlankCallbacks();
+        StopMapMusic();
+        ResetInitialPlayerAvatarState();
+        ScriptContext_Init();
+        UnlockPlayerFieldControls();
+        gFieldCallback = FieldCB_WarpExitFadeFromBlack;
+        state = 0;
+        DoMapLoadLoop(&state);
+        SetFieldVBlankCallback();
+        SetMainCallback1(CB1_Overworld);
+        SetMainCallback2(CB2_Overworld);
+        ScriptContext_SetupScript(BugContest_EventScript_WhiteOut);
+    }
 }
 
 void CB2_WhiteOut(void)

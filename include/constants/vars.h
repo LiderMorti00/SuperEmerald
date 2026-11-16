@@ -396,6 +396,7 @@
 #define SE_JOHTO_STATE_VERSION        3
 #define VAR_SE_JOHTO_STARTER          0x5002 // 1 Cyndaquil, 2 Totodile, 3 Chikorita (0 = unknown)
 #define VAR_SE_ORO_STATE              0x5003 // Oro (Gold) rival battles won: 0-3
+#define VAR_BUG_CONTEST_STATE         0x5004 // Bug-Catching Contest (Heart & Soul scripts)
 #define VAR_SE_JOHTO_ARRIVAL          0x5001 // 1 = just arrived at Olivine by ship, 2 = met Jasmine
 
 #define SPECIAL_VARS_START            0x8000

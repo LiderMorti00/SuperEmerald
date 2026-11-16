@@ -5812,7 +5812,7 @@ void SE_CheckPartyHeadbutt(void)
     u32 i;
     for (i = 0; i < PARTY_SIZE; i++)
     {
-        struct Pokemon *mon = &gPlayerParty[i];
+        struct Pokemon *mon = &gParties[B_TRAINER_PLAYER][i];
         if (GetMonData(mon, MON_DATA_SPECIES) == SPECIES_NONE)
             break;
         if (!GetMonData(mon, MON_DATA_IS_EGG) && MonKnowsMove(mon, MOVE_HEADBUTT))

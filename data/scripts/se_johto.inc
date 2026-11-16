@@ -1306,3 +1306,11 @@ SE_Text_HeadbuttNoMon:
 	.string "A POKéMON could be in this tree.\n"
 	.string "A POKéMON that knows HEADBUTT\l"
 	.string "could shake it.$"
+
+Common_Movement_WalkUp1::
+	walk_up
+	step_end
+
+Common_Movement_WalkLeft1::
+	walk_left
+	step_end

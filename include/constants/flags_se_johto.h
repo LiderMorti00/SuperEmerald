@@ -33,5 +33,7 @@
 #define FLAG_COMPLETED_OMANYTE_PUZZLE        0x2722 // Ruins of Alph (Kabuto is FLAG_COMPLETED_KABUTO_PUZZLE)
 #define FLAG_COMPLETED_AERODACTYL_PUZZLE     0x2723
 #define FLAG_COMPLETED_HOOH_PUZZLE           0x2724
+#define FLAG_SYS_BUG_CONTEST_MODE            0x2725 // in the Bug-Catching Contest
+#define FLAG_DAILY_BUG_CONTEST_COMPLETED     0x2726 // cleared every day
 
 #endif // GUARD_CONSTANTS_FLAGS_SE_JOHTO_H

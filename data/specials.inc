@@ -318,6 +318,13 @@ gSpecials::
 	def_special SE_KurtMakeBalls
 	def_special SE_CheckPartyHeadbutt
 	def_special DoSlidingPuzzle
+	def_special EnterBugContestMode
+	def_special ExitBugContestMode
+	def_special JudgeBugContestMon
+	def_special TransferBugContestMon
+	def_special RemoveSportBalls
+	def_special ShowBugContestChosenMon
+	def_special SE_BugContestKeepFirstMon
 	def_special TryUpdateRusturfTunnelState
 	def_special IsGrassTypeInParty
 	def_special DoContestHallWarp, waitstate=1

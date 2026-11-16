@@ -1,4 +1,5 @@
 #include "global.h"
+#include "bug_contest.h"
 #include "script.h"
 #include "event_data.h"
 #include "field_screen_effect.h"
@@ -458,6 +459,7 @@ void RunOnTransitionMapScript(void)
 {
     SE_UpdateKantoWorldState();
     SE_UpdateJohtoWorldState();
+    SE_BugContestCleanupOnLeave();
     MapHeaderRunScriptType(MAP_SCRIPT_ON_TRANSITION);
 }
 

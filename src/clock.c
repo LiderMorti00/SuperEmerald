@@ -64,6 +64,7 @@ void DoDailyEvents(u32 daysSince)
     }
     UpdateDaysPassedSinceFormChange(daysSince);
     DailyResetApricornTrees();
+    FlagClear(FLAG_DAILY_BUG_CONTEST_COMPLETED); // Super Emerald
 }
 
 static void UpdatePerDay(struct Time *localTime)

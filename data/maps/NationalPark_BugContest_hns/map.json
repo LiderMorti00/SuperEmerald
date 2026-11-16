@@ -168,7 +168,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_J_NationalPark_BugContest_hns_NationalPark_BugContest_EventScript_Attendant",
+      "script": "NationalPark_BugContest_EventScript_Attendant",
       "flag": "0"
     },
     {
@@ -255,7 +255,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_J_NationalPark_BugContest_hns_NationalPark_BugContest_EventScript_Attendant",
+      "script": "NationalPark_BugContest_EventScript_Attendant",
       "flag": "FLAG_HIDE_BUG_CONTEST_ATTENDANT_SIDE"
     },
     {
