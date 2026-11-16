@@ -74,7 +74,7 @@ Level: 49
 Name: LIZ
 Class: Picnicker Frlg
 Pic: Picnicker
-Gender: Male
+Gender: Female
 Music: Girl
 Double Battle: No
 AI: Check Bad Move
@@ -236,7 +236,7 @@ Level: 51
 Name: JENN
 Class: Cooltrainer Frlg
 Pic: Cooltrainer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -251,7 +251,7 @@ Level: 54
 Name: IRENE
 Class: Cooltrainer Frlg
 Pic: Cooltrainer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -266,7 +266,7 @@ Level: 54
 Name: KATE
 Class: Cooltrainer Frlg
 Pic: Cooltrainer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -293,7 +293,7 @@ Level: 51
 Name: GINA
 Class: Picnicker Frlg
 Pic: Picnicker
-Gender: Male
+Gender: Female
 Music: Girl
 Double Battle: No
 AI: Check Bad Move
@@ -308,7 +308,7 @@ Level: 51
 Name: KIM
 Class: Picnicker Frlg
 Pic: Picnicker
-Gender: Male
+Gender: Female
 Music: Girl
 Double Battle: No
 AI: Check Bad Move
@@ -338,7 +338,7 @@ Level: 52
 Name: BROOKE
 Class: Picnicker Frlg
 Pic: Picnicker
-Gender: Male
+Gender: Female
 Music: Girl
 Double Battle: No
 AI: Check Bad Move
@@ -476,7 +476,7 @@ Level: 53
 Name: ANN&ANNE
 Class: Twins Frlg
 Pic: Twins Frlg
-Gender: Male
+Gender: Female
 Music: Girl
 Double Battle: Yes
 AI: Check Bad Move
@@ -515,7 +515,7 @@ Level: 54
 Name: DANA
 Class: Lass Frlg
 Pic: Lass
-Gender: Male
+Gender: Female
 Music: Girl
 Double Battle: No
 AI: Check Bad Move
@@ -530,7 +530,7 @@ Level: 53
 Name: OLIVIA
 Class: Beauty Frlg
 Pic: Beauty
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -572,7 +572,7 @@ Level: 53
 Name: VALERIE
 Class: Beauty Frlg
 Pic: Beauty
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -602,7 +602,7 @@ Level: 54
 Name: RUTH
 Class: Parasol Lady
 Pic: Parasol Lady
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -644,7 +644,7 @@ Level: 53
 Name: JAIME
 Class: Parasol Lady
 Pic: Parasol Lady
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -656,7 +656,7 @@ Level: 53
 Name: ELAINE
 Class: Swimmer F Frlg
 Pic: Swimmer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -683,7 +683,7 @@ Level: 54
 Name: PAULA
 Class: Swimmer F Frlg
 Pic: Swimmer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -740,7 +740,7 @@ Level: 54
 Name: DENISE
 Class: Swimmer F Frlg
 Pic: Swimmer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -752,7 +752,7 @@ Level: 55
 Name: KARA
 Class: Swimmer F Frlg
 Pic: Swimmer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -767,7 +767,7 @@ Level: 54
 Name: KAYLEE
 Class: Swimmer F Frlg
 Pic: Swimmer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -818,7 +818,7 @@ Level: 54
 Name: SUSIE
 Class: Swimmer F Frlg
 Pic: Swimmer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -848,7 +848,7 @@ Level: 54
 Name: WENDY
 Class: Swimmer F Frlg
 Pic: Swimmer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -908,7 +908,7 @@ Level: 54
 Name: TIFFANY
 Class: Picnicker Frlg
 Pic: Picnicker
-Gender: Male
+Gender: Female
 Music: Girl
 Double Battle: No
 AI: Check Bad Move
@@ -1070,7 +1070,7 @@ Level: 58
 Name: CYBIL
 Class: Cooltrainer Frlg
 Pic: Cooltrainer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -1163,7 +1163,7 @@ Level: 58
 Name: KELLY
 Class: Cooltrainer Frlg
 Pic: Cooltrainer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -1283,7 +1283,7 @@ Level: 59
 Name: ERIN
 Class: Picnicker Frlg
 Pic: Picnicker
-Gender: Male
+Gender: Female
 Music: Girl
 Double Battle: No
 AI: Check Bad Move
@@ -1361,7 +1361,7 @@ Level: 54
 Name: THOM & KAE
 Class: Young Couple Frlg
 Pic: Young Couple
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: Yes
 AI: Check Bad Move
@@ -1376,7 +1376,7 @@ Level: 54
 Name: DUFF & EDA
 Class: Young Couple Frlg
 Pic: Young Couple
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: Yes
 AI: Check Bad Move
@@ -1433,7 +1433,7 @@ Level: 60
 Name: JOYCE
 Class: Cooltrainer Frlg
 Pic: Cooltrainer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -1481,7 +1481,7 @@ Level: 62
 Name: BETH
 Class: Cooltrainer Frlg
 Pic: Cooltrainer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -1505,7 +1505,7 @@ Level: 60
 Name: MEGAN
 Class: Cooltrainer Frlg
 Pic: Cooltrainer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -1607,7 +1607,7 @@ Level: 60
 Name: REENA
 Class: Cooltrainer Frlg
 Pic: Cooltrainer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -1679,7 +1679,7 @@ Level: 49
 Name: AMY&MAY
 Class: Twins Frlg
 Pic: Twins Frlg
-Gender: Male
+Gender: Female
 Music: Girl
 Double Battle: Yes
 AI: Check Bad Move
@@ -1946,54 +1946,54 @@ Level: 58
 Name: CARRIE
 Class: Lass Frlg
 Pic: Lass
-Gender: Male
+Gender: Female
 Music: Girl
 Double Battle: No
 AI: Check Bad Move
 
-SPECIES_BLISSEY
+SPECIES_COMFEY
 Level: 52
 
 === TRAINER_VICTORIA_HNS ===
 Name: VICTORIA
 Class: Beauty Frlg
 Pic: Beauty
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-SPECIES_URSALUNA
+SPECIES_DACHSBUN
 Level: 51
 
-SPECIES_FURRET
+SPECIES_ALCREMIE
 Level: 52
 
 === TRAINER_SAMANTHA_HNS ===
 Name: SAMANTHA
 Class: Beauty Frlg
 Pic: Beauty
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
 
-SPECIES_PERSIAN
+SPECIES_FLOETTE
 Level: 52
 
 === TRAINER_BRIDGET_HNS ===
 Name: BRIDGET
 Class: Lass Frlg
 Pic: Lass
-Gender: Male
+Gender: Female
 Music: Girl
 Double Battle: No
 AI: Check Bad Move
 
-SPECIES_AMBIPOM
+SPECIES_SNUBBULL
 Level: 51
 
-SPECIES_SNORLAX
+SPECIES_SPRITZEE
 Level: 51
 
 === TRAINER_GRUNT_3_HNS ===
@@ -2030,7 +2030,7 @@ Level: 57
 Name: GRUNT
 Class: Team Rocket Frlg
 Pic: Rocket Grunt F Frlg
-Gender: Male
+Gender: Female
 Music: Dangerous
 Double Battle: No
 AI: Check Bad Move
@@ -2153,7 +2153,7 @@ Level: 57
 Name: GRUNT
 Class: Team Rocket Frlg
 Pic: Rocket Grunt F Frlg
-Gender: Male
+Gender: Female
 Music: Dangerous
 Double Battle: No
 AI: Check Bad Move
@@ -2224,7 +2224,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Name: ARIANA
 Class: Team Rocket Frlg
 Pic: Rocket Grunt F Frlg
-Gender: Male
+Gender: Female
 Music: Dangerous
 Double Battle: No
 AI: Basic Trainer
@@ -2292,7 +2292,7 @@ Level: 53
 Name: MARTHA
 Class: Hex Maniac
 Pic: Hex Maniac
-Gender: Male
+Gender: Female
 Music: Hiker
 Double Battle: No
 AI: Check Bad Move
@@ -2319,7 +2319,7 @@ Level: 53
 Name: GRACE
 Class: Hex Maniac
 Pic: Hex Maniac
-Gender: Male
+Gender: Female
 Music: Hiker
 Double Battle: No
 AI: Check Bad Move
@@ -2415,7 +2415,7 @@ Level: 54
 Name: CONNIE
 Class: Lass Frlg
 Pic: Lass
-Gender: Male
+Gender: Female
 Music: Girl
 Double Battle: No
 AI: Check Bad Move
@@ -2631,7 +2631,7 @@ Level: 59
 Name: LOLA
 Class: Cooltrainer Frlg
 Pic: Cooltrainer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -2652,7 +2652,7 @@ Level: 60
 Name: FRAN
 Class: Cooltrainer Frlg
 Pic: Cooltrainer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -2949,7 +2949,7 @@ Level: 54
 Name: GWEN
 Class: Cooltrainer Frlg
 Pic: Cooltrainer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -2970,7 +2970,7 @@ Level: 54
 Name: EMMA
 Class: Cooltrainer Frlg
 Pic: Cooltrainer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -2997,7 +2997,7 @@ Level: 50
 Name: GRUNT
 Class: Team Rocket Frlg
 Pic: Rocket Grunt F Frlg
-Gender: Male
+Gender: Female
 Music: Dangerous
 Double Battle: No
 AI: Check Bad Move
@@ -3045,7 +3045,7 @@ Level: 51
 Name: BEVERLY
 Class: Parasol Lady
 Pic: Parasol Lady
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -3072,7 +3072,7 @@ Level: 52
 Name: KRISE
 Class: Lass Frlg
 Pic: Lass
-Gender: Male
+Gender: Female
 Music: Girl
 Double Battle: No
 AI: Check Bad Move
@@ -3189,7 +3189,7 @@ Level: 55
 Name: LOIS
 Class: Cooltrainer Frlg
 Pic: Cooltrainer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -3243,7 +3243,7 @@ Level: 60
 Name: LEA&PIA
 Class: Twins Frlg
 Pic: Twins Frlg
-Gender: Male
+Gender: Female
 Music: Girl
 Double Battle: Yes
 AI: Check Bad Move
@@ -3264,7 +3264,7 @@ Level: 60
 Name: CARA
 Class: Cooltrainer Frlg
 Pic: Cooltrainer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -3351,7 +3351,7 @@ Level: 56
 Name: GRUNT
 Class: Team Rocket Frlg
 Pic: Rocket Grunt F Frlg
-Gender: Male
+Gender: Female
 Music: Dangerous
 Double Battle: No
 AI: Check Bad Move
@@ -3462,7 +3462,7 @@ Level: 64
 Name: SHIRLEY
 Class: Expert
 Pic: Expert F
-Gender: Male
+Gender: Female
 Music: Hiker
 Double Battle: No
 AI: Check Bad Move
@@ -3492,7 +3492,7 @@ Level: 64
 Name: DEBRA
 Class: Picnicker Frlg
 Pic: Picnicker
-Gender: Male
+Gender: Female
 Music: Girl
 Double Battle: No
 AI: Check Bad Move
@@ -3657,7 +3657,7 @@ Level: 64
 Name: CAROL
 Class: Cooltrainer Frlg
 Pic: Cooltrainer F
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
@@ -3726,7 +3726,7 @@ Level: 64
 Name: MEG&PEG
 Class: Twins Frlg
 Pic: Twins Frlg
-Gender: Male
+Gender: Female
 Music: Girl
 Double Battle: Yes
 AI: Check Bad Move
@@ -3753,7 +3753,7 @@ Level: 63
 Name: CASSIE
 Class: Beauty Frlg
 Pic: Beauty
-Gender: Male
+Gender: Female
 Music: Female
 Double Battle: No
 AI: Check Bad Move
