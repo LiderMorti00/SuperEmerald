@@ -7,8 +7,28 @@ enum {
     {{ map_section.id }},
 ## endfor
     MAPSEC_NONE,
-    MAPSEC_COUNT
+    MAPSEC_COUNT,
+    MAPSEC_JOHTO_BASE = 0xFF,
+## for map_section in johto_map_sections
+    {{ map_section.id }},
+## endfor
+    MAPSEC_JOHTO_END_,
+    MAPSEC_SINNOH_BASE = MAPSEC_JOHTO_END_ - 1,
+## for map_section in sinnoh_map_sections
+    {{ map_section.id }},
+## endfor
+    MAPSEC_SINNOH_END_,
+    MAPSEC_TOTAL_COUNT = MAPSEC_SINNOH_END_,
 };
+
+// Super Emerald: MAPSEC_COUNT covers the 8-bit Hoenn + Kanto sections. Johto and
+// Sinnoh sections live above 0xFF so they never clash with them or with the
+// special met locations (0xFD-0xFF).
+
+#define JOHTO_MAPSEC_START  (MAPSEC_JOHTO_BASE + 1)
+#define JOHTO_MAPSEC_END    (MAPSEC_JOHTO_END_ - 1)
+#define SINNOH_MAPSEC_START (MAPSEC_SINNOH_BASE + 1)
+#define SINNOH_MAPSEC_END   (MAPSEC_SINNOH_END_ - 1)
 
 // Special location IDs that use the same value space as MAPSECs.
 #define METLOC_SPECIAL_EGG         0xFD

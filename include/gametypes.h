@@ -49,7 +49,9 @@
 //
 // If you choose to widen Map Sections, be aware that Met Locations (below)
 // are based on Map Sections and will also be widened.
-typedef u8  mapsec_u8_t;
+// Super Emerald: widened to 16 bits so Johto and Sinnoh sections can start at 0x100.
+// Saved TV data keeps its own 8-bit fields; met locations use 9 bits (see pokemon.h).
+typedef u16 mapsec_u8_t;
 typedef u16 mapsec_u16_t;
 typedef s16 mapsec_s16_t;
 typedef s32 mapsec_s32_t;
