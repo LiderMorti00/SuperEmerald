@@ -11,11 +11,13 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
       "local_id": "LOCALID_RECEPTIONGATE_OFFICER",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OFFICER_HNS",
       "x": 9,
       "y": 14,
@@ -30,6 +32,7 @@
     },
     {
       "local_id": "LOCALID_RECEPTIONGATE_SILVER_GUARD",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_HNS",
       "x": 7,
       "y": 7,
@@ -44,6 +47,7 @@
     },
     {
       "local_id": "LOCALID_RECEPTIONGATE_KANTO_GUARD",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_HNS",
       "x": 14,
       "y": 7,
@@ -69,15 +73,15 @@
       "x": 11,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_VICTORY_ROAD_KANTO_B2F_HNS",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_ROUTE23",
+      "dest_warp_id": "2"
     },
     {
       "x": 10,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_VICTORY_ROAD_KANTO_B2F_HNS",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_ROUTE23",
+      "dest_warp_id": "2"
     },
     {
       "x": 1,

@@ -11,8 +11,8 @@
   "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "region": "REGION_KANTO",
   "connections": null,
   "object_events": [
     {
@@ -175,8 +175,8 @@
       "x": 30,
       "y": 47,
       "elevation": 0,
-      "dest_map": "MAP_RECEPTION_GATE_HNS",
-      "dest_warp_id": "2"
+      "dest_map": "MAP_ROUTE23",
+      "dest_warp_id": "1"
     },
     {
       "x": 4,
@@ -194,7 +194,10 @@
       "y": 38,
       "elevation": 0,
       "item": "ITEM_ZINC",
-      "flag": "FLAG_SE_KH_HIDDEN_VICTORYROADKANTO_B2F_HNS_8_38"
+      "flag": "FLAG_SE_KH_HIDDEN_VICTORYROADKANTO_B2F_HNS_8_38",
+      "quantity": 1,
+      "underfoot": false
     }
-  ]
+  ],
+  "region": "REGION_KANTO"
 }

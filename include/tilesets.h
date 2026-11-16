@@ -44,7 +44,6 @@ extern const struct Tileset gTileset_General_Frlg;
 extern const struct Tileset gTileset_PalletTown;
 extern const struct Tileset gTileset_ViridianCity;
 extern const struct Tileset gTileset_PewterCity;
-extern const struct Tileset gTileset_SaffronCity;
 extern const struct Tileset gTileset_CeruleanCity;
 extern const struct Tileset gTileset_LavenderTown;
 extern const struct Tileset gTileset_VermilionCity;

@@ -7,6 +7,9 @@ encounters and the warps of the FireRed interiors keep working; Victory Road get
 in the places of the three FireRed floors.  NPCs keep their HnS texts.  Run after import_tilesets.py.
 Safe to run again."""
 import collections, glob, json, os, re, shutil, sys
+if '--force' not in sys.argv:
+    sys.exit('Kanto HGSS maps already imported and edited by hand in Porymap; running this again would undo those edits '
+             '(use --force only on a fresh checkout).')
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import hns, ours, read, write
 

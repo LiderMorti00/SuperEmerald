@@ -593,6 +593,21 @@ SE_EventScript_InitKantoPostgame::
 @ entering Kanto when VAR_SE_KANTO_STATE_VERSION is older than SE_KANTO_STATE_VERSION, so saves
 @ made with an older version of this list catch up.
 SE_EventScript_KantoWorldState::
+	@ FireRed story and link-only people that never appear here
+	setflag FLAG_HIDE_OAK_IN_CHAMP_ROOM
+	setflag FLAG_HIDE_MG_DELIVERYMEN
+	setflag FLAG_HIDE_VERMILION_CITY_OAKS_AIDE
+	setflag FLAG_HIDE_FOUR_ISLAND_RIVAL
+	setflag FLAG_HIDE_CINNABAR_BILL
+	setflag FLAG_HIDE_CINNABAR_POKECENTER_BILL
+	@ Bill lives in Goldenrod now (HGSS): his sea cottage is empty
+	setflag FLAG_HELPED_BILL_IN_SEA_COTTAGE
+	setflag FLAG_HIDE_BILL_CLEFAIRY
+	setflag FLAG_HIDE_BILL_HUMAN_SEA_COTTAGE
+	setflag FLAG_HIDE_FAME_CHECKER_ERIKA_JOURNALS
+	setflag FLAG_HIDE_FAME_CHECKER_KOGA_JOURNAL
+	setflag FLAG_HIDE_FAME_CHECKER_LT_SURGE_JOURNAL
+	setflag FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS
 	setflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
 	setflag FLAG_HIDE_PEWTER_CITY_RUNNING_SHOES_GUY
 	@ Pallet Town, Oak's lab, Viridian, Route 22

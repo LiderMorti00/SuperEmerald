@@ -158,7 +158,6 @@ static const u8 sDoorAnimTiles_Pallet[] = INCGFX_U8("graphics/door_anims/pallet.
 static const u8 sDoorAnimTiles_OaksLab[] = INCGFX_U8("graphics/door_anims/oaks_lab.png", ".4bpp");
 static const u8 sDoorAnimTiles_Viridian[] = INCGFX_U8("graphics/door_anims/viridian.png", ".4bpp");
 static const u8 sDoorAnimTiles_Pewter[] = INCGFX_U8("graphics/door_anims/pewter.png", ".4bpp");
-static const u8 sDoorAnimTiles_Saffron[] = INCGFX_U8("graphics/door_anims/saffron.png", ".4bpp");
 static const u8 sDoorAnimTiles_SilphCo[] = INCGFX_U8("graphics/door_anims/silph_co.png", ".4bpp");
 static const u8 sDoorAnimTiles_Cerulean[] = INCGFX_U8("graphics/door_anims/cerulean.png", ".4bpp");
 static const u8 sDoorAnimTiles_Lavender[] = INCGFX_U8("graphics/door_anims/lavender.png", ".4bpp");
@@ -319,7 +318,6 @@ static const u8 sDoorAnimPalettes_Pallet[] = {8, 8, 8, 8, 8, 8, 8, 8};
 static const u8 sDoorAnimPalettes_OaksLab[] = {10, 10, 10, 10, 10, 10, 10, 10};
 static const u8 sDoorAnimPalettes_Viridian[] = {8, 8, 8, 8, 8, 8, 8, 8};
 static const u8 sDoorAnimPalettes_Pewter[] = {8, 8, 8, 8, 8, 8, 8, 8};
-static const u8 sDoorAnimPalettes_Saffron[] = {8, 8, 8, 8, 8, 8, 8, 8};
 static const u8 sDoorAnimPalettes_SilphCo[] = {3, 3, 3, 3, 3, 3, 3, 3};
 static const u8 sDoorAnimPalettes_Cerulean[] = {12, 12, 12, 12, 12, 12, 12, 12};
 static const u8 sDoorAnimPalettes_Lavender[] = {9, 9, 9, 9, 9, 9, 9, 9};
@@ -838,22 +836,6 @@ static const struct DoorGraphics sDoorAnimGraphicsTable[] =
         .size = DOOR_SIZE_1x1,
         .tiles = sDoorAnimTiles_Pewter,
         .palettes = sDoorAnimPalettes_Pewter
-    },
-    {
-        .metatileNum = METATILE_SaffronCity_Door,
-        .tileset = &gTileset_SaffronCity,
-        .sound = DOOR_SOUND_NORMAL,
-        .size = DOOR_SIZE_1x1,
-        .tiles = sDoorAnimTiles_Saffron,
-        .palettes = sDoorAnimPalettes_Saffron
-    },
-    {
-        .metatileNum = METATILE_SaffronCity_SilphCoDoor,
-        .tileset = &gTileset_SaffronCity,
-        .sound = DOOR_SOUND_SLIDING,
-        .size = DOOR_SIZE_1x1,
-        .tiles = sDoorAnimTiles_SilphCo,
-        .palettes = sDoorAnimPalettes_SilphCo
     },
     {
         .metatileNum = METATILE_CeruleanCity_Door,

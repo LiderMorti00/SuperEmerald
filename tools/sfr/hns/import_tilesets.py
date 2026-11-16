@@ -26,6 +26,11 @@ for grp, m in johto_maps() + [(None, m) for m in KANTO_HGSS_MAPS]:
     l = L[json.load(open(hns('data/maps', m, 'map.json')))['layout']]
     needed |= {l['primary_tileset'], l['secondary_tileset']}
 
+# Kanto HGSS maps were repainted in Porymap with FireRed's general tileset (no Kanto_General_Hns)
+needed = {t for t in needed if t != 'gTileset_Kanto_General_Hns'}
+needed |= {l['primary_tileset'] for l in json.load(open(ours('data/layouts/layouts.json')))['layouts']
+           if l.get('id', '').endswith('_HNS') and l['primary_tileset'].endswith('_Hns')}
+
 H_GFX = read(hns('src/data/tilesets/graphics.h'))
 H_HDR = read(hns('src/data/tilesets/headers.h'))
 
@@ -59,9 +64,9 @@ g_out, m_out, h_out = [], [], []
 for t in sorted(needed):
     n = t[len('gTileset_'):]
     path = re.search(r'gTilesetTiles_%s\[\] = INCBIN_U32\("([^"]+)/tiles' % re.escape(n), H_GFX).group(1)
-    shutil.rmtree(ours(path), ignore_errors=True)
-    shutil.copytree(hns(path), ours(path))
-    convert(ours(path))
+    if not os.path.exists(ours(path)):   # never overwrite a tileset already here: it may have been edited in Porymap
+        shutil.copytree(hns(path), ours(path))
+        convert(ours(path))
     pals = sorted(f for f in os.listdir(ours(path, 'palettes')) if re.fullmatch(r'\d\d\.pal', f))
     g_out.append('const u32 gTilesetTiles_%s[] = INCGFX_U32("%s/tiles.png", ".4bpp.fastSmol");\n\n'
                  'const u16 gTilesetPalettes_%s[][16] =\n{\n%s};\n'
