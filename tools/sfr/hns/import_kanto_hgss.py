@@ -43,7 +43,7 @@ DEST = {
     'MAP_RECEPTION_GATE_HNS': 'MAP_RECEPTION_GATE_HNS',
 }
 CONNECTIONS = {   # our connections for the replaced maps (FireRed neighbours)
-    'SaffronCity_Frlg': None,          # keep the FireRed ones (same size)
+    'SaffronCity_Frlg': [],            # none: the HnS city has its own gate buildings, the routes keep theirs
     'Route22_Frlg': [{'map': 'MAP_VIRIDIAN_CITY', 'offset': None, 'direction': 'right'}],
     'Route23_Frlg': [{'map': 'MAP_INDIGO_PLATEAU_EXTERIOR', 'offset': 0, 'direction': 'up'}],
     'IndigoPlateau_Exterior_Frlg': [{'map': 'MAP_ROUTE23', 'offset': 0, 'direction': 'down'}],
@@ -175,7 +175,7 @@ for hm, (om, oid) in SPEC.items():
     if om in CONNECTIONS and CONNECTIONS[om] is None:
         out['connections'] = keep.get('connections')
     elif om in CONNECTIONS:
-        out['connections'] = [dict(c) for c in CONNECTIONS[om]]
+        out['connections'] = [dict(c) for c in CONNECTIONS[om]] or None
     else:
         out['connections'] = None
     # objects
@@ -293,6 +293,12 @@ for c in vir['connections']:
         c['offset'] = off
 json.dump(vir, open(ours('data/maps/ViridianCity_Frlg/map.json'), 'w'), indent=2); open(ours('data/maps/ViridianCity_Frlg/map.json'), 'a').write('\n')
 print('route 22 <-> viridian offset', off, a[:3], b[:3])
+
+# Routes 5-8 no longer show Saffron City across their edge: each side keeps its own gate building
+for m in ('Route5_Frlg', 'Route6_Frlg', 'Route7_Frlg', 'Route8_Frlg'):
+    p_ = ours('data/maps', m, 'map.json'); j_ = json.load(open(p_))
+    j_['connections'] = [c for c in (j_.get('connections') or []) if c['map'] not in ('MAP_SAFFRON_CITY', 'MAP_SAFFRON_CITY_CONNECTION')] or None
+    json.dump(j_, open(p_, 'w'), indent=2); open(p_, 'a').write('\n')
 
 # the warps of the other maps that lead into the replaced maps
 maps = {}

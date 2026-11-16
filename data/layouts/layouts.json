@@ -6359,19 +6359,6 @@
       "layout_version": "frlg"
     },
     {
-      "id": "LAYOUT_SAFFRON_CITY_CONNECTION",
-      "name": "SaffronCity_Connection_Layout",
-      "width": 48,
-      "height": 40,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General_Frlg",
-      "secondary_tileset": "gTileset_SaffronCity",
-      "border_filepath": "data/layouts/SaffronCity_Connection_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/SaffronCity_Connection_Frlg/map.bin",
-      "layout_version": "frlg"
-    },
-    {
       "id": "LAYOUT_ROUTE1",
       "name": "Route1_Layout",
       "width": 24,
