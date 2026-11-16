@@ -116,6 +116,9 @@ SE_Text_OlivineSailorWhere:
 SE_Text_ChoiceSlateport:
 	.string "SLATEPORT$"
 
+SE_Text_ChoiceOlivine:
+	.string "OLIVINE$"
+
 SE_Text_ChoiceVermilion:
 	.string "VERMILION$"
 
@@ -831,3 +834,68 @@ SE_Text_OroVictoryRoadAfter:
 	.string "Show them what a TRAINER from\l"
 	.string "OLIVINE can do!\p"
 	.string "I'll be cheering for you.$"
+
+@ ---------------------------------------------------------------------------
+@ Magnet Train: Goldenrod <-> Saffron, open once the Johto League is beaten
+SE_EventScript_MagnetTrainGoldenrod::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SE_JOHTO_LEAGUE_CLEARED, SE_EventScript_MagnetTrainClosed
+	msgbox SE_Text_MagnetTrainToSaffron, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SE_EventScript_MagnetTrainNo
+	msgbox SE_Text_MagnetTrainDepart, MSGBOX_DEFAULT
+	closemessage
+	playse SE_DOOR
+	fadescreen FADE_TO_BLACK
+	warp MAP_SAFFRON_CITY, 16, 12
+	waitstate
+	release
+	end
+
+SE_EventScript_MagnetTrainSaffron::
+	lock
+	faceplayer
+	msgbox SE_Text_MagnetTrainToGoldenrod, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SE_EventScript_MagnetTrainNo
+	msgbox SE_Text_MagnetTrainDepart, MSGBOX_DEFAULT
+	closemessage
+	playse SE_DOOR
+	fadescreen FADE_TO_BLACK
+	warp MAP_GOLDENROD_CITY_TRAIN_STATION_HNS, 16, 21
+	waitstate
+	release
+	end
+
+SE_EventScript_MagnetTrainClosed::
+	msgbox SE_Text_MagnetTrainClosed, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_MagnetTrainNo::
+	msgbox SE_Text_MagnetTrainNo, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_MagnetTrainClosed:
+	.string "The MAGNET TRAIN to SAFFRON CITY\n"
+	.string "in KANTO is reserved for the\l"
+	.string "POKéMON LEAGUE CHAMPION.\p"
+	.string "Please come back once you've\n"
+	.string "beaten the LEAGUE.$"
+
+SE_Text_MagnetTrainToSaffron:
+	.string "Welcome to the MAGNET TRAIN!\p"
+	.string "Would you like to ride to\n"
+	.string "SAFFRON CITY in KANTO?$"
+
+SE_Text_MagnetTrainToGoldenrod:
+	.string "I'm the MAGNET TRAIN clerk.\p"
+	.string "Would you like to ride to\n"
+	.string "GOLDENROD CITY in JOHTO?$"
+
+SE_Text_MagnetTrainDepart:
+	.string "All aboard!\n"
+	.string "We hope you enjoy the trip.$"
+
+SE_Text_MagnetTrainNo:
+	.string "We hope to see you again.$"

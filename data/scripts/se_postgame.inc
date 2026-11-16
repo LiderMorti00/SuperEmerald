@@ -6,8 +6,29 @@
 SFR_EventScript_VermilionHoennSailor::
 	lock
 	faceplayer
-	msgbox SFR_Text_VermilionSailorBoardToSlateport, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, SFR_EventScript_VermilionHoennSailorDeclined
+	message SE_Text_VermilionSailorWhere
+	waitmessage
+	dynmultipush SE_Text_ChoiceOlivine, 0
+	dynmultipush SE_Text_ChoiceSlateport, 1
+	dynmultichoice 18, 6, FALSE, 2, 0, DYN_MULTICHOICE_CB_NONE
+	switch VAR_RESULT
+	case 0, SE_EventScript_VermilionToOlivine
+	case 1, SE_EventScript_VermilionToSlateport
+	goto SFR_EventScript_VermilionHoennSailorDeclined
+	end
+
+SE_EventScript_VermilionToOlivine::
+	msgbox SFR_Text_VermilionSailorAllAboard, MSGBOX_DEFAULT
+	closemessage
+	playse SE_SHIP
+	fadescreenspeed FADE_TO_BLACK, 12
+	delay 60
+	warp MAP_OLIVINE_CITY_PORT_INSIDE_HNS, 8, 16
+	waitstate
+	release
+	end
+
+SE_EventScript_VermilionToSlateport::
 	msgbox SFR_Text_VermilionSailorAllAboard, MSGBOX_DEFAULT
 	closemessage
 	playse SE_SHIP
@@ -17,6 +38,9 @@ SFR_EventScript_VermilionHoennSailor::
 	waitstate
 	release
 	end
+
+SE_Text_VermilionSailorWhere:
+	.string "Where would you like to sail?$"
 
 SFR_EventScript_VermilionHoennSailorDeclined::
 	msgbox SFR_Text_VermilionSailorComeBackAnytime, MSGBOX_DEFAULT
@@ -811,10 +835,12 @@ SE_Text_VermilionOakWelcome:
 	.string "OAK: Ah, you must be {PLAYER}!\n"
 	.string "Welcome to KANTO!\p"
 	.string "I'm PROF. OAK. BIRCH told me all\n"
-	.string "about the new CHAMPION of HOENN.\p"
-	.string "KANTO has eight GYMS of its own,\n"
-	.string "and the POKéMON LEAGUE is waiting\l"
-	.string "at INDIGO PLATEAU.\p"
+	.string "about the CHAMPION of HOENN, who\l"
+	.string "conquered JOHTO as well!\p"
+	.string "KANTO has eight GYMS of its own.\n"
+	.string "Win all eight BADGES and the\l"
+	.string "POKéMON LEAGUE will welcome you\l"
+	.string "back for a tougher challenge.\p"
 	.string "To start you off, I'd like you\n"
 	.string "to have one of these POKéMON.\p"
 	.string "They're well trained, and each\n"
@@ -837,5 +863,6 @@ SE_Text_VermilionOakRainbowPass:
 SE_Text_VermilionOakGoodbye:
 	.string "OAK: My lab is in PALLET TOWN.\n"
 	.string "Come and visit me anytime!\p"
-	.string "And if you beat the CHAMPION here,\n"
-	.string "I'll have something special for you.$"
+	.string "And if you beat the LEAGUE again\n"
+	.string "with all eight KANTO BADGES, I'll\l"
+	.string "have something special for you.$"
