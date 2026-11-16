@@ -1626,16 +1626,15 @@
       "y": 4,
       "width": 1,
       "height": 1
-    }
-  ],
-  "johto_map_sections": [
+    },
     {
       "height": 1,
       "id": "MAPSEC_NEW_BARK_TOWN",
       "name": "NEW BARK TOWN",
       "width": 1,
       "x": 19,
-      "y": 10
+      "y": 10,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1643,7 +1642,8 @@
       "name": "CHERRYGROVE CITY",
       "width": 1,
       "x": 14,
-      "y": 10
+      "y": 10,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1651,7 +1651,8 @@
       "name": "VIOLET CITY",
       "width": 1,
       "x": 12,
-      "y": 4
+      "y": 4,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1659,7 +1660,8 @@
       "name": "AZALEA TOWN",
       "width": 1,
       "x": 10,
-      "y": 13
+      "y": 13,
+      "region": "johto"
     },
     {
       "height": 2,
@@ -1667,7 +1669,8 @@
       "name": "GOLDENROD CITY",
       "width": 1,
       "x": 8,
-      "y": 8
+      "y": 8,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1675,7 +1678,8 @@
       "name": "ECRUTEAK CITY",
       "width": 1,
       "x": 10,
-      "y": 2
+      "y": 2,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1683,7 +1687,8 @@
       "name": "OLIVINE CITY",
       "width": 1,
       "x": 6,
-      "y": 4
+      "y": 4,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1691,7 +1696,8 @@
       "name": "CIANWOOD CITY",
       "width": 1,
       "x": 4,
-      "y": 11
+      "y": 11,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1699,7 +1705,8 @@
       "name": "MAHOGANY TOWN",
       "width": 1,
       "x": 15,
-      "y": 2
+      "y": 2,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1707,7 +1714,8 @@
       "name": "BLACKTHORN CITY",
       "width": 1,
       "x": 18,
-      "y": 2
+      "y": 2,
+      "region": "johto"
     },
     {
       "height": 5,
@@ -1715,7 +1723,8 @@
       "name": "ROUTE 26",
       "width": 1,
       "x": 24,
-      "y": 6
+      "y": 6,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1723,7 +1732,8 @@
       "name": "ROUTE 27",
       "width": 4,
       "x": 20,
-      "y": 10
+      "y": 10,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1731,7 +1741,8 @@
       "name": "ROUTE 28",
       "width": 3,
       "x": 21,
-      "y": 5
+      "y": 5,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1739,7 +1750,8 @@
       "name": "ROUTE 29",
       "width": 4,
       "x": 15,
-      "y": 10
+      "y": 10,
+      "region": "johto"
     },
     {
       "height": 5,
@@ -1747,7 +1759,8 @@
       "name": "ROUTE 30",
       "width": 1,
       "x": 14,
-      "y": 5
+      "y": 5,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1755,7 +1768,8 @@
       "name": "ROUTE 31",
       "width": 2,
       "x": 13,
-      "y": 4
+      "y": 4,
+      "region": "johto"
     },
     {
       "height": 6,
@@ -1763,7 +1777,8 @@
       "name": "ROUTE 32",
       "width": 1,
       "x": 12,
-      "y": 5
+      "y": 5,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1771,7 +1786,8 @@
       "name": "ROUTE 33",
       "width": 2,
       "x": 11,
-      "y": 13
+      "y": 13,
+      "region": "johto"
     },
     {
       "height": 2,
@@ -1779,7 +1795,8 @@
       "name": "ROUTE 34",
       "width": 1,
       "x": 8,
-      "y": 10
+      "y": 10,
+      "region": "johto"
     },
     {
       "height": 3,
@@ -1787,7 +1804,8 @@
       "name": "ROUTE 35",
       "width": 1,
       "x": 8,
-      "y": 5
+      "y": 5,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1795,7 +1813,8 @@
       "name": "ROUTE 36",
       "width": 3,
       "x": 9,
-      "y": 4
+      "y": 4,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1803,7 +1822,8 @@
       "name": "ROUTE 37",
       "width": 1,
       "x": 10,
-      "y": 3
+      "y": 3,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1811,7 +1831,8 @@
       "name": "ROUTE 38",
       "width": 3,
       "x": 7,
-      "y": 2
+      "y": 2,
+      "region": "johto"
     },
     {
       "height": 2,
@@ -1819,7 +1840,8 @@
       "name": "ROUTE 39",
       "width": 1,
       "x": 6,
-      "y": 2
+      "y": 2,
+      "region": "johto"
     },
     {
       "height": 5,
@@ -1827,7 +1849,8 @@
       "name": "ROUTE 40",
       "width": 1,
       "x": 5,
-      "y": 4
+      "y": 4,
+      "region": "johto"
     },
     {
       "height": 3,
@@ -1835,7 +1858,8 @@
       "name": "ROUTE 41",
       "width": 1,
       "x": 5,
-      "y": 9
+      "y": 9,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1843,7 +1867,8 @@
       "name": "ROUTE 42",
       "width": 4,
       "x": 11,
-      "y": 2
+      "y": 2,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1851,7 +1876,8 @@
       "name": "ROUTE 43",
       "width": 1,
       "x": 15,
-      "y": 1
+      "y": 1,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1859,7 +1885,8 @@
       "name": "ROUTE 44",
       "width": 2,
       "x": 16,
-      "y": 2
+      "y": 2,
+      "region": "johto"
     },
     {
       "height": 4,
@@ -1867,7 +1894,8 @@
       "name": "ROUTE 45",
       "width": 1,
       "x": 18,
-      "y": 3
+      "y": 3,
+      "region": "johto"
     },
     {
       "height": 4,
@@ -1875,7 +1903,8 @@
       "name": "ROUTE 46",
       "width": 1,
       "x": 17,
-      "y": 6
+      "y": 6,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1883,7 +1912,8 @@
       "name": "ROUTE 47",
       "width": 1,
       "x": 2,
-      "y": 11
+      "y": 11,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1891,7 +1921,8 @@
       "name": "ROUTE 48",
       "width": 1,
       "x": 2,
-      "y": 10
+      "y": 10,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1899,7 +1930,8 @@
       "name": "BURNED TOWER",
       "width": 1,
       "x": 9,
-      "y": 1
+      "y": 1,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1907,7 +1939,8 @@
       "name": "CLIFF CAVE",
       "width": 1,
       "x": 3,
-      "y": 11
+      "y": 11,
+      "region": "johto"
     },
     {
       "height": 2,
@@ -1915,7 +1948,8 @@
       "name": "DARK CAVE",
       "width": 3,
       "x": 15,
-      "y": 4
+      "y": 4,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1923,7 +1957,8 @@
       "name": "DRAGON'S DEN",
       "width": 1,
       "x": 18,
-      "y": 1
+      "y": 1,
+      "region": "johto"
     },
     {
       "height": 2,
@@ -1931,7 +1966,8 @@
       "name": "EMBEDDED TOWER",
       "width": 1,
       "x": 1,
-      "y": 10
+      "y": 10,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1939,7 +1975,8 @@
       "name": "ICE PATH",
       "width": 1,
       "x": 17,
-      "y": 1
+      "y": 1,
+      "region": "johto"
     },
     {
       "height": 2,
@@ -1947,7 +1984,8 @@
       "name": "ILEX FOREST",
       "width": 2,
       "x": 8,
-      "y": 12
+      "y": 12,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1955,7 +1993,8 @@
       "name": "LAKE OF RAGE",
       "width": 1,
       "x": 15,
-      "y": 0
+      "y": 0,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1963,7 +2002,8 @@
       "name": "MT. MORTAR",
       "width": 1,
       "x": 12,
-      "y": 1
+      "y": 1,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1971,7 +2011,8 @@
       "name": "ROCKET HIDEOUT",
       "width": 1,
       "x": 15,
-      "y": 2
+      "y": 2,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1979,7 +2020,8 @@
       "name": "MT. SILVER",
       "width": 1,
       "x": 20,
-      "y": 5
+      "y": 5,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1987,7 +2029,8 @@
       "name": "NATIONAL PARK",
       "width": 1,
       "x": 8,
-      "y": 4
+      "y": 4,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -1995,7 +2038,8 @@
       "name": "OLIVINE LIGHTHOUSE",
       "width": 1,
       "x": 7,
-      "y": 4
+      "y": 4,
+      "region": "johto"
     },
     {
       "height": 2,
@@ -2003,7 +2047,8 @@
       "name": "RUINS OF ALPH",
       "width": 2,
       "x": 10,
-      "y": 5
+      "y": 5,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -2011,7 +2056,8 @@
       "name": "SAFARI ZONE GATE",
       "width": 1,
       "x": 2,
-      "y": 9
+      "y": 9,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -2019,7 +2065,8 @@
       "name": "SLOWPOKE WELL",
       "width": 1,
       "x": 10,
-      "y": 12
+      "y": 12,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -2027,7 +2074,8 @@
       "name": "SPROUT TOWER",
       "width": 1,
       "x": 12,
-      "y": 3
+      "y": 3,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -2035,7 +2083,8 @@
       "name": "S.S. AQUA",
       "width": 10,
       "x": 14,
-      "y": 14
+      "y": 14,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -2043,7 +2092,8 @@
       "name": "TIN TOWER",
       "width": 1,
       "x": 10,
-      "y": 1
+      "y": 1,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -2051,7 +2101,8 @@
       "name": "TOHJO FALLS",
       "width": 1,
       "x": 20,
-      "y": 9
+      "y": 9,
+      "region": "johto"
     },
     {
       "height": 2,
@@ -2059,7 +2110,8 @@
       "name": "UNION CAVE",
       "width": 1,
       "x": 12,
-      "y": 11
+      "y": 11,
+      "region": "johto"
     },
     {
       "height": 1,
@@ -2067,8 +2119,8 @@
       "name": "WHIRL ISLANDS",
       "width": 1,
       "x": 6,
-      "y": 11
+      "y": 11,
+      "region": "johto"
     }
-  ],
-  "sinnoh_map_sections": []
+  ]
 }

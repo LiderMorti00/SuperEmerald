@@ -4,18 +4,24 @@
 
 enum {
 ## for map_section in map_sections
+{% if not existsIn(map_section, "region") %}
     {{ map_section.id }},
+{% endif %}
 ## endfor
     MAPSEC_NONE,
     MAPSEC_COUNT,
     MAPSEC_JOHTO_BASE = 0xFF,
-## for map_section in johto_map_sections
+## for map_section in map_sections
+{% if existsIn(map_section, "region") and map_section.region == "johto" %}
     {{ map_section.id }},
+{% endif %}
 ## endfor
     MAPSEC_JOHTO_END_,
     MAPSEC_SINNOH_BASE = MAPSEC_JOHTO_END_ - 1,
-## for map_section in sinnoh_map_sections
+## for map_section in map_sections
+{% if existsIn(map_section, "region") and map_section.region == "sinnoh" %}
     {{ map_section.id }},
+{% endif %}
 ## endfor
     MAPSEC_SINNOH_END_,
     MAPSEC_TOTAL_COUNT = MAPSEC_SINNOH_END_,
