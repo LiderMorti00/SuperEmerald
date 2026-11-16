@@ -1235,6 +1235,10 @@ struct SaveBlock1
     u8 rivalName[PLAYER_NAME_LENGTH + 1];
     struct DaycareMon route5DayCareMon;
 #endif
+    // Super Emerald: Johto/Sinnoh flags and vars. Appended last so older saves keep
+    // their layout (the new space reads as zero).
+    u8 extFlags[EXT_FLAGS_COUNT / 8];
+    u16 extVars[EXT_VARS_COUNT];
     // sizeof: 0x3???
 };
 

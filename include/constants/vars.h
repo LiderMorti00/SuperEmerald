@@ -386,6 +386,12 @@
 
 #endif
 
+// Super Emerald: extended vars for Johto and Sinnoh (gSaveBlock1Ptr->extVars).
+#define EXT_VARS_START                0x5000
+#define EXT_VARS_COUNT                128
+#define JOHTO_VARS_START              0x5000 // 64 vars
+#define SINNOH_VARS_START             0x5040 // 64 vars
+
 #define SPECIAL_VARS_START            0x8000
 // special vars
 // They are commonly used as parameters to commands, or return values from commands.

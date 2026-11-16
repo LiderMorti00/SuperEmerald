@@ -13,6 +13,13 @@ void InitTilesetAnim_Dewford(void);
 void InitTilesetAnim_Slateport(void);
 void InitTilesetAnim_Mauville(void);
 void InitTilesetAnim_Lavaridge(void);
+// Super Emerald: Johto (HnS)
+void InitTilesetAnim_JohtoGeneral(void);
+void InitTilesetAnim_NationalPark(void);
+void InitTilesetAnim_EcruteakTheater(void);
+void InitTilesetAnim_AzaleaTownGym(void);
+void InitTilesetAnim_BlackthornGym(void);
+void InitTilesetAnim_MtSilverExp(void);
 void InitTilesetAnim_Fallarbor(void);
 void InitTilesetAnim_Fortree(void);
 void InitTilesetAnim_Lilycove(void);

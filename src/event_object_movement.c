@@ -257,6 +257,9 @@ static void (*const sCameraObjectFuncs[])(struct Sprite *) = {
 };
 
 #include "data/object_events/object_event_graphics.h"
+// Super Emerald: HnS begin
+#include "data/object_events/hns/graphics.h"
+// Super Emerald: HnS end
 
 // movement type callbacks
 static void (*const sMovementTypeCallbacks[])(struct Sprite *) =
@@ -491,12 +494,59 @@ const u8 gInitialMovementTypeFacingDirections[NUM_MOVEMENT_TYPES] = {
 #include "data/field_effects/field_effect_object_template_pointers.h"
 #include "data/object_events/object_event_pic_tables.h"
 #include "data/object_events/object_event_anims.h"
+// Super Emerald: HnS begin
+#include "data/object_events/hns/anims.h"
+#include "data/object_events/hns/pic_tables.h"
+// Super Emerald: HnS end
 #include "data/object_events/base_oam.h"
 #include "data/object_events/object_event_subsprites.h"
 #include "data/object_events/object_event_graphics_info.h"
+// Super Emerald: HnS begin
+#include "data/object_events/hns/graphics_info.h"
+// Super Emerald: HnS end
 #include "data/object_events/object_event_graphics_info_followers.h"
 
 static const struct SpritePalette sObjectEventSpritePalettes[] = {
+// Super Emerald: HnS begin
+    {gObjectEventPal_Bugsy_hns, OBJ_EVENT_PAL_TAG_BUGSY_HNS},
+    {gObjectEventPal_Chuck_hns, OBJ_EVENT_PAL_TAG_CHUCK_HNS},
+    {gObjectEventPal_Clair_hns, OBJ_EVENT_PAL_TAG_CLAIR_HNS},
+    {gObjectEventPal_Elm_hns, OBJ_EVENT_PAL_TAG_ELM_HNS},
+    {gObjectEventPal_Eusine_hns, OBJ_EVENT_PAL_TAG_EUSINE_HNS},
+    {gObjectEventPal_Falkner_hns, OBJ_EVENT_PAL_TAG_FALKNER_HNS},
+    {gObjectEventPal_Gold_hns, OBJ_EVENT_PAL_TAG_GOLD_HNS},
+    {gObjectEventPal_Janine_hns, OBJ_EVENT_PAL_TAG_JANINE_HNS},
+    {gObjectEventPal_Jasmine_hns, OBJ_EVENT_PAL_TAG_JASMINE_HNS},
+    {gObjectEventPal_Karen_hns, OBJ_EVENT_PAL_TAG_KAREN_HNS},
+    {gObjectEventPal_Kimono_hns, OBJ_EVENT_PAL_TAG_KIMONO_HNS},
+    {gObjectEventPal_Lance_hns, OBJ_EVENT_PAL_TAG_LANCE_HNS},
+    {gObjectEventPal_Lapras_hns, OBJ_EVENT_PAL_TAG_LAPRAS_HNS},
+    {gObjectEventPal_LegendaryShadow_hns, OBJ_EVENT_PAL_TAG_LEGENDARY_SHADOW_HNS},
+    {gObjectEventPal_Morty_hns, OBJ_EVENT_PAL_TAG_MORTY_HNS},
+    {gObjectEventPal_Npc1_hns, OBJ_EVENT_PAL_TAG_NPC_1_HNS},
+    {gObjectEventPal_Npc2_hns, OBJ_EVENT_PAL_TAG_NPC_2_HNS},
+    {gObjectEventPal_Npc3_hns, OBJ_EVENT_PAL_TAG_NPC_3_HNS},
+    {gObjectEventPal_Npc4_hns, OBJ_EVENT_PAL_TAG_NPC_4_HNS},
+    {gObjectEventPal_Pryce_hns, OBJ_EVENT_PAL_TAG_PRYCE_HNS},
+    {gObjectEventPal_Red_hns, OBJ_EVENT_PAL_TAG_RED_HNS},
+    {gObjectEventPal_Rocket1_hns, OBJ_EVENT_PAL_TAG_ROCKET_1_HNS},
+    {gObjectEventPal_Rocket2_hns, OBJ_EVENT_PAL_TAG_ROCKET_2_HNS},
+    {gObjectEventPal_Rocket3_hns, OBJ_EVENT_PAL_TAG_ROCKET_3_HNS},
+    {gObjectEventPal_Rocket4_hns, OBJ_EVENT_PAL_TAG_ROCKET_4_HNS},
+    {gObjectEventPal_Sage_hns, OBJ_EVENT_PAL_TAG_SAGE_HNS},
+    {gObjectEventPal_ScientistF_hns, OBJ_EVENT_PAL_TAG_SCIENTIST_F_HNS},
+    {gObjectEventPal_ShinyGyarados_hns, OBJ_EVENT_PAL_TAG_SHINY_GYARADOS_HNS},
+    {gObjectEventPal_Silver_hns, OBJ_EVENT_PAL_TAG_SILVER_HNS},
+    {gObjectEventPal_Slowpoke_hns, OBJ_EVENT_PAL_TAG_SLOWPOKE_HNS},
+    {gObjectEventPal_Snorlax_hns, OBJ_EVENT_PAL_TAG_SNORLAX_HNS},
+    {gObjectEventPal_SSAqua_hns, OBJ_EVENT_PAL_TAG_SSAQUA_HNS},
+    {gObjectEventPal_Steven_hns, OBJ_EVENT_PAL_TAG_STEVEN_HNS},
+    {gObjectEventPal_TowerBeam_hns, OBJ_EVENT_PAL_TAG_TOWER_BEAM_HNS},
+    {gObjectEventPal_Train_hns, OBJ_EVENT_PAL_TAG_TRAIN_HNS},
+    {gObjectEventPal_Whirlpool_hns, OBJ_EVENT_PAL_TAG_WHIRLPOOL_HNS},
+    {gObjectEventPal_Whitney_hns, OBJ_EVENT_PAL_TAG_WHITNEY_HNS},
+    {gObjectEventPal_Will_hns, OBJ_EVENT_PAL_TAG_WILL_HNS},
+// Super Emerald: HnS end
 // Super Fire Red: FRHoenn begin
     {gObjectEventPal_SfrSidney, OBJ_EVENT_PAL_TAG_SFR_SIDNEY},
     {gObjectEventPal_SfrGlacia, OBJ_EVENT_PAL_TAG_SFR_GLACIA},

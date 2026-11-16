@@ -1643,7 +1643,9 @@
 #if IS_FRLG
 #define TRAINER_FLAG(trainerId) (TRAINER_FLAGS_START + (trainerId))
 #else
-#define TRAINER_FLAG(trainerId) ((trainerId) >= KANTO_TRAINER_ID_START                               \
+#define TRAINER_FLAG(trainerId) ((trainerId) >= JOHTO_TRAINER_ID_START                               \
+                                 ? (JOHTO_TRAINER_FLAGS_START + (trainerId) - JOHTO_TRAINER_ID_START) \
+                                 : (trainerId) >= KANTO_TRAINER_ID_START                               \
                                  ? (KANTO_TRAINER_FLAGS_START + (trainerId) - KANTO_TRAINER_ID_START) \
                                  : (TRAINER_FLAGS_START + (trainerId)))
 #endif
@@ -1652,6 +1654,15 @@
 #define FLAGS_COUNT (KANTO_FLAGS_END + 1) // Super Fire Red: Emerald flags + Kanto block
 
 // Special Flags (Stored in EWRAM (sSpecialFlags), not in the SaveBlock)
+// Super Emerald: extended flags for Johto and Sinnoh, stored at the end of SaveBlock1
+// (gSaveBlock1Ptr->extFlags) so older saves keep their layout. Plain numbers on purpose.
+#define EXT_FLAGS_START                         0x2000
+#define EXT_FLAGS_COUNT                         0x1000
+#define JOHTO_FLAGS_START                       0x2000 // events, 0x800 flags
+#define JOHTO_TRAINER_FLAGS_START               0x2800 // 512 trainers
+#define SINNOH_FLAGS_START                      0x2A00 // events, 0x400 flags
+#define SINNOH_TRAINER_FLAGS_START              0x2E00 // 512 trainers
+
 #define SPECIAL_FLAGS_START                     0x4000
 #define FLAG_HIDE_MAP_NAME_POPUP                (SPECIAL_FLAGS_START + 0x0)
 #define FLAG_DONT_TRANSITION_MUSIC              (SPECIAL_FLAGS_START + 0x1)

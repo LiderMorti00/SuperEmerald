@@ -164,6 +164,8 @@ u16 *GetVarPointer(u16 id)
 {
     if (id < VARS_START)
         return NULL;
+    else if (id >= EXT_VARS_START && id < EXT_VARS_START + EXT_VARS_COUNT)
+        return &gSaveBlock1Ptr->extVars[id - EXT_VARS_START];
     else if (id < SPECIAL_VARS_START)
         return &gSaveBlock1Ptr->vars[id - VARS_START];
 #if TESTING
@@ -208,6 +210,8 @@ u8 *GetFlagPointer(u16 id)
 {
     if (id == 0)
         return NULL;
+    else if (id >= EXT_FLAGS_START && id < EXT_FLAGS_START + EXT_FLAGS_COUNT)
+        return &gSaveBlock1Ptr->extFlags[(id - EXT_FLAGS_START) / 8];
     else if (id < SPECIAL_FLAGS_START)
         return &gSaveBlock1Ptr->flags[id / 8];
 #if TESTING

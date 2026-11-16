@@ -1432,3 +1432,4 @@ void InitTilesetAnim_CeladonGym(void)
     sSecondaryTilesetAnimCallback = TilesetAnim_CeladonGym;
 }
 
+#include "data/tilesets/hns/tileset_anims.h" // Super Emerald: Johto (HnS)

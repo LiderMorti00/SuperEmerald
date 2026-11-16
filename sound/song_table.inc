@@ -565,6 +565,54 @@ gSongTable::
 	song mus_rg_trainer_tower, MUSIC_PLAYER_BGM, 0
 	song mus_rg_slow_pallet, MUSIC_PLAYER_BGM, 0
 	song mus_dummy, MUSIC_PLAYER_BGM, 0 @ mus_rg_teachy_tv_menu (unused in Super Emerald)
+@ Super Emerald: HnS begin
+	song mus_hg_new_bark, MUSIC_PLAYER_BGM, 0
+	song mus_hg_cherrygrove, MUSIC_PLAYER_BGM, 0
+	song mus_hg_violet, MUSIC_PLAYER_BGM, 0
+	song mus_hg_azalea, MUSIC_PLAYER_BGM, 0
+	song mus_hg_goldenrod, MUSIC_PLAYER_BGM, 0
+	song mus_hg_ecruteak, MUSIC_PLAYER_BGM, 0
+	song mus_hg_cianwood, MUSIC_PLAYER_BGM, 0
+	song mus_hg_route29, MUSIC_PLAYER_BGM, 0
+	song mus_hg_route30, MUSIC_PLAYER_BGM, 0
+	song mus_hg_route34, MUSIC_PLAYER_BGM, 0
+	song mus_hg_route38, MUSIC_PLAYER_BGM, 0
+	song mus_hg_route42, MUSIC_PLAYER_BGM, 0
+	song mus_hg_route26, MUSIC_PLAYER_BGM, 0
+	song mus_hg_route47, MUSIC_PLAYER_BGM, 0
+	song mus_hg_elm_lab, MUSIC_PLAYER_BGM, 0
+	song mus_hg_dance_theater, MUSIC_PLAYER_BGM, 0
+	song mus_hg_sprout_tower, MUSIC_PLAYER_BGM, 0
+	song mus_hg_union_cave, MUSIC_PLAYER_BGM, 0
+	song mus_hg_ruins_of_alph, MUSIC_PLAYER_BGM, 0
+	song mus_hg_national_park, MUSIC_PLAYER_BGM, 0
+	song mus_hg_burned_tower, MUSIC_PLAYER_BGM, 0
+	song mus_hg_bell_tower, MUSIC_PLAYER_BGM, 0
+	song mus_hg_lighthouse, MUSIC_PLAYER_BGM, 0
+	song mus_hg_team_rocket_hq, MUSIC_PLAYER_BGM, 0
+	song mus_hg_ice_path, MUSIC_PLAYER_BGM, 0
+	song mus_hg_dragons_den, MUSIC_PLAYER_BGM, 0
+	song mus_hg_ss_aqua, MUSIC_PLAYER_BGM, 0
+	song mus_hg_safari_zone_gate, MUSIC_PLAYER_BGM, 0
+	song mus_hg_safari_zone, MUSIC_PLAYER_BGM, 0
+	song mus_hg_bug_catching_contest, MUSIC_PLAYER_BGM, 0
+	song mus_hg_bug_contest_prep, MUSIC_PLAYER_BGM, 0
+	song mus_hg_magnet_train, MUSIC_PLAYER_BGM, 0
+	song mus_hg_mt_moon_square, MUSIC_PLAYER_BGM, 0
+	song mus_hg_vs_wild, MUSIC_PLAYER_BGM, 0
+	song mus_hg_vs_trainer, MUSIC_PLAYER_BGM, 0
+	song mus_hg_vs_gym_leader, MUSIC_PLAYER_BGM, 0
+	song mus_hg_vs_rival, MUSIC_PLAYER_BGM, 0
+	song mus_hg_vs_suicune, MUSIC_PLAYER_BGM, 0
+	song mus_hg_vs_entei, MUSIC_PLAYER_BGM, 0
+	song mus_hg_vs_raikou, MUSIC_PLAYER_BGM, 0
+	song mus_hg_vs_ho_oh, MUSIC_PLAYER_BGM, 0
+	song mus_hg_vs_lugia, MUSIC_PLAYER_BGM, 0
+	song mus_hg_victory_trainer, MUSIC_PLAYER_BGM, 0
+	song mus_hg_victory_wild, MUSIC_PLAYER_BGM, 0
+	song mus_hg_victory_gym_leader, MUSIC_PLAYER_BGM, 0
+	song mus_hg_encounter_rival, MUSIC_PLAYER_BGM, 0
+@ Super Emerald: HnS end
 	song ph_trap_blend, MUSIC_PLAYER_SE2, 2
 	song ph_trap_held, MUSIC_PLAYER_SE2, 2
 	song ph_trap_solo, MUSIC_PLAYER_SE2, 2

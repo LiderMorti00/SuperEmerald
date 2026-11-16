@@ -3,6 +3,7 @@
 
 #include "constants/battle_partner.h"
 #include "constants/opponents_frlg.h"
+#include "constants/opponents_johto.h"
 
 #define TRAINER_NONE                          0
 #define TRAINER_SAWYER_1                      1
@@ -877,6 +878,9 @@
 #define TRAINERS_COUNT_EMERALD     864
 #define MAX_TRAINERS_COUNT_EMERALD 864
 
+#if !IS_FRLG && JOHTO_TRAINER_ID_START != KANTO_TRAINER_ID_START + MAX_TRAINERS_COUNT_FRLG
+#error "Super Emerald: JOHTO_TRAINER_ID_START must be KANTO_TRAINER_ID_START + MAX_TRAINERS_COUNT_FRLG"
+#endif
 #if !IS_FRLG && KANTO_TRAINER_ID_START != MAX_TRAINERS_COUNT_EMERALD
 #error "Super Fire Red: KANTO_TRAINER_ID_START must match MAX_TRAINERS_COUNT_EMERALD (opponents_frlg.h)"
 #endif
@@ -886,8 +890,8 @@
 #define MAX_TRAINERS_COUNT                  MAX_TRAINERS_COUNT_FRLG
 #else
 // Super Fire Red: Emerald trainers first, then the Kanto ones (see opponents_frlg.h)
-#define TRAINERS_COUNT                      (KANTO_TRAINER_ID_START + TRAINERS_COUNT_FRLG)
-#define MAX_TRAINERS_COUNT                  (KANTO_TRAINER_ID_START + MAX_TRAINERS_COUNT_FRLG)
+#define TRAINERS_COUNT                      (JOHTO_TRAINER_ID_START + TRAINERS_COUNT_JOHTO) // Super Emerald: + Johto
+#define MAX_TRAINERS_COUNT                  (JOHTO_TRAINER_ID_START + MAX_TRAINERS_COUNT_JOHTO)
 #endif
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
