@@ -1,4 +1,5 @@
 CelesticTown_PokemonCenter_1F_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_CelesticTown_PC_OnTransition
 	.byte 0
 
 
@@ -43,3 +44,7 @@ CelesticTown_PokemonCenter_1F_Text_PtNpc3::
 	.string "and the POKéMON.\p"
 	.string "Developing trust in each other is the\n"
 	.string "key to victory.$"
+
+SE_CelesticTown_PC_OnTransition::
+	setrespawn HEAL_LOCATION_CELESTIC_TOWN_SINNOH
+	end

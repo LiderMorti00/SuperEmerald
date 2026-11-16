@@ -1,4 +1,6 @@
 PokemonLeague_LucianRoom_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, SE_SinnohLucianRoom_OnLoad
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, SE_SinnohLeague_OnWarp
 	.byte 0
 
 
@@ -12,8 +14,7 @@ PokemonLeague_LucianRoom_EventScript_Drake::
 	goto_if_set FLAG_SN_DEFEATED_ELITE_4_DRAKE, PokemonLeague_LucianRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox PokemonLeague_LucianRoom_Text_IntroSpeech, MSGBOX_DEFAULT
-	goto_if_set FLAG_SYS_GAME_CLEAR, PokemonLeague_LucianRoom_EventScript_SNRematchBattle
-	trainerbattle_no_intro TRAINER_DRAKE_SINNOH, PokemonLeague_LucianRoom_Text_Defeat
+	trainerbattle_no_intro TRAINER_SE_ELITE_FOUR_LUCIAN, PokemonLeague_LucianRoom_Text_Defeat
 	goto PokemonLeague_LucianRoom_EventScript_SNAfterBattle
 
 PokemonLeague_LucianRoom_Text_Defeat::

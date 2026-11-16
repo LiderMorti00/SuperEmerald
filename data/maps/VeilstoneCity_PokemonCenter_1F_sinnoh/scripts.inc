@@ -1,4 +1,5 @@
 VeilstoneCity_PokemonCenter_1F_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_VeilstoneCity_PC_OnTransition
 	.byte 0
 
 
@@ -30,3 +31,7 @@ VeilstoneCity_PokemonCenter_1F_Text_PtNpc2_0::
 	.string "Maylene, the Gym Leader, is a cute girl.\p"
 	.string "But don’t let her looks fool you. Even\n"
 	.string "grown-ups have trouble with her.$"
+
+SE_VeilstoneCity_PC_OnTransition::
+	setrespawn HEAL_LOCATION_VEILSTONE_CITY_SINNOH
+	end

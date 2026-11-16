@@ -1,4 +1,6 @@
 PokemonLeague_FlintRoom_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, SE_SinnohFlintRoom_OnLoad
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, SE_SinnohLeague_OnWarp
 	.byte 0
 
 
@@ -12,8 +14,7 @@ PokemonLeague_FlintRoom_EventScript_Glacia::
 	goto_if_set FLAG_SN_DEFEATED_ELITE_4_GLACIA, PokemonLeague_FlintRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox PokemonLeague_FlintRoom_Text_IntroSpeech, MSGBOX_DEFAULT
-	goto_if_set FLAG_SYS_GAME_CLEAR, PokemonLeague_FlintRoom_EventScript_SNRematchBattle
-	trainerbattle_no_intro TRAINER_GLACIA_SINNOH, PokemonLeague_FlintRoom_Text_Defeat
+	trainerbattle_no_intro TRAINER_SE_ELITE_FOUR_FLINT, PokemonLeague_FlintRoom_Text_Defeat
 	goto PokemonLeague_FlintRoom_EventScript_SNAfterBattle
 
 PokemonLeague_FlintRoom_Text_Defeat::

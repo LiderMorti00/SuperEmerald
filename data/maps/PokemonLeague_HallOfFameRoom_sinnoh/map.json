@@ -16,10 +16,10 @@
   "object_events": [
     {
       "type": "object",
-      "local_id": "LOCALID_POKEMON_LEAGUE_HALL_OF_FAME_ROOM_HALL_OF_FAME_WALLACE",
+      "local_id": "LOCALID_SN_HOF_CYNTHIA",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_CYNTHIA",
       "x": 6,
-      "y": 16,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,

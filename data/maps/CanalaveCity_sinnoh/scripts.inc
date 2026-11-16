@@ -1,5 +1,3 @@
-CanalaveCity_sinnoh_MapScripts::
-	.byte 0
 
 
 CanalaveCity_Text_PtNpc1::

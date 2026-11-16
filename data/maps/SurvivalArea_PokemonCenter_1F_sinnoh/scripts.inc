@@ -1,4 +1,5 @@
 SurvivalArea_PokemonCenter_1F_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_SurvivalArea_PC_OnTransition
 	.byte 0
 
 
@@ -60,3 +61,7 @@ SurvivalArea_PokemonCenter_1F_Text_PtNpc3_0::
 	.string "Some say the universe was shaped by\n"
 	.string "something born from an Egg...\p"
 	.string "A man I met long ago told me that.$"
+
+SE_SurvivalArea_PC_OnTransition::
+	setrespawn HEAL_LOCATION_SURVIVAL_AREA_SINNOH
+	end

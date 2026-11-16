@@ -1,4 +1,6 @@
 PokemonLeague_BerthaRoom_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, SE_SinnohBerthaRoom_OnLoad
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, SE_SinnohLeague_OnWarp
 	.byte 0
 
 
@@ -12,8 +14,7 @@ PokemonLeague_BerthaRoom_EventScript_Phoebe::
 	goto_if_set FLAG_SN_DEFEATED_ELITE_4_PHOEBE, PokemonLeague_BerthaRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox PokemonLeague_BerthaRoom_Text_IntroSpeech, MSGBOX_DEFAULT
-	goto_if_set FLAG_SYS_GAME_CLEAR, PokemonLeague_BerthaRoom_EventScript_SNRematchBattle
-	trainerbattle_no_intro TRAINER_PHOEBE_SINNOH, PokemonLeague_BerthaRoom_Text_Defeat
+	trainerbattle_no_intro TRAINER_SE_ELITE_FOUR_BERTHA, PokemonLeague_BerthaRoom_Text_Defeat
 	goto PokemonLeague_BerthaRoom_EventScript_SNAfterBattle
 
 PokemonLeague_BerthaRoom_Text_Defeat::

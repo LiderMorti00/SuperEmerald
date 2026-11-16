@@ -4,6 +4,8 @@
 @ Petalburg Gym: Norman gives the Johto Ticket after the Hoenn League
 SE_EventScript_NormanTickets::
 	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TICKET, SE_EventScript_NormanJohtoTicket
+	goto_if_unset FLAG_SE_JOHTO_LEAGUE_CLEARED, Common_EventScript_NopReturn
+	goto_if_unset FLAG_SE_RECEIVED_CANALAVE_TICKET, SE_EventScript_NormanCanalaveTicket
 	return
 
 SE_EventScript_NormanJohtoTicket::
@@ -36,6 +38,8 @@ SE_Text_NormanJohtoTicketExplain:
 @ ---------------------------------------------------------------------------
 @ Slateport harbor: S.S. Tidal to Olivine City with the Johto Ticket
 SE_EventScript_SlateportOfferJohto::
+	checkitem ITEM_CANALAVE_TICKET
+	goto_if_eq VAR_RESULT, TRUE, SE_EventScript_SlateportOfferJohtoSinnoh
 	checkitem ITEM_JOHTO_TICKET
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_NopReturn
 	msgbox SE_Text_HarborJohtoTicket, MSGBOX_YESNO

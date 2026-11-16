@@ -1,4 +1,5 @@
 SnowpointCity_PokemonCenter_1F_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_SnowpointCity_PC_OnTransition
 	.byte 0
 
 
@@ -76,3 +77,7 @@ SnowpointCity_PokemonCenter_1F_Text_PtNpc4::
 	.string "use the hidden move Rock Climb?\p"
 	.string "Rock Climb can be learned by Rock-type\n"
 	.string "or Fighting-type POKéMON, I think.$"
+
+SE_SnowpointCity_PC_OnTransition::
+	setrespawn HEAL_LOCATION_SNOWPOINT_CITY_SINNOH
+	end

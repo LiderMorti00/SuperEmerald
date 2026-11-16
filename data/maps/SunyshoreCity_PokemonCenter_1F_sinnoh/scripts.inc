@@ -1,4 +1,5 @@
 SunyshoreCity_PokemonCenter_1F_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_SunyshoreCity_PC_OnTransition
 	.byte 0
 
 
@@ -64,3 +65,7 @@ SunyshoreCity_PokemonCenter_1F_Text_PtNpc3_0::
 	.string "clean energy, and they’re good roads.\p"
 	.string "It’s a symbol of Sunyshore’s will to\n"
 	.string "survive, I think.$"
+
+SE_SunyshoreCity_PC_OnTransition::
+	setrespawn HEAL_LOCATION_SUNYSHORE_CITY_SINNOH
+	end

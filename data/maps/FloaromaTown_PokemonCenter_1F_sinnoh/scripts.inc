@@ -1,4 +1,5 @@
 FloaromaTown_PokemonCenter_1F_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_FloaromaTown_PC_OnTransition
 	.byte 0
 
 
@@ -39,3 +40,7 @@ FloaromaTown_PokemonCenter_1F_Text_PtNpc3::
 	.string "If you've got POKéMON with you, it's\n"
 	.string "safe for even a kid like you to go off\l"
 	.string "traveling alone.$"
+
+SE_FloaromaTown_PC_OnTransition::
+	setrespawn HEAL_LOCATION_FLOAROMA_TOWN_SINNOH
+	end

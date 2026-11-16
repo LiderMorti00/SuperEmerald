@@ -1683,6 +1683,9 @@ gStdScripts_End::
 	.include "data/maps/ResortArea_RibbonSyndicate_F2_sinnoh/scripts.inc"
 	.include "data/maps/ResortArea_Villa_sinnoh/scripts.inc"
 	.include "data/scripts/se_sinnoh_import.inc"
+	.include "data/scripts/se_sinnoh_state.inc"
+	.include "data/scripts/se_sinnoh.inc"
+	.include "data/scripts/se_sinnoh_legendaries.inc"
 @ Super Emerald: Sinnoh end
 
 	.include "data/scripts/trainer_tower.inc"

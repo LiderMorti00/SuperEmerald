@@ -1,4 +1,5 @@
 PastoriaCity_PokemonCenter_1F_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_PastoriaCity_PC_OnTransition
 	.byte 0
 
 
@@ -37,3 +38,7 @@ PastoriaCity_PokemonCenter_1F_Text_PtNpc2_0::
 	.string "time, leaving the huge marshland.\p"
 	.string "That’s why they say there are rare\n"
 	.string "POKéMON that you can only see here.$"
+
+SE_PastoriaCity_PC_OnTransition::
+	setrespawn HEAL_LOCATION_PASTORIA_CITY_SINNOH
+	end

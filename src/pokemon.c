@@ -5115,6 +5115,13 @@ u16 GetBattleBGM(void)
         case SPECIES_REGIELEKI:
         case SPECIES_REGIDRAGO:
             return MUS_VS_REGI;
+        case SPECIES_DIALGA:
+        case SPECIES_PALKIA:
+        case SPECIES_GIRATINA:
+        case SPECIES_ARCEUS:
+            if (GetCurrentRegion() == REGION_SINNOH)
+                return MUS_DPP_VS_DIALGA_PALKIA;
+            return MUS_RG_VS_LEGEND;
         default:
             return MUS_RG_VS_LEGEND;
         }
@@ -5134,6 +5141,9 @@ u16 GetBattleBGM(void)
         else
             trainerClass = GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA);
 
+        // Super Emerald: Platinum's Champion theme for Cynthia
+        if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SE_CHAMPION_CYNTHIA)
+            return MUS_DPP_VS_CYNTHIA;
         // Super Emerald: HeartGold/SoulSilver battle themes in Johto
         if (GetCurrentRegion() == REGION_JOHTO)
         {
@@ -5196,6 +5206,8 @@ u16 GetBattleBGM(void)
     {
         if (GetCurrentRegion() == REGION_JOHTO)
             return MUS_HG_VS_WILD;
+        if (GetCurrentRegion() == REGION_SINNOH)
+            return MUS_DPP_VS_WILD;
         if (GetCurrentRegion() == REGION_KANTO)
             return MUS_RG_VS_WILD;
         else

@@ -123,8 +123,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "CanalaveCity_Gym_EventScript_Leader",
-      "flag": "FLAG_SN_HIDE_VIRIDIAN_GIOVANNI"
+      "script": "SE_EventScript_SinnohLeader_Byron",
+      "flag": "0"
     },
     {
       "type": "object",

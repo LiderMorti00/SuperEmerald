@@ -9,9 +9,10 @@ TurnbackCave_GiratinaRoom_EventScript_SNGIRATINA::
 	playmoncry SPECIES_GIRATINA, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_GIRATINA, 47
+	setwildbattle SPECIES_GIRATINA, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
+	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, TurnbackCave_GiratinaRoom_EventScript_SNGIRATINA_Ran

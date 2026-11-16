@@ -1,4 +1,5 @@
 JubilifeCity_PokemonCenter_1F_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_JubilifeCity_PC_OnTransition
 	.byte 0
 
 
@@ -43,3 +44,7 @@ JubilifeCity_PokemonCenter_1F_Text_PtNpc3::
 	.string "Water, Fire, and Grass?\p"
 	.string "Well, all types have strengths and\n"
 	.string "weaknesses against other types.$"
+
+SE_JubilifeCity_PC_OnTransition::
+	setrespawn HEAL_LOCATION_JUBILIFE_CITY_SINNOH
+	end

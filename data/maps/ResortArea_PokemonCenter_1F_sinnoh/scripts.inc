@@ -1,4 +1,5 @@
 ResortArea_PokemonCenter_1F_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_ResortArea_PC_OnTransition
 	.byte 0
 
 
@@ -35,3 +36,7 @@ ResortArea_PokemonCenter_1F_Text_PtNpc2_0::
 	.string "Whoever it is in the world!\p"
 	.string "Everyone knows POKéMON! That’s\n"
 	.string "fabulously fantastic!$"
+
+SE_ResortArea_PC_OnTransition::
+	setrespawn HEAL_LOCATION_RESORT_AREA_SINNOH
+	end

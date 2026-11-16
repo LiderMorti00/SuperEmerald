@@ -183,9 +183,10 @@ Route224_EventScript_SNShaymin::
 	playmoncry SPECIES_SHAYMIN, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_SHAYMIN, 30
+	setwildbattle SPECIES_SHAYMIN, 65
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
+	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route224_EventScript_SNShaymin_Ran

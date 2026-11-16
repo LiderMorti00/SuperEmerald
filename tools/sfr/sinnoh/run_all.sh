@@ -10,3 +10,6 @@ python3 tools/sfr/sinnoh/import_maps.py
 python3 tools/sfr/sinnoh/gen_sinnoh_league.py
 python3 tools/sfr/sinnoh/import_trainer_gfx.py
 python3 tools/sfr/sinnoh/wire_build.py
+python3 tools/sfr/sinnoh/gen_sinnoh_state.py
+python3 tools/sfr/sinnoh/patch_sinnoh.py
+python3 tools/sfr/sinnoh/wire_build.py

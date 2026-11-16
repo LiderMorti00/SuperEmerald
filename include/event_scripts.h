@@ -812,6 +812,9 @@ extern const u8 SE_EventScript_InitKantoPostgame[];
 extern const u8 SE_EventScript_KantoWorldState[];
 extern const u8 SE_EventScript_InitJohto[];
 extern const u8 SE_EventScript_JohtoWorldState[];
+extern const u8 SE_EventScript_InitSinnoh[];
+extern const u8 SE_EventScript_SinnohWorldState[];
+extern const u8 SE_EventScript_SinnohOnTransition[];
 
 extern const u8 SE_EventScript_Headbutt[];
 

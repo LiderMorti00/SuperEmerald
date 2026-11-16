@@ -122,7 +122,7 @@ static const u16 sRegionMapCursorPal[] = INCGFX_U16("graphics/pokenav/region_map
 static const u32 sRegionMapCursorSmallGfxLZ[] = INCGFX_U32("graphics/pokenav/region_map/cursor_small.png", ".4bpp.smol");
 static const u32 sRegionMapCursorLargeGfxLZ[] = INCGFX_U32("graphics/pokenav/region_map/cursor_large.png", ".4bpp.smol");
 static const u16 sRegionMapBg_Pal[] = INCGFX_U16("graphics/pokenav/region_map/map.pal", ".gbapal");
-static const u32 sRegionMapBg_GfxLZ[] = INCGFX_U32("graphics/pokenav/region_map/map.png", ".8bpp.smol", "-num_tiles 233 -Wnum_tiles");
+static const u32 sRegionMapBg_GfxLZ[] = INCGFX_U32("graphics/pokenav/region_map/map.png", ".8bpp.smol");
 static const u32 sRegionMapBg_TilemapLZ[] = INCGFX_U32("graphics/pokenav/region_map/map.bin", ".smolTM");
 static const u16 sRegionMapPlayerIcon_BrendanPal[] = INCGFX_U16("graphics/pokenav/region_map/brendan_icon.png", ".gbapal");
 static const u8 sRegionMapPlayerIcon_BrendanGfx[] = INCGFX_U8("graphics/pokenav/region_map/brendan_icon.png", ".4bpp");
@@ -139,6 +139,7 @@ static const u8 sRegionMapPlayerIcon_LeafGfx[] = INCGFX_U8("graphics/pokenav/reg
 #include "data/region_map/region_map_layout_sevii45.h"
 #include "data/region_map/region_map_layout_sevii67.h"
 #include "data/region_map/region_map_layout_johto.h"
+#include "data/region_map/region_map_layout_sinnoh.h"
 #include "data/region_map/region_map_entries.h"
 
 static const mapsec_u16_t sRegionMap_SpecialPlaceLocations[][2] =
@@ -296,7 +297,7 @@ static const u16 sFlyTargetIcons_Pal[] = INCGFX_U16("graphics/pokenav/region_map
 static const u32 sFlyTargetIcons_Gfx[] = INCGFX_U32("graphics/pokenav/region_map/fly_target_icons.png", ".4bpp.smol");
 
 static const u16 ALIGNED(4) sPokedexAreaMap_Pal[] = INCGFX_U16("graphics/pokedex/region_map.pal", ".gbapal");
-static const u32 sPokedexAreaMap_Gfx[] = INCGFX_U32("graphics/pokedex/region_map.png", ".8bpp.smol", "-num_tiles 232 -Wnum_tiles");
+static const u32 sPokedexAreaMap_Gfx[] = INCGFX_U32("graphics/pokedex/region_map.png", ".8bpp.smol");
 static const u32 sPokedexAreaMap_Tilemap[] = INCGFX_U32("graphics/pokedex/region_map.bin", ".smolTM");
 
 static const u16 ALIGNED(4) sPokedexAreaMapKanto_Pal[] = INCGFX_U16("graphics/pokedex/region_map_kanto.pal", ".gbapal");
@@ -335,8 +336,26 @@ static const u16 ALIGNED(4) sRegionMapJohto_Pal[] = INCGFX_U16("graphics/pokenav
 static const u32 sRegionMapJohto_Gfx[] = INCGFX_U32("graphics/pokenav/region_map/map_johto.png", ".8bpp.smol");
 static const u32 sRegionMapJohto_Tilemap[] = INCGFX_U32("graphics/pokenav/region_map/map_johto.bin", ".smolTM");
 
+// Super Emerald: Sinnoh map from LiderMorti00's Sinnoh repo
+static const u16 ALIGNED(4) sPokedexAreaMapSinnoh_Pal[] = INCGFX_U16("graphics/pokedex/region_map_sinnoh.pal", ".gbapal");
+static const u32 sPokedexAreaMapSinnoh_Gfx[] = INCGFX_U32("graphics/pokedex/region_map_sinnoh.png", ".8bpp.smol");
+static const u32 sPokedexAreaMapSinnoh_Tilemap[] = INCGFX_U32("graphics/pokedex/region_map_sinnoh.bin", ".smolTM");
+static const u16 ALIGNED(4) sRegionMapSinnoh_Pal[] = INCGFX_U16("graphics/pokenav/region_map/map_sinnoh.pal", ".gbapal");
+static const u32 sRegionMapSinnoh_Gfx[] = INCGFX_U32("graphics/pokenav/region_map/map_sinnoh.png", ".8bpp.smol");
+static const u32 sRegionMapSinnoh_Tilemap[] = INCGFX_U32("graphics/pokenav/region_map/map_sinnoh.bin", ".smolTM");
+
 const struct RegionMapInfo gRegionMapInfos[] =
 {
+    [REGION_MAP_SINNOH]   =
+    {
+        .dexMapPalette = sPokedexAreaMapSinnoh_Pal,
+        .dexMapGfx = sPokedexAreaMapSinnoh_Gfx,
+        .dexMapTilemap = sPokedexAreaMapSinnoh_Tilemap,
+        .dexMapPaletteSize = sizeof(sPokedexAreaMapSinnoh_Pal),
+        .regionMapPalette = sRegionMapSinnoh_Pal,
+        .regionMapGfx = sRegionMapSinnoh_Gfx,
+        .regionMapTilemap = sRegionMapSinnoh_Tilemap,
+    },
     [REGION_MAP_JOHTO]    =
     {
         .dexMapPalette = sPokedexAreaMapJohto_Pal,
@@ -401,6 +420,24 @@ const struct RegionMapInfo gRegionMapInfos[] =
 
 static const u8 sMapHealLocations[][3] =
 {
+    [MAPSEC_TWINLEAF_TOWN] = {MAP_GROUP(MAP_TWINLEAF_TOWN_SINNOH), MAP_NUM(MAP_TWINLEAF_TOWN_SINNOH), HEAL_LOCATION_NONE},
+    [MAPSEC_SANDGEM_TOWN] = {MAP_GROUP(MAP_SANDGEM_TOWN_SINNOH), MAP_NUM(MAP_SANDGEM_TOWN_SINNOH), HEAL_LOCATION_SANDGEM_TOWN_SINNOH},
+    [MAPSEC_JUBILIFE_CITY] = {MAP_GROUP(MAP_JUBILIFE_CITY_SINNOH), MAP_NUM(MAP_JUBILIFE_CITY_SINNOH), HEAL_LOCATION_JUBILIFE_CITY_SINNOH},
+    [MAPSEC_OREBURGH_CITY] = {MAP_GROUP(MAP_OREBURGH_CITY_SINNOH), MAP_NUM(MAP_OREBURGH_CITY_SINNOH), HEAL_LOCATION_OREBURGH_CITY_SINNOH},
+    [MAPSEC_FLOAROMA_TOWN] = {MAP_GROUP(MAP_FLOAROMA_TOWN_SINNOH), MAP_NUM(MAP_FLOAROMA_TOWN_SINNOH), HEAL_LOCATION_FLOAROMA_TOWN_SINNOH},
+    [MAPSEC_ETERNA_CITY] = {MAP_GROUP(MAP_ETERNA_CITY_SINNOH), MAP_NUM(MAP_ETERNA_CITY_SINNOH), HEAL_LOCATION_ETERNA_CITY_SINNOH},
+    [MAPSEC_HEARTHOME_CITY] = {MAP_GROUP(MAP_HEARTHOME_CITY_SINNOH), MAP_NUM(MAP_HEARTHOME_CITY_SINNOH), HEAL_LOCATION_HEARTHOME_CITY_SINNOH},
+    [MAPSEC_SOLACEON_TOWN] = {MAP_GROUP(MAP_SOLACEON_TOWN_SINNOH), MAP_NUM(MAP_SOLACEON_TOWN_SINNOH), HEAL_LOCATION_SOLACEON_TOWN_SINNOH},
+    [MAPSEC_VEILSTONE_CITY] = {MAP_GROUP(MAP_VEILSTONE_CITY_SINNOH), MAP_NUM(MAP_VEILSTONE_CITY_SINNOH), HEAL_LOCATION_VEILSTONE_CITY_SINNOH},
+    [MAPSEC_PASTORIA_CITY] = {MAP_GROUP(MAP_PASTORIA_CITY_SINNOH), MAP_NUM(MAP_PASTORIA_CITY_SINNOH), HEAL_LOCATION_PASTORIA_CITY_SINNOH},
+    [MAPSEC_CELESTIC_TOWN] = {MAP_GROUP(MAP_CELESTIC_TOWN_SINNOH), MAP_NUM(MAP_CELESTIC_TOWN_SINNOH), HEAL_LOCATION_CELESTIC_TOWN_SINNOH},
+    [MAPSEC_CANALAVE_CITY] = {MAP_GROUP(MAP_CANALAVE_CITY_SINNOH), MAP_NUM(MAP_CANALAVE_CITY_SINNOH), HEAL_LOCATION_CANALAVE_CITY_SINNOH},
+    [MAPSEC_SNOWPOINT_CITY] = {MAP_GROUP(MAP_SNOWPOINT_CITY_SINNOH), MAP_NUM(MAP_SNOWPOINT_CITY_SINNOH), HEAL_LOCATION_SNOWPOINT_CITY_SINNOH},
+    [MAPSEC_SUNYSHORE_CITY] = {MAP_GROUP(MAP_SUNYSHORE_CITY_SINNOH), MAP_NUM(MAP_SUNYSHORE_CITY_SINNOH), HEAL_LOCATION_SUNYSHORE_CITY_SINNOH},
+    [MAPSEC_POKEMON_LEAGUE_SINNOH] = {MAP_GROUP(MAP_POKMON_LEAGUE_SINNOH), MAP_NUM(MAP_POKMON_LEAGUE_SINNOH), HEAL_LOCATION_POKEMON_LEAGUE_NORTH_SINNOH},
+    [MAPSEC_FIGHT_AREA] = {MAP_GROUP(MAP_FIGHT_AREA_SINNOH), MAP_NUM(MAP_FIGHT_AREA_SINNOH), HEAL_LOCATION_FIGHT_AREA_SINNOH},
+    [MAPSEC_SURVIVAL_AREA] = {MAP_GROUP(MAP_SURVIVAL_AREA_SINNOH), MAP_NUM(MAP_SURVIVAL_AREA_SINNOH), HEAL_LOCATION_SURVIVAL_AREA_SINNOH},
+    [MAPSEC_RESORT_AREA] = {MAP_GROUP(MAP_RESORT_AREA_SINNOH), MAP_NUM(MAP_RESORT_AREA_SINNOH), HEAL_LOCATION_RESORT_AREA_SINNOH},
     [MAPSEC_NEW_BARK_TOWN] = {MAP_GROUP(MAP_NEW_BARK_TOWN_HNS), MAP_NUM(MAP_NEW_BARK_TOWN_HNS), HEAL_LOCATION_NEW_BARK_TOWN_HNS},
     [MAPSEC_CHERRYGROVE_CITY] = {MAP_GROUP(MAP_CHERRYGROVE_CITY_HNS), MAP_NUM(MAP_CHERRYGROVE_CITY_HNS), HEAL_LOCATION_CHERRYGROVE_CITY_HNS},
     [MAPSEC_VIOLET_CITY] = {MAP_GROUP(MAP_VIOLET_CITY_HNS), MAP_NUM(MAP_VIOLET_CITY_HNS), HEAL_LOCATION_VIOLET_CITY_HNS},
@@ -1200,6 +1237,8 @@ enum RegionMapType GetRegionMapType(u32 mapSecId)
     {
     case REGION_JOHTO:
         return REGION_MAP_JOHTO;
+    case REGION_SINNOH:
+        return REGION_MAP_SINNOH;
     case REGION_KANTO:
         switch (GetKantoSubregion(mapSecId))
         {
@@ -1232,6 +1271,8 @@ static mapsec_u16_t GetMapSecIdAt(u16 x, u16 y)
     {
     case REGION_JOHTO:
         return sRegionMapSections_Johto[y][x];
+    case REGION_SINNOH:
+        return sRegionMapSections_Sinnoh[y][x];
     case REGION_KANTO:
         switch (GetKantoSubregion(gMapHeader.regionMapSectionId))
         {
@@ -2177,6 +2218,24 @@ struct FlyLocation
 
 static const struct FlyLocation sFlyLocations[] =
 {
+    { .regionMapType = REGION_MAP_SINNOH, .mapsec = MAPSEC_TWINLEAF_TOWN, .flag = FLAG_SE_VISITED_TWINLEAF_TOWN_SINNOH },
+    { .regionMapType = REGION_MAP_SINNOH, .mapsec = MAPSEC_SANDGEM_TOWN, .flag = FLAG_SE_VISITED_SANDGEM_TOWN_SINNOH },
+    { .regionMapType = REGION_MAP_SINNOH, .mapsec = MAPSEC_JUBILIFE_CITY, .flag = FLAG_SE_VISITED_JUBILIFE_CITY_SINNOH },
+    { .regionMapType = REGION_MAP_SINNOH, .mapsec = MAPSEC_OREBURGH_CITY, .flag = FLAG_SE_VISITED_OREBURGH_CITY_SINNOH },
+    { .regionMapType = REGION_MAP_SINNOH, .mapsec = MAPSEC_FLOAROMA_TOWN, .flag = FLAG_SE_VISITED_FLOAROMA_TOWN_SINNOH },
+    { .regionMapType = REGION_MAP_SINNOH, .mapsec = MAPSEC_ETERNA_CITY, .flag = FLAG_SE_VISITED_ETERNA_CITY_SINNOH },
+    { .regionMapType = REGION_MAP_SINNOH, .mapsec = MAPSEC_HEARTHOME_CITY, .flag = FLAG_SE_VISITED_HEARTHOME_CITY_SINNOH },
+    { .regionMapType = REGION_MAP_SINNOH, .mapsec = MAPSEC_SOLACEON_TOWN, .flag = FLAG_SE_VISITED_SOLACEON_TOWN_SINNOH },
+    { .regionMapType = REGION_MAP_SINNOH, .mapsec = MAPSEC_VEILSTONE_CITY, .flag = FLAG_SE_VISITED_VEILSTONE_CITY_SINNOH },
+    { .regionMapType = REGION_MAP_SINNOH, .mapsec = MAPSEC_PASTORIA_CITY, .flag = FLAG_SE_VISITED_PASTORIA_CITY_SINNOH },
+    { .regionMapType = REGION_MAP_SINNOH, .mapsec = MAPSEC_CELESTIC_TOWN, .flag = FLAG_SE_VISITED_CELESTIC_TOWN_SINNOH },
+    { .regionMapType = REGION_MAP_SINNOH, .mapsec = MAPSEC_CANALAVE_CITY, .flag = FLAG_SE_VISITED_CANALAVE_CITY_SINNOH },
+    { .regionMapType = REGION_MAP_SINNOH, .mapsec = MAPSEC_SNOWPOINT_CITY, .flag = FLAG_SE_VISITED_SNOWPOINT_CITY_SINNOH },
+    { .regionMapType = REGION_MAP_SINNOH, .mapsec = MAPSEC_SUNYSHORE_CITY, .flag = FLAG_SE_VISITED_SUNYSHORE_CITY_SINNOH },
+    { .regionMapType = REGION_MAP_SINNOH, .mapsec = MAPSEC_POKEMON_LEAGUE_SINNOH, .flag = FLAG_SE_VISITED_POKEMON_LEAGUE_SINNOH },
+    { .regionMapType = REGION_MAP_SINNOH, .mapsec = MAPSEC_FIGHT_AREA, .flag = FLAG_SE_VISITED_FIGHT_AREA_SINNOH },
+    { .regionMapType = REGION_MAP_SINNOH, .mapsec = MAPSEC_SURVIVAL_AREA, .flag = FLAG_SE_VISITED_SURVIVAL_AREA_SINNOH },
+    { .regionMapType = REGION_MAP_SINNOH, .mapsec = MAPSEC_RESORT_AREA, .flag = FLAG_SE_VISITED_RESORT_AREA_SINNOH },
     { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_NEW_BARK_TOWN, .flag = FLAG_SE_VISITED_NEW_BARK_TOWN },
     { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_CHERRYGROVE_CITY, .flag = FLAG_SE_VISITED_CHERRYGROVE_CITY },
     { .regionMapType = REGION_MAP_JOHTO, .mapsec = MAPSEC_VIOLET_CITY, .flag = FLAG_SE_VISITED_VIOLET_CITY },
@@ -2598,8 +2657,20 @@ static u8 SE_GetJohtoMapsecType(mapsec_u16_t mapSecId)
     u32 i;
     for (i = 0; i < ARRAY_COUNT(sFlyLocations); i++)
     {
-        if (sFlyLocations[i].regionMapType == REGION_MAP_JOHTO && sFlyLocations[i].mapsec == mapSecId)
+        if ((sFlyLocations[i].regionMapType == REGION_MAP_JOHTO || sFlyLocations[i].regionMapType == REGION_MAP_SINNOH)
+         && sFlyLocations[i].mapsec == mapSecId)
             return FlagGet(sFlyLocations[i].flag) ? MAPSECTYPE_CITY_CANFLY : MAPSECTYPE_CITY_CANTFLY;
     }
     return MAPSECTYPE_ROUTE;
+}
+
+// Super Emerald: Sinnoh towns become Fly destinations the first time the player enters them
+void SE_SetSinnohVisitedFlag(void)
+{
+    u32 i;
+    for (i = 0; i < ARRAY_COUNT(sFlyLocations); i++)
+    {
+        if (sFlyLocations[i].regionMapType == REGION_MAP_SINNOH && sFlyLocations[i].mapsec == gMapHeader.regionMapSectionId)
+            FlagSet(sFlyLocations[i].flag);
+    }
 }

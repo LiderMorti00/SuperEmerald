@@ -81,9 +81,10 @@ ValleyWindworks_EventScript_SNDRIFLOON::
 	playmoncry SPECIES_DRIFLOON, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_DRIFLOON, 22
+	setwildbattle SPECIES_DRIFLOON, 45
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
+	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, ValleyWindworks_EventScript_SNDRIFLOON_Ran

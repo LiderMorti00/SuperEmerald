@@ -1,4 +1,5 @@
 FightArea_PokemonCenter_1F_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_FightArea_PC_OnTransition
 	.byte 0
 
 
@@ -47,3 +48,7 @@ FightArea_PokemonCenter_1F_Text_PtNpc3_0::
 	.string "To toughen myself! To toughen my\n"
 	.string "POKéMON!\p"
 	.string "For that alone, I have come!$"
+
+SE_FightArea_PC_OnTransition::
+	setrespawn HEAL_LOCATION_FIGHT_AREA_SINNOH
+	end

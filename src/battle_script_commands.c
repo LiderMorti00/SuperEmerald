@@ -1810,7 +1810,7 @@ static void Cmd_getexp(void)
                     && !gBattleStruct->wildVictorySong)
                 {
                     BattleStopLowHpSound();
-                    PlayBGM(GetCurrentRegion() == REGION_JOHTO ? MUS_HG_VICTORY_WILD : MUS_VICTORY_WILD);
+                    PlayBGM(GetCurrentRegion() == REGION_JOHTO ? MUS_HG_VICTORY_WILD : (GetCurrentRegion() == REGION_SINNOH ? MUS_DPP_VICTORY_WILD : MUS_VICTORY_WILD));
                     gBattleStruct->wildVictorySong++;
                 }
 

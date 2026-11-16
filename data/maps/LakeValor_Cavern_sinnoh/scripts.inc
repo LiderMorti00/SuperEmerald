@@ -51,9 +51,10 @@ LakeValor_Cavern_EventScript_SNAZELF::
 	playmoncry SPECIES_AZELF, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_AZELF, 50
+	setwildbattle SPECIES_AZELF, 65
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
+	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, LakeValor_Cavern_EventScript_SNAZELF_Ran

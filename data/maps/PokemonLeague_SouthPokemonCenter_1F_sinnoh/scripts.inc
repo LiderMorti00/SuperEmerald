@@ -1,4 +1,5 @@
 PokemonLeague_SouthPokemonCenter_1F_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_LeagueSouth_PC_OnTransition
 	.byte 0
 
 
@@ -36,3 +37,7 @@ PokemonLeague_SouthPokemonCenter_1F_EventScript_PtNpc2::
 PokemonLeague_SouthPokemonCenter_1F_Text_PtNpc2_0::
 	.string "Victory Road confuses me. I should\n"
 	.string "draw up a map.$"
+
+SE_LeagueSouth_PC_OnTransition::
+	setrespawn HEAL_LOCATION_POKEMON_LEAGUE_SOUTH_POKEMON_CENTER_1F_SINNOH
+	end

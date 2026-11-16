@@ -1,4 +1,5 @@
 HearthomeCity_PokemonCenter_1F_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_HearthomeCity_PC_OnTransition
 	.byte 0
 
 
@@ -47,3 +48,7 @@ HearthomeCity_PokemonCenter_1F_Text_PtNpc3_0::
 	.string "Contests, too.\p"
 	.string "That lady has a huge appetite for\n"
 	.string "experiencing everything in life!$"
+
+SE_HearthomeCity_PC_OnTransition::
+	setrespawn HEAL_LOCATION_HEARTHOME_CITY_SINNOH
+	end

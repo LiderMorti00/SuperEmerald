@@ -457,10 +457,22 @@ static void SE_UpdateJohtoWorldState(void)
         RunScriptImmediately(SE_EventScript_JohtoWorldState);
 }
 
+static void SE_UpdateSinnohWorldState(void)
+{
+    if (!IsInSinnoh()) return;
+    SE_SetSinnohVisitedFlag();
+    if (!FlagGet(FLAG_SE_SINNOH_INITIALIZED))
+        RunScriptImmediately(SE_EventScript_InitSinnoh);
+    else if (VarGet(VAR_SE_SINNOH_STATE_VERSION) < SE_SINNOH_STATE_VERSION)
+        RunScriptImmediately(SE_EventScript_SinnohWorldState);
+    RunScriptImmediately(SE_EventScript_SinnohOnTransition);
+}
+
 void RunOnTransitionMapScript(void)
 {
     SE_UpdateKantoWorldState();
     SE_UpdateJohtoWorldState();
+    SE_UpdateSinnohWorldState();
     SE_BugContestCleanupOnLeave();
     MapHeaderRunScriptType(MAP_SCRIPT_ON_TRANSITION);
 }

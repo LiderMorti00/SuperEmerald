@@ -12,7 +12,7 @@ p = ours('data/event_scripts.s'); s = read(p)
 s = re.sub(re.escape(B) + r'.*?' + re.escape(E) + r'\n', '', s, flags=re.S)
 inc = ''.join('\t.include "data/maps/%s/scripts.inc"\n' % m for m in maps)
 inc += '\t.include "data/scripts/se_sinnoh_import.inc"\n'
-for extra in ('data/scripts/se_sinnoh_state.inc', 'data/scripts/se_sinnoh.inc'):
+for extra in ('data/scripts/se_sinnoh_state.inc', 'data/scripts/se_sinnoh.inc', 'data/scripts/se_sinnoh_legendaries.inc'):
     if os.path.exists(ours(extra)):
         inc += '\t.include "%s"\n' % extra
 anchor = '@ Super Emerald: HnS end\n'

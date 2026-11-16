@@ -67,7 +67,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_EternaCity_Gym_EternaCity_Gym_EventScript_Gardenia",
+      "script": "SE_EventScript_SinnohLeader_Gardenia",
       "flag": "0"
     },
     {

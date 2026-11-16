@@ -1,4 +1,5 @@
 SolaceonTown_PokemonCenter_1F_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_SolaceonTown_PC_OnTransition
 	.byte 0
 
 
@@ -48,3 +49,7 @@ SolaceonTown_PokemonCenter_1F_Text_PtNpc3_0::
 	.string "move.\p"
 	.string "I’m going to give the ruins a miss, this\n"
 	.string "time.$"
+
+SE_SolaceonTown_PC_OnTransition::
+	setrespawn HEAL_LOCATION_SOLACEON_TOWN_SINNOH
+	end

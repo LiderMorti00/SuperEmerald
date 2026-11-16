@@ -1,4 +1,5 @@
 SandgemTown_PokemonCenter_1F_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_SandgemTown_PC_OnTransition
 	.byte 0
 
 
@@ -39,3 +40,7 @@ SandgemTown_PokemonCenter_1F_Text_PtNpc3::
 	.string "is the POKéMON Communication Club.\p"
 	.string "There, you can have all sorts of fun\n"
 	.string "with your friends.$"
+
+SE_SandgemTown_PC_OnTransition::
+	setrespawn HEAL_LOCATION_SANDGEM_TOWN_SINNOH
+	end

@@ -1,4 +1,5 @@
 CanalaveCity_PokemonCenter_1F_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_CanalaveCity_PC_OnTransition
 	.byte 0
 
 
@@ -63,3 +64,7 @@ CanalaveCity_PokemonCenter_1F_Text_PtNpc4_0::
 	.string "It’s possible for one kind of POKéMON\n"
 	.string "to have different abilities.\p"
 	.string "That’s news to me!$"
+
+SE_CanalaveCity_PC_OnTransition::
+	setrespawn HEAL_LOCATION_CANALAVE_CITY_SINNOH
+	end

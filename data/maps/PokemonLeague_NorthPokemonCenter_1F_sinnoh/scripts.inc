@@ -1,4 +1,5 @@
 PokemonLeague_NorthPokemonCenter_1F_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_SinnohNorthPC_OnTransition
 	.byte 0
 
 
@@ -44,7 +45,7 @@ PokemonLeague_NorthPokemonCenter_1F_EventScript_DoorGuard::
 	message PokemonLeague_NorthPokemonCenter_1F_Text_MustHaveAllGymBadges
 	waitmessage
 	delay 120
-	goto_if_unset FLAG_SINNOH_BADGE6_GET, PokemonLeague_NorthPokemonCenter_1F_EventScript_NotAllBadges
+	goto_if_unset FLAG_SINNOH_BADGE8_GET, PokemonLeague_NorthPokemonCenter_1F_EventScript_NotAllBadges
 	closemessage
 	applymovement LOCALID_POKEMON_LEAGUE_NORTH_POKEMON_CENTER_1F_LEAGUE_GUARD_1, PokemonLeague_NorthPokemonCenter_1F_Movement_LeftGuardOutOfWay
 	applymovement LOCALID_POKEMON_LEAGUE_NORTH_POKEMON_CENTER_1F_LEAGUE_GUARD_2, PokemonLeague_NorthPokemonCenter_1F_Movement_RightGuardOutOfWay

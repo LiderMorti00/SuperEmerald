@@ -1,4 +1,5 @@
 OreburghCity_PokemonCenter_1F_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_OreburghCity_PC_OnTransition
 	.byte 0
 
 
@@ -87,3 +88,7 @@ OreburghCity_PokemonCenter_1F_Text_PtNpc6::
 	.string "Cool! You have a Vs. Recorder!\p"
 	.string "So, did you record a great battle\n"
 	.string "with it? Did ya? Did ya?$"
+
+SE_OreburghCity_PC_OnTransition::
+	setrespawn HEAL_LOCATION_OREBURGH_CITY_SINNOH
+	end
