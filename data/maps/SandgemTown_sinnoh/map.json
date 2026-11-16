@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -73,8 +74,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SANDGEM_DAWN",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 3,
       "y": 11,
@@ -88,8 +89,8 @@
       "flag": "FLAG_HIDE_SANDGEM_DAWN"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SANDGEM_BARRY",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BARRY",
       "x": 9,
       "y": 9,
@@ -103,8 +104,8 @@
       "flag": "FLAG_HIDE_SANDGEM_BARRY"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SANDGEM_ROWAN",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ROWAN",
       "x": 9,
       "y": 8,
@@ -118,8 +119,8 @@
       "flag": "FLAG_HIDE_SANDGEM_ROWAN"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SANDGEM_DAWN2",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 9,
       "y": 8,
@@ -134,6 +135,7 @@
     },
     {
       "local_id": "LOCALID_SANDGEM_SE_LUCAS",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_LUCAS",
       "x": 9,
       "y": 11,

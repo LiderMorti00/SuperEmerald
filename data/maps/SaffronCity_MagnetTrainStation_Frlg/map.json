@@ -11,10 +11,12 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_SAFFRON_TRAIN_STATION_ATTENDANT",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OFFICER_HNS",
       "x": 137,
@@ -26,8 +28,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SE_EventScript_MagnetTrainSaffron",
-      "flag": "0",
-      "local_id": "LOCALID_SAFFRON_TRAIN_STATION_ATTENDANT"
+      "flag": "0"
     },
     {
       "type": "object",

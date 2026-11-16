@@ -11,18 +11,19 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "region": "REGION_KANTO",
   "connections": [
     {
       "map": "MAP_INDIGO_PLATEAU_EXTERIOR",
-      "offset": 0,
+      "offset": -4,
       "direction": "up"
     }
   ],
   "object_events": [
     {
       "local_id": "LOCALID_ROUTE23_SE_ORO",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GOLD_NORMAL_HNS",
       "x": 20,
       "y": 21,
@@ -43,6 +44,20 @@
       "elevation": 0,
       "dest_map": "MAP_VICTORY_ROAD_KANTO_1F_HNS",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 5,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_VICTORY_ROAD_KANTO_B2F_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 145,
+      "elevation": 0,
+      "dest_map": "MAP_RECEPTION_GATE_HNS",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [],
@@ -79,5 +94,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "SE_KH_Route23_Frlg_RuinsOfAlph_PuzzleAndRewardChambers_MapScript_StatueDescription"
     }
-  ]
+  ],
+  "region": "REGION_KANTO"
 }

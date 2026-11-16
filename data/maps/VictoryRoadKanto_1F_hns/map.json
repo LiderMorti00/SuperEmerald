@@ -11,8 +11,8 @@
   "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "region": "REGION_KANTO",
   "connections": null,
   "object_events": [
     {
@@ -186,8 +186,8 @@
   ],
   "warp_events": [
     {
-      "x": 28,
-      "y": 2,
+      "x": 43,
+      "y": 24,
       "elevation": 0,
       "dest_map": "MAP_ROUTE23",
       "dest_warp_id": "0"
@@ -264,7 +264,10 @@
       "y": 20,
       "elevation": 0,
       "item": "ITEM_ULTRA_BALL",
-      "flag": "FLAG_SE_KH_HIDDEN_VICTORYROADKANTO_1F_HNS_11_20"
+      "flag": "FLAG_SE_KH_HIDDEN_VICTORYROADKANTO_1F_HNS_11_20",
+      "quantity": 0,
+      "underfoot": false
     }
-  ]
+  ],
+  "region": "REGION_KANTO"
 }

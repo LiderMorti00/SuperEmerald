@@ -11,8 +11,8 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "region": "REGION_KANTO",
   "connections": [
     {
       "map": "MAP_VIRIDIAN_CITY",
@@ -111,5 +111,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "SE_KH_Route22_Frlg_Sign"
     }
-  ]
+  ],
+  "region": "REGION_KANTO"
 }

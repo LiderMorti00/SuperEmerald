@@ -11,6 +11,7 @@
   "allow_escaping": true,
   "allow_running": false,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -227,7 +228,9 @@
       "y": 29,
       "elevation": 0,
       "item": "ITEM_REAPER_CLOTH",
-      "flag": "FLAG_HIDDEN_ITEM_MT_SILVER_OUTSIDE_REAPER_CLOTH"
+      "flag": "FLAG_HIDDEN_ITEM_MT_SILVER_OUTSIDE_REAPER_CLOTH",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -235,7 +238,9 @@
       "y": 22,
       "elevation": 0,
       "item": "ITEM_FULL_RESTORE",
-      "flag": "FLAG_HIDDEN_ITEM_MT_SILVER_OUTSIDE_FULL_RESTORE"
+      "flag": "FLAG_HIDDEN_ITEM_MT_SILVER_OUTSIDE_FULL_RESTORE",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "sign",

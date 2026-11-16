@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -26,8 +27,8 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "local_id": "LOCALID_ROUTE202_DAWN",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 22,
       "y": 27,
@@ -111,8 +112,8 @@
       "flag": "FLAG_SN_ITEM_ROUTE_102_POTION"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_R202_RADAR_CP",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 12,
       "y": 27,
