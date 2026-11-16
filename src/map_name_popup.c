@@ -679,7 +679,9 @@ static void LoadMapNamePopUpWindowBg(void)
     if (OW_POPUP_GENERATION == GEN_5)
         secondaryPopUpWindowId = GetSecondaryPopUpWindowId();
 
-    if (regionMapSectionId >= KANTO_MAPSEC_START)
+    if (regionMapSectionId >= JOHTO_MAPSEC_START)
+        regionMapSectionId = 0; // Super Emerald: Johto/Sinnoh use the default theme
+    else if (regionMapSectionId >= KANTO_MAPSEC_START)
     {
         if (regionMapSectionId > KANTO_MAPSEC_END)
             regionMapSectionId -= KANTO_MAPSEC_COUNT;

@@ -1,0 +1,89 @@
+GoldenrodCity_RadioTower_1F_hns_MapScripts::
+	.byte 0
+
+
+RadioTower1F_EventScript_Youngster::
+	lock
+	faceplayer
+	msgbox RadioTower1F_Text_Youngster, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+RadioTower1F_Text_Youngster::
+    .string "I love MARY, from POKéMON TALK.\p"
+    .string "I only know what she sounds like,\n"
+    .string "though.$"
+
+RadioTower1F_EventScript_Lass::
+	lock
+	faceplayer
+	msgbox RadioTower1F_Text_Lass, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+RadioTower1F_Text_Lass::
+    .string "BEN is a fabulous DJ.\p"
+    .string "His sweet voice makes me melt!$"
+
+RadioTower1F_Text_GruntM3Seen::
+    .string "We've finally taken over the\n"
+    .string "RADIO TOWER!\p"
+    .string "Now everyone will get to experience\n"
+    .string "the true terror of TEAM ROCKET!\p"
+    .string "We'll show you how scary we are!$"
+
+SE_J_GoldenrodCity_RadioTower_1F_hns_RadioTower1F_EventScript_Grunt::
+	msgbox RadioTower1F_Text_GruntM3Seen, MSGBOX_NPC
+	end
+
+GoldenrodCity_RadioTower_1F_Text_LotteryCornerDrawTicket::
+	.string "This is the POKéMON LOTTERY CORNER.\p"
+	.string "If the LOTO TICKET's number matches\n"
+	.string "the ID number of any of your POKéMON,\l"
+	.string "you will receive a fabulous gift.\p"
+	.string "Would you like to draw a POKéMON\n"
+	.string "LOTO TICKET?$"
+
+SE_J_GoldenrodCity_RadioTower_1F_hns_GoldenrodCity_RadioTower_1F_EventScript_LotteryClerk::
+	msgbox GoldenrodCity_RadioTower_1F_Text_LotteryCornerDrawTicket, MSGBOX_NPC
+	end
+
+RadioTower1F_Text_ReceptionistWelcome::
+    .string "Welcome!$"
+
+SE_J_GoldenrodCity_RadioTower_1F_hns_RadioTower1F_EventScript_Reception::
+	msgbox RadioTower1F_Text_ReceptionistWelcome, MSGBOX_NPC
+	end
+
+RadioTower1F_EventScript_Whitney::
+	lock
+	faceplayer
+	msgbox RadioTower1F_Text_Whitney1, MSGBOX_DEFAULT
+	closemessage
+	turnobject LOCALID_GOLDENROD_RADIOTOWER_WHITNEY, DIR_SOUTH
+	release
+	end
+
+RadioTower1F_Text_Whitney1::
+	.string "WHITNEY: Hi!\p"
+	.string "My name is WHITNEY!\p"
+	.string "I heard about the QUIZ to win a\n"
+	.string "RADIO CARD, so I came here to get\l"
+	.string "one...\p"
+	.string "But this QUIZ is so hard!$"
+
+GoldenrodCity_RadioTower_1F_EventScript_Sign::
+	lock
+	msgbox RadioTower1F_Text_Directory, MSGBOX_SIGN
+	closemessage
+	release
+	end
+
+RadioTower1F_Text_Directory::
+    .string "1F RECEPTION\n"
+    .string "2F SALES\p"
+    .string "3F PERSONNEL\n"
+    .string "4F PRODUCTION\p"
+    .string "5F DIRECTOR'S OFFICE$"

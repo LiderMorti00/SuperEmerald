@@ -1769,6 +1769,18 @@ void UpdateTimeOfDay(bool32 updateBlend)
         }
         gTimeOfDay = TIME_DAY;
     }
+
+    // Super Emerald: Johto (HnS) overworld Pokemon swap between day and night ones.
+    if (gTimeOfDay == TIME_NIGHT)
+    {
+        FlagClear(FLAG_NIGHT_POKEMON);
+        FlagSet(FLAG_DAY_POKEMON);
+    }
+    else
+    {
+        FlagSet(FLAG_NIGHT_POKEMON);
+        FlagClear(FLAG_DAY_POKEMON);
+    }
 }
 
 #undef MORNING_HOUR_MIDDLE

@@ -1,0 +1,6 @@
+MtSilver_MountainSide_hns_MapScripts::
+	.byte 0
+
+
+SE_J_MtSilver_MountainSide_hns_MtSilver_MountainSide_EventScript_Item_Stealth_Rock::
+	end

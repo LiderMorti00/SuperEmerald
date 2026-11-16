@@ -445,9 +445,19 @@ static void SE_UpdateKantoWorldState(void)
         RunScriptImmediately(SE_EventScript_KantoWorldState);
 }
 
+static void SE_UpdateJohtoWorldState(void)
+{
+    if (!IsInJohto()) return;
+    if (!FlagGet(FLAG_SE_JOHTO_INITIALIZED))
+        RunScriptImmediately(SE_EventScript_InitJohto);
+    else if (VarGet(VAR_SE_JOHTO_STATE_VERSION) < SE_JOHTO_STATE_VERSION)
+        RunScriptImmediately(SE_EventScript_JohtoWorldState);
+}
+
 void RunOnTransitionMapScript(void)
 {
     SE_UpdateKantoWorldState();
+    SE_UpdateJohtoWorldState();
     MapHeaderRunScriptType(MAP_SCRIPT_ON_TRANSITION);
 }
 

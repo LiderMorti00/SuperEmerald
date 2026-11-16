@@ -392,6 +392,9 @@
 #define JOHTO_VARS_START              0x5000 // 64 vars
 #define SINNOH_VARS_START             0x5040 // 64 vars
 
+#define VAR_SE_JOHTO_STATE_VERSION    0x5000 // Super Emerald: bump SE_JOHTO_STATE_VERSION when the Johto state changes
+#define SE_JOHTO_STATE_VERSION        1
+
 #define SPECIAL_VARS_START            0x8000
 // special vars
 // They are commonly used as parameters to commands, or return values from commands.

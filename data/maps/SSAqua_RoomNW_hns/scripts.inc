@@ -1,0 +1,42 @@
+SSAqua_RoomNW_hns_MapScripts::
+	.byte 0
+
+
+SSAqua_RoomNW_Text_SailorStanlyBeaten::
+	.string "Sorry! It's all my fault!$"
+
+SE_J_SSAqua_RoomNW_hns_SSAqua_RoomNW_EventScript_Stanly::
+	trainerbattle_no_intro TRAINER_STANLY_HNS, SSAqua_RoomNW_Text_SailorStanlyBeaten
+	end
+
+SSAqua_RoomNW_EventScript_Edward::
+    trainerbattle_single TRAINER_EDWARD_HNS, SSAqua_RoomNW_Text_GentlemanEdwardSeen, SSAqua_RoomNW_Text_GentlemanEdwardBeaten
+	msgbox SSAqua_RoomNW_Text_GentlemanEdwardAfterBattle, MSGBOX_AUTOCLOSE
+	end
+
+SSAqua_RoomNW_Text_GentlemanEdwardAfterBattle::
+	.string "I give up. You don't have to\n"
+	.string "look.\p"
+	.string "Just forget about it!$"
+
+SSAqua_RoomNW_Text_GentlemanEdwardBeaten::
+	.string "I… I can't find it…$"
+
+SSAqua_RoomNW_Text_GentlemanEdwardSeen::
+	.string "Oh, no. I've lost something\n"
+	.string "that's very important.$"
+
+SSAqua_RoomNW_EventScript_Corey::
+    trainerbattle_single TRAINER_COREY_HNS, SSAqua_RoomNW_Text_BurglarCoreySeen, SSAqua_RoomNW_Text_BurglarCoreyBeaten
+	msgbox SSAqua_RoomNW_Text_BurglarCoreyAfterBattle, MSGBOX_AUTOCLOSE
+	end
+
+SSAqua_RoomNW_Text_BurglarCoreyAfterBattle::
+	.string "I found a pretty coin here.\p"
+	.string "Someone must have lost it…$"
+
+SSAqua_RoomNW_Text_BurglarCoreyBeaten::
+	.string "How unlucky! I lost!$"
+
+SSAqua_RoomNW_Text_BurglarCoreySeen::
+	.string "Yeehaw! Lucky!$"

@@ -1,0 +1,26 @@
+TinTower_RoofNight_hns_MapScripts::
+	.byte 0
+
+
+SE_J_TinTower_RoofNight_hns_TinTower_RoofDay_EventScript_Miki::
+	msgbox TinTower_RoofDay_Text_Miki_Before, MSGBOX_NPC
+	end
+
+SE_J_TinTower_RoofNight_hns_TinTower_RoofDay_EventScript_Sayo::
+	msgbox TinTower_RoofDay_Text_Sayo_Before, MSGBOX_NPC
+	end
+
+SE_J_TinTower_RoofNight_hns_TinTower_RoofDay_EventScript_Zuki::
+	msgbox TinTower_RoofDay_Text_Zuki_Before, MSGBOX_NPC
+	end
+
+SE_J_TinTower_RoofNight_hns_TinTower_RoofDay_EventScript_Naoko::
+	msgbox TinTower_RoofDay_Text_Naoko_Before, MSGBOX_NPC
+	end
+
+SE_J_TinTower_RoofNight_hns_TinTower_RoofDay_EventScript_Kuni::
+	msgbox TinTower_RoofDay_Text_Kuni_Before, MSGBOX_NPC
+	end
+
+SE_J_TinTower_RoofNight_hns_TinTower_RoofDay_EventScript_HoOh::
+	end

@@ -143,6 +143,32 @@ enum __attribute__((__packed__)) Flavor
 #define BERRY_TREE_ROUTE_123_SITRUS   88
 #define BERRY_TREE_ROUTE_123_RAWST    89
 
+
+
+
+// Super Emerald: HnS begin (Johto berry trees)
+#define BERRY_TREE_JOHTO_CHERI_2       90
+#define BERRY_TREE_JOHTO_PECHA_2       91
+#define BERRY_TREE_JOHTO_ORAN_1        92
+#define BERRY_TREE_JOHTO_ROUTE_102_ORAN 93
+#define BERRY_TREE_JOHTO_ORAN_2        94
+#define BERRY_TREE_JOHTO_CHERI_1       95
+#define BERRY_TREE_JOHTO_PECHA_1       96
+#define BERRY_TREE_JOHTO_PERSIM_1      97
+#define BERRY_TREE_JOHTO_PERSIM_2      98
+#define BERRY_TREE_JOHTO_CHESTO_1      99
+#define BERRY_TREE_JOHTO_RAWST_1       100
+#define BERRY_TREE_JOHTO_RAWST_2       101
+#define BERRY_TREE_JOHTO_CHESTO_2      102
+#define BERRY_TREE_JOHTO_LEPPA_1       103
+#define BERRY_TREE_JOHTO_LEPPA_2       104
+#define BERRY_TREE_JOHTO_ASPEAR_1      105
+#define BERRY_TREE_JOHTO_ASPEAR_2      106
+#define BERRY_TREE_JOHTO_LUM_1         107
+#define BERRY_TREE_JOHTO_SITRUS_1      108
+#define BERRY_TREE_JOHTO_ROUTE_118_SITRUS_1 109
+// Super Emerald: HnS end
+
 // Remainder are unused
 
 #define BERRY_TREES_COUNT 128

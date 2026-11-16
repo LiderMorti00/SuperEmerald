@@ -1686,6 +1686,7 @@
 // Names that Kanto does not use stay stubbed to 0.
 #ifndef SFR_GEN_FLAGS // defined only by tools/sfr/gen_kanto_flags.py
 #include "constants/flags_kanto.h"
+#include "constants/flags_johto.h"
 #if KANTO_FLAGS_START != (DAILY_FLAGS_END + 1)
 #error "Super Fire Red: Emerald flags changed, run tools/sfr/gen_kanto_flags.py"
 #endif

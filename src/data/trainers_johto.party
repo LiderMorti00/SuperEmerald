@@ -1,0 +1,3777 @@
+=== TRAINER_JOEY_HNS ===
+Name: JOEY
+Class: Youngster Frlg
+Pic: Youngster Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_RATICATE
+Level: 48
+
+=== TRAINER_DON_HNS ===
+Name: DON
+Class: Bug Catcher Frlg
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_LEDIAN
+Level: 47
+
+SPECIES_ARIADOS
+Level: 47
+
+=== TRAINER_MIKEY_HNS ===
+Name: MIKEY
+Class: Youngster Frlg
+Pic: Youngster Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_NOCTOWL
+Level: 47
+
+SPECIES_FURRET
+Level: 48
+
+=== TRAINER_WADE_HNS ===
+Name: WADE
+Class: Bug Catcher Frlg
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_BEEDRILL
+Level: 48
+
+SPECIES_FORRETRESS
+Level: 48
+
+=== TRAINER_ALBERT_HNS ===
+Name: ALBERT
+Class: Youngster Frlg
+Pic: Youngster Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_FURRET
+Level: 49
+
+SPECIES_CROBAT
+Level: 49
+
+=== TRAINER_LIZ_HNS ===
+Name: LIZ
+Class: Picnicker Frlg
+Pic: Picnicker
+Gender: Male
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_NIDOQUEEN
+Level: 49
+
+=== TRAINER_ROLAND_HNS ===
+Name: ROLAND
+Class: Camper Frlg
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_NIDOKING
+Level: 49
+
+=== TRAINER_RALPH_HNS ===
+Name: RALPH
+Class: Fisherman Frlg
+Pic: Fisherman
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_SEAKING
+Level: 49
+
+=== TRAINER_HENRY_HNS ===
+Name: HENRY
+Class: Fisherman Frlg
+Pic: Fisherman
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_AZUMARILL
+Level: 49
+
+SPECIES_POLIWRATH
+Level: 49
+
+=== TRAINER_JUSTIN_HNS ===
+Name: JUSTIN
+Class: Fisherman Frlg
+Pic: Fisherman
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_TENTACRUEL
+Level: 49
+
+=== TRAINER_GORDON_HNS ===
+Name: GORDON
+Class: Youngster Frlg
+Pic: Youngster Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_QUAGSIRE
+Level: 50
+
+=== TRAINER_PETER_HNS ===
+Name: PETER
+Class: Bird Keeper Frlg
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_FEAROW
+Level: 49
+
+SPECIES_XATU
+Level: 49
+
+=== TRAINER_ANTHONY_HNS ===
+Name: ANTHONY
+Class: Hiker Frlg
+Pic: Hiker
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_GOLEM
+Level: 50
+
+SPECIES_MACHAMP
+Level: 50
+
+=== TRAINER_SAMUEL_HNS ===
+Name: SAMUEL
+Class: Youngster Frlg
+Pic: Youngster Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_URSALUNA
+Level: 50
+
+SPECIES_SANDSLASH
+Level: 50
+
+SPECIES_FEAROW
+Level: 50
+
+=== TRAINER_BRANDON_HNS ===
+Name: BRANDON
+Class: Pokefan
+Pic: Pokefan M
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_GRANBULL
+Level: 51
+
+=== TRAINER_TODD_HNS ===
+Name: TODD
+Class: Camper Frlg
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_AZUMARILL
+Level: 51
+
+=== TRAINER_IAN_HNS ===
+Name: IAN
+Class: Youngster Frlg
+Pic: Youngster Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_ANNIHILAPE
+Level: 50
+
+SPECIES_DUGTRIO
+Level: 51
+
+=== TRAINER_JENN_HNS ===
+Name: JENN
+Class: Cooltrainer Frlg
+Pic: Cooltrainer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_STARMIE
+Level: 54
+
+SPECIES_STARMIE
+Level: 54
+
+=== TRAINER_IRENE_HNS ===
+Name: IRENE
+Class: Cooltrainer Frlg
+Pic: Cooltrainer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_SEAKING
+Level: 53
+
+SPECIES_SEAKING
+Level: 54
+
+=== TRAINER_KATE_HNS ===
+Name: KATE
+Class: Cooltrainer Frlg
+Pic: Cooltrainer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_CLOYSTER
+Level: 54
+
+SPECIES_CLOYSTER
+Level: 55
+
+=== TRAINER_KEITH_HNS ===
+Name: KEITH
+Class: Officer
+Pic: Officer
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_ARCANINE
+Level: 51
+
+=== TRAINER_GINA_HNS ===
+Name: GINA
+Class: Picnicker Frlg
+Pic: Picnicker
+Gender: Male
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_JUMPLUFF
+Level: 51
+
+SPECIES_VENUSAUR
+Level: 51
+
+=== TRAINER_KIM_HNS ===
+Name: KIM
+Class: Picnicker Frlg
+Pic: Picnicker
+Gender: Male
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_NINETALES
+Level: 52
+
+=== TRAINER_BRYAN_HNS ===
+Name: BRYAN
+Class: Bird Keeper Frlg
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_PIDGEOT
+Level: 51
+
+SPECIES_PIDGEOT
+Level: 52
+
+SPECIES_FEAROW
+Level: 52
+
+=== TRAINER_BROOKE_HNS ===
+Name: BROOKE
+Class: Picnicker Frlg
+Pic: Picnicker
+Gender: Male
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_RAICHU
+Level: 52
+
+=== TRAINER_ELLIOT_HNS ===
+Name: ELLIOT
+Class: Camper Frlg
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_SANDSLASH
+Level: 51
+
+SPECIES_AZUMARILL
+Level: 51
+
+=== TRAINER_IVAN_HNS ===
+Name: IVAN
+Class: Camper Frlg
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_JOLTEON
+Level: 51
+
+SPECIES_DUGTRIO
+Level: 51
+
+=== TRAINER_WALT_HNS ===
+Name: WALT
+Class: Kindler
+Pic: Kindler
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_MAGMORTAR
+Level: 51
+
+SPECIES_MAGMORTAR
+Level: 51
+
+=== TRAINER_IRWIN_HNS ===
+Name: IRWIN
+Class: Juggler Frlg
+Pic: Juggler Frlg
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_ELECTRODE
+Level: 51
+
+SPECIES_FORRETRESS
+Level: 51
+
+SPECIES_ELECTRODE
+Level: 51
+
+=== TRAINER_DIRK_HNS ===
+Name: DIRK
+Class: Officer
+Pic: Officer
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_ARCANINE
+Level: 51
+
+SPECIES_HOUNDOOM
+Level: 51
+
+=== TRAINER_ARNIE_HNS ===
+Name: ARNIE
+Class: Bug Catcher Frlg
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_YANMEGA
+Level: 52
+
+SPECIES_VENOMOTH
+Level: 52
+
+=== TRAINER_MARK_HNS ===
+Name: MARK
+Class: Psychic Frlg
+Pic: Psychic M Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_ALAKAZAM
+Level: 51
+
+SPECIES_ALAKAZAM
+Level: 51
+
+SPECIES_ALAKAZAM
+Level: 51
+
+=== TRAINER_ALAN_HNS ===
+Name: ALAN
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_TANGROWTH
+Level: 53
+
+SPECIES_ARCANINE
+Level: 53
+
+=== TRAINER_ANN_AND_ANNE_HNS ===
+Name: ANN&ANNE
+Class: Twins Frlg
+Pic: Twins Frlg
+Gender: Male
+Music: Girl
+Double Battle: Yes
+AI: Check Bad Move
+
+SPECIES_CLEFABLE
+Level: 52
+
+SPECIES_FURRET
+Level: 52
+
+=== TRAINER_GREG_HNS ===
+Name: GREG
+Class: Psychic Frlg
+Pic: Psychic M Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_WYRDEER
+Level: 53
+
+=== TRAINER_HARRY_HNS ===
+Name: HARRY
+Class: Sailor Frlg
+Pic: Sailor
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_QUAGSIRE
+Level: 54
+
+=== TRAINER_DANA_HNS ===
+Name: DANA
+Class: Lass Frlg
+Pic: Lass
+Gender: Male
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_AMPHAROS
+Level: 52
+
+SPECIES_GOLDUCK
+Level: 53
+
+=== TRAINER_OLIVIA_HNS ===
+Name: OLIVIA
+Class: Beauty Frlg
+Pic: Beauty
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_CORSOLA
+Level: 53
+
+=== TRAINER_TOBY_HNS ===
+Name: TOBY
+Class: Bird Keeper Frlg
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_DODRIO
+Level: 53
+
+SPECIES_DODRIO
+Level: 53
+
+=== TRAINER_CHAD_HNS ===
+Name: CHAD
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_MR_MIME
+Level: 53
+
+SPECIES_MAGNEZONE
+Level: 53
+
+=== TRAINER_VALERIE_HNS ===
+Name: VALERIE
+Class: Beauty Frlg
+Pic: Beauty
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_JUMPLUFF
+Level: 53
+
+SPECIES_MILTANK
+Level: 53
+
+=== TRAINER_NORMAN_HNS ===
+Name: NORMAN
+Class: Psychic Frlg
+Pic: Psychic M Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_SLOWBRO
+Level: 53
+
+SPECIES_SLOWBRO
+Level: 54
+
+=== TRAINER_RUTH_HNS ===
+Name: RUTH
+Class: Parasol Lady
+Pic: Parasol Lady
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_RAICHU
+Level: 54
+
+=== TRAINER_DEREK_HNS ===
+Name: DEREK
+Class: Pokefan
+Pic: Pokefan M
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_RAICHU
+Level: 53
+
+SPECIES_RAPIDASH
+Level: 53
+
+=== TRAINER_EUGENE_HNS ===
+Name: EUGENE
+Class: Sailor Frlg
+Pic: Sailor
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_POLIWRATH
+Level: 53
+
+SPECIES_TAUROS
+Level: 53
+
+=== TRAINER_JAMIE_HNS ===
+Name: JAIME
+Class: Parasol Lady
+Pic: Parasol Lady
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_UMBREON
+Level: 53
+
+=== TRAINER_ELAINE_HNS ===
+Name: ELAINE
+Class: Swimmer F Frlg
+Pic: Swimmer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_STARMIE
+Level: 54
+
+=== TRAINER_SIMON_HNS ===
+Name: SIMON
+Class: Swimmer M Frlg
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_TENTACRUEL
+Level: 54
+
+SPECIES_TENTACRUEL
+Level: 54
+
+=== TRAINER_PAULA_HNS ===
+Name: PAULA
+Class: Swimmer F Frlg
+Pic: Swimmer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_STARMIE
+Level: 54
+
+SPECIES_CLOYSTER
+Level: 54
+
+=== TRAINER_RANDALL_HNS ===
+Name: RANDALL
+Class: Swimmer M Frlg
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_CLOYSTER
+Level: 54
+
+SPECIES_BLASTOISE
+Level: 54
+
+=== TRAINER_BERKE_HNS ===
+Name: BERKE
+Class: Swimmer M Frlg
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_QWILFISH
+Level: 55
+
+=== TRAINER_CHARLIE_HNS ===
+Name: CHARLIE
+Class: Swimmer M Frlg
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_CLOYSTER
+Level: 54
+
+SPECIES_TENTACRUEL
+Level: 54
+
+=== TRAINER_DENISE_HNS ===
+Name: DENISE
+Class: Swimmer F Frlg
+Pic: Swimmer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_LAPRAS
+Level: 55
+
+=== TRAINER_KARA_HNS ===
+Name: KARA
+Class: Swimmer F Frlg
+Pic: Swimmer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_KINGDRA
+Level: 54
+
+SPECIES_STARMIE
+Level: 54
+
+=== TRAINER_KAYLEE_HNS ===
+Name: KAYLEE
+Class: Swimmer F Frlg
+Pic: Swimmer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_SEAKING
+Level: 54
+
+SPECIES_LANTURN
+Level: 54
+
+SPECIES_QUAGSIRE
+Level: 54
+
+=== TRAINER_GEORGE_HNS ===
+Name: GEORGE
+Class: Swimmer M Frlg
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_TENTACRUEL
+Level: 54
+
+SPECIES_OCTILLERY
+Level: 54
+
+SPECIES_STARMIE
+Level: 54
+
+=== TRAINER_KIRK_HNS ===
+Name: KIRK
+Class: Swimmer M Frlg
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_GYARADOS
+Level: 54
+
+SPECIES_GYARADOS
+Level: 54
+
+=== TRAINER_SUSIE_HNS ===
+Name: SUSIE
+Class: Swimmer F Frlg
+Pic: Swimmer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_GOLDUCK
+Level: 55
+
+SPECIES_SEAKING
+Level: 54
+
+=== TRAINER_MATHEW_HNS ===
+Name: MATHEW
+Class: Swimmer M Frlg
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_KINGLER
+Level: 54
+
+SPECIES_QWILFISH
+Level: 54
+
+=== TRAINER_WENDY_HNS ===
+Name: WENDY
+Class: Swimmer F Frlg
+Pic: Swimmer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_KINGDRA
+Level: 54
+
+SPECIES_KINGDRA
+Level: 55
+
+=== TRAINER_SHANE_HNS ===
+Name: SHANE
+Class: Pokemaniac Frlg
+Pic: Pokemaniac
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_NIDOKING
+Level: 54
+
+SPECIES_NIDOKING
+Level: 54
+
+=== TRAINER_BENJAMIN_HNS ===
+Name: BENJAMIN
+Class: Hiker Frlg
+Pic: Hiker
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_GOLEM
+Level: 54
+
+SPECIES_DUGTRIO
+Level: 54
+
+=== TRAINER_SPENCER_HNS ===
+Name: SPENCER
+Class: Camper Frlg
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_SANDSLASH
+Level: 54
+
+SPECIES_CROBAT
+Level: 54
+
+=== TRAINER_TIFFANY_HNS ===
+Name: TIFFANY
+Class: Picnicker Frlg
+Pic: Picnicker
+Gender: Male
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_CLEFABLE
+Level: 53
+
+SPECIES_WIGGLYTUFF
+Level: 54
+
+=== TRAINER_BEN_HNS ===
+Name: BEN
+Class: Pokemaniac Frlg
+Pic: Pokemaniac
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_SLOWBRO
+Level: 54
+
+SPECIES_BLASTOISE
+Level: 54
+
+=== TRAINER_MARVIN_HNS ===
+Name: MARVIN
+Class: Fisherman Frlg
+Pic: Fisherman
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_GYARADOS
+Level: 54
+
+SPECIES_GYARADOS
+Level: 54
+
+=== TRAINER_RON_HNS ===
+Name: RON
+Class: Pokemaniac Frlg
+Pic: Pokemaniac
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_NIDOKING
+Level: 54
+
+SPECIES_CHARIZARD
+Level: 54
+
+=== TRAINER_BRENT_HNS ===
+Name: BRENT
+Class: Pokemaniac Frlg
+Pic: Pokemaniac
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_LICKILICKY
+Level: 54
+
+SPECIES_VENUSAUR
+Level: 54
+
+=== TRAINER_PHIL_HNS ===
+Name: PHIL
+Class: Psychic Frlg
+Pic: Psychic M Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_XATU
+Level: 58
+
+SPECIES_ALAKAZAM
+Level: 58
+
+SPECIES_FARIGIRAF
+Level: 58
+
+=== TRAINER_EDGAR_HNS ===
+Name: EDGAR
+Class: Fisherman Frlg
+Pic: Fisherman
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_OCTILLERY
+Level: 58
+
+SPECIES_GYARADOS
+Level: 58
+
+SPECIES_SEAKING
+Level: 58
+
+=== TRAINER_WILTON_HNS ===
+Name: WILTON
+Class: Fisherman Frlg
+Pic: Fisherman
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_QWILFISH
+Level: 58
+
+SPECIES_OCTILLERY
+Level: 58
+
+SPECIES_SEAKING
+Level: 58
+
+=== TRAINER_ZACH_HNS ===
+Name: ZACH
+Class: Pokemaniac Frlg
+Pic: Pokemaniac
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_RHYPERIOR
+Level: 59
+
+SPECIES_TYRANITAR
+Level: 58
+
+SPECIES_HERACROSS
+Level: 58
+
+=== TRAINER_ALLEN_HNS ===
+Name: ALLEN
+Class: Cooltrainer Frlg
+Pic: Cooltrainer M
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_CHARIZARD
+Level: 57
+
+SPECIES_ELECTIVIRE
+Level: 58
+
+=== TRAINER_CYBIL_HNS ===
+Name: CYBIL
+Class: Cooltrainer Frlg
+Pic: Cooltrainer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_BUTTERFREE
+Level: 59
+
+SPECIES_BELLOSSOM
+Level: 58
+
+SPECIES_QUAGSIRE
+Level: 58
+
+=== TRAINER_VANCE_HNS ===
+Name: VANCE
+Class: Bird Keeper Frlg
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_PIDGEOT
+Level: 58
+
+SPECIES_HONCHKROW
+Level: 58
+
+SPECIES_XATU
+Level: 58
+
+SPECIES_SKARMORY
+Level: 58
+
+=== TRAINER_ERIK_HNS ===
+Name: ERIK
+Class: Hiker Frlg
+Pic: Hiker
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_MACHAMP
+Level: 58
+
+SPECIES_GOLEM
+Level: 58
+
+SPECIES_KANGASKHAN
+Level: 58
+
+=== TRAINER_RYAN_HNS ===
+Name: RYAN
+Class: Cooltrainer Frlg
+Pic: Cooltrainer M
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_PIDGEOT
+Level: 58
+
+SPECIES_ELECTIVIRE
+Level: 58
+
+SPECIES_MAGMORTAR
+Level: 58
+
+=== TRAINER_MICHAEL_HNS ===
+Name: MICHAEL
+Class: Hiker Frlg
+Pic: Hiker
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_RHYPERIOR
+Level: 58
+
+SPECIES_DONPHAN
+Level: 58
+
+SPECIES_GOLEM
+Level: 58
+
+=== TRAINER_KELLY_HNS ===
+Name: KELLY
+Class: Cooltrainer Frlg
+Pic: Cooltrainer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_TOGEKISS
+Level: 58
+
+SPECIES_AMPHAROS
+Level: 58
+
+SPECIES_TANGROWTH
+Level: 58
+
+SPECIES_BLASTOISE
+Level: 58
+
+=== TRAINER_KENJI_HNS ===
+Name: KENJI
+Class: Black Belt Frlg
+Pic: Black Belt
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_STEELIX
+Level: 57
+
+SPECIES_MACHAMP
+Level: 58
+
+SPECIES_STEELIX
+Level: 57
+
+SPECIES_HITMONLEE
+Level: 58
+
+=== TRAINER_TIMOTHY_HNS ===
+Name: TIMOTHY
+Class: Hiker Frlg
+Pic: Hiker
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_DUGTRIO
+Level: 58
+
+SPECIES_GLISCOR
+Level: 59
+
+SPECIES_GOLEM
+Level: 58
+
+SPECIES_DUGTRIO
+Level: 58
+
+=== TRAINER_PARRY_HNS ===
+Name: PARRY
+Class: Hiker Frlg
+Pic: Hiker
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_MAMOSWINE
+Level: 60
+
+SPECIES_DUGTRIO
+Level: 60
+
+SPECIES_STEELIX
+Level: 61
+
+=== TRAINER_QUENTIN_HNS ===
+Name: QUENTIN
+Class: Camper Frlg
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_FEAROW
+Level: 58
+
+SPECIES_ANNIHILAPE
+Level: 58
+
+SPECIES_TAUROS
+Level: 58
+
+SPECIES_RAICHU
+Level: 58
+
+=== TRAINER_TED_HNS ===
+Name: TED
+Class: Camper Frlg
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_URSALUNA
+Level: 59
+
+SPECIES_ANNIHILAPE
+Level: 59
+
+SPECIES_NIDOKING
+Level: 59
+
+=== TRAINER_ERIN_HNS ===
+Name: ERIN
+Class: Picnicker Frlg
+Pic: Picnicker
+Gender: Male
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_RAPIDASH
+Level: 59
+
+SPECIES_NIDOQUEEN
+Level: 58
+
+SPECIES_RAICHU
+Level: 58
+
+SPECIES_RAPIDASH
+Level: 59
+
+=== TRAINER_BAILEY_HNS ===
+Name: BAILEY
+Class: Hiker Frlg
+Pic: Hiker
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_GOLEM
+Level: 59
+
+SPECIES_GOLEM
+Level: 59
+
+SPECIES_GOLEM
+Level: 59
+
+SPECIES_GOLEM
+Level: 59
+
+SPECIES_GOLEM
+Level: 59
+
+=== TRAINER_DEVIN_HNS ===
+Name: DEVIN
+Class: Hiker Frlg
+Pic: Hiker
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_DUDUNSPARCE_TWO_SEGMENT
+Level: 54
+
+SPECIES_DUDUNSPARCE_TWO_SEGMENT
+Level: 54
+
+SPECIES_DUDUNSPARCE
+Level: 55
+
+=== TRAINER_GRANT_HNS ===
+Name: GRANT
+Class: Camper Frlg
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_JUMPLUFF
+Level: 54
+
+SPECIES_AZUMARILL
+Level: 54
+
+=== TRAINER_THOM_AND_KAE_HNS ===
+Name: THOM & KAE
+Class: Young Couple Frlg
+Pic: Young Couple
+Gender: Male
+Music: Female
+Double Battle: Yes
+AI: Check Bad Move
+
+SPECIES_ELECTIVIRE
+Level: 54
+
+SPECIES_MAGMORTAR
+Level: 54
+
+=== TRAINER_DUFF_AND_EDA_HNS ===
+Name: DUFF & EDA
+Class: Young Couple Frlg
+Pic: Young Couple
+Gender: Male
+Music: Female
+Double Battle: Yes
+AI: Check Bad Move
+
+SPECIES_STEELIX
+Level: 54
+
+SPECIES_CLOYSTER
+Level: 54
+
+=== TRAINER_RICHARD_HNS ===
+Name: RICHARD
+Class: Psychic Frlg
+Pic: Psychic M Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_ESPEON
+Level: 60
+
+SPECIES_MR_MIME
+Level: 60
+
+SPECIES_SLOWKING
+Level: 60
+
+=== TRAINER_JAKE_HNS ===
+Name: JAKE
+Class: Cooltrainer Frlg
+Pic: Cooltrainer M
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_CLOYSTER
+Level: 60
+
+SPECIES_PIDGEOT
+Level: 61
+
+SPECIES_ALAKAZAM
+Level: 60
+
+SPECIES_ARCANINE
+Level: 60
+
+SPECIES_JOLTEON
+Level: 60
+
+=== TRAINER_JOYCE_HNS ===
+Name: JOYCE
+Class: Cooltrainer Frlg
+Pic: Cooltrainer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_BLASTOISE
+Level: 60
+
+SPECIES_RAICHU
+Level: 61
+
+SPECIES_TAUROS
+Level: 60
+
+SPECIES_RHYPERIOR
+Level: 60
+
+SPECIES_JUMPLUFF
+Level: 60
+
+=== TRAINER_GAVEN_HNS ===
+Name: GAVEN
+Class: Cooltrainer Frlg
+Pic: Cooltrainer M
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_VICTREEBEL
+Level: 62
+
+SPECIES_KINGLER
+Level: 62
+
+SPECIES_FLAREON
+Level: 62
+
+SPECIES_DONPHAN
+Level: 62
+
+SPECIES_DRAGONITE
+Level: 62
+
+=== TRAINER_BETH_HNS ===
+Name: BETH
+Class: Cooltrainer Frlg
+Pic: Cooltrainer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_RAPIDASH
+Level: 60
+
+SPECIES_AMPHAROS
+Level: 60
+
+SPECIES_MILTANK
+Level: 60
+
+SPECIES_LANTURN
+Level: 60
+
+SPECIES_GENGAR
+Level: 60
+
+=== TRAINER_MEGAN_HNS ===
+Name: MEGAN
+Class: Cooltrainer Frlg
+Pic: Cooltrainer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_TANGROWTH
+Level: 60
+
+SPECIES_VENUSAUR
+Level: 60
+
+SPECIES_VICTREEBEL
+Level: 60
+
+SPECIES_BELLOSSOM
+Level: 60
+
+=== TRAINER_BRIAN_HNS ===
+Name: BRIAN
+Class: Cooltrainer Frlg
+Pic: Cooltrainer M
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_SANDSLASH
+Level: 60
+
+SPECIES_SCIZOR
+Level: 60
+
+SPECIES_WEAVILE
+Level: 60
+
+SPECIES_URSALUNA
+Level: 60
+
+=== TRAINER_JOSE_HNS ===
+Name: JOSE
+Class: Bird Keeper Frlg
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_FEAROW
+Level: 60
+
+SPECIES_FARFETCHD
+Level: 60
+
+SPECIES_PIDGEOT
+Level: 60
+
+SPECIES_DODRIO
+Level: 60
+
+=== TRAINER_BLAKE_HNS ===
+Name: BLAKE
+Class: Cooltrainer Frlg
+Pic: Cooltrainer M
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_MAGNEZONE
+Level: 60
+
+SPECIES_QUAGSIRE
+Level: 60
+
+SPECIES_EXEGGUTOR
+Level: 60
+
+SPECIES_MAMOSWINE
+Level: 60
+
+=== TRAINER_GILBERT_HNS ===
+Name: GILBERT
+Class: Psychic Frlg
+Pic: Psychic M Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_XATU
+Level: 60
+
+SPECIES_EXEGGUTOR
+Level: 60
+
+SPECIES_FARIGIRAF
+Level: 60
+
+=== TRAINER_REENA_HNS ===
+Name: REENA
+Class: Cooltrainer Frlg
+Pic: Cooltrainer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_STARMIE
+Level: 60
+
+SPECIES_NIDOQUEEN
+Level: 60
+
+SPECIES_VILEPLUME
+Level: 60
+
+SPECIES_ELECTRODE
+Level: 60
+
+SPECIES_STARMIE
+Level: 60
+
+=== TRAINER_SCOTT_HNS ===
+Name: SCOTT
+Class: Fisherman Frlg
+Pic: Fisherman
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_QWILFISH
+Level: 60
+
+SPECIES_SEAKING
+Level: 60
+
+SPECIES_GYARADOS
+Level: 60
+
+SPECIES_QUAGSIRE
+Level: 60
+
+=== TRAINER_ABE_HNS ===
+Name: ABE
+Class: Bird Keeper Frlg
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_FEAROW
+Level: 49
+
+=== TRAINER_ROD_HNS ===
+Name: ROD
+Class: Bird Keeper Frlg
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_PIDGEOT
+Level: 49
+
+SPECIES_XATU
+Level: 49
+
+=== TRAINER_AMY_AND_MAY_HNS ===
+Name: AMY&MAY
+Class: Twins Frlg
+Pic: Twins Frlg
+Gender: Male
+Music: Girl
+Double Battle: Yes
+AI: Check Bad Move
+
+SPECIES_LEDIAN
+Level: 50
+
+SPECIES_ARIADOS
+Level: 50
+
+=== TRAINER_BENNY_HNS ===
+Name: BENNY
+Class: Bug Catcher Frlg
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_BEEDRILL
+Level: 49
+
+SPECIES_BEEDRILL
+Level: 50
+
+=== TRAINER_JOSH_HNS ===
+Name: JOSH
+Class: Bug Catcher Frlg
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_YANMEGA
+Level: 50
+
+=== TRAINER_AL_HNS ===
+Name: AL
+Class: Bug Catcher Frlg
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_BUTTERFREE
+Level: 49
+
+SPECIES_BUTTERFREE
+Level: 50
+
+=== TRAINER_ISSAC_HNS ===
+Name: ISSAC
+Class: Pokemaniac Frlg
+Pic: Pokemaniac
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_LICKILICKY
+Level: 51
+
+=== TRAINER_TERU_HNS ===
+Name: TERU
+Class: Super Nerd Frlg
+Pic: Super Nerd Frlg
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_ELECTRODE
+Level: 51
+
+SPECIES_MAGNEZONE
+Level: 51
+
+SPECIES_PORYGON_Z
+Level: 51
+
+=== TRAINER_ERIC_HNS ===
+Name: ERIC
+Class: Super Nerd Frlg
+Pic: Super Nerd Frlg
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_MUK
+Level: 51
+
+SPECIES_MAROWAK
+Level: 51
+
+=== TRAINER_DONALD_HNS ===
+Name: DONALD
+Class: Pokemaniac Frlg
+Pic: Pokemaniac
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_SLOWBRO
+Level: 51
+
+SPECIES_SLOWBRO
+Level: 51
+
+=== TRAINER_GRUNT_11_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_CROBAT
+Level: 58
+
+SPECIES_WEEZING
+Level: 58
+
+=== TRAINER_GRUNT_20_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_CROBAT
+Level: 58
+
+SPECIES_ARBOK
+Level: 58
+
+=== TRAINER_GRUNT_10_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_CROBAT
+Level: 58
+
+SPECIES_MUK
+Level: 58
+
+=== TRAINER_DUNCAN_HNS ===
+Name: DUNCAN
+Class: Burglar Frlg
+Pic: Burglar Frlg
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_DELIBIRD
+Level: 57
+
+SPECIES_MAGMORTAR
+Level: 57
+
+=== TRAINER_EDDIE_HNS ===
+Name: EDDIE
+Class: Burglar Frlg
+Pic: Burglar Frlg
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_ARCANINE
+Level: 57
+
+SPECIES_WEEZING
+Level: 57
+
+=== TRAINER_GRUNT_27_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_VILEPLUME
+Level: 57
+
+SPECIES_PINSIR
+Level: 57
+
+SPECIES_ARBOK
+Level: 57
+
+SPECIES_HONCHKROW
+Level: 58
+
+=== TRAINER_GRUNT_12_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_WEEZING
+Level: 57
+
+SPECIES_GLISCOR
+Level: 58
+
+SPECIES_HYPNO
+Level: 57
+
+=== TRAINER_GRUNT_19_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_WEEZING
+Level: 58
+
+=== TRAINER_ETO_3_HNS ===
+Name: ETO
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_POLIWRATH
+Level: 58
+
+SPECIES_MAGMORTAR
+Level: 58
+
+SPECIES_JYNX
+Level: 58
+
+SPECIES_ELECTIVIRE
+Level: 58
+
+SPECIES_RHYPERIOR
+Level: 58
+
+=== TRAINER_CARRIE_HNS ===
+Name: CARRIE
+Class: Lass Frlg
+Pic: Lass
+Gender: Male
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_BLISSEY
+Level: 52
+
+=== TRAINER_VICTORIA_HNS ===
+Name: VICTORIA
+Class: Beauty Frlg
+Pic: Beauty
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_URSALUNA
+Level: 51
+
+SPECIES_FURRET
+Level: 52
+
+=== TRAINER_SAMANTHA_HNS ===
+Name: SAMANTHA
+Class: Beauty Frlg
+Pic: Beauty
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_PERSIAN
+Level: 52
+
+=== TRAINER_BRIDGET_HNS ===
+Name: BRIDGET
+Class: Lass Frlg
+Pic: Lass
+Gender: Male
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_AMBIPOM
+Level: 51
+
+SPECIES_SNORLAX
+Level: 51
+
+=== TRAINER_GRUNT_3_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_WEEZING
+Level: 57
+
+SPECIES_MUK
+Level: 57
+
+=== TRAINER_GRUNT_5_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_GLISCOR
+Level: 57
+
+SPECIES_HYPNO
+Level: 57
+
+=== TRAINER_GRUNT_26_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt F Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_ARBOK
+Level: 57
+
+SPECIES_VILEPLUME
+Level: 57
+
+=== TRAINER_GRUNT_4_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_AMBIPOM
+Level: 57
+
+SPECIES_WEEZING
+Level: 57
+
+SPECIES_AMBIPOM
+Level: 57
+
+=== TRAINER_MARC_HNS ===
+Name: MARC
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_OMASTAR
+Level: 58
+
+=== TRAINER_GRUNT_6_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_AMBIPOM
+Level: 57
+
+SPECIES_HONCHKROW
+Level: 57
+
+SPECIES_FORRETRESS
+Level: 57
+
+=== TRAINER_GRUNT_7_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_MUK
+Level: 57
+
+SPECIES_VENOMOTH
+Level: 57
+
+=== TRAINER_GRUNT_8_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_TAUROS
+Level: 57
+
+SPECIES_SLOWBRO
+Level: 57
+
+=== TRAINER_RICH_HNS ===
+Name: RICH
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_PORYGON_Z
+Level: 59
+
+=== TRAINER_GRUNT_9_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_EXEGGUTOR
+Level: 57
+
+SPECIES_ELECTRODE
+Level: 57
+
+SPECIES_ELECTIVIRE
+Level: 57
+
+=== TRAINER_GRUNT_28_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt F Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_ARBOK
+Level: 58
+
+SPECIES_VILEPLUME
+Level: 57
+
+SPECIES_ARIADOS
+Level: 58
+
+SPECIES_VILEPLUME
+Level: 58
+
+=== TRAINER_PROTON_2_HNS ===
+Name: PROTON
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Basic Trainer
+Items: Full Restore / Full Restore
+
+SPECIES_MUK
+Level: 58
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Sludge Wave
+- Mud Bomb
+- Acid Armor
+- Minimize
+
+SPECIES_NIDOQUEEN
+Level: 58
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Cross Poison
+- Double Kick
+- Thunder Punch
+- Body Slam
+
+SPECIES_WEEZING
+Level: 58
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Sludge Bomb
+- Self Destruct
+- Haze
+- Gyro Ball
+
+SPECIES_NIDOKING
+Level: 58
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Cross Poison
+- Double Kick
+- Ice Punch
+- Thrash
+
+SPECIES_RHYPERIOR
+Level: 58
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Earthquake
+- Drill Run
+- Fissure
+- Rock Slide
+
+=== TRAINER_ARIANA_2_HNS ===
+Name: ARIANA
+Class: Team Rocket Frlg
+Pic: Rocket Grunt F Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Basic Trainer
+Items: Full Restore / Full Restore
+
+SPECIES_ARBOK
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Screech
+- Crunch
+- Glare
+- Poison Fang
+
+SPECIES_PERSIAN
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Bite
+- Screech
+- Charm
+- Slash
+
+SPECIES_VILEPLUME
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Sleep Powder
+- Sludge Bomb
+- Stun Spore
+- Giga Drain
+
+SPECIES_GYARADOS
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Strength
+- Twister
+- Bounce
+- Surf
+
+SPECIES_HONCHKROW
+Level: 59
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Pursuit
+- Toxic
+- Faint Attack
+- Air Slash
+
+=== TRAINER_JEFFREY_HNS ===
+Name: JEFFREY
+Class: Sage
+Pic: Sage
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_GENGAR
+Level: 53
+
+SPECIES_GENGAR
+Level: 53
+
+SPECIES_HONCHKROW
+Level: 53
+
+=== TRAINER_MARTHA_HNS ===
+Name: MARTHA
+Class: Hex Maniac
+Pic: Hex Maniac
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_GENGAR
+Level: 53
+
+SPECIES_HOUNDOOM
+Level: 53
+
+=== TRAINER_PING_HNS ===
+Name: PING
+Class: Sage
+Pic: Sage
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_MISMAGIUS
+Level: 53
+
+=== TRAINER_GRACE_HNS ===
+Name: GRACE
+Class: Hex Maniac
+Pic: Hex Maniac
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_GENGAR
+Level: 53
+
+SPECIES_HONCHKROW
+Level: 53
+
+=== TRAINER_HUEY_HNS ===
+Name: HUEY
+Class: Sailor Frlg
+Pic: Sailor
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_POLIWRATH
+Level: 53
+
+SPECIES_MACHAMP
+Level: 53
+
+=== TRAINER_ALFRED_HNS ===
+Name: ALFRED
+Class: Gentleman Frlg
+Pic: Gentleman
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_NOCTOWL
+Level: 53
+
+=== TRAINER_TERRELL_HNS ===
+Name: TERRELL
+Class: Sailor Frlg
+Pic: Sailor
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_POLIWRATH
+Level: 54
+
+=== TRAINER_THEO_HNS ===
+Name: THEO
+Class: Bird Keeper Frlg
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_HONCHKROW
+Level: 54
+
+=== TRAINER_PRESTON_HNS ===
+Name: PRESTON
+Class: Gentleman Frlg
+Pic: Gentleman
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_ARCANINE
+Level: 53
+
+SPECIES_NINETALES
+Level: 53
+
+=== TRAINER_KENT_HNS ===
+Name: KENT
+Class: Sailor Frlg
+Pic: Sailor
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_CLOYSTER
+Level: 54
+
+SPECIES_LANTURN
+Level: 54
+
+=== TRAINER_CONNIE_HNS ===
+Name: CONNIE
+Class: Lass Frlg
+Pic: Lass
+Gender: Male
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_RAPIDASH
+Level: 53
+
+SPECIES_VICTREEBEL
+Level: 53
+
+=== TRAINER_DENIS_HNS ===
+Name: DENIS
+Class: Bird Keeper Frlg
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_PIDGEOT
+Level: 54
+
+SPECIES_FEAROW
+Level: 54
+
+=== TRAINER_ERNEST_HNS ===
+Name: ERNEST
+Class: Sailor Frlg
+Pic: Sailor
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_MACHAMP
+Level: 53
+
+SPECIES_POLIWRATH
+Level: 54
+
+SPECIES_QUAGSIRE
+Level: 54
+
+=== TRAINER_NOB_HNS ===
+Name: NOB
+Class: Black Belt Frlg
+Pic: Black Belt
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_MACHAMP
+Level: 55
+
+SPECIES_MACHAMP
+Level: 55
+
+=== TRAINER_YOSHI_HNS ===
+Name: YOSHI
+Class: Black Belt Frlg
+Pic: Black Belt
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_HITMONLEE
+Level: 55
+
+=== TRAINER_LAO_HNS ===
+Name: LAO
+Class: Black Belt Frlg
+Pic: Black Belt
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_HITMONCHAN
+Level: 55
+
+=== TRAINER_LUNG_HNS ===
+Name: LUNG
+Class: Black Belt Frlg
+Pic: Black Belt
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_ANNIHILAPE
+Level: 55
+
+SPECIES_MACHAMP
+Level: 55
+
+SPECIES_ANNIHILAPE
+Level: 55
+
+=== TRAINER_CLARISSA_HNS ===
+Name: CLARISSA
+Class: Skier
+Pic: Skier F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_DEWGONG
+Level: 56
+
+=== TRAINER_BRAD_HNS ===
+Name: BRAD
+Class: Skier
+Pic: Skier M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_MAMOSWINE
+Level: 56
+
+SPECIES_WEAVILE
+Level: 56
+
+=== TRAINER_RONALD_HNS ===
+Name: RONALD
+Class: Skier
+Pic: Skier M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_DEWGONG
+Level: 55
+
+SPECIES_DELIBIRD
+Level: 56
+
+=== TRAINER_DOUGLAS_HNS ===
+Name: DOUGLAS
+Class: Skier
+Pic: Skier M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_CLOYSTER
+Level: 55
+
+SPECIES_DEWGONG
+Level: 55
+
+SPECIES_CLOYSTER
+Level: 56
+
+=== TRAINER_ROXANNE_HNS ===
+Name: ROXANNE
+Class: Skier
+Pic: Skier F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_JYNX
+Level: 56
+
+=== TRAINER_MIKE_HNS ===
+Name: MIKE
+Class: Dragon Tamer
+Pic: Dragon Tamer
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_GYARADOS
+Level: 60
+
+SPECIES_DRAGONITE
+Level: 60
+
+SPECIES_VAPOREON
+Level: 60
+
+=== TRAINER_PAUL_HNS ===
+Name: PAUL
+Class: Dragon Tamer
+Pic: Dragon Tamer
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_DRAGONITE
+Level: 57
+
+SPECIES_DRAGONITE
+Level: 59
+
+SPECIES_DRAGONITE
+Level: 59
+
+SPECIES_DRAGONITE
+Level: 59
+
+=== TRAINER_LOLA_HNS ===
+Name: LOLA
+Class: Cooltrainer Frlg
+Pic: Cooltrainer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_DRAGONITE
+Level: 59
+
+SPECIES_MANTINE
+Level: 60
+
+SPECIES_LANTURN
+Level: 59
+
+SPECIES_DRAGONITE
+Level: 60
+
+=== TRAINER_FRAN_HNS ===
+Name: FRAN
+Class: Cooltrainer Frlg
+Pic: Cooltrainer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_KINGDRA
+Level: 59
+
+SPECIES_GYARADOS
+Level: 59
+
+SPECIES_DRAGONITE
+Level: 59
+
+=== TRAINER_CODY_HNS ===
+Name: CODY
+Class: Dragon Tamer
+Pic: Dragon Tamer
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_KINGDRA
+Level: 60
+
+SPECIES_DRAGONITE
+Level: 59
+
+SPECIES_GOLDUCK
+Level: 60
+
+SPECIES_DRAGONITE
+Level: 60
+
+=== TRAINER_CHOW_HNS ===
+Name: CHOW
+Class: Sage
+Pic: Sage
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_VICTREEBEL
+Level: 47
+
+SPECIES_SUNFLORA
+Level: 47
+
+SPECIES_VICTREEBEL
+Level: 47
+
+=== TRAINER_EDMOND_HNS ===
+Name: EDMOND
+Class: Sage
+Pic: Sage
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_VICTREEBEL
+Level: 47
+
+SPECIES_VICTREEBEL
+Level: 47
+
+SPECIES_VICTREEBEL
+Level: 47
+
+=== TRAINER_NICO_HNS ===
+Name: NICO
+Class: Sage
+Pic: Sage
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_VICTREEBEL
+Level: 47
+
+SPECIES_JUMPLUFF
+Level: 48
+
+SPECIES_VICTREEBEL
+Level: 47
+
+=== TRAINER_NEAL_HNS ===
+Name: NEAL
+Class: Sage
+Pic: Sage
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_VICTREEBEL
+Level: 48
+
+=== TRAINER_JIN_HNS ===
+Name: JIN
+Class: Sage
+Pic: Sage
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_VICTREEBEL
+Level: 48
+
+=== TRAINER_TROY_HNS ===
+Name: TROY
+Class: Sage
+Pic: Sage
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_JUMPLUFF
+Level: 49
+
+SPECIES_VICTREEBEL
+Level: 49
+
+=== TRAINER_NATHAN_HNS ===
+Name: NATHAN
+Class: Psychic Frlg
+Pic: Psychic M Frlg
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_FARIGIRAF
+Level: 54
+
+=== TRAINER_STAN_HNS ===
+Name: STAN
+Class: Super Nerd Frlg
+Pic: Super Nerd Frlg
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_MUK
+Level: 53
+
+=== TRAINER_DANIEL_HNS ===
+Name: DANIEL
+Class: Hiker Frlg
+Pic: Hiker
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_STEELIX
+Level: 50
+
+=== TRAINER_RUSSELL_HNS ===
+Name: RUSSELL
+Class: Hiker Frlg
+Pic: Hiker
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_GOLEM
+Level: 49
+
+SPECIES_MAROWAK
+Level: 49
+
+=== TRAINER_BILL_HNS ===
+Name: BILL
+Class: Kindler
+Pic: Kindler
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_ARCANINE
+Level: 50
+
+=== TRAINER_LARRY_HNS ===
+Name: LARRY
+Class: Pokemaniac Frlg
+Pic: Pokemaniac
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_PUPITAR
+Level: 50
+
+=== TRAINER_RAY_HNS ===
+Name: RAY
+Class: Kindler
+Pic: Kindler
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_NINETALES
+Level: 49
+
+=== TRAINER_PHILLIP_HNS ===
+Name: PHILLIP
+Class: Hiker Frlg
+Pic: Hiker
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_GOLEM
+Level: 54
+
+SPECIES_GOLEM
+Level: 54
+
+SPECIES_GOLEM
+Level: 54
+
+=== TRAINER_LEONARD_HNS ===
+Name: LEONARD
+Class: Hiker Frlg
+Pic: Hiker
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_GOLEM
+Level: 54
+
+SPECIES_MACHAMP
+Level: 54
+
+=== TRAINER_CALVIN_HNS ===
+Name: CALVIN
+Class: Pokemaniac Frlg
+Pic: Pokemaniac
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_KANGASKHAN
+Level: 54
+
+=== TRAINER_ANDREW_HNS ===
+Name: ANDREW
+Class: Pokemaniac Frlg
+Pic: Pokemaniac
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_MAROWAK
+Level: 54
+
+SPECIES_MAROWAK
+Level: 54
+
+=== TRAINER_NICK_HNS ===
+Name: NICK
+Class: Cooltrainer Frlg
+Pic: Cooltrainer M
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_CHARIZARD
+Level: 54
+
+SPECIES_BLASTOISE
+Level: 54
+
+SPECIES_VENUSAUR
+Level: 54
+
+=== TRAINER_GWEN_HNS ===
+Name: GWEN
+Class: Cooltrainer Frlg
+Pic: Cooltrainer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_JOLTEON
+Level: 54
+
+SPECIES_FLAREON
+Level: 54
+
+SPECIES_VAPOREON
+Level: 54
+
+SPECIES_JOLTEON
+Level: 54
+
+=== TRAINER_EMMA_HNS ===
+Name: EMMA
+Class: Cooltrainer Frlg
+Pic: Cooltrainer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_POLIWRATH
+Level: 55
+
+=== TRAINER_GRUNT_21_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_RATICATE
+Level: 49
+
+SPECIES_RATICATE
+Level: 50
+
+=== TRAINER_GRUNT_22_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt F Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_RATICATE
+Level: 49
+
+SPECIES_CROBAT
+Level: 49
+
+=== TRAINER_ETO_HNS ===
+Name: ETO
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_ELECTIVIRE
+Level: 50
+
+SPECIES_MAGMORTAR
+Level: 50
+
+SPECIES_JYNX
+Level: 50
+
+=== TRAINER_WAYNE_HNS ===
+Name: WAYNE
+Class: Bug Catcher Frlg
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_PARASECT
+Level: 51
+
+SPECIES_VILEPLUME
+Level: 51
+
+=== TRAINER_BEVERLY_HNS ===
+Name: BEVERLY
+Class: Parasol Lady
+Pic: Parasol Lady
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_GRANBULL
+Level: 53
+
+=== TRAINER_JACK_HNS ===
+Name: JACK
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_SUNFLORA
+Level: 51
+
+SPECIES_ELECTRODE
+Level: 52
+
+=== TRAINER_KRISE_HNS ===
+Name: KRISE
+Class: Lass Frlg
+Pic: Lass
+Gender: Male
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_JUMPLUFF
+Level: 52
+
+SPECIES_MAROWAK
+Level: 51
+
+=== TRAINER_WILLIAM_HNS ===
+Name: WILLIAM
+Class: Pokefan
+Pic: Pokefan M
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_RAICHU
+Level: 51
+
+=== TRAINER_NARD_HNS ===
+Name: NARD
+Class: Kindler
+Pic: Kindler
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_CHARIZARD
+Level: 53
+
+=== TRAINER_RICHARDO_HNS ===
+Name: RICHARDO
+Class: Burglar Frlg
+Pic: Burglar Frlg
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_WEEZING
+Level: 53
+
+SPECIES_ARCANINE
+Level: 52
+
+=== TRAINER_MARKUS_HNS ===
+Name: MARKUS
+Class: Super Nerd Frlg
+Pic: Super Nerd Frlg
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_SLOWBRO
+Level: 52
+
+=== TRAINER_MILLER_HNS ===
+Name: MILLER
+Class: Pokemaniac Frlg
+Pic: Pokemaniac
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_NIDOKING
+Level: 53
+
+SPECIES_NIDOQUEEN
+Level: 53
+
+=== TRAINER_HUGH_HNS ===
+Name: HUGH
+Class: Super Nerd Frlg
+Pic: Super Nerd Frlg
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_KINGDRA
+Level: 59
+
+=== TRAINER_ANDRE_HNS ===
+Name: ANDRE
+Class: Fisherman Frlg
+Pic: Fisherman
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_GYARADOS
+Level: 55
+
+=== TRAINER_RAYMOND_HNS ===
+Name: RAYMOND
+Class: Fisherman Frlg
+Pic: Fisherman
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_VAPOREON
+Level: 55
+
+=== TRAINER_LOIS_HNS ===
+Name: LOIS
+Class: Cooltrainer Frlg
+Pic: Cooltrainer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_JUMPLUFF
+Level: 55
+
+SPECIES_NINETALES
+Level: 55
+
+=== TRAINER_AARON_HNS ===
+Name: AARON
+Class: Cooltrainer Frlg
+Pic: Cooltrainer M
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_VENUSAUR
+Level: 55
+
+SPECIES_CHARIZARD
+Level: 55
+
+SPECIES_BLASTOISE
+Level: 55
+
+=== TRAINER_DARIN_HNS ===
+Name: DARIN
+Class: Dragon Tamer
+Pic: Dragon Tamer
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_DRAGONITE
+Level: 60
+
+SPECIES_DRAGONITE
+Level: 60
+
+SPECIES_DRAGONITE
+Level: 60
+
+SPECIES_DRAGONITE
+Level: 60
+
+=== TRAINER_LEA_AND_PIA_HNS ===
+Name: LEA&PIA
+Class: Twins Frlg
+Pic: Twins Frlg
+Gender: Male
+Music: Girl
+Double Battle: Yes
+AI: Check Bad Move
+
+SPECIES_DRAGONITE
+Level: 59
+
+SPECIES_GYARADOS
+Level: 60
+
+SPECIES_DRAGONITE
+Level: 59
+
+SPECIES_GYARADOS
+Level: 60
+
+=== TRAINER_CARA_HNS ===
+Name: CARA
+Class: Cooltrainer Frlg
+Pic: Cooltrainer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_KINGDRA
+Level: 59
+
+SPECIES_KINGDRA
+Level: 59
+
+SPECIES_GYARADOS
+Level: 60
+
+=== TRAINER_JED_HNS ===
+Name: JED
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_MAGNEZONE
+Level: 55
+
+SPECIES_PORYGON_Z
+Level: 55
+
+=== TRAINER_GRUNT_13_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_KANGASKHAN
+Level: 55
+
+=== TRAINER_GRUNT_14_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_CROBAT
+Level: 55
+
+=== TRAINER_GRUNT_15_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_RATICATE
+Level: 54
+
+SPECIES_MUK
+Level: 55
+
+SPECIES_CROBAT
+Level: 54
+
+=== TRAINER_GRUNT_16_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_VENOMOTH
+Level: 56
+
+=== TRAINER_GRUNT_29_HNS ===
+Name: GRUNT
+Class: Team Rocket Frlg
+Pic: Rocket Grunt F Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_ARBOK
+Level: 55
+
+SPECIES_WEAVILE
+Level: 55
+
+=== TRAINER_ETO_2_HNS ===
+Name: ETO
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_JYNX
+Level: 55
+
+SPECIES_POLIWRATH
+Level: 55
+
+SPECIES_MAGMORTAR
+Level: 55
+
+SPECIES_ELECTIVIRE
+Level: 55
+
+=== TRAINER_MITCH_HNS ===
+Name: MITCH
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_ELECTRODE
+Level: 55
+
+=== TRAINER_ROSS_HNS ===
+Name: ROSS
+Class: Collector
+Pic: Collector
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_WEEZING
+Level: 55
+
+SPECIES_RAICHU
+Level: 55
+
+=== TRAINER_JEFF_HNS ===
+Name: JEFF
+Class: Sailor Frlg
+Pic: Sailor
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_RATICATE
+Level: 64
+
+SPECIES_FURRET
+Level: 64
+
+=== TRAINER_WAI_HNS ===
+Name: WAI
+Class: Black Belt Frlg
+Pic: Black Belt
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_MACHAMP
+Level: 63
+
+SPECIES_MACHAMP
+Level: 64
+
+SPECIES_MACHAMP
+Level: 64
+
+=== TRAINER_NATE_HNS ===
+Name: NATE
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_LEDIAN
+Level: 64
+
+SPECIES_EXEGGUTOR
+Level: 64
+
+=== TRAINER_SHIRLEY_HNS ===
+Name: SHIRLEY
+Class: Expert
+Pic: Expert F
+Gender: Male
+Music: Hiker
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_WIGGLYTUFF
+Level: 64
+
+SPECIES_WIGGLYTUFF
+Level: 65
+
+=== TRAINER_RICKY_HNS ===
+Name: RICKY
+Class: School Kid
+Pic: School Kid M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_AMBIPOM
+Level: 64
+
+SPECIES_DITTO
+Level: 64
+
+=== TRAINER_DEBRA_HNS ===
+Name: DEBRA
+Class: Picnicker Frlg
+Pic: Picnicker
+Gender: Male
+Music: Girl
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_SEAKING
+Level: 64
+
+=== TRAINER_KENNETH_HNS ===
+Name: KENNETH
+Class: Sailor Frlg
+Pic: Sailor
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_MACHAMP
+Level: 64
+
+SPECIES_MACHAMP
+Level: 64
+
+SPECIES_POLIWRATH
+Level: 64
+
+SPECIES_MACHAMP
+Level: 64
+
+=== TRAINER_JONAH_HNS ===
+Name: JONAH
+Class: Fisherman Frlg
+Pic: Fisherman
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_CLOYSTER
+Level: 63
+
+SPECIES_OCTILLERY
+Level: 64
+
+SPECIES_OCTILLERY
+Level: 63
+
+SPECIES_CLOYSTER
+Level: 64
+
+=== TRAINER_FRITZ_HNS ===
+Name: FRITZ
+Class: Juggler Frlg
+Pic: Juggler Frlg
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_MR_MIME
+Level: 63
+
+SPECIES_MAGMORTAR
+Level: 63
+
+SPECIES_MACHAMP
+Level: 63
+
+=== TRAINER_GARRETT_HNS ===
+Name: GARRETT
+Class: Sailor Frlg
+Pic: Sailor
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_KINGLER
+Level: 65
+
+=== TRAINER_STANLY_HNS ===
+Name: STANLY
+Class: Sailor Frlg
+Pic: Sailor
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_QWILFISH
+Level: 63
+
+SPECIES_MACHAMP
+Level: 63
+
+SPECIES_GOLDUCK
+Level: 63
+
+=== TRAINER_EDWARD_HNS ===
+Name: EDWARD
+Class: Gentleman Frlg
+Pic: Gentleman
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_PERSIAN
+Level: 65
+
+=== TRAINER_COREY_HNS ===
+Name: COREY
+Class: Kindler
+Pic: Kindler
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_WEEZING
+Level: 63
+
+SPECIES_MAGMORTAR
+Level: 64
+
+SPECIES_WEEZING
+Level: 63
+
+SPECIES_WEEZING
+Level: 64
+
+=== TRAINER_NOLAND_HNS ===
+Name: NOLAND
+Class: Hiker Frlg
+Pic: Hiker
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_SANDSLASH
+Level: 63
+
+SPECIES_GOLEM
+Level: 63
+
+=== TRAINER_ETHAN_HNS ===
+Name: ETHAN
+Class: Pokemaniac Frlg
+Pic: Pokemaniac
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_GENGAR
+Level: 64
+
+SPECIES_RHYPERIOR
+Level: 64
+
+=== TRAINER_CAROL_HNS ===
+Name: CAROL
+Class: Cooltrainer Frlg
+Pic: Cooltrainer F
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_ELECTRODE
+Level: 64
+
+SPECIES_STARMIE
+Level: 64
+
+SPECIES_NINETALES
+Level: 64
+
+=== TRAINER_SEAN_HNS ===
+Name: SEAN
+Class: Cooltrainer Frlg
+Pic: Cooltrainer M
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_FLAREON
+Level: 64
+
+SPECIES_TANGROWTH
+Level: 64
+
+SPECIES_TAUROS
+Level: 64
+
+=== TRAINER_LYLE_HNS ===
+Name: LYLE
+Class: Kindler
+Pic: Kindler
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_WEEZING
+Level: 63
+
+SPECIES_FLAREON
+Level: 63
+
+SPECIES_NINETALES
+Level: 63
+
+=== TRAINER_KEN_HNS ===
+Name: KEN
+Class: Bug Catcher Frlg
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_ARIADOS
+Level: 64
+
+SPECIES_PINSIR
+Level: 64
+
+=== TRAINER_MEG_AND_PEG_HNS ===
+Name: MEG&PEG
+Class: Twins Frlg
+Pic: Twins Frlg
+Gender: Male
+Music: Girl
+Double Battle: Yes
+AI: Check Bad Move
+
+SPECIES_URSALUNA
+Level: 63
+
+SPECIES_DONPHAN
+Level: 63
+
+=== TRAINER_COLIN_HNS ===
+Name: COLIN
+Class: Pokefan
+Pic: Pokefan M
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_DELIBIRD
+Level: 63
+
+=== TRAINER_CASSIE_HNS ===
+Name: CASSIE
+Class: Beauty Frlg
+Pic: Beauty
+Gender: Male
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_VILEPLUME
+Level: 64
+
+SPECIES_JYNX
+Level: 64
+
+=== TRAINER_CLYDE_HNS ===
+Name: CLYDE
+Class: Guitarist
+Pic: Guitarist
+Gender: Male
+Music: Suspicious
+Double Battle: No
+AI: Check Bad Move
+
+SPECIES_ELECTIVIRE
+Level: 64
