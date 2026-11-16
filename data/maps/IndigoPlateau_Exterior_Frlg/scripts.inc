@@ -184,3 +184,22 @@ IndigoPlateau_Exterior_Movement_OakLeave::
 IndigoPlateau_Exterior_Movement_OakExitBuilding::
 	walk_down
 	step_end
+
+@ Super Emerald: HGSS look (tools/sfr/hns/import_kanto_hgss.py)
+SE_KH_IndigoPlateau_Exterior_Frlg_RuinsOfAlph_PuzzleAndRewardChambers_MapScript_StatueDescription::
+	msgbox SE_KH_IndigoPlateau_Exterior_Frlg_RuinsOfAlph_PuzzleAndRewardChambers_MapScript_StatueDescription_Text, MSGBOX_SIGN
+	end
+
+SE_KH_IndigoPlateau_Exterior_Frlg_RuinsOfAlph_PuzzleAndRewardChambers_MapScript_StatueDescription_Text:
+	.string "It's a replica of an ancient\n"
+	.string "POKéMON.$"
+
+SE_KH_IndigoPlateau_Exterior_Frlg_IndigoPlateau_Sign::
+	msgbox SE_KH_IndigoPlateau_Exterior_Frlg_IndigoPlateau_Sign_Text, MSGBOX_SIGN
+	end
+
+SE_KH_IndigoPlateau_Exterior_Frlg_IndigoPlateau_Sign_Text:
+	.string "INDIGO PLATEAU\p"
+	.string "The Ultimate Goal for Trainers!\p"
+	.string "POKéMON LEAGUE HQ$"
+

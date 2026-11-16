@@ -879,7 +879,7 @@ SE_EventScript_MagnetTrainGoldenrod::
 	closemessage
 	playse SE_DOOR
 	fadescreen FADE_TO_BLACK
-	warp MAP_SAFFRON_CITY_MAGNET_TRAIN_STATION, 16, 21
+	warp MAP_SAFFRON_CITY_MAGNET_TRAIN_STATION, 137, 21
 	waitstate
 	release
 	end

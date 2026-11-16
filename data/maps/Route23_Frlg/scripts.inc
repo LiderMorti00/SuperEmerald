@@ -4,131 +4,15 @@ Route23_Frlg_MapScripts::
 
 Route23_OnTransition::
 	call SE_EventScript_OroVictoryRoadOnTransition
-	clearflag FLAG_HIDE_VICTORY_ROAD_3F_BOULDER
-	setflag FLAG_HIDE_VICTORY_ROAD_2F_BOULDER
-	setvar VAR_MAP_SCENE_VICTORY_ROAD_1F, 0
-	setvar VAR_MAP_SCENE_VICTORY_ROAD_2F_BOULDER1, 0
-	setvar VAR_MAP_SCENE_VICTORY_ROAD_2F_BOULDER2, 0
-	setvar VAR_MAP_SCENE_VICTORY_ROAD_3F, 0
 	end
 
-Route23_EventScript_CascadeBadgeGuard::
-	lock
-	faceplayer
-	setvar VAR_TEMP_1, 2
-	bufferstdstring STR_VAR_1, STDSTRING_HIVE_BADGE
-	goto Route23_EventScript_BadgeGuard
+@ Super Emerald: HGSS look, texts from Pokemon Heart & Soul (tools/sfr/hns/import_kanto_hgss.py)
+
+SE_KH_Route23_Frlg_RuinsOfAlph_PuzzleAndRewardChambers_MapScript_StatueDescription::
+	msgbox SE_KH_Route23_Frlg_RuinsOfAlph_PuzzleAndRewardChambers_MapScript_StatueDescription_Text, MSGBOX_SIGN
 	end
 
-Route23_EventScript_ThunderBadgeGuard::
-	lock
-	faceplayer
-	setvar VAR_TEMP_1, 3
-	bufferstdstring STR_VAR_1, STDSTRING_PLAIN_BADGE
-	goto Route23_EventScript_BadgeGuard
-	end
-
-Route23_EventScript_RainbowBadgeGuard::
-	lock
-	faceplayer
-	setvar VAR_TEMP_1, 4
-	bufferstdstring STR_VAR_1, STDSTRING_FOG_BADGE
-	goto Route23_EventScript_BadgeGuard
-	end
-
-Route23_EventScript_SoulBadgeGuard::
-	lock
-	faceplayer
-	setvar VAR_TEMP_1, 5
-	bufferstdstring STR_VAR_1, STDSTRING_STORM_BADGE
-	goto Route23_EventScript_BadgeGuard
-	end
-
-Route23_EventScript_MarshBadgeGuard::
-	lock
-	faceplayer
-	setvar VAR_TEMP_1, 6
-	bufferstdstring STR_VAR_1, STDSTRING_MINERAL_BADGE
-	goto Route23_EventScript_BadgeGuard
-	end
-
-Route23_EventScript_VolcanoBadgeGuard::
-	lock
-	faceplayer
-	setvar VAR_TEMP_1, 7
-	bufferstdstring STR_VAR_1, STDSTRING_GLACIER_BADGE
-	goto Route23_EventScript_BadgeGuard
-	end
-
-Route23_EventScript_EarthBadgeGuard::
-	lock
-	faceplayer
-	setvar VAR_TEMP_1, 8
-	bufferstdstring STR_VAR_1, STDSTRING_RISING_BADGE
-	goto Route23_EventScript_BadgeGuard
-	end
-
-Route23_EventScript_CascadeBadgeGuardTrigger::
-	lockall
-	setvar VAR_TEMP_1, 2
-	setvar VAR_0x8009, LOCALID_CASCADE_BADGE_GUARD
-	bufferstdstring STR_VAR_1, STDSTRING_HIVE_BADGE
-	goto Route23_EventScript_BadgeGuardTrigger
-	end
-
-Route23_EventScript_ThunderBadgeGuardTrigger::
-	lockall
-	setvar VAR_TEMP_1, 3
-	setvar VAR_0x8009, LOCALID_THUNDER_BADGE_GUARD
-	bufferstdstring STR_VAR_1, STDSTRING_PLAIN_BADGE
-	goto Route23_EventScript_BadgeGuardTrigger
-	end
-
-Route23_EventScript_RainbowBadgeGuardTrigger::
-	lockall
-	setvar VAR_TEMP_1, 4
-	setvar VAR_0x8009, LOCALID_RAINBOW_BADGE_GUARD
-	bufferstdstring STR_VAR_1, STDSTRING_FOG_BADGE
-	goto Route23_EventScript_BadgeGuardTrigger
-	end
-
-Route23_EventScript_SoulBadgeGuardTrigger::
-	lockall
-	setvar VAR_TEMP_1, 5
-	setvar VAR_0x8009, LOCALID_SOUL_BADGE_GUARD
-	bufferstdstring STR_VAR_1, STDSTRING_STORM_BADGE
-	goto Route23_EventScript_BadgeGuardTrigger
-	end
-
-Route23_EventScript_MarshBadgeGuardTrigger::
-	lockall
-	setvar VAR_TEMP_1, 6
-	setvar VAR_0x8009, LOCALID_MARSH_BADGE_GUARD
-	bufferstdstring STR_VAR_1, STDSTRING_MINERAL_BADGE
-	goto Route23_EventScript_BadgeGuardTrigger
-	end
-
-Route23_EventScript_VolcanoBadgeGuardTrigger::
-	lockall
-	setvar VAR_TEMP_1, 7
-	setvar VAR_0x8009, LOCALID_VOLCANO_BADGE_GUARD
-	bufferstdstring STR_VAR_1, STDSTRING_GLACIER_BADGE
-	goto Route23_EventScript_BadgeGuardTrigger
-	end
-
-Route23_EventScript_EarthBadgeGuardTrigger::
-	lockall
-	setvar VAR_TEMP_1, 8
-	setvar VAR_0x8009, LOCALID_EARTH_BADGE_GUARD
-	bufferstdstring STR_VAR_1, STDSTRING_RISING_BADGE
-	goto Route23_EventScript_BadgeGuardTrigger
-	end
-
-Route23_EventScript_VictoryRoadGateSign::
-	msgbox Route23_Text_VictoryRoadGateSign, MSGBOX_SIGN
-	end
-
-Route23_Text_VictoryRoadGateSign::
-	.string "VICTORY ROAD GATE -\n"
-	.string "POKéMON LEAGUE$"
+SE_KH_Route23_Frlg_RuinsOfAlph_PuzzleAndRewardChambers_MapScript_StatueDescription_Text:
+	.string "It's a replica of an ancient\n"
+	.string "POKéMON.$"
 

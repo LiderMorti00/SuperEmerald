@@ -6359,19 +6359,6 @@
       "layout_version": "frlg"
     },
     {
-      "id": "LAYOUT_INDIGO_PLATEAU_EXTERIOR",
-      "name": "IndigoPlateau_Exterior_Layout",
-      "width": 24,
-      "height": 20,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General_Frlg",
-      "secondary_tileset": "gTileset_IndigoPlateau",
-      "border_filepath": "data/layouts/IndigoPlateau_Exterior_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/IndigoPlateau_Exterior_Frlg/map.bin",
-      "layout_version": "frlg"
-    },
-    {
       "id": "LAYOUT_SAFFRON_CITY_CONNECTION",
       "name": "SaffronCity_Connection_Layout",
       "width": 48,
@@ -6658,32 +6645,6 @@
       "layout_version": "frlg"
     },
     {
-      "id": "LAYOUT_ROUTE22",
-      "name": "Route22_Layout",
-      "width": 48,
-      "height": 24,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General_Frlg",
-      "secondary_tileset": "gTileset_ViridianCity",
-      "border_filepath": "data/layouts/Route22_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/Route22_Frlg/map.bin",
-      "layout_version": "frlg"
-    },
-    {
-      "id": "LAYOUT_ROUTE23",
-      "name": "Route23_Layout",
-      "width": 24,
-      "height": 160,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General_Frlg",
-      "secondary_tileset": "gTileset_IndigoPlateau",
-      "border_filepath": "data/layouts/Route23_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/Route23_Frlg/map.bin",
-      "layout_version": "frlg"
-    },
-    {
       "id": "LAYOUT_ROUTE24",
       "name": "Route24_Layout",
       "width": 24,
@@ -6850,45 +6811,6 @@
       "secondary_tileset": "gTileset_DiglettsCave",
       "border_filepath": "data/layouts/DiglettsCave_B1F_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/DiglettsCave_B1F_Frlg/map.bin",
-      "layout_version": "frlg"
-    },
-    {
-      "id": "LAYOUT_VICTORY_ROAD_1F_FRLG",
-      "name": "VictoryRoad_1F_FRLG_Layout",
-      "width": 48,
-      "height": 22,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General_Frlg",
-      "secondary_tileset": "gTileset_Cave_Frlg",
-      "border_filepath": "data/layouts/VictoryRoad_1F_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/VictoryRoad_1F_Frlg/map.bin",
-      "layout_version": "frlg"
-    },
-    {
-      "id": "LAYOUT_VICTORY_ROAD_2F",
-      "name": "VictoryRoad_2F_Layout",
-      "width": 51,
-      "height": 22,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General_Frlg",
-      "secondary_tileset": "gTileset_Cave_Frlg",
-      "border_filepath": "data/layouts/VictoryRoad_2F_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/VictoryRoad_2F_Frlg/map.bin",
-      "layout_version": "frlg"
-    },
-    {
-      "id": "LAYOUT_VICTORY_ROAD_3F",
-      "name": "VictoryRoad_3F_Layout",
-      "width": 45,
-      "height": 22,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General_Frlg",
-      "secondary_tileset": "gTileset_Cave_Frlg",
-      "border_filepath": "data/layouts/VictoryRoad_3F_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/VictoryRoad_3F_Frlg/map.bin",
       "layout_version": "frlg"
     },
     {
@@ -7903,19 +7825,6 @@
       "secondary_tileset": "gTileset_Lab_Frlg",
       "border_filepath": "data/layouts/CinnabarIsland_PokemonLab_ExperimentRoom_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/CinnabarIsland_PokemonLab_ExperimentRoom_Frlg/map.bin",
-      "layout_version": "frlg"
-    },
-    {
-      "id": "LAYOUT_SAFFRON_CITY",
-      "name": "SaffronCity_Layout",
-      "width": 66,
-      "height": 55,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_General_Frlg",
-      "secondary_tileset": "gTileset_SaffronCity",
-      "border_filepath": "data/layouts/SaffronCity_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/SaffronCity_Frlg/map.bin",
       "layout_version": "frlg"
     },
     {
@@ -18655,6 +18564,110 @@
       "border_filepath": "data/layouts/LittlerootTown_ProfessorBirchsLab_sinnoh/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_ProfessorBirchsLab_sinnoh/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SAFFRON_CITY_HNS",
+      "name": "SaffronCity_hns_Layout",
+      "width": 66,
+      "height": 55,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Kanto_General_Hns",
+      "secondary_tileset": "gTileset_SaffronCity_Hns",
+      "border_filepath": "data/layouts/SaffronCity_hns/border.bin",
+      "blockdata_filepath": "data/layouts/SaffronCity_hns/map.bin",
+      "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_SAFFRON_CITY_TRAIN_STATION_HNS",
+      "name": "SaffronCity_TrainStation_hns_Layout",
+      "width": 154,
+      "height": 28,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Johto_Building_Hns",
+      "secondary_tileset": "gTileset_GoldenrodCity_TrainStation_Hns",
+      "border_filepath": "data/layouts/SaffronCity_TrainStation_hns/border.bin",
+      "blockdata_filepath": "data/layouts/SaffronCity_TrainStation_hns/map.bin",
+      "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_ROUTE22_HNS",
+      "name": "Route22_hns_Layout",
+      "width": 52,
+      "height": 28,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Kanto_General_Hns",
+      "secondary_tileset": "gTileset_ViridianCity_Hns",
+      "border_filepath": "data/layouts/Route22_hns/border.bin",
+      "blockdata_filepath": "data/layouts/Route22_hns/map.bin",
+      "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_ROUTE23_HNS",
+      "name": "Route23_hns_Layout",
+      "width": 24,
+      "height": 160,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Kanto_General_Hns",
+      "secondary_tileset": "gTileset_IndigoPlateau_Hns",
+      "border_filepath": "data/layouts/Route23_hns/border.bin",
+      "blockdata_filepath": "data/layouts/Route23_hns/map.bin",
+      "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_INDIGO_PLATEAU_HNS",
+      "name": "IndigoPlateau_hns_Layout",
+      "width": 24,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Kanto_General_Hns",
+      "secondary_tileset": "gTileset_IndigoPlateau_Hns",
+      "border_filepath": "data/layouts/IndigoPlateau_hns/border.bin",
+      "blockdata_filepath": "data/layouts/IndigoPlateau_hns/map.bin",
+      "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_KANTO_1F_HNS",
+      "name": "VictoryRoadKanto_1F_hns_Layout",
+      "width": 50,
+      "height": 30,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Johto_General_Hns",
+      "secondary_tileset": "gTileset_Cave_Default_Hns",
+      "border_filepath": "data/layouts/VictoryRoadKanto_1F_hns/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoadKanto_1F_hns/map.bin",
+      "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_KANTO_B1F_HNS",
+      "name": "VictoryRoadKanto_B1F_hns_Layout",
+      "width": 60,
+      "height": 30,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Johto_General_Hns",
+      "secondary_tileset": "gTileset_Cave_Default_Hns",
+      "border_filepath": "data/layouts/VictoryRoadKanto_B1F_hns/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoadKanto_B1F_hns/map.bin",
+      "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_KANTO_B2F_HNS",
+      "name": "VictoryRoadKanto_B2F_hns_Layout",
+      "width": 40,
+      "height": 50,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Johto_General_Hns",
+      "secondary_tileset": "gTileset_Cave_Default_Hns",
+      "border_filepath": "data/layouts/VictoryRoadKanto_B2F_hns/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoadKanto_B2F_hns/map.bin",
+      "layout_version": "frlg"
     }
   ]
 }

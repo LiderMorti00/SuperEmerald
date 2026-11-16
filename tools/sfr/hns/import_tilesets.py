@@ -14,7 +14,7 @@ Usage (repo root): python3 -I tools/sfr/hns/import_tilesets.py [--hns /path]
 """
 import json, os, re, shutil, struct, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from common import hns, ours, read, write, johto_maps
+from common import hns, ours, read, write, johto_maps, KANTO_HGSS_MAPS
 
 EMPTY = [0, 0, 0, 0]
 CALLBACKS = {'InitTilesetAnim_JohtoGeneral', 'InitTilesetAnim_NationalPark', 'InitTilesetAnim_EcruteakTheater',
@@ -22,7 +22,7 @@ CALLBACKS = {'InitTilesetAnim_JohtoGeneral', 'InitTilesetAnim_NationalPark', 'In
 
 L = {l['id']: l for l in json.load(open(hns('data/layouts/layouts.json')))['layouts'] if 'primary_tileset' in l}
 needed = set()
-for grp, m in johto_maps():
+for grp, m in johto_maps() + [(None, m) for m in KANTO_HGSS_MAPS]:
     l = L[json.load(open(hns('data/maps', m, 'map.json')))['layout']]
     needed |= {l['primary_tileset'], l['secondary_tileset']}
 

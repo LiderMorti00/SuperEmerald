@@ -54,3 +54,10 @@ def replace_block(text, begin, end, body):
         b = text.index(end, a) + len(end)
         return text[:a] + begin + '\n' + body + end + text[b:]
     return None
+
+
+# Super Emerald: Kanto maps taken from HnS (HGSS look) in place of the FireRed ones,
+# see tools/sfr/hns/import_kanto_hgss.py
+KANTO_HGSS_MAPS = ['SaffronCity_hns', 'SaffronCity_TrainStation_hns', 'Route22_hns', 'Route23_hns',
+                   'VictoryRoadKanto_1F_hns', 'VictoryRoadKanto_B1F_hns', 'VictoryRoadKanto_B2F_hns',
+                   'IndigoPlateau_hns']
