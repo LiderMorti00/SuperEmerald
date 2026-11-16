@@ -1888,6 +1888,12 @@ const u16 gItemIconPalette_TeachyTV[] = INCGFX_U16("graphics/items/icon_palettes
 const u32 gItemIcon_SSTicket[] = INCGFX_U32("graphics/items/icons/ss_ticket.png", ".4bpp.smol");
 const u16 gItemIconPalette_SSTicket[] = INCGFX_U16("graphics/items/icon_palettes/ss_ticket.pal", ".gbapal");
 
+// Super Emerald: from Pokemon Heart & Soul
+const u32 gItemIcon_SilverWing[] = INCGFX_U32("graphics/items/icons/silverwing.png", ".4bpp.smol");
+const u16 gItemIconPalette_SilverWing[] = INCGFX_U16("graphics/items/icon_palettes/silverwing.pal", ".gbapal");
+const u32 gItemIcon_RainbowWing[] = INCGFX_U32("graphics/items/icons/rainbowwing.png", ".4bpp.smol");
+const u16 gItemIconPalette_RainbowWing[] = INCGFX_U16("graphics/items/icon_palettes/rainbowwing.pal", ".gbapal");
+
 const u32 gItemIcon_EonTicket[] = INCGFX_U32("graphics/items/icons/eon_ticket.png", ".4bpp.smol");
 const u16 gItemIconPalette_EonTicket[] = INCGFX_U16("graphics/items/icon_palettes/eon_ticket.pal", ".gbapal");
 

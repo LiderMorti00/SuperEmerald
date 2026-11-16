@@ -128,7 +128,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_J_TinTower_RoofDay_hns_TinTower_RoofDay_EventScript_HoOh",
+      "script": "SE_EventScript_HoOh",
       "flag": "FLAG_J_HIDE_HO_OH",
       "local_id": "LOCALID_HO_OH"
     }

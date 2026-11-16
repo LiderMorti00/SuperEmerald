@@ -1052,6 +1052,8 @@ enum __attribute__((packed)) Item
     ITEM_TATSUGIRINITE = 872,
     ITEM_GLIMMORANITE = 873,
     ITEM_JOHTO_TICKET = 874, // Super Emerald: S.S. Tidal to Olivine City (was the Kanto Ticket)
+    ITEM_SILVER_WING = 875, // Super Emerald: calls Lugia at the Whirl Islands
+    ITEM_RAINBOW_WING = 876, // Super Emerald: calls Ho-Oh to the Tin Tower
 
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,

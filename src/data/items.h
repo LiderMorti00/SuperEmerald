@@ -16116,6 +16116,38 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_SSTicket,
         .iconPalette = gItemIconPalette_SSTicket,
     },
+
+    [ITEM_SILVER_WING] =
+    {
+        .name = ITEM_NAME("Silver Wing"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A strange, silver-\n"
+            "colored feather that\n"
+            "sparkles."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_SilverWing,
+        .iconPalette = gItemIconPalette_SilverWing,
+    },
+
+    [ITEM_RAINBOW_WING] =
+    {
+        .name = ITEM_NAME("Rainbow Wing"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A mystical feather\n"
+            "of rainbow colors\n"
+            "that sparkles."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_RainbowWing,
+        .iconPalette = gItemIconPalette_RainbowWing,
+    },
 };
 
 #undef ITEM_NAME

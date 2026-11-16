@@ -140,7 +140,8 @@ enum PartyBattleOrder
 #define UNION_ROOM_KB_ROW_COUNT 10
 #define SAVED_TRENDS_COUNT 5
 #define PYRAMID_BAG_ITEMS_COUNT 10
-#define ROAMER_COUNT 1 // Number of maximum concurrent active roamers
+#define ROAMER_COUNT 3 // Number of maximum concurrent active roamers
+#define ROAMER_COUNT_SAVE1 1 // Super Emerald: roamer[] keeps its old size; the rest live in roamerExt[] at the end of SaveBlock1
 
 enum BagCounts
 {

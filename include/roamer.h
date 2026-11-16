@@ -1,7 +1,9 @@
 #ifndef GUARD_ROAMER_H
 #define GUARD_ROAMER_H
 
+struct Roamer *GetRoamer(u32 index);
 void DeactivateAllRoamers(void);
+void StartJohtoBeasts(void);
 void InitRoamer(void);
 void UpdateLocationHistoryForRoamer(void);
 void RoamerMoveToOtherLocationSet(u32 roamerIndex);

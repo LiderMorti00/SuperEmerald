@@ -1608,6 +1608,10 @@ extern const u32 gItemIcon_TeachyTV[];
 extern const u16 gItemIconPalette_TeachyTV[];
 // Story Key Items
 extern const u32 gItemIcon_SSTicket[];
+extern const u32 gItemIcon_SilverWing[];
+extern const u16 gItemIconPalette_SilverWing[];
+extern const u32 gItemIcon_RainbowWing[];
+extern const u16 gItemIconPalette_RainbowWing[];
 extern const u16 gItemIconPalette_SSTicket[];
 extern const u32 gItemIcon_EonTicket[];
 extern const u16 gItemIconPalette_EonTicket[];

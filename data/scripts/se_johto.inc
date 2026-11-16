@@ -323,8 +323,7 @@ SE_Text_ReceivedWhitneyBadge:
 SE_EventScript_JohtoLeader_Morty::
 	trainerbattle_single TRAINER_SE_LEADER_MORTY, SE_Text_MortyIntro, SE_Text_MortyDefeat, SE_EventScript_MortyDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM4, SE_EventScript_MortyGiveTM
-	msgbox SE_Text_MortyPost, MSGBOX_DEFAULT
-	release
+	goto SE_EventScript_MortyPostOrWing
 	end
 
 SE_EventScript_MortyDefeated::
@@ -339,6 +338,22 @@ SE_EventScript_MortyGiveTM::
 	giveitem ITEM_TM_SHADOW_BALL
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_SE_RECEIVED_JOHTO_TM4
+	goto SE_EventScript_MortyPostOrWing
+	end
+
+@ With all eight Johto badges, Morty hands over the Rainbow Wing
+SE_EventScript_MortyPostOrWing::
+	goto_if_set FLAG_SE_RECEIVED_RAINBOW_WING, SE_EventScript_MortyPost
+	call SE_EventScript_CheckJohtoBadges
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_MortyPost
+	msgbox SE_Text_MortyRainbowWing, MSGBOX_DEFAULT
+	giveitem ITEM_RAINBOW_WING
+	setflag FLAG_SE_RECEIVED_RAINBOW_WING
+	msgbox SE_Text_MortyRainbowWingAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_MortyPost::
 	msgbox SE_Text_MortyPost, MSGBOX_DEFAULT
 	release
 	end
@@ -393,8 +408,7 @@ SE_Text_ReceivedChuckBadge:
 SE_EventScript_JohtoLeader_Jasmine::
 	trainerbattle_single TRAINER_SE_LEADER_JASMINE, SE_Text_JasmineIntro, SE_Text_JasmineDefeat, SE_EventScript_JasmineDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM6, SE_EventScript_JasmineGiveTM
-	msgbox SE_Text_JasminePost, MSGBOX_DEFAULT
-	release
+	goto SE_EventScript_JasminePostOrWing
 	end
 
 SE_EventScript_JasmineDefeated::
@@ -409,6 +423,22 @@ SE_EventScript_JasmineGiveTM::
 	giveitem ITEM_TM_IRON_TAIL
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_SE_RECEIVED_JOHTO_TM6
+	goto SE_EventScript_JasminePostOrWing
+	end
+
+@ With all eight Johto badges, Jasmine hands over the Silver Wing
+SE_EventScript_JasminePostOrWing::
+	goto_if_set FLAG_SE_RECEIVED_SILVER_WING, SE_EventScript_JasminePost
+	call SE_EventScript_CheckJohtoBadges
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_JasminePost
+	msgbox SE_Text_JasmineSilverWing, MSGBOX_DEFAULT
+	giveitem ITEM_SILVER_WING
+	setflag FLAG_SE_RECEIVED_SILVER_WING
+	msgbox SE_Text_JasmineSilverWingAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_JasminePost::
 	msgbox SE_Text_JasminePost, MSGBOX_DEFAULT
 	release
 	end
@@ -899,3 +929,202 @@ SE_Text_MagnetTrainDepart:
 
 SE_Text_MagnetTrainNo:
 	.string "We hope to see you again.$"
+
+SE_Text_MortyRainbowWing:
+	.string "Eight JOHTO BADGES…\n"
+	.string "So the legend was true.\p"
+	.string "It is said that HO-OH appears\n"
+	.string "before a TRAINER of true skill.\p"
+	.string "My family has guarded this\n"
+	.string "feather for generations.\p"
+	.string "I believe it was meant for you.$"
+
+SE_Text_MortyRainbowWingAfter:
+	.string "Take the RAINBOW WING to the top\n"
+	.string "of the TIN TOWER.\p"
+	.string "HO-OH will be waiting for you.$"
+
+SE_Text_JasmineSilverWing:
+	.string "{PLAYER}… You collected all eight\n"
+	.string "JOHTO BADGES. I'm so proud of you.\p"
+	.string "Do you remember the stories we\n"
+	.string "heard as kids, about the guardian\l"
+	.string "of the seas?\p"
+	.string "A sailor gave me this feather long\n"
+	.string "ago. I kept it all this time.\p"
+	.string "I want you to have it.$"
+
+SE_Text_JasmineSilverWingAfter:
+	.string "That's the SILVER WING.\p"
+	.string "They say LUGIA sleeps deep inside\n"
+	.string "the WHIRL ISLANDS…\p"
+	.string "Maybe it will answer the feather's\n"
+	.string "call.$"
+
+@ ---------------------------------------------------------------------------
+@ Johto legendaries: Lugia (Silver Wing, Whirl Islands), Ho-Oh (Rainbow Wing, Tin Tower),
+@ Suicune (Tin Tower after the Burned Tower); Raikou and Entei roam Johto.
+
+SE_EventScript_Lugia::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_LUGIA, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setvar VAR_LAST_TALKED, LOCALID_LUGIA
+	setwildbattle SPECIES_LUGIA, 70
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SE_EventScript_LugiaDefeated
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SE_EventScript_LugiaRan
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SE_EventScript_LugiaRan
+	setflag FLAG_SE_LUGIA_DONE
+	release
+	end
+
+SE_EventScript_LugiaDefeated::
+	setflag FLAG_SE_LUGIA_DONE
+	goto Common_EventScript_RemoveStaticPokemon
+	end
+
+SE_EventScript_LugiaRan::
+	setvar VAR_0x8004, SPECIES_LUGIA
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+SE_EventScript_HoOh::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_HO_OH, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setvar VAR_LAST_TALKED, LOCALID_HO_OH
+	setwildbattle SPECIES_HO_OH, 70
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SE_EventScript_HoOhDefeated
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SE_EventScript_HoOhRan
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SE_EventScript_HoOhRan
+	setflag FLAG_SE_HO_OH_DONE
+	release
+	end
+
+SE_EventScript_HoOhDefeated::
+	setflag FLAG_SE_HO_OH_DONE
+	goto Common_EventScript_RemoveStaticPokemon
+	end
+
+SE_EventScript_HoOhRan::
+	setvar VAR_0x8004, SPECIES_HO_OH
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+SE_EventScript_Suicune::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_SUICUNE, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setvar VAR_LAST_TALKED, LOCALID_TINTOWER_SE_SUICUNE
+	setwildbattle SPECIES_SUICUNE, 60
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SE_EventScript_SuicuneDefeated
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SE_EventScript_SuicuneRan
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SE_EventScript_SuicuneRan
+	setflag FLAG_SE_SUICUNE_DONE
+	release
+	end
+
+SE_EventScript_SuicuneDefeated::
+	setflag FLAG_SE_SUICUNE_DONE
+	goto Common_EventScript_RemoveStaticPokemon
+	end
+
+SE_EventScript_SuicuneRan::
+	setvar VAR_0x8004, SPECIES_SUICUNE
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+SE_EventScript_LugiaChamberOnTransition::
+	setflag FLAG_J_HIDE_LUGIA
+	setflag FLAG_HIDE_WHIRL_ISLANDS_KIMONO_GIRLS
+	goto_if_set FLAG_SE_LUGIA_DONE, Common_EventScript_NopReturn
+	checkitem ITEM_SILVER_WING
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_NopReturn
+	clearflag FLAG_J_HIDE_LUGIA
+	return
+
+SE_EventScript_TinTowerRoofOnTransition::
+	setflag FLAG_J_HIDE_HO_OH
+	goto_if_set FLAG_SE_HO_OH_DONE, Common_EventScript_NopReturn
+	checkitem ITEM_RAINBOW_WING
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_NopReturn
+	clearflag FLAG_J_HIDE_HO_OH
+	return
+
+SE_EventScript_TinTower1FOnTransition::
+	setflag FLAG_SE_HIDE_TIN_TOWER_SUICUNE
+	goto_if_set FLAG_SE_SUICUNE_DONE, Common_EventScript_NopReturn
+	goto_if_unset FLAG_SE_BEASTS_RELEASED, Common_EventScript_NopReturn
+	clearflag FLAG_SE_HIDE_TIN_TOWER_SUICUNE
+	return
+
+SE_EventScript_BurnedTowerB1FOnTransition::
+	setflag FLAG_HIDE_BURNED_TOWER_BEASTS
+	goto_if_set FLAG_SE_BEASTS_RELEASED, SE_EventScript_BurnedTowerBeastsGone
+	clearflag FLAG_HIDE_BURNED_TOWER_BEASTS
+	return
+
+SE_EventScript_BurnedTowerBeastsGone::
+	setvar VAR_TEMP_1, 1
+	return
+
+SE_EventScript_BurnedTowerBeasts::
+	lockall
+	delay 20
+	msgbox SE_Text_BurnedTowerBeastsAwake, MSGBOX_DEFAULT
+	closemessage
+	playmoncry SPECIES_RAIKOU, CRY_MODE_ENCOUNTER
+	waitmoncry
+	removeobject LOCALID_BURNEDTOWER_RAIKOU
+	delay 10
+	playmoncry SPECIES_ENTEI, CRY_MODE_ENCOUNTER
+	waitmoncry
+	removeobject LOCALID_BURNEDTOWER_ENTEI
+	delay 10
+	playmoncry SPECIES_SUICUNE, CRY_MODE_ENCOUNTER
+	waitmoncry
+	removeobject LOCALID_BURNEDTOWER_SUICUNE
+	delay 20
+	msgbox SE_Text_BurnedTowerBeastsFled, MSGBOX_DEFAULT
+	special StartJohtoBeasts
+	setflag FLAG_SE_BEASTS_RELEASED
+	setflag FLAG_HIDE_BURNED_TOWER_BEASTS
+	setvar VAR_TEMP_1, 1
+	releaseall
+	end
+
+SE_Text_BurnedTowerBeastsAwake:
+	.string "Three POKéMON are resting in the\n"
+	.string "basement of the BURNED TOWER…\p"
+	.string "They noticed you!$"
+
+SE_Text_BurnedTowerBeastsFled:
+	.string "RAIKOU and ENTEI ran off across\n"
+	.string "JOHTO!\p"
+	.string "SUICUNE dashed away toward the\n"
+	.string "TIN TOWER…$"
+

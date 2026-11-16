@@ -14,6 +14,11 @@
 #define FLAG_SE_HIDE_ORO_NEWBARK             0x2708
 #define FLAG_SE_HIDE_ORO_GOLDENROD           0x2709
 #define FLAG_SE_HIDE_ORO_VICTORY_ROAD        0x270A
+#define FLAG_SE_RECEIVED_SILVER_WING         0x270B
+#define FLAG_SE_RECEIVED_RAINBOW_WING        0x270C
+#define FLAG_SE_LUGIA_DONE                   0x270D // caught or defeated
+#define FLAG_SE_HO_OH_DONE                   0x270E
+#define FLAG_SE_SUICUNE_DONE                 0x270F
 #define FLAG_SE_RECEIVED_JOHTO_TM1          0x2710
 #define FLAG_SE_RECEIVED_JOHTO_TM2          0x2711
 #define FLAG_SE_RECEIVED_JOHTO_TM3          0x2712
@@ -22,5 +27,8 @@
 #define FLAG_SE_RECEIVED_JOHTO_TM6          0x2715
 #define FLAG_SE_RECEIVED_JOHTO_TM7          0x2716
 #define FLAG_SE_RECEIVED_JOHTO_TM8          0x2717
+
+#define FLAG_SE_BEASTS_RELEASED              0x2720 // Raikou and Entei roam Johto after the Burned Tower
+#define FLAG_SE_HIDE_TIN_TOWER_SUICUNE       0x2721
 
 #endif // GUARD_CONSTANTS_FLAGS_SE_JOHTO_H

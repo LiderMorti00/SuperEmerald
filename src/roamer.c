@@ -16,7 +16,15 @@ enum
     MAP_NUM, // map number
 };
 
-#define ROAMER(index) (&gSaveBlock1Ptr->roamer[index])
+#define ROAMER(index) GetRoamer(index)
+
+// Super Emerald: the first roamer keeps its place in SaveBlock1, extra ones are appended
+struct Roamer *GetRoamer(u32 index)
+{
+    if (index < ROAMER_COUNT_SAVE1)
+        return &gSaveBlock1Ptr->roamer[index];
+    return &gSaveBlock1Ptr->roamerExt[index - ROAMER_COUNT_SAVE1];
+}
 EWRAM_DATA static u8 sLocationHistory[ROAMER_COUNT][3][2] = {0};
 EWRAM_DATA static u8 sRoamerLocation[ROAMER_COUNT][2] = {0};
 EWRAM_DATA u8 gEncounteredRoamerIndex = 0;
@@ -91,6 +99,30 @@ static const u8 sRoamerLocationsKanto[][6] =
     { ___, ___, ___, ___, ___, ___ },
 };
 
+// Super Emerald: Raikou and Entei roam Johto after the Burned Tower
+static const u8 sRoamerLocationsJohto[][6] =
+{
+    { MAP_NUM(MAP_ROUTE29_HNS), MAP_NUM(MAP_ROUTE30_HNS), MAP_NUM(MAP_ROUTE46_HNS), MAP_NUM(MAP_ROUTE27_HNS), ___, ___ },
+    { MAP_NUM(MAP_ROUTE30_HNS), MAP_NUM(MAP_ROUTE29_HNS), MAP_NUM(MAP_ROUTE31_HNS), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE31_HNS), MAP_NUM(MAP_ROUTE30_HNS), MAP_NUM(MAP_ROUTE32_HNS), MAP_NUM(MAP_ROUTE36_HNS), ___, ___ },
+    { MAP_NUM(MAP_ROUTE32_HNS), MAP_NUM(MAP_ROUTE31_HNS), MAP_NUM(MAP_ROUTE33_HNS), MAP_NUM(MAP_ROUTE36_HNS), ___, ___ },
+    { MAP_NUM(MAP_ROUTE33_HNS), MAP_NUM(MAP_ROUTE32_HNS), MAP_NUM(MAP_ROUTE34_HNS), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE34_HNS), MAP_NUM(MAP_ROUTE33_HNS), MAP_NUM(MAP_ROUTE35_HNS), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE35_HNS), MAP_NUM(MAP_ROUTE34_HNS), MAP_NUM(MAP_ROUTE36_HNS), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE36_HNS), MAP_NUM(MAP_ROUTE35_HNS), MAP_NUM(MAP_ROUTE37_HNS), MAP_NUM(MAP_ROUTE31_HNS), MAP_NUM(MAP_ROUTE32_HNS), ___ },
+    { MAP_NUM(MAP_ROUTE37_HNS), MAP_NUM(MAP_ROUTE36_HNS), MAP_NUM(MAP_ROUTE38_HNS), MAP_NUM(MAP_ROUTE42_HNS), ___, ___ },
+    { MAP_NUM(MAP_ROUTE38_HNS), MAP_NUM(MAP_ROUTE37_HNS), MAP_NUM(MAP_ROUTE39_HNS), MAP_NUM(MAP_ROUTE42_HNS), ___, ___ },
+    { MAP_NUM(MAP_ROUTE39_HNS), MAP_NUM(MAP_ROUTE38_HNS), MAP_NUM(MAP_ROUTE37_HNS), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE42_HNS), MAP_NUM(MAP_ROUTE37_HNS), MAP_NUM(MAP_ROUTE38_HNS), MAP_NUM(MAP_ROUTE43_HNS), MAP_NUM(MAP_ROUTE44_HNS), ___ },
+    { MAP_NUM(MAP_ROUTE43_HNS), MAP_NUM(MAP_ROUTE42_HNS), MAP_NUM(MAP_ROUTE44_HNS), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE44_HNS), MAP_NUM(MAP_ROUTE42_HNS), MAP_NUM(MAP_ROUTE43_HNS), MAP_NUM(MAP_ROUTE45_HNS), ___, ___ },
+    { MAP_NUM(MAP_ROUTE45_HNS), MAP_NUM(MAP_ROUTE44_HNS), MAP_NUM(MAP_ROUTE46_HNS), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE46_HNS), MAP_NUM(MAP_ROUTE45_HNS), MAP_NUM(MAP_ROUTE29_HNS), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE27_HNS), MAP_NUM(MAP_ROUTE29_HNS), MAP_NUM(MAP_ROUTE26_HNS), ___, ___, ___ },
+    { MAP_NUM(MAP_ROUTE26_HNS), MAP_NUM(MAP_ROUTE27_HNS), MAP_NUM(MAP_ROUTE29_HNS), ___, ___, ___ },
+    { ___, ___, ___, ___, ___, ___ },
+};
+
 #undef ___
 #define NUM_LOCATIONS_PER_SET (ARRAY_COUNT(sRoamerLocations[0]))
 
@@ -100,19 +132,20 @@ static bool32 IsKantoRoamer(u32 index)
     return species == SPECIES_RAIKOU || species == SPECIES_ENTEI || species == SPECIES_SUICUNE;
 }
 
+// Super Emerald: Johto comes before Kanto now, so the beasts roam Johto
 static const u8 (*RoamerTable(u32 index))[6]
 {
-    return IsKantoRoamer(index) ? sRoamerLocationsKanto : sRoamerLocations;
+    return IsKantoRoamer(index) ? sRoamerLocationsJohto : sRoamerLocations;
 }
 
 static u32 RoamerNumSets(u32 index)
 {
-    return IsKantoRoamer(index) ? ARRAY_COUNT(sRoamerLocationsKanto) - 1 : ARRAY_COUNT(sRoamerLocations) - 1;
+    return IsKantoRoamer(index) ? ARRAY_COUNT(sRoamerLocationsJohto) - 1 : ARRAY_COUNT(sRoamerLocations) - 1;
 }
 
 static u8 RoamerMapGroup(u32 index)
 {
-    return IsKantoRoamer(index) ? MAP_GROUP(MAP_ROUTE1) : ROAMER_MAP_GROUP;
+    return IsKantoRoamer(index) ? MAP_GROUP(MAP_ROUTE29_HNS) : ROAMER_MAP_GROUP;
 }
 
 void DeactivateAllRoamers(void)
@@ -211,12 +244,7 @@ void InitRoamer(void)
 {
     if (IsInKanto())
     {
-        switch (VarGet(VAR_STARTER_MON))
-        {
-        case 0:  TryAddRoamer(SPECIES_ENTEI, 50); break;    // Bulbasaur
-        case 1:  TryAddRoamer(SPECIES_RAIKOU, 50); break;   // Squirtle
-        default: TryAddRoamer(SPECIES_SUICUNE, 50); break;  // Charmander
-        }
+        // Super Emerald: the legendary beasts belong to Johto (see StartJohtoBeasts)
     }
     else if (gSpecialVar_0x8004 == 0) // Red
         TryAddRoamer(SPECIES_LATIAS, 75); // Super Emerald: postgame legendaries at 75
@@ -359,4 +387,11 @@ void GetRoamerLocation(u32 roamerIndex, u8 *mapGroup, u8 *mapNum)
 {
     *mapGroup = sRoamerLocation[roamerIndex][MAP_GRP];
     *mapNum = sRoamerLocation[roamerIndex][MAP_NUM];
+}
+
+// Super Emerald: called when the player first enters the Burned Tower basement
+void StartJohtoBeasts(void)
+{
+    TryAddRoamer(SPECIES_RAIKOU, 60);
+    TryAddRoamer(SPECIES_ENTEI, 60);
 }

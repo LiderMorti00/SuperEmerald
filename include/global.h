@@ -1202,7 +1202,7 @@ struct SaveBlock1
                u8 padding[4];
     /*0x31B3*/ struct ExternalEventData externalEventData;
     /*0x31C7*/ struct ExternalEventFlags externalEventFlags;
-    /*0x31DC*/ struct Roamer roamer[ROAMER_COUNT];
+    /*0x31DC*/ struct Roamer roamer[ROAMER_COUNT_SAVE1];
 #if FREE_ENIGMA_BERRY == FALSE
     /*0x31F8*/ struct EnigmaBerry enigmaBerry;
 #endif //FREE_ENIGMA_BERRY
@@ -1239,6 +1239,7 @@ struct SaveBlock1
     // their layout (the new space reads as zero).
     u8 extFlags[EXT_FLAGS_COUNT / 8];
     u16 extVars[EXT_VARS_COUNT];
+    struct Roamer roamerExt[ROAMER_COUNT - ROAMER_COUNT_SAVE1]; // Super Emerald: Johto beasts
     // sizeof: 0x3???
 };
 
