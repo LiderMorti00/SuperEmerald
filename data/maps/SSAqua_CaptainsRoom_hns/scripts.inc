@@ -6,6 +6,7 @@ SSAqua_CaptainsRoom_EventScript_Captain::
 	goto_if_eq VAR_TEMP_0, 1, SSAqua_CaptainsRoom_EventScrip_CaptainAfter
 	msgbox SSAqua_CaptainsRoom_Text_CaptainExhausting, MSGBOX_NPC
 	setvar VAR_TEMP_0, 1
+	goto SSAqua_CaptainsRoom_EventScrip_CaptainAfter
 
 SSAqua_CaptainsRoom_Text_CaptainExhausting::
 	.string "Whew! Thanks for coming along.\p"

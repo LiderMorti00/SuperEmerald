@@ -1128,3 +1128,135 @@ SE_Text_BurnedTowerBeastsFled:
 	.string "SUICUNE dashed away toward the\n"
 	.string "TIN TOWER…$"
 
+
+@ ---------------------------------------------------------------------------
+@ Kurt (Azalea Town) turns berries into special Poke Balls, as in Heart & Soul:
+@ Pecha->Love, Rawst->Lure, Cheri->Friend, Oran->Heavy, Chesto->Moon, Aspear->Fast, Persim->Level
+SE_EventScript_Kurt::
+	lock
+	faceplayer
+	msgbox KurtsHouse_Text_KurtAskYouHaveAnApricorn, MSGBOX_DEFAULT
+	message SE_Text_KurtWhichBall
+	waitmessage
+	dynmultipush SE_Text_KurtLove, 0
+	dynmultipush SE_Text_KurtLure, 1
+	dynmultipush SE_Text_KurtFriend, 2
+	dynmultipush SE_Text_KurtHeavy, 3
+	dynmultipush SE_Text_KurtMoon, 4
+	dynmultipush SE_Text_KurtFast, 5
+	dynmultipush SE_Text_KurtLevel, 6
+	dynmultichoice 0, 0, FALSE, 7, 0, DYN_MULTICHOICE_CB_NONE
+	goto_if_eq VAR_RESULT, 0, SE_EventScript_KurtLove
+	goto_if_eq VAR_RESULT, 1, SE_EventScript_KurtLure
+	goto_if_eq VAR_RESULT, 2, SE_EventScript_KurtFriend
+	goto_if_eq VAR_RESULT, 3, SE_EventScript_KurtHeavy
+	goto_if_eq VAR_RESULT, 4, SE_EventScript_KurtMoon
+	goto_if_eq VAR_RESULT, 5, SE_EventScript_KurtFast
+	goto_if_eq VAR_RESULT, 6, SE_EventScript_KurtLevel
+	goto SE_EventScript_KurtCancel
+	end
+
+SE_EventScript_KurtLove::
+	setvar VAR_0x8004, ITEM_PECHA_BERRY
+	setvar VAR_0x8005, ITEM_LOVE_BALL
+	goto SE_EventScript_KurtMake
+
+SE_EventScript_KurtLure::
+	setvar VAR_0x8004, ITEM_RAWST_BERRY
+	setvar VAR_0x8005, ITEM_LURE_BALL
+	goto SE_EventScript_KurtMake
+
+SE_EventScript_KurtFriend::
+	setvar VAR_0x8004, ITEM_CHERI_BERRY
+	setvar VAR_0x8005, ITEM_FRIEND_BALL
+	goto SE_EventScript_KurtMake
+
+SE_EventScript_KurtHeavy::
+	setvar VAR_0x8004, ITEM_ORAN_BERRY
+	setvar VAR_0x8005, ITEM_HEAVY_BALL
+	goto SE_EventScript_KurtMake
+
+SE_EventScript_KurtMoon::
+	setvar VAR_0x8004, ITEM_CHESTO_BERRY
+	setvar VAR_0x8005, ITEM_MOON_BALL
+	goto SE_EventScript_KurtMake
+
+SE_EventScript_KurtFast::
+	setvar VAR_0x8004, ITEM_ASPEAR_BERRY
+	setvar VAR_0x8005, ITEM_FAST_BALL
+	goto SE_EventScript_KurtMake
+
+SE_EventScript_KurtLevel::
+	setvar VAR_0x8004, ITEM_PERSIM_BERRY
+	setvar VAR_0x8005, ITEM_LEVEL_BALL
+	goto SE_EventScript_KurtMake
+
+SE_EventScript_KurtMake::
+	bufferitemname STR_VAR_1, VAR_0x8004
+	bufferitemname STR_VAR_2, VAR_0x8005
+	special SE_KurtMakeBalls
+	goto_if_eq VAR_RESULT, 0, SE_EventScript_KurtNoBerries
+	buffernumberstring STR_VAR_3, VAR_RESULT
+	closemessage
+	playse SE_BANG
+	delay 30
+	playse SE_BANG
+	delay 30
+	message SE_Text_KurtMadeBalls
+	waitmessage
+	playfanfare MUS_OBTAIN_ITEM
+	waitfanfare
+	msgbox SE_Text_KurtTurnedOutGreat, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_KurtNoBerries::
+	msgbox SE_Text_KurtNoBerries, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_KurtCancel::
+	msgbox SE_Text_KurtCancel, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_KurtWhichBall:
+	.string "Which BALL do you want?$"
+
+SE_Text_KurtNoBerries:
+	.string "KURT: You don't have any\n"
+	.string "{STR_VAR_1} for the {STR_VAR_2}!\p"
+	.string "Bring me some and I'll get to work.$"
+
+SE_Text_KurtCancel:
+	.string "KURT: Come back if you find\n"
+	.string "some good BERRIES.$"
+
+SE_Text_KurtMadeBalls:
+	.string "KURT made {STR_VAR_3} {STR_VAR_2}(S)\n"
+	.string "from your {STR_VAR_1}!$"
+
+SE_Text_KurtTurnedOutGreat:
+	.string "KURT: They turned out great!\n"
+	.string "Try catching POKéMON with them.$"
+
+SE_Text_KurtLove:
+	.string "LOVE BALL$"
+
+SE_Text_KurtLure:
+	.string "LURE BALL$"
+
+SE_Text_KurtFriend:
+	.string "FRIEND BALL$"
+
+SE_Text_KurtHeavy:
+	.string "HEAVY BALL$"
+
+SE_Text_KurtMoon:
+	.string "MOON BALL$"
+
+SE_Text_KurtFast:
+	.string "FAST BALL$"
+
+SE_Text_KurtLevel:
+	.string "LEVEL BALL$"

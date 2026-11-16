@@ -47,6 +47,7 @@ NationalPark_Normal_EventScript_TeacherQuickclaw::
 	giveitem ITEM_QUICK_CLAW
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
 	setflag FLAG_GOT_QUICK_CLAW
+	goto NationalPark_Normal_EventScript_TeacherQuickclaw2
 
 NationalPark_Normal_Text_Teacher1::
 	.string "Pay attention, please!\p"

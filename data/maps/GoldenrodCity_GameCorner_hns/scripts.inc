@@ -120,14 +120,6 @@ GoldenrodCity_GameCorner_Text_VFAttendant1::
 	.string "You need to be on the other\n"
 	.string "side of the table.$"
 
-GoldenrodCity_GameCorner_EventScript_VoltorbFlip::
-	lockall
-	checkitem ITEM_COIN_CASE
-	goto_if_eq VAR_RESULT, FALSE, GoldenrodCity_GameCorner_EventScript_VF_NoCoinCase
-	message GoldenrodCity_GameCorner_Text_VF_Welcome
-	waitmessage
-	setvar VAR_TEMP_4, 0
-
 GoldenrodCity_GameCorner_Text_VF_Welcome::
 	.string "Welcome to VOLTORB FLIP!\p$"
 

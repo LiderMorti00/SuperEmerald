@@ -39,7 +39,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_J_GoldenrodCity_GameCorner_hns_GoldenrodCity_GameCorner_PrizeRoom_EventScript_PrizeClerkMons",
+      "script": "CeladonCity_GameCorner_PrizeRoom_EventScript_PrizeClerkMons",
       "flag": "0"
     },
     {
@@ -53,7 +53,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_J_GoldenrodCity_GameCorner_hns_GoldenrodCity_GameCorner_PrizeRoom_EventScript_PrizeClerkTMs",
+      "script": "CeladonCity_GameCorner_PrizeRoom_EventScript_PrizeClerkTMs",
       "flag": "0"
     },
     {
@@ -314,7 +314,7 @@
       "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "GoldenrodCity_GameCorner_EventScript_VoltorbFlip"
+      "script": "MauvilleCity_GameCorner_EventScript_SlotMachine9"
     },
     {
       "type": "sign",
@@ -322,7 +322,7 @@
       "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "GoldenrodCity_GameCorner_EventScript_VoltorbFlip"
+      "script": "MauvilleCity_GameCorner_EventScript_SlotMachine10"
     }
   ]
 }

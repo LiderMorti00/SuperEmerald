@@ -20,6 +20,7 @@ Ecruteak_Text_ItemfinderToEachHisOwn::
 EcruteakCity_House2_EventScript_GiveItemFinder::
 	msgbox Ecruteak_Text_ItemfinderTrueSpirit, MSGBOX_DEFAULT
 	giveitem ITEM_DOWSING_MACHINE
+	goto EcruteakCity_House2_EventScript_AlreadyGotItemfinder
 
 Ecruteak_Text_ItemfinderTrueSpirit::
 	.string "Good! You understand the true\n"

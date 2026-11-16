@@ -5785,3 +5785,23 @@ void SfrHasCaughtAllObtainable(void)
         }
     }
 }
+
+// Super Emerald: Kurt turns all of one kind of berry (VAR_0x8004) into Poke Balls
+// (VAR_0x8005). VAR_RESULT = number of balls made (0 if none or no room).
+void SE_KurtMakeBalls(void)
+{
+    u16 berry = gSpecialVar_0x8004;
+    u16 ball = gSpecialVar_0x8005;
+    u16 count = CountTotalItemQuantityInBag(berry);
+
+    if (count > 99)
+        count = 99;
+    while (count > 0 && !CheckBagHasSpace(ball, count))
+        count--;
+    if (count > 0)
+    {
+        RemoveBagItem(berry, count);
+        AddBagItem(ball, count);
+    }
+    gSpecialVar_Result = count;
+}

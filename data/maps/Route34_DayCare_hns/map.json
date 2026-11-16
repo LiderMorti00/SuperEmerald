@@ -25,7 +25,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_J_Route34_DayCare_hns_Route34_DayCare_EventScript_DaycareWoman",
+      "script": "Route117_PokemonDayCare_EventScript_DaycareWoman",
       "flag": "0",
       "local_id": "LOCALID_DAYCARE_LADY"
     },

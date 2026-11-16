@@ -11,6 +11,7 @@ Route30_House_EventScript_BaldMan::
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	closemessage
 	setflag FLAG_GOT_BERRY_ROUTE_30_HOUSE
+	goto Route30_House_EventScript_BaldMan2
 
 Route30_BerryHouse_Text_MonEatBerries::
 	.string "When you follow that path up north,\n"
