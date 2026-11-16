@@ -56,6 +56,7 @@ static bool32 ShouldRunTrainerSlideLastLowHp(u32 lastId, enum BattlerId battler,
 static void SetTrainerSlideParameters(enum BattlerId battler, u32* lastId, u32* trainerId, u32* retValue);
 static bool32 IsSlideInitalizedOrPlayed(enum BattlerId battler, enum TrainerSlideType slideId);
 
+#if TESTING
 // Partner trainers must be added as TRAINER_PARTNER(PARTNER_XXXX)
 static const u8* const sTrainerSlides[DIFFICULTY_COUNT][TRAINER_PARTNER(PARTNER_COUNT)][TRAINER_SLIDE_COUNT] =
 {
@@ -70,6 +71,13 @@ static const u8* const sFrontierTrainerSlides[DIFFICULTY_COUNT][FRONTIER_TRAINER
     {
     },
 };
+#else
+// Super Emerald: no trainer uses slide messages, so the full
+// [difficulty][trainer][slide] tables (~0.5 MB of NULL pointers) are
+// replaced by a single empty row. To add slides, use a sparse lookup in
+// GetTrainerSlideArray instead of restoring the big tables.
+static const u8* const sNoTrainerSlides[TRAINER_SLIDE_COUNT] = {0};
+#endif // TESTING
 
 #define TRAINER_RED_TEST    1
 #define TRAINER_LEAF_TEST   2
@@ -125,10 +133,7 @@ static const u8* const *GetTrainerSlideArray(enum DifficultyLevel difficulty, u3
 #if TESTING
     return (FlagGet(TESTING_FLAG_TRAINER_SLIDES) ? sTestTrainerSlides[difficulty][trainerId] : NULL);
 #else
-    if (HasAnyBattleFlags(BATTLE_TYPE_FRONTIER))
-        return sFrontierTrainerSlides[difficulty][trainerId];
-    else
-        return sTrainerSlides[difficulty][trainerId];
+    return sNoTrainerSlides;
 #endif // TESTING
 }
 

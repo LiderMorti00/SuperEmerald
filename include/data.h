@@ -217,7 +217,15 @@ extern const union AnimCmd *const gAnims_MonPic[];
 extern const union AnimCmd *const gAnims_Trainer[];
 extern const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT];
 
+#if !TESTING && B_VAR_DIFFICULTY == 0
+// Super Emerald: only the Normal difficulty exists, so keep a single row
+// instead of DIFFICULTY_COUNT rows of mostly-empty trainers.
+extern const struct Trainer gTrainersNormal[1][TRAINERS_COUNT];
+#define TRAINERS_TABLE(difficulty) ((void)(difficulty), gTrainersNormal[0])
+#else
 extern const struct Trainer gTrainers[DIFFICULTY_COUNT][TRAINERS_COUNT];
+#define TRAINERS_TABLE(difficulty) (gTrainers[difficulty])
+#endif
 extern const struct Trainer gBattlePartners[DIFFICULTY_COUNT][PARTNER_COUNT];
 
 extern const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT];
@@ -291,7 +299,7 @@ static inline const struct Trainer *GetTrainerStructFromId(u16 trainerId)
     else
     {
         difficulty = GetTrainerDifficultyLevel(trainerId);
-        return &gTrainers[difficulty][SanitizeTrainerId(trainerId)];
+        return &TRAINERS_TABLE(difficulty)[SanitizeTrainerId(trainerId)];
     }
 }
 

@@ -228,7 +228,14 @@ const union AnimCmd *const gAnims_Trainer[] ={
 };
 
 #if !TESTING
+#if B_VAR_DIFFICULTY == 0
+// Single Normal row: the generated data uses [DIFFICULTY_NORMAL][id]
+// designators, so map DIFFICULTY_NORMAL to row 0 while including it.
+#define DIFFICULTY_NORMAL 0
+const struct Trainer gTrainersNormal[1][TRAINERS_COUNT] =
+#else
 const struct Trainer gTrainers[DIFFICULTY_COUNT][TRAINERS_COUNT] =
+#endif
 {
 #if IS_FRLG
 #include "data/trainers_frlg.h"
@@ -237,6 +244,9 @@ const struct Trainer gTrainers[DIFFICULTY_COUNT][TRAINERS_COUNT] =
 #include "data/trainers_frlg.h" // Super Fire Red: Kanto trainers, IDs offset by KANTO_TRAINER_ID_START
 #endif
 };
+#if B_VAR_DIFFICULTY == 0
+#undef DIFFICULTY_NORMAL
+#endif
 #endif
 
 #include "data/trainer_approach_music.h"
