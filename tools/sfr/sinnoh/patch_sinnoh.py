@@ -180,3 +180,15 @@ for m in ('HearthomeCity', 'FightArea_FrontierGate'):
             d[i + 1] |= 0x04      # collision bit (0x0400)
     open(p, 'wb').write(d)
 print('blocked external doors')
+
+# --- Veilstone Game Corner: the clerks use the Celadon Game Corner scripts (coins, prizes)
+j = load('VeilstoneCity_GameCorner')
+for o in j['object_events']:
+    if o['script'].endswith('_EventScript_CoinsClerk'):
+        o['script'] = 'CeladonCity_GameCorner_EventScript_CoinsClerk'
+    elif o['script'].endswith('_EventScript_PrizeCornerDolls'):
+        o['script'] = 'CeladonCity_GameCorner_PrizeRoom_EventScript_PrizeClerkMons'
+    elif o['script'].endswith('_EventScript_PrizeCornerTMs'):
+        o['script'] = 'CeladonCity_GameCorner_PrizeRoom_EventScript_PrizeClerkTMs'
+save('VeilstoneCity_GameCorner', j)
+print('game corner clerks')

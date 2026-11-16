@@ -728,6 +728,37 @@ SE_EventScript_KantoWorldState::
 
 @ ---------------------------------------------------------------------------
 @ Vermilion City: Prof. Oak meets the player at the dock with a Kanto starter
+@ The Oak scene plays when the player steps off the ship. Players who reach Kanto another way
+@ (Magnet Train, the Johto routes) find Oak waiting at the dock instead (VAR_SE_KANTO_ARRIVAL 3).
+SE_EventScript_VermilionOakArrivalCheck::
+	getplayerxy VAR_TEMP_2, VAR_TEMP_3
+	goto_if_ne VAR_TEMP_2, 23, SE_EventScript_VermilionOakWaits
+	goto_if_ne VAR_TEMP_3, 32, SE_EventScript_VermilionOakWaits
+	goto SE_EventScript_VermilionOakArrival
+	end
+
+SE_EventScript_VermilionOakWaits::
+	setvar VAR_SE_KANTO_ARRIVAL, 3
+	clearflag FLAG_SE_HIDE_VERMILION_OAK
+	addobject LOCALID_VERMILION_SE_OAK
+	end
+
+SE_EventScript_VermilionShowOak::
+	clearflag FLAG_SE_HIDE_VERMILION_OAK
+	return
+
+SE_EventScript_VermilionOakTalk::
+	lockall
+	faceplayer
+	goto_if_ne VAR_SE_KANTO_ARRIVAL, 3, SE_EventScript_VermilionOakTalkEnd
+	msgbox SE_Text_VermilionOakWelcome, MSGBOX_DEFAULT
+	goto SE_EventScript_VermilionOakChoose
+	end
+
+SE_EventScript_VermilionOakTalkEnd::
+	releaseall
+	end
+
 SE_EventScript_VermilionOakArrival::
 	lockall
 	applymovement LOCALID_PLAYER, Common_Movement_FaceDown

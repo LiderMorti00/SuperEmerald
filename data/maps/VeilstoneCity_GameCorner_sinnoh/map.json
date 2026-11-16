@@ -53,7 +53,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_VeilstoneCity_GameCorner_VeilstoneCity_GameCorner_EventScript_CoinsClerk",
+      "script": "CeladonCity_GameCorner_EventScript_CoinsClerk",
       "flag": "0"
     },
     {
@@ -67,7 +67,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_VeilstoneCity_GameCorner_VeilstoneCity_GameCorner_EventScript_PrizeCornerDolls",
+      "script": "CeladonCity_GameCorner_PrizeRoom_EventScript_PrizeClerkMons",
       "flag": "0"
     },
     {
@@ -137,7 +137,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_VeilstoneCity_GameCorner_VeilstoneCity_GameCorner_EventScript_PrizeCornerTMs",
+      "script": "CeladonCity_GameCorner_PrizeRoom_EventScript_PrizeClerkTMs",
       "flag": "0"
     },
     {

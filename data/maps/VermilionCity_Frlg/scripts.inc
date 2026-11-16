@@ -5,7 +5,7 @@ VermilionCity_Frlg_MapScripts::
 
 VermilionCity_OnFrame::
 	map_script_2 VAR_MAP_SCENE_VERMILION_CITY, 2, VermilionCity_EventScript_ExitSSAnne
-	map_script_2 VAR_SE_KANTO_ARRIVAL, 1, SE_EventScript_VermilionOakArrival @ Super Emerald
+	map_script_2 VAR_SE_KANTO_ARRIVAL, 1, SE_EventScript_VermilionOakArrivalCheck @ Super Emerald
 	.2byte 0
 
 VermilionCity_EventScript_ExitSSAnne::
@@ -24,6 +24,7 @@ VermilionCity_Movement_ExitSSAnne::
 VermilionCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_VERMILION_CITY
 	call_if_set FLAG_TALKED_TO_OAKS_AIDE_IN_VERMILION, VermilionCity_EventScript_HideOaksAide
+	call_if_eq VAR_SE_KANTO_ARRIVAL, 3, SE_EventScript_VermilionShowOak @ Super Emerald
 	end
 
 VermilionCity_EventScript_HideOaksAide::
