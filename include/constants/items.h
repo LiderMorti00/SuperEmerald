@@ -1051,7 +1051,7 @@ enum __attribute__((packed)) Item
     ITEM_BAXCALIBRITE = 871,
     ITEM_TATSUGIRINITE = 872,
     ITEM_GLIMMORANITE = 873,
-    ITEM_KANTO_TICKET = 874, // Super Emerald: S.S. Tidal to Vermilion City
+    ITEM_JOHTO_TICKET = 874, // Super Emerald: S.S. Tidal to Olivine City (was the Kanto Ticket)
 
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,

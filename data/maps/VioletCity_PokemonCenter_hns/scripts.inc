@@ -1,5 +1,10 @@
 VioletCity_PokemonCenter_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, VioletCity_PokemonCenter_hns_OnTransition
 	.byte 0
+
+VioletCity_PokemonCenter_hns_OnTransition:
+	setrespawn HEAL_LOCATION_VIOLET_CITY_HNS
+	end
 
 
 VioletCity_PokemonCenter_EventScript_Gentleman::

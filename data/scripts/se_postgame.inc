@@ -38,33 +38,11 @@ SFR_Text_VermilionSailorComeBackAnytime:
 @ ---------------------------------------------------------------------------
 @ Slateport / Lilycove harbors: S.S. Tidal to Vermilion City with the Kanto Ticket
 SE_EventScript_SlateportOfferKanto::
-	checkitem ITEM_KANTO_TICKET
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_NopReturn
-	msgbox SE_Text_HarborKantoTicket, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, Common_EventScript_NopReturn
-	call SE_EventScript_InitKantoPostgame
-	call SlateportCity_Harbor_EventScript_BoardFerry
-	warp MAP_VERMILION_CITY, 23, 32
-	waitstate
-	release
-	end
+	goto SE_EventScript_SlateportOfferJohto
 
+@ Super Emerald: Kanto is reached from Johto now; Lilycove has no ferry to Kanto.
 SE_EventScript_LilycoveOfferKanto::
-	checkitem ITEM_KANTO_TICKET
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_NopReturn
-	msgbox SE_Text_HarborKantoTicket, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, Common_EventScript_NopReturn
-	call SE_EventScript_InitKantoPostgame
-	call LilycoveCity_Harbor_EventScript_BoardFerry
-	warp MAP_VERMILION_CITY, 23, 32
-	waitstate
-	release
-	end
-
-SE_Text_HarborKantoTicket:
-	.string "Oh, that's a KANTO TICKET!\p"
-	.string "Would you like to sail to\n"
-	.string "VERMILION CITY in KANTO?$"
+	return
 
 @ ---------------------------------------------------------------------------
 @ Kanto Gym Leader rematches

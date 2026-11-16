@@ -1,5 +1,10 @@
 OlivineCity_PortInside_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, OlivineCity_PortInside_hns_OnFrame
 	.byte 0
+
+OlivineCity_PortInside_hns_OnFrame:
+	map_script_2 VAR_SE_JOHTO_ARRIVAL, 1, SE_EventScript_OlivineJasmineArrival
+	.2byte 0
 
 
 OlivinePort_Text_AskBoard::

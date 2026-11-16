@@ -990,24 +990,13 @@ LittlerootTown_ProfessorBirchsLab_Text_ScottAboardSSTidalCall:
 	.string "… … … … … …\n"
 	.string "… … … … … Click!$"
 
-@ Super Emerald: Prof. Birch's ticket to Kanto
+@ Super Emerald: Prof. Birch sends the player to Norman (Johto Ticket)
 LittlerootTown_ProfessorBirchsLab_EventScript_GiveKantoTicket::
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_TakeKantoTicket, MSGBOX_DEFAULT
-	giveitem ITEM_KANTO_TICKET
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_ExplainKantoTicket, MSGBOX_DEFAULT
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_SeeYourDad, MSGBOX_DEFAULT
 	return
 
-LittlerootTown_ProfessorBirchsLab_Text_TakeKantoTicket:
+LittlerootTown_ProfessorBirchsLab_Text_SeeYourDad:
 	.string "PROF. BIRCH: Oh, and one more thing.\p"
-	.string "My old friend PROF. OAK lives in\n"
-	.string "KANTO, far to the north.\p"
-	.string "I told him all about you, and he'd\n"
-	.string "love to meet the CHAMPION of HOENN.\p"
-	.string "So take this ticket!$"
-
-LittlerootTown_ProfessorBirchsLab_Text_ExplainKantoTicket:
-	.string "PROF. BIRCH: With that KANTO TICKET,\n"
-	.string "the S.S. TIDAL will take you to\l"
-	.string "VERMILION CITY.\p"
-	.string "It sails from SLATEPORT and LILYCOVE.\n"
-	.string "Say hello to PROF. OAK for me!$"
+	.string "Your father dropped by earlier.\n"
+	.string "He has something for you.\p"
+	.string "Go see him at the PETALBURG GYM!$"

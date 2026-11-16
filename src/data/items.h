@@ -16100,15 +16100,15 @@ const struct ItemInfo gItemsInfo[] =
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
 
-    // Super Emerald: given by Prof. Birch after the Hoenn League
-    [ITEM_KANTO_TICKET] =
+    // Super Emerald: given by Norman after the Hoenn League
+    [ITEM_JOHTO_TICKET] =
     {
-        .name = ITEM_NAME("Kanto Ticket"),
+        .name = ITEM_NAME("Johto Ticket"),
         .price = 0,
         .description = COMPOUND_STRING(
             "A ticket for the\n"
             "S.S. TIDAL's voyage\n"
-            "to Vermilion City."),
+            "to Olivine City."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,

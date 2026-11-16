@@ -16,6 +16,9 @@ Also writes include/constants/flags_johto.h, opponents_johto_list.h,
 src/data/trainers_johto.party and the list of story objects hidden in the free world.
 
 Usage (repo root): python3 -I tools/sfr/hns/import_maps.py [--hns /path]
+
+One-time import: Johto maps have been edited by hand since (Super Emerald scenes,
+heal locations, Porymap). Running it again would overwrite those edits.
 """
 import collections, glob, json, os, re, shutil, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))

@@ -394,6 +394,7 @@
 
 #define VAR_SE_JOHTO_STATE_VERSION    0x5000 // Super Emerald: bump SE_JOHTO_STATE_VERSION when the Johto state changes
 #define SE_JOHTO_STATE_VERSION        1
+#define VAR_SE_JOHTO_ARRIVAL          0x5001 // 1 = just arrived at Olivine by ship, 2 = met Jasmine
 
 #define SPECIAL_VARS_START            0x8000
 // special vars

@@ -1272,6 +1272,7 @@ gStdScripts_End::
 	.include "data/maps/SafariZoneIndoor_hns/scripts.inc"
 	.include "data/scripts/se_johto_hns.inc"
 	.include "data/scripts/se_johto_state.inc"
+	.include "data/scripts/se_johto.inc"
 @ Super Emerald: HnS end
 
 	.include "data/scripts/trainer_tower.inc"

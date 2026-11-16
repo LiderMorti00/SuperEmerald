@@ -403,6 +403,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvi
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvilleOldMan2;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornTree;
 
+
 // Super Emerald: HnS begin
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Archer_hns;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ariana_hns;
@@ -641,7 +642,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_WORKER_M_HNS] = &gObjectEventGraphicsInfo_WorkerM_hns,
     [OBJ_EVENT_GFX_YOUNGSTER_HNS] = &gObjectEventGraphicsInfo_Youngster_hns,
     // Super Emerald: HnS end
-    [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
+        [OBJ_EVENT_GFX_BRENDAN_NORMAL] =           &gObjectEventGraphicsInfo_BrendanNormal,
     [OBJ_EVENT_GFX_BRENDAN_MACH_BIKE] =        &gObjectEventGraphicsInfo_BrendanMachBike,
     [OBJ_EVENT_GFX_BRENDAN_SURFING] =          &gObjectEventGraphicsInfo_BrendanSurfing,
     [OBJ_EVENT_GFX_BRENDAN_FIELD_MOVE] =       &gObjectEventGraphicsInfo_BrendanFieldMove,

@@ -1,5 +1,10 @@
 NewBarkTown_Lab_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, NewBarkTown_Lab_hns_OnTransition
 	.byte 0
+
+NewBarkTown_Lab_hns_OnTransition:
+	setrespawn HEAL_LOCATION_NEW_BARK_TOWN_HNS
+	end
 
 
 NewBarkTown_EventScript_Aide1::
