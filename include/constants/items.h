@@ -1062,6 +1062,7 @@ enum __attribute__((packed)) Item
     ITEM_LUNAR_WING = 882, // Super Emerald: Sinnoh key item
     ITEM_SUITE_KEY = 883, // Super Emerald: Sinnoh key item
     ITEM_GS_BALL = 884, // Super Emerald: Ruins of Alph reward, wakes Celebi at the Ilex Forest shrine
+    ITEM_PASS = 885, // Super Emerald: Magnet Train pass, from Prof. Elm after the Johto League
 
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,

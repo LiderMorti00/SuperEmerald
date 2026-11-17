@@ -1791,6 +1791,11 @@ void UpdateTimeOfDay(bool32 updateBlend)
 // Whether a map type is naturally lit/outside
 bool32 MapHasNaturalLight(enum MapType mapType)
 {
+    // Super Emerald: the Magnet Train track outside the stations follows the time of day
+    if (OW_ENABLE_DNS && VarGet(VAR_SE_TRAIN_RIDE) != 0
+     && ((gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_GOLDENROD_CITY_TRAIN_STATION_HNS) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_GOLDENROD_CITY_TRAIN_STATION_HNS))
+      || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SAFFRON_CITY_MAGNET_TRAIN_STATION) && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SAFFRON_CITY_MAGNET_TRAIN_STATION))))
+        return TRUE;
     return (OW_ENABLE_DNS
          && (mapType == MAP_TYPE_TOWN
           || mapType == MAP_TYPE_CITY

@@ -346,9 +346,15 @@ static const u8 sDoorAnimPalettes_TrainerTowerRoofElevator[] = {11, 11, 2, 2, 2,
 
 #include "data/field_door_regions_gfx.h"
 
+static const u8 sDoorAnimTiles_SaffronPurpleHns[] = INCGFX_U8("graphics/door_anims/hns/saffron_hns.png", ".4bpp");
+static const u8 sDoorAnimPalettes_SaffronPurpleHns[] = {8, 8, 8, 8, 8, 8, 8, 8};
+extern const struct Tileset gTileset_SaffronCity_Hns;
+
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 {
 #include "data/field_door_regions_table.h" // Super Emerald: Johto and Sinnoh doors
+    // Super Emerald: purple HGSS doors of Saffron City (FRLG primary, so the frames go to the end of VRAM)
+    {.metatileNum = 0x35C, .tileset = &gTileset_SaffronCity_Hns, .sound = DOOR_SOUND_NORMAL, .size = DOOR_SIZE_1x1, .tiles = sDoorAnimTiles_SaffronPurpleHns, .palettes = sDoorAnimPalettes_SaffronPurpleHns},
 // Super Fire Red: Emerald and FRLG doors are both available (was #if !IS_FRLG)
     {
         .metatileNum = METATILE_General_Door,

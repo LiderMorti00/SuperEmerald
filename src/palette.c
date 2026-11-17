@@ -967,7 +967,7 @@ void TimeMixPalettes(u32 palettes, u16 *src, u16 *dst, struct BlendSettings *ble
                 s32 b = (srcColor << 17) >> 27;
                 s32 r2, g2, b2;
 
-                if (srcColor >> 15)
+                if (OW_DNS_WINDOW_LIGHTS && (srcColor >> 15))
                 {
                     if (altBlendColor)
                     {

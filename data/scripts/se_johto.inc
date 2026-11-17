@@ -876,7 +876,8 @@ SE_Text_OroVictoryRoadAfter:
 SE_EventScript_MagnetTrainGoldenrod::
 	lock
 	faceplayer
-	goto_if_unset FLAG_SE_JOHTO_LEAGUE_CLEARED, SE_EventScript_MagnetTrainClosed
+	checkitem ITEM_PASS
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_MagnetTrainClosed
 	msgbox SE_Text_MagnetTrainToSaffron, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SE_EventScript_MagnetTrainNo
 	msgbox SE_Text_MagnetTrainDepart, MSGBOX_DEFAULT
@@ -884,7 +885,7 @@ SE_EventScript_MagnetTrainGoldenrod::
 	playse SE_DOOR
 	fadescreen FADE_TO_BLACK
 	setvar VAR_SE_TRAIN_RIDE, 1
-	warpsilent MAP_GOLDENROD_CITY_TRAIN_STATION_HNS, 4, 5
+	warpsilent MAP_GOLDENROD_CITY_TRAIN_STATION_HNS, 12, 5
 	waitstate
 	release
 	end
@@ -892,6 +893,8 @@ SE_EventScript_MagnetTrainGoldenrod::
 SE_EventScript_MagnetTrainSaffron::
 	lock
 	faceplayer
+	checkitem ITEM_PASS
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_MagnetTrainClosed
 	msgbox SE_Text_MagnetTrainToGoldenrod, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SE_EventScript_MagnetTrainNo
 	msgbox SE_Text_MagnetTrainDepart, MSGBOX_DEFAULT
@@ -899,7 +902,7 @@ SE_EventScript_MagnetTrainSaffron::
 	playse SE_DOOR
 	fadescreen FADE_TO_BLACK
 	setvar VAR_SE_TRAIN_RIDE, 3
-	warpsilent MAP_SAFFRON_CITY_MAGNET_TRAIN_STATION, 149, 5
+	warpsilent MAP_SAFFRON_CITY_MAGNET_TRAIN_STATION, 138, 5
 	waitstate
 	release
 	end
@@ -923,11 +926,11 @@ SE_EventScript_MagnetTrainNo::
 	end
 
 SE_Text_MagnetTrainClosed:
-	.string "The MAGNET TRAIN to SAFFRON CITY\n"
-	.string "in KANTO is reserved for the\l"
-	.string "POKéMON LEAGUE CHAMPION.\p"
-	.string "Please come back once you've\n"
-	.string "beaten the LEAGUE.$"
+	.string "Sorry, you need a PASS to ride\n"
+	.string "the MAGNET TRAIN.\p"
+	.string "PROF. ELM in NEW BARK TOWN gives\n"
+	.string "one to TRAINERS who beat the\l"
+	.string "JOHTO LEAGUE.$"
 
 SE_Text_MagnetTrainToSaffron:
 	.string "Welcome to the MAGNET TRAIN!\p"
@@ -1867,19 +1870,20 @@ SE_Text_LeagueClosedToday:
 	.string "Please come back tomorrow!$"
 
 @ ---------------------------------------------------------------------------
-@ Magnet Train ride: the train leaves one station along the track, then
-@ arrives at the other one (VAR_SE_TRAIN_RIDE: 1 leave Goldenrod,
-@ 2 reach Saffron, 3 leave Saffron, 4 reach Goldenrod)
+@ Magnet Train ride on the track outside the stations (VAR_SE_TRAIN_RIDE: 1 leave Goldenrod,
+@ 2 reach Saffron, 3 leave Saffron, 4 reach Goldenrod). The train is two cars, the hidden
+@ player rides between them so the camera shows the whole train, and the screen fades
+@ while it is moving; SE_DoTrainRideWarp starts the arrival while the next map fades in.
 SE_GoldenrodStation_OnTransition:
 	call_if_ne VAR_SE_TRAIN_RIDE, 4, SE_EventScript_HideArrivingTrain
 	call_if_eq VAR_SE_TRAIN_RIDE, 4, SE_EventScript_HideParkedTrain
-	call_if_ne VAR_SE_TRAIN_RIDE, 0, SE_EventScript_TrainRideMusic
+	call_if_eq VAR_SE_TRAIN_RIDE, 1, SE_EventScript_TrainRideMusic
 	end
 
 SE_SaffronStation_OnTransition:
 	call_if_ne VAR_SE_TRAIN_RIDE, 2, SE_EventScript_HideArrivingTrain
 	call_if_eq VAR_SE_TRAIN_RIDE, 2, SE_EventScript_HideParkedTrain
-	call_if_ne VAR_SE_TRAIN_RIDE, 0, SE_EventScript_TrainRideMusic
+	call_if_eq VAR_SE_TRAIN_RIDE, 3, SE_EventScript_TrainRideMusic
 	end
 
 SE_EventScript_HideArrivingTrain::
@@ -1910,11 +1914,9 @@ SE_EventScript_TrainHidePlayer::
 
 SE_GoldenrodStation_OnFrame:
 	map_script_2 VAR_SE_TRAIN_RIDE, 1, SE_EventScript_TrainLeaveGoldenrod
-	map_script_2 VAR_SE_TRAIN_RIDE, 4, SE_EventScript_TrainReachGoldenrod
 	.2byte 0
 
 SE_SaffronStation_OnFrame:
-	map_script_2 VAR_SE_TRAIN_RIDE, 2, SE_EventScript_TrainReachSaffron
 	map_script_2 VAR_SE_TRAIN_RIDE, 3, SE_EventScript_TrainLeaveSaffron
 	.2byte 0
 
@@ -1923,12 +1925,14 @@ SE_EventScript_TrainLeaveGoldenrod::
 	hidefollower
 	hideplayer
 	delay 30
+	applymovement LOCALID_GOLDENROD_TRAIN_REAR, SE_Movement_TrainRight
 	applymovement LOCALID_GOLDENROD_CITY_TRAIN_STATION_TRAIN, SE_Movement_TrainRight
-	applymovement OBJ_EVENT_ID_PLAYER, SE_Movement_TrainRight
-	waitmovement 0
+	applymovement LOCALID_PLAYER, SE_Movement_TrainRight
+	delay 150
+	fadescreenspeed FADE_TO_BLACK, 1
 	setvar VAR_SE_TRAIN_RIDE, 2
-	fadescreen FADE_TO_BLACK
-	warpsilent MAP_SAFFRON_CITY_MAGNET_TRAIN_STATION, 115, 5
+	setwarp MAP_SAFFRON_CITY_MAGNET_TRAIN_STATION, 110, 5
+	special SE_DoTrainRideWarp
 	waitstate
 	releaseall
 	end
@@ -1937,8 +1941,9 @@ SE_EventScript_TrainReachSaffron::
 	lockall
 	hidefollower
 	hideplayer
+	applymovement LOCALID_SAFFRON_TRAIN_ARRIVING_REAR, SE_Movement_TrainRightStop
 	applymovement LOCALID_SAFFRON_TRAIN_ARRIVING, SE_Movement_TrainRightStop
-	applymovement OBJ_EVENT_ID_PLAYER, SE_Movement_TrainRightStop
+	applymovement LOCALID_PLAYER, SE_Movement_TrainRightStop
 	waitmovement 0
 	playse SE_TRUCK_STOP
 	delay 40
@@ -1954,12 +1959,14 @@ SE_EventScript_TrainLeaveSaffron::
 	hidefollower
 	hideplayer
 	delay 30
+	applymovement LOCALID_SAFFRON_TRAIN_REAR, SE_Movement_TrainLeft
 	applymovement LOCALID_SAFFRON_TRAIN, SE_Movement_TrainLeft
-	applymovement OBJ_EVENT_ID_PLAYER, SE_Movement_TrainLeft
-	waitmovement 0
+	applymovement LOCALID_PLAYER, SE_Movement_TrainLeft
+	delay 150
+	fadescreenspeed FADE_TO_BLACK, 1
 	setvar VAR_SE_TRAIN_RIDE, 4
-	fadescreen FADE_TO_BLACK
-	warpsilent MAP_GOLDENROD_CITY_TRAIN_STATION_HNS, 43, 5
+	setwarp MAP_GOLDENROD_CITY_TRAIN_STATION_HNS, 45, 5
+	special SE_DoTrainRideWarp
 	waitstate
 	releaseall
 	end
@@ -1968,8 +1975,9 @@ SE_EventScript_TrainReachGoldenrod::
 	lockall
 	hidefollower
 	hideplayer
+	applymovement LOCALID_GOLDENROD_TRAIN_ARRIVING_REAR, SE_Movement_TrainLeftStop
 	applymovement LOCALID_GOLDENROD_TRAIN_ARRIVING, SE_Movement_TrainLeftStop
-	applymovement OBJ_EVENT_ID_PLAYER, SE_Movement_TrainLeftStop
+	applymovement LOCALID_PLAYER, SE_Movement_TrainLeftStop
 	waitmovement 0
 	playse SE_TRUCK_STOP
 	delay 40
@@ -1987,7 +1995,7 @@ SE_Movement_TrainRight:
 	walk_fast_right
 	walk_fast_right
 	walk_fast_right
-	.rept 26
+	.rept 60
 	walk_faster_right
 	.endr
 	step_end
@@ -2011,7 +2019,7 @@ SE_Movement_TrainLeft:
 	walk_fast_left
 	walk_fast_left
 	walk_fast_left
-	.rept 26
+	.rept 60
 	walk_faster_left
 	.endr
 	step_end

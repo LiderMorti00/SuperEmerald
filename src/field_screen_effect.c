@@ -541,6 +541,36 @@ void DoWarp(void)
     CreateTask(Task_WarpAndLoadMap, 10);
 }
 
+// Super Emerald: Magnet Train ride. The screen is already black and the train music keeps playing;
+// the arriving train starts moving while the next map fades in, so the ride looks continuous.
+static void FieldCB_SE_TrainRide(void)
+{
+    LockPlayerFieldControls();
+    FadeInFromBlack();
+    if (VarGet(VAR_SE_TRAIN_RIDE) == 2)
+        ScriptContext_SetupScript(SE_EventScript_TrainReachSaffron);
+    else
+        ScriptContext_SetupScript(SE_EventScript_TrainReachGoldenrod);
+}
+
+static void Task_SE_TrainRideWarp(u8 taskId)
+{
+    if (!PaletteFadeActive())
+    {
+        WarpIntoMap();
+        SetMainCallback2(CB2_LoadMap);
+        DestroyTask(taskId);
+    }
+}
+
+void SE_DoTrainRideWarp(void)
+{
+    LockPlayerFieldControls();
+    FreezeObjectEvents();
+    gFieldCallback = FieldCB_SE_TrainRide;
+    CreateTask(Task_SE_TrainRideWarp, 10);
+}
+
 void DoDiveWarp(void)
 {
     LockPlayerFieldControls();

@@ -23,8 +23,33 @@ NewBarkTown_Lab_Text_ShowTogepi1::
 	.string "ELM: {PLAYER}, you look great!$"
 
 SE_J_NewBarkTown_Lab_hns_NewBarkTown_Lab_EventScript_Elm::
-	msgbox NewBarkTown_Lab_Text_ShowTogepi1, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_unset FLAG_SE_JOHTO_LEAGUE_CLEARED, NewBarkTown_Lab_EventScript_ElmTalk
+	checkitem ITEM_PASS
+	goto_if_eq VAR_RESULT, TRUE, NewBarkTown_Lab_EventScript_ElmTalk
+	msgbox NewBarkTown_Lab_Text_ElmPass, MSGBOX_DEFAULT
+	giveitem ITEM_PASS
+	msgbox NewBarkTown_Lab_Text_ElmPassAfter, MSGBOX_DEFAULT
+	release
 	end
+
+NewBarkTown_Lab_EventScript_ElmTalk::
+	msgbox NewBarkTown_Lab_Text_ShowTogepi1, MSGBOX_DEFAULT
+	release
+	end
+
+NewBarkTown_Lab_Text_ElmPass:
+	.string "ELM: {PLAYER}! You beat the JOHTO\n"
+	.string "LEAGUE? Congratulations!\p"
+	.string "Here, this is a little present.\n"
+	.string "It's a PASS for the MAGNET TRAIN.$"
+
+NewBarkTown_Lab_Text_ElmPassAfter:
+	.string "ELM: The MAGNET TRAIN leaves from\n"
+	.string "GOLDENROD CITY and goes all the way\l"
+	.string "to SAFFRON CITY in KANTO.\p"
+	.string "Go and see what POKéMON live there!$"
 
 NewBarkTown_Lab_Text_AideSave::
 	.string "Don't forget to save your game\n"

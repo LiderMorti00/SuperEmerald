@@ -16276,6 +16276,23 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_LuxuryBall,
         .iconPalette = gItemIconPalette_LuxuryBall,
     },
+
+    [ITEM_PASS] =
+    {
+        .name = ITEM_NAME("Pass"),
+        .pluralName = ITEM_PLURAL_NAME("Passes"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A ticket for the\n"
+            "Magnet Train that\n"
+            "links two regions."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_RainbowPass,
+        .iconPalette = gItemIconPalette_RainbowPass,
+    },
 };
 
 #undef ITEM_NAME
