@@ -168,6 +168,25 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 2,
+      "elevation": 3,
+      "var": "VAR_TEMP_9",
+      "var_value": "0",
+      "script": "SE_EventScript_SinnohLeagueDoor"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 2,
+      "elevation": 3,
+      "var": "VAR_TEMP_9",
+      "var_value": "0",
+      "script": "SE_EventScript_SinnohLeagueDoor"
+    }
+  ],
   "bg_events": []
 }

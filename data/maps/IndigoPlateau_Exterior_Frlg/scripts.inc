@@ -4,6 +4,7 @@ IndigoPlateau_Exterior_Frlg_MapScripts::
 
 IndigoPlateau_Exterior_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_INDIGO_PLATEAU_EXTERIOR
+	call_if_unset FLAG_SE_KANTO_CHAMPION, SE_EventScript_HideRival
 	end
 
 @ Super Emerald: HGSS look (tools/sfr/hns/import_kanto_hgss.py)

@@ -456,3 +456,40 @@ void SinnohRestaurantVariant(void)
 {
     gSpecialVar_Result = VarGet(VAR_DAYS) % 3;
 }
+
+// Super Emerald: four Gym Leaders of Kanto and Johto wait at the Saffron Dojo, a different
+// group each day. VAR_TEMP_4-7 get the leader numbers (0-7 Kanto, 8-15 Johto) and
+// VAR_OBJ_GFX_ID_0-3 their sprites; FLAG_TEMP_11-14 hide the slots before Red is beaten.
+static const u16 sSEDojoLeaderGfx[16] =
+{
+    OBJ_EVENT_GFX_BROCK, OBJ_EVENT_GFX_MISTY, OBJ_EVENT_GFX_LT_SURGE, OBJ_EVENT_GFX_ERIKA,
+    OBJ_EVENT_GFX_KOGA, OBJ_EVENT_GFX_SABRINA, OBJ_EVENT_GFX_BLAINE, OBJ_EVENT_GFX_BLUE,
+    OBJ_EVENT_GFX_FALKNER_HNS, OBJ_EVENT_GFX_BUGSY_HNS, OBJ_EVENT_GFX_WHITNEY_HNS, OBJ_EVENT_GFX_MORTY_HNS,
+    OBJ_EVENT_GFX_CHUCK_HNS, OBJ_EVENT_GFX_JASMINE_HNS, OBJ_EVENT_GFX_PRYCE_HNS, OBJ_EVENT_GFX_CLAIR_HNS,
+};
+
+void SE_DojoSelectLeaders(void)
+{
+    u32 seed = gSaveBlock1Ptr->dailySeed;
+    u8 order[16];
+    u32 i, j, tmp;
+
+    for (i = 0; i < 16; i++)
+        order[i] = i;
+    // shuffle with the daily seed, so the group only changes from one day to the next
+    for (i = 15; i > 0; i--)
+    {
+        seed = seed * 1103515245 + 12345;
+        j = (seed >> 16) % (i + 1);
+        tmp = order[i];
+        order[i] = order[j];
+        order[j] = tmp;
+    }
+    for (i = 0; i < 4; i++)
+    {
+        VarSet(VAR_TEMP_4 + i, order[i]);
+        VarSet(VAR_OBJ_GFX_ID_0 + i, sSEDojoLeaderGfx[order[i]]);
+        if (!FlagGet(FLAG_SE_KANTO_CHAMPION))
+            FlagSet(FLAG_TEMP_11 + i);
+    }
+}

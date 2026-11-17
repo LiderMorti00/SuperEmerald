@@ -3,7 +3,6 @@ CeladonCity_Gym_Frlg_MapScripts::
 
 CeladonCity_Gym_EventScript_Erika::
 	famechecker FAMECHECKER_ERIKA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
-	goto_if_set FLAG_SE_KANTO_CHAMPION, SFR_EventScript_ErikaRematch @ Super Emerald: after beating Red
 	trainerbattle_single TRAINER_LEADER_ERIKA, CeladonCity_Gym_Text_ErikaIntro, CeladonCity_Gym_Text_ErikaDefeat, CeladonCity_Gym_EventScript_DefeatedErika, NO_MUSIC
 	goto_if_unset FLAG_GOT_TM19_FROM_ERIKA, CeladonCity_Gym_EventScript_GiveTM19
 	famechecker FAMECHECKER_ERIKA, 4

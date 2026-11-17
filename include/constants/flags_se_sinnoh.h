@@ -41,4 +41,27 @@
 #define FLAG_SE_VISITED_RESORT_AREA_SINNOH       0x3231
 #define FLAG_SN_BG_WELCOMED                      0x3232 // the Battleground expert has welcomed the player
 
+// Daily rematches: Gym Leaders of Kanto and Johto at the Saffron Dojo, and the two Leagues.
+// Cleared every day in DoDailyEvents (src/clock.c).
+#define FLAG_DAILY_SE_DOJO_BROCK                 0x3240
+#define FLAG_DAILY_SE_DOJO_MISTY                 0x3241
+#define FLAG_DAILY_SE_DOJO_LT_SURGE              0x3242
+#define FLAG_DAILY_SE_DOJO_ERIKA                 0x3243
+#define FLAG_DAILY_SE_DOJO_KOGA                  0x3244
+#define FLAG_DAILY_SE_DOJO_SABRINA               0x3245
+#define FLAG_DAILY_SE_DOJO_BLAINE                0x3246
+#define FLAG_DAILY_SE_DOJO_BLUE                  0x3247
+#define FLAG_DAILY_SE_DOJO_FALKNER               0x3248
+#define FLAG_DAILY_SE_DOJO_BUGSY                 0x3249
+#define FLAG_DAILY_SE_DOJO_WHITNEY               0x324A
+#define FLAG_DAILY_SE_DOJO_MORTY                 0x324B
+#define FLAG_DAILY_SE_DOJO_CHUCK                 0x324C
+#define FLAG_DAILY_SE_DOJO_JASMINE               0x324D
+#define FLAG_DAILY_SE_DOJO_PRYCE                 0x324E
+#define FLAG_DAILY_SE_DOJO_CLAIR                 0x324F
+#define FLAG_DAILY_SE_KANTO_LEAGUE               0x3250
+#define FLAG_DAILY_SE_SINNOH_LEAGUE              0x3251
+#define FLAG_DAILY_SE_RIVAL_ORO                  0x3252
+#define FLAG_DAILY_SE_RIVAL_LUCAS                0x3253
+
 #endif // GUARD_CONSTANTS_FLAGS_SE_SINNOH_H

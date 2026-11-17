@@ -435,40 +435,40 @@
       "map": "MAP_MT_SILVER_OUTSIDE_HNS",
       "x": 25,
       "y": 15,
-      "respawn_map": "",
-      "respawn_npc": ""
+      "respawn_map": "MAP_MT_SILVER_POKEMON_CENTER_HNS",
+      "respawn_npc": "LOCALID_NURSE"
     },
     {
       "id": "HEAL_LOCATION_LAKE_OF_RAGE_HNS",
       "map": "MAP_LAKE_OF_RAGE_HNS",
       "x": 31,
       "y": 43,
-      "respawn_map": "",
-      "respawn_npc": ""
+      "respawn_map": "MAP_MAHOGANY_TOWN_POKEMON_CENTER_HNS",
+      "respawn_npc": "LOCALID_NURSE"
     },
     {
       "id": "HEAL_LOCATION_SAFARI_ZONE_GATE_HNS",
       "map": "MAP_SAFARI_ZONE_GATE_HNS",
       "x": 11,
       "y": 16,
-      "respawn_map": "",
-      "respawn_npc": ""
+      "respawn_map": "MAP_SAFARI_ZONE_GATE_POKEMON_CENTER_HNS",
+      "respawn_npc": "LOCALID_NURSE"
     },
     {
       "id": "HEAL_LOCATION_ROUTE_32_HNS",
       "map": "MAP_ROUTE32_HNS",
       "x": 25,
       "y": 85,
-      "respawn_map": "",
-      "respawn_npc": ""
+      "respawn_map": "MAP_ROUTE32_POKEMON_CENTER_HNS",
+      "respawn_npc": "LOCALID_NURSE"
     },
     {
       "id": "HEAL_LOCATION_ROUTE26NORTH_HNS",
       "map": "MAP_ROUTE26NORTH_HNS",
       "x": 12,
       "y": 6,
-      "respawn_map": "",
-      "respawn_npc": ""
+      "respawn_map": "MAP_INDIGO_PLATEAU_POKEMON_CENTER_1F",
+      "respawn_npc": "LOCALID_INDIGO_LEAGUE_NURSE"
     },
     {
       "id": "HEAL_LOCATION_SANDGEM_TOWN_SINNOH",

@@ -1,0 +1,201 @@
+=== TRAINER_SE_ORO_REMATCH_FERALIGATR ===
+Name: ORO
+Class: Rival
+Pic: Gold
+Gender: Male
+Music: Male
+Items: Full Restore / Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Ambipom @ Silk Scarf
+Level: 78
+Ability: Technician
+Jolly Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Fake Out
+- Double Hit
+- U-turn
+- Knock Off
+
+Sudowoodo @ Rocky Helmet
+Level: 78
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Head Smash
+- Wood Hammer
+- Sucker Punch
+- Earthquake
+
+Ursaring @ Flame Orb
+Level: 78
+Ability: Guts
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Facade
+- Close Combat
+- Crunch
+- Swords Dance
+
+Togekiss @ Leftovers
+Level: 79
+Ability: Serene Grace
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Air Slash
+- Dazzling Gleam
+- Aura Sphere
+- Roost
+
+Raichu @ Life Orb
+Level: 79
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Grass Knot
+- Focus Blast
+- Nasty Plot
+
+Feraligatr @ Life Orb
+Level: 82
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dragon Dance
+- Liquidation
+- Crunch
+- Ice Punch
+
+=== TRAINER_SE_ORO_REMATCH_MEGANIUM ===
+Name: ORO
+Class: Rival
+Pic: Gold
+Gender: Male
+Music: Male
+Items: Full Restore / Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Ambipom @ Silk Scarf
+Level: 78
+Ability: Technician
+Jolly Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Fake Out
+- Double Hit
+- U-turn
+- Knock Off
+
+Sudowoodo @ Rocky Helmet
+Level: 78
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Head Smash
+- Wood Hammer
+- Sucker Punch
+- Earthquake
+
+Politoed @ Damp Rock
+Level: 78
+Ability: Drizzle
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hydro Pump
+- Ice Beam
+- Hypnosis
+- Rain Dance
+
+Togekiss @ Leftovers
+Level: 79
+Ability: Serene Grace
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Air Slash
+- Dazzling Gleam
+- Aura Sphere
+- Roost
+
+Raichu @ Life Orb
+Level: 79
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Grass Knot
+- Focus Blast
+- Nasty Plot
+
+Meganium @ Leftovers
+Level: 82
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Petal Blizzard
+- Earthquake
+- Swords Dance
+- Synthesis
+
+=== TRAINER_SE_ORO_REMATCH_TYPHLOSION ===
+Name: ORO
+Class: Rival
+Pic: Gold
+Gender: Male
+Music: Male
+Items: Full Restore / Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Ambipom @ Silk Scarf
+Level: 78
+Ability: Technician
+Jolly Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Fake Out
+- Double Hit
+- U-turn
+- Knock Off
+
+Sudowoodo @ Rocky Helmet
+Level: 78
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Head Smash
+- Wood Hammer
+- Sucker Punch
+- Earthquake
+
+Politoed @ Damp Rock
+Level: 78
+Ability: Drizzle
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hydro Pump
+- Ice Beam
+- Hypnosis
+- Rain Dance
+
+Togekiss @ Leftovers
+Level: 79
+Ability: Serene Grace
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Air Slash
+- Dazzling Gleam
+- Aura Sphere
+- Roost
+
+Raichu @ Life Orb
+Level: 79
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Grass Knot
+- Focus Blast
+- Nasty Plot
+
+Typhlosion @ Choice Specs
+Level: 82
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Eruption
+- Fire Blast
+- Focus Blast
+- Shadow Ball
+

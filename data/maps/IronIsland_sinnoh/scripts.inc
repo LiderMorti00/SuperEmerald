@@ -9,7 +9,7 @@ IronIsland_EventScript_SailorBack::
 	goto_if_eq VAR_RESULT, NO, IronIsland_EventScript_SailorBackNo
 	msgbox CanalaveCity_Text_SailorAllAboard, MSGBOX_DEFAULT
 	closemessage
-	warp MAP_CANALAVE_CITY_SINNOH, 15, 47
+	warp MAP_CANALAVE_CITY_SINNOH, 15, 51
 	waitstate
 	release
 	end

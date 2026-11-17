@@ -22,6 +22,11 @@ def main(src):
                              {'Items': 'Full Restore / Full Restore / Full Restore'})
         body = '\n\n'.join(k.mon_lines(p, k.leader2, valid_moves, valid_items) for p in hg[idx]['party'])
         se = k.set_block(se, 'TRAINER_SE_LEADER_%s_REMATCH' % name, header, body)
+    # Oro, daily rematch at Indigo Plateau after the Kanto League (hand-made teams)
+    for blk in re.split(r'\n(?==== )', open('tools/sfr/rival_rematch_oro.party').read().strip()):
+        c = re.match(r'=== (\w+) ===', blk).group(1)
+        head, body = blk.split('\n\n', 1)
+        se = k.set_block(se, c, head.split('\n', 1)[1], body)
     open(k.SE_JOHTO_PARTY, 'w').write(se.rstrip('\n') + '\n')
     print('Johto Gym Leader rematches written')
 

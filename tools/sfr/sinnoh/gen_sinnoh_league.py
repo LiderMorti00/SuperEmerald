@@ -94,6 +94,12 @@ ids.append('TRAINER_SE_CHAMPION_CYNTHIA_REMATCH')
 out.append(head('TRAINER_SE_CHAMPION_CYNTHIA_REMATCH', 'CYNTHIA', 'Champion', 'TRAINER_PIC_SINNOH_CHAMPION_CYNTHIA', 'Female', 'Female',
                 ['Full Restore'] * 4) + '\n\n' + mons(BLOCKS['TRAINER_ROBERT_1'], 8))
 
+# Lucas, daily rematch at the Survival Area after the Sinnoh League (hand-made teams)
+import re as _re
+for blk in _re.split(r'\n(?==== )', open(ours('tools/sfr/rival_rematch_lucas.party')).read().strip()):
+    ids.append(_re.match(r'=== (\w+) ===', blk).group(1))
+    out.append(blk.rstrip())
+
 write(ours('src/data/trainers_se_sinnoh.party'), '\n\n'.join(out) + '\n')
 n_import = int(re.search(r'TRAINERS_COUNT_SINNOH_IMPORT (\d+)', read(ours('include/constants/opponents_sinnoh_list.h'))).group(1))
 start = 2144 + n_import

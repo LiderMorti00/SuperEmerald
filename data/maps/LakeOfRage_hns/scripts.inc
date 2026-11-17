@@ -1,5 +1,25 @@
 LakeOfRage_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, LakeOfRage_OnTransition
 	.byte 0
+
+@ Super Emerald: the lake has tides, like Shoal Cave (high from 9 to 15 and from 21 to 3)
+LakeOfRage_OnTransition::
+	special UpdateShoalTideFlag
+	goto_if_set FLAG_SYS_SHOAL_TIDE, LakeOfRage_EventScript_SetHighTide
+	setweather WEATHER_NONE
+	setmaplayoutindex LAYOUT_LAKE_OF_RAGE_LOW_TIDE_HNS
+	end
+
+LakeOfRage_EventScript_SetHighTide::
+	setmaplayoutindex LAYOUT_LAKE_OF_RAGE_HNS
+	random 2
+	goto_if_eq VAR_RESULT, 1, LakeOfRage_EventScript_ThunderStorm
+	setweather WEATHER_NONE
+	end
+
+LakeOfRage_EventScript_ThunderStorm::
+	setweather WEATHER_RAIN_THUNDERSTORM
+	end
 
 
 LakeOfRage_EventScript_Lass::

@@ -1,4 +1,5 @@
 SaffronCity_Dojo_Frlg_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_SaffronDojo_OnTransition
 	.byte 0
 
 SaffronCity_Dojo_EventScript_TriggerMasterBattleLeft::

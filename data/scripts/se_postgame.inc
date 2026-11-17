@@ -601,10 +601,10 @@ SE_EventScript_KantoWorldState::
 	setflag FLAG_HIDE_FOUR_ISLAND_RIVAL
 	setflag FLAG_HIDE_CINNABAR_BILL
 	setflag FLAG_HIDE_CINNABAR_POKECENTER_BILL
-	@ Bill lives in Goldenrod now (HGSS): his sea cottage is empty
+	@ Bill waits at his sea cottage with the ticket to the Sevii Islands
 	setflag FLAG_HELPED_BILL_IN_SEA_COTTAGE
 	setflag FLAG_HIDE_BILL_CLEFAIRY
-	setflag FLAG_HIDE_BILL_HUMAN_SEA_COTTAGE
+	clearflag FLAG_HIDE_BILL_HUMAN_SEA_COTTAGE
 	setflag FLAG_HIDE_FAME_CHECKER_ERIKA_JOURNALS
 	setflag FLAG_HIDE_FAME_CHECKER_KOGA_JOURNAL
 	setflag FLAG_HIDE_FAME_CHECKER_LT_SURGE_JOURNAL
@@ -852,8 +852,7 @@ SE_EventScript_OakReceivedKantoStarter::
 	return
 
 SE_EventScript_OakKantoStarterEnd::
-	msgbox SE_Text_VermilionOakRainbowPass, MSGBOX_DEFAULT
-	giveitem ITEM_RAINBOW_PASS
+	msgbox SE_Text_VermilionOakBill, MSGBOX_DEFAULT
 	msgbox SE_Text_VermilionOakGoodbye, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_VERMILION_SE_OAK, SE_Movement_VermilionOakLeave
@@ -900,12 +899,13 @@ SE_Text_ReceivedKantoStarter:
 	.string "{PLAYER} received the {STR_VAR_1}\n"
 	.string "from PROF. OAK!$"
 
-SE_Text_VermilionOakRainbowPass:
-	.string "OAK: Oh, and take this as well.\p"
-	.string "It's a RAINBOW PASS. Show it to the\n"
-	.string "SEAGALLOP crew here in VERMILION.\p"
-	.string "The ferry will take you to all of\n"
-	.string "the SEVII ISLANDS.$"
+SE_Text_VermilionOakBill:
+	.string "OAK: Oh, and my friend BILL asked\n"
+	.string "about you.\p"
+	.string "He's staying at his SEA COTTAGE on\n"
+	.string "CERULEAN CAPE, north of CERULEAN.\p"
+	.string "He goes to the SEVII ISLANDS all the\n"
+	.string "time. Why don't you pay him a visit?$"
 
 SE_Text_VermilionOakGoodbye:
 	.string "OAK: My lab is in PALLET TOWN.\n"
@@ -913,3 +913,390 @@ SE_Text_VermilionOakGoodbye:
 	.string "And if you beat the LEAGUE again\n"
 	.string "with all eight KANTO BADGES, I'll\l"
 	.string "have something special for you.$"
+
+@ ---------------------------------------------------------------------------
+@ Bill's Sea Cottage on Cerulean Cape: the Rainbow Pass to the Sevii Islands
+SE_EventScript_SeaCottageBill::
+	lock
+	faceplayer
+	checkitem ITEM_RAINBOW_PASS
+	goto_if_eq VAR_RESULT, TRUE, SE_EventScript_SeaCottageBillAfter
+	msgbox SE_Text_SeaCottageBillPass, MSGBOX_DEFAULT
+	giveitem ITEM_RAINBOW_PASS
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_SeaCottageBillBagFull
+	msgbox SE_Text_SeaCottageBillAfterPass, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_SeaCottageBillBagFull::
+	msgbox gText_TooBadBagIsFull, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_SeaCottageBillAfter::
+	msgbox SE_Text_SeaCottageBillAfterPass, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_SeaCottageBillPass:
+	.string "BILL: Hiya! You must be {PLAYER}!\n"
+	.string "PROF. OAK told me all about you.\p"
+	.string "I just got back from the SEVII\n"
+	.string "ISLANDS. My friend CELIO lives on\l"
+	.string "ONE ISLAND.\p"
+	.string "You should see them for yourself!\n"
+	.string "Here, take this.$"
+
+SE_Text_SeaCottageBillAfterPass:
+	.string "BILL: That RAINBOW PASS works on\n"
+	.string "the SEAGALLOP ferries.\p"
+	.string "Show it to the crew at VERMILION's\n"
+	.string "port and they'll take you to every\l"
+	.string "one of the SEVII ISLANDS!$"
+
+@ ---------------------------------------------------------------------------
+@ Saffron City Dojo: four Gym Leaders of Kanto and Johto come to train each day
+@ (after beating Red). Each one can be battled once a day, with the rematch team.
+SE_SaffronDojo_OnTransition::
+	special SE_DojoSelectLeaders
+	end
+
+SE_EventScript_DojoSlot0::
+	lock
+	faceplayer
+	copyvar VAR_0x8008, VAR_TEMP_4
+	goto SE_EventScript_DojoLeader
+
+SE_EventScript_DojoSlot1::
+	lock
+	faceplayer
+	copyvar VAR_0x8008, VAR_TEMP_5
+	goto SE_EventScript_DojoLeader
+
+SE_EventScript_DojoSlot2::
+	lock
+	faceplayer
+	copyvar VAR_0x8008, VAR_TEMP_6
+	goto SE_EventScript_DojoLeader
+
+SE_EventScript_DojoSlot3::
+	lock
+	faceplayer
+	copyvar VAR_0x8008, VAR_TEMP_7
+	goto SE_EventScript_DojoLeader
+
+SE_EventScript_DojoLeader::
+	switch VAR_0x8008
+	case 0, SE_EventScript_DojoBrock
+	case 1, SE_EventScript_DojoMisty
+	case 2, SE_EventScript_DojoLtSurge
+	case 3, SE_EventScript_DojoErika
+	case 4, SE_EventScript_DojoKoga
+	case 5, SE_EventScript_DojoSabrina
+	case 6, SE_EventScript_DojoBlaine
+	case 7, SE_EventScript_DojoBlue
+	case 8, SE_EventScript_DojoFalkner
+	case 9, SE_EventScript_DojoBugsy
+	case 10, SE_EventScript_DojoWhitney
+	case 11, SE_EventScript_DojoMorty
+	case 12, SE_EventScript_DojoChuck
+	case 13, SE_EventScript_DojoJasmine
+	case 14, SE_EventScript_DojoPryce
+	case 15, SE_EventScript_DojoClair
+	release
+	end
+
+SE_EventScript_DojoBrock::
+	goto_if_set FLAG_DAILY_SE_DOJO_BROCK, SE_EventScript_DojoDoneToday
+	msgbox SFR_Text_BrockRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SFR_BROCK_REMATCH
+	trainerbattle_no_intro TRAINER_SFR_BROCK_REMATCH, SFR_Text_BrockRematchDefeat
+	setflag FLAG_DAILY_SE_DOJO_BROCK
+	msgbox SE_Text_DojoAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_DojoMisty::
+	goto_if_set FLAG_DAILY_SE_DOJO_MISTY, SE_EventScript_DojoDoneToday
+	msgbox SFR_Text_MistyRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SFR_MISTY_REMATCH
+	trainerbattle_no_intro TRAINER_SFR_MISTY_REMATCH, SFR_Text_MistyRematchDefeat
+	setflag FLAG_DAILY_SE_DOJO_MISTY
+	msgbox SE_Text_DojoAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_DojoLtSurge::
+	goto_if_set FLAG_DAILY_SE_DOJO_LT_SURGE, SE_EventScript_DojoDoneToday
+	msgbox SFR_Text_LtSurgeRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SFR_LT_SURGE_REMATCH
+	trainerbattle_no_intro TRAINER_SFR_LT_SURGE_REMATCH, SFR_Text_LtSurgeRematchDefeat
+	setflag FLAG_DAILY_SE_DOJO_LT_SURGE
+	msgbox SE_Text_DojoAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_DojoErika::
+	goto_if_set FLAG_DAILY_SE_DOJO_ERIKA, SE_EventScript_DojoDoneToday
+	msgbox SFR_Text_ErikaRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SFR_ERIKA_REMATCH
+	trainerbattle_no_intro TRAINER_SFR_ERIKA_REMATCH, SFR_Text_ErikaRematchDefeat
+	setflag FLAG_DAILY_SE_DOJO_ERIKA
+	msgbox SE_Text_DojoAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_DojoKoga::
+	goto_if_set FLAG_DAILY_SE_DOJO_KOGA, SE_EventScript_DojoDoneToday
+	msgbox SFR_Text_KogaRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SFR_KOGA_REMATCH
+	trainerbattle_no_intro TRAINER_SFR_KOGA_REMATCH, SFR_Text_KogaRematchDefeat
+	setflag FLAG_DAILY_SE_DOJO_KOGA
+	msgbox SE_Text_DojoAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_DojoSabrina::
+	goto_if_set FLAG_DAILY_SE_DOJO_SABRINA, SE_EventScript_DojoDoneToday
+	msgbox SFR_Text_SabrinaRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SFR_SABRINA_REMATCH
+	trainerbattle_no_intro TRAINER_SFR_SABRINA_REMATCH, SFR_Text_SabrinaRematchDefeat
+	setflag FLAG_DAILY_SE_DOJO_SABRINA
+	msgbox SE_Text_DojoAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_DojoBlaine::
+	goto_if_set FLAG_DAILY_SE_DOJO_BLAINE, SE_EventScript_DojoDoneToday
+	msgbox SFR_Text_BlaineRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SFR_BLAINE_REMATCH
+	trainerbattle_no_intro TRAINER_SFR_BLAINE_REMATCH, SFR_Text_BlaineRematchDefeat
+	setflag FLAG_DAILY_SE_DOJO_BLAINE
+	msgbox SE_Text_DojoAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_DojoBlue::
+	goto_if_set FLAG_DAILY_SE_DOJO_BLUE, SE_EventScript_DojoDoneToday
+	msgbox SE_Text_BlueRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_BLUE_REMATCH
+	trainerbattle_no_intro TRAINER_SE_BLUE_REMATCH, SE_Text_BlueRematchDefeat
+	setflag FLAG_DAILY_SE_DOJO_BLUE
+	msgbox SE_Text_DojoAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_DojoFalkner::
+	goto_if_set FLAG_DAILY_SE_DOJO_FALKNER, SE_EventScript_DojoDoneToday
+	msgbox SE_Text_FalknerRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_FALKNER_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_FALKNER_REMATCH, SE_Text_FalknerRematchDefeat
+	setflag FLAG_DAILY_SE_DOJO_FALKNER
+	msgbox SE_Text_DojoAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_DojoBugsy::
+	goto_if_set FLAG_DAILY_SE_DOJO_BUGSY, SE_EventScript_DojoDoneToday
+	msgbox SE_Text_BugsyRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_BUGSY_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_BUGSY_REMATCH, SE_Text_BugsyRematchDefeat
+	setflag FLAG_DAILY_SE_DOJO_BUGSY
+	msgbox SE_Text_DojoAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_DojoWhitney::
+	goto_if_set FLAG_DAILY_SE_DOJO_WHITNEY, SE_EventScript_DojoDoneToday
+	msgbox SE_Text_WhitneyRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_WHITNEY_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_WHITNEY_REMATCH, SE_Text_WhitneyRematchDefeat
+	setflag FLAG_DAILY_SE_DOJO_WHITNEY
+	msgbox SE_Text_DojoAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_DojoMorty::
+	goto_if_set FLAG_DAILY_SE_DOJO_MORTY, SE_EventScript_DojoDoneToday
+	msgbox SE_Text_MortyRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_MORTY_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_MORTY_REMATCH, SE_Text_MortyRematchDefeat
+	setflag FLAG_DAILY_SE_DOJO_MORTY
+	msgbox SE_Text_DojoAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_DojoChuck::
+	goto_if_set FLAG_DAILY_SE_DOJO_CHUCK, SE_EventScript_DojoDoneToday
+	msgbox SE_Text_ChuckRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_CHUCK_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_CHUCK_REMATCH, SE_Text_ChuckRematchDefeat
+	setflag FLAG_DAILY_SE_DOJO_CHUCK
+	msgbox SE_Text_DojoAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_DojoJasmine::
+	goto_if_set FLAG_DAILY_SE_DOJO_JASMINE, SE_EventScript_DojoDoneToday
+	msgbox SE_Text_JasmineRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_JASMINE_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_JASMINE_REMATCH, SE_Text_JasmineRematchDefeat
+	setflag FLAG_DAILY_SE_DOJO_JASMINE
+	msgbox SE_Text_DojoAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_DojoPryce::
+	goto_if_set FLAG_DAILY_SE_DOJO_PRYCE, SE_EventScript_DojoDoneToday
+	msgbox SE_Text_PryceRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_PRYCE_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_PRYCE_REMATCH, SE_Text_PryceRematchDefeat
+	setflag FLAG_DAILY_SE_DOJO_PRYCE
+	msgbox SE_Text_DojoAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_DojoClair::
+	goto_if_set FLAG_DAILY_SE_DOJO_CLAIR, SE_EventScript_DojoDoneToday
+	msgbox SE_Text_ClairRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_CLAIR_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_CLAIR_REMATCH, SE_Text_ClairRematchDefeat
+	setflag FLAG_DAILY_SE_DOJO_CLAIR
+	msgbox SE_Text_DojoAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_DojoDoneToday::
+	msgbox SE_Text_DojoDoneToday, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_DojoAfter:
+	.string "What a battle! I'll keep training\n"
+	.string "here. Come back tomorrow!$"
+
+SE_Text_DojoDoneToday:
+	.string "That was a great battle today.\p"
+	.string "Let's have another one tomorrow!$"
+
+@ ---------------------------------------------------------------------------
+@ Rivals: Oro waits outside the Indigo Plateau (after the Kanto League) and Lucas at the
+@ Survival Area (after the Sinnoh League). One battle a day each.
+SE_EventScript_HideRival::
+	setflag FLAG_TEMP_11
+	return
+
+SE_EventScript_OroRematch::
+	lock
+	faceplayer
+	goto_if_set FLAG_DAILY_SE_RIVAL_ORO, SE_EventScript_OroRematchDone
+	msgbox SE_Text_OroRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SE_EventScript_OroRematchNo
+	goto_if_eq VAR_SE_JOHTO_STARTER, 2, SE_EventScript_OroRematchMeganium
+	goto_if_eq VAR_SE_JOHTO_STARTER, 3, SE_EventScript_OroRematchTyphlosion
+	cleartrainerflag TRAINER_SE_ORO_REMATCH_FERALIGATR
+	trainerbattle_no_intro TRAINER_SE_ORO_REMATCH_FERALIGATR, SE_Text_OroRematchDefeat
+	goto SE_EventScript_OroRematchWon
+
+SE_EventScript_OroRematchMeganium::
+	cleartrainerflag TRAINER_SE_ORO_REMATCH_MEGANIUM
+	trainerbattle_no_intro TRAINER_SE_ORO_REMATCH_MEGANIUM, SE_Text_OroRematchDefeat
+	goto SE_EventScript_OroRematchWon
+
+SE_EventScript_OroRematchTyphlosion::
+	cleartrainerflag TRAINER_SE_ORO_REMATCH_TYPHLOSION
+	trainerbattle_no_intro TRAINER_SE_ORO_REMATCH_TYPHLOSION, SE_Text_OroRematchDefeat
+SE_EventScript_OroRematchWon::
+	setflag FLAG_DAILY_SE_RIVAL_ORO
+SE_EventScript_OroRematchDone::
+	msgbox SE_Text_OroRematchDone, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_OroRematchNo::
+	msgbox SE_Text_OroRematchNo, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_LucasRematch::
+	lock
+	faceplayer
+	goto_if_set FLAG_DAILY_SE_RIVAL_LUCAS, SE_EventScript_LucasRematchDone
+	msgbox SE_Text_LucasRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SE_EventScript_LucasRematchNo
+	goto_if_eq VAR_SE_SINNOH_STARTER, 2, SE_EventScript_LucasRematchEmpoleon
+	goto_if_eq VAR_SE_SINNOH_STARTER, 3, SE_EventScript_LucasRematchTorterra
+	cleartrainerflag TRAINER_SE_LUCAS_REMATCH_INFERNAPE
+	trainerbattle_no_intro TRAINER_SE_LUCAS_REMATCH_INFERNAPE, SE_Text_LucasRematchDefeat
+	goto SE_EventScript_LucasRematchWon
+
+SE_EventScript_LucasRematchEmpoleon::
+	cleartrainerflag TRAINER_SE_LUCAS_REMATCH_EMPOLEON
+	trainerbattle_no_intro TRAINER_SE_LUCAS_REMATCH_EMPOLEON, SE_Text_LucasRematchDefeat
+	goto SE_EventScript_LucasRematchWon
+
+SE_EventScript_LucasRematchTorterra::
+	cleartrainerflag TRAINER_SE_LUCAS_REMATCH_TORTERRA
+	trainerbattle_no_intro TRAINER_SE_LUCAS_REMATCH_TORTERRA, SE_Text_LucasRematchDefeat
+SE_EventScript_LucasRematchWon::
+	setflag FLAG_DAILY_SE_RIVAL_LUCAS
+SE_EventScript_LucasRematchDone::
+	msgbox SE_Text_LucasRematchDone, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_LucasRematchNo::
+	msgbox SE_Text_LucasRematchNo, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_OroRematch:
+	.string "ORO: Hey, {PLAYER}! I knew you'd\n"
+	.string "show up here sooner or later.\p"
+	.string "I've been training on MT. SILVER.\n"
+	.string "My team's never been stronger!\p"
+	.string "Come on, one more battle!$"
+
+SE_Text_OroRematchDefeat:
+	.string "Argh! You're still ahead of me!$"
+
+SE_Text_OroRematchDone:
+	.string "ORO: That was awesome! I'll be here\n"
+	.string "again tomorrow. Don't keep me waiting!$"
+
+SE_Text_OroRematchNo:
+	.string "ORO: Huh? Not today? Fine, I'll be\n"
+	.string "right here!$"
+
+SE_Text_LucasRematch:
+	.string "LUCAS: {PLAYER}! I've been training\n"
+	.string "with the people at the BATTLEGROUND.\p"
+	.string "I want to see how far I've come.\n"
+	.string "Will you battle me?$"
+
+SE_Text_LucasRematchDefeat:
+	.string "You're amazing, as always!$"
+
+SE_Text_LucasRematchDone:
+	.string "LUCAS: Thanks for the battle!\n"
+	.string "Let's do it again tomorrow!$"
+
+SE_Text_LucasRematchNo:
+	.string "LUCAS: Oh, OK. I'll keep training\n"
+	.string "here for now.$"

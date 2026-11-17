@@ -185,7 +185,7 @@
 #define VAR_MOSSDEEP_SPACE_CENTER_STATE                  0x409F
 #define VAR_SLATEPORT_HARBOR_STATE                       0x40A0
 #define VAR_SE_KANTO_STATE_VERSION                       0x40A1 // Super Emerald: version of the Kanto world state applied to this save
-#define SE_KANTO_STATE_VERSION                           4      // bump when SE_EventScript_KantoWorldState changes
+#define SE_KANTO_STATE_VERSION                           5      // bump when SE_EventScript_KantoWorldState changes
 #define VAR_SEAFLOOR_CAVERN_STATE                        0x40A2
 #define VAR_CABLE_CAR_STATION_STATE                      0x40A3
 #define VAR_SAFARI_WARP_STATE                            0x40A4 // see include/constants/safaris.h
@@ -399,6 +399,8 @@
 #define VAR_BUG_CONTEST_STATE         0x5004 // Bug-Catching Contest (Heart & Soul scripts)
 #define VAR_BLACKTHORN_GYM_STATE      0x5005 // Blackthorn Gym bridges built: 0-4 (Heart & Soul scripts)
 #define VAR_SE_ELEVATOR               0x5006 // 1 = just rode the Goldenrod Dept. Store elevator
+#define VAR_SE_ALPH_FOSSIL_STATE      0x5007 // Ruins of Alph lab: 0 none, 1 reviving, 2 ready
+#define VAR_SE_ALPH_FOSSIL_SPECIES    0x5008 // species being revived at the Ruins of Alph lab
 #define VAR_SE_JOHTO_ARRIVAL          0x5001 // 1 = just arrived at Olivine by ship, 2 = met Jasmine
 
 #define VAR_SE_SINNOH_STATE_VERSION   0x5040 // Super Emerald: bump SE_SINNOH_STATE_VERSION when the Sinnoh state changes

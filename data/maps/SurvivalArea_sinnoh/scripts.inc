@@ -1,5 +1,10 @@
 SurvivalArea_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SurvivalArea_OnTransition
 	.byte 0
+
+SurvivalArea_OnTransition::
+	call_if_unset FLAG_SE_SINNOH_LEAGUE_CLEARED, SE_EventScript_HideRival
+	end
 
 
 SurvivalArea_EventScript_PtNpc1::

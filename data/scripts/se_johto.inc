@@ -218,7 +218,6 @@ SE_Text_OlivineNeighborAgain:
 @ ---------------------------------------------------------------------------
 @ Johto Gym Leaders (Super Emerald teams, HGSS-era Gym badges)
 SE_EventScript_JohtoLeader_Falkner::
-	goto_if_set FLAG_SE_KANTO_CHAMPION, SE_EventScript_FalknerRematch
 	trainerbattle_single TRAINER_SE_LEADER_FALKNER, SE_Text_FalknerIntro, SE_Text_FalknerDefeat, SE_EventScript_FalknerDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM1, SE_EventScript_FalknerGiveTM
 	msgbox SE_Text_FalknerPost, MSGBOX_DEFAULT
@@ -254,7 +253,6 @@ SE_Text_ReceivedFalknerBadge:
 	.string "{PLAYER} received the ZEPHYRBADGE\nfrom FALKNER.$"
 
 SE_EventScript_JohtoLeader_Bugsy::
-	goto_if_set FLAG_SE_KANTO_CHAMPION, SE_EventScript_BugsyRematch
 	trainerbattle_single TRAINER_SE_LEADER_BUGSY, SE_Text_BugsyIntro, SE_Text_BugsyDefeat, SE_EventScript_BugsyDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM2, SE_EventScript_BugsyGiveTM
 	msgbox SE_Text_BugsyPost, MSGBOX_DEFAULT
@@ -290,7 +288,6 @@ SE_Text_ReceivedBugsyBadge:
 	.string "{PLAYER} received the HIVEBADGE\nfrom BUGSY.$"
 
 SE_EventScript_JohtoLeader_Whitney::
-	goto_if_set FLAG_SE_KANTO_CHAMPION, SE_EventScript_WhitneyRematch
 	trainerbattle_single TRAINER_SE_LEADER_WHITNEY, SE_Text_WhitneyIntro, SE_Text_WhitneyDefeat, SE_EventScript_WhitneyDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM3, SE_EventScript_WhitneyGiveTM
 	msgbox SE_Text_WhitneyPost, MSGBOX_DEFAULT
@@ -326,7 +323,6 @@ SE_Text_ReceivedWhitneyBadge:
 	.string "{PLAYER} received the PLAINBADGE\nfrom WHITNEY.$"
 
 SE_EventScript_JohtoLeader_Morty::
-	goto_if_set FLAG_SE_KANTO_CHAMPION, SE_EventScript_MortyRematch
 	trainerbattle_single TRAINER_SE_LEADER_MORTY, SE_Text_MortyIntro, SE_Text_MortyDefeat, SE_EventScript_MortyDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM4, SE_EventScript_MortyGiveTM
 	goto SE_EventScript_MortyPostOrWing
@@ -377,7 +373,6 @@ SE_Text_ReceivedMortyBadge:
 	.string "{PLAYER} received the FOGBADGE\nfrom MORTY.$"
 
 SE_EventScript_JohtoLeader_Chuck::
-	goto_if_set FLAG_SE_KANTO_CHAMPION, SE_EventScript_ChuckRematch
 	trainerbattle_single TRAINER_SE_LEADER_CHUCK, SE_Text_ChuckIntro, SE_Text_ChuckDefeat, SE_EventScript_ChuckDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM5, SE_EventScript_ChuckGiveTM
 	msgbox SE_Text_ChuckPost, MSGBOX_DEFAULT
@@ -413,7 +408,6 @@ SE_Text_ReceivedChuckBadge:
 	.string "{PLAYER} received the STORMBADGE\nfrom CHUCK.$"
 
 SE_EventScript_JohtoLeader_Jasmine::
-	goto_if_set FLAG_SE_KANTO_CHAMPION, SE_EventScript_JasmineRematch
 	trainerbattle_single TRAINER_SE_LEADER_JASMINE, SE_Text_JasmineIntro, SE_Text_JasmineDefeat, SE_EventScript_JasmineDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM6, SE_EventScript_JasmineGiveTM
 	goto SE_EventScript_JasminePostOrWing
@@ -464,7 +458,6 @@ SE_Text_ReceivedJasmineBadge:
 	.string "{PLAYER} received the MINERALBADGE\nfrom JASMINE.$"
 
 SE_EventScript_JohtoLeader_Pryce::
-	goto_if_set FLAG_SE_KANTO_CHAMPION, SE_EventScript_PryceRematch
 	trainerbattle_single TRAINER_SE_LEADER_PRYCE, SE_Text_PryceIntro, SE_Text_PryceDefeat, SE_EventScript_PryceDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM7, SE_EventScript_PryceGiveTM
 	msgbox SE_Text_PrycePost, MSGBOX_DEFAULT
@@ -500,7 +493,6 @@ SE_Text_ReceivedPryceBadge:
 	.string "{PLAYER} received the GLACIERBADGE\nfrom PRYCE.$"
 
 SE_EventScript_JohtoLeader_Clair::
-	goto_if_set FLAG_SE_KANTO_CHAMPION, SE_EventScript_ClairRematch
 	trainerbattle_single TRAINER_SE_LEADER_CLAIR, SE_Text_ClairIntro, SE_Text_ClairDefeat, SE_EventScript_ClairDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM8, SE_EventScript_ClairGiveTM
 	msgbox SE_Text_ClairPost, MSGBOX_DEFAULT
@@ -650,6 +642,7 @@ SE_Text_ReceptionGateKantoGuard:
 @ Hall of Fame (hall_of_fame_frlg.inc): the first time is the Johto League, the second
 @ (after all eight Kanto badges) is the stronger League rematch.
 SE_EventScript_LeagueCleared::
+	setflag FLAG_DAILY_SE_KANTO_LEAGUE
 	call_if_set FLAG_SE_KANTO_COMPLETE, SE_EventScript_KantoLeagueCleared
 	setflag FLAG_SE_JOHTO_LEAGUE_CLEARED
 	setflag FLAG_SE_HIDE_KANTO_GATE_GUARD
@@ -1842,3 +1835,28 @@ SE_JohtoSafari_Text_LeaveEarly:
 SE_JohtoSafari_Text_ReturnBalls:
 	.string "Please return any SAFARI BALLS\n"
 	.string "you have left.$"
+
+@ ---------------------------------------------------------------------------
+@ The League rematches can be done once a day
+SE_EventScript_IndigoLeagueDoor::
+	goto_if_unset FLAG_SE_KANTO_CHAMPION, SE_EventScript_LeagueDoorOpen
+	goto_if_unset FLAG_DAILY_SE_KANTO_LEAGUE, SE_EventScript_LeagueDoorOpen
+	goto SE_EventScript_LeagueDoorClosed
+
+SE_EventScript_SinnohLeagueDoor::
+	goto_if_unset FLAG_SE_SINNOH_LEAGUE_CLEARED, SE_EventScript_LeagueDoorOpen
+	goto_if_unset FLAG_DAILY_SE_SINNOH_LEAGUE, SE_EventScript_LeagueDoorOpen
+SE_EventScript_LeagueDoorClosed::
+	lockall
+	msgbox SE_Text_LeagueClosedToday, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkDown
+	waitmovement 0
+	releaseall
+SE_EventScript_LeagueDoorOpen::
+	end
+
+SE_Text_LeagueClosedToday:
+	.string "The ELITE FOUR have already faced a\n"
+	.string "challenger today.\p"
+	.string "Please come back tomorrow!$"

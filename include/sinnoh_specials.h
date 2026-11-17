@@ -17,6 +17,7 @@ void SinnohHoneyReady(void);
 void SinnohHoneySlather(void);
 void SinnohDayOfWeek(void);
 void SinnohBattlegroundSelect(void);
+void SE_DojoSelectLeaders(void);
 void SinnohBattlegroundMsgSet(void);
 void SinnohMaidTarget(void);
 void SinnohAddBattleTurns(void);

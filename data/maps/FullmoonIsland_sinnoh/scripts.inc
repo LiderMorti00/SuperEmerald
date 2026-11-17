@@ -9,7 +9,7 @@ FullmoonIsland_EventScript_PtNpc1::
 	goto_if_eq VAR_RESULT, NO, FullmoonIsland_EventScript_SailNo
 	msgbox CanalaveCity_Text_SailorAllAboard, MSGBOX_DEFAULT
 	closemessage
-	warp MAP_CANALAVE_CITY_SINNOH, 14, 47
+	warp MAP_CANALAVE_CITY_SINNOH, 14, 51
 	waitstate
 	release
 	end

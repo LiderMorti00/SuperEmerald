@@ -663,6 +663,7 @@ gSpecials::
 	def_special SinnohHoneySlather
 	def_special SinnohDayOfWeek
 	def_special SinnohBattlegroundSelect
+	def_special SE_DojoSelectLeaders
 	def_special SinnohBattlegroundMsgSet
 	def_special SinnohMaidTarget
 	def_special SinnohAddBattleTurns
