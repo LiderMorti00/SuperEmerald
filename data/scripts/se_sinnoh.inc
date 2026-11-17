@@ -428,7 +428,7 @@ SE_EventScript_RoarkGiveTM::
 	end
 
 SE_Text_RoarkIntro:
-	.string "Welcome! I'm ROARK, the OREBURGH GYM LEADER.\pI heard a CHAMPION was coming.\nMy rock POKéMON are ready!$"
+	.string "Welcome! I'm ROARK, the\nOREBURGH GYM LEADER.\pI heard a CHAMPION was coming.\nMy rock POKéMON are ready!$"
 
 SE_Text_RoarkDefeat:
 	.string "Whoa… You're the real deal.\nHere's the COAL BADGE!$"
