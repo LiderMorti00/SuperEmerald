@@ -5204,6 +5204,18 @@ u16 GetBattleBGM(void)
     }
     else
     {
+        // Super Emerald: the roaming legendary beasts have their own HGSS themes
+        switch (GetMonData(&gParties[B_TRAINER_OPPONENT_A][0], MON_DATA_SPECIES))
+        {
+        case SPECIES_RAIKOU:
+            return MUS_HG_VS_RAIKOU;
+        case SPECIES_ENTEI:
+            return MUS_HG_VS_ENTEI;
+        case SPECIES_SUICUNE:
+            return MUS_HG_VS_SUICUNE;
+        default:
+            break;
+        }
         if (GetCurrentRegion() == REGION_JOHTO)
             return MUS_HG_VS_WILD;
         if (GetCurrentRegion() == REGION_SINNOH)

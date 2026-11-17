@@ -64,4 +64,8 @@
 #define FLAG_DAILY_SE_RIVAL_ORO                  0x3252
 #define FLAG_DAILY_SE_RIVAL_LUCAS                0x3253
 
+// Celebi event at the Ilex Forest shrine (GS Ball from the Ruins of Alph)
+#define FLAG_SE_GS_BALL_PLACED                   0x3260
+#define FLAG_SE_DONE_CELEBI                      0x3261
+
 #endif // GUARD_CONSTANTS_FLAGS_SE_SINNOH_H

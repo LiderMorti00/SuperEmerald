@@ -52,4 +52,5 @@ RuinsOfAlph_PuzzleAndRewardChambers_EventScript_HelixFossil::
 	end
 
 SE_J_RuinsOfAlph_B1F_hns_RuinsOfAlph_PuzzleAndRewardChambers_EventScript_GSBALL::
+	finditem ITEM_GS_BALL
 	end

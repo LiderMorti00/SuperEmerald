@@ -16260,6 +16260,22 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_KeyToRoom1,
         .iconPalette = gItemIconPalette_Key,
     },
+
+    [ITEM_GS_BALL] =
+    {
+        .name = ITEM_NAME("GS Ball"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "A mysterious Ball\n"
+            "found in the Ruins\n"
+            "of Alph."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .iconPic = gItemIcon_LuxuryBall,
+        .iconPalette = gItemIconPalette_LuxuryBall,
+    },
 };
 
 #undef ITEM_NAME
