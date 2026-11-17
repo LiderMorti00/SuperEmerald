@@ -15,7 +15,6 @@
   "connections": null,
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BARRY",
       "x": 3,
       "y": 3,
@@ -29,7 +28,6 @@
       "flag": "FLAG_SN_HIDE_VILLA_PTNPC1"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ROWAN",
       "x": 11,
       "y": 3,
@@ -43,7 +41,6 @@
       "flag": "FLAG_SN_HIDE_VILLA_PTNPC2"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MOM_FRLG",
       "x": 7,
       "y": 3,
@@ -57,7 +54,6 @@
       "flag": "FLAG_SN_HIDE_VILLA_PTNPC3"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ROARK",
       "x": 12,
       "y": 5,
@@ -71,7 +67,6 @@
       "flag": "FLAG_SN_HIDE_VILLA_PTNPC4"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GARDENIA",
       "x": 4,
       "y": 4,
@@ -85,7 +80,6 @@
       "flag": "FLAG_SN_HIDE_VILLA_PTNPC5"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_FANTINA",
       "x": 3,
       "y": 4,
@@ -99,7 +93,6 @@
       "flag": "FLAG_SN_HIDE_VILLA_PTNPC6"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MAYLENE",
       "x": 7,
       "y": 4,
@@ -113,7 +106,6 @@
       "flag": "FLAG_SN_HIDE_VILLA_PTNPC7"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BYRON",
       "x": 4,
       "y": 8,
@@ -127,7 +119,6 @@
       "flag": "FLAG_SN_HIDE_VILLA_PTNPC8"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_WAKE",
       "x": 12,
       "y": 3,
@@ -141,7 +132,6 @@
       "flag": "FLAG_SN_HIDE_VILLA_PTNPC9"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_CANDICE",
       "x": 4,
       "y": 3,
@@ -155,7 +145,6 @@
       "flag": "FLAG_SN_HIDE_VILLA_PTNPC10"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_VOLKNER",
       "x": 8,
       "y": 3,
@@ -169,7 +158,6 @@
       "flag": "FLAG_SN_HIDE_VILLA_PTNPC11"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_CYNTHIA",
       "x": 2,
       "y": 4,

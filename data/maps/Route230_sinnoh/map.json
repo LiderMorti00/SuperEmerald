@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -267,7 +268,9 @@
       "y": 2,
       "elevation": 4,
       "item": "ITEM_ULTRA_BALL",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE230_ULTRA_BALL"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE230_ULTRA_BALL",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -275,7 +278,9 @@
       "y": 9,
       "elevation": 3,
       "item": "ITEM_WATER_STONE",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE230_WATER_STONE"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE230_WATER_STONE",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

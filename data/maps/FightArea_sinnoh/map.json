@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -208,8 +209,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_FIGHTAREA_BARRY",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BARRY",
       "x": 49,
       "y": 9,
@@ -237,8 +238,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_FA_FLINT",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_FLINT",
       "x": 50,
       "y": 8,
@@ -252,8 +253,8 @@
       "flag": "FLAG_SN_HIDE_FA_MULTI"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_FA_VOLKNER",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_VOLKNER",
       "x": 51,
       "y": 8,
@@ -267,8 +268,8 @@
       "flag": "FLAG_SN_HIDE_FA_MULTI"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_FA_PALMER",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_PALMER",
       "x": 48,
       "y": 10,
@@ -282,8 +283,8 @@
       "flag": "FLAG_SN_HIDE_FA_PALMER"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_FA_BUCK",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BUCK",
       "x": 47,
       "y": 11,
@@ -298,20 +299,6 @@
     }
   ],
   "warp_events": [
-    {
-      "x": 50,
-      "y": 7,
-      "elevation": 0,
-      "dest_map": "MAP_FIGHT_AREA_FRONTIER_GATE_SINNOH",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 51,
-      "y": 7,
-      "elevation": 0,
-      "dest_map": "MAP_FIGHT_AREA_FRONTIER_GATE_SINNOH",
-      "dest_warp_id": "0"
-    },
     {
       "x": 46,
       "y": 24,

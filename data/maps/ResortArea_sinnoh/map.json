@@ -21,7 +21,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "local_id": "LOCALID_SN_SYND_GUARD",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BEAUTY",
       "x": 28,
@@ -36,7 +35,6 @@
       "flag": "FLAG_SN_HIDE_SYND_GUARD"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BEAUTY",
       "x": 14,
       "y": 22,
@@ -50,7 +48,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_FRLG",
       "x": 4,
       "y": 12,
@@ -64,7 +61,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
       "x": 21,
       "y": 10,
@@ -78,7 +74,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 5,
       "y": 21,
@@ -92,7 +87,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 14,
       "y": 21,
@@ -106,7 +100,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 13,
       "y": 21,
@@ -120,7 +113,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 4,
       "y": 21,
@@ -134,7 +126,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 21,
       "y": 23,
@@ -148,7 +139,6 @@
       "flag": "FLAG_ITEM_RESORTAREA_NUGGET"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_VILLA_OWNER",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GENTLEMAN",
       "x": 20,
@@ -163,7 +153,6 @@
       "flag": "FLAG_SN_HIDE_VILLA_OWNER"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_F",
       "x": 8,
       "y": 23,
@@ -179,8 +168,8 @@
   ],
   "warp_events": [
     {
-      "x": 9,
-      "y": 10,
+      "x": 4,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_RESORT_AREA_HOUSE_SINNOH",
       "dest_warp_id": "0"
@@ -193,14 +182,14 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 4,
-      "y": 17,
+      "x": 9,
+      "y": 10,
       "elevation": 0,
       "dest_map": "MAP_RESORT_AREA_POKEMON_CENTER_1F_SINNOH",
       "dest_warp_id": "0"
     },
     {
-      "x": 19,
+      "x": 18,
       "y": 21,
       "elevation": 0,
       "dest_map": "MAP_RESORT_AREA_VILLA_SINNOH",
