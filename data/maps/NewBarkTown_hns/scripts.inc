@@ -14,7 +14,7 @@ SE_J_NewBarkTown_hns_NewBarkTown_EventScript_FatMan::
 
 NewBarkTown_Text_LassState5::
 	.string "Call your mom on your POKéGEAR\n"
-	.string "to let her know how you're doing.$\p"
+	.string "to let her know how you're doing.$"
 
 SE_J_NewBarkTown_hns_NewBarkTown_EventScript_Lass::
 	msgbox NewBarkTown_Text_LassState5, MSGBOX_NPC
