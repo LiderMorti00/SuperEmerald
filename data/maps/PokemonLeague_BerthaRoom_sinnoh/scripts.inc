@@ -14,6 +14,7 @@ PokemonLeague_BerthaRoom_EventScript_Phoebe::
 	goto_if_set FLAG_SN_DEFEATED_ELITE_4_PHOEBE, PokemonLeague_BerthaRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox PokemonLeague_BerthaRoom_Text_IntroSpeech, MSGBOX_DEFAULT
+	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, PokemonLeague_BerthaRoom_EventScript_SNRematchBattle
 	trainerbattle_no_intro TRAINER_SE_ELITE_FOUR_BERTHA, PokemonLeague_BerthaRoom_Text_Defeat
 	goto PokemonLeague_BerthaRoom_EventScript_SNAfterBattle
 
@@ -26,7 +27,7 @@ PokemonLeague_BerthaRoom_Text_Defeat::
 	.string "far as you want.$"
 
 PokemonLeague_BerthaRoom_EventScript_SNRematchBattle::
-	trainerbattle_no_intro TRAINER_NICOLAS_3_SINNOH, PokemonLeague_BerthaRoom_Text_Defeat
+	trainerbattle_no_intro TRAINER_SE_ELITE_FOUR_BERTHA_REMATCH, PokemonLeague_BerthaRoom_Text_Defeat
 	goto PokemonLeague_BerthaRoom_EventScript_SNAfterBattle
 
 PokemonLeague_BerthaRoom_EventScript_Defeated::

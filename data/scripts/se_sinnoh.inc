@@ -404,6 +404,7 @@ SE_Text_LucasVictoryRoadAfter:
 	.string "PROF. ROWAN will be proud of us both!$"
 
 SE_EventScript_SinnohLeader_Roark::
+	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, SE_EventScript_RoarkRematch
 	trainerbattle_single TRAINER_SE_LEADER_ROARK, SE_Text_RoarkIntro, SE_Text_RoarkDefeat, SE_EventScript_RoarkDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_SINNOH_TM1, SE_EventScript_RoarkGiveTM
 	msgbox SE_Text_RoarkPost, MSGBOX_DEFAULT
@@ -439,6 +440,7 @@ SE_Text_ReceivedRoarkBadge:
 	.string "{PLAYER} received the COAL BADGE\nfrom ROARK.$"
 
 SE_EventScript_SinnohLeader_Gardenia::
+	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, SE_EventScript_GardeniaRematch
 	trainerbattle_single TRAINER_SE_LEADER_GARDENIA, SE_Text_GardeniaIntro, SE_Text_GardeniaDefeat, SE_EventScript_GardeniaDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_SINNOH_TM2, SE_EventScript_GardeniaGiveTM
 	msgbox SE_Text_GardeniaPost, MSGBOX_DEFAULT
@@ -474,6 +476,7 @@ SE_Text_ReceivedGardeniaBadge:
 	.string "{PLAYER} received the FOREST BADGE\nfrom GARDENIA.$"
 
 SE_EventScript_SinnohLeader_Maylene::
+	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, SE_EventScript_MayleneRematch
 	trainerbattle_single TRAINER_SE_LEADER_MAYLENE, SE_Text_MayleneIntro, SE_Text_MayleneDefeat, SE_EventScript_MayleneDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_SINNOH_TM3, SE_EventScript_MayleneGiveTM
 	msgbox SE_Text_MaylenePost, MSGBOX_DEFAULT
@@ -509,6 +512,7 @@ SE_Text_ReceivedMayleneBadge:
 	.string "{PLAYER} received the COBBLE BADGE\nfrom MAYLENE.$"
 
 SE_EventScript_SinnohLeader_Wake::
+	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, SE_EventScript_WakeRematch
 	trainerbattle_single TRAINER_SE_LEADER_WAKE, SE_Text_WakeIntro, SE_Text_WakeDefeat, SE_EventScript_WakeDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_SINNOH_TM4, SE_EventScript_WakeGiveTM
 	msgbox SE_Text_WakePost, MSGBOX_DEFAULT
@@ -544,6 +548,7 @@ SE_Text_ReceivedWakeBadge:
 	.string "{PLAYER} received the FEN BADGE\nfrom WAKE.$"
 
 SE_EventScript_SinnohLeader_Fantina::
+	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, SE_EventScript_FantinaRematch
 	trainerbattle_single TRAINER_SE_LEADER_FANTINA, SE_Text_FantinaIntro, SE_Text_FantinaDefeat, SE_EventScript_FantinaDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_SINNOH_TM5, SE_EventScript_FantinaGiveTM
 	msgbox SE_Text_FantinaPost, MSGBOX_DEFAULT
@@ -579,6 +584,7 @@ SE_Text_ReceivedFantinaBadge:
 	.string "{PLAYER} received the RELIC BADGE\nfrom FANTINA.$"
 
 SE_EventScript_SinnohLeader_Byron::
+	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, SE_EventScript_ByronRematch
 	trainerbattle_single TRAINER_SE_LEADER_BYRON, SE_Text_ByronIntro, SE_Text_ByronDefeat, SE_EventScript_ByronDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_SINNOH_TM6, SE_EventScript_ByronGiveTM
 	msgbox SE_Text_ByronPost, MSGBOX_DEFAULT
@@ -614,6 +620,7 @@ SE_Text_ReceivedByronBadge:
 	.string "{PLAYER} received the MINE BADGE\nfrom BYRON.$"
 
 SE_EventScript_SinnohLeader_Candice::
+	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, SE_EventScript_CandiceRematch
 	trainerbattle_single TRAINER_SE_LEADER_CANDICE, SE_Text_CandiceIntro, SE_Text_CandiceDefeat, SE_EventScript_CandiceDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_SINNOH_TM7, SE_EventScript_CandiceGiveTM
 	msgbox SE_Text_CandicePost, MSGBOX_DEFAULT
@@ -649,6 +656,7 @@ SE_Text_ReceivedCandiceBadge:
 	.string "{PLAYER} received the ICICLE BADGE\nfrom CANDICE.$"
 
 SE_EventScript_SinnohLeader_Volkner::
+	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, SE_EventScript_VolknerRematch
 	trainerbattle_single TRAINER_SE_LEADER_VOLKNER, SE_Text_VolknerIntro, SE_Text_VolknerDefeat, SE_EventScript_VolknerDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_SINNOH_TM8, SE_EventScript_VolknerGiveTM
 	msgbox SE_Text_VolknerPost, MSGBOX_DEFAULT
@@ -741,7 +749,9 @@ SE_SinnohChampion_EnterRoom::
 	setvar VAR_TEMP_1, 1
 	playbgm MUS_DPP_VS_CYNTHIA, FALSE
 	msgbox SE_Text_CynthiaIntro, MSGBOX_DEFAULT
+	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, SE_SinnohChampion_Rematch
 	trainerbattle_no_intro TRAINER_SE_CHAMPION_CYNTHIA, SE_Text_CynthiaDefeat
+SE_SinnohChampion_AfterBattle::
 	playse SE_DOOR
 	setmetatile 6, 1, METATILE_EliteFour_OpenDoorChampion_Frame, FALSE
 	setmetatile 6, 2, METATILE_EliteFour_OpenDoorChampion_Opening, FALSE
@@ -759,6 +769,10 @@ SE_SinnohChampion_EnterRoom::
 	waitstate
 	releaseall
 	end
+
+SE_SinnohChampion_Rematch::
+	trainerbattle_no_intro TRAINER_SE_CHAMPION_CYNTHIA_REMATCH, SE_Text_CynthiaDefeat
+	goto SE_SinnohChampion_AfterBattle
 
 SE_SinnohChampion_Movement_Approach:
 	walk_up
@@ -960,3 +974,150 @@ SE_EventScript_RowanAideB::
 SE_EventScript_RowanAideB_Text:
 	.string "PROF. ROWAN looks scary, but he\n"
 	.string "really cares about POKéMON!$"
+
+@ ---------------------------------------------------------------------------
+@ Sinnoh Gym Leader rematches (stronger teams), after the Sinnoh League
+SE_EventScript_RoarkRematch::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SE_RECEIVED_SINNOH_TM1, SE_EventScript_RoarkGiveTM
+	msgbox SE_Text_RoarkRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_ROARK_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_ROARK_REMATCH, SE_Text_RoarkRematchDefeat
+	msgbox SFR_Text_KantoRematchAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_RoarkRematch:
+	.string "ROARK: I've dug up some powerful\nPOKéMON since our last battle!\pWant to battle again?$"
+
+SE_Text_RoarkRematchDefeat:
+	.string "You're as solid as bedrock!$"
+
+SE_EventScript_GardeniaRematch::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SE_RECEIVED_SINNOH_TM2, SE_EventScript_GardeniaGiveTM
+	msgbox SE_Text_GardeniaRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_GARDENIA_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_GARDENIA_REMATCH, SE_Text_GardeniaRematchDefeat
+	msgbox SFR_Text_KantoRematchAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_GardeniaRematch:
+	.string "GARDENIA: My grass POKéMON are\nblooming like never before!\pBattle me again?$"
+
+SE_Text_GardeniaRematchDefeat:
+	.string "Wow! You're as good as ever!$"
+
+SE_EventScript_MayleneRematch::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SE_RECEIVED_SINNOH_TM3, SE_EventScript_MayleneGiveTM
+	msgbox SE_Text_MayleneRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_MAYLENE_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_MAYLENE_REMATCH, SE_Text_MayleneRematchDefeat
+	msgbox SFR_Text_KantoRematchAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_MayleneRematch:
+	.string "MAYLENE: I've trained hard every\nday. I'm ready this time!\pWill you fight me?$"
+
+SE_Text_MayleneRematchDefeat:
+	.string "I still have so much to learn.$"
+
+SE_EventScript_WakeRematch::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SE_RECEIVED_SINNOH_TM4, SE_EventScript_WakeGiveTM
+	msgbox SE_Text_WakeRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_WAKE_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_WAKE_REMATCH, SE_Text_WakeRematchDefeat
+	msgbox SFR_Text_KantoRematchAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_WakeRematch:
+	.string "WAKE: The CRASHER WAKE is back,\nand my waves are bigger than ever!\pRematch?$"
+
+SE_Text_WakeRematchDefeat:
+	.string "Wahahah! You rode my waves again!$"
+
+SE_EventScript_FantinaRematch::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SE_RECEIVED_SINNOH_TM5, SE_EventScript_FantinaGiveTM
+	msgbox SE_Text_FantinaRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_FANTINA_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_FANTINA_REMATCH, SE_Text_FantinaRematchDefeat
+	msgbox SFR_Text_KantoRematchAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_FantinaRematch:
+	.string "FANTINA: My POKéMON and I have a\nnew dance for you!\pWill you battle?$"
+
+SE_Text_FantinaRematchDefeat:
+	.string "Magnifique! You are so strong!$"
+
+SE_EventScript_ByronRematch::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SE_RECEIVED_SINNOH_TM6, SE_EventScript_ByronGiveTM
+	msgbox SE_Text_ByronRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_BYRON_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_BYRON_REMATCH, SE_Text_ByronRematchDefeat
+	msgbox SFR_Text_KantoRematchAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_ByronRematch:
+	.string "BYRON: My steel POKéMON are harder\nthan ever! Hahaha!\pBattle me again!$"
+
+SE_Text_ByronRematchDefeat:
+	.string "You broke through my steel!$"
+
+SE_EventScript_CandiceRematch::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SE_RECEIVED_SINNOH_TM7, SE_EventScript_CandiceGiveTM
+	msgbox SE_Text_CandiceRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_CANDICE_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_CANDICE_REMATCH, SE_Text_CandiceRematchDefeat
+	msgbox SFR_Text_KantoRematchAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_CandiceRematch:
+	.string "CANDICE: Focus! My ice POKéMON\nhave trained super hard!\pReady for a rematch?$"
+
+SE_Text_CandiceRematchDefeat:
+	.string "Wow, you're way too strong!$"
+
+SE_EventScript_VolknerRematch::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SE_RECEIVED_SINNOH_TM8, SE_EventScript_VolknerGiveTM
+	msgbox SE_Text_VolknerRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_VOLKNER_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_VOLKNER_REMATCH, SE_Text_VolknerRematchDefeat
+	msgbox SFR_Text_KantoRematchAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_VolknerRematch:
+	.string "VOLKNER: Finally, a TRAINER who\ngets me fired up!\pWill you battle me again?$"
+
+SE_Text_VolknerRematchDefeat:
+	.string "Now that's what I call a battle!$"
+

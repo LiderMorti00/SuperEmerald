@@ -218,6 +218,7 @@ SE_Text_OlivineNeighborAgain:
 @ ---------------------------------------------------------------------------
 @ Johto Gym Leaders (Super Emerald teams, HGSS-era Gym badges)
 SE_EventScript_JohtoLeader_Falkner::
+	goto_if_set FLAG_SE_KANTO_CHAMPION, SE_EventScript_FalknerRematch
 	trainerbattle_single TRAINER_SE_LEADER_FALKNER, SE_Text_FalknerIntro, SE_Text_FalknerDefeat, SE_EventScript_FalknerDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM1, SE_EventScript_FalknerGiveTM
 	msgbox SE_Text_FalknerPost, MSGBOX_DEFAULT
@@ -253,6 +254,7 @@ SE_Text_ReceivedFalknerBadge:
 	.string "{PLAYER} received the ZEPHYRBADGE\nfrom FALKNER.$"
 
 SE_EventScript_JohtoLeader_Bugsy::
+	goto_if_set FLAG_SE_KANTO_CHAMPION, SE_EventScript_BugsyRematch
 	trainerbattle_single TRAINER_SE_LEADER_BUGSY, SE_Text_BugsyIntro, SE_Text_BugsyDefeat, SE_EventScript_BugsyDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM2, SE_EventScript_BugsyGiveTM
 	msgbox SE_Text_BugsyPost, MSGBOX_DEFAULT
@@ -288,6 +290,7 @@ SE_Text_ReceivedBugsyBadge:
 	.string "{PLAYER} received the HIVEBADGE\nfrom BUGSY.$"
 
 SE_EventScript_JohtoLeader_Whitney::
+	goto_if_set FLAG_SE_KANTO_CHAMPION, SE_EventScript_WhitneyRematch
 	trainerbattle_single TRAINER_SE_LEADER_WHITNEY, SE_Text_WhitneyIntro, SE_Text_WhitneyDefeat, SE_EventScript_WhitneyDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM3, SE_EventScript_WhitneyGiveTM
 	msgbox SE_Text_WhitneyPost, MSGBOX_DEFAULT
@@ -323,6 +326,7 @@ SE_Text_ReceivedWhitneyBadge:
 	.string "{PLAYER} received the PLAINBADGE\nfrom WHITNEY.$"
 
 SE_EventScript_JohtoLeader_Morty::
+	goto_if_set FLAG_SE_KANTO_CHAMPION, SE_EventScript_MortyRematch
 	trainerbattle_single TRAINER_SE_LEADER_MORTY, SE_Text_MortyIntro, SE_Text_MortyDefeat, SE_EventScript_MortyDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM4, SE_EventScript_MortyGiveTM
 	goto SE_EventScript_MortyPostOrWing
@@ -373,6 +377,7 @@ SE_Text_ReceivedMortyBadge:
 	.string "{PLAYER} received the FOGBADGE\nfrom MORTY.$"
 
 SE_EventScript_JohtoLeader_Chuck::
+	goto_if_set FLAG_SE_KANTO_CHAMPION, SE_EventScript_ChuckRematch
 	trainerbattle_single TRAINER_SE_LEADER_CHUCK, SE_Text_ChuckIntro, SE_Text_ChuckDefeat, SE_EventScript_ChuckDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM5, SE_EventScript_ChuckGiveTM
 	msgbox SE_Text_ChuckPost, MSGBOX_DEFAULT
@@ -408,6 +413,7 @@ SE_Text_ReceivedChuckBadge:
 	.string "{PLAYER} received the STORMBADGE\nfrom CHUCK.$"
 
 SE_EventScript_JohtoLeader_Jasmine::
+	goto_if_set FLAG_SE_KANTO_CHAMPION, SE_EventScript_JasmineRematch
 	trainerbattle_single TRAINER_SE_LEADER_JASMINE, SE_Text_JasmineIntro, SE_Text_JasmineDefeat, SE_EventScript_JasmineDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM6, SE_EventScript_JasmineGiveTM
 	goto SE_EventScript_JasminePostOrWing
@@ -458,6 +464,7 @@ SE_Text_ReceivedJasmineBadge:
 	.string "{PLAYER} received the MINERALBADGE\nfrom JASMINE.$"
 
 SE_EventScript_JohtoLeader_Pryce::
+	goto_if_set FLAG_SE_KANTO_CHAMPION, SE_EventScript_PryceRematch
 	trainerbattle_single TRAINER_SE_LEADER_PRYCE, SE_Text_PryceIntro, SE_Text_PryceDefeat, SE_EventScript_PryceDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM7, SE_EventScript_PryceGiveTM
 	msgbox SE_Text_PrycePost, MSGBOX_DEFAULT
@@ -493,6 +500,7 @@ SE_Text_ReceivedPryceBadge:
 	.string "{PLAYER} received the GLACIERBADGE\nfrom PRYCE.$"
 
 SE_EventScript_JohtoLeader_Clair::
+	goto_if_set FLAG_SE_KANTO_CHAMPION, SE_EventScript_ClairRematch
 	trainerbattle_single TRAINER_SE_LEADER_CLAIR, SE_Text_ClairIntro, SE_Text_ClairDefeat, SE_EventScript_ClairDefeated, NO_MUSIC
 	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM8, SE_EventScript_ClairGiveTM
 	msgbox SE_Text_ClairPost, MSGBOX_DEFAULT
@@ -1554,3 +1562,283 @@ SE_EventScript_SafariIndoorWorker::
 SE_EventScript_SafariIndoorWorker_Text:
 	.string "We're always working to make the\n"
 	.string "SAFARI ZONE better for POKéMON.$"
+
+@ ---------------------------------------------------------------------------
+@ Johto Gym Leader rematches (stronger teams), after beating Red
+SE_EventScript_FalknerRematch::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM1, SE_EventScript_FalknerGiveTM
+	msgbox SE_Text_FalknerRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_FALKNER_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_FALKNER_REMATCH, SE_Text_FalknerRematchDefeat
+	msgbox SFR_Text_KantoRematchAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_FalknerRematch:
+	.string "FALKNER: My birds and I have been\nsoaring higher than ever!\pWill you face my new team?$"
+
+SE_Text_FalknerRematchDefeat:
+	.string "My birds… still not enough.$"
+
+SE_EventScript_BugsyRematch::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM2, SE_EventScript_BugsyGiveTM
+	msgbox SE_Text_BugsyRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_BUGSY_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_BUGSY_REMATCH, SE_Text_BugsyRematchDefeat
+	msgbox SFR_Text_KantoRematchAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_BugsyRematch:
+	.string "BUGSY: I've studied bug POKéMON\neven more since our battle.\pWant to see my research in action?$"
+
+SE_Text_BugsyRematchDefeat:
+	.string "Your team is amazing!\nI have to study more.$"
+
+SE_EventScript_WhitneyRematch::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM3, SE_EventScript_WhitneyGiveTM
+	msgbox SE_Text_WhitneyRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_WHITNEY_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_WHITNEY_REMATCH, SE_Text_WhitneyRematchDefeat
+	msgbox SFR_Text_KantoRematchAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_WhitneyRematch:
+	.string "WHITNEY: I'm not gonna cry this\ntime! My team's way tougher now!\pBattle me again?$"
+
+SE_Text_WhitneyRematchDefeat:
+	.string "Waaah! …No, no, I'm not crying!\nThat was fun!$"
+
+SE_EventScript_MortyRematch::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM4, SE_EventScript_MortyGiveTM
+	msgbox SE_Text_MortyRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_MORTY_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_MORTY_REMATCH, SE_Text_MortyRematchDefeat
+	msgbox SFR_Text_KantoRematchAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_MortyRematch:
+	.string "MORTY: I have seen a new future\nin my training.\pWill you battle me once more?$"
+
+SE_Text_MortyRematchDefeat:
+	.string "I still couldn't see past you.$"
+
+SE_EventScript_ChuckRematch::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM5, SE_EventScript_ChuckGiveTM
+	msgbox SE_Text_ChuckRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_CHUCK_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_CHUCK_REMATCH, SE_Text_ChuckRematchDefeat
+	msgbox SFR_Text_KantoRematchAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_ChuckRematch:
+	.string "CHUCK: WAHAHAH! I've been training\nunder the waterfall day and night!\pFight me again!$"
+
+SE_Text_ChuckRematchDefeat:
+	.string "Hoo! You're stronger than a\nwaterfall!$"
+
+SE_EventScript_JasmineRematch::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM6, SE_EventScript_JasmineGiveTM
+	msgbox SE_Text_JasmineRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_JASMINE_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_JASMINE_REMATCH, SE_Text_JasmineRematchDefeat
+	msgbox SFR_Text_KantoRematchAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_JasmineRematch:
+	.string "JASMINE: I… I've grown stronger\ntoo, like steel.\pWould you battle me again?$"
+
+SE_Text_JasmineRematchDefeat:
+	.string "You are truly strong…$"
+
+SE_EventScript_PryceRematch::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM7, SE_EventScript_PryceGiveTM
+	msgbox SE_Text_PryceRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_PRYCE_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_PRYCE_REMATCH, SE_Text_PryceRematchDefeat
+	msgbox SFR_Text_KantoRematchAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_PryceRematch:
+	.string "PRYCE: Even an old man keeps\nlearning. My ice is colder now.\pWill you battle me?$"
+
+SE_Text_PryceRematchDefeat:
+	.string "Your fire melted my ice again.$"
+
+SE_EventScript_ClairRematch::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TM8, SE_EventScript_ClairGiveTM
+	msgbox SE_Text_ClairRematch, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SFR_EventScript_KantoRematchDecline
+	cleartrainerflag TRAINER_SE_LEADER_CLAIR_REMATCH
+	trainerbattle_no_intro TRAINER_SE_LEADER_CLAIR_REMATCH, SE_Text_ClairRematchDefeat
+	msgbox SFR_Text_KantoRematchAfter, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_ClairRematch:
+	.string "CLAIR: I won't lose to you again!\nMy dragons have grown even mightier!\pAccept my challenge!$"
+
+SE_Text_ClairRematchDefeat:
+	.string "…I admit it. You're the stronger\nTRAINER.$"
+
+
+@ ---------------------------------------------------------------------------
+@ Johto Safari Zone (west of Cianwood): Safari Game, 500 steps and 30 Safari Balls
+SE_JohtoSafari_OnFrame::
+	map_script_2 VAR_SAFARI_WARP_STATE, SAFARI_WARP_MANUAL_EXIT, SE_JohtoSafari_EventScript_ExitEarly
+	map_script_2 VAR_SAFARI_WARP_STATE, SAFARI_WARP_NO_BALLS, SE_JohtoSafari_EventScript_GameOver
+	map_script_2 VAR_SAFARI_WARP_STATE, SAFARI_WARP_NO_STEPS, SE_JohtoSafari_EventScript_GameOver
+	map_script_2 VAR_SAFARI_WARP_STATE, SAFARI_WARP_NO_BALLS_MID_BATTLE, SE_JohtoSafari_EventScript_GameOver
+	map_script_2 VAR_SAFARI_WARP_STATE, SAFARI_WARP_RETIRING, SE_JohtoSafari_EventScript_GameOver
+	map_script_2 VAR_SAFARI_WARP_STATE, SAFARI_WARP_WHITEOUT, SE_JohtoSafari_EventScript_GameOver
+	.2byte 0
+
+SE_JohtoSafari_EventScript_GameOver::
+	lockall
+	msgbox SE_JohtoSafari_Text_GameOver, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, SE_JohtoSafari_Movement_Exit
+	waitmovement 0
+	setvar VAR_SAFARI_WARP_STATE, 0
+	releaseall
+	end
+
+SE_JohtoSafari_EventScript_ExitEarly::
+	lockall
+	msgbox SE_JohtoSafari_Text_LeaveEarly, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SE_JohtoSafari_EventScript_ReturnToZone
+	msgbox SE_JohtoSafari_Text_ReturnBalls, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, SE_JohtoSafari_Movement_Exit
+	waitmovement 0
+	safari_exitnowarp
+	setvar VAR_SAFARI_WARP_STATE, 0
+	releaseall
+	end
+
+SE_JohtoSafari_EventScript_ReturnToZone::
+	closemessage
+	warp MAP_SAFARI_ZONE_ENTERANCE_HNS, 0
+	waitstate
+	end
+
+SE_JohtoSafari_EventScript_Counter::
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
+	waitmovement 0
+	showmoneybox 0, 0
+	msgbox SE_JohtoSafari_Text_Ask, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SE_JohtoSafari_EventScript_Back
+	getpartysize
+	goto_if_ne VAR_RESULT, PARTY_SIZE, SE_JohtoSafari_EventScript_Room
+	specialvar VAR_RESULT, ScriptCheckFreePokemonStorageSpace
+	goto_if_eq VAR_RESULT, TRUE, SE_JohtoSafari_EventScript_Room
+	msgbox SE_JohtoSafari_Text_Full, MSGBOX_DEFAULT
+	goto SE_JohtoSafari_EventScript_Back
+
+SE_JohtoSafari_EventScript_Room::
+	checkmoney 500
+	goto_if_eq VAR_RESULT, FALSE, SE_JohtoSafari_EventScript_NoMoney
+	playse SE_SHOP
+	removemoney 500
+	updatemoneybox
+	msgbox SE_JohtoSafari_Text_Pay, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	message SE_JohtoSafari_Text_Balls
+	waitfanfare
+	msgbox SE_JohtoSafari_Text_Enjoy, MSGBOX_DEFAULT
+	closemessage
+	hidemoneybox
+	applymovement OBJ_EVENT_ID_PLAYER, SE_JohtoSafari_Movement_Enter
+	waitmovement 0
+	safari_enter SAFARI_EVENT_JOHTO
+	warp MAP_SAFARI_ZONE_ENTERANCE_HNS, 0
+	waitstate
+	end
+
+SE_JohtoSafari_EventScript_NoMoney::
+	msgbox SE_JohtoSafari_Text_NoMoney, MSGBOX_DEFAULT
+SE_JohtoSafari_EventScript_Back::
+	closemessage
+	hidemoneybox
+	applymovement OBJ_EVENT_ID_PLAYER, SE_JohtoSafari_Movement_Back
+	waitmovement 0
+	releaseall
+	end
+
+SE_JohtoSafari_Movement_Back:
+	walk_down
+	step_end
+
+SE_JohtoSafari_Movement_Enter:
+	walk_up
+	step_end
+
+SE_JohtoSafari_Movement_Exit:
+	walk_down
+	walk_down
+	step_end
+
+SE_JohtoSafari_Text_Ask:
+	.string "Welcome to the SAFARI ZONE!\p"
+	.string "Would you like to play the Safari\n"
+	.string "Game? It costs ¥500.$"
+
+SE_JohtoSafari_Text_Pay:
+	.string "That will be ¥500, please.\p"
+	.string "Here are your SAFARI BALLS.$"
+
+SE_JohtoSafari_Text_Balls:
+	.string "{PLAYER} received 30 SAFARI BALLS.$"
+
+SE_JohtoSafari_Text_Enjoy:
+	.string "You have 500 steps. Please enjoy\n"
+	.string "the SAFARI ZONE!$"
+
+SE_JohtoSafari_Text_Full:
+	.string "Your PC boxes are full. Please make\n"
+	.string "some room before you play.$"
+
+SE_JohtoSafari_Text_NoMoney:
+	.string "I'm sorry, but you don't have\n"
+	.string "enough money.$"
+
+SE_JohtoSafari_Text_GameOver:
+	.string "Your Safari Game is over.\n"
+	.string "Please come again!$"
+
+SE_JohtoSafari_Text_LeaveEarly:
+	.string "Are you going to leave the\n"
+	.string "SAFARI ZONE early?$"
+
+SE_JohtoSafari_Text_ReturnBalls:
+	.string "Please return any SAFARI BALLS\n"
+	.string "you have left.$"

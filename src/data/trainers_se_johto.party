@@ -734,3 +734,466 @@ Typhlosion @ Sitrus Berry
 Level: 68
 IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
 
+=== TRAINER_SE_LEADER_FALKNER_REMATCH ===
+Name: FALKNER
+Class: Leader
+Pic: Leader Falkner
+Gender: Male
+Music: Male
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Staraptor
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Attract
+- Brave Bird
+- Close Combat
+- U Turn
+
+Noctowl
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Roost
+- Air Slash
+- Shadow Ball
+- Feather Dance
+
+Swellow @ Flame Orb
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Facade
+- Protect
+- Double Team
+- Endeavor
+
+Honchkrow
+Level: 72
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Night Slash
+- Sucker Punch
+- Thunder Wave
+- Dark Pulse
+
+Pelipper
+Level: 70
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Surf
+- Tailwind
+- Ice Beam
+- Hidden Power
+
+Pidgeot
+Level: 73
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Return
+- Double Team
+- Swagger
+- Roost
+
+=== TRAINER_SE_LEADER_BUGSY_REMATCH ===
+Name: BUGSY
+Class: Leader
+Pic: Leader Bugsy
+Gender: Male
+Music: Male
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Scizor @ Sitrus Berry
+Level: 73
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Bullet Punch
+- X Scissor
+- Swords Dance
+- Superpower
+
+Shedinja
+Level: 70
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Toxic
+- X Scissor
+- Shadow Sneak
+- Swagger
+
+Yanmega
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Detect
+- Bug Buzz
+- Air Slash
+- Ancient Power
+
+Pinsir
+Level: 72
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Earthquake
+- Guillotine
+- X Scissor
+- Rock Tomb
+
+Heracross
+Level: 72
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Close Combat
+- Megahorn
+- Stone Edge
+- Counter
+
+Vespiquen @ Sitrus Berry
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Protect
+- Confuse Ray
+- Attack Order
+- Defend Order
+
+=== TRAINER_SE_LEADER_WHITNEY_REMATCH ===
+Name: WHITNEY
+Class: Leader
+Pic: Leader Whitney
+Gender: Female
+Music: Female
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Girafarig
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Psychic
+- Shadow Ball
+- Calm Mind
+- Baton Pass
+
+Lickilicky
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Wring Out
+- Flamethrower
+- Ice Beam
+- Thunderbolt
+
+Bibarel
+Level: 72
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Double Team
+- Charge Beam
+- Surf
+- Ice Beam
+
+Delcatty
+Level: 72
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Fake Out
+- Assist
+- Calm Mind
+- Baton Pass
+
+Clefable
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Blizzard
+- Thunder
+- Fire Blast
+- Calm Mind
+
+Miltank @ Lum Berry
+Level: 73
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Body Slam
+- Attract
+- Sleep Talk
+- Rest
+
+=== TRAINER_SE_LEADER_MORTY_REMATCH ===
+Name: MORTY
+Class: Leader
+Pic: Leader Morty
+Gender: Male
+Music: Intense
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Drifblim @ Sitrus Berry
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Destiny Bond
+- Substitute
+- Thunderbolt
+- Shadow Ball
+
+Dusknoir
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Pain Split
+- Will O Wisp
+- Substitute
+- Payback
+
+Sableye
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Sucker Punch
+- Brick Break
+- Ice Punch
+- Fake Out
+
+Mismagius
+Level: 72
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Perish Song
+- Mean Look
+- Confuse Ray
+- Astonish
+
+Gengar
+Level: 73
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hypnosis
+- Confuse Ray
+- Shadow Ball
+- Focus Blast
+
+Gengar
+Level: 73
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Substitute
+- Shadow Ball
+- Thunderbolt
+- Destiny Bond
+
+=== TRAINER_SE_LEADER_CHUCK_REMATCH ===
+Name: CHUCK
+Class: Leader
+Pic: Leader Chuck
+Gender: Male
+Music: Intense
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Medicham @ Sitrus Berry
+Level: 72
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- High Jump Kick
+- Psycho Cut
+- Attract
+- Thunder Punch
+
+Hitmonchan
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Mach Punch
+- Swagger
+- Focus Punch
+- Double Team
+
+Hitmonlee
+Level: 72
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- High Jump Kick
+- Fake Out
+- Blaze Kick
+- Bulk Up
+
+Breloom @ Toxic Orb
+Level: 72
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Substitute
+- Focus Punch
+- Drain Punch
+- Stone Edge
+
+Primeape
+Level: 73
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Close Combat
+- Payback
+- Thunder Punch
+- Swagger
+
+Poliwrath @ Sitrus Berry
+Level: 74
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Double Team
+- Waterfall
+- Focus Punch
+- Substitute
+
+=== TRAINER_SE_LEADER_JASMINE_REMATCH ===
+Name: JASMINE
+Class: Leader
+Pic: Leader Jasmine
+Gender: Female
+Music: Female
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Metagross
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Meteor Mash
+- Bullet Punch
+- Gravity
+- Explosion
+
+Magnezone
+Level: 73
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Zap Cannon
+- Lock On
+- Mirror Coat
+- Metal Sound
+
+Skarmory
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Air Slash
+- Spikes
+- Night Slash
+- Steel Wing
+
+Bronzong
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Gyro Ball
+- Hypnosis
+- Dream Eater
+- Gravity
+
+Empoleon
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hydro Pump
+- Blizzard
+- Aqua Jet
+- Roar
+
+Steelix
+Level: 75
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Stone Edge
+- Stealth Rock
+- Roar
+- Iron Tail
+
+=== TRAINER_SE_LEADER_PRYCE_REMATCH ===
+Name: PRYCE
+Class: Leader
+Pic: Leader Pryce
+Gender: Male
+Music: Intense
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Abomasnow
+Level: 73
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Ice Shard
+- Wood Hammer
+- Earthquake
+- Blizzard
+
+Dewgong @ Lum Berry
+Level: 73
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dive
+- Sheer Cold
+- Sleep Talk
+- Rest
+
+Glalie
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Payback
+- Torment
+- Attract
+- Blizzard
+
+Froslass
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Ice Shard
+- Confuse Ray
+- Attract
+- Blizzard
+
+Walrein
+Level: 72
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hail
+- Body Slam
+- Swagger
+- Blizzard
+
+Mamoswine @ Sitrus Berry
+Level: 74
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Earthquake
+- Avalanche
+- Stone Edge
+- Double Team
+
+=== TRAINER_SE_LEADER_CLAIR_REMATCH ===
+Name: CLAIR
+Class: Leader
+Pic: Leader Clair
+Gender: Female
+Music: Female
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Gyarados @ Wacan Berry
+Level: 73
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dragon Dance
+- Earthquake
+- Waterfall
+- Dragon Pulse
+
+Dragonair
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunder Wave
+- Dragon Rush
+- Thunderbolt
+- Flamethrower
+
+Aerodactyl
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Earthquake
+- Thunder Fang
+- Rock Slide
+- Roar
+
+Kingdra
+Level: 73
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Yawn
+- Hydro Pump
+- Ice Beam
+- Dragon Breath
+
+Charizard
+Level: 71
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shadow Claw
+- Air Slash
+- Dragon Claw
+- Fire Fang
+
+Dragonite @ Sitrus Berry
+Level: 74
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunder
+- Safeguard
+- Dragon Breath
+- Hyper Beam

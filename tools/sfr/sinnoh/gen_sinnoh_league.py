@@ -70,6 +70,30 @@ for n in (1, 2, 3):
                            for sp, lv in team)
         out.append(head(c, 'LUCAS', 'Rival', 'TRAINER_PIC_SINNOH_LUCAS', 'Male', 'Male', ['Full Restore'] * n) + '\n\n' + body)
 
+# Rematches (after the first Sinnoh League win): the second Platinum rematch teams of the
+# Sinnoh repo, six Pokemon each. Gym Leaders 61-66 -> 74-79, Elite Four 65-75 -> 73-83,
+# Cynthia 74-78 -> 82-86. Added after the other ids so those stay the same.
+LEADERS2 = [('ROARK', 'TRAINER_ISAIAH_4'), ('GARDENIA', 'TRAINER_ISAIAH_5'), ('MAYLENE', 'TRAINER_KATELYN_2'),
+            ('WAKE', 'TRAINER_KATELYN_3'), ('FANTINA', 'TRAINER_KATELYN_1'), ('BYRON', 'TRAINER_KATELYN_4'),
+            ('CANDICE', 'TRAINER_KATELYN_5'), ('VOLKNER', 'TRAINER_NICOLAS_1')]
+ELITE2 = [('AARON', 'TRAINER_NICOLAS_2'), ('BERTHA', 'TRAINER_NICOLAS_3'), ('FLINT', 'TRAINER_NICOLAS_4'),
+          ('LUCIAN', 'TRAINER_NICOLAS_5')]
+for name, src in LEADERS2:
+    c = 'TRAINER_SE_LEADER_%s_REMATCH' % name
+    ids.append(c)
+    out.append(head(c, name, 'Leader', 'TRAINER_PIC_SINNOH_LEADER_%s' % name,
+                    'Female' if name in FEMALE else 'Male', 'Female' if name in FEMALE else 'Male',
+                    ['Full Restore', 'Full Restore', 'Full Restore']) + '\n\n' + mons(BLOCKS[src], 13))
+for name, src in ELITE2:
+    c = 'TRAINER_SE_ELITE_FOUR_%s_REMATCH' % name
+    ids.append(c)
+    out.append(head(c, name, 'Elite Four', 'TRAINER_PIC_SINNOH_ELITE_FOUR_%s' % name,
+                    'Female' if name in FEMALE else 'Male', 'Female' if name in FEMALE else 'Male',
+                    ['Full Restore', 'Full Restore', 'Full Restore']) + '\n\n' + mons(BLOCKS[src], 8))
+ids.append('TRAINER_SE_CHAMPION_CYNTHIA_REMATCH')
+out.append(head('TRAINER_SE_CHAMPION_CYNTHIA_REMATCH', 'CYNTHIA', 'Champion', 'TRAINER_PIC_SINNOH_CHAMPION_CYNTHIA', 'Female', 'Female',
+                ['Full Restore'] * 4) + '\n\n' + mons(BLOCKS['TRAINER_ROBERT_1'], 8))
+
 write(ours('src/data/trainers_se_sinnoh.party'), '\n\n'.join(out) + '\n')
 n_import = int(re.search(r'TRAINERS_COUNT_SINNOH_IMPORT (\d+)', read(ours('include/constants/opponents_sinnoh_list.h'))).group(1))
 start = 2144 + n_import

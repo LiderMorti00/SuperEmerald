@@ -1268,8 +1268,6 @@ gStdScripts_End::
 	.include "data/maps/SafariZone_Low_Right_hns/scripts.inc"
 	.include "data/maps/SafariZone_Top_Mid_hns/scripts.inc"
 	.include "data/maps/SafariZone_Top_Right_hns/scripts.inc"
-	.include "data/maps/TestMap1_hns/scripts.inc"
-	.include "data/maps/TestMap2_hns/scripts.inc"
 	.include "data/maps/SafariZone1_hns/scripts.inc"
 	.include "data/maps/SafariZone2_hns/scripts.inc"
 	.include "data/maps/SafariZone3_hns/scripts.inc"

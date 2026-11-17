@@ -33,4 +33,15 @@ static const struct SafariData sSafariZones[SAFARI_EVENT_COUNT] = {
             .warpId = 1
         }
     },
+    [SAFARI_EVENT_JOHTO] = {
+        .actions = SAFARI_ACTIONS_RSE,
+        .startingBalls = 30,
+        .startingSteps = 500,
+        .catchMultiplier = 150,
+        .exitWarp = {
+            .mapGroup = MAP_GROUP(MAP_SAFARI_ZONE_GATE_SAFARI_ZONE_ENTRANCE_HNS),
+            .mapNum = MAP_NUM(MAP_SAFARI_ZONE_GATE_SAFARI_ZONE_ENTRANCE_HNS),
+            .warpId = 0
+        }
+    },
 };

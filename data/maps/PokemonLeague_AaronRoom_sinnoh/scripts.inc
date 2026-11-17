@@ -14,6 +14,7 @@ PokemonLeague_AaronRoom_EventScript_Sidney::
 	goto_if_set FLAG_SN_DEFEATED_ELITE_4_SIDNEY, PokemonLeague_AaronRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox PokemonLeague_AaronRoom_Text_IntroSpeech, MSGBOX_DEFAULT
+	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, PokemonLeague_AaronRoom_EventScript_SNRematchBattle
 	trainerbattle_no_intro TRAINER_SE_ELITE_FOUR_AARON, PokemonLeague_AaronRoom_Text_Defeat
 	goto PokemonLeague_AaronRoom_EventScript_SNAfterBattle
 
@@ -29,7 +30,7 @@ PokemonLeague_AaronRoom_Text_Defeat::
 	.string "They’re all tougher than me.$"
 
 PokemonLeague_AaronRoom_EventScript_SNRematchBattle::
-	trainerbattle_no_intro TRAINER_NICOLAS_2_SINNOH, PokemonLeague_AaronRoom_Text_Defeat
+	trainerbattle_no_intro TRAINER_SE_ELITE_FOUR_AARON_REMATCH, PokemonLeague_AaronRoom_Text_Defeat
 	goto PokemonLeague_AaronRoom_EventScript_SNAfterBattle
 
 PokemonLeague_AaronRoom_EventScript_Defeated::

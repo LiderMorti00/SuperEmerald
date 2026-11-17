@@ -14,6 +14,7 @@ PokemonLeague_FlintRoom_EventScript_Glacia::
 	goto_if_set FLAG_SN_DEFEATED_ELITE_4_GLACIA, PokemonLeague_FlintRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox PokemonLeague_FlintRoom_Text_IntroSpeech, MSGBOX_DEFAULT
+	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, PokemonLeague_FlintRoom_EventScript_SNRematchBattle
 	trainerbattle_no_intro TRAINER_SE_ELITE_FOUR_FLINT, PokemonLeague_FlintRoom_Text_Defeat
 	goto PokemonLeague_FlintRoom_EventScript_SNAfterBattle
 
@@ -25,7 +26,7 @@ PokemonLeague_FlintRoom_Text_Defeat::
 	.string "cinders...$"
 
 PokemonLeague_FlintRoom_EventScript_SNRematchBattle::
-	trainerbattle_no_intro TRAINER_NICOLAS_4_SINNOH, PokemonLeague_FlintRoom_Text_Defeat
+	trainerbattle_no_intro TRAINER_SE_ELITE_FOUR_FLINT_REMATCH, PokemonLeague_FlintRoom_Text_Defeat
 	goto PokemonLeague_FlintRoom_EventScript_SNAfterBattle
 
 PokemonLeague_FlintRoom_EventScript_Defeated::

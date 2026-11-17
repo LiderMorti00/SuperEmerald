@@ -14,6 +14,7 @@ PokemonLeague_LucianRoom_EventScript_Drake::
 	goto_if_set FLAG_SN_DEFEATED_ELITE_4_DRAKE, PokemonLeague_LucianRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
 	msgbox PokemonLeague_LucianRoom_Text_IntroSpeech, MSGBOX_DEFAULT
+	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, PokemonLeague_LucianRoom_EventScript_SNRematchBattle
 	trainerbattle_no_intro TRAINER_SE_ELITE_FOUR_LUCIAN, PokemonLeague_LucianRoom_Text_Defeat
 	goto PokemonLeague_LucianRoom_EventScript_SNAfterBattle
 
@@ -29,7 +30,7 @@ PokemonLeague_LucianRoom_Text_Defeat::
 	.string "to your final battle.$"
 
 PokemonLeague_LucianRoom_EventScript_SNRematchBattle::
-	trainerbattle_no_intro TRAINER_NICOLAS_5_SINNOH, PokemonLeague_LucianRoom_Text_Defeat
+	trainerbattle_no_intro TRAINER_SE_ELITE_FOUR_LUCIAN_REMATCH, PokemonLeague_LucianRoom_Text_Defeat
 	goto PokemonLeague_LucianRoom_EventScript_SNAfterBattle
 
 PokemonLeague_LucianRoom_EventScript_Defeated::
