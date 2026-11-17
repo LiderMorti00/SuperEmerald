@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -40,8 +41,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_BLACKTHORN_BOY",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY_2_HNS",
       "x": 25,
       "y": 27,
@@ -111,8 +112,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_BLACKTHORN_SAGE",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SAGE_HNS",
       "x": 25,
       "y": 13,
@@ -283,7 +284,7 @@
     },
     {
       "x": 36,
-      "y": 41,
+      "y": 42,
       "elevation": 0,
       "dest_map": "MAP_BLACKTHORN_CITY_HOUSE2_HNS",
       "dest_warp_id": "0"
@@ -304,7 +305,7 @@
     },
     {
       "x": 10,
-      "y": 49,
+      "y": 50,
       "elevation": 0,
       "dest_map": "MAP_BLACKTHORN_CITY_HOUSE3_HNS",
       "dest_warp_id": "0"
@@ -331,7 +332,7 @@
     {
       "type": "sign",
       "x": 13,
-      "y": 49,
+      "y": 50,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "BlackthornCity_EventScript_MoveHouseSign"

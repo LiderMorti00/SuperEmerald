@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -1009,7 +1010,9 @@
       "y": 79,
       "elevation": 0,
       "item": "ITEM_STARDUST",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE41_STARDUST_1"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE41_STARDUST_1",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -1017,7 +1020,9 @@
       "y": 50,
       "elevation": 0,
       "item": "ITEM_STARDUST",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE41_STARDUST_2"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE41_STARDUST_2",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

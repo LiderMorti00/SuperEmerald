@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -387,7 +388,9 @@
       "y": 87,
       "elevation": 0,
       "item": "ITEM_PP_UP",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE45_PP_UP"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE45_PP_UP",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -395,7 +398,9 @@
       "y": 65,
       "elevation": 0,
       "item": "ITEM_FULL_HEAL",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE45_FULL_HEAL"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE45_FULL_HEAL",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

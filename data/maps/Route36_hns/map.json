@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -64,8 +65,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_ROUTE36_ROCKSMASHGUY",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_HNS",
       "x": 46,
       "y": 20,
@@ -107,8 +108,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_ROUTE36_SUDOWOODO",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SUDOWOODO",
       "x": 39,
       "y": 19,
@@ -386,7 +387,9 @@
       "y": 17,
       "elevation": 0,
       "item": "ITEM_AWAKENING",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE36_AWAKENING"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE36_AWAKENING",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

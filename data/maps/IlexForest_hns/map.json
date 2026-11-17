@@ -11,6 +11,7 @@
   "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -49,8 +50,8 @@
       "flag": "FLAG_HIDE_ILEX_FOREST_APPRENTICE"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_ILEX_FOREST_FARFETCHD_1",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_FARFETCHD",
       "x": 42,
       "y": 47,
@@ -106,8 +107,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_ILEX_FOREST_CELEBI",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CELEBI",
       "x": 24,
       "y": 33,
@@ -429,8 +430,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_ILEX_FOREST_FARFETCHD_2",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_FARFETCHD",
       "x": 42,
       "y": 39,
@@ -444,8 +445,8 @@
       "flag": "FLAG_HIDE_ILEX_FOREST_FARFETCHD_2"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_ILEX_FOREST_FARFETCHD_4",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_FARFETCHD",
       "x": 61,
       "y": 49,
@@ -459,8 +460,8 @@
       "flag": "FLAG_HIDE_ILEX_FOREST_FARFETCHD_4"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_ILEX_FOREST_FARFETCHD_3",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_FARFETCHD",
       "x": 64,
       "y": 40,
@@ -474,8 +475,8 @@
       "flag": "FLAG_HIDE_ILEX_FOREST_FARFETCHD_3"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_ILEX_FOREST_KURT",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_KURT_HNS",
       "x": 29,
       "y": 43,
@@ -503,8 +504,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_ILEX_FOREST_KIMONO",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 54,
       "y": 9,
@@ -518,8 +519,8 @@
       "flag": "FLAG_HIDE_ILEX_FOREST_KIMONO"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_ILEX_FOREST_BUTTERFREE",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY_HNS",
       "x": 24,
       "y": 14,
@@ -533,8 +534,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_ILEX_FOREST_SECOND_CELEBI",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CELEBI",
       "x": 32,
       "y": 37,
@@ -609,7 +610,9 @@
       "y": 36,
       "elevation": 0,
       "item": "ITEM_TINY_MUSHROOM",
-      "flag": "FLAG_HIDDEN_ITEM_ILEX_TINY_MUSHROOM"
+      "flag": "FLAG_HIDDEN_ITEM_ILEX_TINY_MUSHROOM",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -617,7 +620,9 @@
       "y": 32,
       "elevation": 0,
       "item": "ITEM_ANTIDOTE",
-      "flag": "FLAG_HIDDEN_ITEM_ILEX_ANTIDOTE"
+      "flag": "FLAG_HIDDEN_ITEM_ILEX_ANTIDOTE",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -625,7 +630,9 @@
       "y": 8,
       "elevation": 0,
       "item": "ITEM_BIG_MUSHROOM",
-      "flag": "FLAG_HIDDEN_ITEM_ILEX_BIG_MUSHROOM"
+      "flag": "FLAG_HIDDEN_ITEM_ILEX_BIG_MUSHROOM",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

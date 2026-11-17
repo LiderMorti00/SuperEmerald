@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -49,8 +50,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_OLIVINE_SABRINA",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SABRINA_HNS",
       "x": 24,
       "y": 5,
@@ -81,7 +82,9 @@
       "y": 6,
       "elevation": 0,
       "item": "ITEM_PEARL",
-      "flag": "FLAG_HIDDEN_ITEM_OLIVINE_PEARL"
+      "flag": "FLAG_HIDDEN_ITEM_OLIVINE_PEARL",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

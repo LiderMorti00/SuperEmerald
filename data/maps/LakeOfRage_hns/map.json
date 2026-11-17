@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -49,8 +50,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_LAKEOFRAGE_LANCE",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LANCE_HNS",
       "x": 30,
       "y": 37,
@@ -64,8 +65,8 @@
       "flag": "FLAG_HIDE_LAKE_OF_RAGE_LANCE"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_LAKEOFRAGE_OLDMAN",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_HNS",
       "x": 32,
       "y": 35,
@@ -121,8 +122,8 @@
       "flag": "FLAG_TEMP_1"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_LAKEOFRAGE_GYARADOS",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SHINY_GYARADOS_HNS",
       "x": 32,
       "y": 28,
@@ -234,8 +235,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_LAKEOFRAGE_DRAGONITE",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DRAGONITE",
       "x": 31,
       "y": 37,
@@ -249,8 +250,8 @@
       "flag": "FLAG_HIDE_LAKE_OF_RAGE_LANCE"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_LAKE_PRYCE",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PRYCE_HNS",
       "x": 9,
       "y": 38,
@@ -304,7 +305,9 @@
       "y": 36,
       "elevation": 0,
       "item": "ITEM_MAX_REVIVE",
-      "flag": "FLAG_ITEM_LAKEOFRAGE_MAX_REVIVE"
+      "flag": "FLAG_ITEM_LAKEOFRAGE_MAX_REVIVE",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -312,7 +315,9 @@
       "y": 6,
       "elevation": 0,
       "item": "ITEM_RARE_CANDY",
-      "flag": "FLAG_HIDDEN_ITEM_LAKEOFRAGE_RARE_CANDY"
+      "flag": "FLAG_HIDDEN_ITEM_LAKEOFRAGE_RARE_CANDY",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -320,7 +325,9 @@
       "y": 7,
       "elevation": 0,
       "item": "ITEM_MAX_POTION",
-      "flag": "FLAG_HIDDEN_ITEM_LAKEOFRAGE_MAX_POTION"
+      "flag": "FLAG_HIDDEN_ITEM_LAKEOFRAGE_MAX_POTION",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -328,7 +335,9 @@
       "y": 19,
       "elevation": 0,
       "item": "ITEM_CHOICE_SPECS",
-      "flag": "FLAG_HIDDEN_ITEM_LAKEOFRAGE_CHOICE_SPECS"
+      "flag": "FLAG_HIDDEN_ITEM_LAKEOFRAGE_CHOICE_SPECS",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -336,7 +345,9 @@
       "y": 6,
       "elevation": 0,
       "item": "ITEM_FULL_HEAL",
-      "flag": "FLAG_HIDDEN_ITEM_LAKEOFRAGE_FULL_HEAL"
+      "flag": "FLAG_HIDDEN_ITEM_LAKEOFRAGE_FULL_HEAL",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

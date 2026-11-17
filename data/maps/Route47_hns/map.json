@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -528,7 +529,9 @@
       "y": 13,
       "elevation": 0,
       "item": "ITEM_LUCKY_EGG",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE47_LUCKY_EGG"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE47_LUCKY_EGG",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -536,7 +539,9 @@
       "y": 48,
       "elevation": 0,
       "item": "ITEM_WAVE_INCENSE",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE47_WAVE_INCENSE"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE47_WAVE_INCENSE",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -544,7 +549,9 @@
       "y": 9,
       "elevation": 0,
       "item": "ITEM_LAGGING_TAIL",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE47_LAGGING_TAIL"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE47_LAGGING_TAIL",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -552,7 +559,9 @@
       "y": 55,
       "elevation": 0,
       "item": "ITEM_PEARL",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE47_PEARL"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE47_PEARL",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

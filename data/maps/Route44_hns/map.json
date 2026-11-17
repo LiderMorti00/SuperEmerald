@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -437,7 +438,9 @@
       "y": 7,
       "elevation": 0,
       "item": "ITEM_ELIXIR",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE44_ELIXIR"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE44_ELIXIR",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

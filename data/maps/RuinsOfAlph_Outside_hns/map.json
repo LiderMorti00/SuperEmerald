@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -404,7 +405,9 @@
       "y": 9,
       "elevation": 0,
       "item": "ITEM_RARE_CANDY",
-      "flag": "FLAG_HIDDEN_ITEM_RUINSOFALPH_RARE_CANDY"
+      "flag": "FLAG_HIDDEN_ITEM_RUINSOFALPH_RARE_CANDY",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -412,7 +415,9 @@
       "y": 32,
       "elevation": 0,
       "item": "ITEM_NUGGET",
-      "flag": "FLAG_HIDDEN_ITEM_RUINSOFALPH_NUGGET"
+      "flag": "FLAG_HIDDEN_ITEM_RUINSOFALPH_NUGGET",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

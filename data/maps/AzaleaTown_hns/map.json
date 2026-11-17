@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -91,8 +92,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_AZALEA_TOWN_SILVER",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SILVER_HNS",
       "x": 19,
       "y": 16,
@@ -260,8 +261,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_AZALEA_TOWN_KURT_GS",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_KURT_HNS",
       "x": 19,
       "y": 11,
@@ -452,7 +453,9 @@
       "y": 14,
       "elevation": 0,
       "item": "ITEM_FULL_HEAL",
-      "flag": "FLAG_HIDDEN_ITEM_AZALEA_FULL_HEAL"
+      "flag": "FLAG_HIDDEN_ITEM_AZALEA_FULL_HEAL",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

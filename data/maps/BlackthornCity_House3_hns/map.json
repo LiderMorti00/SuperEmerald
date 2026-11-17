@@ -11,10 +11,12 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_MOVE_DELETER",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_HNS",
       "x": 4,
@@ -26,10 +28,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SE_J_BlackthornCity_House3_hns_BlackthornCity_MoveDeletersHouse_EventScript_MoveDeleter",
-      "flag": "0",
-      "local_id": "LOCALID_MOVE_DELETER"
+      "flag": "0"
     },
     {
+      "local_id": "LOCALID_BLACKTHORN_MOVE_RELEARNER",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN_HNS",
       "x": 7,
@@ -41,8 +43,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SE_J_BlackthornCity_House3_hns_BlackthornCity_MoveRelearnersHouse_EventScript_MoveRelearner",
-      "flag": "0",
-      "local_id": "LOCALID_BLACKTHORN_MOVE_RELEARNER"
+      "flag": "0"
     }
   ],
   "warp_events": [

@@ -11,7 +11,6 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -27,7 +26,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PSYCHIC_M_HNS",
       "x": 19,
       "y": 40,
@@ -41,7 +39,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M_HNS",
       "x": 16,
       "y": -10,
@@ -55,7 +52,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_F_HNS",
       "x": 9,
       "y": -19,
@@ -69,7 +65,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_BULBASAUR",
       "x": 15,
       "y": 56,
@@ -83,7 +78,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SQUIRTLE",
       "x": 17,
       "y": 56,
@@ -97,7 +91,6 @@
       "flag": "FLAG_NIGHT_POKEMON"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CHARMANDER",
       "x": 17,
       "y": 58,
@@ -111,7 +104,6 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ARBOK",
       "x": 15,
       "y": 50,
@@ -125,7 +117,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DODRIO",
       "x": 2,
       "y": 22,
@@ -139,7 +130,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PONYTA",
       "x": 38,
       "y": 16,
@@ -153,7 +143,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_RAPIDASH",
       "x": 36,
       "y": 20,
@@ -167,7 +156,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_BULBASAUR",
       "x": 23,
       "y": -13,
@@ -181,7 +169,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SQUIRTLE",
       "x": 11,
       "y": -8,
@@ -195,7 +182,6 @@
       "flag": "FLAG_NIGHT_POKEMON"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CHARMANDER",
       "x": 20,
       "y": -19,
@@ -209,7 +195,6 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MURKROW",
       "x": 11,
       "y": -28,
@@ -223,7 +208,6 @@
       "flag": "FLAG_NIGHT_POKEMON"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M_HNS",
       "x": 19,
       "y": 13,
@@ -237,7 +221,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 19,
       "y": 9,
@@ -286,5 +269,6 @@
       "quantity": 1,
       "underfoot": false
     }
-  ]
+  ],
+  "floor_number": 0
 }

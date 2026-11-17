@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -325,7 +326,9 @@
       "y": 7,
       "elevation": 0,
       "item": "ITEM_HP_UP",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE38_HP_UP"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE38_HP_UP",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -333,7 +336,9 @@
       "y": 24,
       "elevation": 0,
       "item": "ITEM_MAX_POTION",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE38_MAX_POTION"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE38_MAX_POTION",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -40,8 +41,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_R39_BAOBA",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN_HNS",
       "x": 31,
       "y": 27,
@@ -251,8 +252,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_R39_SHADOW",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LEGENDARY_SHADOW_HNS",
       "x": 30,
       "y": 12,
@@ -363,7 +364,9 @@
       "y": 45,
       "elevation": 0,
       "item": "ITEM_PP_UP",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE39_PP_UP"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE39_PP_UP",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

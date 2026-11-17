@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -26,8 +27,8 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "local_id": "LOCALID_GUIDE_GENT",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_HNS",
       "x": 57,
       "y": 8,
@@ -209,8 +210,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_CHERRYGROVE_SILVER",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SILVER_HNS",
       "x": 65,
       "y": 10,
@@ -277,7 +278,9 @@
       "y": 3,
       "elevation": 0,
       "item": "ITEM_NUGGET",
-      "flag": "FLAG_HIDDEN_ITEM_CHERRYGROVE_NUGGET_1"
+      "flag": "FLAG_HIDDEN_ITEM_CHERRYGROVE_NUGGET_1",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -285,7 +288,9 @@
       "y": 12,
       "elevation": 0,
       "item": "ITEM_NUGGET",
-      "flag": "FLAG_HIDDEN_ITEM_CHERRYGROVE_NUGGET_2"
+      "flag": "FLAG_HIDDEN_ITEM_CHERRYGROVE_NUGGET_2",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

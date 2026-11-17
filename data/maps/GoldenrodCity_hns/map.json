@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -166,8 +167,8 @@
       "flag": "FLAG_HIDE_GOLDENROD_ROCKETS"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_GOLDENROD_ROCKET_SCOUT",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M_HNS",
       "x": 18,
       "y": 22,
@@ -504,6 +505,7 @@
     },
     {
       "local_id": "LOCALID_GOLDENROD_SE_ORO",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GOLD_NORMAL_HNS",
       "x": 34,
       "y": 16,
