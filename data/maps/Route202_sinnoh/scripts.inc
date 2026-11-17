@@ -13,7 +13,7 @@ Route202_EventScript_Tristan::
 	end
 
 Route202_Text_TristanPost::
-	.string "Don't be shy about talking to Trainers\n"
+	.string "Don't be shy about talking to TRAINERS\n"
 	.string "you'd like to battle.\p"
 	.string "POKéMON grow stronger and stronger\n"
 	.string "from battling.$"
@@ -27,7 +27,7 @@ Route202_Text_TristanDefeat::
 	.string "Too strong! Too strong!$"
 
 Route202_Text_TristanIntro::
-	.string "You're a POKéMON Trainer, and so am I!\n"
+	.string "You're a POKéMON TRAINER, and so am I!\n"
 	.string "Our eyes met, so battle we must!$"
 
 Route202_EventScript_Natalie::
@@ -43,7 +43,7 @@ Route202_Text_NatalieDefeat::
 	.string "Oh, boo! I can't win!$"
 
 Route202_Text_NatalieIntro::
-	.string "I spy, with my little eye... A Trainer!\p"
+	.string "I spy, with my little eye... A TRAINER!\p"
 	.string "A battle, please!$"
 
 Route202_EventScript_Logan::
@@ -144,7 +144,7 @@ Route202_Movement_SNLookAround::
 	step_end
 
 Route202_Text_SNRadarBD::
-	.string "Dawn: See? Did you notice the tall\n"
+	.string "DAWN: See? Did you notice the tall\n"
 	.string "grass rustling?\p"
 	.string "There’s a POKéMON in that patch of tall\n"
 	.string "grass.\p"
@@ -156,7 +156,7 @@ Route202_EventScript_SNRadar_BL::
 	goto Route202_EventScript_SNRadar_BN
 
 Route202_Text_SNRadarBL::
-	.string "Lucas: There! Did you see the tall\n"
+	.string "LUCAS: There! Did you see the tall\n"
 	.string "grass rustling?\p"
 	.string "There’s a POKéMON in that patch of tall\n"
 	.string "grass.\p"
@@ -164,7 +164,7 @@ Route202_Text_SNRadarBL::
 	.string "leaping out.$"
 
 Route202_Text_SNRadarAD::
-	.string "Dawn: Hi, {PLAYER}! I was waiting for\n"
+	.string "DAWN: Hi, {PLAYER}! I was waiting for\n"
 	.string "you.\p"
 	.string "Let me show you how the Poké Radar\n"
 	.string "works.\p"
@@ -176,7 +176,7 @@ Route202_EventScript_SNRadar_AL::
 	goto Route202_EventScript_SNRadar_AN
 
 Route202_Text_SNRadarAL::
-	.string "Lucas: {PLAYER}.\p"
+	.string "LUCAS: {PLAYER}.\p"
 	.string "Let me explain how the Poké Radar\n"
 	.string "works.\p"
 	.string "Let’s give it a go. When you use the\n"
@@ -206,5 +206,5 @@ Route202_EventScript_Sign3::
 
 Route202_Text_Sign3::
 	.string "TRAINER TIPS\p"
-	.string "Trainers will challenge you as\n"
+	.string "TRAINERS will challenge you as\n"
 	.string "soon as your eyes meet. Be ready!$"

@@ -17,7 +17,7 @@ GalacticHQ_2F_Text_GruntDefeat::
 
 GalacticHQ_2F_Text_GruntIntro::
 	.string "I’m, like, this close to getting my\n"
-	.string "promotion to Commander.\p"
+	.string "promotion to COMMANDER.\p"
 	.string "I’ll impress our great boss by making\n"
 	.string "you my newest trophy!$"
 
@@ -53,7 +53,7 @@ GalacticHQ_2F_Text_Grunt3Defeat::
 
 GalacticHQ_2F_Text_Grunt3Intro::
 	.string "You should be tired out by now. It’s\n"
-	.string "Team Galactic’s turn to shine!$"
+	.string "TEAM GALACTIC’s turn to shine!$"
 
 GalacticHQ_2F_EventScript_Darrius::
 	trainerbattle_single TRAINER_GRUNT_MUSEUM_2_SINNOH, GalacticHQ_2F_Text_DarriusIntro, GalacticHQ_2F_Text_DarriusDefeat
@@ -70,7 +70,7 @@ GalacticHQ_2F_Text_DarriusDefeat::
 
 GalacticHQ_2F_Text_DarriusIntro::
 	.string "I won’t let you disrupt our research!\n"
-	.string "This is for Team Galactic!$"
+	.string "This is for TEAM GALACTIC!$"
 
 GalacticHQ_2F_EventScript_PtSign1::
 	msgbox GalacticHQ_2F_Text_PtSign1, MSGBOX_SIGN
@@ -84,7 +84,7 @@ GalacticHQ_2F_EventScript_PtSign2::
 	end
 
 GalacticHQ_2F_Text_PtSign2::
-	.string "Team Galactic Nap Room\p"
+	.string "TEAM GALACTIC Nap Room\p"
 	.string "Ensure the bed is unoccupied before\n"
 	.string "getting into it!$"
 
@@ -93,21 +93,21 @@ GalacticHQ_2F_EventScript_PtSign3::
 	end
 
 GalacticHQ_2F_Text_PtSign3::
-	.string "Team Galactic TV Room\p"
+	.string "TEAM GALACTIC TV Room\p"
 	.string "State-of-the-art audio & video\n"
 	.string "system for member use only!\p"
 	.string "Onward to a new universe! Team\n"
-	.string "Galactic!$"
+	.string "GALACTIC!$"
 
 GalacticHQ_2F_EventScript_PtSign4::
 	msgbox GalacticHQ_2F_Text_PtSign4, MSGBOX_SIGN
 	end
 
 GalacticHQ_2F_Text_PtSign4::
-	.string "The Team Galactic credo! Everything\n"
-	.string "belongs to Team Galactic!\p"
+	.string "The TEAM GALACTIC credo! Everything\n"
+	.string "belongs to TEAM GALACTIC!\p"
 	.string "Look beyond the world--space will\n"
-	.string "become Team Galactic’s!$"
+	.string "become TEAM GALACTIC’s!$"
 
 GalacticHQ_2F_EventScript_PtSign5::
 	msgbox GalacticHQ_2F_Text_PtSign5, MSGBOX_SIGN

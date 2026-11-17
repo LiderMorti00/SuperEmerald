@@ -36,6 +36,6 @@ HotelGrandLake_EventScript_SNGameDirector::
 HotelGrandLake_Text_SNDirector::
 	.string "I’m the game director! I love POKéMON\n"
 	.string "and I made a game about them.\p"
-	.string "If you complete the Sinnoh POKéDEX,\n"
+	.string "If you complete the SINNOH POKéDEX,\n"
 	.string "show it to me! I will give you something\l"
 	.string "special.$"

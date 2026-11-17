@@ -35,7 +35,7 @@ OreburghCity_MiningMuseum_EventScript_PtNpc3::
 
 OreburghCity_MiningMuseum_Text_PtNpc3_0::
 	.string "Well, how about that!\p"
-	.string "The Oreburgh Mine extends under the\n"
+	.string "The OREBURGH MINE extends under the\n"
 	.string "seafloor!$"
 
 OreburghCity_MiningMuseum_EventScript_SNFossil::
@@ -62,7 +62,7 @@ OreburghCity_MiningMuseum_EventScript_SNFossil::
 
 OreburghCity_MiningMuseum_EventScript_SNFossil_None::
 	.string "Bring me a Fossil, any Fossil! The\n"
-	.string "Underground Man in Eterna City digs\l"
+	.string "UNDERGROUND Man in ETERNA CITY digs\l"
 	.string "them up, you know.$"
 
 OreburghCity_MiningMuseum_EventScript_SNFossil_CLAW_FOSSIL::
@@ -266,7 +266,7 @@ OreburghCity_MiningMuseum_EventScript_PtNpc5::
 	end
 
 OreburghCity_MiningMuseum_Text_PtNpc5_0::
-	.string "Hello! Welcome to the Oreburgh Mining\n"
+	.string "Hello! Welcome to the OREBURGH Mining\n"
 	.string "Museum!$"
 
 OreburghCity_MiningMuseum_EventScript_PtNpc6::
@@ -278,11 +278,11 @@ OreburghCity_MiningMuseum_EventScript_PtNpc6::
 
 OreburghCity_MiningMuseum_Text_PtNpc6_0::
 	.string "It’s a little far from here, but there is\n"
-	.string "a city called Eterna City.\p"
+	.string "a city called ETERNA CITY.\p"
 	.string "I’ve heard a curious person named the\n"
-	.string "Underground Man lives there.\p"
+	.string "UNDERGROUND Man lives there.\p"
 	.string "With a name like that, he must be an\n"
-	.string "authority on the Underground.$"
+	.string "authority on the UNDERGROUND.$"
 
 OreburghCity_MiningMuseum_EventScript_PtNpc7::
 	lock
@@ -379,7 +379,7 @@ OreburghCity_MiningMuseum_EventScript_SNCoalLump::
 
 OreburghCity_MiningMuseum_Text_SNCoalLump::
 	.string "An enormous lump of coal dug out of\n"
-	.string "the Oreburgh Mine is on display.\p"
+	.string "the OREBURGH MINE is on display.\p"
 	.string "It's as black as can be!$"
 
 OreburghCity_MiningMuseum_EventScript_PtNpc8::
@@ -390,7 +390,7 @@ OreburghCity_MiningMuseum_EventScript_PtNpc8::
 	end
 
 OreburghCity_MiningMuseum_Text_PtNpc8_0::
-	.string "The history of Oreburgh Mine...\p"
+	.string "The history of OREBURGH MINE...\p"
 	.string "You could call it a history of effort\n"
 	.string "and friendship between people and\l"
 	.string "POKéMON.$"
@@ -401,5 +401,5 @@ OreburghCity_MiningMuseum_EventScript_SNRocket::
 
 OreburghCity_MiningMuseum_Text_SNRocket::
 	.string "A model of a rocket is on display.\p"
-	.string "“Someday, fuel made from Oreburgh\n"
+	.string "“Someday, fuel made from OREBURGH\n"
 	.string "coal may launch rockets like this.”$"

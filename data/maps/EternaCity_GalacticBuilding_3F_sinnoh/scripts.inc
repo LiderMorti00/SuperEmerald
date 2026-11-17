@@ -21,7 +21,7 @@ EternaCity_GalacticBuilding_3F_EventScript_Grunt::
 EternaCity_GalacticBuilding_3F_Text_GruntPost::
 	.string "You can catch POKéMON anywhere.\n"
 	.string "What's so special about them?\p"
-	.string "Trainers that lose theirs should quit\n"
+	.string "TRAINERS that lose theirs should quit\n"
 	.string "whining and catch some more!$"
 
 EternaCity_GalacticBuilding_3F_Text_GruntDefeat::

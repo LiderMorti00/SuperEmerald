@@ -20,7 +20,7 @@ SurvivalArea_EventScript_PtNpc2::
 	end
 
 SurvivalArea_Text_PtNpc2::
-	.string "Trainers who lose at the Battle\n"
+	.string "TRAINERS who lose at the Battle\n"
 	.string "Frontier come here to train.$"
 
 SurvivalArea_EventScript_PtNpc3::
@@ -28,7 +28,7 @@ SurvivalArea_EventScript_PtNpc3::
 	end
 
 SurvivalArea_Text_PtNpc3::
-	.string "Hey, traveling Trainer. Is your big Bag\n"
+	.string "Hey, traveling TRAINER. Is your big Bag\n"
 	.string "full of items?\p"
 	.string "Or is it full of dreams?$"
 
@@ -106,7 +106,7 @@ SurvivalArea_EventScript_SNBarry_DoneT::
 	.string "BARRY: Hey, {PLAYER}! How are you\n"
 	.string "doing?\p"
 	.string "Me? You even need to ask? Piling up the\n"
-	.string "wins at the Battle Tower!\p"
+	.string "wins at the BATTLE TOWER!\p"
 	.string "Huh? My longest winning streak? What,\n"
 	.string "you’re going to grill me now?$"
 
@@ -117,10 +117,10 @@ SurvivalArea_EventScript_SNBarry_Done2::
 
 SurvivalArea_Text_SNBarryTalk2::
 	.string "{RIVAL}: ...! Oh, it’s you, {PLAYER}.\p"
-	.string "You know, the best Trainers must really\n"
+	.string "You know, the best TRAINERS must really\n"
 	.string "love POKéMON from their heart.\p"
-	.string "I’m talking about people like the Gym\n"
-	.string "Leaders, of course.\p"
+	.string "I’m talking about people like the GYM\n"
+	.string "LEADERS, of course.\p"
 	.string "People like the Tower Tycoon and the\n"
 	.string "other Frontier Brains, too.\p"
 	.string "You can tell they love POKéMON when\n"
@@ -128,7 +128,7 @@ SurvivalArea_Text_SNBarryTalk2::
 	.string "But I’m not conceding anything to\n"
 	.string "them, or to you!\p"
 	.string "Because I’m still going to be the\n"
-	.string "greatest Trainer ever!$"
+	.string "greatest TRAINER ever!$"
 
 SurvivalArea_EventScript_SNBarry_Done1::
 	msgbox SurvivalArea_Text_SNBarryTalk1, MSGBOX_DEFAULT
@@ -157,7 +157,7 @@ SurvivalArea_EventScript_SNBuck::
 	end
 
 SurvivalArea_Text_SNBuck::
-	.string "Buck: Yo, if it isn’t {PLAYER}!\p"
+	.string "BUCK: Yo, if it isn’t {PLAYER}!\p"
 	.string "This! It’s my place! Drop in, hey?$"
 
 SurvivalArea_EventScript_PtSign1::
@@ -165,4 +165,4 @@ SurvivalArea_EventScript_PtSign1::
 	end
 
 SurvivalArea_Text_PtSign1::
-	.string "Survival Area Staging Point$"
+	.string "SURVIVAL AREA Staging Point$"

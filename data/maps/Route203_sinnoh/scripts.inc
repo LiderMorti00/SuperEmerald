@@ -11,16 +11,16 @@ Route203_EventScript_Sebastian::
 	end
 
 Route203_Text_SebastianPost::
-	.string "I guess if you don't have a single Gym\n"
-	.string "Badge, you're a total nobody...$"
+	.string "I guess if you don't have a single GYM\n"
+	.string "BADGE, you're a total nobody...$"
 
 Route203_Text_SebastianDefeat::
 	.string "I guess it means I'm not ready for the\n"
-	.string "Gym challenge yet...$"
+	.string "GYM challenge yet...$"
 
 Route203_Text_SebastianIntro::
-	.string "Before I challenge the POKéMON Gym\n"
-	.string "Leader, I'll test my strength on you!$"
+	.string "Before I challenge the POKéMON GYM\n"
+	.string "LEADER, I'll test my strength on you!$"
 
 Route203_EventScript_Michael::
 	trainerbattle_single TRAINER_ALLEN_SINNOH, Route203_Text_MichaelIntro, Route203_Text_MichaelDefeat
@@ -29,7 +29,7 @@ Route203_EventScript_Michael::
 
 Route203_Text_MichaelPost::
 	.string "Keep out of the grass or dodge the\n"
-	.string "eyes of Trainers...?\p"
+	.string "eyes of TRAINERS...?\p"
 	.string "I always have a tough time choosing.$"
 
 Route203_Text_MichaelDefeat::
@@ -53,7 +53,7 @@ Route203_Text_KaitlinDefeat::
 	.string "Hunh? You're finished so soon?$"
 
 Route203_Text_KaitlinIntro::
-	.string "I found a Trainer while looking for\n"
+	.string "I found a TRAINER while looking for\n"
 	.string "some POKéMON!$"
 
 Route203_EventScript_Dallas::
@@ -87,7 +87,7 @@ Route203_EventScript_Madeline::
 	end
 
 Route203_Text_MadelinePost::
-	.string "I'm collecting lots of Gym Badges.\n"
+	.string "I'm collecting lots of GYM BADGES.\n"
 	.string "They're so sparkly and pretty!$"
 
 Route203_EventScript_Madeline_Rematch::
@@ -99,8 +99,8 @@ Route203_Text_MadelineDefeat::
 	.string "Oh, I lost! Lalala!$"
 
 Route203_Text_MadelineIntro::
-	.string "I got a nifty-keen Gym Badge from the\n"
-	.string "Gym Leader in OREBURGH CITY!$"
+	.string "I got a nifty-keen GYM BADGE from the\n"
+	.string "GYM LEADER in OREBURGH CITY!$"
 
 Route203_EventScript_PtNpc1::
 	msgbox Route203_Text_PtNpc1, MSGBOX_NPC

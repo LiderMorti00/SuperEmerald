@@ -31,9 +31,9 @@ CanalaveCity_Library_F2_EventScript_PtSign1::
 	end
 
 CanalaveCity_Library_F2_Text_PtSign1::
-	.string "”Sinnoh’s Beginning as Told on Plates.”\p"
+	.string "”SINNOH’s Beginning as Told on Plates.”\p"
 	.string "This is a collection of engravings from\n"
-	.string "ancient Plates found in Sinnoh.\p"
+	.string "ancient Plates found in SINNOH.\p"
 	.string "“The Original One breathed alone\n"
 	.string "before the universe came.”\p"
 	.string "“When the universe was created, its\n"
@@ -58,9 +58,9 @@ CanalaveCity_Library_F2_EventScript_PtSign2::
 	end
 
 CanalaveCity_Library_F2_Text_PtSign2::
-	.string "”Sinnoh’s Beginning as Told on Plates.”\p"
+	.string "”SINNOH’s Beginning as Told on Plates.”\p"
 	.string "This is a collection of engravings from\n"
-	.string "ancient Plates found in Sinnoh.\p"
+	.string "ancient Plates found in SINNOH.\p"
 	.string "“The Original One breathed alone\n"
 	.string "before the universe came.”\p"
 	.string "“When the universe was created, its\n"
@@ -181,9 +181,9 @@ CanalaveCity_Library_F2_EventScript_PtSign15::
 	end
 
 CanalaveCity_Library_F2_Text_PtSign15::
-	.string "”Sinnoh’s Beginning as Told on Plates.”\p"
+	.string "”SINNOH’s Beginning as Told on Plates.”\p"
 	.string "This is a collection of engravings from\n"
-	.string "ancient Plates found in Sinnoh.\p"
+	.string "ancient Plates found in SINNOH.\p"
 	.string "“The Original One breathed alone\n"
 	.string "before the universe came.”\p"
 	.string "“When the universe was created, its\n"
@@ -208,9 +208,9 @@ CanalaveCity_Library_F2_EventScript_PtSign16::
 	end
 
 CanalaveCity_Library_F2_Text_PtSign16::
-	.string "”Sinnoh’s Beginning as Told on Plates.”\p"
+	.string "”SINNOH’s Beginning as Told on Plates.”\p"
 	.string "This is a collection of engravings from\n"
-	.string "ancient Plates found in Sinnoh.\p"
+	.string "ancient Plates found in SINNOH.\p"
 	.string "“The Original One breathed alone\n"
 	.string "before the universe came.”\p"
 	.string "“When the universe was created, its\n"
@@ -235,9 +235,9 @@ CanalaveCity_Library_F2_EventScript_PtSign17::
 	end
 
 CanalaveCity_Library_F2_Text_PtSign17::
-	.string "”Sinnoh’s Beginning as Told on Plates.”\p"
+	.string "”SINNOH’s Beginning as Told on Plates.”\p"
 	.string "This is a collection of engravings from\n"
-	.string "ancient Plates found in Sinnoh.\p"
+	.string "ancient Plates found in SINNOH.\p"
 	.string "“The Original One breathed alone\n"
 	.string "before the universe came.”\p"
 	.string "“When the universe was created, its\n"
@@ -262,9 +262,9 @@ CanalaveCity_Library_F2_EventScript_PtSign18::
 	end
 
 CanalaveCity_Library_F2_Text_PtSign18::
-	.string "”Sinnoh’s Beginning as Told on Plates.”\p"
+	.string "”SINNOH’s Beginning as Told on Plates.”\p"
 	.string "This is a collection of engravings from\n"
-	.string "ancient Plates found in Sinnoh.\p"
+	.string "ancient Plates found in SINNOH.\p"
 	.string "“The Original One breathed alone\n"
 	.string "before the universe came.”\p"
 	.string "“When the universe was created, its\n"
@@ -289,9 +289,9 @@ CanalaveCity_Library_F2_EventScript_PtSign19::
 	end
 
 CanalaveCity_Library_F2_Text_PtSign19::
-	.string "”Sinnoh’s Beginning as Told on Plates.”\p"
+	.string "”SINNOH’s Beginning as Told on Plates.”\p"
 	.string "This is a collection of engravings from\n"
-	.string "ancient Plates found in Sinnoh.\p"
+	.string "ancient Plates found in SINNOH.\p"
 	.string "“The Original One breathed alone\n"
 	.string "before the universe came.”\p"
 	.string "“When the universe was created, its\n"
@@ -316,9 +316,9 @@ CanalaveCity_Library_F2_EventScript_PtSign20::
 	end
 
 CanalaveCity_Library_F2_Text_PtSign20::
-	.string "”Sinnoh’s Beginning as Told on Plates.”\p"
+	.string "”SINNOH’s Beginning as Told on Plates.”\p"
 	.string "This is a collection of engravings from\n"
-	.string "ancient Plates found in Sinnoh.\p"
+	.string "ancient Plates found in SINNOH.\p"
 	.string "“The Original One breathed alone\n"
 	.string "before the universe came.”\p"
 	.string "“When the universe was created, its\n"

@@ -26,4 +26,4 @@ ValorLakefront_House1_Text_PtNpc1_1::
 	.string "Blow the White Flute if you want to\n"
 	.string "attract more wild POKéMON.\p"
 	.string "It’s a rare glass flute you can only\n"
-	.string "get in the Hoenn region.$"
+	.string "get in the HOENN region.$"

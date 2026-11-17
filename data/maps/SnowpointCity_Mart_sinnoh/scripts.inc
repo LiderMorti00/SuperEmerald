@@ -15,9 +15,9 @@ SnowpointCity_Mart_Text_PtNpc1_0::
 	.string "I’m trying for different mixes of moves\n"
 	.string "in different types.\p"
 	.string "It’s for when I go up against the Elite\n"
-	.string "Four of the POKéMON League.\p"
-	.string "They say the Elite Four are tougher\n"
-	.string "than any Gym Leader by far.$"
+	.string "Four of the POKéMON LEAGUE.\p"
+	.string "They say the ELITE FOUR are tougher\n"
+	.string "than any GYM LEADER by far.$"
 
 SnowpointCity_Mart_EventScript_PtNpc2::
 	lock

@@ -25,7 +25,7 @@ PastoriaCity_House2_EventScript_PtNpc2::
 
 PastoriaCity_House2_Text_PtNpc2_0::
 	.string "My brother’s girlfriend is the Massage\n"
-	.string "Girl in Veilstone City.\p"
+	.string "Girl in VEILSTONE CITY.\p"
 	.string "They stay in touch by having POKéMON\n"
 	.string "hold Mail for each other.$"
 

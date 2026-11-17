@@ -7,5 +7,5 @@ SandgemTown_PokemonCenter_2F_EventScript_PtNpc1::
 	end
 
 SandgemTown_PokemonCenter_2F_Text_PtNpc1::
-	.string "What kind of Trainer's sign will get\n"
+	.string "What kind of TRAINER's sign will get\n"
 	.string "people laughing?$"

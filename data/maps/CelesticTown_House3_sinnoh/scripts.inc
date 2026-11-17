@@ -10,8 +10,8 @@ CelesticTown_House3_EventScript_PtNpc1::
 	end
 
 CelesticTown_House3_Text_PtNpc1_0::
-	.string "Mt. Coronet towers at the center of\n"
-	.string "Sinnoh.\p"
+	.string "MT. CORONET towers at the center of\n"
+	.string "SINNOH.\p"
 	.string "In a way, it’s the closest place to the\n"
 	.string "sky, and to space, in this region.$"
 
@@ -23,5 +23,5 @@ CelesticTown_House3_EventScript_PtNpc2::
 	end
 
 CelesticTown_House3_Text_PtNpc2_0::
-	.string "If I climb on top of Mt. Coronet, will I\n"
-	.string "be able to see all of Sinnoh?$"
+	.string "If I climb on top of MT. CORONET, will I\n"
+	.string "be able to see all of SINNOH?$"

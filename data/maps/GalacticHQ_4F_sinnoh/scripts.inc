@@ -33,27 +33,27 @@ GalacticHQ_4F_EventScript_SNCyrus::
 GalacticHQ_4F_Text_SNWarpPanel::
 	.string "If you wish to save the POKéMON from\n"
 	.string "the lakes, take the warp panel ahead.\p"
-	.string "I am off to Mt. Coronet.\p"
+	.string "I am off to MT. CORONET.\p"
 	.string "I will ascend the mountain to its peak\n"
 	.string "where destiny awaits me.\p"
 	.string "It is there that I will create my new\n"
 	.string "world...$"
 
 GalacticHQ_4F_EventScript_SNCyrus_Post2::
-	.string "Cyrus: The Master Ball is the ultimate\n"
+	.string "CYRUS: The Master Ball is the ultimate\n"
 	.string "POKé BALL.\p"
 	.string "It will unfailingly catch any POKéMON\n"
 	.string "in the wild.\p"
 	.string "But it is not anything that I require.\p"
-	.string "Unlike you Trainers, I do not make\n"
+	.string "Unlike you TRAINERS, I do not make\n"
 	.string "POKéMON my friends or partners.\p"
-	.string "Unlike other Team Galactic members, I\n"
+	.string "Unlike other TEAM GALACTIC members, I\n"
 	.string "don’t use POKéMON as tools.\p"
 	.string "Instead, I make the power of POKéMON\n"
 	.string "my own.$"
 
 GalacticHQ_4F_EventScript_SNCyrus_Post::
-	.string "Cyrus: I see. You are indeed strong.\p"
+	.string "CYRUS: I see. You are indeed strong.\p"
 	.string "And the basis of your power is your\n"
 	.string "compassion toward POKéMON.\p"
 	.string "...How wasteful... Such emotions are but\n"
@@ -70,7 +70,7 @@ GalacticHQ_4F_EventScript_SNCyrus_Post::
 	.string "This is your reward.$"
 
 GalacticHQ_4F_EventScript_SNCyrus_Defeat::
-	.string "Cyrus: ...$"
+	.string "CYRUS: ...$"
 
 GalacticHQ_4F_Text_SNIKnowWhy::
 	.string "I know why you’re here. I can sense it\n"
@@ -99,19 +99,19 @@ GalacticHQ_4F_Text_SNIKnowWhy::
 	.string "your heart!$"
 
 GalacticHQ_4F_EventScript_SNCyrus_Intro::
-	.string "Cyrus: ...So, you’ve come. You heard my\n"
+	.string "CYRUS: ...So, you’ve come. You heard my\n"
 	.string "speech, I take it.\p"
 	.string "Snicker... A big lie, of course.\p"
 	.string "It’s true insofar as my intention is to\n"
 	.string "create a new world.\p"
 	.string "But that world isn’t for the likes of\n"
-	.string "Team Galactic.\p"
+	.string "TEAM GALACTIC.\p"
 	.string "I seek an entirely new world solely for\n"
 	.string "myself.\p"
 	.string "If not, it could never be the complete\n"
 	.string "and perfect world.\p"
 	.string "You’ve seen my minions of Team\n"
-	.string "Galactic.\p"
+	.string "GALACTIC.\p"
 	.string "You yourself must know that they are\n"
 	.string "uniformly useless and incomplete.$"
 
@@ -120,15 +120,15 @@ GalacticHQ_4F_EventScript_PtSign1::
 	end
 
 GalacticHQ_4F_Text_PtSign1::
-	.string "Team Galactic Warp Panels!\p"
+	.string "TEAM GALACTIC Warp Panels!\p"
 	.string "The green warp panel returns you to\n"
 	.string "the ground floor.\p"
 	.string "Onward to a new universe! -Team\n"
-	.string "Galactic$"
+	.string "GALACTIC$"
 
 GalacticHQ_4F_EventScript_PtSign2::
 	msgbox GalacticHQ_4F_Text_PtSign2, MSGBOX_SIGN
 	end
 
 GalacticHQ_4F_Text_PtSign2::
-	.string "Team Galactic Report$"
+	.string "TEAM GALACTIC Report$"

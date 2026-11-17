@@ -52,9 +52,9 @@ OreburghCity_Mart_EventScript_PtNpc1::
 	end
 
 OreburghCity_Mart_Text_PtNpc1::
-	.string "The Badges that POKéMON Gyms give\n"
-	.string "you are a measure of a Trainer's worth.\p"
-	.string "By getting more Badges, you get to\n"
+	.string "The BADGES that POKéMON GYMS give\n"
+	.string "you are a measure of a TRAINER's worth.\p"
+	.string "By getting more BADGES, you get to\n"
 	.string "buy more items in Poké Marts.$"
 
 OreburghCity_Mart_EventScript_PtNpc2::

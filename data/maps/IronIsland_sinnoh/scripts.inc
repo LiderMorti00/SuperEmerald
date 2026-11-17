@@ -42,10 +42,10 @@ IronIsland_EventScript_SNRiley_Leave::
 	end
 
 IronIsland_EventScript_SNRiley_T2::
-	.string "Riley: That Hidden Machine contains\n"
+	.string "RILEY: That Hidden Machine contains\n"
 	.string "the move Strength.\p"
 	.string "To use it out of battle, you need the\n"
-	.string "Mine Badge from Canalave Gym.\p"
+	.string "Mine BADGE from CANALAVE GYM.\p"
 	.string "I’ll be training inside. You can join me\n"
 	.string "if you’d like.$"
 
@@ -54,19 +54,19 @@ IronIsland_EventScript_SNRiley_HasBadge::
 	goto IronIsland_EventScript_SNRiley_Leave
 
 IronIsland_EventScript_SNRiley_T3::
-	.string "Riley: That Hidden Machine contains\n"
+	.string "RILEY: That Hidden Machine contains\n"
 	.string "the move Strength.\p"
 	.string "To use it out of battle, you need the\n"
-	.string "Badge from Canalave Gym...\p"
+	.string "BADGE from CANALAVE GYM...\p"
 	.string "Oh, never mind, you’ve already got the\n"
-	.string "Mine Badge. My bad.\p"
+	.string "Mine BADGE. My bad.\p"
 	.string "I’ll be training inside. You can join me\n"
 	.string "if you’d like.$"
 
 IronIsland_EventScript_SNRiley_T1::
 	.string "...You are?\p"
-	.string "OK, you’re {PLAYER}. I’m Riley.\p"
-	.string "I’m a Trainer, and yes, it is a bit odd\n"
+	.string "OK, you’re {PLAYER}. I’m RILEY.\p"
+	.string "I’m a TRAINER, and yes, it is a bit odd\n"
 	.string "that I would be training here.\p"
 	.string "Anyway, it’s always nice to meet\n"
-	.string "another Trainer. Here’s a gift.$"
+	.string "another TRAINER. Here’s a gift.$"

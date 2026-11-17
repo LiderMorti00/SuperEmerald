@@ -25,7 +25,7 @@ SunyshoreCity_Market_EventScript_PtNpc3::
 	end
 
 SunyshoreCity_Market_Text_PtNpc3_0::
-	.string "Sunyshore Market is best known for its\n"
+	.string "SUNNYSHORE Market is best known for its\n"
 	.string "big selection of Seals.$"
 
 SunyshoreCity_Market_EventScript_PtNpc4::

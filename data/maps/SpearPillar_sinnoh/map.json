@@ -139,8 +139,24 @@
       "elevation": 0,
       "dest_map": "MAP_MT_CORONET_6F_SINNOH",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 14,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_HALL_OF_ORIGIN_SINNOH",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "SE_EventScript_SpearPillarAltar"
+    }
+  ]
 }

@@ -31,29 +31,29 @@ EternaForest_EventScript_CherylHeal::
 	end
 
 EternaForest_Text_CherylHeal::
-	.string "Cheryl: I’ll keep your POKéMON in\n"
+	.string "CHERYL: I’ll keep your POKéMON in\n"
 	.string "perfect health.$"
 
 EternaForest_Text_CherylAsk::
-	.string "Hello, my name’s Cheryl. And you are...?\p"
+	.string "Hello, my name’s CHERYL. And you are...?\p"
 	.string "OK, so your name is {PLAYER}. I’m\n"
 	.string "sincerely glad to meet you.\p"
 	.string "{PLAYER}, may I ask a big favor of you?\p"
 	.string "I want to get through this forest, but\n"
 	.string "I’m afraid of doing it alone.\p"
 	.string "I’ve heard that there is a sinister\n"
-	.string "group of people called Team Galactic\p"
+	.string "group of people called TEAM GALACTIC\p"
 	.string "about.\p"
 	.string "I think there’d be safety in numbers.\n"
 	.string "Please, may I go through with you?\p"
-	.string "{PLAYER} decided to go with Cheryl!$"
+	.string "{PLAYER} decided to go with CHERYL!$"
 
 EternaForest_EventScript_SNCherylAgain::
 	msgbox EternaForest_Text_SNCherylAgain, MSGBOX_DEFAULT
 	goto EternaForest_EventScript_SNCherylGo
 
 EternaForest_Text_SNCherylAgain::
-	.string "Cheryl: Oh, hi, {PLAYER}! I’ve been\n"
+	.string "CHERYL: Oh, hi, {PLAYER}! I’ve been\n"
 	.string "waiting like I said.\p"
 	.string "Let’s get through this forest\n"
 	.string "together.$"
@@ -123,7 +123,7 @@ EternaForest_Text_ElijahDefeat::
 	.string "Urmmm... Urrrrmmmmm...$"
 
 EternaForest_Text_ElijahIntro::
-	.string "When a Trainer and a POKéMON bond as\n"
+	.string "When a TRAINER and a POKéMON bond as\n"
 	.string "one, a wondrous power is born...$"
 
 EternaForest_EventScript_Phillip::
@@ -147,7 +147,7 @@ EternaForest_EventScript_Donald::
 
 EternaForest_Text_DonaldPost::
 	.string "I thought it was a rare POKéMON, but\n"
-	.string "it turned out to be just a Trainer!$"
+	.string "it turned out to be just a TRAINER!$"
 
 EternaForest_Text_DonaldDefeat::
 	.string "Awawawawah...$"
@@ -195,7 +195,7 @@ EternaForest_EventScript_PtNpc1::
 
 EternaForest_Text_PtNpc1::
 	.string "I'm searching for bug POKéMON so I can\n"
-	.string "win at the ETERNA Gym.\p"
+	.string "win at the ETERNA GYM.\p"
 	.string "Bug POKéMON are great, you know? They\n"
 	.string "grow really fast!$"
 
@@ -243,21 +243,21 @@ EternaForest_EventScript_SNGardenia::
 	end
 
 EternaForest_Text_SNGardenia2::
-	.string "Gardenia: I should check it out myself,\n"
+	.string "GARDENIA: I should check it out myself,\n"
 	.string "but going in there is...\p"
-	.string "...Well, you know, being that I’m a Gym\n"
-	.string "Leader, I’m always busy.\p"
+	.string "...Well, you know, being that I’m a GYM\n"
+	.string "LEADER, I’m always busy.\p"
 	.string "So, since I’m so busy, I can’t go in. It’s\n"
 	.string "not because I’m s-scared!\p"
 	.string "S-so, good luck with your\n"
 	.string "investigation!$"
 
 EternaForest_Text_SNGardenia1::
-	.string "Gardenia: Hiya! Were you intrigued by\n"
+	.string "GARDENIA: Hiya! Were you intrigued by\n"
 	.string "the rumors going around, too?\p"
-	.string "Gardenia: You know, people’ve been\n"
+	.string "GARDENIA: You know, people’ve been\n"
 	.string "talking about the ghost POKéMON of\l"
-	.string "the Old Chateau.\p"
+	.string "the OLD CHATEAU.\p"
 	.string "I’ve been hearing rumors about\n"
 	.string "sinister shadows, too.$"
 

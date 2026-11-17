@@ -23,7 +23,7 @@ SurvivalArea_Mart_EventScript_PtNpc2::
 SurvivalArea_Mart_Text_PtNpc2_0::
 	.string "A word of advice from a grizzled\n"
 	.string "mountain man!\p"
-	.string "Stark Mountain is a harsh, harsh place\n"
+	.string "STARK MOUNTAIN is a harsh, harsh place\n"
 	.string "that’s rife with Fire-type POKéMON.\p"
 	.string "Water-type POKéMON and moves should\n"
 	.string "take the edge off.\p"

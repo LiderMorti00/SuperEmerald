@@ -26,7 +26,7 @@ PokemonLeague_AaronRoom_Text_Defeat::
 	.string "hear it for me!\p"
 	.string "No... That was wrong... Anyway... Go on to\n"
 	.string "the next room!\p"
-	.string "Three Trainers are waiting for you.\n"
+	.string "Three TRAINERS are waiting for you.\n"
 	.string "They’re all tougher than me.$"
 
 PokemonLeague_AaronRoom_EventScript_SNRematchBattle::
@@ -42,13 +42,13 @@ PokemonLeague_AaronRoom_EventScript_Defeated::
 
 PokemonLeague_AaronRoom_Text_PostBattleSpeech::
 	.string "Go on, go to the next room.\p"
-	.string "I’m going to become a top-level Trainer\n"
+	.string "I’m going to become a top-level TRAINER\n"
 	.string "who can’t be outclassed with\p"
 	.string "my beautiful and tough bug POKéMON!$"
 
 PokemonLeague_AaronRoom_Text_IntroSpeech::
-	.string "Hello! Welcome to the POKéMON League!\p"
-	.string "I’m Aaron of the Elite Four. It’s good\n"
+	.string "Hello! Welcome to the POKéMON LEAGUE!\p"
+	.string "I’m AARON of the ELITE FOUR. It’s good\n"
 	.string "to meet you.\p"
 	.string "Oh, I should explain, I’m a huge fan of\n"
 	.string "bug POKéMON.\p"

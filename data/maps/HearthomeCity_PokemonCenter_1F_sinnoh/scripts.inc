@@ -20,7 +20,7 @@ HearthomeCity_PokemonCenter_1F_EventScript_PtNpc1::
 
 HearthomeCity_PokemonCenter_1F_Text_PtNpc1_0::
 	.string "Have you checked out the Global\n"
-	.string "Terminal in Jubilife City?\p"
+	.string "Terminal in JUBILIFE CITY?\p"
 	.string "It uses Nintendo Wi-Fi Connection! I\n"
 	.string "can’t explain it, but it’s wicked!$"
 
@@ -44,8 +44,8 @@ HearthomeCity_PokemonCenter_1F_EventScript_PtNpc3::
 	end
 
 HearthomeCity_PokemonCenter_1F_Text_PtNpc3_0::
-	.string "Fantina, the Gym Leader, likes\n"
-	.string "Contests, too.\p"
+	.string "FANTINA, the GYM LEADER, likes\n"
+	.string "CONTESTS, too.\p"
 	.string "That lady has a huge appetite for\n"
 	.string "experiencing everything in life!$"
 

@@ -17,7 +17,7 @@ OreburghCity_EventScript_PtNpc2::
 	end
 
 OreburghCity_Text_PtNpc2::
-	.string "The Gym Leader went off to work in the\n"
+	.string "The GYM LEADER went off to work in the\n"
 	.string "mine.$"
 
 OreburghCity_EventScript_PtNpc3::
@@ -35,7 +35,7 @@ OreburghCity_EventScript_PtNpc4::
 	end
 
 OreburghCity_Text_PtNpc4::
-	.string "Is that guy in front of the Gym your\n"
+	.string "Is that guy in front of the GYM your\n"
 	.string "friend?\p"
 	.string "He's sort of twitchy and impatient.$"
 
@@ -182,9 +182,9 @@ OreburghCity_EventScript_SNBarryTalk::
 	end
 
 OreburghCity_Text_SNBarryAgain::
-	.string "{RIVAL}: I told you, the Gym Leader\n"
-	.string "went down to the Oreburgh Mine.\p"
-	.string "If you want to take the Gym challenge,\n"
+	.string "{RIVAL}: I told you, the GYM LEADER\n"
+	.string "went down to the OREBURGH MINE.\p"
+	.string "If you want to take the GYM challenge,\n"
 	.string "you have to go down to the mine.$"
 
 OreburghCity_EventScript_SNBarryPost::
@@ -203,14 +203,14 @@ OreburghCity_EventScript_SNBarryPost::
 
 OreburghCity_Text_SNPost3::
 	.string "{RIVAL}: So, I’m going back to\n"
-	.string "Jubilife City. Next stop, the Eterna\l"
-	.string "Gym Badge!\p"
+	.string "JUBILIFE CITY. Next stop, the ETERNA\l"
+	.string "GYM BADGE!\p"
 	.string "Ten seconds before I dash!\p"
 	.string "Nine...\p"
 	.string "Bah! Who’s got time to count?!$"
 
 OreburghCity_Text_SNPost2::
-	.string "{RIVAL}: So, yeah, I went to Route\n"
+	.string "{RIVAL}: So, yeah, I went to ROUTE\n"
 	.string "207, but you can’t go there without a\l"
 	.string "Bicycle.\p"
 	.string "I made my team battle and toughened\n"
@@ -218,9 +218,9 @@ OreburghCity_Text_SNPost2::
 
 OreburghCity_Text_SNPost1::
 	.string "{RIVAL}: Whoops! {PLAYER}! You got\n"
-	.string "the Gym Badge, huh?\p"
-	.string "Eterna City is the next place with a\n"
-	.string "Gym that gives away Badges, right?$"
+	.string "the GYM BADGE, huh?\p"
+	.string "ETERNA CITY is the next place with a\n"
+	.string "GYM that gives away BADGES, right?$"
 
 OreburghCity_EventScript_Sign4::
 	msgbox OreburghCity_Text_Sign4, MSGBOX_SIGN
@@ -261,7 +261,7 @@ OreburghCity_EventScript_Sign5::
 OreburghCity_Text_Sign5::
 	.string "OREBURGH CITY POKéMON GYM\p"
 	.string "LEADER: ROARK\p"
-	.string "The rock-hard Trainer!$"
+	.string "The rock-hard TRAINER!$"
 
 OreburghCity_EventScript_Sign2::
 	msgbox OreburghCity_Text_Sign2, MSGBOX_SIGN

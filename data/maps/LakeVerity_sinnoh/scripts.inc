@@ -74,7 +74,7 @@ LakeVerity_Text_Barry::
 	.string "Balls!\p"
 	.string "If we don’t have those, we can’t catch\n"
 	.string "POKéMON or take them around with us!\p"
-	.string "...Do you think Prof. Rowan’d give us\n"
+	.string "...Do you think PROF. ROWAN’d give us\n"
 	.string "some if we asked him?\p"
 	.string "You know, you remember what he said,\n"
 	.string "don’t you?\p"
@@ -82,7 +82,7 @@ LakeVerity_Text_Barry::
 	.string "needed anything.\p"
 	.string "OK, {PLAYER}! I’ll race you!\p"
 	.string "First one to the professor’s lab in\n"
-	.string "Sandgem Town rules!$"
+	.string "SANDGEM TOWN rules!$"
 
 LakeVerity_Text_Cry::
 	.string "Kyauuun!$"
@@ -99,7 +99,7 @@ LakeVerity_Movement_SNCyrusTurn::
 LakeVerity_Text_Cyrus::
 	.string "???: ...The flowing time... ...The\n"
 	.string "expanding space...\p"
-	.string "I will make it all mine one day... Cyrus\n"
+	.string "I will make it all mine one day... CYRUS\n"
 	.string "is my name. Remember it...\p"
 	.string "Until then, sleep while you can,\n"
 	.string "legendary POKéMON of the lake bed...$"
@@ -110,10 +110,10 @@ LakeVerity_EventScript_SNVERITY_MARS::
 	end
 
 LakeVerity_EventScript_SNVERITY_MARS_Post::
-	.string "Mars: The POKéMON of the three lakes\n"
+	.string "MARS: The POKéMON of the three lakes\n"
 	.string "are connected somehow.\p"
-	.string "Thanks to Saturn’s grandstanding at\n"
-	.string "Lake Valor, a cavern appeared here.\p"
+	.string "Thanks to SATURN’s grandstanding at\n"
+	.string "LAKE VALOR, a cavern appeared here.\p"
 	.string "It was the cavern where the POKéMON\n"
 	.string "MESPRIT slept.\p"
 	.string "MESPRIT appeared, too, probably to go\n"
@@ -126,7 +126,7 @@ LakeVerity_EventScript_SNVERITY_MARS_Post::
 	.string "UXIE, “The Being of Intelligence.”\p"
 	.string "Now that we have them all...\p"
 	.string "You can look forward to what plans\n"
-	.string "Team Galactic has for them!$"
+	.string "TEAM GALACTIC has for them!$"
 
 LakeVerity_EventScript_SNVERITY_MARS_Won::
 	lock
@@ -152,7 +152,7 @@ LakeVerity_Text_SNAfterMars2_ScrL::
 
 LakeVerity_Text_SNAfterMars2_Lu::
 	.string "{STR_VAR_1}: {PLAYER}, what’s Team\n"
-	.string "Galactic up to?\p"
+	.string "GALACTIC up to?\p"
 	.string "They’d better not harm the POKéMON\n"
 	.string "they took from the lakes...$"
 
@@ -168,7 +168,7 @@ LakeVerity_Text_SNAfterMars2_SNDawnCall::
 
 LakeVerity_Text_SNAfterMars2::
 	.string "{STR_VAR_1}: {PLAYER}, what is Team\n"
-	.string "Galactic up to?\p"
+	.string "GALACTIC up to?\p"
 	.string "Are the abducted POKéMON of the lakes\n"
 	.string "going to be OK?$"
 
@@ -178,24 +178,24 @@ LakeVerity_Text_SNAfterMars2_SNLucasCall::
 
 LakeVerity_Text_SNAfterMars2_SNLu::
 	.string "{STR_VAR_1}: {PLAYER}, what’s Team\n"
-	.string "Galactic up to?\p"
+	.string "GALACTIC up to?\p"
 	.string "They’d better not harm the POKéMON\n"
 	.string "they took from the lakes...$"
 
 LakeVerity_Text_SNAfterMars1::
-	.string "Rowan: I see... This also occurred at\n"
-	.string "Lake Valor...\p"
+	.string "ROWAN: I see... This also occurred at\n"
+	.string "LAKE VALOR...\p"
 	.string "Another legendary POKéMON was taken\n"
-	.string "away by Team Galactic...\p"
+	.string "away by TEAM GALACTIC...\p"
 	.string "Both of you went up against\n"
 	.string "full-fledged criminals...\p"
 	.string "The fact that you’re unharmed is\n"
 	.string "reason enough to celebrate.\p"
 	.string "...But what about {RIVAL}?\p"
-	.string "What is happening at Lake Acuity? Is\n"
+	.string "What is happening at LAKE ACUITY? Is\n"
 	.string "{RIVAL} safe?\p"
-	.string "Rowan: {PLAYER}, I need you to go to\n"
-	.string "Lake Acuity right away.\p"
+	.string "ROWAN: {PLAYER}, I need you to go to\n"
+	.string "LAKE ACUITY right away.\p"
 	.string "I’m worried about {RIVAL}.$"
 
 LakeVerity_Text_SNPullingOut::
@@ -203,11 +203,11 @@ LakeVerity_Text_SNPullingOut::
 	.string "waiting at the HQ!$"
 
 LakeVerity_Text_SNMarsDefeat2::
-	.string "Mars: So, first the windworks, and now\n"
-	.string "Lake Verity that I owe you for!\p"
+	.string "MARS: So, first the windworks, and now\n"
+	.string "LAKE VERITY that I owe you for!\p"
 	.string "This shouldn’t be happening to Team\n"
-	.string "Galactic’s Commander...\p"
-	.string "...Calm down, Mars... I’ve done my part in\n"
+	.string "GALACTIC’s COMMANDER...\p"
+	.string "...Calm down, MARS... I’ve done my part in\n"
 	.string "all of this...\p"
 	.string "My mission was to transport the lake’s\n"
 	.string "POKéMON to our HQ...\p"
@@ -218,7 +218,7 @@ LakeVerity_EventScript_SNVERITY_MARS_Defeat::
 	.string "I lost again...$"
 
 LakeVerity_EventScript_SNVERITY_MARS_Intro::
-	.string "Mars: That face...! It brings back bad\n"
+	.string "MARS: That face...! It brings back bad\n"
 	.string "memories!\p"
 	.string "I’m talking about the windworks!\p"
 	.string "I caught a whole lot of trouble for\n"
@@ -227,8 +227,8 @@ LakeVerity_EventScript_SNVERITY_MARS_Intro::
 	.string "You do remember me, don’t you?\p"
 	.string "Fine, whatever. I’ll tell you who I am\n"
 	.string "again!\p"
-	.string "I’m Mars, one of Team Galactic’s\n"
-	.string "Commanders.\p"
+	.string "I’m MARS, one of TEAM GALACTIC’s\n"
+	.string "COMMANDERS.\p"
 	.string "So, what is it? Are you some\n"
 	.string "lovey-dovey couple to the rescue?\p"
 	.string "Not a chance! Not even a teeny one!\n"
@@ -240,7 +240,7 @@ LakeVerity_EventScript_SNVERITY_GRUNT1::
 	end
 
 LakeVerity_EventScript_SNVERITY_GRUNT1_Post::
-	.string "Mars will deal with you!$"
+	.string "MARS will deal with you!$"
 
 LakeVerity_EventScript_SNVERITY_GRUNT1_Won::
 	lock
@@ -257,7 +257,7 @@ LakeVerity_EventScript_SNVERITY_GRUNT1_Defeat::
 	.string "Gah! Not again!$"
 
 LakeVerity_EventScript_SNVERITY_GRUNT1_Intro::
-	.string "Team Galactic is busy here! Get lost,\n"
+	.string "TEAM GALACTIC is busy here! Get lost,\n"
 	.string "kid!$"
 
 LakeVerity_EventScript_SNVERITY_GRUNT2::
@@ -266,7 +266,7 @@ LakeVerity_EventScript_SNVERITY_GRUNT2::
 	end
 
 LakeVerity_EventScript_SNVERITY_GRUNT2_Post::
-	.string "Mars will deal with you!$"
+	.string "MARS will deal with you!$"
 
 LakeVerity_EventScript_SNVERITY_GRUNT2_Won::
 	lock
@@ -283,7 +283,7 @@ LakeVerity_EventScript_SNVERITY_GRUNT2_Defeat::
 	.string "Gah! Not again!$"
 
 LakeVerity_EventScript_SNVERITY_GRUNT2_Intro::
-	.string "Team Galactic is busy here! Get lost,\n"
+	.string "TEAM GALACTIC is busy here! Get lost,\n"
 	.string "kid!$"
 
 LakeVerity_EventScript_SNVERITY_GRUNT3::
@@ -292,7 +292,7 @@ LakeVerity_EventScript_SNVERITY_GRUNT3::
 	end
 
 LakeVerity_EventScript_SNVERITY_GRUNT3_Post::
-	.string "Mars will deal with you!$"
+	.string "MARS will deal with you!$"
 
 LakeVerity_EventScript_SNVERITY_GRUNT3_Won::
 	lock
@@ -309,7 +309,7 @@ LakeVerity_EventScript_SNVERITY_GRUNT3_Defeat::
 	.string "Gah! Not again!$"
 
 LakeVerity_EventScript_SNVERITY_GRUNT3_Intro::
-	.string "Team Galactic is busy here! Get lost,\n"
+	.string "TEAM GALACTIC is busy here! Get lost,\n"
 	.string "kid!$"
 
 LakeVerity_EventScript_SNVERITY_GRUNT4::
@@ -318,7 +318,7 @@ LakeVerity_EventScript_SNVERITY_GRUNT4::
 	end
 
 LakeVerity_EventScript_SNVERITY_GRUNT4_Post::
-	.string "Mars will deal with you!$"
+	.string "MARS will deal with you!$"
 
 LakeVerity_EventScript_SNVERITY_GRUNT4_Won::
 	lock
@@ -335,7 +335,7 @@ LakeVerity_EventScript_SNVERITY_GRUNT4_Defeat::
 	.string "Gah! Not again!$"
 
 LakeVerity_EventScript_SNVERITY_GRUNT4_Intro::
-	.string "Team Galactic is busy here! Get lost,\n"
+	.string "TEAM GALACTIC is busy here! Get lost,\n"
 	.string "kid!$"
 
 LakeVerity_EventScript_SNRowan::
@@ -352,21 +352,21 @@ LakeVerity_EventScript_SNRowanTalk::
 	return
 
 LakeVerity_Text_SNHelpDawn::
-	.string "Rowan: Ah, {PLAYER}! What timing!\p"
-	.string "Those Team Galactic scoundrels are\n"
+	.string "ROWAN: Ah, {PLAYER}! What timing!\p"
+	.string "Those TEAM GALACTIC scoundrels are\n"
 	.string "after the legendary POKéMON!\p"
-	.string "You’ve got to help Dawn!$"
+	.string "You’ve got to help DAWN!$"
 
 LakeVerity_EventScript_SNRowanLucas::
 	msgbox LakeVerity_Text_SNHelpLucas, MSGBOX_DEFAULT
 	return
 
 LakeVerity_Text_SNHelpLucas::
-	.string "Rowan: Ah, {PLAYER}! What timing!\p"
-	.string "Those Team Galactic scoundrels are\n"
+	.string "ROWAN: Ah, {PLAYER}! What timing!\p"
+	.string "Those TEAM GALACTIC scoundrels are\n"
 	.string "after the legendary POKéMON!\p"
 	.string "{PLAYER}, help us! You’ve got to help\n"
-	.string "Lucas!$"
+	.string "LUCAS!$"
 
 LakeVerity_EventScript_SNCounterpart::
 	lock
@@ -378,7 +378,7 @@ LakeVerity_EventScript_SNCounterpart::
 	end
 
 LakeVerity_Text_SNDawn::
-	.string "Dawn: {PLAYER}! It’s T-Team Galactic!\p"
+	.string "DAWN: {PLAYER}! It’s T-TEAM GALACTIC!\p"
 	.string "They’re taking the POKéMON of the\n"
 	.string "lake...\p"
 	.string "I... I couldn’t beat this person...$"
@@ -389,7 +389,7 @@ LakeVerity_EventScript_SNCounterpartLucas::
 	end
 
 LakeVerity_Text_SNLucas::
-	.string "Lucas: It’s Team Galactic! They took\n"
+	.string "LUCAS: It’s TEAM GALACTIC! They took\n"
 	.string "the POKéMON of the lake...\p"
 	.string "This woman... I lost to her, but just\n"
 	.string "barely!$"

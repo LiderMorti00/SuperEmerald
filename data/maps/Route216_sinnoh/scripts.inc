@@ -107,7 +107,7 @@ Route216_Text_MariaDefeat::
 Route216_Text_MariaIntro::
 	.string "To be ready to answer any call! To be\n"
 	.string "ready to accept any challenge!\p"
-	.string "That is the way of a Trainer!$"
+	.string "That is the way of a TRAINER!$"
 
 Route216_EventScript_Kaitlyn::
 	trainerbattle_single TRAINER_HUGH_SINNOH, Route216_Text_KaitlynIntro, Route216_Text_KaitlynDefeat

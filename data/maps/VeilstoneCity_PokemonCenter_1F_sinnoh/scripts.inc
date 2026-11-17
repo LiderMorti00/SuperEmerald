@@ -28,7 +28,7 @@ VeilstoneCity_PokemonCenter_1F_EventScript_PtNpc2::
 	end
 
 VeilstoneCity_PokemonCenter_1F_Text_PtNpc2_0::
-	.string "Maylene, the Gym Leader, is a cute girl.\p"
+	.string "MAYLENE, the GYM LEADER, is a cute girl.\p"
 	.string "But don’t let her looks fool you. Even\n"
 	.string "grown-ups have trouble with her.$"
 

@@ -21,7 +21,7 @@ LostTower_1F_EventScript_PtNpc2::
 	end
 
 LostTower_1F_Text_PtNpc2_0::
-	.string "This is the Lost Tower.\p"
+	.string "This is the LOST TOWER.\p"
 	.string "There is a persistent fog that\n"
 	.string "thickens the higher you climb.\p"
 	.string "If you can’t use the hidden move Defog\n"

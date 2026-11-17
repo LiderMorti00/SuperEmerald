@@ -74,18 +74,18 @@ StarkMountain_Room1_EventScript_SNCommanders_T10::
 	.string "And for that, money is paramount.\p"
 	.string "You there, child. I’m not dealing with\n"
 	.string "you.\p"
-	.string "After all, the other Galactic members\n"
+	.string "After all, the other GALACTIC members\n"
 	.string "who did all suffered consequences.\p"
 	.string "We’ll be off to collect the Magma\n"
 	.string "Stone. It’s all for the money!$"
 
 StarkMountain_Room1_EventScript_SNCommanders_T9::
-	.string "Charon: Sigh... So impressionable and\n"
+	.string "CHARON: Sigh... So impressionable and\n"
 	.string "impetuous.\p"
-	.string "What do they see in Cyrus? Immature,\n"
+	.string "What do they see in CYRUS? Immature,\n"
 	.string "overthinking buffoon.\p"
 	.string "He goes through the trouble of\n"
-	.string "assembling Team Galactic for what?\p"
+	.string "assembling TEAM GALACTIC for what?\p"
 	.string "Ultimately, he destroys his own\n"
 	.string "creation for his ludicrous vision.\p"
 	.string "It’s no thanks to him that I have to\n"
@@ -98,7 +98,7 @@ StarkMountain_Room1_EventScript_SNCommanders_JupLeave::
 	step_end
 
 StarkMountain_Room1_EventScript_SNCommanders_T8::
-	.string "Jupiter: ...Says you. An “ordinary girl”\n"
+	.string "JUPITER: ...Says you. An “ordinary girl”\n"
 	.string "you’re not.\p"
 	.string "What should I do now? Is leaving on a\n"
 	.string "journey the right idea?$"
@@ -111,56 +111,56 @@ StarkMountain_Room1_EventScript_SNCommanders_MarsLeave::
 	step_end
 
 StarkMountain_Room1_EventScript_SNCommanders_T7::
-	.string "Mars: There you have it. We’re going\n"
+	.string "MARS: There you have it. We’re going\n"
 	.string "back to being ordinary girls.\p"
 	.string "You can mop up whichever way you want.$"
 
 StarkMountain_Room1_EventScript_SNCommanders_T6::
-	.string "Jupiter: Following Mars’s lead at\n"
+	.string "JUPITER: Following MARS’s lead at\n"
 	.string "anything irks me, but...\p"
 	.string "I’m quitting to do my own thing, too.\p"
-	.string "Team Galactic’s just no fun without\n"
-	.string "Master Cyrus around.\p"
+	.string "TEAM GALACTIC’s just no fun without\n"
+	.string "Master CYRUS around.\p"
 	.string "So, old-timer, go ahead. Do what you\n"
-	.string "want with Team Galactic.$"
+	.string "want with TEAM GALACTIC.$"
 
 StarkMountain_Room1_EventScript_SNCommanders_T5::
-	.string "Mars: OK! That’s it for me! I’m going to\n"
-	.string "look for Master Cyrus.\p"
-	.string "The Distortion World, was it called? I\n"
+	.string "MARS: OK! That’s it for me! I’m going to\n"
+	.string "look for Master CYRUS.\p"
+	.string "The DISTORTION WORLD, was it called? I\n"
 	.string "should go there, right?\p"
-	.string "I’m quits with Team Galactic. Jupiter,\n"
+	.string "I’m quits with TEAM GALACTIC. JUPITER,\n"
 	.string "you can deal with it!$"
 
 StarkMountain_Room1_EventScript_SNCommanders_T4::
-	.string "Jupiter: ...How dare you!$"
+	.string "JUPITER: ...How dare you!$"
 
 StarkMountain_Room1_EventScript_SNCommanders_JupDefeat::
-	.string "Jupiter: ...Impossible.$"
+	.string "JUPITER: ...Impossible.$"
 
 StarkMountain_Room1_EventScript_SNCommanders_T3::
-	.string "Jupiter: ...Mars. You really are weak.\n"
+	.string "JUPITER: ...MARS. You really are weak.\n"
 	.string "Pitifully so.\p"
 	.string "You make me embarrassed to be a\n"
-	.string "Commander like you.\p"
+	.string "COMMANDER like you.\p"
 	.string "Fine. I’ll go up next.\p"
 	.string "I want to know what became of Master\n"
-	.string "Cyrus, too.$"
+	.string "CYRUS, too.$"
 
 StarkMountain_Room1_EventScript_SNCommanders_T2::
-	.string "Mars: My POKéMON let me down again!\p"
+	.string "MARS: My POKéMON let me down again!\p"
 	.string "How am I supposed to get information\n"
-	.string "about our missing Master Cyrus?$"
+	.string "about our missing Master CYRUS?$"
 
 StarkMountain_Room1_EventScript_SNCommanders_MarsDefeat::
-	.string "Mars: No! Not again!$"
+	.string "MARS: No! Not again!$"
 
 StarkMountain_Room1_EventScript_SNCommanders_T1::
-	.string "Mars: Hey! You! Tell us where Master\n"
-	.string "Cyrus went.\p"
+	.string "MARS: Hey! You! Tell us where Master\n"
+	.string "CYRUS went.\p"
 	.string "Where were you after you disappeared\n"
-	.string "at the Spear Pillar?\p"
-	.string "Huh? The Distortion World?! Where\n"
+	.string "at the SPEAR PILLAR?\p"
+	.string "Huh? The DISTORTION WORLD?! Where\n"
 	.string "GIRATINA was?\p"
 	.string "You’re not making any sense! Don’t play\n"
 	.string "that card with me!\p"

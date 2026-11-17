@@ -15,7 +15,7 @@ Route204_Text_SarahDefeat::
 	.string "Aww... I should have said no.$"
 
 Route204_Text_SarahIntro::
-	.string "Oh, a weak-looking Trainer... Do you\n"
+	.string "Oh, a weak-looking TRAINER... Do you\n"
 	.string "want to have a go?$"
 
 Route204_EventScript_Samantha::
@@ -94,7 +94,7 @@ Route204_Text_TaylorPost::
 	.string "apps from the POKéNAV Company?$"
 
 Route204_Text_TaylorDefeat::
-	.string "It was a strong Trainer who was drawn\n"
+	.string "It was a strong TRAINER who was drawn\n"
 	.string "here by the scent of flowers!$"
 
 Route204_Text_TaylorIntro::
@@ -107,8 +107,8 @@ Route204_EventScript_Twins::
 	end
 
 Route204_Text_TwinsPost::
-	.string "Liv: This Trainer...will brag about\n"
-	.string "beating us, Liz.$"
+	.string "Liv: This TRAINER...will brag about\n"
+	.string "beating us, LIZ.$"
 
 Route204_Text_TwinsNotEnough::
 	.string "We battle as a team! Come back\n"
@@ -118,8 +118,8 @@ Route204_Text_TwinsDefeat::
 	.string "Liv: Oh, oh, oh?$"
 
 Route204_Text_TwinsIntro::
-	.string "Liv: We can one-shot this Trainer,\n"
-	.string "can't we, Liz?$"
+	.string "Liv: We can one-shot this TRAINER,\n"
+	.string "can't we, LIZ?$"
 
 Route204_EventScript_PtNpc1::
 	msgbox Route204_Text_PtNpc1, MSGBOX_NPC
@@ -163,7 +163,7 @@ Route204_EventScript_PtNpcN3::
 	end
 
 Route204_Text_PtNpcN3::
-	.string "Some Trainers battle in pairs.\n"
+	.string "Some TRAINERS battle in pairs.\n"
 	.string "Make sure you have two POKéMON\l"
 	.string "ready!$"
 

@@ -59,7 +59,7 @@ CelesticTown_EventScript_SNCEL_GRUNT_Defeat::
 	.string "Too much to handle...$"
 
 CelesticTown_EventScript_SNCEL_GRUNT_Intro::
-	.string "You dare to oppose Team Galactic?\p"
+	.string "You dare to oppose TEAM GALACTIC?\p"
 	.string "That means you’re taking on the world...\n"
 	.string "No, the universe, even!$"
 
@@ -71,7 +71,7 @@ CelesticTown_EventScript_SNCEL_GRUNT_No::
 CelesticTown_Text_SNVerySmart::
 	.string "That’s right! Very smart! You know\n"
 	.string "what’s good for you!\p"
-	.string "Team Galactic has come out to the\n"
+	.string "TEAM GALACTIC has come out to the\n"
 	.string "boonies like this for everyone’s sake.\p"
 	.string "Your cooperation is appreciated. Now,\n"
 	.string "where is my partner...?$"
@@ -80,7 +80,7 @@ CelesticTown_Text_SNWillYouMess::
 	.string "This town is insignificant! There’s\n"
 	.string "nothing of value here.\p"
 	.string "It doesn’t need to exist, so I’ll blow it\n"
-	.string "up with a Galactic Bomb!\p"
+	.string "up with a GALACTIC Bomb!\p"
 	.string "If you try to mess with me, I’ll shut\n"
 	.string "you down with a POKéMON battle.\p"
 	.string "So, what’s it going to be? Are you going\n"
@@ -104,16 +104,16 @@ CelesticTown_EventScript_SNCynthia_T3::
 	.string "By the way, were the ruins fun to\n"
 	.string "explore?\p"
 	.string "If you’re interested, there is a library\n"
-	.string "in Canalave City.\p"
+	.string "in CANALAVE CITY.\p"
 	.string "It’s stocked with ancient books. You\n"
-	.string "can look up Sinnoh history there.\p"
+	.string "can look up SINNOH history there.\p"
 	.string "It might help you complete your\n"
 	.string "POKéDEX, too.\p"
-	.string "The quickest way to Canalave City is\n"
-	.string "to go west from Jubilife City.$"
+	.string "The quickest way to CANALAVE CITY is\n"
+	.string "to go west from JUBILIFE CITY.$"
 
 CelesticTown_EventScript_SNCynthia_T2::
-	.string "But those Team Galactic people...! I\n"
+	.string "But those TEAM GALACTIC people...! I\n"
 	.string "thought they were harmless.\p"
 	.string "The bizarre ways they dress, and all\n"
 	.string "their wild claims about making a new\p"
@@ -126,9 +126,9 @@ CelesticTown_EventScript_SNCynthia_T2::
 	.string "isn’t acceptable!$"
 
 CelesticTown_EventScript_SNCynthia_T1::
-	.string "Cynthia: Was everything all right here?\p"
+	.string "CYNTHIA: Was everything all right here?\p"
 	.string "You saw those strange people with a\n"
-	.string "Galactic Bomb, didn’t you?$"
+	.string "GALACTIC Bomb, didn’t you?$"
 
 CelesticTown_EventScript_SNElderOut::
 	msgbox CelesticTown_Text_SNOddSpaceman, MSGBOX_NPC

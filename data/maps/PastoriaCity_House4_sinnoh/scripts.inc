@@ -27,7 +27,7 @@ PastoriaCity_House4_EventScript_PtNpc2::
 	end
 
 PastoriaCity_House4_Text_PtNpc2_0::
-	.string "I often go to Solaceon Town for my big\n"
+	.string "I often go to SOLACEON TOWN for my big\n"
 	.string "brother.\p"
 	.string "The newspaper there gives me Heart\n"
 	.string "Scales for running errands.$"

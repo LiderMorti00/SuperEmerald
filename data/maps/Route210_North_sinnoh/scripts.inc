@@ -30,7 +30,7 @@ Route210_North_Text_AlyssaDefeat::
 	.string "Aiyeeeeh! We lost!$"
 
 Route210_North_Text_AlyssaIntro::
-	.string "As an Ace Trainer, I have to take\n"
+	.string "As an Ace TRAINER, I have to take\n"
 	.string "battles in stride.\p"
 	.string "I need to stay cool and calm whether I\n"
 	.string "win or lose.$"
@@ -76,7 +76,7 @@ Route210_North_EventScript_Davido::
 	end
 
 Route210_North_Text_DavidoPost::
-	.string "There's a ninja Gym Leader somewhere\n"
+	.string "There's a ninja GYM LEADER somewhere\n"
 	.string "far away.\p"
 	.string "I should become a devotee of theirs.$"
 
@@ -140,23 +140,23 @@ Route210_North_EventScript_ZacJen::
 	end
 
 Route210_North_Text_ZacJenPost::
-	.string "Zac: I don't care if I get to meet the\n"
-	.string "greatest Trainer in the region...\p"
-	.string "I'd still rather learn from Jen.$"
+	.string "ZAC: I don't care if I get to meet the\n"
+	.string "greatest TRAINER in the region...\p"
+	.string "I'd still rather learn from JEN.$"
 
 Route210_North_Text_ZacJenNotEnough::
-	.string "Zac: Would you be interested in\n"
+	.string "ZAC: Would you be interested in\n"
 	.string "battling the two of us at the same\l"
 	.string "time?\p"
 	.string "What I mean is, do you have two or more\n"
 	.string "POKéMON with you?$"
 
 Route210_North_Text_ZacJenDefeat::
-	.string "Zac: Wow. Someone that's even better\n"
-	.string "than Jen...$"
+	.string "ZAC: Wow. Someone that's even better\n"
+	.string "than JEN...$"
 
 Route210_North_Text_ZacJenIntro::
-	.string "Zac: Jen, watch this! I'm going to use\n"
+	.string "ZAC: JEN, watch this! I'm going to use\n"
 	.string "everything you've taught me!$"
 
 Route210_North_EventScript_Brian::
@@ -184,7 +184,7 @@ Route210_North_Text_BrianDefeat::
 Route210_North_Text_BrianIntro::
 	.string "Very well. I've decided.\p"
 	.string "I'll battle one last time, with you,\n"
-	.string "then I'm retiring as a Trainer.$"
+	.string "then I'm retiring as a TRAINER.$"
 
 Route210_North_EventScript_Adam::
 	trainerbattle_single TRAINER_BARRY_SINNOH, Route210_North_Text_AdamIntro, Route210_North_Text_AdamDefeat

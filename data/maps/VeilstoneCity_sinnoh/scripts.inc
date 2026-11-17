@@ -55,7 +55,7 @@ VeilstoneCity_EventScript_PtNpc6::
 	end
 
 VeilstoneCity_Text_PtNpc6::
-	.string "MAYLENE is VEILSTONE's Gym Leader.\n"
+	.string "MAYLENE is VEILSTONE's GYM LEADER.\n"
 	.string "Then, there's Wake in PASTORIA...\p"
 	.string "They're way too tough for me. I can't\n"
 	.string "even come close to them.$"
@@ -102,7 +102,7 @@ VeilstoneCity_Text_PtNpc9_No::
 	.string "vous regarder!$"
 
 VeilstoneCity_Text_PtNpc9::
-	.string "Salut, Trainer! Tu aimes les POKéMON?$"
+	.string "Salut, TRAINER! Tu aimes les POKéMON?$"
 
 VeilstoneCity_EventScript_PtNpc10::
 	lock
@@ -123,11 +123,11 @@ VeilstoneCity_Text_PtNpc10_1::
 	.string "If someone uses Embargo on your\n"
 	.string "POKéMON, it becomes impossible to\p"
 	.string "use any items on it.\p"
-	.string "Anyway, enjoy your visit to Veilstone,\n"
+	.string "Anyway, enjoy your visit to VEILSTONE,\n"
 	.string "the city of...well, stone.$"
 
 VeilstoneCity_Text_PtNpc10_0::
-	.string "Veilstone is the city of stone. We even\n"
+	.string "VEILSTONE is the city of stone. We even\n"
 	.string "have meteorites!\p"
 	.string "This has nothing to do with anything,\n"
 	.string "but take this Technical Machine!$"
@@ -151,7 +151,7 @@ VeilstoneCity_EventScript_SNGymCP_B_N::
 	end
 
 VeilstoneCity_EventScript_SNGymCP_B_D::
-	.string "So, uh, {PLAYER}. Good luck on your Gym\n"
+	.string "So, uh, {PLAYER}. Good luck on your GYM\n"
 	.string "challenge.$"
 
 VeilstoneCity_EventScript_SNGymCP_B_L::
@@ -160,11 +160,11 @@ VeilstoneCity_EventScript_SNGymCP_B_L::
 
 VeilstoneCity_EventScript_SNGymCP_B_Lu::
 	.string "So, uh, yeah, {PLAYER}. Good luck with\n"
-	.string "the POKéMON Gym.$"
+	.string "the POKéMON GYM.$"
 
 VeilstoneCity_EventScript_SNGymCP_A_D::
-	.string "Dawn: {PLAYER}, are you going to take\n"
-	.string "the Gym challenge?\p"
+	.string "DAWN: {PLAYER}, are you going to take\n"
+	.string "the GYM challenge?\p"
 	.string "Gee, you keep getting tougher and\n"
 	.string "tougher, don’t you?\p"
 	.string "Me? Well, I went shopping at the\n"
@@ -177,8 +177,8 @@ VeilstoneCity_EventScript_SNGymCP_A_L::
 	goto VeilstoneCity_EventScript_SNGymCP_A_N
 
 VeilstoneCity_EventScript_SNGymCP_A_Lu::
-	.string "Lucas: Hey! {PLAYER}, are you going to\n"
-	.string "take on the Gym Leader?\p"
+	.string "LUCAS: Hey! {PLAYER}, are you going to\n"
+	.string "take on the GYM LEADER?\p"
 	.string "Wow, you just keep getting tougher and\n"
 	.string "tougher.\p"
 	.string "Me? Well, I took a look in the Game\n"
@@ -198,14 +198,14 @@ VeilstoneCity_EventScript_SNGymWake::
 
 VeilstoneCity_EventScript_SNGymWake_T3::
 	.string "Whoops! I’d better tell you who I am!\p"
-	.string "I’m the triple-threat Gym Leader in\n"
+	.string "I’m the triple-threat GYM LEADER in\n"
 	.string "POKéMON, wrestling, and song.\p"
-	.string "I’m Crasher Wake of Pastoria Gym! We’ll\n"
+	.string "I’m CRASHER WAKE of PASTORIA GYM! We’ll\n"
 	.string "meet again!$"
 
 VeilstoneCity_EventScript_SNGymWake_T2::
 	.string "Hello, dude and young lady! You’re\n"
-	.string "challenging the Gym Leader,\p"
+	.string "challenging the GYM LEADER,\p"
 	.string "are you?\p"
 	.string "Let me tell you now, she’s young, but\n"
 	.string "she’s a born genius.\p"
@@ -215,12 +215,12 @@ VeilstoneCity_EventScript_SNGymWake_T2::
 VeilstoneCity_EventScript_SNGymWake_T1::
 	.string "The ring is my roiling sea.\n"
 	.string "The towering waves shaped me.\p"
-	.string "Crash! Crash! Crasher Wake! Crash!\n"
-	.string "Crash! Crasher Wake!\p"
+	.string "Crash! Crash! CRASHER WAKE! Crash!\n"
+	.string "Crash! CRASHER WAKE!\p"
 	.string "I’m the tidal wave of power to wash you\n"
 	.string "away!\p"
-	.string "Put out the fire, Crasher Wake! Run\n"
-	.string "from electricity, Crasher Wake!\p"
+	.string "Put out the fire, CRASHER WAKE! Run\n"
+	.string "from electricity, CRASHER WAKE!\p"
 	.string "Ah, ah, aaaah! The ring is my sea.$"
 
 VeilstoneCity_EventScript_SNWHGrunt0::
@@ -228,8 +228,8 @@ VeilstoneCity_EventScript_SNWHGrunt0::
 	end
 
 VeilstoneCity_EventScript_SNWHGrunt0_T::
-	.string "Grunt 1: Hey, you! Yeah, you!\p"
-	.string "This is Team Galactic’s warehouse! It\n"
+	.string "GRUNT 1: Hey, you! Yeah, you!\p"
+	.string "This is TEAM GALACTIC’s warehouse! It\n"
 	.string "ain’t no playground for kids!$"
 
 VeilstoneCity_EventScript_SNWHGrunt1::
@@ -237,11 +237,11 @@ VeilstoneCity_EventScript_SNWHGrunt1::
 	end
 
 VeilstoneCity_EventScript_SNWHGrunt1_T::
-	.string "Grunt 2: This is the awesome Team\n"
-	.string "Galactic’s awesome warehouse!\p"
+	.string "GRUNT 2: This is the awesome Team\n"
+	.string "GALACTIC’s awesome warehouse!\p"
 	.string "A little kid like you should be playing\n"
-	.string "at the POKéMON Gym.\p"
-	.string "After all, the Gym Leader happens to be\n"
+	.string "at the POKéMON GYM.\p"
+	.string "After all, the GYM LEADER happens to be\n"
 	.string "a kid just like you!$"
 
 VeilstoneCity_EventScript_SNWHCP::
@@ -348,9 +348,9 @@ VeilstoneCity_EventScript_SNWHCP_Bye_N::
 	end
 
 VeilstoneCity_EventScript_SNWHCP_L3::
-	.string "Looker: It is of no matter.\p"
+	.string "LOOKER: It is of no matter.\p"
 	.string "Of more interest is the criminal\n"
-	.string "behavior of the Team Galactic.\p"
+	.string "behavior of the TEAM GALACTIC.\p"
 	.string "They attempt to steal the belongings\n"
 	.string "of a child?\p"
 	.string "The scale of their criminality, it seems\n"
@@ -361,58 +361,58 @@ VeilstoneCity_EventScript_SNWHCP_L3::
 	.string "Come with me, and we’ll take a look!$"
 
 VeilstoneCity_EventScript_SNWHCP_Bye_D::
-	.string "Dawn: I’m terribly sorry.\p"
-	.string "Team Galactic took my POKéDEX, so I\n"
+	.string "DAWN: I’m terribly sorry.\p"
+	.string "TEAM GALACTIC took my POKéDEX, so I\n"
 	.string "was very irritated...\p"
 	.string "I just blurted it out...\p"
 	.string "...I should be going now. Be wary of\n"
-	.string "Team Galactic.$"
+	.string "TEAM GALACTIC.$"
 
 VeilstoneCity_EventScript_SNWHCP_Bye_L::
 	msgbox VeilstoneCity_EventScript_SNWHCP_Bye_Lu, MSGBOX_DEFAULT
 	goto VeilstoneCity_EventScript_SNWHCP_Bye_N
 
 VeilstoneCity_EventScript_SNWHCP_Bye_Lu::
-	.string "Lucas: Oh, sorry. Honestly.\p"
+	.string "LUCAS: Oh, sorry. Honestly.\p"
 	.string "I was upset from having my POKéDEX\n"
-	.string "ripped off by Team Galactic.\p"
+	.string "ripped off by TEAM GALACTIC.\p"
 	.string "I didn’t even think when I spoke up.\p"
 	.string "I’ll be going now. Uh... Watch out for\n"
-	.string "Team Galactic.$"
+	.string "TEAM GALACTIC.$"
 
 VeilstoneCity_EventScript_SNWHCP_L2::
-	.string "Looker: You insult me to my face? How\n"
+	.string "LOOKER: You insult me to my face? How\n"
 	.string "very uncouth of you.$"
 
 VeilstoneCity_EventScript_SNWHCP_Funny_D::
-	.string "Dawn: Oh... It’s that funny man from\n"
-	.string "Jubilife...$"
+	.string "DAWN: Oh... It’s that funny man from\n"
+	.string "JUBILIFE...$"
 
 VeilstoneCity_EventScript_SNWHCP_Funny_L::
 	msgbox VeilstoneCity_EventScript_SNWHCP_Funny_Lu, MSGBOX_DEFAULT
 	goto VeilstoneCity_EventScript_SNWHCP_Funny_N
 
 VeilstoneCity_EventScript_SNWHCP_Funny_Lu::
-	.string "Lucas: Hey... It’s that weirdo from\n"
-	.string "Jubilife.$"
+	.string "LUCAS: Hey... It’s that weirdo from\n"
+	.string "JUBILIFE.$"
 
 VeilstoneCity_EventScript_SNWHCP_L1::
-	.string "Looker: Have no fear, I have come\n"
+	.string "LOOKER: Have no fear, I have come\n"
 	.string "running.\p"
 	.string "I heard of children feuding with the\n"
-	.string "Team Galactic.\p"
+	.string "TEAM GALACTIC.\p"
 	.string "It turns out, of course, to be you.$"
 
 VeilstoneCity_EventScript_SNWHCP_Thanks_D::
-	.string "Dawn: {PLAYER}, thank you, sincerely.\p"
+	.string "DAWN: {PLAYER}, thank you, sincerely.\p"
 	.string "I would’ve been lost without my\n"
 	.string "POKéDEX.\p"
-	.string "It’s indispensable for helping Prof.\n"
-	.string "Rowan with his studies.\p"
+	.string "It’s indispensable for helping PROF.\n"
+	.string "ROWAN with his studies.\p"
 	.string "So, {PLAYER}, what are you going to do\n"
 	.string "now?\p"
 	.string "I’m thinking of going to the POKéMON\n"
-	.string "Mansion on Route 212.\p"
+	.string "Mansion on ROUTE 212.\p"
 	.string "I hear they show rare POKéMON to\n"
 	.string "visitors there.$"
 
@@ -421,20 +421,20 @@ VeilstoneCity_EventScript_SNWHCP_Thanks_L::
 	goto VeilstoneCity_EventScript_SNWHCP_Thanks_N
 
 VeilstoneCity_EventScript_SNWHCP_Thanks_Lu::
-	.string "Lucas: {PLAYER}, thanks, honestly.\p"
+	.string "LUCAS: {PLAYER}, thanks, honestly.\p"
 	.string "I’m useless without my POKéDEX.\p"
-	.string "I have to have it for helping Prof.\n"
-	.string "Rowan with his studies.\p"
+	.string "I have to have it for helping PROF.\n"
+	.string "ROWAN with his studies.\p"
 	.string "So, {PLAYER}, what are your plans now?\p"
 	.string "I think I’m off to the POKéMON Mansion\n"
-	.string "on Route 212.\p"
+	.string "on ROUTE 212.\p"
 	.string "They say they show off rare POKéMON\n"
 	.string "to visitors.$"
 
 VeilstoneCity_EventScript_SNWHCP_G5::
-	.string "Grunt 2: Those things we had in the\n"
+	.string "GRUNT 2: Those things we had in the\n"
 	.string "warehouse’ve already been moved\p"
-	.string "to Pastoria City anyway...\p"
+	.string "to PASTORIA CITY anyway...\p"
 	.string "So, we’ll say “You’ll get yours!” And run\n"
 	.string "like the grunts we are.$"
 
@@ -442,13 +442,13 @@ VeilstoneCity_EventScript_SNWHCP_G4::
 	.string "There! Take it! Take your POKéDEX!$"
 
 VeilstoneCity_EventScript_SNWHCP_G3::
-	.string "Grunt 1: Aww, that stinks! Our POKéMON\n"
+	.string "GRUNT 1: Aww, that stinks! Our POKéMON\n"
 	.string "are chumps!\p"
 	.string "We should get new ones from\n"
 	.string "headquarters.\p"
 	.string "Humph! Who cares about some POKéDEX\n"
 	.string "anyway?\p"
-	.string "Team Galactic’s going to own all the\n"
+	.string "TEAM GALACTIC’s going to own all the\n"
 	.string "POKéMON in the world...\p"
 	.string "No, in the universe!$"
 
@@ -482,23 +482,23 @@ VeilstoneCity_EventScript_SNWHCP_PL1::
 	goto VeilstoneCity_EventScript_SNWHCP_Battle
 
 VeilstoneCity_EventScript_SNWHCP_G2::
-	.string "Grunt 2: You’re trying to get the\n"
+	.string "GRUNT 2: You’re trying to get the\n"
 	.string "POKéDEX back from us?\p"
-	.string "Not when we, Team Galactic, can make so\n"
+	.string "Not when we, TEAM GALACTIC, can make so\n"
 	.string "much better use of it!\p"
 	.string "But, OK, guarding the warehouse does\n"
 	.string "get boring!\p"
 	.string "We’ll take you on two-on-two!$"
 
 VeilstoneCity_EventScript_SNWHCP_G1::
-	.string "Grunt 1: What? Now you’ve brought your\n"
+	.string "GRUNT 1: What? Now you’ve brought your\n"
 	.string "buddy along so you can get your\p"
 	.string "POKéDEX back?\p"
 	.string "We’ll be just as happy to send both of\n"
 	.string "you crying home to your mommies!$"
 
 VeilstoneCity_EventScript_SNWHCP_Team_D::
-	.string "Dawn: You and your POKéMON together\n"
+	.string "DAWN: You and your POKéMON together\n"
 	.string "with me and my POKéMON...\p"
 	.string "United like this, our dream team has no\n"
 	.string "chance of losing!\p"
@@ -510,7 +510,7 @@ VeilstoneCity_EventScript_SNWHCP_Team_L::
 	goto VeilstoneCity_EventScript_SNWHCP_Team_N
 
 VeilstoneCity_EventScript_SNWHCP_Team_Lu::
-	.string "Lucas: You and your POKéMON together\n"
+	.string "LUCAS: You and your POKéMON together\n"
 	.string "with me and my POKéMON...\p"
 	.string "Our dream team’s not going to lose. Not\n"
 	.string "with the way we work together!\p"
@@ -525,7 +525,7 @@ VeilstoneCity_EventScript_SNWHCP_Decline::
 	end
 
 VeilstoneCity_EventScript_SNWHCP_Wait_D::
-	.string "Dawn: I’ll be waiting. Please get ready\n"
+	.string "DAWN: I’ll be waiting. Please get ready\n"
 	.string "and come quickly.$"
 
 VeilstoneCity_EventScript_SNWHCP_Decline_L::
@@ -534,16 +534,16 @@ VeilstoneCity_EventScript_SNWHCP_Decline_L::
 	end
 
 VeilstoneCity_EventScript_SNWHCP_Wait_Lu::
-	.string "Lucas: I’ll be waiting! Get ready and\n"
+	.string "LUCAS: I’ll be waiting! Get ready and\n"
 	.string "come quick!$"
 
 VeilstoneCity_EventScript_SNWHCP_Ask_D::
-	.string "Dawn: Hi, {PLAYER}! Please, can you help\n"
+	.string "DAWN: Hi, {PLAYER}! Please, can you help\n"
 	.string "me?\p"
-	.string "Do you remember Team Galactic? Those\n"
+	.string "Do you remember TEAM GALACTIC? Those\n"
 	.string "horrible people?\p"
-	.string "They tried to steal Prof. Rowan’s\n"
-	.string "research results in Jubilife, remember?\p"
+	.string "They tried to steal PROF. ROWAN’s\n"
+	.string "research results in JUBILIFE, remember?\p"
 	.string "I ran into them, and they took away my\n"
 	.string "POKéDEX.\p"
 	.string "Please, I need your help. Team up and\n"
@@ -554,11 +554,11 @@ VeilstoneCity_EventScript_SNWHCP_Ask_L::
 	goto VeilstoneCity_EventScript_SNWHCP_Ask_N
 
 VeilstoneCity_EventScript_SNWHCP_Ask_Lu::
-	.string "Lucas: Hey! {PLAYER}! Listen, I need\n"
+	.string "LUCAS: Hey! {PLAYER}! Listen, I need\n"
 	.string "your help...\p"
-	.string "Remember those Team Galactic goons?\p"
-	.string "The guys who tried to take Prof.\n"
-	.string "Rowan’s research results in Jubilife?\p"
+	.string "Remember those TEAM GALACTIC goons?\p"
+	.string "The guys who tried to take PROF.\n"
+	.string "ROWAN’s research results in JUBILIFE?\p"
 	.string "I ran into them, and they ripped off my\n"
 	.string "POKéDEX!\p"
 	.string "Will you team up with me to take them\n"
@@ -602,7 +602,7 @@ VeilstoneCity_EventScript_SNKeyLooker_Ask::
 	end
 
 VeilstoneCity_EventScript_SNKeyGrunt_L2::
-	.string "Very well. Inside the Team Galactic\n"
+	.string "Very well. Inside the TEAM GALACTIC\n"
 	.string "warehouse.\p"
 	.string "We will meet there.\p"
 	.string "Prepare the best you can. I shall join\n"
@@ -614,14 +614,14 @@ VeilstoneCity_EventScript_SNKeyGrunt_No::
 	end
 
 VeilstoneCity_EventScript_SNKeyGrunt_L3::
-	.string "Looker: ...Yes, I see your point.\p"
+	.string "LOOKER: ...Yes, I see your point.\p"
 	.string "Sneaking into the hideout of the Team\n"
-	.string "Galactic...it is daunting.$"
+	.string "GALACTIC...it is daunting.$"
 
 VeilstoneCity_EventScript_SNKeyGrunt_L1::
 	.string "Ah-hah! You leave this to me!\p"
 	.string "The Storage Key for entering the Team\n"
-	.string "Galactic hideout, I have right here.\p"
+	.string "GALACTIC hideout, I have right here.\p"
 	.string "A frontal assault, it is not possible.\n"
 	.string "But we can enter their hideout.\p"
 	.string "Well? Will you enter the hideout? You\n"
@@ -678,7 +678,7 @@ VeilstoneCity_EventScript_PtSign5::
 	end
 
 VeilstoneCity_Text_PtSign5::
-	.string "VEILSTONE CITY POKéMON Gym Leader:\n"
+	.string "VEILSTONE CITY POKéMON GYM LEADER:\n"
 	.string "MAYLENE The Barefoot, Fighting\l"
 	.string "Genius!$"
 

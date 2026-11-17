@@ -7,7 +7,7 @@ PokmonLeague_EventScript_PtSign1::
 	end
 
 PokmonLeague_Text_PtSign1::
-	.string "Victory Road Ahead$"
+	.string "VICTORY ROAD Ahead$"
 
 PokmonLeague_EventScript_PtSign2::
 	msgbox PokmonLeague_Text_PtSign2, MSGBOX_SIGN

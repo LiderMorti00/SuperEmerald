@@ -40,7 +40,7 @@ Route205_North_Text_JosephDefeat::
 
 Route205_North_Text_JosephIntro::
 	.string "How about that! I've netted me a\n"
-	.string "feisty Trainer!$"
+	.string "feisty TRAINER!$"
 
 Route205_North_EventScript_Zachary::
 	trainerbattle_single TRAINER_SAMUEL_SINNOH, Route205_North_Text_ZacharyIntro, Route205_North_Text_ZacharyDefeat

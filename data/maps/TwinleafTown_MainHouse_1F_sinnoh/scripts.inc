@@ -13,12 +13,12 @@ TwinleafTown_MainHouse_1F_EventScript_Mom::
 	end
 
 TwinleafTown_MainHouse_1F_Text_SNMomPost::
-	.string "Mom: {PLAYER}!\p"
+	.string "MOM: {PLAYER}!\p"
 	.string "{RIVAL} came looking for you a\n"
 	.string "little while ago.\p"
 	.string "I don’t know what it was about, but he\n"
 	.string "was shouting about you needing\p"
-	.string "to get on a ship at Snowpoint City.\p"
+	.string "to get on a ship at SNOWPOINT CITY.\p"
 	.string "You know how impatient he is. He was\n"
 	.string "gone before I could ask.$"
 
@@ -35,7 +35,7 @@ TwinleafTown_MainHouse_1F_EventScript_SNMomNormal::
 	end
 
 TwinleafTown_MainHouse_1F_Text_SNMomWorried::
-	.string "Mom: {PLAYER}, is everything all\n"
+	.string "MOM: {PLAYER}, is everything all\n"
 	.string "right?\p"
 	.string "I get worried seeing the news...\p"
 	.string "But you’re all right, aren’t you?\n"
@@ -52,7 +52,7 @@ TwinleafTown_MainHouse_1F_EventScript_SNMomRandom::
 	end
 
 TwinleafTown_MainHouse_1F_Text_MomTalk::
-	.string "Mom: {PLAYER}.\p"
+	.string "MOM: {PLAYER}.\p"
 	.string "Listen. Always treat your POKéMON with\n"
 	.string "kindness.\p"
 	.string "Your POKéMON work hard, not for\n"
@@ -64,7 +64,7 @@ TwinleafTown_MainHouse_1F_EventScript_SNMom2::
 	end
 
 TwinleafTown_MainHouse_1F_Text_SNMomC::
-	.string "Mom: While you’re gone, I go and visit\n"
+	.string "MOM: While you’re gone, I go and visit\n"
 	.string "{RIVAL}’s mom.\p"
 	.string "We talk about this and that.\p"
 	.string "Well, actually, all we do is talk about\n"
@@ -76,7 +76,7 @@ TwinleafTown_MainHouse_1F_EventScript_SNMom1::
 	end
 
 TwinleafTown_MainHouse_1F_Text_SNMomB::
-	.string "Mom: {PLAYER}.\p"
+	.string "MOM: {PLAYER}.\p"
 	.string "Seeing you reminds me so much of your\n"
 	.string "father.\p"
 	.string "You two are so alike!$"
@@ -87,7 +87,7 @@ TwinleafTown_MainHouse_1F_EventScript_SNMom0::
 	end
 
 TwinleafTown_MainHouse_1F_Text_SNMomA::
-	.string "Mom: {PLAYER}!\p"
+	.string "MOM: {PLAYER}!\p"
 	.string "You and your POKéMON are looking good!\n"
 	.string "Nothing can stop you now!$"
 
@@ -100,7 +100,7 @@ TwinleafTown_MainHouse_1F_EventScript_SNMomRestText::
 	return
 
 TwinleafTown_MainHouse_1F_Text_SNMomRest::
-	.string "Mom: Welcome home, {PLAYER}. Are you and\n"
+	.string "MOM: Welcome home, {PLAYER}. Are you and\n"
 	.string "your POKéMON healthy?\p"
 	.string "Take a quick rest, dear.$"
 
@@ -109,7 +109,7 @@ TwinleafTown_MainHouse_1F_EventScript_SNMomRestNight::
 	return
 
 TwinleafTown_MainHouse_1F_Text_SNMomRestNight::
-	.string "Mom: Welcome home, {PLAYER}.\n"
+	.string "MOM: Welcome home, {PLAYER}.\n"
 	.string "Are you and your POKéMON healthy?\p"
 	.string "I just made dinner.\n"
 	.string "Take a quick rest, dear.$"
@@ -119,7 +119,7 @@ TwinleafTown_MainHouse_1F_EventScript_SNMomRestMorning::
 	return
 
 TwinleafTown_MainHouse_1F_Text_SNMomRestMorning::
-	.string "Mom: Welcome home, {PLAYER}.\n"
+	.string "MOM: Welcome home, {PLAYER}.\n"
 	.string "Are you and your POKéMON healthy?\p"
 	.string "It’s still early in the morning.\n"
 	.string "Take a quick rest, dear.$"
@@ -129,7 +129,7 @@ TwinleafTown_MainHouse_1F_EventScript_SNMomRestLate::
 	return
 
 TwinleafTown_MainHouse_1F_Text_SNMomRestLate::
-	.string "Mom: Welcome home, {PLAYER}.\n"
+	.string "MOM: Welcome home, {PLAYER}.\n"
 	.string "Are you and your POKéMON healthy?\p"
 	.string "It’s so late right now...\n"
 	.string "Take a quick rest, dear.$"
@@ -141,7 +141,7 @@ TwinleafTown_MainHouse_1F_EventScript_SNMomShoesInfo::
 	end
 
 TwinleafTown_MainHouse_1F_Text_SNMomInstructions::
-	.string "Mom: I’ll read you the instructions\n"
+	.string "MOM: I’ll read you the instructions\n"
 	.string "for the Running Shoes...\p"
 	.string "“Press the B Button and dash\n"
 	.string "about faster than ever before!\p"
@@ -161,7 +161,7 @@ TwinleafTown_MainHouse_1F_EventScript_SNMomEarly::
 	end
 
 TwinleafTown_MainHouse_1F_Text_SNMomImpatient::
-	.string "Mom: You know how impatient\n"
+	.string "MOM: You know how impatient\n"
 	.string "{RIVAL} is.\p"
 	.string "He took off before I could even\n"
 	.string "ask what it was about.$"
@@ -172,7 +172,7 @@ TwinleafTown_MainHouse_1F_EventScript_SNMomWaiting::
 	end
 
 TwinleafTown_MainHouse_1F_Text_SNMomIsntRivalWaiting::
-	.string "Mom: What is it, dear?\n"
+	.string "MOM: What is it, dear?\n"
 	.string "Isn’t {RIVAL} waiting for you?$"
 
 TwinleafTown_MainHouse_1F_EventScript_BarrysMom::
@@ -182,7 +182,7 @@ TwinleafTown_MainHouse_1F_EventScript_BarrysMom::
 TwinleafTown_MainHouse_1F_Text_BarrysMom2::
 	.string "{PLAYER}’s mom: Let me think...\p"
 	.string "Knowing my boy, he would probably head\n"
-	.string "straight to Jubilife City...\p"
+	.string "straight to JUBILIFE CITY...\p"
 	.string "OK, please take that to my {PLAYER}.\p"
-	.string "Mom: Bye-bye, {PLAYER}! Enjoy your\n"
+	.string "MOM: Bye-bye, {PLAYER}! Enjoy your\n"
 	.string "adventure!$"

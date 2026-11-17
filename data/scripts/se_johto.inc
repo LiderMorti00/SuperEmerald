@@ -880,6 +880,10 @@ SE_EventScript_MagnetTrainGoldenrod::
 	closemessage
 	playse SE_DOOR
 	fadescreen FADE_TO_BLACK
+	playbgm MUS_HG_MAGNET_TRAIN, FALSE
+	delay 150
+	playse SE_TRUCK_STOP
+	delay 30
 	warp MAP_SAFFRON_CITY_MAGNET_TRAIN_STATION, 137, 21
 	waitstate
 	release
@@ -894,6 +898,10 @@ SE_EventScript_MagnetTrainSaffron::
 	closemessage
 	playse SE_DOOR
 	fadescreen FADE_TO_BLACK
+	playbgm MUS_HG_MAGNET_TRAIN, FALSE
+	delay 150
+	playse SE_TRUCK_STOP
+	delay 30
 	warp MAP_GOLDENROD_CITY_TRAIN_STATION_HNS, 16, 21
 	waitstate
 	release

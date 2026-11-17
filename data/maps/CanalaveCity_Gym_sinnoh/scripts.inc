@@ -48,7 +48,7 @@ CanalaveCity_Gym_Text_GaryDefeat::
 	.string "That move was devastating!$"
 
 CanalaveCity_Gym_Text_GaryIntro::
-	.string "A POKéMON Gym isn’t only about seeing\n"
+	.string "A POKéMON GYM isn’t only about seeing\n"
 	.string "how tough your POKéMON happen to be.\p"
 	.string "It’s so much deeper than just that.\n"
 	.string "It’s a test of you as a person.$"
@@ -79,7 +79,7 @@ CanalaveCity_Gym_EventScript_Cesar::
 CanalaveCity_Gym_Text_CesarPost::
 	.string "Your earnest enthusiasm... I guess\n"
 	.string "that kinda makes you an ace.\p"
-	.string "Maybe you’re a Trainer who has the\n"
+	.string "Maybe you’re a TRAINER who has the\n"
 	.string "potential to surpass aces!$"
 
 CanalaveCity_Gym_Text_CesarDefeat::
@@ -138,17 +138,17 @@ CanalaveCity_Gym_EventScript_Leader::
 	end
 
 CanalaveCity_Gym_Text_LeaderPostBattle::
-	.string "Gwahahahaha! The Sinnoh region is\n"
+	.string "Gwahahahaha! The SINNOH region is\n"
 	.string "vast!\p"
-	.string "Tough Trainers like you and {PLAYER}\n"
+	.string "Tough TRAINERS like you and {PLAYER}\n"
 	.string "crop up constantly\p"
 	.string "to challenge the old guard!\p"
-	.string "With more young Trainers like my son\n"
+	.string "With more young TRAINERS like my son\n"
 	.string "and you two taking charge, the\p"
 	.string "future of POKéMON is bright!\p"
 	.string "But I’m not stepping aside just yet!\p"
 	.string "I merely need to rededicate myself to\n"
-	.string "training on Iron Island.$"
+	.string "training on IRON ISLAND.$"
 
 CanalaveCity_Gym_EventScript_GiveTM::
 	giveitem ITEM_TM91
@@ -180,30 +180,30 @@ CanalaveCity_Gym_EventScript_LeaderDefeated::
 	goto CanalaveCity_Gym_EventScript_GiveTM
 
 CanalaveCity_Gym_Text_ExplainBadge::
-	.string "Having the Mine Badge enables you to\n"
+	.string "Having the Mine BADGE enables you to\n"
 	.string "use the hidden move Strength anytime\p"
 	.string "outside of battle.\p"
-	.string "And you now have six Gym Badges.\p"
+	.string "And you now have six GYM BADGES.\p"
 	.string "That means all POKéMON up to Lv. 70 will\n"
 	.string "obey you without question.\p"
 	.string "Here! Take this, too!$"
 
 CanalaveCity_Gym_Text_ReceivedBadge::
-	.string "{PLAYER} received the Mine Badge from\n"
-	.string "Byron!$"
+	.string "{PLAYER} received the Mine BADGE from\n"
+	.string "BYRON!$"
 
 CanalaveCity_Gym_Text_LeaderDefeat::
 	.string "You were strong enough to take down\n"
 	.string "my prized team of POKéMON.\p"
 	.string "In recognition of that power, I give\n"
-	.string "you this: the Mine Badge!$"
+	.string "you this: the Mine BADGE!$"
 
 CanalaveCity_Gym_Text_LeaderIntro::
-	.string "Ah! That’s Oreburgh’s Gym Badge!\p"
+	.string "Ah! That’s OREBURGH’s GYM BADGE!\p"
 	.string "I see, I see! You’ve defeated my son.\p"
 	.string "But that’s no surprise. He still has\n"
 	.string "much to learn.\p"
-	.string "In place of my son Roark, I, Byron, will\n"
+	.string "In place of my son ROARK, I, BYRON, will\n"
 	.string "take your challenge!$"
 
 CanalaveCity_Gym_EventScript_SNRematch::
@@ -223,7 +223,7 @@ CanalaveCity_Gym_EventScript_SNRematch_After::
 	.string "anytime for another match!$"
 
 CanalaveCity_Gym_EventScript_SNRematch_Defeat::
-	.string "Amazing... You really are the Champion!$"
+	.string "Amazing... You really are the CHAMPION!$"
 
 CanalaveCity_Gym_EventScript_SNRematch_Go::
 	.string "Then I won’t hold back this time!$"
@@ -237,7 +237,7 @@ CanalaveCity_Gym_EventScript_SNRematch_NoT::
 	.string "Come back whenever you’re ready!$"
 
 CanalaveCity_Gym_EventScript_SNRematch_Ask::
-	.string "Byron: You became the Champion!\n"
+	.string "BYRON: You became the CHAMPION!\n"
 	.string "Welcome back!\p"
 	.string "I’ve been training even harder since\n"
 	.string "our last battle.\p"
@@ -253,10 +253,10 @@ CanalaveCity_Gym_EventScript_PtGymGuide::
 	end
 
 CanalaveCity_Gym_Text_SNGuideInfo::
-	.string "Let me tell you about this Gym!\p"
-	.string "The Gym Leader is BYRON, the\n"
+	.string "Let me tell you about this GYM!\p"
+	.string "The GYM LEADER is BYRON, the\n"
 	.string "Solid-Rock Father of ROARK from\l"
-	.string "Oreburgh.\p"
+	.string "OREBURGH.\p"
 	.string "He uses Steel-type POKéMON like\n"
 	.string "MAGNETON, STEELIX and BASTIODON.\p"
 	.string "Steel types are weak to Fire, Fighting\n"
@@ -268,8 +268,8 @@ CanalaveCity_Gym_Text_SNGuideInfo::
 	.string "the way through the maze to BYRON!$"
 
 CanalaveCity_Gym_Text_PtGymGuide::
-	.string "Hey, there! Champ-to-be!\p"
-	.string "The Gym Leader here uses Steel-type\n"
+	.string "Hey, there! CHAMP-to-be!\p"
+	.string "The GYM LEADER here uses Steel-type\n"
 	.string "POKéMON.\p"
 	.string "Steel-type POKéMON have high Defense,\n"
 	.string "so you’d have to hit them hard!$"
@@ -280,14 +280,14 @@ CanalaveCity_Gym_EventScript_PtGymGuideAfter::
 	end
 
 CanalaveCity_Gym_Text_PtGymGuideAfter::
-	.string "Oh! {PLAYER}! You’ve beaten the Gym\n"
-	.string "Leader!\p"
-	.string "Good going! That makes it six Gym\n"
-	.string "Badges!\p"
+	.string "Oh! {PLAYER}! You’ve beaten the GYM\n"
+	.string "LEADER!\p"
+	.string "Good going! That makes it six GYM\n"
+	.string "BADGES!\p"
 	.string "I tell you what, you’re really turning\n"
-	.string "into one fine Trainer.\p"
+	.string "into one fine TRAINER.\p"
 	.string "If you were to say you’re going to try\n"
-	.string "to become the POKéMON Champ...\p"
+	.string "to become the POKéMON CHAMP...\p"
 	.string "No one’d laugh at you now! I’m in your\n"
 	.string "corner, kiddo!$"
 
@@ -299,9 +299,9 @@ CanalaveCity_Gym_EventScript_PtGymStatue::
 	end
 
 CanalaveCity_Gym_Text_PtGymStatue::
-	.string "Canalave City POKéMON Gym\n"
-	.string "Leader: Byron\p"
-	.string "Certified Trainers:\n"
+	.string "CANALAVE CITY POKéMON GYM\n"
+	.string "LEADER: BYRON\p"
+	.string "Certified TRAINERS:\n"
 	.string "{RIVAL}$"
 
 CanalaveCity_Gym_EventScript_PtGymStatueWon::
@@ -310,8 +310,8 @@ CanalaveCity_Gym_EventScript_PtGymStatueWon::
 	end
 
 CanalaveCity_Gym_Text_PtGymStatueWon::
-	.string "Canalave City POKéMON Gym\n"
-	.string "Leader: Byron\p"
-	.string "Certified Trainers:\n"
+	.string "CANALAVE CITY POKéMON GYM\n"
+	.string "LEADER: BYRON\p"
+	.string "Certified TRAINERS:\n"
 	.string "{RIVAL}\n"
 	.string "{PLAYER}$"

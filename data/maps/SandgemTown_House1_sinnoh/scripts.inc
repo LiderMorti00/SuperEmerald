@@ -20,6 +20,6 @@ SandgemTown_House1_EventScript_PtNpc2::
 	end
 
 SandgemTown_House1_Text_PtNpc2::
-	.string "A good Trainer is one that takes care\n"
+	.string "A good TRAINER is one that takes care\n"
 	.string "not to let their POKéMON faint from\l"
 	.string "losing HP.$"

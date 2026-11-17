@@ -105,27 +105,27 @@ Route227_EventScript_SNBuck::
 	goto Route227_EventScript_SNBuck_Ask
 
 Route227_EventScript_SNBuck_T2::
-	.string "Buck: Up past here, there’s this\n"
-	.string "volcano. It’s Stark Mountain.\p"
+	.string "BUCK: Up past here, there’s this\n"
+	.string "volcano. It’s STARK MOUNTAIN.\p"
 	.string "Deep inside it is this special rock\n"
 	.string "called the Magma Stone.\p"
 	.string "I can’t explain it well, but it’s really\n"
 	.string "important. It keeps a POKéMON asleep.\p"
 	.string "But lately, I’ve been hearing rumors\n"
-	.string "about vandals in Stark Mountain.\p"
+	.string "about vandals in STARK MOUNTAIN.\p"
 	.string "They say goons in space suits are\n"
 	.string "causing trouble there.$"
 
 Route227_EventScript_SNBuck_T1::
-	.string "Buck: Yo, if it isn’t {PLAYER}! Out\n"
+	.string "BUCK: Yo, if it isn’t {PLAYER}! Out\n"
 	.string "training right away, are you?\p"
 	.string "So, uh, since you’re training anyway,\n"
 	.string "can you do me a favor?\p"
-	.string "I’d like you to patrol Stark Mountain\n"
+	.string "I’d like you to patrol STARK MOUNTAIN\n"
 	.string "for me.$"
 
 Route227_EventScript_SNBuck_T5::
-	.string "Buck: OK! You’re in charge! Patrol Stark\n"
+	.string "BUCK: OK! You’re in charge! Patrol Stark\n"
 	.string "Mountain for me!\p"
 	.string "Don’t worry about me. Not even a little\n"
 	.string "bit, OK?$"
@@ -176,9 +176,9 @@ Route227_EventScript_SNWake_T6::
 	.string "challenges!$"
 
 Route227_EventScript_SNWake_T5::
-	.string "Wake: ...How’d I get involved in this...?\p"
+	.string "WAKE: ...How’d I get involved in this...?\p"
 	.string "So, anyway, {PLAYER}. You’re going to\n"
-	.string "Stark Mountain?\p"
+	.string "STARK MOUNTAIN?\p"
 	.string "Even the wild POKéMON there are very,\n"
 	.string "very tough...\p"
 	.string "If your POKéMON aren’t well trained,\n"
@@ -193,10 +193,10 @@ Route227_EventScript_SNWake_T5::
 Route227_EventScript_SNWake_T4::
 	.string "BARRY: Awww, master, don’t be that way!\p"
 	.string "You’ve got to get me into that club in\n"
-	.string "the Survival Area!$"
+	.string "the SURVIVAL AREA!$"
 
 Route227_EventScript_SNWake_T3::
-	.string "Wake: What? Are you still having\n"
+	.string "WAKE: What? Are you still having\n"
 	.string "trouble understanding?\p"
 	.string "I don’t for a second ever recall\n"
 	.string "accepting you as an apprentice!\p"
@@ -208,7 +208,7 @@ Route227_EventScript_SNWake_T2::
 	.string "words of wisdom!$"
 
 Route227_EventScript_SNWake_T1::
-	.string "Wake: Oh, if it isn’t {PLAYER}! It’s been\n"
+	.string "WAKE: Oh, if it isn’t {PLAYER}! It’s been\n"
 	.string "a while!\p"
 	.string "You’ve grown so tough that you’re\n"
 	.string "training out here now...\p"
@@ -222,4 +222,4 @@ Route227_EventScript_PtSign1::
 	end
 
 Route227_Text_PtSign1::
-	.string "Rt. 227 Stark Mountain$"
+	.string "Rt. 227 STARK MOUNTAIN$"

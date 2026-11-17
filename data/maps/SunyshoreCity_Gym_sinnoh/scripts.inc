@@ -141,7 +141,7 @@ SunyshoreCity_Gym_EventScript_Tiera::
 	end
 
 SunyshoreCity_Gym_Text_TieraPost::
-	.string "Our Gym’s electric barriers are sure to\n"
+	.string "Our GYM’s electric barriers are sure to\n"
 	.string "give you a shock! Think before you\l"
 	.string "step on a switch.$"
 
@@ -150,7 +150,7 @@ SunyshoreCity_Gym_Text_TieraDefeat::
 	.string "I’m switched off...$"
 
 SunyshoreCity_Gym_Text_TieraIntro::
-	.string "Can you make it to the Gym Leader? You\n"
+	.string "Can you make it to the GYM LEADER? You\n"
 	.string "sure now?$"
 
 SunyshoreCity_Gym_EventScript_Forrest::
@@ -167,7 +167,7 @@ SunyshoreCity_Gym_Text_ForrestDefeat::
 	.string "...You’re tough.$"
 
 SunyshoreCity_Gym_Text_ForrestIntro::
-	.string "This is the toughest Gym in Sinnoh.\p"
+	.string "This is the toughest GYM in SINNOH.\p"
 	.string "That’s why I’m here--to learn the best\n"
 	.string "battle techniques around!$"
 
@@ -177,7 +177,7 @@ SunyshoreCity_Gym_EventScript_Jerry::
 	end
 
 SunyshoreCity_Gym_Text_JerryPost::
-	.string "The Trainer’s desire to win!\p"
+	.string "The TRAINER’s desire to win!\p"
 	.string "If you don’t lose that, there’s no limit\n"
 	.string "on what you can become!$"
 
@@ -223,7 +223,7 @@ SunyshoreCity_Gym_Text_DestinyDefeat::
 	.string "down to my toes!$"
 
 SunyshoreCity_Gym_Text_DestinyIntro::
-	.string "I’m not just looking for tough Trainers\n"
+	.string "I’m not just looking for tough TRAINERS\n"
 	.string "to battle.\p"
 	.string "I’ve been battling here because I want\n"
 	.string "to feel the rush!$"
@@ -243,8 +243,8 @@ SunyshoreCity_Gym_Text_PrestonDefeat::
 
 SunyshoreCity_Gym_Text_PrestonIntro::
 	.string "Spark!\p"
-	.string "This is what our Gym Leader did to the\n"
-	.string "Gym out of boredom!$"
+	.string "This is what our GYM LEADER did to the\n"
+	.string "GYM out of boredom!$"
 
 SunyshoreCity_Gym_EventScript_Lonnie::
 	trainerbattle_single TRAINER_ISABEL_4_SINNOH, SunyshoreCity_Gym_Text_LonnieIntro, SunyshoreCity_Gym_Text_LonnieDefeat
@@ -262,7 +262,7 @@ SunyshoreCity_Gym_Text_LonnieDefeat::
 	.string "must have been out of tune!$"
 
 SunyshoreCity_Gym_Text_LonnieIntro::
-	.string "Whether you’re a Trainer or a Guitarist,\n"
+	.string "Whether you’re a TRAINER or a Guitarist,\n"
 	.string "it takes dedication to\p"
 	.string "improve your mad skills!$"
 
@@ -273,7 +273,7 @@ SunyshoreCity_Gym_EventScript_Zachery::
 
 SunyshoreCity_Gym_Text_ZacheryPost::
 	.string "As a challenger, you’re one tough\n"
-	.string "Trainer.$"
+	.string "TRAINER.$"
 
 SunyshoreCity_Gym_Text_ZacheryDefeat::
 	.string "What makes your POKéMON so special?$"
@@ -293,14 +293,14 @@ SunyshoreCity_Gym_EventScript_Leader::
 	end
 
 SunyshoreCity_Gym_Text_LeaderPostBattle::
-	.string "Your next step is the POKéMON League\n"
+	.string "Your next step is the POKéMON LEAGUE\n"
 	.string "challenge.\p"
 	.string "It’s time for you to cross the sea and\n"
 	.string "win your way through the\p"
-	.string "gauntlet that is Victory Road.\p"
-	.string "Demonstrate to the POKéMON League\n"
+	.string "gauntlet that is VICTORY ROAD.\p"
+	.string "Demonstrate to the POKéMON LEAGUE\n"
 	.string "your mastery of your team.\p"
-	.string "Against you, even the Elite Four will be\n"
+	.string "Against you, even the ELITE FOUR will be\n"
 	.string "pushed to fend off your challenge!$"
 
 SunyshoreCity_Gym_EventScript_GiveTM::
@@ -338,19 +338,19 @@ SunyshoreCity_Gym_EventScript_LeaderDefeated::
 	goto SunyshoreCity_Gym_EventScript_GiveTM
 
 SunyshoreCity_Gym_Text_ExplainBadge::
-	.string "That Beacon Badge lets you use the\n"
+	.string "That Beacon BADGE lets you use the\n"
 	.string "hidden move Waterfall even when\p"
 	.string "you’re not in a battle.\p"
 	.string "Waterfall happens to be key if you’re\n"
-	.string "going to the POKéMON League.\p"
+	.string "going to the POKéMON LEAGUE.\p"
 	.string "Also, because you’ve collected all\n"
-	.string "eight Badges, any POKéMON at any\p"
+	.string "eight BADGES, any POKéMON at any\p"
 	.string "level will now obey you without fail.\p"
 	.string "I want you to take this, too.$"
 
 SunyshoreCity_Gym_Text_ReceivedBadge::
-	.string "{PLAYER} received the Beacon Badge\n"
-	.string "from Volkner.$"
+	.string "{PLAYER} received the Beacon BADGE\n"
+	.string "from VOLKNER.$"
 
 SunyshoreCity_Gym_Text_LeaderDefeat::
 	.string "...Hehehe.\p"
@@ -360,21 +360,21 @@ SunyshoreCity_Gym_Text_LeaderDefeat::
 	.string "It’s also made me excited to know you\n"
 	.string "and your team will keep battling\p"
 	.string "to greater heights!\p"
-	.string "This is your eighth Gym Badge. You’ve\n"
+	.string "This is your eighth GYM BADGE. You’ve\n"
 	.string "earned this!$"
 
 SunyshoreCity_Gym_Text_LeaderIntro::
 	.string "...All right, challenger.\p"
-	.string "It’s not often, but some Trainers\n"
+	.string "It’s not often, but some TRAINERS\n"
 	.string "manage to come and challenge me.\p"
 	.string "But they’ve all been boring battles. I\n"
 	.string "didn’t break a sweat beating them.\p"
-	.string "...Sigh... I’m Volkner, the Gym Leader.\p"
-	.string "They say I’m the top Gym Leader in\n"
-	.string "Sinnoh, but...\p"
+	.string "...Sigh... I’m VOLKNER, the GYM LEADER.\p"
+	.string "They say I’m the top GYM LEADER in\n"
+	.string "SINNOH, but...\p"
 	.string "Anyway, I guess we’d better get this\n"
 	.string "done.\p"
-	.string "I hope you’re the Trainer who’ll make me\n"
+	.string "I hope you’re the TRAINER who’ll make me\n"
 	.string "remember how fun it is to battle!$"
 
 SunyshoreCity_Gym_EventScript_SNRematch::
@@ -394,7 +394,7 @@ SunyshoreCity_Gym_EventScript_SNRematch_After::
 	.string "anytime for another match!$"
 
 SunyshoreCity_Gym_EventScript_SNRematch_Defeat::
-	.string "Amazing... You really are the Champion!$"
+	.string "Amazing... You really are the CHAMPION!$"
 
 SunyshoreCity_Gym_EventScript_SNRematch_Go::
 	.string "Then I won’t hold back this time!$"
@@ -408,7 +408,7 @@ SunyshoreCity_Gym_EventScript_SNRematch_NoT::
 	.string "Come back whenever you’re ready!$"
 
 SunyshoreCity_Gym_EventScript_SNRematch_Ask::
-	.string "Volkner: You became the Champion!\n"
+	.string "VOLKNER: You became the CHAMPION!\n"
 	.string "Welcome back!\p"
 	.string "I’ve been training even harder since\n"
 	.string "our last battle.\p"
@@ -424,35 +424,35 @@ SunyshoreCity_Gym_EventScript_PtGymGuide::
 	end
 
 SunyshoreCity_Gym_Text_SNGuideInfo::
-	.string "Let me tell you about this Gym!\p"
-	.string "The Gym Leader is VOLKNER, the Shining,\n"
-	.string "Shocking Star and the strongest Gym\l"
-	.string "Leader in Sinnoh.\p"
+	.string "Let me tell you about this GYM!\p"
+	.string "The GYM LEADER is VOLKNER, the Shining,\n"
+	.string "Shocking Star and the strongest GYM\l"
+	.string "LEADER in SINNOH.\p"
 	.string "He uses Electric-type POKéMON like\n"
 	.string "JOLTEON, RAICHU, LUXRAY and\l"
 	.string "ELECTIVIRE.\p"
 	.string "Electric types are weak to Ground\n"
 	.string "moves, and Ground types are immune to\l"
 	.string "Electric moves!\p"
-	.string "Electric barriers block the Gym. Step\n"
+	.string "Electric barriers block the GYM. Step\n"
 	.string "on the floor switches to turn them on\l"
 	.string "and off and open a path to VOLKNER.$"
 
 SunyshoreCity_Gym_Text_PtGymGuide::
 	.string "Hey, there! How’s it going,\n"
-	.string "Champ-to-be?\p"
-	.string "Let me check out your Trainer Case.\n"
-	.string "Let’s see how many Badges you have.\p"
+	.string "CHAMP-to-be?\p"
+	.string "Let me check out your TRAINER Case.\n"
+	.string "Let’s see how many BADGES you have.\p"
 	.string "One, two, three... Whoa! Wow! You’ve\n"
 	.string "already got seven!\p"
-	.string "That means if you can beat this Gym\n"
-	.string "Leader, you’re on your way to the\p"
-	.string "POKéMON League next.\p"
+	.string "That means if you can beat this GYM\n"
+	.string "LEADER, you’re on your way to the\p"
+	.string "POKéMON LEAGUE next.\p"
 	.string "That also means this is the last time I\n"
 	.string "get to give you advice.\p"
 	.string "This is it, kiddo! Listen carefully...one\n"
 	.string "last time!\p"
-	.string "The Gym Leader here is a master of\n"
+	.string "The GYM LEADER here is a master of\n"
 	.string "Electric-type POKéMON!\p"
 	.string "That’s all I have to say. The rest is up\n"
 	.string "to you!$"
@@ -463,16 +463,16 @@ SunyshoreCity_Gym_EventScript_PtGymGuideAfter::
 	end
 
 SunyshoreCity_Gym_Text_PtGymGuideAfter::
-	.string "Oh! {PLAYER}! Did you beat the Gym\n"
-	.string "Leader?\p"
+	.string "Oh! {PLAYER}! Did you beat the GYM\n"
+	.string "LEADER?\p"
 	.string "Well, of course you did!\p"
 	.string "But, you know what? You haven’t made\n"
 	.string "it in my mind yet!\p"
 	.string "Do you know why?\p"
 	.string "Because you and your POKéMON are\n"
 	.string "capable of achieving so much more!\p"
-	.string "But, I am proud of you! Eight Sinnoh\n"
-	.string "Badges!\p"
+	.string "But, I am proud of you! Eight SINNOH\n"
+	.string "BADGES!\p"
 	.string "Way to go, kiddo!$"
 
 SunyshoreCity_Gym_EventScript_PtGymStatue::
@@ -483,8 +483,8 @@ SunyshoreCity_Gym_EventScript_PtGymStatue::
 	end
 
 SunyshoreCity_Gym_Text_PtGymStatue::
-	.string "Sunyshore City POKéMON Gym\p"
-	.string "Leader: Volkner$"
+	.string "SUNNYSHORE CITY POKéMON GYM\p"
+	.string "LEADER: VOLKNER$"
 
 SunyshoreCity_Gym_EventScript_PtGymStatueWon::
 	msgbox SunyshoreCity_Gym_Text_PtGymStatueWon, MSGBOX_DEFAULT
@@ -492,6 +492,6 @@ SunyshoreCity_Gym_EventScript_PtGymStatueWon::
 	end
 
 SunyshoreCity_Gym_Text_PtGymStatueWon::
-	.string "Sunyshore City POKéMON Gym\p"
-	.string "Leader: Volkner Certified Trainers:\p"
+	.string "SUNNYSHORE CITY POKéMON GYM\p"
+	.string "LEADER: VOLKNER Certified TRAINERS:\p"
 	.string "{PLAYER}$"

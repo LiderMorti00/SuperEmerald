@@ -26,9 +26,9 @@ SandgemTown_RivalHouse_F1_EventScript_SNNational::
 SandgemTown_RivalHouse_F1_Text_SNNational::
 	.string "Oh, my! You’ve got a National POKéDEX?\p"
 	.string "How fantastic is that?!\p"
-	.string "Rowan should be delighted. It will\n"
+	.string "ROWAN should be delighted. It will\n"
 	.string "greatly help his research.\p"
-	.string "But, young Trainer... You should know\n"
+	.string "But, young TRAINER... You should know\n"
 	.string "this.\p"
 	.string "In this world, there are 300... No, 400...\p"
 	.string "No, no, no! There’re a lot more kinds of\n"

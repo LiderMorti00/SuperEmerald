@@ -23,7 +23,7 @@ CanalaveCity_Mart_EventScript_PtNpc2::
 
 CanalaveCity_Mart_Text_PtNpc2_0::
 	.string "I should take a Revive out to everyone\n"
-	.string "training on Iron Island.\p"
+	.string "training on IRON ISLAND.\p"
 	.string "I’m sure they’d appreciate it.\p"
 	.string "It can be rough out there, especially\n"
 	.string "since there’s no POKéMON Center.$"

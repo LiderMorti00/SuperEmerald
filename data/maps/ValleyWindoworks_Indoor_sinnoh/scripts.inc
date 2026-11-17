@@ -54,7 +54,7 @@ ValleyWindoworks_Indoor_Text_SNPapa3::
 	.string "wind-generated energy?$"
 
 ValleyWindoworks_Indoor_Text_SNGirl2::
-	.string "Little girl: Thank you, Trainer! You\n"
+	.string "Little girl: Thank you, TRAINER! You\n"
 	.string "made those bad people go away!\p"
 	.string "I think the balloon POKéMON will come\n"
 	.string "visiting again!$"
@@ -69,7 +69,7 @@ ValleyWindoworks_Indoor_Text_SNGirl1::
 	.string "now, stinky!$"
 
 ValleyWindoworks_Indoor_Text_SNPapa1::
-	.string "Team Galactic...\p"
+	.string "TEAM GALACTIC...\p"
 	.string "They were saying they had to gather\n"
 	.string "POKéMON and energy no matter what.\p"
 	.string "It was for creating a new universe, or\n"
@@ -82,26 +82,26 @@ ValleyWindoworks_Indoor_Text_SNPapa1::
 	.string "again!$"
 
 ValleyWindoworks_Indoor_Text_Charon::
-	.string "Charon: My, my. Lose to a child, will\n"
+	.string "CHARON: My, my. Lose to a child, will\n"
 	.string "you?\p"
 	.string "But, no matter. We’ve collected plenty\n"
 	.string "of electricity.\p"
 	.string "With the power we obtained, we can do\n"
 	.string "something quite spectacular.\p"
-	.string "It seems quite obvious to me, Charon,\n"
+	.string "It seems quite obvious to me, CHARON,\n"
 	.string "the genius even the boss recognizes.\p"
-	.string "Now, Mars, we should be going.\p"
-	.string "Mars: Will you shut it!\p"
+	.string "Now, MARS, we should be going.\p"
+	.string "MARS: Will you shut it!\p"
 	.string "The boss is the only person in the\n"
 	.string "world who’s allowed to order me around!\p"
 	.string "You can keep quiet around me! You only\n"
 	.string "joined us recently.\p"
 	.string "Don’t think you’re important!\p"
-	.string "Mars: I guess it’s time to say good-bye\n"
+	.string "MARS: I guess it’s time to say good-bye\n"
 	.string "and leave for the time being!$"
 
 ValleyWindoworks_Indoor_Text_MarsAfter::
-	.string "Mars: Oops! I messed that one up!\p"
+	.string "MARS: Oops! I messed that one up!\p"
 	.string "That’s all right, though. I quite\n"
 	.string "enjoyed our battle.$"
 
@@ -110,11 +110,11 @@ ValleyWindoworks_Indoor_Text_MarsDefeat::
 	.string "expected.$"
 
 ValleyWindoworks_Indoor_Text_MarsIntro::
-	.string "Mars: I’m one of Team Galactic’s three\n"
-	.string "Commanders.\p"
+	.string "MARS: I’m one of TEAM GALACTIC’s three\n"
+	.string "COMMANDERS.\p"
 	.string "...No, wait. That’s one of four\n"
-	.string "Commanders.\p"
-	.string "My name is Mars!\p"
+	.string "COMMANDERS.\p"
+	.string "My name is MARS!\p"
 	.string "We’ve been trying to create a new world\n"
 	.string "that’s better than this one...\p"
 	.string "But people have shown little\n"
@@ -124,7 +124,7 @@ ValleyWindoworks_Indoor_Text_MarsIntro::
 	.string "So, let’s have a battle to decide what\n"
 	.string "we should do next.\p"
 	.string "If I win, you leave.\p"
-	.string "If you win, we, Team Galactic, will\n"
+	.string "If you win, we, TEAM GALACTIC, will\n"
 	.string "leave!$"
 
 ValleyWindoworks_Indoor_EventScript_Worker::
@@ -181,7 +181,7 @@ ValleyWindoworks_Indoor_Text_G2Post::
 
 ValleyWindoworks_Indoor_Text_G2Defeat::
 	.string "I really don't like kids who also\n"
-	.string "happen to be tough Trainers...$"
+	.string "happen to be tough TRAINERS...$"
 
 ValleyWindoworks_Indoor_Text_G2Intro::
 	.string "Collecting electricity from the\n"

@@ -64,7 +64,7 @@ Route221_EventScript_Ivan::
 	end
 
 Route221_Text_IvanPost::
-	.string "Pal Park, huh? I wonder what kinds of\n"
+	.string "PAL PARK, huh? I wonder what kinds of\n"
 	.string "POKéMON you can see there?$"
 
 Route221_EventScript_Ivan_Rematch::
@@ -77,7 +77,7 @@ Route221_Text_IvanDefeat::
 	.string "proud of my POKéMON!$"
 
 Route221_Text_IvanIntro::
-	.string "Are you going to the Pal Park, too?\p"
+	.string "Are you going to the PAL PARK, too?\p"
 	.string "For you, I'm willing to show off my\n"
 	.string "prized POKéMON!$"
 
@@ -102,7 +102,7 @@ Route221_Text_JakeDefeat::
 	.string "raw talent!$"
 
 Route221_Text_JakeIntro::
-	.string "They call me an Ace Trainer.\p"
+	.string "They call me an Ace TRAINER.\p"
 	.string "Allow me to demonstrate the talent\n"
 	.string "that makes me so!$"
 
@@ -115,7 +115,7 @@ Route221_EventScript_Shannon::
 
 Route221_Text_ShannonPost::
 	.string "Beaten in battle, but not in spirit.\n"
-	.string "That's the mark of a real Ace Trainer.$"
+	.string "That's the mark of a real Ace TRAINER.$"
 
 Route221_EventScript_Shannon_Rematch::
 	trainerbattle_rematch TRAINER_KATIE_SINNOH, Route221_Text_ShannonIntro, Route221_Text_ShannonDefeat
@@ -127,7 +127,7 @@ Route221_Text_ShannonDefeat::
 
 Route221_Text_ShannonIntro::
 	.string "Really? So you think you can beat me?\n"
-	.string "I'm an Ace Trainer, you do realize?$"
+	.string "I'm an Ace TRAINER, you do realize?$"
 
 Route221_EventScript_SNHoneyTree::
 	lock
@@ -169,4 +169,4 @@ Route221_EventScript_PtSign1::
 	end
 
 Route221_Text_PtSign1::
-	.string "Pal Park A Place for New Beginnings$"
+	.string "PAL PARK A Place for New Beginnings$"

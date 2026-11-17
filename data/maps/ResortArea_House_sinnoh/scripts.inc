@@ -26,9 +26,9 @@ ResortArea_House_EventScript_PtNpc2::
 	end
 
 ResortArea_House_Text_PtNpc2_0::
-	.string "The best Trainers from all over\n"
-	.string "congregate at the Battle Frontier.\p"
-	.string "It’s not limited to Sinnoh, no.\p"
+	.string "The best TRAINERS from all over\n"
+	.string "congregate at the BATTLE FRONTIER.\p"
+	.string "It’s not limited to SINNOH, no.\p"
 	.string "It must be a happy achievement to be\n"
 	.string "able to win there with your favorite\p"
 	.string "POKéMON you’ve caught yourself.$"
@@ -38,7 +38,7 @@ ResortArea_House_EventScript_PtNpc3::
 	end
 
 ResortArea_House_Text_PtNpc3::
-	.string "You’ve seen every POKéMON in Sinnoh!\n"
+	.string "You’ve seen every POKéMON in SINNOH!\n"
 	.string "That is so cool!\p"
 	.string "I’m going to travel with POKéMON when I\n"
 	.string "get bigger!$"

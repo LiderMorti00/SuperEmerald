@@ -11,8 +11,8 @@ MtCoronet_2F_EventScript_PtNpc1::
 	end
 
 MtCoronet_2F_Text_PtNpc1_0::
-	.string "Looker: Please! You must stop Team\n"
-	.string "Galactic!$"
+	.string "LOOKER: Please! You must stop Team\n"
+	.string "GALACTIC!$"
 
 MtCoronet_2F_EventScript_PtNpc1_TryAgainGiveBlackFlute::
 	msgbox MtCoronet_2F_Text_PtNpc1_1, MSGBOX_DEFAULT
@@ -28,11 +28,11 @@ MtCoronet_2F_EventScript_PtNpc1_YouMustStopTeamGalactic::
 	return
 
 MtCoronet_2F_Text_PtNpc1_2::
-	.string "Looker: Please! You must stop Team\n"
-	.string "Galactic!$"
+	.string "LOOKER: Please! You must stop Team\n"
+	.string "GALACTIC!$"
 
 MtCoronet_2F_Text_PtNpc1_1::
-	.string "Looker: Please, stop Team Galactic! For\n"
+	.string "LOOKER: Please, stop TEAM GALACTIC! For\n"
 	.string "only you are able!\p"
 	.string "All I can do now is give you this.\p"
 	.string "It is a little something I obtained in\n"
@@ -55,30 +55,30 @@ MtCoronet_2F_EventScript_SNLooker::
 	end
 
 MtCoronet_2F_Text_SNLooker3::
-	.string "Looker: Please! You must stop Team\n"
-	.string "Galactic!$"
+	.string "LOOKER: Please! You must stop Team\n"
+	.string "GALACTIC!$"
 
 MtCoronet_2F_Text_SNLooker2::
-	.string "Looker: ... ...\p"
+	.string "LOOKER: ... ...\p"
 	.string "Hahaha! You can relax now.\p"
 	.string "You see, I understand. You are far\n"
 	.string "superior to me.\p"
-	.string "As are the Commanders. Cyrus, too,\n"
+	.string "As are the COMMANDERS. CYRUS, too,\n"
 	.string "naturally.\p"
-	.string "Team Galactic is beyond my reach...\p"
+	.string "TEAM GALACTIC is beyond my reach...\p"
 	.string "Please, you must stop them! For only\n"
 	.string "you are able!\p"
 	.string "All I can do now is give you this.\p"
 	.string "It is a little something I obtained in\n"
 	.string "an investigation long ago.\p"
-	.string "Looker: Please, stop Team Galactic! For\n"
+	.string "LOOKER: Please, stop TEAM GALACTIC! For\n"
 	.string "only you are able!\p"
 	.string "All I can do now is give you this.\p"
 	.string "It is a little something I obtained in\n"
 	.string "an investigation long ago.$"
 
 MtCoronet_2F_Text_SNLooker1::
-	.string "Looker: Observe, if you will, that hole.\p"
+	.string "LOOKER: Observe, if you will, that hole.\p"
 	.string "There was once a cave painting that\n"
 	.string "had blocked the way to the summit.\p"
 	.string "But the wall, it is no longer there. It\n"
@@ -87,9 +87,9 @@ MtCoronet_2F_Text_SNLooker1::
 	.string "lakes have been captured...\p"
 	.string "Something terrible is happening, but\n"
 	.string "what exactly, I do not know.\p"
-	.string "Looker: There is but one cause! Team\n"
-	.string "Galactic’s Cyrus!\p"
+	.string "LOOKER: There is but one cause! Team\n"
+	.string "GALACTIC’s CYRUS!\p"
 	.string "And now, we are all caught up. Now, to\n"
 	.string "the next step.\p"
-	.string "Are you Trainer enough to advance?\n"
+	.string "Are you TRAINER enough to advance?\n"
 	.string "Show me, if you will!$"

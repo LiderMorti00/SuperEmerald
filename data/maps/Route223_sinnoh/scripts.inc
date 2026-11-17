@@ -51,8 +51,8 @@ Route223_EventScript_Francisco::
 	end
 
 Route223_Text_FranciscoPost::
-	.string "What? You've got that many Gym\n"
-	.string "Badges? No wonder you're so tough...$"
+	.string "What? You've got that many GYM\n"
+	.string "BADGES? No wonder you're so tough...$"
 
 Route223_EventScript_Francisco_Rematch::
 	trainerbattle_rematch TRAINER_MARTHA_SINNOH, Route223_Text_FranciscoIntro, Route223_Text_FranciscoDefeat
@@ -73,7 +73,7 @@ Route223_EventScript_Colton::
 
 Route223_Text_ColtonPost::
 	.string "What is the sea like in places like the\n"
-	.string "Kanto and Hoenn regions?$"
+	.string "KANTO and HOENN regions?$"
 
 Route223_Text_ColtonDefeat::
 	.string "Boo! I'm not done with my dream!$"
@@ -105,7 +105,7 @@ Route223_EventScript_Oscar::
 	end
 
 Route223_Text_OscarPost::
-	.string "What to do... Train at the Gym again, or\n"
+	.string "What to do... Train at the GYM again, or\n"
 	.string "train by myself...$"
 
 Route223_Text_OscarDefeat::
@@ -113,7 +113,7 @@ Route223_Text_OscarDefeat::
 	.string "sorry!$"
 
 Route223_Text_OscarIntro::
-	.string "I train at a POKéMON Gym, too.\p"
+	.string "I train at a POKéMON GYM, too.\p"
 	.string "Don't think you're going to win easily!$"
 
 Route223_EventScript_Miranda::
@@ -221,7 +221,7 @@ Route223_Text_CassandraIntro::
 	.string "Did you know, I was crowned the\n"
 	.string "champion of a swimsuit contest!\p"
 	.string "So now, I'm trying to win a title at a\n"
-	.string "POKéMON Contest!$"
+	.string "POKéMON CONTEST!$"
 
 Route223_EventScript_Gabrielle::
 	trainerbattle_single TRAINER_DUNCAN_SINNOH, Route223_Text_GabrielleIntro, Route223_Text_GabrielleDefeat

@@ -62,7 +62,7 @@ JubilifeCity_JubilifeTV_F2_EventScript_PtNpc6::
 	end
 
 JubilifeCity_JubilifeTV_F2_Text_PtNpc6_0::
-	.string "They display photos from Trainers you\n"
+	.string "They display photos from TRAINERS you\n"
 	.string "been mixin’ records with, right?\p"
 	.string "I hope you collect yerself some good\n"
 	.string "photos of dressed-up POKéMON!$"

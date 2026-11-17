@@ -8,7 +8,7 @@ TwinleafTown_Haouse1_EventScript_PtNpc1::
 
 TwinleafTown_Haouse1_Text_PtNpc1::
 	.string "Did you hear?\p"
-	.string "The POKéMON Professor returned to\n"
+	.string "The POKéMON PROFESSOR returned to\n"
 	.string "the next town over.\p"
 	.string "They say he was gone for four long\n"
 	.string "years.\p"

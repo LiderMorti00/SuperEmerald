@@ -22,9 +22,9 @@ HearthomeCity_Flat1_F2_EventScript_PtNpc2::
 	end
 
 HearthomeCity_Flat1_F2_Text_PtNpc2_0::
-	.string "Hearthome is a kid-friendly city, they\n"
+	.string "HEARTHOME is a kid-friendly city, they\n"
 	.string "say, but I disagree.\p"
-	.string "Hearthome is friendly to kids,\n"
+	.string "HEARTHOME is friendly to kids,\n"
 	.string "grown-ups, and POKéMON too.$"
 
 HearthomeCity_Flat1_F2_EventScript_PtNpc3::

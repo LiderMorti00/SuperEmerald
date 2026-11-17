@@ -108,4 +108,4 @@ Route210_Cafe_Text_PtNpc3_1::
 	.string "PSYDUCK of their headaches.\p"
 	.string "The person who gave you the\n"
 	.string "SecretPotion must be quite the\l"
-	.string "Trainer!$"
+	.string "TRAINER!$"

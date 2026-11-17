@@ -16,7 +16,7 @@ OreburghCity_PokemonCenter_1F_EventScript_PtNpc1::
 	end
 
 OreburghCity_PokemonCenter_1F_Text_PtNpc1::
-	.string "I sense a strong Trainer... Could\n"
+	.string "I sense a strong TRAINER... Could\n"
 	.string "it be you?$"
 
 OreburghCity_PokemonCenter_1F_EventScript_PtNpc2::
@@ -64,7 +64,7 @@ OreburghCity_PokemonCenter_1F_EventScript_PtNpc4_SNVar0::
 
 OreburghCity_PokemonCenter_1F_Text_PtNpc4_SNVar0::
 	.string "Hmmm! What, or who, is this Team\n"
-	.string "Galactic?!\p"
+	.string "GALACTIC?!\p"
 	.string "Lately, they’ve renounced such acts as\n"
 	.string "stealing POKéMON.\p"
 	.string "They’re still involved in developing\n"

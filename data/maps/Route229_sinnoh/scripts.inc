@@ -106,4 +106,4 @@ Route229_EventScript_PtSign1::
 	end
 
 Route229_Text_PtSign1::
-	.string "Rt. 229 Resort Area$"
+	.string "Rt. 229 RESORT AREA$"

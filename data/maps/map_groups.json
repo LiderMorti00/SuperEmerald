@@ -308,7 +308,6 @@
     "LilycoveCity_ContestHall",
     "LilycoveCity_PokemonCenter_1F",
     "LilycoveCity_PokemonCenter_2F",
-    "LilycoveCity_UnusedMart",
     "LilycoveCity_PokemonTrainerFanClub",
     "LilycoveCity_Harbor",
     "LilycoveCity_MoveDeletersHouse",
@@ -474,9 +473,6 @@
     "SealedChamber_OuterRoom",
     "SealedChamber_InnerRoom",
     "ScorchedSlab",
-    "AquaHideout_UnusedRubyMap1",
-    "AquaHideout_UnusedRubyMap2",
-    "AquaHideout_UnusedRubyMap3",
     "SkyPillar_Entrance",
     "SkyPillar_Outside",
     "SkyPillar_1F",
@@ -663,10 +659,7 @@
     "NavelRock_Bottom",
     "TrainerHill_Elevator"
   ],
-  "gMapGroup_IndoorRoute104Prototype": [
-    "Route104_Prototype",
-    "Route104_PrototypePrettyPetalFlowerShop"
-  ],
+  "gMapGroup_IndoorRoute104Prototype": [],
   "gMapGroup_IndoorRoute109": [
     "Route109_SeashoreHouse"
   ],
@@ -702,7 +695,6 @@
   "gMapGroup_Link_Frlg": [
     "BattleColosseum_2P_Frlg",
     "TradeCenter_Frlg",
-    "RecordCorner_Frlg",
     "BattleColosseum_4P_Frlg",
     "UnionRoom_Frlg"
   ],
@@ -905,7 +897,6 @@
     "CinnabarIsland_Frlg",
     "IndigoPlateau_Exterior_Frlg",
     "SaffronCity_Frlg",
-    "SaffronCity_Connection_Frlg",
     "OneIsland_Frlg",
     "TwoIsland_Frlg",
     "ThreeIsland_Frlg",
@@ -1064,12 +1055,10 @@
     "SaffronCity_CopycatsHouse_2F_Frlg",
     "SaffronCity_Dojo_Frlg",
     "SaffronCity_Gym_Frlg",
-    "SaffronCity_House_Frlg",
     "SaffronCity_Mart_Frlg",
     "SaffronCity_PokemonCenter_1F_Frlg",
     "SaffronCity_PokemonCenter_2F_Frlg",
     "SaffronCity_MrPsychicsHouse_Frlg",
-    "SaffronCity_PokemonTrainerFanClub_Frlg",
     "SaffronCity_MagnetTrainStation_Frlg"
   ],
   "gMapGroup_IndoorRoute2_Frlg": [
@@ -1121,9 +1110,7 @@
     "Route18_EastEntrance_1F_Frlg",
     "Route18_EastEntrance_2F_Frlg"
   ],
-  "gMapGroup_IndoorRoute22_Frlg": [
-    "Route22_NorthEntrance_Frlg"
-  ],
+  "gMapGroup_IndoorRoute22_Frlg": [],
   "gMapGroup_IndoorRoute25_Frlg": [
     "Route25_SeaCottage_Frlg"
   ],
@@ -1293,7 +1280,6 @@
     "GoldenrodCity_DepartmentStore_5F_hns",
     "GoldenrodCity_DepartmentStore_6F_hns",
     "GoldenrodCity_DepartmentStore_7F_hns",
-    "GoldenrodCity_DepartmentStore_7FNight_hns",
     "GoldenrodCity_DepartmentStoreElevator_hns"
   ],
   "gMapGroup_IndoorEcruteak_Hns": [
@@ -1426,7 +1412,6 @@
     "TinTower_8F_hns",
     "TinTower_9F_hns",
     "TinTower_RoofDay_hns",
-    "TinTower_RoofNight_hns",
     "TohjoFalls_Cavern_hns",
     "TohjoFalls_GiovanniRoom_hns",
     "MtSilver_Outside_hns",
@@ -1438,7 +1423,6 @@
     "MtSilver_3F_hns",
     "MtSilver_Snow_hns",
     "MtSilver_SummitDay_hns",
-    "MtSilver_SummitNight_hns",
     "CliffEdgeCave_hns",
     "EmbeddedTower_hns",
     "RocketHideout_B1F_hns",
@@ -1546,7 +1530,6 @@
     "MtCoronet_Outside_South_sinnoh",
     "LakeVerity_LowWater_sinnoh",
     "LakeValor_Drained_sinnoh",
-    "LakeAcuity_LowWater_sinnoh",
     "SendoffSpring_sinnoh",
     "SpringPath_sinnoh",
     "FullmoonIsland_sinnoh",
@@ -1659,7 +1642,6 @@
     "Route218_West_sinnoh",
     "Route222_Access_sinnoh",
     "Route225_Access_sinnoh",
-    "Route226_Access_sinnoh",
     "HotelGrandLake_sinnoh",
     "ValleyWindoworks_Indoor_sinnoh",
     "Route205_House_sinnoh",
@@ -1773,8 +1755,7 @@
     "EternaCity_GalacticBuilding_2F_sinnoh",
     "EternaCity_GalacticBuilding_3F_sinnoh",
     "EternaCity_GalacticBuilding_4F_sinnoh",
-    "EternaCity_GalacticBuilding_B1F_sinnoh",
-    "EternaCity_GalacticBuilding_RotomsRoom_sinnoh"
+    "EternaCity_GalacticBuilding_B1F_sinnoh"
   ],
   "gMapGroup_IndoorHearthome_Sinnoh": [
     "HearthomeCity_PoffinHouse_sinnoh",

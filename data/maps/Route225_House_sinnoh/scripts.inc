@@ -23,5 +23,5 @@ Route225_House_Text_PtNpc1_1::
 	.string "POKéMON originated.$"
 
 Route225_House_Text_PtNpc1_0::
-	.string "Isn’t it hot in the Battle Zone? Why\n"
+	.string "Isn’t it hot in the BATTLE ZONE? Why\n"
 	.string "not let your POKéMON drink this?$"

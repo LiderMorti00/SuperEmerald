@@ -10,7 +10,7 @@ StarkMountain_Room2_EventScript_Keenan::
 StarkMountain_Room2_Text_KeenanPost::
 	.string "Perhaps there is no meaning to victory,\n"
 	.string "but still I will battle!\p"
-	.string "That is what makes me a Trainer!$"
+	.string "That is what makes me a TRAINER!$"
 
 StarkMountain_Room2_Text_KeenanDefeat::
 	.string "I grow less certain still...$"
@@ -111,7 +111,7 @@ StarkMountain_Room2_EventScript_SNBuckTalk::
 	end
 
 StarkMountain_Room2_EventScript_SNBuck_Together::
-	.string "Buck: Team Galactic’s here, right?\n"
+	.string "BUCK: TEAM GALACTIC’s here, right?\n"
 	.string "Let’s go together!$"
 
 StarkMountain_Room2_EventScript_Skylar::
@@ -123,14 +123,14 @@ StarkMountain_Room2_Text_SkylarPost::
 	.string "You can level all you want, but that\n"
 	.string "won’t guarantee you any wins.\p"
 	.string "But we keep trying to get better.\n"
-	.string "That’s what makes us Trainers.$"
+	.string "That’s what makes us TRAINERS.$"
 
 StarkMountain_Room2_Text_SkylarDefeat::
 	.string "We went down... We couldn’t stick it\n"
 	.string "out...$"
 
 StarkMountain_Room2_Text_SkylarIntro::
-	.string "I was born in Floaroma Town. I’m sure\n"
+	.string "I was born in FLOAROMA TOWN. I’m sure\n"
 	.string "thrilled to be here.\p"
 	.string "It took a long time to get here. We’re\n"
 	.string "not going to lose again!$"
@@ -141,7 +141,7 @@ StarkMountain_Room2_EventScript_Natasha::
 	end
 
 StarkMountain_Room2_Text_NatashaPost::
-	.string "Train more at the Battle Tower... That’s\n"
+	.string "Train more at the BATTLE TOWER... That’s\n"
 	.string "what I’ll do.$"
 
 StarkMountain_Room2_Text_NatashaDefeat::
@@ -149,7 +149,7 @@ StarkMountain_Room2_Text_NatashaDefeat::
 
 StarkMountain_Room2_Text_NatashaIntro::
 	.string "I came here after winning my way\n"
-	.string "through the Battle Tower!$"
+	.string "through the BATTLE TOWER!$"
 
 StarkMountain_Room2_EventScript_Chelsey::
 	trainerbattle_single TRAINER_DALTON_5_SINNOH, StarkMountain_Room2_Text_ChelseyIntro, StarkMountain_Room2_Text_ChelseyDefeat
@@ -230,11 +230,11 @@ StarkMountain_Room2_Text_AbelPost::
 	.string "make it easy for you to move onward.$"
 
 StarkMountain_Room2_Text_AbelDefeat::
-	.string "You’re not a Trainer that can be taken\n"
+	.string "You’re not a TRAINER that can be taken\n"
 	.string "lightly!$"
 
 StarkMountain_Room2_Text_AbelIntro::
-	.string "The Trainers and POKéMON that gather\n"
+	.string "The TRAINERS and POKéMON that gather\n"
 	.string "here aren’t pushovers.\p"
 	.string "They all have tricks up their sleeves!$"
 

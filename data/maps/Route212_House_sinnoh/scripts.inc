@@ -12,7 +12,7 @@ Route212_House_EventScript_PtNpc1::
 Route212_House_Text_PtNpc1_0::
 	.string "My daddy likes Blue Shards.\p"
 	.string "There are other people who like shards\n"
-	.string "in Sinnoh.\p"
+	.string "in SINNOH.\p"
 	.string "One person likes Red Shards. Another\n"
 	.string "collects Yellow Shards.$"
 
@@ -422,4 +422,4 @@ Route212_House_EventScript_PtNpc3::
 Route212_House_Text_PtNpc3_0::
 	.string "My daddy collects shards.\p"
 	.string "If you find any, like in the\n"
-	.string "Underground, please bring them to us.$"
+	.string "UNDERGROUND, please bring them to us.$"

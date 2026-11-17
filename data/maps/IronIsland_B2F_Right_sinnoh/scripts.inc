@@ -11,7 +11,7 @@ IronIsland_B2F_Right_Text_NoelPost::
 	.string "I used to work here a long time ago,\n"
 	.string "before it shut down.\p"
 	.string "I worked at the ironworks near\n"
-	.string "Floaroma Town, too.\p"
+	.string "FLOAROMA TOWN, too.\p"
 	.string "You might say I’m drawn by iron as if by\n"
 	.string "magnet!$"
 

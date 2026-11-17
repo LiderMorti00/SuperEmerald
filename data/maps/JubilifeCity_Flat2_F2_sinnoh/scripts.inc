@@ -29,4 +29,4 @@ JubilifeCity_Flat2_F2_EventScript_PtNpc3::
 
 JubilifeCity_Flat2_F2_Text_PtNpc3::
 	.string "Didn't PROF. ROWAN conduct research\n"
-	.string "with Prof. Oak of the Kanto region?$"
+	.string "with PROF. OAK of the KANTO region?$"

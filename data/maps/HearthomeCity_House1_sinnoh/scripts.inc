@@ -22,7 +22,7 @@ HearthomeCity_House1_EventScript_SNBebe::
 	end
 
 HearthomeCity_House1_EventScript_SNBebe_T2::
-	.string "Bebe: EEVEE can evolve in many\n"
+	.string "BEBE: EEVEE can evolve in many\n"
 	.string "different ways. Which one will it\l"
 	.string "become, I wonder?$"
 
@@ -35,7 +35,7 @@ HearthomeCity_House1_EventScript_SNBebe_Full::
 	end
 
 HearthomeCity_House1_EventScript_SNBebe_FullT::
-	.string "Bebe: Your party is full! You can use my\n"
+	.string "BEBE: Your party is full! You can use my\n"
 	.string "POKéMON Storage System at any\l"
 	.string "POKéMON Center.$"
 
@@ -45,11 +45,11 @@ HearthomeCity_House1_EventScript_SNBebe_No::
 	end
 
 HearthomeCity_House1_EventScript_SNBebe_NoT::
-	.string "Bebe: Oh... If you change your mind,\n"
+	.string "BEBE: Oh... If you change your mind,\n"
 	.string "come back anytime.$"
 
 HearthomeCity_House1_EventScript_SNBebe_T1::
-	.string "Bebe: Hi! I’m Bebe. I’m the one who made\n"
+	.string "BEBE: Hi! I’m BEBE. I’m the one who made\n"
 	.string "the POKéMON Storage System!\p"
 	.string "There’s a POKéMON here I’d like you to\n"
 	.string "raise. It’s an EEVEE. Would you like it?$"
@@ -60,5 +60,5 @@ HearthomeCity_House1_EventScript_SNBebe_After::
 	end
 
 HearthomeCity_House1_EventScript_SNBebe_AfterT::
-	.string "Bebe: How is that EEVEE doing? I hope\n"
+	.string "BEBE: How is that EEVEE doing? I hope\n"
 	.string "it’s happy with you!$"

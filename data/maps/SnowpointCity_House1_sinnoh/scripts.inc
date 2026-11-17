@@ -43,7 +43,7 @@ SnowpointCity_House1_EventScript_SNTradeGaspar_Done::
 
 SnowpointCity_House1_EventScript_SNTradeGaspar_DoneT::
 	.string "Our POKéMON are getting along great\n"
-	.string "with their new Trainers, don’t you\l"
+	.string "with their new TRAINERS, don’t you\l"
 	.string "think?$"
 
 SnowpointCity_House1_EventScript_PtNpc2::

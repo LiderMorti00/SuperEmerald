@@ -42,8 +42,8 @@ VeilstoneCity_GameCorner_EventScript_Girl::
 
 VeilstoneCity_GameCorner_Text_SNNothingGoingMyWay::
 	.string "Sigh... Nothing’s going my way today...\p"
-	.string "Are you a Trainer? Did you battle the\n"
-	.string "Gym Leader?\p"
+	.string "Are you a TRAINER? Did you battle the\n"
+	.string "GYM LEADER?\p"
 	.string "She happens to be my daughter. She’s\n"
 	.string "some kind of tough!$"
 
@@ -185,9 +185,9 @@ VeilstoneCity_GameCorner_EventScript_SNLookerEnd::
 	end
 
 VeilstoneCity_GameCorner_Text_SNLooker::
-	.string "Looker: Ah, it is you, yes.\p"
+	.string "LOOKER: Ah, it is you, yes.\p"
 	.string "Examine, if you will, the reels. The Team\n"
-	.string "Galactic logo, it is here.\p"
+	.string "GALACTIC logo, it is here.\p"
 	.string "Further investigation is needed, and I\n"
 	.string "am just the man to do it.\p"
 	.string "Also, where the masses gather, so too\n"
@@ -199,9 +199,9 @@ VeilstoneCity_GameCorner_EventScript_SNLookerPost::
 	goto VeilstoneCity_GameCorner_EventScript_SNLookerEnd
 
 VeilstoneCity_GameCorner_Text_SNLookerPost::
-	.string "Looker: Ah, it is you, yes.\p"
+	.string "LOOKER: Ah, it is you, yes.\p"
 	.string "I have decided to use the opportunity\n"
-	.string "of being here in Sinnoh.\p"
+	.string "of being here in SINNOH.\p"
 	.string "I am therefore trying to teach moves\n"
 	.string "to POKéMON that I have captured.\p"
 	.string "Also, if I have nothing to do, it means\n"

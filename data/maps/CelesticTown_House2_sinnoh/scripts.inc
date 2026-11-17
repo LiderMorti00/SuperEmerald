@@ -25,7 +25,7 @@ CelesticTown_House2_Text_PtNpc1_1::
 	.string "These three POKéMON are said to have\n"
 	.string "strong and compassionate spirits.\p"
 	.string "The power of their spirits maintains\n"
-	.string "the natural balance of Sinnoh.$"
+	.string "the natural balance of SINNOH.$"
 
 CelesticTown_House2_EventScript_PtNpc1_YouWouldnt::
 	msgbox CelesticTown_House2_Text_PtNpc1_2, MSGBOX_DEFAULT
@@ -41,8 +41,8 @@ CelesticTown_House2_Text_PtNpc1_2::
 CelesticTown_House2_Text_PtNpc1_0::
 	.string "Where are you from?\p"
 	.string "...\p"
-	.string "Hm, Twinleaf Town, you say. Isn’t that\n"
-	.string "close to Lake Verity?\p"
+	.string "Hm, TWINLEAF TOWN, you say. Isn’t that\n"
+	.string "close to LAKE VERITY?\p"
 	.string "That lake is said to be home to\n"
 	.string "MESPRIT, “The Being of Emotion.”\p"
 	.string "That POKéMON may well be watching over\n"
@@ -58,17 +58,17 @@ CelesticTown_House2_Text_PtNpc2::
 	.string "Well, hello! You look good.\p"
 	.string "I did some research of my own since\n"
 	.string "that spot of trouble last time.\p"
-	.string "Mt. Coronet’s acting up had me very\n"
+	.string "MT. CORONET’s acting up had me very\n"
 	.string "concerned, too.\p"
 	.string "Well, this is what I found in the shrine.\p"
 	.string "It’s a book, and it’s quite old. Let me\n"
 	.string "read a bit for you.\p"
 	.string "“The bearer of the shining Adamant Orb\n"
-	.string "summons DIALGA to the Spear Pillar.\p"
+	.string "summons DIALGA to the SPEAR PILLAR.\p"
 	.string "“The guardian POKéMON of time will\n"
 	.string "answer the call.\p"
 	.string "“The bearer of the shining Lustrous\n"
-	.string "Orb summons PALKIA to the Spear Pillar.\p"
+	.string "Orb summons PALKIA to the SPEAR PILLAR.\p"
 	.string "“The POKéMON that binds the spatial\n"
 	.string "dimensions will answer the call.”\p"
 	.string "It seems the people of long ago met\n"
@@ -84,7 +84,7 @@ CelesticTown_House2_EventScript_PtNpc3::
 
 CelesticTown_House2_Text_PtNpc3_0::
 	.string "My big sister is studying the myths of\n"
-	.string "Sinnoh.\p"
+	.string "SINNOH.\p"
 	.string "She wants to know how people and\n"
 	.string "POKéMON interacted in the days of\p"
 	.string "myths.\p"

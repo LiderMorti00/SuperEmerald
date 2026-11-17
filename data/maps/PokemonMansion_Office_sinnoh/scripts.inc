@@ -150,7 +150,7 @@ PokemonMansion_Office_Text_SNWonderful::
 	.string "generous person!\p"
 	.string "It’s on his orders that the garden, his\n"
 	.string "pride and joy, is open to all,\p"
-	.string "even Trainers.$"
+	.string "even TRAINERS.$"
 
 PokemonMansion_Office_EventScript_SNButlerEnjoys::
 	msgbox PokemonMansion_Office_Text_SNEnjoys, MSGBOX_DEFAULT
@@ -160,7 +160,7 @@ PokemonMansion_Office_EventScript_SNButlerEnjoys::
 PokemonMansion_Office_Text_SNEnjoys::
 	.string "Butler: Master actually quite enjoys\n"
 	.string "showing his prized garden to strong\p"
-	.string "Trainers.$"
+	.string "TRAINERS.$"
 
 PokemonMansion_Office_EventScript_SNButlerHow::
 	msgbox PokemonMansion_Office_Text_SNHowGarden, MSGBOX_DEFAULT

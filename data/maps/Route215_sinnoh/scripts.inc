@@ -24,7 +24,7 @@ Route215_EventScript_Gregory::
 
 Route215_Text_GregoryPost::
 	.string "If I lose here, I wouldn't stand a\n"
-	.string "chance at the Battle Frontier.\p"
+	.string "chance at the BATTLE FRONTIER.\p"
 	.string "Not against those hard-core pros, I\n"
 	.string "wouldn't!$"
 
@@ -133,7 +133,7 @@ Route215_Text_MayaDefeat::
 	.string "...My confidence is crushed.$"
 
 Route215_Text_MayaIntro::
-	.string "I'm taking the VEILSTONE Gym\n"
+	.string "I'm taking the VEILSTONE GYM\n"
 	.string "challenge. But first...$"
 
 Route215_EventScript_Craig::
@@ -215,7 +215,7 @@ Route215_EventScript_PtSign3::
 	end
 
 Route215_Text_PtSign3::
-	.string "Trainer Tips POKéMON attacks are\n"
+	.string "TRAINER Tips POKéMON attacks are\n"
 	.string "classified as being either physical or\l"
 	.string "special.\p"
 	.string "A physical attack is based on the\n"

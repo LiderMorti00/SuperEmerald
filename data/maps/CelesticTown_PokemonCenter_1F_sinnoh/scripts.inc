@@ -33,14 +33,14 @@ CelesticTown_PokemonCenter_1F_EventScript_PtNpc2::
 
 CelesticTown_PokemonCenter_1F_Text_PtNpc2_0::
 	.string "They say this town has been here since\n"
-	.string "Sinnoh was made.$"
+	.string "SINNOH was made.$"
 
 CelesticTown_PokemonCenter_1F_EventScript_PtNpc3::
 	msgbox CelesticTown_PokemonCenter_1F_Text_PtNpc3, MSGBOX_NPC
 	end
 
 CelesticTown_PokemonCenter_1F_Text_PtNpc3::
-	.string "It’s about trust between the Trainer\n"
+	.string "It’s about trust between the TRAINER\n"
 	.string "and the POKéMON.\p"
 	.string "Developing trust in each other is the\n"
 	.string "key to victory.$"

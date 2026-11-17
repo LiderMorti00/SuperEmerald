@@ -109,7 +109,7 @@ Route209_EventScript_Danielle::
 	end
 
 Route209_Text_DaniellePost::
-	.string "I don't want to be a Trainer. I want to\n"
+	.string "I don't want to be a TRAINER. I want to\n"
 	.string "be a POKéMON!$"
 
 Route209_EventScript_Danielle_Rematch::
@@ -129,7 +129,7 @@ Route209_EventScript_EmmaLil::
 	end
 
 Route209_Text_EmmaLilPost::
-	.string "Emma: That was awesome! Are you maybe\n"
+	.string "EMMA: That was awesome! Are you maybe\n"
 	.string "a POKéMON genius?\p"
 	.string "You're well deserving of respect!$"
 
@@ -138,10 +138,10 @@ Route209_Text_EmmaLilNotEnough::
 	.string "one POKéMON!$"
 
 Route209_Text_EmmaLilDefeat::
-	.string "Emma: Waaah!$"
+	.string "EMMA: Waaah!$"
 
 Route209_Text_EmmaLilIntro::
-	.string "Emma: We're tough because we battle\n"
+	.string "EMMA: We're tough because we battle\n"
 	.string "together!$"
 
 Route209_EventScript_TySue::
@@ -172,7 +172,7 @@ Route209_EventScript_PtNpc1::
 
 Route209_Text_PtNpc1::
 	.string "Where departed POKéMON sleep... This\n"
-	.string "is the Lost Tower.$"
+	.string "is the LOST TOWER.$"
 
 Route209_EventScript_SNFisher_Done::
 	msgbox Route209_EventScript_SNFisher_After, MSGBOX_DEFAULT
@@ -254,7 +254,7 @@ Route209_EventScript_PtSign3::
 	end
 
 Route209_Text_PtSign3::
-	.string "Trainer Tips You may register one of\n"
+	.string "TRAINER Tips You may register one of\n"
 	.string "the Key Items in your Bag for instant\l"
 	.string "use.\p"
 	.string "Simply press the Y Button to use the\n"

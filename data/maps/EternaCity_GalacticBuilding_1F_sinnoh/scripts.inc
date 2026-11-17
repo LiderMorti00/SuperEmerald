@@ -64,13 +64,13 @@ EternaCity_GalacticBuilding_1F_EventScript_SNLooker::
 
 EternaCity_GalacticBuilding_1F_Text_SNFirstRate::
 	.string "...Incidentally, you are a first-rate\n"
-	.string "Trainer. Of that, I am very aware.\p"
+	.string "TRAINER. Of that, I am very aware.\p"
 	.string "I therefore think you will be OK, but I\n"
 	.string "must warn you to be careful anyway.\p"
 	.string "Also, a word of advice.\p"
 	.string "This building, it has two stairs. One of\n"
 	.string "them, a trap it must be.\p"
-	.string "But the crooks of Team Galactic, they\n"
+	.string "But the crooks of TEAM GALACTIC, they\n"
 	.string "do not appear, how shall I say, smart.\p"
 	.string "There should be an easy way to tell the\n"
 	.string "stairs apart!$"

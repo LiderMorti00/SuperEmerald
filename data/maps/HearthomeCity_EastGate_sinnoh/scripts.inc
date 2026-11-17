@@ -11,7 +11,7 @@ HearthomeCity_EastGate_EventScript_PtNpc1::
 
 HearthomeCity_EastGate_Text_PtNpc1_0::
 	.string "You can take a cute POKéMON out for a\n"
-	.string "stroll in Amity Square.$"
+	.string "stroll in AMITY SQUARE.$"
 
 HearthomeCity_EastGate_EventScript_PtNpc2::
 	lock

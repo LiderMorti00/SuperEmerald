@@ -73,7 +73,7 @@ FloaromaMeadow_Text_HoneyThanks::
 	.string "Oh, what’s this thing? They seem to\n"
 	.string "have forgotten it...\p"
 	.string "It’s a Works Key... It must be for the\n"
-	.string "Valley Windworks!\p"
+	.string "VALLEY WINDWORKS!\p"
 	.string "It’s of no use to me. You may as well\n"
 	.string "have it.\p"
 	.string "Thank you! You surely saved me.\p"
@@ -88,35 +88,35 @@ FloaromaMeadow_Text_HoneyThanks::
 	.string "Go on, take a whole lot!$"
 
 FloaromaMeadow_Text_GruntsFlee::
-	.string "Grunt 1: This brat’s tough! Like, really,\n"
+	.string "GRUNT 1: This brat’s tough! Like, really,\n"
 	.string "really tough!\p"
 	.string "Tougher than I can put into words, and\n"
 	.string "I know a lot of words!\p"
 	.string "We’re done for here... Let’s get back to\n"
-	.string "the Valley Windworks.$"
+	.string "the VALLEY WINDWORKS.$"
 
 FloaromaMeadow_Text_Grunt2Defeat::
 	.string "No way...$"
 
 FloaromaMeadow_Text_Grunt2Intro::
-	.string "Grunt 2: I’m up next! Heheheh...\p"
+	.string "GRUNT 2: I’m up next! Heheheh...\p"
 	.string "Battling you right after my cohort\n"
 	.string "weakened you gives me the edge!$"
 
 FloaromaMeadow_Text_Grunt1Defeat::
-	.string "Grunt 1: This is so lame... They’re going\n"
+	.string "GRUNT 1: This is so lame... They’re going\n"
 	.string "to dock my pay!$"
 
 FloaromaMeadow_Text_Grunt1Intro::
-	.string "Grunt 1: Enough arguing! Hand over\n"
+	.string "GRUNT 1: Enough arguing! Hand over\n"
 	.string "that sweet Honey!\p"
-	.string "Grunt 2: Do as we say! Team Galactic\n"
+	.string "GRUNT 2: Do as we say! TEAM GALACTIC\n"
 	.string "will have that Honey!\p"
 	.string "We must have it to attract POKéMON in\n"
 	.string "great numbers!\p"
-	.string "Grunt 1: Hey! This kid is a witness!\n"
+	.string "GRUNT 1: Hey! This kid is a witness!\n"
 	.string "What’ll we do?\p"
-	.string "Grunt 2: We don’t need the brat running\n"
+	.string "GRUNT 2: We don’t need the brat running\n"
 	.string "off to get help...\p"
 	.string "The solution’s simple! We ensure the\n"
 	.string "brat stays quiet!$"

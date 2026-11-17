@@ -81,10 +81,10 @@ EternaCity_Gym_Text_TMInfo::
 	.string "this move will cause.$"
 
 EternaCity_Gym_Text_GiveTM::
-	.string "With the Forest Badge, your POKéMON\n"
+	.string "With the Forest BADGE, your POKéMON\n"
 	.string "can use the hidden move Cut outside\p"
 	.string "of battle.\p"
-	.string "Now that you have two Gym Badges, all\n"
+	.string "Now that you have two GYM BADGES, all\n"
 	.string "POKéMON you received in trades\p"
 	.string "will obey you up to Lv. 30.\p"
 	.string "I’ve also got something else. It’s a\n"
@@ -100,8 +100,8 @@ EternaCity_Gym_EventScript_GardeniaDefeated::
 	end
 
 EternaCity_Gym_Text_ReceivedBadge::
-	.string "{PLAYER} received the Forest Badge\n"
-	.string "from Gardenia!$"
+	.string "{PLAYER} received the Forest BADGE\n"
+	.string "from GARDENIA!$"
 
 EternaCity_Gym_Text_GardeniaDefeat::
 	.string "I might’ve said it before, but you’re\n"
@@ -115,7 +115,7 @@ EternaCity_Gym_Text_GardeniaDefeat::
 
 EternaCity_Gym_Text_GardeniaIntro::
 	.string "You kept me waiting!\p"
-	.string "I’m Eterna’s Gym Leader, Gardenia, the\n"
+	.string "I’m ETERNA’s GYM LEADER, GARDENIA, the\n"
 	.string "Grass-type master!\p"
 	.string "When I first saw you, I was convinced\n"
 	.string "you’d find your way to me.\p"
@@ -141,7 +141,7 @@ EternaCity_Gym_EventScript_SNRematch_After::
 	.string "anytime for another match!$"
 
 EternaCity_Gym_EventScript_SNRematch_Defeat::
-	.string "Amazing... You really are the Champion!$"
+	.string "Amazing... You really are the CHAMPION!$"
 
 EternaCity_Gym_EventScript_SNRematch_Go::
 	.string "Then I won’t hold back this time!$"
@@ -155,7 +155,7 @@ EternaCity_Gym_EventScript_SNRematch_NoT::
 	.string "Come back whenever you’re ready!$"
 
 EternaCity_Gym_EventScript_SNRematch_Ask::
-	.string "Gardenia: You became the Champion!\n"
+	.string "GARDENIA: You became the CHAMPION!\n"
 	.string "Welcome back!\p"
 	.string "I’ve been training even harder since\n"
 	.string "our last battle.\p"
@@ -171,23 +171,23 @@ EternaCity_Gym_EventScript_Guide::
 	end
 
 EternaCity_Gym_Text_SNGuideInfo::
-	.string "Let me tell you about this Gym!\p"
-	.string "The Gym Leader is GARDENIA, the\n"
-	.string "Grass-Type Lover. Her Gym is an indoor\l"
+	.string "Let me tell you about this GYM!\p"
+	.string "The GYM LEADER is GARDENIA, the\n"
+	.string "Grass-Type Lover. Her GYM is an indoor\l"
 	.string "garden full of trees and flower beds.\p"
 	.string "She uses Grass-type POKéMON like\n"
 	.string "TURTWIG, CHERRIM and ROSERADE.\p"
 	.string "Grass types are weak to Fire, Flying,\n"
 	.string "Ice, Poison and Bug moves!\p"
-	.string "Her Trainers are waiting among the\n"
+	.string "Her TRAINERS are waiting among the\n"
 	.string "trees. Beat them on your way to\l"
 	.string "GARDENIA!$"
 
 EternaCity_Gym_Text_Guide::
 	.string "Hey, there! How’s it going,\n"
-	.string "Champ-to-be?\p"
-	.string "I’m the Gym guide! I help out Trainers\n"
-	.string "who come to challenge the Gym Leader.$"
+	.string "CHAMP-to-be?\p"
+	.string "I’m the GYM guide! I help out TRAINERS\n"
+	.string "who come to challenge the GYM LEADER.$"
 
 EternaCity_Gym_EventScript_GuideWon::
 	msgbox EternaCity_Gym_Text_GuideWon, MSGBOX_DEFAULT
@@ -195,8 +195,8 @@ EternaCity_Gym_EventScript_GuideWon::
 	end
 
 EternaCity_Gym_Text_GuideWon::
-	.string "Oh! {PLAYER}! You’ve beaten the Gym\n"
-	.string "Leader!\p"
+	.string "Oh! {PLAYER}! You’ve beaten the GYM\n"
+	.string "LEADER!\p"
 	.string "Your POKéMON look much tougher than\n"
 	.string "when they went in, too!\p"
 	.string "At least that’s how I see it!$"
@@ -209,9 +209,9 @@ EternaCity_Gym_EventScript_GymStatue::
 	end
 
 EternaCity_Gym_Text_GymStatue::
-	.string "Eterna City POKéMON Gym\n"
-	.string "Leader: Gardenia\p"
-	.string "Certified Trainers:\n"
+	.string "ETERNA CITY POKéMON GYM\n"
+	.string "LEADER: GARDENIA\p"
+	.string "Certified TRAINERS:\n"
 	.string "{RIVAL}$"
 
 EternaCity_Gym_EventScript_GymStatuePostVictory::
@@ -220,8 +220,8 @@ EternaCity_Gym_EventScript_GymStatuePostVictory::
 	end
 
 EternaCity_Gym_Text_GymStatuePlayerWon::
-	.string "Eterna City POKéMON Gym\n"
-	.string "Leader: Gardenia\p"
-	.string "Certified Trainers:\n"
+	.string "ETERNA CITY POKéMON GYM\n"
+	.string "LEADER: GARDENIA\p"
+	.string "Certified TRAINERS:\n"
 	.string "{RIVAL}\n"
 	.string "{PLAYER}$"

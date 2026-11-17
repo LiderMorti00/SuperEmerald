@@ -25,7 +25,7 @@ Route217_House2_Text_PtNpc1_1::
 	.string "the snow as well.\p"
 	.string "I’m no expert, but it looks to be of\n"
 	.string "ancient origin.\p"
-	.string "Even as old as the time when Sinnoh\n"
+	.string "Even as old as the time when SINNOH\n"
 	.string "came into being...$"
 
 Route217_House2_Text_PtNpc1_2::

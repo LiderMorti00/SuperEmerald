@@ -10,7 +10,7 @@ Route206_EventScript_Axel::
 Route206_Text_AxelPost::
 	.string "This Cycling Road is one fine place--\n"
 	.string "great bikes, superb POKéMON, and\l"
-	.string "awesome Trainers all around!$"
+	.string "awesome TRAINERS all around!$"
 
 Route206_Text_AxelDefeat::
 	.string "Hey, not bad, you!$"
@@ -107,7 +107,7 @@ Route206_EventScript_Kayla::
 
 Route206_Text_KaylaPost::
 	.string "Aww! Why did you beat me?!\p"
-	.string "I hope you get so lost in Wayward Cave\n"
+	.string "I hope you get so lost in WAYWARD CAVE\n"
 	.string "you cry! Boo-hoo-hoo!$"
 
 Route206_EventScript_Kayla_Rematch::
@@ -186,7 +186,7 @@ Route206_EventScript_PtNpc1::
 
 Route206_Text_PtNpc1::
 	.string "This is odd... I heard there were two\n"
-	.string "caves on Route 206.\p"
+	.string "caves on ROUTE 206.\p"
 	.string "But I can only find one entrance.$"
 
 Route206_EventScript_SNHoneyTree::

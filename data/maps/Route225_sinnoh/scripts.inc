@@ -60,7 +60,7 @@ Route225_EventScript_Audrey::
 	end
 
 Route225_Text_AudreyPost::
-	.string "I was born in the Hoenn region. I've\n"
+	.string "I was born in the HOENN region. I've\n"
 	.string "only just recently flown here.$"
 
 Route225_EventScript_Audrey_Rematch::
@@ -70,7 +70,7 @@ Route225_EventScript_Audrey_Rematch::
 
 Route225_Text_AudreyDefeat::
 	.string "Sheesh... I arrive in a new place, and it\n"
-	.string "turns out to be the Battle Zone...$"
+	.string "turns out to be the BATTLE ZONE...$"
 
 Route225_Text_AudreyIntro::
 	.string "I let my bird POKéMON carry me to\n"
@@ -109,7 +109,7 @@ Route225_EventScript_Geoffrey::
 	end
 
 Route225_Text_GeoffreyPost::
-	.string "A Dragon Tamer Champion...\p"
+	.string "A Dragon Tamer CHAMPION...\p"
 	.string "I'll need to train so much more to even\n"
 	.string "come close to coming close...$"
 
@@ -192,11 +192,11 @@ Route225_EventScript_PtSign1::
 	end
 
 Route225_Text_PtSign1::
-	.string "Rt. 225 Fight Area$"
+	.string "Rt. 225 FIGHT AREA$"
 
 Route225_EventScript_PtSign2::
 	msgbox Route225_Text_PtSign2, MSGBOX_SIGN
 	end
 
 Route225_Text_PtSign2::
-	.string "Rt. 225 Survival Area$"
+	.string "Rt. 225 SURVIVAL AREA$"

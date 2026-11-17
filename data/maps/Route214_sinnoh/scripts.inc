@@ -56,18 +56,18 @@ Route214_EventScript_Brady::
 	end
 
 Route214_Text_BradyPost::
-	.string "There's all kinds of Trainers with all\n"
+	.string "There's all kinds of TRAINERS with all\n"
 	.string "sorts of POKéMON with them.\p"
 	.string "The more you battle, the more your\n"
-	.string "Pokédex is filled!$"
+	.string "POKéDEX is filled!$"
 
 Route214_Text_BradyDefeat::
-	.string "Your Pokédex fills me with such envy,\n"
+	.string "Your POKéDEX fills me with such envy,\n"
 	.string "envy, envy...$"
 
 Route214_Text_BradyIntro::
 	.string "What's that?!\p"
-	.string "You say you have a Pokédex? An\n"
+	.string "You say you have a POKéDEX? An\n"
 	.string "authentic one!$"
 
 Route214_EventScript_Bryan::
@@ -84,7 +84,7 @@ Route214_Text_BryanDefeat::
 	.string "POKéMON one isn't familiar with...$"
 
 Route214_Text_BryanIntro::
-	.string "Ah-ha! I found me a Trainer!\p"
+	.string "Ah-ha! I found me a TRAINER!\p"
 	.string "I challenge you to battle with the\n"
 	.string "POKéMON I've found!$"
 
@@ -161,7 +161,7 @@ Route214_Text_MitchellDefeat::
 	.string "Defeating you will be no easy matter.$"
 
 Route214_Text_MitchellIntro::
-	.string "I'd sensed the presence of a Trainer\n"
+	.string "I'd sensed the presence of a TRAINER\n"
 	.string "for a while. It was you!$"
 
 Route214_EventScript_Abigail::

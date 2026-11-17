@@ -10,14 +10,14 @@ FightArea_House2_EventScript_PtNpc1::
 	end
 
 FightArea_House2_Text_PtNpc1_0::
-	.string "The Battle Zone used to attract only\n"
-	.string "the hardiest of the Trainers.\p"
+	.string "The BATTLE ZONE used to attract only\n"
+	.string "the hardiest of the TRAINERS.\p"
 	.string "They were considered eccentric for\n"
 	.string "gathering at a place like this.\p"
 	.string "It’s hard to believe how much it’s\n"
 	.string "changed since then.\p"
-	.string "Places like the Fight Area and the\n"
-	.string "Survival Area just seemed to spring\p"
+	.string "Places like the FIGHT AREA and the\n"
+	.string "SURVIVAL AREA just seemed to spring\p"
 	.string "up overnight.$"
 
 FightArea_House2_EventScript_PtNpc2::
@@ -41,7 +41,7 @@ FightArea_House2_EventScript_PtNpc3::
 FightArea_House2_Text_PtNpc3_0::
 	.string "He was one of those early eccentrics\n"
 	.string "who were around during the early days\p"
-	.string "of the Battle Zone. Well, I was too.$"
+	.string "of the BATTLE ZONE. Well, I was too.$"
 
 FightArea_House2_EventScript_PtNpc4::
 	msgbox FightArea_House2_Text_PtNpc4, MSGBOX_NPC

@@ -19,7 +19,7 @@ PastoriaCity_PokemonCenter_1F_EventScript_PtNpc1::
 	end
 
 PastoriaCity_PokemonCenter_1F_Text_PtNpc1_0::
-	.string "The Great Marsh is vast! How vast is it,\n"
+	.string "The GREAT MARSH is vast! How vast is it,\n"
 	.string "you ask?\p"
 	.string "Take a look from the Observatory and\n"
 	.string "you can see for yourself!$"
@@ -32,7 +32,7 @@ PastoriaCity_PokemonCenter_1F_EventScript_PtNpc2::
 	end
 
 PastoriaCity_PokemonCenter_1F_Text_PtNpc2_0::
-	.string "Pastoria’s Great Marsh was once a part\n"
+	.string "PASTORIA’s GREAT MARSH was once a part\n"
 	.string "of the sea.\p"
 	.string "The seawater drained slowly away over\n"
 	.string "time, leaving the huge marshland.\p"

@@ -91,7 +91,7 @@ SnowpointCity_Gym_1F_EventScript_Leader::
 
 SnowpointCity_Gym_1F_Text_LeaderPostBattle::
 	.string "Do you think I should try to act more\n"
-	.string "like an Ice-type Gym Leader?\p"
+	.string "like an Ice-type GYM LEADER?\p"
 	.string "Like, do you think I should be more cool\n"
 	.string "and distant?\p"
 	.string "That sort of thing I have trouble with.$"
@@ -127,15 +127,15 @@ SnowpointCity_Gym_1F_EventScript_LeaderDefeated::
 	goto SnowpointCity_Gym_1F_EventScript_GiveTM
 
 SnowpointCity_Gym_1F_Text_ExplainBadge::
-	.string "That Icicle Badge I just gave you?\p"
+	.string "That Icicle BADGE I just gave you?\p"
 	.string "Because you have it, you can use the\n"
 	.string "hidden move Rock Climb anytime, even\p"
 	.string "when you’re not in a battle.\p"
 	.string "Oh, and take this, too.$"
 
 SnowpointCity_Gym_1F_Text_ReceivedBadge::
-	.string "{PLAYER} received the Icicle Badge\n"
-	.string "from Candice.$"
+	.string "{PLAYER} received the Icicle BADGE\n"
+	.string "from CANDICE.$"
 
 SnowpointCity_Gym_1F_Text_LeaderDefeat::
 	.string "Wow! You’re great! You’ve earned my\n"
@@ -146,7 +146,7 @@ SnowpointCity_Gym_1F_Text_LeaderDefeat::
 	.string "you this!$"
 
 SnowpointCity_Gym_1F_Text_LeaderIntro::
-	.string "You want to challenge Candice?\p"
+	.string "You want to challenge CANDICE?\p"
 	.string "Sure thing! I was waiting for someone\n"
 	.string "tough!\p"
 	.string "But I should tell you, I’m tough\n"
@@ -173,7 +173,7 @@ SnowpointCity_Gym_1F_EventScript_SNRematch_After::
 	.string "anytime for another match!$"
 
 SnowpointCity_Gym_1F_EventScript_SNRematch_Defeat::
-	.string "Amazing... You really are the Champion!$"
+	.string "Amazing... You really are the CHAMPION!$"
 
 SnowpointCity_Gym_1F_EventScript_SNRematch_Go::
 	.string "Then I won’t hold back this time!$"
@@ -187,7 +187,7 @@ SnowpointCity_Gym_1F_EventScript_SNRematch_NoT::
 	.string "Come back whenever you’re ready!$"
 
 SnowpointCity_Gym_1F_EventScript_SNRematch_Ask::
-	.string "Candice: You became the Champion!\n"
+	.string "CANDICE: You became the CHAMPION!\n"
 	.string "Welcome back!\p"
 	.string "I’ve been training even harder since\n"
 	.string "our last battle.\p"
@@ -203,8 +203,8 @@ SnowpointCity_Gym_1F_EventScript_PtGymGuide::
 	end
 
 SnowpointCity_Gym_1F_Text_SNGuideInfo::
-	.string "Let me tell you about this Gym!\p"
-	.string "The Gym Leader is CANDICE, the Diamond\n"
+	.string "Let me tell you about this GYM!\p"
+	.string "The GYM LEADER is CANDICE, the Diamond\n"
 	.string "Dust Girl, who is all about focus!\p"
 	.string "She uses Ice-type POKéMON like\n"
 	.string "SNEASEL, PILOSWINE, ABOMASNOW and\l"
@@ -216,13 +216,13 @@ SnowpointCity_Gym_1F_Text_SNGuideInfo::
 	.string "cracked tile you fall through!\p"
 	.string "Step on every ice tile of a room once\n"
 	.string "to open the stairs up. If you fall, you\l"
-	.string "land in the basement with her Trainers.$"
+	.string "land in the basement with her TRAINERS.$"
 
 SnowpointCity_Gym_1F_Text_PtGymGuide::
 	.string "Hey, there! How’s it going,\n"
-	.string "Champ-to-be?\p"
-	.string "I’m the Gym guide! I help out Trainers\n"
-	.string "who come to challenge the Gym Leader.$"
+	.string "CHAMP-to-be?\p"
+	.string "I’m the GYM guide! I help out TRAINERS\n"
+	.string "who come to challenge the GYM LEADER.$"
 
 SnowpointCity_Gym_1F_EventScript_PtGymGuideAfter::
 	msgbox SnowpointCity_Gym_1F_Text_PtGymGuideAfter, MSGBOX_DEFAULT
@@ -230,8 +230,8 @@ SnowpointCity_Gym_1F_EventScript_PtGymGuideAfter::
 	end
 
 SnowpointCity_Gym_1F_Text_PtGymGuideAfter::
-	.string "Oh! {PLAYER}! You’ve beaten the Gym\n"
-	.string "Leader!\p"
+	.string "Oh! {PLAYER}! You’ve beaten the GYM\n"
+	.string "LEADER!\p"
 	.string "You were more focused than her, and\n"
 	.string "your POKéMON picked up on it!$"
 
@@ -243,9 +243,9 @@ SnowpointCity_Gym_1F_EventScript_PtGymStatue::
 	end
 
 SnowpointCity_Gym_1F_Text_PtGymStatue::
-	.string "Snowpoint City POKéMON Gym\n"
-	.string "Leader: Candice\p"
-	.string "Certified Trainers:\n"
+	.string "SNOWPOINT CITY POKéMON GYM\n"
+	.string "LEADER: CANDICE\p"
+	.string "Certified TRAINERS:\n"
 	.string "{RIVAL}$"
 
 SnowpointCity_Gym_1F_EventScript_PtGymStatueWon::
@@ -254,8 +254,8 @@ SnowpointCity_Gym_1F_EventScript_PtGymStatueWon::
 	end
 
 SnowpointCity_Gym_1F_Text_PtGymStatueWon::
-	.string "Snowpoint City POKéMON Gym\n"
-	.string "Leader: Candice\p"
-	.string "Certified Trainers:\n"
+	.string "SNOWPOINT CITY POKéMON GYM\n"
+	.string "LEADER: CANDICE\p"
+	.string "Certified TRAINERS:\n"
 	.string "{RIVAL}\n"
 	.string "{PLAYER}$"

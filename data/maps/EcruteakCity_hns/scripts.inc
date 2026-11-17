@@ -23,7 +23,7 @@ EcruteakCity_EventScript_SageGym::
 	end
 
 EcruteakCity_Text_SageGym::
-	.string "Gym Leader MORTY is not here right\n"
+	.string "GYM LEADER MORTY is not here right\n"
 	.string "now. You may find him at the\l"
 	.string "BURNED TOWER.$"
 

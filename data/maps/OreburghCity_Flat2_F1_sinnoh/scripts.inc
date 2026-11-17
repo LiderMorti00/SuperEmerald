@@ -43,7 +43,7 @@ OreburghCity_Flat2_F1_EventScript_SNTradeKazza_Done::
 
 OreburghCity_Flat2_F1_EventScript_SNTradeKazza_DoneT::
 	.string "Our POKéMON are getting along great\n"
-	.string "with their new Trainers, don’t you\l"
+	.string "with their new TRAINERS, don’t you\l"
 	.string "think?$"
 
 OreburghCity_Flat2_F1_EventScript_PtNpc2::

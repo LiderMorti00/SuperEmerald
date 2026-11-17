@@ -26,7 +26,7 @@ PokemonMansion_MaidsRoom_EventScript_PtNpc1_TrainerThatPokemonLove::
 	end
 
 PokemonMansion_MaidsRoom_Text_PtNpc1_1::
-	.string "I hope you become a Trainer that\n"
+	.string "I hope you become a TRAINER that\n"
 	.string "POKéMON can love and trust.$"
 
 PokemonMansion_MaidsRoom_EventScript_PtNpc2::

@@ -23,11 +23,11 @@ OreburghMine_B2F_EventScript_Roark::
 OreburghMine_B2F_Text_SNRoark2::
 	.string "ROARK: Fallen boulders need to be\n"
 	.string "smashed so they’re out of the way.\p"
-	.string "If you could get the Badge from the\n"
-	.string "Gym in town, you’d be able\p"
+	.string "If you could get the BADGE from the\n"
+	.string "GYM in town, you’d be able\p"
 	.string "to do this too.\p"
-	.string "Of course, you’d have to beat the Gym\n"
-	.string "Leader first. That’d be me!$"
+	.string "Of course, you’d have to beat the GYM\n"
+	.string "LEADER first. That’d be me!$"
 
 OreburghMine_B2F_Text_Roark::
 	.string "ROARK: OK, stand back and watch this.\p"

@@ -32,7 +32,7 @@ Route218_EventScript_Skyler::
 
 Route218_Text_SkylerPost::
 	.string "You've got what it takes to be a\n"
-	.string "Trainer among Trainers!$"
+	.string "TRAINER among TRAINERS!$"
 
 Route218_Text_SkylerDefeat::
 	.string "Anchors away!$"

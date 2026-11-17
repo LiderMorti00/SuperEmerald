@@ -48,7 +48,7 @@ ValorLakefront_EventScript_SNCynthia_Potion::
 	end
 
 ValorLakefront_EventScript_SNCynthia_T3::
-	.string "Cynthia: I went on a big adventure with\n"
+	.string "CYNTHIA: I went on a big adventure with\n"
 	.string "a POKéDEX when I was younger.\p"
 	.string "I hope you get to meet every kind of\n"
 	.string "POKéMON there is to see.\p"
@@ -63,8 +63,8 @@ ValorLakefront_EventScript_SNCynthia_T2::
 	.string "would be worthwhile for you.$"
 
 ValorLakefront_Text_SNHaventSeen::
-	.string "Cynthia: You haven’t seen them? By the\n"
-	.string "café on Route 210.\p"
+	.string "CYNTHIA: You haven’t seen them? By the\n"
+	.string "café on ROUTE 210.\p"
 	.string "There’s a group of PSYDUCK huddled\n"
 	.string "with their heads in their, uh,\p"
 	.string "hands...?$"
@@ -74,20 +74,20 @@ ValorLakefront_EventScript_SNCynthia_Seen::
 	goto ValorLakefront_EventScript_SNCynthia_Potion
 
 ValorLakefront_EventScript_SNCynthia_T1::
-	.string "Cynthia: Yes, that’s right. By the café\n"
-	.string "on Route 210.\p"
+	.string "CYNTHIA: Yes, that’s right. By the café\n"
+	.string "on ROUTE 210.\p"
 	.string "You’ve seen that group of PSYDUCK\n"
 	.string "huddled with their heads in their,\p"
 	.string "uh, hands...?$"
 
 ValorLakefront_Text_SNPsyduck::
-	.string "Cynthia: So, getting back to what I\n"
+	.string "CYNTHIA: So, getting back to what I\n"
 	.string "started saying earlier...\p"
 	.string "Have you seen the group of PSYDUCK on\n"
-	.string "Route 210?$"
+	.string "ROUTE 210?$"
 
 ValorLakefront_Text_SNHesYourFriend::
-	.string "Cynthia: He’s your friend?\p"
+	.string "CYNTHIA: He’s your friend?\p"
 	.string "He’s more impatient than he is\n"
 	.string "energetic, isn’t he?$"
 
@@ -95,7 +95,7 @@ ValorLakefront_Text_SNBarry1::
 	.string "That explosion in the Great\n"
 	.string "Marsh? It wasn’t anything serious.\p"
 	.string "Mr. Wake told me to tell you that.\p"
-	.string "But that Team Galactic... Wow! Are they\n"
+	.string "But that TEAM GALACTIC... Wow! Are they\n"
 	.string "out of control or what?\p"
 	.string "Next time I see them, I’ll teach them a\n"
 	.string "lesson they won’t forget!\p"
@@ -109,10 +109,10 @@ ValorLakefront_Text_SNSister::
 
 ValorLakefront_Text_SNBarry0::
 	.string "{RIVAL}: Hey, {PLAYER}!\n"
-	.string "Where’d that Galactic goon run off to?$"
+	.string "Where’d that GALACTIC goon run off to?$"
 
 ValorLakefront_Text_SNIHadToTalk::
-	.string "Cynthia: Oh, hello, long time no see! How\n"
+	.string "CYNTHIA: Oh, hello, long time no see! How\n"
 	.string "is your POKéDEX filling up?\p"
 	.string "I came to research the folklore about\n"
 	.string "the lake, but...\p"
@@ -158,7 +158,7 @@ ValorLakefront_EventScript_SNGrunt_Post::
 	.string "I can’t battle anymore... I’m running on\n"
 	.string "fumes...\p"
 	.string "I’ll have to give this to the\n"
-	.string "Commander...\p"
+	.string "COMMANDER...\p"
 	.string "I wish... I got to use it at the lake...$"
 
 ValorLakefront_EventScript_SNGrunt_Defeat::
@@ -249,7 +249,7 @@ ValorLakefront_EventScript_SNCollector::
 
 ValorLakefront_Text_SNBlackout::
 	.string "Stop, stop! Yes, you!\p"
-	.string "Sunyshore City, which is down this\n"
+	.string "SUNNYSHORE CITY, which is down this\n"
 	.string "road, had a major blackout!\p"
 	.string "Crews are working on restoring power,\n"
 	.string "but the road’s closed now.$"

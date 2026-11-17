@@ -35,6 +35,6 @@ LostTower_3F_Text_KirbyDefeat::
 
 LostTower_3F_Text_KirbyIntro::
 	.string "My POKéMON were taken from me... Team\n"
-	.string "Galactic did it...\p"
+	.string "GALACTIC did it...\p"
 	.string "Ever since, I’ve never forgiven their\n"
 	.string "faces...$"

@@ -23,7 +23,7 @@ Route230_Text_GlennDefeat::
 	.string "Awesome! You're a real wild child!$"
 
 Route230_Text_GlennIntro::
-	.string "A Trainer riding a POKéMON! I like\n"
+	.string "A TRAINER riding a POKéMON! I like\n"
 	.string "that! Let's battle it out!$"
 
 Route230_EventScript_Joanna::
@@ -92,7 +92,7 @@ Route230_EventScript_Sam::
 
 Route230_Text_SamPost::
 	.string "Being a good swimmer doesn't make me\n"
-	.string "any better as a Trainer...$"
+	.string "any better as a TRAINER...$"
 
 Route230_Text_SamDefeat::
 	.string "Oh. That's how it is.$"
@@ -123,4 +123,4 @@ Route230_EventScript_PtSign1::
 	end
 
 Route230_Text_PtSign1::
-	.string "Rt. 230 Fight Area$"
+	.string "Rt. 230 FIGHT AREA$"

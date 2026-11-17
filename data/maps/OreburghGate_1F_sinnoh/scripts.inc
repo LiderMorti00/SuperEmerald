@@ -33,7 +33,7 @@ OreburghGate_1F_Text_CurtisDefeat::
 	.string "Hmm... Insufficiently raised?$"
 
 OreburghGate_1F_Text_CurtisIntro::
-	.string "We Trainers will accept challenges\n"
+	.string "We TRAINERS will accept challenges\n"
 	.string "anywhere! It's what we do.$"
 
 OreburghGate_1F_EventScript_PtNpc1::
@@ -42,7 +42,7 @@ OreburghGate_1F_EventScript_PtNpc1::
 
 OreburghGate_1F_Text_PtNpc1::
 	.string "Oh! Good golly! That's OREBURGH CITY's\n"
-	.string "Gym Badge!\p"
+	.string "GYM BADGE!\p"
 	.string "All right! Now you can use the hidden\n"
 	.string "move Rock Smash on small boulders!$"
 
@@ -62,16 +62,16 @@ OreburghGate_1F_Text_HikerAfter::
 	.string "contains the hidden move Rock Smash.\p"
 	.string "A POKéMON learning Rock Smash can\n"
 	.string "smash small boulders in the field.\p"
-	.string "But the Trainer has to have the Gym\n"
-	.string "Badge from Oreburgh City.\p"
-	.string "If you don’t have that Badge, you can’t\n"
+	.string "But the TRAINER has to have the GYM\n"
+	.string "BADGE from OREBURGH CITY.\p"
+	.string "If you don’t have that BADGE, you can’t\n"
 	.string "make a POKéMON use the hidden\p"
 	.string "move Rock Smash outside of battle.$"
 
 OreburghGate_1F_Text_Hiker::
 	.string "That sparkling new POKéTCH! Your\n"
 	.string "awkwardness as a traveler!\p"
-	.string "Hmm... You’re still a pretty new Trainer,\n"
+	.string "Hmm... You’re still a pretty new TRAINER,\n"
 	.string "aren’t you?\p"
 	.string "But it’s all good! You’re a new fellow\n"
 	.string "friend of POKéMON!\p"

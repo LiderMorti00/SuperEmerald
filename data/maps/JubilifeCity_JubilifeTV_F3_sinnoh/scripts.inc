@@ -22,7 +22,7 @@ JubilifeCity_JubilifeTV_F3_Text_PtNpc2::
 	.string "The more trades I make, the better my\n"
 	.string "odds of winning the POKéMON Lottery!\p"
 	.string "Why? Because the ID No. of a POKéMON\n"
-	.string "is different from Trainer to Trainer!$"
+	.string "is different from TRAINER to TRAINER!$"
 
 JubilifeCity_JubilifeTV_F3_EventScript_PtNpc3::
 	msgbox JubilifeCity_JubilifeTV_F3_Text_PtNpc3, MSGBOX_NPC
@@ -111,5 +111,5 @@ JubilifeCity_JubilifeTV_F3_EventScript_SNPtCOLLECTOR::
 JubilifeCity_JubilifeTV_F3_EventScript_SNPtCOLLECTOR_Text::
 	.string "I bet it’d feel great if I could be\n"
 	.string "number one here!\p"
-	.string "Maybe I’ll enter some Contests with my\n"
+	.string "Maybe I’ll enter some CONTESTS with my\n"
 	.string "partner.$"

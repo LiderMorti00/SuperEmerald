@@ -26,4 +26,4 @@ OreburghCity_Flat2_F2_EventScript_PtNpc3::
 
 OreburghCity_Flat2_F2_Text_PtNpc3::
 	.string "I collect fossils. Some are older\n"
-	.string "than Sinnoh itself!$"
+	.string "than SINNOH itself!$"

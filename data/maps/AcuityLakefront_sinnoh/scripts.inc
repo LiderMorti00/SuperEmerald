@@ -16,9 +16,9 @@ AcuityLakefront_Text_SNBarry::
 	.string "Listen, {PLAYER}.\n"
 	.string "See how the rocks are all lumpy here?\p"
 	.string "You can’t climb those rocks until you\n"
-	.string "get the Snowpoint Gym Badge.\p"
+	.string "get the SNOWPOINT GYM BADGE.\p"
 	.string "Anyway, I’m off.\n"
-	.string "Team Galactic! I’m coming for you!$"
+	.string "TEAM GALACTIC! I’m coming for you!$"
 
 AcuityLakefront_EventScript_PtSign1::
 	msgbox AcuityLakefront_Text_PtSign1, MSGBOX_SIGN

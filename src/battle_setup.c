@@ -620,7 +620,38 @@ void BattleSetup_StartLegendaryBattle(void)
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RG_VS_DEOXYS);
         break;
     case SPECIES_LUGIA:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_HG_VS_LUGIA);
+        break;
     case SPECIES_HO_OH:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_HG_VS_HO_OH);
+        break;
+    case SPECIES_SUICUNE:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_HG_VS_SUICUNE);
+        break;
+    case SPECIES_ENTEI:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_HG_VS_ENTEI);
+        break;
+    case SPECIES_RAIKOU:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_HG_VS_RAIKOU);
+        break;
+    case SPECIES_DIALGA:
+    case SPECIES_DIALGA_ORIGIN:
+    case SPECIES_PALKIA:
+    case SPECIES_PALKIA_ORIGIN:
+    case SPECIES_GIRATINA_ALTERED:
+    case SPECIES_GIRATINA_ORIGIN:
+    case SPECIES_ARCEUS_NORMAL:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_DPP_VS_DIALGA_PALKIA);
+        break;
+    case SPECIES_REGIROCK:
+    case SPECIES_REGICE:
+    case SPECIES_REGISTEEL:
+    case SPECIES_REGIGIGAS:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_VS_REGI);
+        break;
+    case SPECIES_MEWTWO:
+        CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RG_VS_MEWTWO);
+        break;
     default:
         CreateBattleStartTask(B_TRANSITION_BLUR, MUS_RG_VS_LEGEND);
         break;

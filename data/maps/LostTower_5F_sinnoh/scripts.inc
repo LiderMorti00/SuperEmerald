@@ -21,7 +21,7 @@ LostTower_5F_EventScript_PtNpc1_FantinaIsARegularVisitor::
 	end
 
 LostTower_5F_Text_PtNpc1_2::
-	.string "That Fantina... It’s hard to tell what\n"
+	.string "That FANTINA... It’s hard to tell what\n"
 	.string "she’s thinking.\p"
 	.string "But she has a compassionate heart. You\n"
 	.string "know, she’s a regular visitor.$"
@@ -62,7 +62,7 @@ LostTower_5F_EventScript_PtNpc2_PokemonFindSolaceHere::
 	end
 
 LostTower_5F_Text_PtNpc2_2::
-	.string "The Lost Tower is where the spirits of\n"
+	.string "The LOST TOWER is where the spirits of\n"
 	.string "departed POKéMON are put to rest.\p"
 	.string "Those that enjoyed long lives... Those\n"
 	.string "whose times were short...\p"

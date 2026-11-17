@@ -71,7 +71,7 @@ GreatMarsh_Text_PtNpc5_0::
 	.string "fro we go, we’re quick~?\p"
 	.string "If you’re thinking about going deep\n"
 	.string "into the marsh, I recommend you take\p"
-	.string "the Great Marsh Quick Trams.$"
+	.string "the GREAT MARSH Quick Trams.$"
 
 GreatMarsh_EventScript_PtNpc6::
 	msgbox GreatMarsh_Text_PtNpc6, MSGBOX_NPC

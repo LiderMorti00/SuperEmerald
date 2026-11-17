@@ -7,5 +7,5 @@ Route218_West_EventScript_PtNpc1::
 	end
 
 Route218_West_Text_PtNpc1::
-	.string "Route 218 up ahead is a great fishing\n"
+	.string "ROUTE 218 up ahead is a great fishing\n"
 	.string "hole that's almost unknown to people.$"

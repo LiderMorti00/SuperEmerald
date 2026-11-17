@@ -9,7 +9,7 @@ Route210_South_EventScript_Fabian::
 
 Route210_South_Text_FabianPost::
 	.string "My cover is blown, so what should I do?\p"
-	.string "Maybe I'll go catch some Contests in\n"
+	.string "Maybe I'll go catch some CONTESTS in\n"
 	.string "HEARTHOME CITY. Maybe I'll do that.$"
 
 Route210_South_Text_FabianDefeat::
@@ -45,7 +45,7 @@ Route210_South_EventScript_TeriTia::
 	end
 
 Route210_South_Text_TeriTiaPost::
-	.string "Teri: Our mommy is a twin, too.$"
+	.string "TERI: Our mommy is a twin, too.$"
 
 Route210_South_EventScript_TeriTia_Rematch::
 	trainerbattle_rematch_double TRAINER_RICHARD_SINNOH, Route210_South_Text_TeriTiaIntro, Route210_South_Text_TeriTiaDefeat, Route210_South_Text_TeriTiaNotEnough
@@ -53,15 +53,15 @@ Route210_South_EventScript_TeriTia_Rematch::
 	end
 
 Route210_South_Text_TeriTiaNotEnough::
-	.string "Teri: We want to battle with lots of\n"
+	.string "TERI: We want to battle with lots of\n"
 	.string "POKéMON.$"
 
 Route210_South_Text_TeriTiaDefeat::
-	.string "Teri: We tried really hard together,\n"
+	.string "TERI: We tried really hard together,\n"
 	.string "but we lost anyway.$"
 
 Route210_South_Text_TeriTiaIntro::
-	.string "Teri: Yay! We're gonna battle with lots\n"
+	.string "TERI: Yay! We're gonna battle with lots\n"
 	.string "of POKéMON!$"
 
 Route210_South_EventScript_Bruce::
@@ -70,7 +70,7 @@ Route210_South_EventScript_Bruce::
 	end
 
 Route210_South_Text_BrucePost::
-	.string "A POKéMON Trainer's good at finding\n"
+	.string "A POKéMON TRAINER's good at finding\n"
 	.string "stuff, I guess.$"
 
 Route210_South_Text_BruceDefeat::
@@ -231,10 +231,10 @@ Route210_South_EventScript_SNCynthiaCharm::
 Route210_South_EventScript_SNCynthiaCharm_T2::
 	.string "I know I’m asking a big favor of you.\p"
 	.string "But I really want you to do it. Will you\n"
-	.string "go to Celestic Town for me?$"
+	.string "go to CELESTIC TOWN for me?$"
 
 Route210_South_EventScript_SNCynthiaCharm_T1::
-	.string "Cynthia: Oh, good. You used the\n"
+	.string "CYNTHIA: Oh, good. You used the\n"
 	.string "SecretPotion I gave you.\p"
 	.string "PSYDUCK are known to suffer from\n"
 	.string "chronic headaches.\p"
@@ -242,9 +242,9 @@ Route210_South_EventScript_SNCynthiaCharm_T1::
 	.string "what triggers the headaches.\p"
 	.string "Oh, yes! Can I ask you a big favor?\p"
 	.string "I want you to deliver this Old Charm to\n"
-	.string "my grandma in Celestic Town.\p"
+	.string "my grandma in CELESTIC TOWN.\p"
 	.string "I know there are some rare POKéMON\n"
-	.string "between here and Celestic Town, so\p"
+	.string "between here and CELESTIC TOWN, so\p"
 	.string "it will be worth your while to go.$"
 
 Route210_South_EventScript_SNPsyduck_Used::

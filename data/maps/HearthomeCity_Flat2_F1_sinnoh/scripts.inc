@@ -10,9 +10,9 @@ HearthomeCity_Flat2_F1_EventScript_PtNpc1::
 	end
 
 HearthomeCity_Flat2_F1_Text_PtNpc1_0::
-	.string "There are the Contests! Then, we have\n"
-	.string "Amity Square!\p"
-	.string "Hearthome gets visitors from all over,\n"
+	.string "There are the CONTESTS! Then, we have\n"
+	.string "AMITY SQUARE!\p"
+	.string "HEARTHOME gets visitors from all over,\n"
 	.string "so things have to be nice and clean!$"
 
 HearthomeCity_Flat2_F1_EventScript_PtNpc2::
@@ -24,7 +24,7 @@ HearthomeCity_Flat2_F1_EventScript_PtNpc2::
 
 HearthomeCity_Flat2_F1_Text_PtNpc2_0::
 	.string "People all over the world follow\n"
-	.string "POKéMON Contests.\p"
+	.string "POKéMON CONTESTS.\p"
 	.string "What should I do? I could captivate\n"
 	.string "the whole world!$"
 
@@ -48,4 +48,4 @@ HearthomeCity_Flat2_F1_EventScript_PtNpc4::
 
 HearthomeCity_Flat2_F1_Text_PtNpc4_0::
 	.string "My SHROOMISH finds Berries and things\n"
-	.string "when we go to Amity Square.$"
+	.string "when we go to AMITY SQUARE.$"

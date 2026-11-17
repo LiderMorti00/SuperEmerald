@@ -13,7 +13,7 @@ GalacticHQ_Laboratory_Text_PtNpc1_0::
 	.string "I feel awful about what we did... This\n"
 	.string "experiment went too far...\p"
 	.string "I’m not sure if I can stomach what\n"
-	.string "Master Cyrus plans...$"
+	.string "Master CYRUS plans...$"
 
 GalacticHQ_Laboratory_EventScript_PtNpc2::
 	lock

@@ -18,7 +18,7 @@ SandgemTown_EventScript_PtNpc2::
 
 SandgemTown_Text_PtNpc2::
 	.string "That thing you have!\p"
-	.string "It's a Pokédex, isn't it?!\p"
+	.string "It's a POKéDEX, isn't it?!\p"
 	.string "You're off to see all kinds of POKéMON\n"
 	.string "now! Lucky you!$"
 
@@ -374,13 +374,13 @@ SandgemTown_Text_Dawn2_Lu::
 	.string "with the blue roof is the POKé MART.\p"
 	.string "It’s a shop where you can buy and sell\n"
 	.string "all sorts of items.\p"
-	.string "{PLAYER}, since you’re a rookie Trainer,\n"
+	.string "{PLAYER}, since you’re a rookie TRAINER,\n"
 	.string "you won’t be able to buy\p"
 	.string "very much stuff.\p"
 	.string "Don’t worry about it, OK?\p"
 	.string "Oh, yeah, right! {PLAYER}...\p"
 	.string "You should let your family know you’re\n"
-	.string "helping Prof. Rowan put\p"
+	.string "helping PROF. ROWAN put\p"
 	.string "together his POKéDEX.\p"
 	.string "Sometimes, you have to go far away, so\n"
 	.string "you should let someone know.\p"
@@ -409,7 +409,7 @@ SandgemTown_Text_Dawn2::
 	.string "roof over here is the POKé MART.\p"
 	.string "It’s a shop where you can buy and sell\n"
 	.string "items and medicine.\p"
-	.string "{PLAYER}, since you’re a novice Trainer,\n"
+	.string "{PLAYER}, since you’re a novice TRAINER,\n"
 	.string "you won’t be able to buy\p"
 	.string "many kinds of merchandise.\p"
 	.string "Don’t let it bother you!\p"
@@ -417,7 +417,7 @@ SandgemTown_Text_Dawn2::
 	.string "{PLAYER}...\p"
 	.string "Don’t you need to let your family know\n"
 	.string "that you’re going to be helping\p"
-	.string "Prof. Rowan with the POKéDEX?\p"
+	.string "PROF. ROWAN with the POKéDEX?\p"
 	.string "You may need to go far away, so I think\n"
 	.string "you should let someone know.\p"
 	.string "Oh, but before you go, heal up your\n"
@@ -440,13 +440,13 @@ SandgemTown_Text_Dawn2_SNLu::
 	.string "with the blue roof is the POKé MART.\p"
 	.string "It’s a shop where you can buy and sell\n"
 	.string "all sorts of items.\p"
-	.string "{PLAYER}, since you’re a rookie Trainer,\n"
+	.string "{PLAYER}, since you’re a rookie TRAINER,\n"
 	.string "you won’t be able to buy\p"
 	.string "very much stuff.\p"
 	.string "Don’t worry about it, OK?\p"
 	.string "{STR_VAR_1}: Oh, yeah, right! {PLAYER}...\p"
 	.string "You should let your family know you’re\n"
-	.string "helping Prof. Rowan put\p"
+	.string "helping PROF. ROWAN put\p"
 	.string "together his POKéDEX.\p"
 	.string "Sometimes, you have to go far away, so\n"
 	.string "you should let someone know.\p"
@@ -512,11 +512,11 @@ SandgemTown_Text_Rowan2_SNDawnCall::
 SandgemTown_Text_Rowan2::
 	.string "{STR_VAR_1}: Oh, wow. I didn’t know the\n"
 	.string "professor had TMs.\p"
-	.string "Was he a Trainer when he was young...?\p"
+	.string "Was he a TRAINER when he was young...?\p"
 	.string "{STR_VAR_1}: OK, {PLAYER}, I’ll act as\n"
 	.string "your mentor.\p"
 	.string "I’ve got a bit more experience than you\n"
-	.string "as a Trainer and as the professor’s\p"
+	.string "as a TRAINER and as the professor’s\p"
 	.string "assistant.\p"
 	.string "OK, follow me!$"
 
@@ -534,9 +534,9 @@ SandgemTown_Text_Rowan2_SNLu::
 	.string "So, follow me!$"
 
 SandgemTown_Text_Rowan::
-	.string "Rowan: I have something good here. You\n"
+	.string "ROWAN: I have something good here. You\n"
 	.string "should take this as well.\p"
-	.string "Rowan: That is a Technical Machine.\n"
+	.string "ROWAN: That is a Technical Machine.\n"
 	.string "That one contains the move Return.\p"
 	.string "Using a Technical Machine, or TM for\n"
 	.string "short, teaches a move instantly to\p"
@@ -574,7 +574,7 @@ SandgemTown_EventScript_Sign1::
 
 SandgemTown_Text_Sign1::
 	.string "POKéMON RESEARCH LAB\p"
-	.string "Professor Rowan$"
+	.string "PROFESSOR ROWAN$"
 
 SandgemTown_EventScript_Sign3::
 	msgbox SandgemTown_Text_Sign3, MSGBOX_SIGN

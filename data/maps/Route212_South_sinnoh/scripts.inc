@@ -34,7 +34,7 @@ Route212_South_Text_JoshDefeat::
 
 Route212_South_Text_JoshIntro::
 	.string "I wish some fishing-loving lady'd come\n"
-	.string "along. But no, it's all just Trainers.$"
+	.string "along. But no, it's all just TRAINERS.$"
 
 Route212_South_EventScript_Travis::
 	trainerbattle_single TRAINER_TAYLOR_SINNOH, Route212_South_Text_TravisIntro, Route212_South_Text_TravisDefeat
@@ -73,7 +73,7 @@ Route212_South_Text_TaylorDefeat::
 	.string "You've got energy to burn!$"
 
 Route212_South_Text_TaylorIntro::
-	.string "Hi, Trainer! Can you keep up with me?$"
+	.string "Hi, TRAINER! Can you keep up with me?$"
 
 Route212_South_EventScript_Allison::
 	trainerbattle_single TRAINER_EDWARD_SINNOH, Route212_South_Text_AllisonIntro, Route212_South_Text_AllisonDefeat
@@ -109,10 +109,10 @@ Route212_South_Text_JeffreyPost::
 
 Route212_South_Text_JeffreyDefeat::
 	.string "Good. You seem to be a kindhearted\n"
-	.string "Trainer.$"
+	.string "TRAINER.$"
 
 Route212_South_Text_JeffreyIntro::
-	.string "Heya, Trainer! Are you being good to\n"
+	.string "Heya, TRAINER! Are you being good to\n"
 	.string "Mother Nature?$"
 
 Route212_South_EventScript_Danny::
@@ -161,7 +161,7 @@ Route212_South_EventScript_Dean::
 
 Route212_South_Text_DeanPost::
 	.string "Oh, what have we here? That's a\n"
-	.string "Pokédex!\p"
+	.string "POKéDEX!\p"
 	.string "It records POKéMON data upon sight?\n"
 	.string "I've never seen one before!\p"
 	.string "I heard you can move the sun or moon\n"
@@ -185,7 +185,7 @@ Route212_South_EventScript_Shaun::
 
 Route212_South_Text_ShaunPost::
 	.string "A huge variety of POKéMON live in the\n"
-	.string "Great Marsh.\p"
+	.string "GREAT MARSH.\p"
 	.string "You see, countless years ago, this\n"
 	.string "whole area was under the sea.$"
 
@@ -199,7 +199,7 @@ Route212_South_Text_ShaunDefeat::
 	.string "conclusion: you're a tough one!$"
 
 Route212_South_Text_ShaunIntro::
-	.string "Oh? Here comes a nice-looking Trainer.\n"
+	.string "Oh? Here comes a nice-looking TRAINER.\n"
 	.string "This is worth evaluation.$"
 
 Route212_South_EventScript_Alexa::
@@ -267,7 +267,7 @@ Route212_South_EventScript_PtNpc3::
 	end
 
 Route212_South_Text_PtNpc3::
-	.string "You've been to the Great Marsh? How\n"
+	.string "You've been to the GREAT MARSH? How\n"
 	.string "about the POKéMON Mansion?\p"
 	.string "Wherever I go, I get to meet new and\n"
 	.string "different POKéMON.\p"
@@ -293,7 +293,7 @@ Route212_South_EventScript_PtSign3::
 	end
 
 Route212_South_Text_PtSign3::
-	.string "Trainer Tips If you get stuck in the\n"
+	.string "TRAINER Tips If you get stuck in the\n"
 	.string "bog, you can count on being there a\l"
 	.string "while.\p"
 	.string "There's no need to panic. Just\n"

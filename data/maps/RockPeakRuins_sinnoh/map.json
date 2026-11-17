@@ -29,7 +29,15 @@
       "flag": "FLAG_SN_HIDE_REGIROCK"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 8,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE228_SINNOH",
+      "dest_warp_id": "2"
+    }
+  ],
   "coord_events": [],
   "bg_events": [
     {

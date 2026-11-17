@@ -7,7 +7,7 @@ JubilifeCity_PoketchCompany_F2_EventScript_PtNpc1::
 	end
 
 JubilifeCity_PoketchCompany_F2_Text_PtNpc1::
-	.string "We'll try to think like a Trainer and\n"
+	.string "We'll try to think like a TRAINER and\n"
 	.string "find what POKéNAV apps would be good.$"
 
 JubilifeCity_PoketchCompany_F2_EventScript_PtNpc2::

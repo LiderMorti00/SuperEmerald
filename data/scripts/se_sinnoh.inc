@@ -673,7 +673,7 @@ SE_EventScript_VolknerGiveTM::
 	end
 
 SE_Text_VolknerIntro:
-	.string "I'm VOLKNER, SUNYSHORE's GYM LEADER.\pI was bored of battles… Show me\nsomething that sparks!$"
+	.string "I'm VOLKNER, SUNNYSHORE's GYM LEADER.\pI was bored of battles… Show me\nsomething that sparks!$"
 
 SE_Text_VolknerDefeat:
 	.string "…That was fun. You earned the\nBEACON BADGE.$"
@@ -867,7 +867,7 @@ SE_Text_CynthiaHallOfFame:
 	.string "CYNTHIA: This is where the names of\n"
 	.string "the CHAMPIONS and their POKéMON\l"
 	.string "are recorded forever.\p"
-	.string "Hoenn, Johto and now Sinnoh…\n"
+	.string "HOENN, JOHTO and now SINNOH…\n"
 	.string "Your journey is truly legendary.$"
 
 @ ---------------------------------------------------------------------------
@@ -969,3 +969,88 @@ SE_EventScript_RowanAideB_Text:
 	.string "PROF. ROWAN looks scary, but he\n"
 	.string "really cares about POKéMON!$"
 
+
+@ ---------------------------------------------------------------
+@ Super Emerald: access to the Hall of Origin, Rock Peak Ruins and
+@ Iceberg Ruins (postgame, after the SINNOH LEAGUE)
+@ ---------------------------------------------------------------
+SE_EventScript_SpearPillarAltar::
+	lockall
+	goto_if_unset FLAG_SE_SINNOH_LEAGUE_CLEARED, SE_EventScript_SpearPillarAltarSealed
+	goto_if_set FLAG_SN_DONE_ARCEUS, SE_EventScript_SpearPillarAltarQuiet
+	msgbox SE_Text_SpearPillarAltarStairs, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SE_EventScript_RuinsEntranceEnd
+	playse SE_M_DETECT
+	waitse
+	fadescreen FADE_TO_WHITE
+	warp MAP_HALL_OF_ORIGIN_SINNOH, 0
+	waitstate
+	releaseall
+	end
+
+SE_EventScript_SpearPillarAltarSealed::
+	msgbox SE_Text_SpearPillarAltarSealed, MSGBOX_DEFAULT
+	releaseall
+	end
+
+SE_EventScript_SpearPillarAltarQuiet::
+	msgbox SE_Text_SpearPillarAltarQuiet, MSGBOX_DEFAULT
+	releaseall
+	end
+
+SE_EventScript_RockPeakRuinsEntrance::
+	lockall
+	goto_if_unset FLAG_SE_SINNOH_LEAGUE_CLEARED, SE_EventScript_RuinsEntranceSealed
+	msgbox SE_Text_RockPeakRuinsEntrance, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SE_EventScript_RuinsEntranceEnd
+	playse SE_EXIT
+	warp MAP_ROCK_PEAK_RUINS_SINNOH, 0
+	waitstate
+	releaseall
+	end
+
+SE_EventScript_IcebergRuinsEntrance::
+	lockall
+	goto_if_unset FLAG_SE_SINNOH_LEAGUE_CLEARED, SE_EventScript_RuinsEntranceSealed
+	msgbox SE_Text_IcebergRuinsEntrance, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SE_EventScript_RuinsEntranceEnd
+	playse SE_EXIT
+	warp MAP_ICEBERG_RUINS_SINNOH, 0
+	waitstate
+	releaseall
+	end
+
+SE_EventScript_RuinsEntranceSealed::
+	msgbox SE_Text_RuinsEntranceSealed, MSGBOX_DEFAULT
+SE_EventScript_RuinsEntranceEnd::
+	releaseall
+	end
+
+SE_Text_SpearPillarAltarSealed:
+	.string "An ancient altar stands here.\n"
+	.string "It feels like it's waiting for\l"
+	.string "someone worthy…$"
+
+SE_Text_SpearPillarAltarStairs:
+	.string "The altar is shining softly…\p"
+	.string "A stairway of light seems to lead\n"
+	.string "up into the sky.\p"
+	.string "Climb the stairway?$"
+
+SE_Text_SpearPillarAltarQuiet:
+	.string "The altar is silent now.$"
+
+SE_Text_RockPeakRuinsEntrance:
+	.string "There's a hollow in the sand…\n"
+	.string "An old doorway is hidden inside.\p"
+	.string "Go down into the ruins?$"
+
+SE_Text_IcebergRuinsEntrance:
+	.string "A freezing wind blows out of a\n"
+	.string "crack in the wall…\p"
+	.string "Go into the crack?$"
+
+SE_Text_RuinsEntranceSealed:
+	.string "There are strange markings here.\n"
+	.string "The way is sealed by an unknown\l"
+	.string "power…$"

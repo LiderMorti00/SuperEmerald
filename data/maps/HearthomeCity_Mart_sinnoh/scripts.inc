@@ -12,7 +12,7 @@ HearthomeCity_Mart_EventScript_PtNpc1::
 HearthomeCity_Mart_Text_PtNpc1_0::
 	.string "The item Revive is something I could\n"
 	.string "use now.\p"
-	.string "But I’ve only got two Gym Badges, so I\n"
+	.string "But I’ve only got two GYM BADGES, so I\n"
 	.string "can’t buy any yet...$"
 
 HearthomeCity_Mart_EventScript_PtNpc2::
@@ -23,7 +23,7 @@ HearthomeCity_Mart_EventScript_PtNpc2::
 	end
 
 HearthomeCity_Mart_Text_PtNpc2_0::
-	.string "Do you know Amity Square? It’s a happy\n"
+	.string "Do you know AMITY SQUARE? It’s a happy\n"
 	.string "and cheerful place.\p"
 	.string "You can find Accessories there you\n"
 	.string "can’t buy in POKé MARTs.$"

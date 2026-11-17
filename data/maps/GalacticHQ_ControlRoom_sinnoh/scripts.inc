@@ -26,62 +26,62 @@ GalacticHQ_ControlRoom_EventScript_SNSaturn_Post::
 	.string "crystals he took from the three\p"
 	.string "POKéMON.\p"
 	.string "That Red Chain is what he needed to\n"
-	.string "shackle something on Mt. Coronet.\p"
+	.string "shackle something on MT. CORONET.\p"
 	.string "It’s also apparently needed for\n"
 	.string "creating something.\p"
 	.string "But that’s all I know. Who knows what\n"
 	.string "he’s planning to do up there.$"
 
 GalacticHQ_ControlRoom_Text_SNCharon2::
-	.string "Charon: Nothing. Pay it no heed.\p"
+	.string "CHARON: Nothing. Pay it no heed.\p"
 	.string "A new world isn’t overly interesting.\n"
 	.string "What of it?\p"
-	.string "If Cyrus is right, then Team Galactic\n"
+	.string "If CYRUS is right, then TEAM GALACTIC\n"
 	.string "will rule that new world.\p"
 	.string "That’s when it will be interesting. A\n"
 	.string "chance to enjoy its sweets.\p"
-	.string "I surely hope that our visionary Cyrus\n"
+	.string "I surely hope that our visionary CYRUS\n"
 	.string "realizes his dream.\p"
 	.string "I look forward to whatever our beloved\n"
-	.string "leader has planned atop Mt. Coronet.\p"
-	.string "Saturn: Gramps.\p"
+	.string "leader has planned atop MT. CORONET.\p"
+	.string "SATURN: Gramps.\p"
 	.string "Our boss can do without your kind of\n"
 	.string "moral support.$"
 
 GalacticHQ_ControlRoom_Text_SNCharon1::
-	.string "Charon: Fuhyahya!\p"
+	.string "CHARON: Fuhyahya!\p"
 	.string "Those POKéMON of the lakes, where do\n"
 	.string "you suppose they would go?\p"
-	.string "Saturn: What are you trying to say?$"
+	.string "SATURN: What are you trying to say?$"
 
 GalacticHQ_ControlRoom_Text_SNRedChain::
-	.string "Saturn: ...Gah! What makes you so\n"
+	.string "SATURN: ...Gah! What makes you so\n"
 	.string "tough?\p"
 	.string "Fine... Do whatever you want with those\n"
 	.string "three POKéMON.\p"
 	.string "Press the button on that machine to\n"
 	.string "set them free.\p"
-	.string "Saturn: Our boss crafted a Red Chain\n"
+	.string "SATURN: Our boss crafted a Red Chain\n"
 	.string "from crystals he took from the three\p"
 	.string "POKéMON.\p"
 	.string "That Red Chain is what he needed to\n"
-	.string "shackle something on Mt. Coronet.\p"
+	.string "shackle something on MT. CORONET.\p"
 	.string "It’s also apparently needed for\n"
 	.string "creating something.\p"
 	.string "But that’s all I know. Who knows what\n"
 	.string "he’s planning to do up there.$"
 
 GalacticHQ_ControlRoom_EventScript_SNSaturn_Defeat::
-	.string "Saturn: ...I see. So that is your power.$"
+	.string "SATURN: ...I see. So that is your power.$"
 
 GalacticHQ_ControlRoom_EventScript_SNSaturn_Intro::
-	.string "Saturn: You... You came all the way here\n"
+	.string "SATURN: You... You came all the way here\n"
 	.string "just to save some POKéMON?\p"
 	.string "...Though it’s nothing new, I can’t say I\n"
 	.string "understand our boss...\p"
 	.string "Why would he let a kid like you come and\n"
 	.string "go freely...?\p"
-	.string "We, Team Galactic, take all that we\n"
+	.string "We, TEAM GALACTIC, take all that we\n"
 	.string "need, and eliminate what we do not.\p"
 	.string "But anyway. You’ve taken the trouble\n"
 	.string "to come. Let me welcome you!\p"
@@ -93,22 +93,22 @@ GalacticHQ_ControlRoom_EventScript_PtNpc2::
 	end
 
 GalacticHQ_ControlRoom_Text_PtNpc2::
-	.string "Charon: Humph. Saturn and even Cyrus\n"
+	.string "CHARON: Humph. SATURN and even CYRUS\n"
 	.string "fall to a mere child...\p"
-	.string "Team Galactic’s state of affairs is\n"
+	.string "TEAM GALACTIC’s state of affairs is\n"
 	.string "worrying...\p"
-	.string "That plan of Cyrus’s atop Mt. Coronet,\n"
+	.string "That plan of CYRUS’s atop MT. CORONET,\n"
 	.string "too... Who knows if it will work.\p"
 	.string "...Hmm. Perhaps another option needs to\n"
 	.string "be considered.\p"
-	.string "One befitting the genius of Charon!$"
+	.string "One befitting the genius of CHARON!$"
 
 GalacticHQ_ControlRoom_EventScript_PtSign1::
 	msgbox GalacticHQ_ControlRoom_Text_PtSign1, MSGBOX_SIGN
 	end
 
 GalacticHQ_ControlRoom_Text_PtSign1::
-	.string "It’s Team Galactic’s sinister machine.\n"
+	.string "It’s TEAM GALACTIC’s sinister machine.\n"
 	.string "UXIE had been sealed inside it.$"
 
 GalacticHQ_ControlRoom_EventScript_PtSign2::
@@ -116,7 +116,7 @@ GalacticHQ_ControlRoom_EventScript_PtSign2::
 	end
 
 GalacticHQ_ControlRoom_Text_PtSign2::
-	.string "It’s Team Galactic’s sinister machine.\n"
+	.string "It’s TEAM GALACTIC’s sinister machine.\n"
 	.string "MESPRIT had been sealed inside it.$"
 
 GalacticHQ_ControlRoom_EventScript_PtSign3::
@@ -124,7 +124,7 @@ GalacticHQ_ControlRoom_EventScript_PtSign3::
 	end
 
 GalacticHQ_ControlRoom_Text_PtSign3::
-	.string "It’s Team Galactic’s sinister machine.\n"
+	.string "It’s TEAM GALACTIC’s sinister machine.\n"
 	.string "AZELF had been sealed inside it.$"
 
 GalacticHQ_ControlRoom_EventScript_PtSign4::

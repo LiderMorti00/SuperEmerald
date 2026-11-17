@@ -16,7 +16,7 @@ Twinleaf_Town_RivalsHouse_F1_Text_SNTookOff::
 	.string "{RIVAL}’s mom: My {RIVAL} took\n"
 	.string "off like a rocket as usual.\p"
 	.string "He was shouting something about\n"
-	.string "becoming the greatest Trainer ever...\p"
+	.string "becoming the greatest TRAINER ever...\p"
 	.string "He just can’t sit still, that boy. I\n"
 	.string "wonder who he takes after?$"
 
@@ -37,7 +37,7 @@ Twinleaf_Town_RivalsHouse_F1_EventScript_PtNpc1_S1::
 Twinleaf_Town_RivalsHouse_F1_Text_SNRocketed::
 	.string "{RIVAL}’s mom: That kid rocketed off\n"
 	.string "again like usual.\p"
-	.string "I’d guess he would be out on Route 201\n"
+	.string "I’d guess he would be out on ROUTE 201\n"
 	.string "by now?\p"
 	.string "He just can’t sit still, that boy. I\n"
 	.string "wonder who he takes after?$"

@@ -30,10 +30,10 @@ SpearPillar_EventScript_SNSPGrunts_After::
 	.string "pulverized by our bosses!$"
 
 SpearPillar_EventScript_SNSPGrunts_DB::
-	.string "Grunt: We lost...?!$"
+	.string "GRUNT: We lost...?!$"
 
 SpearPillar_EventScript_SNSPGrunts_DA::
-	.string "Grunt: No way...!$"
+	.string "GRUNT: No way...!$"
 
 SpearPillar_Text_SNGruntsIntro::
 	.string "Our boss is about to do something\n"
@@ -139,10 +139,10 @@ SpearPillar_EventScript_SNSPCommanders_Battle::
 	goto SpearPillar_EventScript_SNSPCommanders_Won
 
 SpearPillar_EventScript_SNSPCommanders_DB::
-	.string "Jupiter: Gah... you two are tough.$"
+	.string "JUPITER: Gah... you two are tough.$"
 
 SpearPillar_EventScript_SNSPCommanders_DA::
-	.string "Mars: Oh, come on! Not again!$"
+	.string "MARS: Oh, come on! Not again!$"
 
 SpearPillar_EventScript_SNSPCommanders_T9::
 	.string "BARRY: Hey, {PLAYER}! This is it! It’s\n"
@@ -160,7 +160,7 @@ SpearPillar_EventScript_SNSPCommanders_T7::
 	.string "{PLAYER}, I’ll help you with this!$"
 
 SpearPillar_EventScript_SNSPCommanders_After::
-	.string "Jupiter: Fine. Go on ahead... Our boss\n"
+	.string "JUPITER: Fine. Go on ahead... Our boss\n"
 	.string "will finish you off anyway!$"
 
 SpearPillar_EventScript_SNSPCommanders_P2::
@@ -172,13 +172,13 @@ SpearPillar_EventScript_SNSPCommanders_P1::
 	goto SpearPillar_EventScript_SNSPCommanders_Battle
 
 SpearPillar_EventScript_SNSPCommanders_T6::
-	.string "Jupiter: Ha! If it isn’t that little boy.\p"
-	.string "The little crybaby from Lake Acuity.\p"
+	.string "JUPITER: Ha! If it isn’t that little boy.\p"
+	.string "The little crybaby from LAKE ACUITY.\p"
 	.string "Did you toughen up a bit? Sure, let’s\n"
 	.string "battle two-on-two!$"
 
 SpearPillar_EventScript_SNSPCommanders_T5::
-	.string "Jupiter: Huh?$"
+	.string "JUPITER: Huh?$"
 
 SpearPillar_EventScript_SNSPCommanders_T4::
 	.string "BARRY: Remember me? I’m here to get my\n"
@@ -221,12 +221,12 @@ SpearPillar_EventScript_SNSPCommanders_T3::
 	.string "Don’t you start the party without me!$"
 
 SpearPillar_EventScript_SNSPCommanders_T2::
-	.string "Jupiter: And I’ll be next.\p"
+	.string "JUPITER: And I’ll be next.\p"
 	.string "You might be tough, but this time, the\n"
 	.string "gloves are coming off!$"
 
 SpearPillar_EventScript_SNSPCommanders_T1::
-	.string "Mars: Where do you think you’re going?\n"
+	.string "MARS: Where do you think you’re going?\n"
 	.string "I won’t let you disturb our boss.\p"
 	.string "If you’re not going to listen, you’ll\n"
 	.string "have to go through me first.\p"
@@ -268,22 +268,22 @@ SpearPillar_EventScript_SNCyrus::
 	goto SpearPillar_EventScript_SNCyrus_NotCaught
 
 SpearPillar_EventScript_SNCyrus_T4::
-	.string "Cyrus: Interesting.\p"
+	.string "CYRUS: Interesting.\p"
 	.string "So, there is a POKéMON that can only\n"
 	.string "appear as a shadow.$"
 
 SpearPillar_EventScript_SNCyrus_T3::
-	.string "Cyrus: ...I should have expected as\n"
+	.string "CYRUS: ...I should have expected as\n"
 	.string "much.\p"
 	.string "UXIE, “The Being of Knowledge.”\p"
 	.string "AZELF, “The Being of Willpower.”\p"
 	.string "And MESPRIT, “The Being of Emotion”...$"
 
 SpearPillar_EventScript_SNCyrus_Defeat::
-	.string "Cyrus: ...How can this be?$"
+	.string "CYRUS: ...How can this be?$"
 
 SpearPillar_EventScript_SNCyrus_T2::
-	.string "Cyrus: I’ve waited so long for this\n"
+	.string "CYRUS: I’ve waited so long for this\n"
 	.string "moment, DIALGA and PALKIA.\p"
 	.string "Shaping this world is a double spiral of\n"
 	.string "time and space.\p"
@@ -295,7 +295,7 @@ SpearPillar_EventScript_SNCyrus_T2::
 	.string "entirely new world!$"
 
 SpearPillar_EventScript_SNCyrus_T1::
-	.string "Cyrus: ... ...\p"
+	.string "CYRUS: ... ...\p"
 	.string "Everything is ready for the creation\n"
 	.string "of a new world.\p"
 	.string "Now, all will end. And everything will\n"

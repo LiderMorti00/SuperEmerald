@@ -56,4 +56,4 @@ EternaCity_GalacticBuilding_2F_Text_Grunt2Defeat::
 
 EternaCity_GalacticBuilding_2F_Text_Grunt2Intro::
 	.string "Let's see how good this POKéMON is! I\n"
-	.string "stole it from some weak Trainer.$"
+	.string "stole it from some weak TRAINER.$"

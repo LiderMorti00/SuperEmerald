@@ -12,8 +12,8 @@ JubilifeCity_Flat1_F1_Text_PtNpc1::
 	.string "It grows quickly, so its level goes up\n"
 	.string "quickly, too.\p"
 	.string "But it doesn't always listen to me...\p"
-	.string "That's because I only have one Gym\n"
-	.string "Badge.\p"
+	.string "That's because I only have one GYM\n"
+	.string "BADGE.\p"
 	.string "We don't always have an easy time, but\n"
 	.string "it's still my irreplaceable partner!$"
 

@@ -28,13 +28,13 @@ JubilifeCity_JubilifeTV_F1_EventScript_PtNpc3::
 
 JubilifeCity_JubilifeTV_F1_Text_PtNpc3::
 	.string "The TV station interviews all sorts of\n"
-	.string "Trainers for its shows.\p"
+	.string "TRAINERS for its shows.\p"
 	.string "After all, people want to know about\n"
-	.string "good Trainers and what they say.\p"
+	.string "good TRAINERS and what they say.\p"
 	.string "Personally, I'd like to learn more\n"
-	.string "about Gym Leaders.\p"
+	.string "about GYM LEADERS.\p"
 	.string "I'd also like to hear about the tough\n"
-	.string "Elite Four of the POKéMON LEAGUE.$"
+	.string "ELITE FOUR of the POKéMON LEAGUE.$"
 
 JubilifeCity_JubilifeTV_F1_EventScript_PtNpc4::
 	msgbox JubilifeCity_JubilifeTV_F1_Text_PtNpc4, MSGBOX_NPC
@@ -49,7 +49,7 @@ JubilifeCity_JubilifeTV_F1_EventScript_PtNpc5::
 	end
 
 JubilifeCity_JubilifeTV_F1_Text_PtNpc5::
-	.string "I heard a famous Trainer is being\n"
+	.string "I heard a famous TRAINER is being\n"
 	.string "interviewed today!$"
 
 JubilifeCity_JubilifeTV_F1_EventScript_PtNpc6::
@@ -103,7 +103,7 @@ JubilifeCity_JubilifeTV_F1_EventScript_SNLottery::
 
 JubilifeCity_JubilifeTV_F1_Text_SNLotBye::
 	.string "Please do visit again! Good-bye from\n"
-	.string "Felicity, your attendant!$"
+	.string "FELICITY, your attendant!$"
 
 JubilifeCity_JubilifeTV_F1_EventScript_SNLotNoRoom::
 	copyvar VAR_POKELOT_PRIZE_PLACE, VAR_0x8004
@@ -203,7 +203,7 @@ JubilifeCity_JubilifeTV_F1_Text_SNLotNoT::
 
 JubilifeCity_JubilifeTV_F1_Text_SNLotIntro::
 	.string "This is the POKéMON Lottery Corner. I’m\n"
-	.string "Felicity, your attendant today.\p"
+	.string "FELICITY, your attendant today.\p"
 	.string "If your drawn number matches the ID\n"
 	.string "No. of any of your POKéMON,\p"
 	.string "you could win fabulous gifts.\p"

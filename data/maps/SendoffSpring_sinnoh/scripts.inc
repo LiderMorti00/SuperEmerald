@@ -7,7 +7,7 @@ SendoffSpring_EventScript_PtNpc1::
 	end
 
 SendoffSpring_Text_PtNpc1::
-	.string "Cynthia: Sigh... I wish I could have\n"
+	.string "CYNTHIA: Sigh... I wish I could have\n"
 	.string "battled GIRATINA.\p"
 	.string "Oh, don’t mind me. I’m only musing out\n"
 	.string "loud.\p"

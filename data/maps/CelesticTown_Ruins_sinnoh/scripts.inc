@@ -32,7 +32,7 @@ CelesticTown_Ruins_Text_SNElder1::
 	.string "What world could he dream of?\p"
 	.string "Such a strange, strange man. Spouting\n"
 	.string "such nonsense.\p"
-	.string "The time and space of Sinnoh are filled\n"
+	.string "The time and space of SINNOH are filled\n"
 	.string "with the memories and thoughts\p"
 	.string "of countless people and POKéMON.\p"
 	.string "This is a wonderful world. What need is\n"
@@ -75,12 +75,12 @@ CelesticTown_Ruins_EventScript_SNCharm::
 
 CelesticTown_Ruins_Text_SNCharm3::
 	.string "This Old Charm is something made in\n"
-	.string "Celestic Town long, long ago.\p"
+	.string "CELESTIC TOWN long, long ago.\p"
 	.string "It was made in honor of a mythical\n"
-	.string "deity said to have created Sinnoh.\p"
+	.string "deity said to have created SINNOH.\p"
 	.string "These Old Charms are still discovered\n"
 	.string "now and again.\p"
-	.string "Since you’re in Celestic Town, why not\n"
+	.string "Since you’re in CELESTIC TOWN, why not\n"
 	.string "look around inside the ruins?$"
 
 CelesticTown_Ruins_Text_SNCharm2::
@@ -89,15 +89,15 @@ CelesticTown_Ruins_Text_SNCharm2::
 
 CelesticTown_Ruins_Text_SNCharm::
 	.string "Oh, you were magnificent! Aren’t you\n"
-	.string "quite the Trainer?\p"
-	.string "As the elder of Celestic Town, I give\n"
+	.string "quite the TRAINER?\p"
+	.string "As the elder of CELESTIC TOWN, I give\n"
 	.string "you my thanks.\p"
 	.string "Oh? That Old Charm... May I see that,\n"
 	.string "dear?\p"
 	.string "... What’s that?\p"
-	.string "You say Cynthia entrusted you with it\n"
+	.string "You say CYNTHIA entrusted you with it\n"
 	.string "to deliver to me?\p"
-	.string "That Cynthia... She’s my granddaughter.$"
+	.string "That CYNTHIA... She’s my granddaughter.$"
 
 CelesticTown_Ruins_EventScript_SNCyrus_Ask::
 	msgbox CelesticTown_Ruins_Text_SNCyrusAsk, MSGBOX_YESNO
@@ -117,7 +117,7 @@ CelesticTown_Ruins_Text_SNCyrusTalk::
 	.string "???: I would like to know more about\n"
 	.string "that legend, if you will.\p"
 	.string "Elder: Who might you be...?\p"
-	.string "Cyrus: My name is Cyrus.\p"
+	.string "CYRUS: My name is CYRUS.\p"
 	.string "I want to put an end to pointless\n"
 	.string "strife and hostility.\p"
 	.string "I am seeking the power to create the\n"
@@ -131,7 +131,7 @@ CelesticTown_Ruins_Text_SNCyrusTalk::
 	.string "I’m quite satisfied with the world the\n"
 	.string "way it is.\p"
 	.string "I’m not interested in your question.\p"
-	.string "Cyrus: ...Plead ignorance, will you? What\n"
+	.string "CYRUS: ...Plead ignorance, will you? What\n"
 	.string "a pointless attitude.\p"
 	.string "You fail to appreciate that the world\n"
 	.string "is incomplete.\p"
@@ -156,7 +156,7 @@ CelesticTown_Ruins_EventScript_SNCyrus_Won::
 	end
 
 CelesticTown_Ruins_EventScript_SNCyrus_Post::
-	.string "Cyrus: ...Remarkable.\p"
+	.string "CYRUS: ...Remarkable.\p"
 	.string "But, Elder, your attitude told me what\n"
 	.string "I needed to know.\p"
 	.string "If the beings of time and space are\n"
@@ -167,11 +167,11 @@ CelesticTown_Ruins_EventScript_SNCyrus_Defeat::
 	.string "...Remarkable.$"
 
 CelesticTown_Ruins_EventScript_SNCyrus_Intro::
-	.string "Cyrus: ...I know you, Trainer. We’ve met\n"
-	.string "at Mt. Coronet.\p"
+	.string "CYRUS: ...I know you, TRAINER. We’ve met\n"
+	.string "at MT. CORONET.\p"
 	.string "Why would you want to protect this\n"
 	.string "incomplete world?\p"
-	.string "As the boss of Team Galactic, I will\n"
+	.string "As the boss of TEAM GALACTIC, I will\n"
 	.string "show you the error of your ways.$"
 
 CelesticTown_Ruins_EventScript_SNCyrus_Coward::
@@ -180,13 +180,13 @@ CelesticTown_Ruins_EventScript_SNCyrus_Coward::
 	end
 
 CelesticTown_Ruins_Text_SNCyrusCoward::
-	.string "Cyrus: ...You chose to be a coward. How\n"
+	.string "CYRUS: ...You chose to be a coward. How\n"
 	.string "sensible of you.\p"
 	.string "Stand aside and watch as I change the\n"
 	.string "world.$"
 
 CelesticTown_Ruins_Text_SNCyrusAsk::
-	.string "Cyrus: Well? Am I wrong? If you feel\n"
+	.string "CYRUS: Well? Am I wrong? If you feel\n"
 	.string "that way, challenge me.$"
 
 CelesticTown_Ruins_EventScript_SNCynthiaPaint_End::
@@ -208,7 +208,7 @@ CelesticTown_Ruins_EventScript_SNCynthiaPaint::
 	goto CelesticTown_Ruins_EventScript_SNCynthiaPaint_End
 
 CelesticTown_Ruins_Text_SNPaint3::
-	.string "Cynthia: A long time ago, I wonder what\n"
+	.string "CYNTHIA: A long time ago, I wonder what\n"
 	.string "sort of person painted this?\p"
 	.string "DIALGA’s Roar of Time... PALKIA’s\n"
 	.string "Spacial Rend...\p"
@@ -231,15 +231,15 @@ CelesticTown_Ruins_Text_SNPaint3::
 	.string "again.$"
 
 CelesticTown_Ruins_Text_SNPaintBye::
-	.string "Cynthia: I’m so sorry. I let myself get\n"
+	.string "CYNTHIA: I’m so sorry. I let myself get\n"
 	.string "carried away...$"
 
 CelesticTown_Ruins_Text_SNPaintAsk2::
-	.string "Cynthia: I’m sorry this is so long. May I\n"
+	.string "CYNTHIA: I’m sorry this is so long. May I\n"
 	.string "say one last bit?$"
 
 CelesticTown_Ruins_Text_SNPaint2::
-	.string "Cynthia: But, then, I realized that\n"
+	.string "CYNTHIA: But, then, I realized that\n"
 	.string "there may be another way of\p"
 	.string "interpreting this.\p"
 	.string "Could this triangle of lights actually\n"
@@ -251,10 +251,10 @@ CelesticTown_Ruins_Text_SNPaint2::
 	.string "Could it be what created this world of\n"
 	.string "ours?\p"
 	.string "May I continue for a little bit longer?\p"
-	.string "Cynthia: Thank you for listening to my\n"
+	.string "CYNTHIA: Thank you for listening to my\n"
 	.string "theory.\p"
 	.string "Do you know of the ancient Plates they\n"
-	.string "find all over Sinnoh?\p"
+	.string "find all over SINNOH?\p"
 	.string "One of them had this engraved on it.\p"
 	.string "“Two beings of time and space set free\n"
 	.string "from the Original One.”\p"
@@ -263,10 +263,10 @@ CelesticTown_Ruins_Text_SNPaint2::
 	.string "A POKéMON even more powerful than\n"
 	.string "DIALGA or PALKIA.\p"
 	.string "Does that sound plausible to you?\p"
-	.string "Cynthia: I’m not quite sure how\n"
+	.string "CYNTHIA: I’m not quite sure how\n"
 	.string "GIRATINA fits into this scheme of\l"
 	.string "things, but...\p"
-	.string "It’s said that in the Distortion World,\n"
+	.string "It’s said that in the DISTORTION WORLD,\n"
 	.string "neither time nor space were stable.\p"
 	.string "I think that tells us something about\n"
 	.string "GIRATINA, the only POKéMON there.\p"
@@ -280,11 +280,11 @@ CelesticTown_Ruins_Text_SNPaintAsk::
 	.string "May I continue?$"
 
 CelesticTown_Ruins_Text_SNPaint1::
-	.string "Cynthia: This cave painting... It’s\n"
+	.string "CYNTHIA: This cave painting... It’s\n"
 	.string "always been described this way.\p"
 	.string "The light in the center represents\n"
 	.string "either DIALGA or PALKIA appearing\p"
-	.string "at the Spear Pillar.\p"
+	.string "at the SPEAR PILLAR.\p"
 	.string "The three lights around it were\n"
 	.string "thought to be UXIE, MESPRIT, and\l"
 	.string "AZELF.$"

@@ -10,7 +10,7 @@ VeilstoneCity_DepartmentStore_1F_EventScript_PtNpc1::
 	end
 
 VeilstoneCity_DepartmentStore_1F_Text_PtNpc1_0::
-	.string "Welcome to the fabulous Veilstone\n"
+	.string "Welcome to the fabulous VEILSTONE\n"
 	.string "Department Store.$"
 
 VeilstoneCity_DepartmentStore_1F_EventScript_PtNpc2::
@@ -44,7 +44,7 @@ VeilstoneCity_DepartmentStore_1F_EventScript_PtNpc4::
 VeilstoneCity_DepartmentStore_1F_Text_PtNpc4::
 	.string "It’s a that.\p"
 	.string "It will give your POKéMON a different\n"
-	.string "look for Contests.$"
+	.string "look for CONTESTS.$"
 
 VeilstoneCity_DepartmentStore_1F_EventScript_PtNpc5::
 	lock
@@ -65,7 +65,7 @@ VeilstoneCity_DepartmentStore_1F_EventScript_PtSign1::
 	end
 
 VeilstoneCity_DepartmentStore_1F_Text_PtSign1::
-	.string "Discover a new you! Veilstone\n"
+	.string "Discover a new you! VEILSTONE\n"
 	.string "Department Store$"
 
 VeilstoneCity_DepartmentStore_1F_EventScript_PtSign2::
@@ -74,7 +74,7 @@ VeilstoneCity_DepartmentStore_1F_EventScript_PtSign2::
 
 VeilstoneCity_DepartmentStore_1F_Text_PtSign2::
 	.string "B1F: Food & Produce\p"
-	.string "1F: Trainers’ Zone\p"
+	.string "1F: TRAINERS’ Zone\p"
 	.string "2F: Battle Collection\p"
 	.string "3F: TM Corner\p"
 	.string "4F: Poké Dolls & Goods\p"

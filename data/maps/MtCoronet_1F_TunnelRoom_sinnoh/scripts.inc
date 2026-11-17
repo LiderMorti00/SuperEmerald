@@ -8,7 +8,7 @@ MtCoronet_1F_TunnelRoom_EventScript_Grunt::
 	end
 
 MtCoronet_1F_TunnelRoom_Text_GruntPost::
-	.string "Mt. Coronet...\p"
+	.string "MT. CORONET...\p"
 	.string "I might be just a grunt, but even I can\n"
 	.string "tell it has a weird energy!$"
 
@@ -27,8 +27,8 @@ MtCoronet_1F_TunnelRoom_EventScript_Grunt2::
 MtCoronet_1F_TunnelRoom_Text_Grunt2Post::
 	.string "The closer you are to the peak, the\n"
 	.string "closer you are to space!\p"
-	.string "Soon, Team Galactic will... Uh... Team\n"
-	.string "Galactic will achieve greatness!$"
+	.string "Soon, TEAM GALACTIC will... Uh... Team\n"
+	.string "GALACTIC will achieve greatness!$"
 
 MtCoronet_1F_TunnelRoom_Text_Grunt2Defeat::
 	.string "You turned the tables on me... I call\n"
@@ -48,7 +48,7 @@ MtCoronet_1F_TunnelRoom_Text_Grunt3Post::
 	.string "sorrow...\p"
 	.string "Everyone be happy and laughing? How\n"
 	.string "ridiculous!\p"
-	.string "Team Galactic should be doing all the\n"
+	.string "TEAM GALACTIC should be doing all the\n"
 	.string "laughing!$"
 
 MtCoronet_1F_TunnelRoom_Text_Grunt3Defeat::
@@ -58,7 +58,7 @@ MtCoronet_1F_TunnelRoom_Text_Grunt3Defeat::
 MtCoronet_1F_TunnelRoom_Text_Grunt3Intro::
 	.string "Say, listen, do you realize you’re\n"
 	.string "breaking hearts by being successful?\p"
-	.string "It’s your fault that Team Galactic\n"
+	.string "It’s your fault that TEAM GALACTIC\n"
 	.string "members are in so much pain...$"
 
 MtCoronet_1F_TunnelRoom_EventScript_PtNpc1::

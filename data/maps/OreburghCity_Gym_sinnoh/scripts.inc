@@ -3,8 +3,8 @@ OreburghCity_Gym_sinnoh_MapScripts::
 
 
 OreburghCity_Gym_Text_RoarkPost::
-	.string "In this region of Sinnoh, there are\n"
-	.string "seven other Gym Leaders.\p"
+	.string "In this region of SINNOH, there are\n"
+	.string "seven other GYM LEADERS.\p"
 	.string "I should warn you--they’re a lot\n"
 	.string "tougher than I am!$"
 
@@ -36,14 +36,14 @@ OreburghCity_Gym_EventScript_Darius::
 
 OreburghCity_Gym_Text_DariusPost::
 	.string "One day, I'm going to become a tough\n"
-	.string "Trainer like you.$"
+	.string "TRAINER like you.$"
 
 OreburghCity_Gym_Text_DariusDefeat::
 	.string "Gggh... This is humiliating!$"
 
 OreburghCity_Gym_Text_DariusIntro::
 	.string "Only those who want to win can\n"
-	.string "challenge a POKéMON Gym!$"
+	.string "challenge a POKéMON GYM!$"
 
 OreburghCity_Gym_EventScript_Guide::
 	lock
@@ -55,31 +55,31 @@ OreburghCity_Gym_EventScript_Guide::
 	end
 
 OreburghCity_Gym_Text_SNGuideInfo::
-	.string "Let me tell you about this Gym!\p"
-	.string "The Gym Leader is ROARK, the\n"
+	.string "Let me tell you about this GYM!\p"
+	.string "The GYM LEADER is ROARK, the\n"
 	.string "Rock-Loving Honor Student. He is also\l"
-	.string "the young boss of the Oreburgh Mine.\p"
+	.string "the young boss of the OREBURGH MINE.\p"
 	.string "He uses Rock-type POKéMON like\n"
 	.string "GEODUDE, ONIX and his partner\l"
 	.string "CRANIDOS.\p"
 	.string "Rock types are weak to Water, Grass,\n"
 	.string "Fighting, Ground and Steel moves!\p"
-	.string "His Trainers wait along the path. Beat\n"
+	.string "His TRAINERS wait along the path. Beat\n"
 	.string "them and you can walk right up to\l"
 	.string "ROARK. Go for it!$"
 
 OreburghCity_Gym_Text_Guide::
-	.string "Howdy! How’s it going, Champ-to-be?\p"
+	.string "Howdy! How’s it going, CHAMP-to-be?\p"
 	.string "That’s what I said to a really\n"
 	.string "impatient boy earlier, too.\p"
-	.string "The Gym Leader is a user of Rock-type\n"
+	.string "The GYM LEADER is a user of Rock-type\n"
 	.string "POKéMON.\p"
 	.string "Well, listen. Rock-type POKéMON really\n"
 	.string "hate water, all right?\p"
 	.string "They’re also weak to Grass-type moves.\p"
 	.string "Gee, they sure have weaknesses!\p"
 	.string "But don’t think it will be easy.\p"
-	.string "You don’t get to be a Gym Leader\n"
+	.string "You don’t get to be a GYM LEADER\n"
 	.string "without covering for weaknesses.\p"
 	.string "Going after a Rock-type POKéMON with\n"
 	.string "a Fire-type POKéMON won’t be\p"
@@ -94,7 +94,7 @@ OreburghCity_Gym_EventScript_GuideWon::
 
 OreburghCity_Gym_Text_GuideWon::
 	.string "Oh! {PLAYER}! You’ve taken care of the\n"
-	.string "Gym Leader!\p"
+	.string "GYM LEADER!\p"
 	.string "So, did my advice come in handy or\n"
 	.string "what?\p"
 	.string "If my advice was useful, it’d be great\n"
@@ -108,9 +108,9 @@ OreburghCity_Gym_EventScript_GymStatue::
 	end
 
 OreburghCity_Gym_Text_GymStatue::
-	.string "Oreburgh City POKéMON Gym\n"
-	.string "Leader: Roark\p"
-	.string "Certified Trainers:\n"
+	.string "OREBURGH CITY POKéMON GYM\n"
+	.string "LEADER: ROARK\p"
+	.string "Certified TRAINERS:\n"
 	.string "{RIVAL}$"
 
 OreburghCity_Gym_EventScript_GymStatuePostVictory::
@@ -119,8 +119,8 @@ OreburghCity_Gym_EventScript_GymStatuePostVictory::
 	end
 
 OreburghCity_Gym_Text_GymStatuePlayerWon::
-	.string "Oreburgh City POKéMON Gym\n"
-	.string "Leader: Roark\p"
-	.string "Certified Trainers:\n"
+	.string "OREBURGH CITY POKéMON GYM\n"
+	.string "LEADER: ROARK\p"
+	.string "Certified TRAINERS:\n"
 	.string "{RIVAL}\n"
 	.string "{PLAYER}$"

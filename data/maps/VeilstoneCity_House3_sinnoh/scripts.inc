@@ -22,7 +22,7 @@ VeilstoneCity_House3_EventScript_PtNpc2::
 
 VeilstoneCity_House3_Text_PtNpc2_0::
 	.string "My sister’s boyfriend is the Scarf Guy\n"
-	.string "in Pastoria City.\p"
+	.string "in PASTORIA CITY.\p"
 	.string "They send Mail to each other by letting\n"
 	.string "POKéMON deliver it.$"
 

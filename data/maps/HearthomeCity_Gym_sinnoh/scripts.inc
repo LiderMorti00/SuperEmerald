@@ -28,7 +28,7 @@ HearthomeCity_Gym_EventScript_Molly::
 
 HearthomeCity_Gym_Text_MollyPost::
 	.string "Since you’re here, you might as well\n"
-	.string "take on every Trainer.$"
+	.string "take on every TRAINER.$"
 
 HearthomeCity_Gym_Text_MollyDefeat::
 	.string "Uh, whoopsie! That didn’t end well!$"
@@ -118,11 +118,11 @@ HearthomeCity_Gym_EventScript_Leader::
 	end
 
 HearthomeCity_Gym_Text_LeaderPostBattle::
-	.string "Three Gym Badges...\p"
+	.string "Three GYM BADGES...\p"
 	.string "But you must not forget this. There\n"
-	.string "are many other Trainers.\p"
-	.string "Strong Trainers, too. There are many\n"
-	.string "more in Sinnoh.\p"
+	.string "are many other TRAINERS.\p"
+	.string "Strong TRAINERS, too. There are many\n"
+	.string "more in SINNOH.\p"
 	.string "Have patience! You must become\n"
 	.string "stronger, one at a time.$"
 
@@ -154,38 +154,38 @@ HearthomeCity_Gym_EventScript_LeaderDefeated::
 	goto HearthomeCity_Gym_EventScript_GiveTM
 
 HearthomeCity_Gym_Text_ExplainBadge::
-	.string "That Badge will let you use the hidden\n"
+	.string "That BADGE will let you use the hidden\n"
 	.string "move Defog outside of battle.\p"
 	.string "Also, you can make use of this\n"
 	.string "Technical Machine.\p"
 	.string "That is what I think.$"
 
 HearthomeCity_Gym_Text_ReceivedBadge::
-	.string "{PLAYER} received the Relic Badge from\n"
-	.string "Fantina!$"
+	.string "{PLAYER} received the Relic BADGE from\n"
+	.string "FANTINA!$"
 
 HearthomeCity_Gym_Text_LeaderDefeat::
 	.string "I am dumbfounded!\p"
 	.string "So very, very strong! You, your\n"
 	.string "POKéMON, so strong!\p"
 	.string "Your power is admirable! I shall honor\n"
-	.string "it with this Gym Badge!$"
+	.string "it with this GYM BADGE!$"
 
 HearthomeCity_Gym_Text_LeaderIntro::
 	.string "Ohohoho!!\p"
 	.string "Finally, you have arrived!\p"
 	.string "Since I came to this country, always I\n"
 	.string "try to learn new things.\p"
-	.string "They hold Contests in this city? I say\n"
+	.string "They hold CONTESTS in this city? I say\n"
 	.string "to myself, enfin, I will excel.\p"
 	.string "That is why I dress this way. C’est une\n"
 	.string "performance!\p"
 	.string "Also, I study POKéMON very much. I have\n"
-	.string "come to be Gym Leader.\p"
+	.string "come to be GYM LEADER.\p"
 	.string "And, uh, so it shall be that you\n"
 	.string "challenge me.\p"
-	.string "But I shall win. That is what a Gym\n"
-	.string "Leader does, non?$"
+	.string "But I shall win. That is what a GYM\n"
+	.string "LEADER does, non?$"
 
 HearthomeCity_Gym_EventScript_SNRematch::
 	lock
@@ -204,7 +204,7 @@ HearthomeCity_Gym_EventScript_SNRematch_After::
 	.string "anytime for another match!$"
 
 HearthomeCity_Gym_EventScript_SNRematch_Defeat::
-	.string "Amazing... You really are the Champion!$"
+	.string "Amazing... You really are the CHAMPION!$"
 
 HearthomeCity_Gym_EventScript_SNRematch_Go::
 	.string "Then I won’t hold back this time!$"
@@ -218,7 +218,7 @@ HearthomeCity_Gym_EventScript_SNRematch_NoT::
 	.string "Come back whenever you’re ready!$"
 
 HearthomeCity_Gym_EventScript_SNRematch_Ask::
-	.string "Fantina: You became the Champion!\n"
+	.string "FANTINA: You became the CHAMPION!\n"
 	.string "Welcome back!\p"
 	.string "I’ve been training even harder since\n"
 	.string "our last battle.\p"
@@ -234,16 +234,16 @@ HearthomeCity_Gym_EventScript_PtGymGuide::
 	end
 
 HearthomeCity_Gym_Text_SNGuideInfo::
-	.string "Let me tell you about this Gym!\p"
-	.string "The Gym Leader is FANTINA, the\n"
+	.string "Let me tell you about this GYM!\p"
+	.string "The GYM LEADER is FANTINA, the\n"
 	.string "Alluring, Soulful Dancer. She is also a\l"
-	.string "famous Contest star.\p"
+	.string "famous CONTEST star.\p"
 	.string "She uses Ghost-type POKéMON like\n"
 	.string "DUSKULL, HAUNTER and MISMAGIUS.\p"
 	.string "Ghost types are weak to Ghost and\n"
 	.string "Dark moves, and Normal and Fighting\l"
 	.string "moves can’t touch them!\p"
-	.string "The Gym is split into nine rooms linked\n"
+	.string "The GYM is split into nine rooms linked\n"
 	.string "by warp panels. Step on a panel to be\l"
 	.string "sent to another room.\p"
 	.string "Some panels take you back where you\n"
@@ -252,9 +252,9 @@ HearthomeCity_Gym_Text_SNGuideInfo::
 
 HearthomeCity_Gym_Text_PtGymGuide::
 	.string "Hey, there! How’s it going,\n"
-	.string "Champ-to-be?\p"
-	.string "I’m the Gym guide! I help out Trainers\n"
-	.string "who come to challenge the Gym Leader.$"
+	.string "CHAMP-to-be?\p"
+	.string "I’m the GYM guide! I help out TRAINERS\n"
+	.string "who come to challenge the GYM LEADER.$"
 
 HearthomeCity_Gym_EventScript_PtGymGuideAfter::
 	msgbox HearthomeCity_Gym_Text_PtGymGuideAfter, MSGBOX_DEFAULT
@@ -262,8 +262,8 @@ HearthomeCity_Gym_EventScript_PtGymGuideAfter::
 	end
 
 HearthomeCity_Gym_Text_PtGymGuideAfter::
-	.string "Oh! {PLAYER}! You’ve beaten the Gym\n"
-	.string "Leader!\p"
+	.string "Oh! {PLAYER}! You’ve beaten the GYM\n"
+	.string "LEADER!\p"
 	.string "There seems to be no end to how tough\n"
 	.string "you are getting!\p"
 	.string "At least that’s how I see it!\p"
@@ -278,9 +278,9 @@ HearthomeCity_Gym_EventScript_PtGymStatue::
 	end
 
 HearthomeCity_Gym_Text_PtGymStatue::
-	.string "Hearthome City POKéMON Gym\n"
-	.string "Leader: Fantina\p"
-	.string "Certified Trainers:\n"
+	.string "HEARTHOME CITY POKéMON GYM\n"
+	.string "LEADER: FANTINA\p"
+	.string "Certified TRAINERS:\n"
 	.string "{RIVAL}$"
 
 HearthomeCity_Gym_EventScript_PtGymStatueWon::
@@ -289,8 +289,8 @@ HearthomeCity_Gym_EventScript_PtGymStatueWon::
 	end
 
 HearthomeCity_Gym_Text_PtGymStatueWon::
-	.string "Hearthome City POKéMON Gym\n"
-	.string "Leader: Fantina\p"
-	.string "Certified Trainers:\n"
+	.string "HEARTHOME CITY POKéMON GYM\n"
+	.string "LEADER: FANTINA\p"
+	.string "Certified TRAINERS:\n"
 	.string "{RIVAL}\n"
 	.string "{PLAYER}$"

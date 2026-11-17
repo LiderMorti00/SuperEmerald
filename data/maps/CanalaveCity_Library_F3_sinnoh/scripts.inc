@@ -162,13 +162,13 @@ CanalaveCity_Library_F3_EventScript_SNL_DoN::
 	end
 
 CanalaveCity_Library_F3_Text_SNLLeave::
-	.string "Rowan: {PLAYER}. You should leave now,\n"
+	.string "ROWAN: {PLAYER}. You should leave now,\n"
 	.string "too.\p"
 	.string "...There may be aftershocks, however.\n"
 	.string "Be alert always.$"
 
 CanalaveCity_Library_F3_Text_SNLOutside::
-	.string "Rowan: Hmm... But why at Lake Valor...?\p"
+	.string "ROWAN: Hmm... But why at LAKE VALOR...?\p"
 	.string "Let’s get outside. I’m concerned about\n"
 	.string "the town.\p"
 	.string "You kids, be careful going down the\n"
@@ -193,18 +193,18 @@ CanalaveCity_Library_F3_Text_SNLWhat::
 	.string "Anything!$"
 
 CanalaveCity_Library_F3_Text_SNLUnharmed::
-	.string "Rowan: ... ...Has it stopped?\p"
+	.string "ROWAN: ... ...Has it stopped?\p"
 	.string "Are all of you unharmed?$"
 
 CanalaveCity_Library_F3_Text_SNLBoom::
 	.string "DDDOOOMMM!!$"
 
 CanalaveCity_Library_F3_Text_SNLValor::
-	.string "Rowan: Very well. I’m counting on you.\p"
+	.string "ROWAN: Very well. I’m counting on you.\p"
 	.string "And that leaves {PLAYER} with Lake\n"
-	.string "Valor.\p"
-	.string "The lake is between Veilstone and\n"
-	.string "Pastoria, if memory serves...$"
+	.string "VALOR.\p"
+	.string "The lake is between VEILSTONE and\n"
+	.string "PASTORIA, if memory serves...$"
 
 CanalaveCity_Library_F3_Text_SNLYeah::
 	.string "{RIVAL}: Uh... Yeah, of course!\n"
@@ -214,40 +214,40 @@ CanalaveCity_Library_F3_Text_SNLYeah::
 	.string "catch those legendary POKéMON for\l"
 	.string "you.\p"
 	.string "You know, as thanks for giving us our\n"
-	.string "POKéMON back on Route 201.\p"
+	.string "POKéMON back on ROUTE 201.\p"
 	.string "...Even though I forgot completely\n"
 	.string "about it until just now.$"
 
 CanalaveCity_Library_F3_Text_SNLAcuity::
-	.string "Rowan: {RIVAL}, I want you to\n"
-	.string "investigate Lake Acuity.\p"
+	.string "ROWAN: {RIVAL}, I want you to\n"
+	.string "investigate LAKE ACUITY.\p"
 	.string "That would take you almost to\n"
-	.string "Snowpoint City.\p"
+	.string "SNOWPOINT CITY.\p"
 	.string "The road there is harsh. I need a tough\n"
-	.string "Trainer to go.$"
+	.string "TRAINER to go.$"
 
 CanalaveCity_Library_F3_Text_SNLDoD::
-	.string "Dawn: Will do!$"
+	.string "DAWN: Will do!$"
 
 CanalaveCity_Library_F3_EventScript_SNL_DoL::
 	msgbox CanalaveCity_Library_F3_Text_SNLDoL, MSGBOX_DEFAULT
 	goto CanalaveCity_Library_F3_EventScript_SNL_DoN
 
 CanalaveCity_Library_F3_Text_SNLDoL::
-	.string "Lucas: Yes, sir!$"
+	.string "LUCAS: Yes, sir!$"
 
 CanalaveCity_Library_F3_Text_SNLVerityD::
-	.string "Rowan: Dawn, you go to Lake Verity.$"
+	.string "ROWAN: DAWN, you go to LAKE VERITY.$"
 
 CanalaveCity_Library_F3_EventScript_SNL_VerityL::
 	msgbox CanalaveCity_Library_F3_Text_SNLVerityL, MSGBOX_DEFAULT
 	goto CanalaveCity_Library_F3_EventScript_SNL_VerityN
 
 CanalaveCity_Library_F3_Text_SNLVerityL::
-	.string "Rowan: Lucas, you go to Lake Verity.$"
+	.string "ROWAN: LUCAS, you go to LAKE VERITY.$"
 
 CanalaveCity_Library_F3_Text_SNLIndiv::
-	.string "Rowan: Hm! I would have made all of you\n"
+	.string "ROWAN: Hm! I would have made all of you\n"
 	.string "go regardless... Anyway.\p"
 	.string "Now, there are three lakes.\n"
 	.string "Fortuitously, there are three of you.\p"
@@ -255,7 +255,7 @@ CanalaveCity_Library_F3_Text_SNLIndiv::
 	.string "investigate the lakes individually.$"
 
 CanalaveCity_Library_F3_Text_SNLCountD::
-	.string "Dawn: You can count on me! It will help\n"
+	.string "DAWN: You can count on me! It will help\n"
 	.string "with my POKéDEX, too.\p"
 	.string "{PLAYER}, you’ll go, too, won’t you?$"
 
@@ -264,19 +264,19 @@ CanalaveCity_Library_F3_EventScript_SNL_CountL::
 	goto CanalaveCity_Library_F3_EventScript_SNL_CountN
 
 CanalaveCity_Library_F3_Text_SNLCountL::
-	.string "Lucas: You bet, Professor!\p"
+	.string "LUCAS: You bet, PROFESSOR!\p"
 	.string "This will add to the POKéDEX database\n"
 	.string "and help advance your\p"
 	.string "research.$"
 
 CanalaveCity_Library_F3_Text_SNLBolted::
-	.string "Rowan: ...And who was it that bolted\n"
+	.string "ROWAN: ...And who was it that bolted\n"
 	.string "from the lab before I had a chance\p"
 	.string "to give you a POKéDEX?\p"
 	.string "But that’s water under the bridge!\p"
 	.string "Seeing POKéMON with your own eyes is\n"
 	.string "important for you in becoming a better\p"
-	.string "Trainer, too.$"
+	.string "TRAINER, too.$"
 
 CanalaveCity_Library_F3_Text_SNLNoDex::
 	.string "{RIVAL}: What are you saying? I\n"
@@ -284,7 +284,7 @@ CanalaveCity_Library_F3_Text_SNLNoDex::
 
 CanalaveCity_Library_F3_Text_SNLHelp::
 	.string "This is where you three come in.\p"
-	.string "In the three lakes of Sinnoh, there are\n"
+	.string "In the three lakes of SINNOH, there are\n"
 	.string "said to be mirage POKéMON.\p"
 	.string "If we can obtain data on them, it may\n"
 	.string "shed some light on how the\p"
@@ -319,7 +319,7 @@ CanalaveCity_Library_F3_Movement_SNRowanPace::
 	step_end
 
 CanalaveCity_Library_F3_Text_SNLEveryone::
-	.string "Rowan: Hm! Everyone’s here finally.\n"
+	.string "ROWAN: Hm! Everyone’s here finally.\n"
 	.string "{PLAYER}, everyone, listen.\p"
 	.string "You may have forgotten already, but I\n"
 	.string "study the evolution of POKéMON.$"
@@ -328,7 +328,7 @@ CanalaveCity_Library_F3_Text_SNLGetIt::
 	.string "{RIVAL}: ...OK... I get it...$"
 
 CanalaveCity_Library_F3_Text_SNLDots::
-	.string "Rowan: ... ...\p"
+	.string "ROWAN: ... ...\p"
 	.string "... ...\p"
 	.string "... ...$"
 
@@ -355,7 +355,7 @@ CanalaveCity_Library_F3_EventScript_SNBookSinnohMyth::
 	end
 
 CanalaveCity_Library_F3_Text_SNSinnohMyth::
-	.string "“Sinnoh Myth”\p"
+	.string "“SINNOH Myth”\p"
 	.string "Betray not your anger, lest ??? will\n"
 	.string "come.\p"
 	.string "Weep not with sorrow, or ??? will draw\n"
@@ -376,7 +376,7 @@ CanalaveCity_Library_F3_Text_SNPutSinnohMythBack::
 	.string "{PLAYER} put the book back.$"
 
 CanalaveCity_Library_F3_Text_SNAskReadSinnohMyth::
-	.string "This book is titled “Sinnoh Myth.” Want\n"
+	.string "This book is titled “SINNOH Myth.” Want\n"
 	.string "to read it?$"
 
 CanalaveCity_Library_F3_EventScript_PtSign2::
@@ -396,8 +396,8 @@ CanalaveCity_Library_F3_EventScript_SNBookSinnohRegionsMythology::
 	end
 
 CanalaveCity_Library_F3_Text_SNSinnohRegionsMythology::
-	.string "“Sinnoh Region’s Mythology”\p"
-	.string "Long ago, when Sinnoh had just been\n"
+	.string "“SINNOH Region’s Mythology”\p"
+	.string "Long ago, when SINNOH had just been\n"
 	.string "made, POKéMON and humans led\p"
 	.string "separate lives.\p"
 	.string "That is not to say they did not help\n"
@@ -420,7 +420,7 @@ CanalaveCity_Library_F3_Text_SNPutSinnohRegionsMythologyBack::
 	.string "{PLAYER} put the book back.$"
 
 CanalaveCity_Library_F3_Text_SNAskReadSinnohRegionsMythology::
-	.string "This book is titled “Sinnoh Region’s\n"
+	.string "This book is titled “SINNOH Region’s\n"
 	.string "Mythology.” Want to read it?$"
 
 CanalaveCity_Library_F3_EventScript_PtSign4::
@@ -440,7 +440,7 @@ CanalaveCity_Library_F3_EventScript_SNBookSinnohsMyth::
 	end
 
 CanalaveCity_Library_F3_Text_SNSinnohsMyth::
-	.string "“Sinnoh’s Myth”\p"
+	.string "“SINNOH’s Myth”\p"
 	.string "Three POKéMON there were.\p"
 	.string "Into the lakes they dove. Deep, deep,\n"
 	.string "drawing no breath.\p"
@@ -460,7 +460,7 @@ CanalaveCity_Library_F3_Text_SNPutSinnohsMythBack::
 	.string "{PLAYER} put the book back.$"
 
 CanalaveCity_Library_F3_Text_SNAskReadSinnohsMyth::
-	.string "This book is titled “Sinnoh’s Myth.”\n"
+	.string "This book is titled “SINNOH’s Myth.”\n"
 	.string "Want to read it?$"
 
 CanalaveCity_Library_F3_EventScript_PtSign6::
@@ -524,7 +524,7 @@ CanalaveCity_Library_F3_Text_SNVeilstonesMyth2::
 	.string "...Would you like to keep reading?$"
 
 CanalaveCity_Library_F3_Text_SNVeilstonesMyth1::
-	.string "“Veilstone’s Myth”\p"
+	.string "“VEILSTONE’s Myth”\p"
 	.string "A young man, callow and foolish in\n"
 	.string "innocence, came to own a sword.\p"
 	.string "With it, he smote POKéMON, which gave\n"
@@ -536,7 +536,7 @@ CanalaveCity_Library_F3_Text_SNVeilstonesMyth1::
 	.string "...Would you like to keep reading?$"
 
 CanalaveCity_Library_F3_Text_SNAskReadVeilstonesMyth::
-	.string "This book is titled “Veilstone’s Myth.”\n"
+	.string "This book is titled “VEILSTONE’s Myth.”\n"
 	.string "Want to read it?$"
 
 CanalaveCity_Library_F3_EventScript_PtSign8::
@@ -670,7 +670,7 @@ CanalaveCity_Library_F3_EventScript_SNBookSinnohFolkStories_3::
 	end
 
 CanalaveCity_Library_F3_Text_SNSinnohFolkStory3::
-	.string "“Sinnoh Folk Story 3”\p"
+	.string "“SINNOH Folk Story 3”\p"
 	.string "There once were POKéMON that became\n"
 	.string "very close to humans.\p"
 	.string "There once were humans and POKéMON\n"
@@ -684,7 +684,7 @@ CanalaveCity_Library_F3_EventScript_SNBookSinnohFolkStories_2::
 	end
 
 CanalaveCity_Library_F3_Text_SNSinnohFolkStory2::
-	.string "“Sinnoh Folk Story 2”\p"
+	.string "“SINNOH Folk Story 2”\p"
 	.string "There lived a POKéMON in a forest.\p"
 	.string "In the forest, the POKéMON shed its\n"
 	.string "hide to sleep as a human.\p"
@@ -697,7 +697,7 @@ CanalaveCity_Library_F3_EventScript_SNBookSinnohFolkStories_1::
 	end
 
 CanalaveCity_Library_F3_Text_SNSinnohFolkStory1::
-	.string "“Sinnoh Folk Story 1”\p"
+	.string "“SINNOH Folk Story 1”\p"
 	.string "Pick clean the bones of POKéMON\n"
 	.string "caught in the sea or stream.\p"
 	.string "Thank them for the meals they provide,\n"
@@ -724,7 +724,7 @@ CanalaveCity_Library_F3_Text_SNReadWhichStory::
 	.string "Which story would you like to read?$"
 
 CanalaveCity_Library_F3_Text_SNSinnohFolkStories::
-	.string "This book is titled “Sinnoh Folk\n"
+	.string "This book is titled “SINNOH Folk\n"
 	.string "Stories.”$"
 
 CanalaveCity_Library_F3_EventScript_PtSign14::
@@ -738,7 +738,7 @@ CanalaveCity_Library_F3_EventScript_PtSign15::
 CanalaveCity_Library_F3_Text_PtSign15::
 	.string "On this floor, you will find many books\n"
 	.string "on the myths and legends of\p"
-	.string "the Sinnoh region.$"
+	.string "the SINNOH region.$"
 
 CanalaveCity_Library_F3_EventScript_PtSign16::
 	goto CanalaveCity_Library_F3_EventScript_SNBookTheOriginalStory

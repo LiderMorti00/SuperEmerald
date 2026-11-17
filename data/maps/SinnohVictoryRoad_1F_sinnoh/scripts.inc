@@ -9,8 +9,8 @@ SinnohVictoryRoad_1F_EventScript_Bryce::
 
 SinnohVictoryRoad_1F_Text_BrycePost::
 	.string "I see it now!\p"
-	.string "You will battle the Elite Four of the\n"
-	.string "POKéMON League!$"
+	.string "You will battle the ELITE FOUR of the\n"
+	.string "POKéMON LEAGUE!$"
 
 SinnohVictoryRoad_1F_Text_BryceDefeat::
 	.string "So be it! I will now divulge what I know\n"
@@ -43,7 +43,7 @@ SinnohVictoryRoad_1F_EventScript_Hana::
 SinnohVictoryRoad_1F_Text_HanaPost::
 	.string "The wings of freedom...\p"
 	.string "I know I’ll find them if I can win my way\n"
-	.string "through the POKéMON League...$"
+	.string "through the POKéMON LEAGUE...$"
 
 SinnohVictoryRoad_1F_Text_HanaDefeat::
 	.string "It seems I’ve been grounded...$"
@@ -58,11 +58,11 @@ SinnohVictoryRoad_1F_EventScript_Mariah::
 	end
 
 SinnohVictoryRoad_1F_Text_MariahPost::
-	.string "Once you emerge from Victory Road, the\n"
-	.string "POKéMON League lies directly\p"
+	.string "Once you emerge from VICTORY ROAD, the\n"
+	.string "POKéMON LEAGUE lies directly\p"
 	.string "ahead...\p"
-	.string "But many Trainers fail to ever find\n"
-	.string "their way on Victory Road...$"
+	.string "But many TRAINERS fail to ever find\n"
+	.string "their way on VICTORY ROAD...$"
 
 SinnohVictoryRoad_1F_Text_MariahDefeat::
 	.string "So, that’s how you battled...?$"
@@ -105,7 +105,7 @@ SinnohVictoryRoad_1F_Text_ClintonDefeat::
 	.string "battle tough characters like you.$"
 
 SinnohVictoryRoad_1F_Text_ClintonIntro::
-	.string "This is a place where tough Trainers\n"
+	.string "This is a place where tough TRAINERS\n"
 	.string "naturally congregate.\p"
 	.string "It’s ideal for training!$"
 

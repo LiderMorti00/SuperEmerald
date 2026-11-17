@@ -2034,7 +2034,7 @@
     },
     {
       "id": "MAPSEC_OLIVINE_LIGHTHOUSE",
-      "name": "OLIVINE LIGHTHOUSE",
+      "name": "LIGHTHOUSE",
       "x": 7,
       "y": 4,
       "width": 1,
@@ -2250,7 +2250,7 @@
     },
     {
       "id": "MAPSEC_POKEMON_LEAGUE_SINNOH",
-      "name": "POKEMON LEAGUE",
+      "name": "POKéMON LEAGUE",
       "x": 21,
       "y": 7,
       "width": 1,
@@ -2421,7 +2421,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_219",
-      "name": "ROUTE  219",
+      "name": "ROUTE 219",
       "x": 4,
       "y": 14,
       "width": 1,
@@ -2556,7 +2556,7 @@
     },
     {
       "id": "MAPSEC_FIGHT_AREA",
-      "name": "FIGHT ARE",
+      "name": "FIGHT AREA",
       "x": 15,
       "y": 3,
       "width": 1,
@@ -2682,7 +2682,7 @@
     },
     {
       "id": "MAPSEC_MT_CORONET",
-      "name": "MT CORONET",
+      "name": "MT. CORONET",
       "x": 10,
       "y": 3,
       "width": 1,
@@ -2727,7 +2727,7 @@
     },
     {
       "id": "MAPSEC_MT_STARK",
-      "name": "MT STARK",
+      "name": "STARK MOUNTAIN",
       "x": 18,
       "y": 0,
       "width": 1,

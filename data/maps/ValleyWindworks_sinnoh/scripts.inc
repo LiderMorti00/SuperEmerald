@@ -55,23 +55,23 @@ ValleyWindworks_EventScript_Looker::
 	end
 
 ValleyWindworks_Text_Looker::
-	.string "Looker: Ah, yes. It is you, yes.\p"
-	.string "I have heard that the Team Galactic\n"
+	.string "LOOKER: Ah, yes. It is you, yes.\p"
+	.string "I have heard that the TEAM GALACTIC\n"
 	.string "appeared at this power plant.\p"
 	.string "I have, therefore, come running. So,\n"
-	.string "the Team Galactic. Where are they?\p"
+	.string "the TEAM GALACTIC. Where are they?\p"
 	.string "...\p"
 	.string "You have run them off, you say? You\n"
-	.string "are a Trainer, but...?\p"
+	.string "are a TRAINER, but...?\p"
 	.string "Very well! I shall go investigate\n"
 	.string "inside!\p"
-	.string "Looker: Magnificent! Yes, it is! What\n"
+	.string "LOOKER: Magnificent! Yes, it is! What\n"
 	.string "you have said, it is all true!\p"
 	.string "Superb! Though you are young, you are\n"
-	.string "a Trainer through and through!\p"
+	.string "a TRAINER through and through!\p"
 	.string "Very well! I shall pursue the culprits!\p"
 	.string "I have received tips that the Team\n"
-	.string "Galactic hideout is in Eterna City.\p"
+	.string "GALACTIC hideout is in ETERNA CITY.\p"
 	.string "To there, I must be off!$"
 
 ValleyWindworks_EventScript_SNDRIFLOON::

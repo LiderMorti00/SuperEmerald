@@ -42,7 +42,7 @@ FloaromaTown_FlowerShop_EventScript_SNSprayduck::
 	goto FloaromaTown_FlowerShop_EventScript_SNSprayduckDone
 
 FloaromaTown_FlowerShop_Text_SNSpray1::
-	.string "Trainer, please water Berries using\n"
+	.string "TRAINER, please water Berries using\n"
 	.string "this Sprayduck watering can.$"
 
 FloaromaTown_FlowerShop_Text_SNSpray2::

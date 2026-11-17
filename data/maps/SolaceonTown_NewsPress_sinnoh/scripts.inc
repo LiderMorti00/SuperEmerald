@@ -48,7 +48,7 @@ SolaceonTown_NewsPress_EventScript_SNEditor_WaitT::
 	.string "I’ll make it worth your while!$"
 
 SolaceonTown_NewsPress_EventScript_SNEditor_Ask::
-	.string "I’m the editor of the Sinnoh Now\n"
+	.string "I’m the editor of the SINNOH Now\n"
 	.string "newspaper! For today’s edition, I need\l"
 	.string "a photo of a {STR_VAR_1}.\p"
 	.string "If you have one with you, show it to me!$"
@@ -70,6 +70,6 @@ SolaceonTown_NewsPress_EventScript_PtNpc2::
 	end
 
 SolaceonTown_NewsPress_Text_PtNpc2_0::
-	.string "The Sinnoh region’s newspaper is tiny,\n"
+	.string "The SINNOH region’s newspaper is tiny,\n"
 	.string "but it has many fans.\p"
 	.string "That newspaper is printed right here!$"

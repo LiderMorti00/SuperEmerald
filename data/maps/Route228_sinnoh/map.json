@@ -348,6 +348,13 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE228_HOUSE2_SINNOH",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 9,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_ROCK_PEAK_RUINS_SINNOH",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
@@ -429,6 +436,14 @@
       "y": 40,
       "elevation": 0,
       "secret_base_id": "SECRET_BASE_YELLOW_CAVE4_1"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 29,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_SOUTH",
+      "script": "SE_EventScript_RockPeakRuinsEntrance"
     }
   ]
 }

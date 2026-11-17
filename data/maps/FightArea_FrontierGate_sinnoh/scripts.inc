@@ -44,8 +44,8 @@ FightArea_FrontierGate_EventScript_PtNpc3::
 	end
 
 FightArea_FrontierGate_Text_PtNpc3_0::
-	.string "The Battle Frontier is up ahead!\p"
-	.string "What kinds of Trainers will I see? What\n"
+	.string "The BATTLE FRONTIER is up ahead!\p"
+	.string "What kinds of TRAINERS will I see? What\n"
 	.string "battles will I experience?\p"
 	.string "It’s a whole new adventure for me!$"
 
@@ -78,8 +78,8 @@ FightArea_FrontierGate_EventScript_PtNpc4_ExplainBattleCastle::
 	end
 
 FightArea_FrontierGate_Text_PtNpc4_1::
-	.string "The Battle Castle is at the lower-left\n"
-	.string "corner of the Battle Frontier.\p"
+	.string "The BATTLE CASTLE is at the lower-left\n"
+	.string "corner of the BATTLE FRONTIER.\p"
 	.string "Here, you are provided with Castle\n"
 	.string "Points, CP, that you must manage.\p"
 	.string "The CP are used for healing POKéMON,\n"
@@ -88,8 +88,8 @@ FightArea_FrontierGate_Text_PtNpc4_1::
 	.string "streak alive while managing your CP.$"
 
 FightArea_FrontierGate_Text_PtNpc4_0::
-	.string "Welcome to the Battle Frontier!\p"
-	.string "Should I explain how the Battle Castle\n"
+	.string "Welcome to the BATTLE FRONTIER!\p"
+	.string "Should I explain how the BATTLE CASTLE\n"
 	.string "works?$"
 
 FightArea_FrontierGate_EventScript_PtNpc5::
@@ -107,9 +107,9 @@ FightArea_FrontierGate_EventScript_PtNpc6::
 	end
 
 FightArea_FrontierGate_Text_PtNpc6_0::
-	.string "My dream is to battle Palmer of the\n"
-	.string "Battle Tower.\p"
+	.string "My dream is to battle PALMER of the\n"
+	.string "BATTLE TOWER.\p"
 	.string "I want to record it for posterity on my\n"
 	.string "Vs. Recorder.\p"
 	.string "But I’m not good enough to battle my\n"
-	.string "way to see Palmer... I’m heartbroken!$"
+	.string "way to see PALMER... I’m heartbroken!$"

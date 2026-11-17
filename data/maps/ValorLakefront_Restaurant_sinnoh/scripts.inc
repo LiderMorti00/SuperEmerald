@@ -87,7 +87,7 @@ ValorLakefront_Restaurant_Text_SNREmilioDef0::
 
 ValorLakefront_Restaurant_Text_SNREmilioAsk0::
 	.string "What is it? You are?\p"
-	.string "... ...Oh, yes, a Trainer.$"
+	.string "... ...Oh, yes, a TRAINER.$"
 
 ValorLakefront_Restaurant_Text_SNREmilioIntro0::
 	.string "Hmm... This beverage’s coloration\n"
@@ -180,7 +180,7 @@ ValorLakefront_Restaurant_EventScript_SNC7_D1::
 
 ValorLakefront_Restaurant_Text_SNRKendrickDef1::
 	.string "I had a bad feeling about this\n"
-	.string "Trainer...$"
+	.string "TRAINER...$"
 
 ValorLakefront_Restaurant_Text_SNRGabriellaLose::
 	.string "Oh!$"
@@ -232,7 +232,7 @@ ValorLakefront_Restaurant_Text_SNRKendrickAsk1::
 	.string "It’s about how they want to be\n"
 	.string "perceived.\p"
 	.string "Do you... Would you like me to think of\n"
-	.string "you as a tough Trainer?$"
+	.string "you as a tough TRAINER?$"
 
 ValorLakefront_Restaurant_Text_SNRKendrickIntro1::
 	.string "There’s no need for technique.\p"
@@ -247,7 +247,7 @@ ValorLakefront_Restaurant_EventScript_SNC7_Need::
 ValorLakefront_Restaurant_Text_SNRKendrickNeed::
 	.string "I’ll only say this once, so listen\n"
 	.string "closely. I’ll even say it slowly.\p"
-	.string "To battle against two Trainers, you\n"
+	.string "To battle against two TRAINERS, you\n"
 	.string "need two or more POKéMON.\p"
 	.string "Now if you were to bring more POKéMON,\n"
 	.string "I could consider a battle...$"
@@ -433,7 +433,7 @@ ValorLakefront_Restaurant_Text_SNREmanuelAsk0::
 	.string "before we eat?$"
 
 ValorLakefront_Restaurant_Text_SNREmanuelIntro0::
-	.string "Here’s a toast for Mom. May she always\n"
+	.string "Here’s a toast for MOM. May she always\n"
 	.string "be healthy!$"
 
 ValorLakefront_Restaurant_EventScript_SNC5_V2::
@@ -531,7 +531,7 @@ ValorLakefront_Restaurant_Text_SNREstebanDef0::
 	.string "bread?$"
 
 ValorLakefront_Restaurant_Text_SNREstebanAsk0::
-	.string "Oh, hi, Trainer!\p"
+	.string "Oh, hi, TRAINER!\p"
 	.string "Want to battle POKéMON with us before\n"
 	.string "we have a yummy meal?$"
 
@@ -621,7 +621,7 @@ ValorLakefront_Restaurant_EventScript_SNC3_D1::
 	end
 
 ValorLakefront_Restaurant_Text_SNREugeneDef1::
-	.string "Alison, seeing your smiling face...\p"
+	.string "ALISON, seeing your smiling face...\p"
 	.string "I can’t tell if these appetizers are\n"
 	.string "delicious or not!$"
 
@@ -632,7 +632,7 @@ ValorLakefront_Restaurant_Text_SNREugeneLose::
 	.string "Oh!$"
 
 ValorLakefront_Restaurant_Text_SNREugeneDef0::
-	.string "Oh, no, I’m sorry we lost. Alison, you’re\n"
+	.string "Oh, no, I’m sorry we lost. ALISON, you’re\n"
 	.string "not upset?$"
 
 ValorLakefront_Restaurant_Text_SNREugeneAsk0::
@@ -642,7 +642,7 @@ ValorLakefront_Restaurant_Text_SNREugeneAsk0::
 	.string "you like to battle us?$"
 
 ValorLakefront_Restaurant_Text_SNREugeneIntro0::
-	.string "Alison, um, I, er... Thank you for coming\n"
+	.string "ALISON, um, I, er... Thank you for coming\n"
 	.string "today...\p"
 	.string "Should we make a toast?$"
 
@@ -669,11 +669,11 @@ ValorLakefront_Restaurant_EventScript_SNC3_V1::
 	goto ValorLakefront_Restaurant_EventScript_SNC3_Ans
 
 ValorLakefront_Restaurant_Text_SNREugeneAsk1::
-	.string "Are you Alison’s fan, too?$"
+	.string "Are you ALISON’s fan, too?$"
 
 ValorLakefront_Restaurant_Text_SNREugeneIntro1::
 	.string "If my POKéMON buddies hear I went on a\n"
-	.string "date with you, Alison...\p"
+	.string "date with you, ALISON...\p"
 	.string "They’re probably going to hate me for\n"
 	.string "it...$"
 
@@ -768,7 +768,7 @@ ValorLakefront_Restaurant_Text_SNRRebeccaAsk2::
 
 ValorLakefront_Restaurant_Text_SNRRebeccaIntro2::
 	.string "...! This sauce!\p"
-	.string "It’s a spicy sauce in Hoenn style made\n"
+	.string "It’s a spicy sauce in HOENN style made\n"
 	.string "from grated Cheri Berries!$"
 
 ValorLakefront_Restaurant_EventScript_SNC2_V1::

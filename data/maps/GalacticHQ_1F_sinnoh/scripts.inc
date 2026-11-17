@@ -14,7 +14,7 @@ GalacticHQ_1F_Text_GruntPost::
 	.string "connect.$"
 
 GalacticHQ_1F_Text_GruntDefeat::
-	.string "A tough little Trainer is what you are...$"
+	.string "A tough little TRAINER is what you are...$"
 
 GalacticHQ_1F_Text_GruntIntro::
 	.string "Who do you think you are? Desecrating\n"
@@ -28,7 +28,7 @@ GalacticHQ_1F_EventScript_Fredrick::
 GalacticHQ_1F_Text_FredrickPost::
 	.string "Our boss is trying to create an\n"
 	.string "entirely new world.\p"
-	.string "A world only for us! For Team Galactic!$"
+	.string "A world only for us! For TEAM GALACTIC!$"
 
 GalacticHQ_1F_Text_FredrickDefeat::
 	.string "You and your POKéMON weren’t part of\n"
@@ -49,9 +49,9 @@ GalacticHQ_1F_EventScript_PtNpc1::
 	end
 
 GalacticHQ_1F_Text_PtNpc1_0::
-	.string "Welcome. This is Team Galactic Headqu...\p"
-	.string "I’m sorry, this is the Galactic\n"
-	.string "Veilstone Building.\p"
+	.string "Welcome. This is TEAM GALACTIC Headqu...\p"
+	.string "I’m sorry, this is the GALACTIC\n"
+	.string "VEILSTONE Building.\p"
 	.string "Cosmic energy for the win!\p"
 	.string "Wouldn’t it be wonderful if we could\n"
 	.string "harness that boundless energy?$"
@@ -62,9 +62,9 @@ GalacticHQ_1F_EventScript_PtNpc1_WeHaveNoPlansNow::
 	end
 
 GalacticHQ_1F_Text_PtNpc1_1::
-	.string "Welcome. This is Team Galactic Headqu...\p"
-	.string "I’m sorry, this is the Galactic\n"
-	.string "Veilstone Building.\p"
+	.string "Welcome. This is TEAM GALACTIC Headqu...\p"
+	.string "I’m sorry, this is the GALACTIC\n"
+	.string "VEILSTONE Building.\p"
 	.string "I’m not certain if it’s a good thing or\n"
 	.string "not, but we have no plans now.$"
 
@@ -77,7 +77,7 @@ GalacticHQ_1F_EventScript_PtNpc2::
 	end
 
 GalacticHQ_1F_Text_PtNpc2_0::
-	.string "Team Galactic conducts R&D around the\n"
+	.string "TEAM GALACTIC conducts R&D around the\n"
 	.string "clock here.\p"
 	.string "We focus on the development of new\n"
 	.string "energy resources.$"
@@ -88,7 +88,7 @@ GalacticHQ_1F_EventScript_PtNpc2_ThisIsWhereWeWork::
 	end
 
 GalacticHQ_1F_Text_PtNpc2_1::
-	.string "This is where we, Team Galactic, work.\n"
+	.string "This is where we, TEAM GALACTIC, work.\n"
 	.string "What are we supposed to do?\p"
 	.string "I’m not sure how, but we’re supposed to\n"
 	.string "chase our dream.\p"
@@ -124,11 +124,11 @@ GalacticHQ_1F_EventScript_PtNpc4::
 	end
 
 GalacticHQ_1F_Text_PtNpc4_0::
-	.string "We, Team Galactic, will take everything\n"
+	.string "We, TEAM GALACTIC, will take everything\n"
 	.string "that can be taken!\p"
 	.string "We will eliminate everything that is\n"
 	.string "not needed!\p"
-	.string "That is Team Galactic’s policy!$"
+	.string "That is TEAM GALACTIC’s policy!$"
 
 GalacticHQ_1F_EventScript_PtNpc4_NothingLeftNow::
 	msgbox GalacticHQ_1F_Text_PtNpc4_1, MSGBOX_DEFAULT
@@ -136,11 +136,11 @@ GalacticHQ_1F_EventScript_PtNpc4_NothingLeftNow::
 	end
 
 GalacticHQ_1F_Text_PtNpc4_1::
-	.string "We, Team Galactic, will take everything\n"
+	.string "We, TEAM GALACTIC, will take everything\n"
 	.string "that can be taken!\p"
 	.string "We will eliminate everything that is\n"
 	.string "not needed!\p"
-	.string "That is Team Galactic’s policy!\p"
+	.string "That is TEAM GALACTIC’s policy!\p"
 	.string "At least it used to be. There’s nothing\n"
 	.string "left now...$"
 
@@ -152,10 +152,10 @@ GalacticHQ_1F_EventScript_PtNpc5::
 	end
 
 GalacticHQ_1F_Text_PtNpc5_0::
-	.string "Saturn: So, it’s you...\p"
+	.string "SATURN: So, it’s you...\p"
 	.string "I’ve heard about you and what took\n"
-	.string "place at the Spear Pillar.\p"
-	.string "Our leader, Master Cyrus, hated the\n"
+	.string "place at the SPEAR PILLAR.\p"
+	.string "Our leader, Master CYRUS, hated the\n"
 	.string "very idea of spirit.\p"
 	.string "He hated spirit for being incomplete.\p"
 	.string "And yet, using fiery exhortations, he\n"
@@ -168,7 +168,7 @@ GalacticHQ_1F_Text_PtNpc5_0::
 	.string "A world without spirit... Who would want\n"
 	.string "such a thing?!\p"
 	.string "So, what now...? What to do with Team\n"
-	.string "Galactic?\p"
+	.string "GALACTIC?\p"
 	.string "But I’ve learned that extremism is\n"
 	.string "never the solution...\p"
 	.string "Perhaps we should really be searching\n"
@@ -181,7 +181,7 @@ GalacticHQ_1F_EventScript_PtSign1::
 	end
 
 GalacticHQ_1F_Text_PtSign1::
-	.string "The Team Galactic credo! Everything\n"
-	.string "belongs to Team Galactic!\p"
+	.string "The TEAM GALACTIC credo! Everything\n"
+	.string "belongs to TEAM GALACTIC!\p"
 	.string "Look beyond the world--space will\n"
-	.string "become Team Galactic’s!$"
+	.string "become TEAM GALACTIC’s!$"

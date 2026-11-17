@@ -11,7 +11,7 @@ SolaceonTown_EventScript_PtNpc1::
 	end
 
 SolaceonTown_Text_PtNpc1::
-	.string "Howdy, traveling Trainer. Take it easy,\n"
+	.string "Howdy, traveling TRAINER. Take it easy,\n"
 	.string "slow, and casual.$"
 
 SolaceonTown_EventScript_PtNpc1_SNVar0::
@@ -20,7 +20,7 @@ SolaceonTown_EventScript_PtNpc1_SNVar0::
 	end
 
 SolaceonTown_Text_PtNpc1_SNVar0::
-	.string "Howdy, traveling Trainer. There’s\n"
+	.string "Howdy, traveling TRAINER. There’s\n"
 	.string "nothing here.\p"
 	.string "Well, nothing but plenty of time to\n"
 	.string "think, anyway.\p"
@@ -50,7 +50,7 @@ SolaceonTown_EventScript_PtNpc4::
 	end
 
 SolaceonTown_Text_PtNpc4::
-	.string "Every Sunday, I visit the Lost Tower...$"
+	.string "Every Sunday, I visit the LOST TOWER...$"
 
 SolaceonTown_EventScript_PtNpc5::
 	msgbox SolaceonTown_Text_PtNpc5, MSGBOX_NPC

@@ -17,7 +17,7 @@ SinnohVictoryRoad_1F_Room2_Text_MicahDefeat::
 	.string "them!$"
 
 SinnohVictoryRoad_1F_Room2_Text_MicahIntro::
-	.string "When Trainers lock eyes...\p"
+	.string "When TRAINERS lock eyes...\p"
 	.string "That’s right! It’s time to let their\n"
 	.string "POKéMON go wild!$"
 
@@ -91,7 +91,7 @@ SinnohVictoryRoad_1F_Room2_Text_EddieDefeat::
 
 SinnohVictoryRoad_1F_Room2_Text_EddieIntro::
 	.string "I trained all of my gnarly POKéMON at\n"
-	.string "the Fighting Dojo in Kanto!$"
+	.string "the Fighting Dojo in KANTO!$"
 
 SinnohVictoryRoad_1F_Room2_EventScript_Terrell::
 	trainerbattle_single TRAINER_TONY_2_SINNOH, SinnohVictoryRoad_1F_Room2_Text_TerrellIntro, SinnohVictoryRoad_1F_Room2_Text_TerrellDefeat
@@ -203,7 +203,7 @@ SinnohVictoryRoad_1F_Room2_EventScript_Joe::
 
 SinnohVictoryRoad_1F_Room2_Text_JoePost::
 	.string "Getting the best out of any POKéMON...\n"
-	.string "That’s what makes a good Trainer...$"
+	.string "That’s what makes a good TRAINER...$"
 
 SinnohVictoryRoad_1F_Room2_Text_JoeDefeat::
 	.string "I lost? But how is that possible?!$"
@@ -253,6 +253,6 @@ SinnohVictoryRoad_1F_Room2_EventScript_SNMarleyTalk::
 	end
 
 SinnohVictoryRoad_1F_Room2_EventScript_SNMarley_T2::
-	.string "Marley: ...You took so long... Please,\n"
+	.string "MARLEY: ...You took so long... Please,\n"
 	.string "don’t make me wait...\p"
 	.string "I felt a little forlorn waiting...$"

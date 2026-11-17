@@ -42,15 +42,15 @@ SunyshoreCity_VistaLighthouse_EventScript_SNVolkner::
 	end
 
 SunyshoreCity_VistaLighthouse_EventScript_SNVolkner_T3::
-	.string "As the toughest Gym Leader in Sinnoh,\n"
+	.string "As the toughest GYM LEADER in SINNOH,\n"
 	.string "I’m going to unleash everything in\p"
 	.string "my arsenal on you.$"
 
 SunyshoreCity_VistaLighthouse_EventScript_SNVolkner_T2::
 	.string "All right, I’ve decided!\p"
 	.string "If I find you to be weak, I’m going to\n"
-	.string "challenge the POKéMON League.\p"
-	.string "I’m all done with renovating the Gym, so\n"
+	.string "challenge the POKéMON LEAGUE.\p"
+	.string "I’m all done with renovating the GYM, so\n"
 	.string "I don’t need to be here.\p"
 	.string "More than anything, I want to have\n"
 	.string "battles that can thrill me again.$"
@@ -58,7 +58,7 @@ SunyshoreCity_VistaLighthouse_EventScript_SNVolkner_T2::
 SunyshoreCity_VistaLighthouse_EventScript_SNVolkner_T1::
 	.string "... ...\p"
 	.string "...So, you’re the latest challenger up\n"
-	.string "against the Sunyshore Gym...$"
+	.string "against the SUNNYSHORE GYM...$"
 
 SunyshoreCity_VistaLighthouse_EventScript_PtSign1::
 	msgbox SunyshoreCity_VistaLighthouse_Text_PtSign1, MSGBOX_SIGN

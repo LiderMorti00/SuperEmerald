@@ -31,12 +31,12 @@ WaywardCave_1F_Text_ToriPost::
 	.string "place like this...$"
 
 WaywardCave_1F_Text_ToriDefeat::
-	.string "OK, so we’re both Trainers. That’s a\n"
+	.string "OK, so we’re both TRAINERS. That’s a\n"
 	.string "start, right?$"
 
 WaywardCave_1F_Text_ToriIntro::
 	.string "Where am I? Am I lost? Who are you? Are\n"
-	.string "you a POKéMON Trainer?$"
+	.string "you a POKéMON TRAINER?$"
 
 WaywardCave_1F_EventScript_Cassidy::
 	trainerbattle_single TRAINER_RICKY_5_SINNOH, WaywardCave_1F_Text_CassidyIntro, WaywardCave_1F_Text_CassidyDefeat
@@ -83,7 +83,7 @@ WaywardCave_1F_Text_ReginaldDefeat::
 	.string "I strayed from the battle plan!$"
 
 WaywardCave_1F_Text_ReginaldIntro::
-	.string "Look! A Trainer lost in Wayward Cave!$"
+	.string "Look! A TRAINER lost in WAYWARD CAVE!$"
 
 WaywardCave_1F_EventScript_Terry::
 	trainerbattle_single TRAINER_WILTON_3_SINNOH, WaywardCave_1F_Text_TerryIntro, WaywardCave_1F_Text_TerryDefeat
@@ -202,11 +202,11 @@ WaywardCave_1F_EventScript_SNMira_Join::
 	end
 
 WaywardCave_1F_EventScript_SNMira_T4::
-	.string "Mira: I’ll keep your POKéMON healthy all\n"
+	.string "MIRA: I’ll keep your POKéMON healthy all\n"
 	.string "the time!$"
 
 WaywardCave_1F_EventScript_SNMira_T3::
-	.string "{PLAYER} decided to go with Mira!$"
+	.string "{PLAYER} decided to go with MIRA!$"
 
 WaywardCave_1F_EventScript_SNMiraTalk::
 	lock
@@ -223,10 +223,10 @@ WaywardCave_1F_EventScript_SNMiraTalkEnd::
 	end
 
 WaywardCave_1F_EventScript_SNMira_T7::
-	.string "Mira: {PLAYER}, did you get to be so\n"
+	.string "MIRA: {PLAYER}, did you get to be so\n"
 	.string "good because you’re always with\p"
 	.string "your POKéMON?\p"
-	.string "Yes! That has to be it! Mira will try\n"
+	.string "Yes! That has to be it! MIRA will try\n"
 	.string "like you!$"
 
 WaywardCave_1F_EventScript_SNMiraTalk1::
@@ -234,7 +234,7 @@ WaywardCave_1F_EventScript_SNMiraTalk1::
 	goto WaywardCave_1F_EventScript_SNMiraTalkEnd
 
 WaywardCave_1F_EventScript_SNMira_T6::
-	.string "Mira: This cave... It’s so easy to get\n"
+	.string "MIRA: This cave... It’s so easy to get\n"
 	.string "confused.\p"
 	.string "Do you know where we are?$"
 
@@ -243,12 +243,12 @@ WaywardCave_1F_EventScript_SNMiraTalk0::
 	goto WaywardCave_1F_EventScript_SNMiraTalkEnd
 
 WaywardCave_1F_EventScript_SNMira_T5::
-	.string "Mira: I like helpful POKéMON moves like\n"
+	.string "MIRA: I like helpful POKéMON moves like\n"
 	.string "Growl and Minimize.\p"
 	.string "Those kinds of moves are my favorites.$"
 
 WaywardCave_1F_EventScript_SNMira_T1::
-	.string "I’m Mira...\p"
+	.string "I’m MIRA...\p"
 	.string "I was catching POKéMON, and then I got\n"
 	.string "lost...\p"
 	.string "I’m so scared...\p"
@@ -259,5 +259,5 @@ WaywardCave_1F_EventScript_SNMira_Again::
 	goto WaywardCave_1F_EventScript_SNMira_Join
 
 WaywardCave_1F_EventScript_SNMira_T2::
-	.string "Trainer, your name is {PLAYER}?\p"
-	.string "My name is Mira. I like your name!$"
+	.string "TRAINER, your name is {PLAYER}?\p"
+	.string "My name is MIRA. I like your name!$"

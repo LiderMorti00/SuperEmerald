@@ -46,7 +46,7 @@ Route213_Text_MaryPost::
 	.string "There aren't many sea routes that you\n"
 	.string "can swim in SINNOH.\p"
 	.string "It makes me want to take a vacation in\n"
-	.string "the Hoenn region.$"
+	.string "the HOENN region.$"
 
 Route213_Text_MaryDefeat::
 	.string "What's saltier? My tears or the sea...$"
@@ -67,7 +67,7 @@ Route213_Text_HaleyDefeat::
 	.string "You sure schooled me there.$"
 
 Route213_Text_HaleyIntro::
-	.string "Hi, wave-riding Trainer! How about a\n"
+	.string "Hi, wave-riding TRAINER! How about a\n"
 	.string "battle on the sea?$"
 
 Route213_EventScript_Jared::
@@ -78,7 +78,7 @@ Route213_EventScript_Jared::
 	end
 
 Route213_Text_JaredPost::
-	.string "Mom blew up my inflatable tube for me.\n"
+	.string "MOM blew up my inflatable tube for me.\n"
 	.string "I ran out of breath just opening it!$"
 
 Route213_EventScript_Jared_Rematch::
@@ -124,7 +124,7 @@ Route213_EventScript_Cyndy::
 	end
 
 Route213_Text_CyndyPost::
-	.string "You're so much more of a Trainer than\n"
+	.string "You're so much more of a TRAINER than\n"
 	.string "you look!$"
 
 Route213_EventScript_Cyndy_Rematch::
@@ -217,7 +217,7 @@ Route213_EventScript_SNBomb::
 	end
 
 Route213_EventScript_SNBomb_T3::
-	.string "But, boy, this Galactic Bomb packs a\n"
+	.string "But, boy, this GALACTIC Bomb packs a\n"
 	.string "pretty big wallop.\p"
 	.string "With this baby here there’s not much we\n"
 	.string "can’t blow up.\p"
@@ -260,23 +260,23 @@ Route213_EventScript_SNBomb_L3::
 
 Route213_EventScript_SNBomb_L2::
 	.string "Oh, no, no, no! How did I miss it?\p"
-	.string "Ah, Looker, this time you have made a\n"
+	.string "Ah, LOOKER, this time you have made a\n"
 	.string "mistake of the ages!\p"
 	.string "The man, who I have seen running away,\n"
 	.string "he was the bearer of the bomb!$"
 
 Route213_EventScript_SNBomb_L1::
-	.string "Looker: Hello, my friend!\p"
-	.string "The cargo that the Team Galactic\n"
+	.string "LOOKER: Hello, my friend!\p"
+	.string "The cargo that the TEAM GALACTIC\n"
 	.string "brought is worrisome, so I have come.\p"
 	.string "...You say the cargo, it was a bomb? And\n"
 	.string "there was an explosion?\p"
-	.string "The explosion was at the Great Marsh?\p"
+	.string "The explosion was at the GREAT MARSH?\p"
 	.string "Furthermore, you are pursuing a man... A\n"
 	.string "man with funny bowl-cut hair.\p"
 	.string "In an outfit that is very strange?\p"
 	.string "In other words, that is the Team\n"
-	.string "Galactic!$"
+	.string "GALACTIC!$"
 
 Route213_EventScript_SNHoneyTree::
 	lock

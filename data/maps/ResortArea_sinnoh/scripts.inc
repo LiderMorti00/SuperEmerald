@@ -13,7 +13,7 @@ ResortArea_EventScript_SNSyndicate::
 
 ResortArea_Text_SNSyndNo::
 	.string "This is the Ribbon Syndicate. Only\n"
-	.string "Trainers whose POKéMON have earned at\l"
+	.string "TRAINERS whose POKéMON have earned at\l"
 	.string "least ten Ribbons may join.\p"
 	.string "Oh, how I long to become a member of\n"
 	.string "the Ribbon Syndicate...$"
@@ -60,7 +60,7 @@ ResortArea_EventScript_PtNpc4::
 
 ResortArea_Text_PtNpc4::
 	.string "Nobody believes me, but something\n"
-	.string "lurks in the Resort Area.\p"
+	.string "lurks in the RESORT AREA.\p"
 	.string "It's the hidden ruler of the area! You\n"
 	.string "have to believe me!\p"
 	.string "If you believe me, whip out your Super\n"
@@ -97,9 +97,9 @@ ResortArea_EventScript_SNVillaOwner_Yes::
 
 ResortArea_Text_SNVilla2::
 	.string "Whew, that’s a load off my mind.\p"
-	.string "The original owner was from Hoenn, see?\p"
+	.string "The original owner was from HOENN, see?\p"
 	.string "The owner collected up all the rare\n"
-	.string "stones of Sinnoh and went back home.\p"
+	.string "stones of SINNOH and went back home.\p"
 	.string "I somehow got saddled with this place\n"
 	.string "as if it were some gift.\p"
 	.string "There’s no figuring what rich folks will\n"

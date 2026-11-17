@@ -9,7 +9,7 @@ MtCoronet_5F_EventScript_Grunt::
 
 MtCoronet_5F_Text_GruntPost::
 	.string "All my excitement’s gone now...\p"
-	.string "This whole Mt. Coronet trip is too\n"
+	.string "This whole MT. CORONET trip is too\n"
 	.string "rough, long, and draining...$"
 
 MtCoronet_5F_Text_GruntDefeat::
@@ -38,7 +38,7 @@ MtCoronet_5F_Text_Grunt2Defeat::
 	.string "defeat...$"
 
 MtCoronet_5F_Text_Grunt2Intro::
-	.string "Team Galactic will take control of\n"
+	.string "TEAM GALACTIC will take control of\n"
 	.string "everything!\p"
 	.string "You can try all you want, but you can’t\n"
 	.string "do anything alone!$"

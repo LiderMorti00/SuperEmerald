@@ -17,7 +17,7 @@ Route208_Access_EventScript_PtNpc2::
 
 Route208_Access_Text_PtNpc2::
 	.string "If you say HEARTHOME CITY, I only say\n"
-	.string "this: POKéMON Contests!\p"
+	.string "this: POKéMON CONTESTS!\p"
 	.string "I'm going to enter my darling POKéMON\n"
 	.string "in them!$"
 

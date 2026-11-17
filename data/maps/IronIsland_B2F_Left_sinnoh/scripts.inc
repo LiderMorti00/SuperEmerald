@@ -65,8 +65,8 @@ IronIsland_B2F_Left_EventScript_Tyler::
 	end
 
 IronIsland_B2F_Left_Text_TylerPost::
-	.string "I wish I could beat Maylene in\n"
-	.string "Veilstone City one day...$"
+	.string "I wish I could beat MAYLENE in\n"
+	.string "VEILSTONE CITY one day...$"
 
 IronIsland_B2F_Left_Text_TylerDefeat::
 	.string "How could I lose now?! This is beyond\n"
@@ -100,15 +100,15 @@ IronIsland_B2F_Left_EventScript_Quentin::
 	end
 
 IronIsland_B2F_Left_Text_QuentinPost::
-	.string "Roark spent his childhood playing here,\n"
+	.string "ROARK spent his childhood playing here,\n"
 	.string "I think...$"
 
 IronIsland_B2F_Left_Text_QuentinDefeat::
-	.string "Maybe I should head to the Gym and\n"
+	.string "Maybe I should head to the GYM and\n"
 	.string "work out there...$"
 
 IronIsland_B2F_Left_Text_QuentinIntro::
-	.string "The Canalave Gym folks use this place\n"
+	.string "The CANALAVE GYM folks use this place\n"
 	.string "as their training grounds.$"
 
 IronIsland_B2F_Left_EventScript_Jonah::
@@ -139,7 +139,7 @@ IronIsland_B2F_Left_EventScript_Brenda::
 	end
 
 IronIsland_B2F_Left_Text_BrendaPost::
-	.string "Tough POKéMON... Tough Trainers...\p"
+	.string "Tough POKéMON... Tough TRAINERS...\p"
 	.string "Their strength comes from their bond.\n"
 	.string "And that’s something that can be\p"
 	.string "made stronger anywhere.$"
@@ -149,7 +149,7 @@ IronIsland_B2F_Left_Text_BrendaDefeat::
 	.string "your POKéMON.$"
 
 IronIsland_B2F_Left_Text_BrendaIntro::
-	.string "Tough POKéMON... Tough Trainers...\p"
+	.string "Tough POKéMON... Tough TRAINERS...\p"
 	.string "You tell me, where else can I find a\n"
 	.string "place as good as this to train?$"
 
@@ -193,10 +193,10 @@ IronIsland_B2F_Left_EventScript_SNIronGrunts::
 	goto IronIsland_B2F_Left_EventScript_SNIronGrunts_Battle
 
 IronIsland_B2F_Left_EventScript_SNRiley_Ethics::
-	.string "Riley: To share in all the joys and all\n"
+	.string "RILEY: To share in all the joys and all\n"
 	.string "the sorrows...\p"
-	.string "That is how all the Trainers and\n"
-	.string "POKéMON live in Sinnoh!\p"
+	.string "That is how all the TRAINERS and\n"
+	.string "POKéMON live in SINNOH!\p"
 	.string "I won’t allow anyone to defy that code\n"
 	.string "of ethics!\p"
 	.string "Come on, {PLAYER}! This is one battle we\n"
@@ -223,7 +223,7 @@ IronIsland_B2F_Left_EventScript_SNRiley_GiveEgg::
 	return
 
 IronIsland_B2F_Left_EventScript_SNRiley_Bye::
-	.string "Riley: Spending time with you was very\n"
+	.string "RILEY: Spending time with you was very\n"
 	.string "enjoyable.\p"
 	.string "I intend to test my skills in other\n"
 	.string "places from now on.\p"
@@ -231,13 +231,13 @@ IronIsland_B2F_Left_EventScript_SNRiley_Bye::
 	.string "out.$"
 
 IronIsland_B2F_Left_EventScript_SNRiley_Places::
-	.string "Riley: Thanks!\p"
+	.string "RILEY: Thanks!\p"
 	.string "I’d like you to show the POKéMON that’s\n"
 	.string "inside the Egg all sorts\p"
 	.string "of new places.$"
 
 IronIsland_B2F_Left_EventScript_SNRiley_GotEgg::
-	.string "{PLAYER} received an Egg from Riley!$"
+	.string "{PLAYER} received an Egg from RILEY!$"
 
 IronIsland_B2F_Left_EventScript_SNRiley_NoRoomEnd::
 	return
@@ -259,41 +259,41 @@ IronIsland_B2F_Left_EventScript_SNRiley_NoRoom::
 	goto IronIsland_B2F_Left_EventScript_SNRiley_NoRoomEnd
 
 IronIsland_B2F_Left_EventScript_SNRiley_NoRoomT::
-	.string "Riley: Thank you...\p"
+	.string "RILEY: Thank you...\p"
 	.string "But you don’t have room to take\n"
 	.string "another POKéMON.\p"
 	.string "All right, then. I’ll wait here for you.$"
 
 IronIsland_B2F_Left_EventScript_SNRiley_Egg::
-	.string "Riley: Thanks. You really helped me out.\p"
+	.string "RILEY: Thanks. You really helped me out.\p"
 	.string "Listen, I have a POKéMON Egg here.\p"
 	.string "Would you take it with you?$"
 
 IronIsland_B2F_Left_EventScript_SNIronGrunts_After::
-	.string "Grunt 2: You said it, brother!\p"
+	.string "GRUNT 2: You said it, brother!\p"
 	.string "We don’t even know what Team\n"
-	.string "Galactic’s big plan is anyway!$"
+	.string "GALACTIC’s big plan is anyway!$"
 
 IronIsland_B2F_Left_EventScript_SNIronGrunts_Post1::
-	.string "Grunt 1: Stop! I said stop! Your\n"
+	.string "GRUNT 1: Stop! I said stop! Your\n"
 	.string "combination is so sick!\p"
 	.string "The both of you, and your POKéMON...\p"
 	.string "Let’s beat it, partner!$"
 
 IronIsland_B2F_Left_EventScript_SNIronGrunts_DB::
-	.string "Grunt 2: You said it, brother!$"
+	.string "GRUNT 2: You said it, brother!$"
 
 IronIsland_B2F_Left_EventScript_SNIronGrunts_DA::
-	.string "Grunt 1: Stop! I said stop!$"
+	.string "GRUNT 1: Stop! I said stop!$"
 
 IronIsland_B2F_Left_Text_SNG2::
-	.string "Grunt 2: You said it, brother! So that’s\n"
+	.string "GRUNT 2: You said it, brother! So that’s\n"
 	.string "what we’re gonna do!\p"
 	.string "We’re abducting all the POKéMON from\n"
-	.string "this rusted-out Iron Island!$"
+	.string "this rusted-out IRON ISLAND!$"
 
 IronIsland_B2F_Left_Text_SNG1::
-	.string "Grunt 1: We’re Team Galactic! We’ll take\n"
+	.string "GRUNT 1: We’re TEAM GALACTIC! We’ll take\n"
 	.string "all the POKéMON we want!\p"
 	.string "Isn’t that right, partner?$"
 
@@ -319,7 +319,7 @@ IronIsland_B2F_Left_EventScript_SNRiley::
 	goto IronIsland_B2F_Left_EventScript_SNRiley_Main
 
 IronIsland_B2F_Left_EventScript_SNRiley_HealInfo::
-	.string "Riley: If your POKéMON get hurt, I’ll\n"
+	.string "RILEY: If your POKéMON get hurt, I’ll\n"
 	.string "heal them up.$"
 
 IronIsland_B2F_Left_EventScript_SNRileyHealNow::
@@ -342,7 +342,7 @@ IronIsland_B2F_Left_EventScript_SNRiley_Heal::
 	goto IronIsland_B2F_Left_EventScript_SNRileyHealNow
 
 IronIsland_B2F_Left_EventScript_SNRiley_Restless::
-	.string "Riley: What’s going on here, though?\n"
+	.string "RILEY: What’s going on here, though?\n"
 	.string "The native POKéMON are restless...\p"
 	.string "I don’t like this... Let’s hurry.$"
 
@@ -351,7 +351,7 @@ IronIsland_B2F_Left_EventScript_SNRileyChat3::
 	goto IronIsland_B2F_Left_EventScript_SNRileyHealNow
 
 IronIsland_B2F_Left_Text_SNRileyChat3::
-	.string "Riley: Imagine what it would be like for\n"
+	.string "RILEY: Imagine what it would be like for\n"
 	.string "a Steel-type POKéMON user to\p"
 	.string "battle a Steel type.\p"
 	.string "Would that be like battling yourself, I\n"
@@ -364,10 +364,10 @@ IronIsland_B2F_Left_EventScript_SNRileyChat2::
 	goto IronIsland_B2F_Left_EventScript_SNRileyHealNow
 
 IronIsland_B2F_Left_Text_SNRileyChat2::
-	.string "Riley: Have you met Byron? The Leader\n"
-	.string "of Canalave Gym?\p"
-	.string "He’s asked me to become a Gym Leader,\n"
-	.string "but there’s his son Roark\p"
+	.string "RILEY: Have you met BYRON? The LEADER\n"
+	.string "of CANALAVE GYM?\p"
+	.string "He’s asked me to become a GYM LEADER,\n"
+	.string "but there’s his son ROARK\p"
 	.string "to consider as well.$"
 
 IronIsland_B2F_Left_EventScript_SNRileyChat1::
@@ -375,7 +375,7 @@ IronIsland_B2F_Left_EventScript_SNRileyChat1::
 	goto IronIsland_B2F_Left_EventScript_SNRileyHealNow
 
 IronIsland_B2F_Left_Text_SNRileyChat1::
-	.string "Riley: This used to be a fairly thriving\n"
+	.string "RILEY: This used to be a fairly thriving\n"
 	.string "ore mine once upon a time.\p"
 	.string "I guess the steel ore’s played out.\n"
 	.string "There’s only POKéMON here now.$"
@@ -385,15 +385,15 @@ IronIsland_B2F_Left_EventScript_SNRileyChat0::
 	goto IronIsland_B2F_Left_EventScript_SNRileyHealNow
 
 IronIsland_B2F_Left_Text_SNRileyChat0::
-	.string "Riley: Haha, I’d have to agree.\p"
+	.string "RILEY: Haha, I’d have to agree.\p"
 	.string "People training here would be those\n"
 	.string "with too much time on their hands.$"
 
 IronIsland_B2F_Left_EventScript_SNRiley_Decided::
-	.string "{PLAYER} decided to go with Riley!$"
+	.string "{PLAYER} decided to go with RILEY!$"
 
 IronIsland_B2F_Left_EventScript_SNRiley_Team::
-	.string "Riley: {PLAYER}, I’m glad to see you\n"
+	.string "RILEY: {PLAYER}, I’m glad to see you\n"
 	.string "here.\p"
 	.string "If you don’t mind, let’s team up. The\n"
 	.string "POKéMON seem to be restless.$"

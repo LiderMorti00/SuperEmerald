@@ -12,7 +12,7 @@ JubilifeCity_Flat3_F1_Text_PtNpc1::
 	.string "It's the latest design that just came\n"
 	.string "out. I obtained it instantly, of\l"
 	.string "course.\p"
-	.string "A Trainer would be simply lost without\n"
+	.string "A TRAINER would be simply lost without\n"
 	.string "a POKéNAV, after all.$"
 
 JubilifeCity_Flat3_F1_EventScript_PtNpc2::

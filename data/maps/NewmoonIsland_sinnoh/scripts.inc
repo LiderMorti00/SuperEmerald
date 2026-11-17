@@ -21,7 +21,7 @@ NewmoonIsland_EventScript_SailNo::
 
 NewmoonIsland_Text_AllRightThen::
 	.string "All right, then. Tell me if you’d like to\n"
-	.string "return to Canalave.$"
+	.string "return to CANALAVE.$"
 
 NewmoonIsland_Text_SailBack::
-	.string "Should we sail back to Canalave?$"
+	.string "Should we sail back to CANALAVE?$"

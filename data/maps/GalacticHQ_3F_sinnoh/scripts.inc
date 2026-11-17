@@ -9,7 +9,7 @@ GalacticHQ_3F_EventScript_Grunt::
 
 GalacticHQ_3F_Text_GruntPost::
 	.string "How could we arouse suspicion? We’re\n"
-	.string "Team Galactic, and this is our HQ!$"
+	.string "TEAM GALACTIC, and this is our HQ!$"
 
 GalacticHQ_3F_Text_GruntDefeat::
 	.string "Oh, it was my own POKéMON’s smell...$"
@@ -25,8 +25,8 @@ GalacticHQ_3F_EventScript_Grunt2::
 
 GalacticHQ_3F_Text_Grunt2Post::
 	.string "It doesn’t matter what happens to the\n"
-	.string "Team Galactic HQ building.\p"
-	.string "Soon, all will belong to Team Galactic,\n"
+	.string "TEAM GALACTIC HQ building.\p"
+	.string "Soon, all will belong to TEAM GALACTIC,\n"
 	.string "anyway!$"
 
 GalacticHQ_3F_Text_Grunt2Defeat::
@@ -35,7 +35,7 @@ GalacticHQ_3F_Text_Grunt2Defeat::
 GalacticHQ_3F_Text_Grunt2Intro::
 	.string "Are you enjoying your unescorted,\n"
 	.string "unauthorized, and unsettling tour\p"
-	.string "of Team Galactic HQ?$"
+	.string "of TEAM GALACTIC HQ?$"
 
 GalacticHQ_3F_EventScript_Grunt3::
 	trainerbattle_single TRAINER_GRUNT_WEATHER_INST_4_SINNOH, GalacticHQ_3F_Text_Grunt3Intro, GalacticHQ_3F_Text_Grunt3Defeat
@@ -45,14 +45,14 @@ GalacticHQ_3F_EventScript_Grunt3::
 GalacticHQ_3F_Text_Grunt3Post::
 	.string "What’s so special about you anyway?\p"
 	.string "You’re just like any other little kid\n"
-	.string "Trainer you can find anywhere!$"
+	.string "TRAINER you can find anywhere!$"
 
 GalacticHQ_3F_Text_Grunt3Defeat::
 	.string "I just blew my promotion...$"
 
 GalacticHQ_3F_Text_Grunt3Intro::
-	.string "Hey there, little Trainer! You’re\n"
-	.string "famous among Team Galactic.\p"
+	.string "Hey there, little TRAINER! You’re\n"
+	.string "famous among TEAM GALACTIC.\p"
 	.string "The order has been issued--we get a\n"
 	.string "promotion if we put you down!$"
 
@@ -74,7 +74,7 @@ GalacticHQ_3F_Text_Grunt4Defeat::
 GalacticHQ_3F_Text_Grunt4Intro::
 	.string "You’re too young to understand the\n"
 	.string "changing times!\p"
-	.string "Stand aside and let Team Galactic\n"
+	.string "Stand aside and let TEAM GALACTIC\n"
 	.string "shape the future!$"
 
 GalacticHQ_3F_EventScript_PtNpc1::
@@ -96,7 +96,7 @@ GalacticHQ_3F_EventScript_PtSign1::
 	end
 
 GalacticHQ_3F_Text_PtSign1::
-	.string "The Team Galactic credo! Everything\n"
-	.string "belongs to Team Galactic!\p"
+	.string "The TEAM GALACTIC credo! Everything\n"
+	.string "belongs to TEAM GALACTIC!\p"
 	.string "Look beyond the world--space will\n"
-	.string "become Team Galactic’s!$"
+	.string "become TEAM GALACTIC’s!$"

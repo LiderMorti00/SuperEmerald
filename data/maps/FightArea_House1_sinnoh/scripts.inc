@@ -11,7 +11,7 @@ FightArea_House1_EventScript_PtNpc1::
 
 FightArea_House1_Text_PtNpc1_0::
 	.string "Even from here, we could see the peak\n"
-	.string "of Mt. Coronet.\p"
+	.string "of MT. CORONET.\p"
 	.string "Most people didn’t notice what\n"
 	.string "happened up there, but I did.\p"
 	.string "But I don’t know what took place\n"
@@ -42,4 +42,4 @@ FightArea_House1_Text_PtNpc3_0::
 	.string "reveals things about yourself\l"
 	.string "sometimes, too.\p"
 	.string "That’s why battling lots of different\n"
-	.string "Trainers is so much fun.$"
+	.string "TRAINERS is so much fun.$"

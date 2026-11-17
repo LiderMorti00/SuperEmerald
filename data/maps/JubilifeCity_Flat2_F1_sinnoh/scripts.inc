@@ -9,7 +9,7 @@ JubilifeCity_Flat2_F1_EventScript_PtNpc1::
 JubilifeCity_Flat2_F1_Text_PtNpc1::
 	.string "POKéMON are wonderful, deeply\n"
 	.string "mysterious creatures.\p"
-	.string "But to Trainers, the key thing is to do\n"
+	.string "But to TRAINERS, the key thing is to do\n"
 	.string "battle with their POKéMON.\p"
 	.string "That's what it boils down to.$"
 
@@ -18,7 +18,7 @@ JubilifeCity_Flat2_F1_EventScript_PtNpc2::
 	end
 
 JubilifeCity_Flat2_F1_Text_PtNpc2::
-	.string "Hello there, Trainer!\p"
+	.string "Hello there, TRAINER!\p"
 	.string "If you get stumped and don't know\n"
 	.string "what to do...\p"
 	.string "Talk to people! Talk to everyone you\n"

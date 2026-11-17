@@ -9,7 +9,7 @@ VeilstoneCity_Gym_EventScript_Colby::
 
 VeilstoneCity_Gym_Text_ColbyPost::
 	.string "Your POKéMON sure are tough!\p"
-	.string "But our Gym Leader Maylene will break\n"
+	.string "But our GYM LEADER MAYLENE will break\n"
 	.string "you like a stack of bricks!$"
 
 VeilstoneCity_Gym_EventScript_TakaoBrightenRoom::
@@ -217,7 +217,7 @@ VeilstoneCity_Gym_EventScript_Rafael::
 
 VeilstoneCity_Gym_Text_RafaelPost::
 	.string "I’ll have to redo my training, though.\n"
-	.string "Maylene’s gonna trample me again...$"
+	.string "MAYLENE’s gonna trample me again...$"
 
 VeilstoneCity_Gym_EventScript_CristianBrightenRoom::
 	call VeilstoneCity_Gym_EventScript_BrightenRoom
@@ -281,17 +281,17 @@ VeilstoneCity_Gym_EventScript_LeaderDefeated::
 
 VeilstoneCity_Gym_Text_ExplainBadge::
 	.string "Um... I should explain about that\n"
-	.string "official POKéMON League Gym Badge.\p"
+	.string "official POKéMON LEAGUE GYM BADGE.\p"
 	.string "With it, you can use the hidden move\n"
 	.string "Fly outside of battle.\p"
-	.string "Oh, and since you now have four Gym\n"
-	.string "Badges, POKéMON obtained in trades\p"
+	.string "Oh, and since you now have four GYM\n"
+	.string "BADGES, POKéMON obtained in trades\p"
 	.string "will obey you up to Lv. 50.\p"
 	.string "Oh, and please take this as well.$"
 
 VeilstoneCity_Gym_Text_ReceivedBadge::
-	.string "{PLAYER} received the Cobble Badge\n"
-	.string "from Maylene.$"
+	.string "{PLAYER} received the Cobble BADGE\n"
+	.string "from MAYLENE.$"
 
 VeilstoneCity_Gym_EventScript_AnimateFlashFullBrightness::
 	playse SE_SWITCH
@@ -303,16 +303,16 @@ VeilstoneCity_Gym_Text_LeaderDefeat::
 	.string "...OK. You win.\p"
 	.string "That was a tough loss. I learned a lot\n"
 	.string "from it.\p"
-	.string "Please, accept this Gym Badge.$"
+	.string "Please, accept this GYM BADGE.$"
 
 VeilstoneCity_Gym_Text_LeaderIntro::
 	.string "Hello. I’m pleased to meet you.\p"
-	.string "I’m Maylene, and I’m the Gym Leader.\p"
+	.string "I’m MAYLENE, and I’m the GYM LEADER.\p"
 	.string "I don’t really know what it means to be\n"
 	.string "strong, or how I got to be the\p"
-	.string "Gym Leader.\p"
-	.string "But I will do the best I can as the Gym\n"
-	.string "Leader.\p"
+	.string "GYM LEADER.\p"
+	.string "But I will do the best I can as the GYM\n"
+	.string "LEADER.\p"
 	.string "I take battling very seriously.\n"
 	.string "Whenever you’re ready!$"
 
@@ -333,7 +333,7 @@ VeilstoneCity_Gym_EventScript_SNRematch_After::
 	.string "anytime for another match!$"
 
 VeilstoneCity_Gym_EventScript_SNRematch_Defeat::
-	.string "Amazing... You really are the Champion!$"
+	.string "Amazing... You really are the CHAMPION!$"
 
 VeilstoneCity_Gym_EventScript_SNRematch_Go::
 	.string "Then I won’t hold back this time!$"
@@ -347,7 +347,7 @@ VeilstoneCity_Gym_EventScript_SNRematch_NoT::
 	.string "Come back whenever you’re ready!$"
 
 VeilstoneCity_Gym_EventScript_SNRematch_Ask::
-	.string "Maylene: You became the Champion!\n"
+	.string "MAYLENE: You became the CHAMPION!\n"
 	.string "Welcome back!\p"
 	.string "I’ve been training even harder since\n"
 	.string "our last battle.\p"
@@ -363,25 +363,25 @@ VeilstoneCity_Gym_EventScript_PtGymGuide::
 	end
 
 VeilstoneCity_Gym_Text_SNGuideInfo::
-	.string "Let me tell you about this Gym!\p"
-	.string "The Gym Leader is MAYLENE, a young\n"
+	.string "Let me tell you about this GYM!\p"
+	.string "The GYM LEADER is MAYLENE, a young\n"
 	.string "genius of Fighting-type battles who\l"
 	.string "trains barefoot.\p"
 	.string "She uses POKéMON like MEDITITE,\n"
 	.string "MACHOKE and her partner LUCARIO.\p"
 	.string "Fighting types are weak to Flying,\n"
 	.string "Psychic and Fairy moves!\p"
-	.string "This Gym is a pitch-dark maze. Every\n"
-	.string "Trainer you defeat makes the room a\l"
+	.string "This GYM is a pitch-dark maze. Every\n"
+	.string "TRAINER you defeat makes the room a\l"
 	.string "little brighter.\p"
 	.string "Battle them all to light up the way to\n"
 	.string "MAYLENE!$"
 
 VeilstoneCity_Gym_Text_PtGymGuide::
 	.string "Hey, there! How’s it going,\n"
-	.string "Champ-to-be?\p"
-	.string "I’m the Gym guide! I help out Trainers\n"
-	.string "who come to challenge the Gym Leader.$"
+	.string "CHAMP-to-be?\p"
+	.string "I’m the GYM guide! I help out TRAINERS\n"
+	.string "who come to challenge the GYM LEADER.$"
 
 VeilstoneCity_Gym_EventScript_PtGymGuideAfter::
 	msgbox VeilstoneCity_Gym_Text_PtGymGuideAfter, MSGBOX_DEFAULT
@@ -389,8 +389,8 @@ VeilstoneCity_Gym_EventScript_PtGymGuideAfter::
 	end
 
 VeilstoneCity_Gym_Text_PtGymGuideAfter::
-	.string "Oh! {PLAYER}! You’ve beaten the Gym\n"
-	.string "Leader!\p"
+	.string "Oh! {PLAYER}! You’ve beaten the GYM\n"
+	.string "LEADER!\p"
 	.string "Of course, I thought you’d win.$"
 
 VeilstoneCity_Gym_EventScript_PtGymStatue::
@@ -401,9 +401,9 @@ VeilstoneCity_Gym_EventScript_PtGymStatue::
 	end
 
 VeilstoneCity_Gym_Text_PtGymStatue::
-	.string "Veilstone City POKéMON Gym\n"
-	.string "Leader: Maylene\p"
-	.string "Certified Trainers:\n"
+	.string "VEILSTONE CITY POKéMON GYM\n"
+	.string "LEADER: MAYLENE\p"
+	.string "Certified TRAINERS:\n"
 	.string "{RIVAL}$"
 
 VeilstoneCity_Gym_EventScript_PtGymStatueWon::
@@ -412,8 +412,8 @@ VeilstoneCity_Gym_EventScript_PtGymStatueWon::
 	end
 
 VeilstoneCity_Gym_Text_PtGymStatueWon::
-	.string "Veilstone City POKéMON Gym\n"
-	.string "Leader: Maylene\p"
-	.string "Certified Trainers:\n"
+	.string "VEILSTONE CITY POKéMON GYM\n"
+	.string "LEADER: MAYLENE\p"
+	.string "Certified TRAINERS:\n"
 	.string "{RIVAL}\n"
 	.string "{PLAYER}$"

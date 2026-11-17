@@ -102,7 +102,7 @@ Route226_EventScript_PtSign1::
 	end
 
 Route226_Text_PtSign1::
-	.string "Rt. 226 Survival Area$"
+	.string "Rt. 226 SURVIVAL AREA$"
 
 Route226_EventScript_PtSign2::
 	msgbox Route226_Text_PtSign2, MSGBOX_SIGN

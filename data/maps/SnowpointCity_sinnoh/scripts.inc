@@ -31,7 +31,7 @@ SnowpointCity_Text_PtNpc1::
 
 SnowpointCity_Text_SailToBattleZone::
 	.string "What is it? Do you want to sail to the\n"
-	.string "Fight Area?$"
+	.string "FIGHT AREA?$"
 
 SnowpointCity_EventScript_FerryNotYet::
 	msgbox SnowpointCity_Text_GreatTrainer, MSGBOX_DEFAULT
@@ -39,8 +39,8 @@ SnowpointCity_EventScript_FerryNotYet::
 	end
 
 SnowpointCity_Text_GreatTrainer::
-	.string "A great Trainer recognized by the\n"
-	.string "POKéMON League...\p"
+	.string "A great TRAINER recognized by the\n"
+	.string "POKéMON LEAGUE...\p"
 	.string "I look forward to carrying someone like\n"
 	.string "that on this ship!$"
 
@@ -54,9 +54,9 @@ SnowpointCity_EventScript_PtNpc2::
 SnowpointCity_Text_PtNpc2_0::
 	.string "Brrr... This snowbound town is always\n"
 	.string "freezing cold.\p"
-	.string "But the spirits of the Trainers and\n"
+	.string "But the spirits of the TRAINERS and\n"
 	.string "their POKéMON burn hot and bright.\p"
-	.string "Especially the Gym Leader.$"
+	.string "Especially the GYM LEADER.$"
 
 SnowpointCity_EventScript_PtNpc3::
 	lock
@@ -75,7 +75,7 @@ SnowpointCity_EventScript_PtNpc4::
 
 SnowpointCity_Text_PtNpc4::
 	.string "Only the chosen may enter the\n"
-	.string "Snowpoint Temple.\p"
+	.string "SNOWPOINT TEMPLE.\p"
 	.string "I’m sorry, but you will have to leave.$"
 
 SnowpointCity_EventScript_PtNpc5::
@@ -86,7 +86,7 @@ SnowpointCity_EventScript_PtNpc5::
 	end
 
 SnowpointCity_Text_PtNpc5_0::
-	.string "Candice is teaching me about POKéMON.\p"
+	.string "CANDICE is teaching me about POKéMON.\p"
 	.string "She says I have to start by making\n"
 	.string "friends with POKéMON.$"
 
@@ -105,24 +105,24 @@ SnowpointCity_EventScript_SNCynthia::
 	end
 
 SnowpointCity_Text_SNCyn2::
-	.string "Cynthia: I want you to keep traveling\n"
+	.string "CYNTHIA: I want you to keep traveling\n"
 	.string "to many far-off places.\p"
 	.string "I want you to keep meeting all kinds of\n"
 	.string "people and POKéMON.\p"
 	.string "I came all the way here just so I could\n"
 	.string "say that to you.\p"
 	.string "Your horizons will expand again if you\n"
-	.string "visit the Fight Area as well.\p"
+	.string "visit the FIGHT AREA as well.\p"
 	.string "I hope our paths cross again!$"
 
 SnowpointCity_Text_SNCyn1::
-	.string "Cynthia: I thought you would come. I’m\n"
+	.string "CYNTHIA: I thought you would come. I’m\n"
 	.string "glad I waited for you!\p"
-	.string "Cynthia: I think it’s good that our\n"
+	.string "CYNTHIA: I think it’s good that our\n"
 	.string "world is constantly changing.\p"
 	.string "Of course, I don’t want it to become\n"
 	.string "what only one person wants.\p"
-	.string "A world like Cyrus envisions... No one\n"
+	.string "A world like CYRUS envisions... No one\n"
 	.string "would want that.\p"
 	.string "The kind of world I want to see is\n"
 	.string "where everyone can share their joy.\p"
@@ -139,12 +139,12 @@ SnowpointCity_EventScript_SNPtSNOWPOINTNPCM::
 
 SnowpointCity_EventScript_SNPtSNOWPOINTNPCM_Text::
 	.string "POKéMON are said to have dragged\n"
-	.string "Snowpoint City here.\p"
-	.string "The Snowpoint Temple is their resting\n"
+	.string "SNOWPOINT CITY here.\p"
+	.string "The SNOWPOINT TEMPLE is their resting\n"
 	.string "place, they say.\p"
 	.string "I want to take a look around in the\n"
-	.string "Snowpoint Temple.\p"
-	.string "But only really tough Trainers are\n"
+	.string "SNOWPOINT TEMPLE.\p"
+	.string "But only really tough TRAINERS are\n"
 	.string "allowed inside.$"
 
 SnowpointCity_EventScript_PtSign1::
@@ -159,5 +159,5 @@ SnowpointCity_EventScript_PtSign2::
 	end
 
 SnowpointCity_Text_PtSign2::
-	.string "SNOWPOINT CITY POKéMON Gym Leader:\n"
+	.string "SNOWPOINT CITY POKéMON GYM LEADER:\n"
 	.string "CANDICE The Diamond Dust Girl!$"

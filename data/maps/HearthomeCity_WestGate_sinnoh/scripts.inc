@@ -10,7 +10,7 @@ HearthomeCity_WestGate_EventScript_PtNpc1::
 	end
 
 HearthomeCity_WestGate_Text_PtNpc1_0::
-	.string "In Amity Square, you may go for a stroll\n"
+	.string "In AMITY SQUARE, you may go for a stroll\n"
 	.string "with a cute POKéMON.$"
 
 HearthomeCity_WestGate_EventScript_PtNpc2::

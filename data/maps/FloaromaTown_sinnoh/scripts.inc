@@ -7,11 +7,11 @@ FloaromaTown_EventScript_Grunts::
 	end
 
 FloaromaTown_Text_Grunts::
-	.string "Grunt 1: Aren’t we Team Galactic? And\n"
+	.string "GRUNT 1: Aren’t we TEAM GALACTIC? And\n"
 	.string "we’re assigned here?\p"
 	.string "Standing around among flowers... This\n"
 	.string "doesn’t seem all that cool.\p"
-	.string "Grunt 2: Hey now! Don’t complain. This\n"
+	.string "GRUNT 2: Hey now! Don’t complain. This\n"
 	.string "is a pretty decent assignment.\p"
 	.string "But Bug- and Grass-type POKéMON so\n"
 	.string "creep me out...\p"

@@ -60,14 +60,14 @@ SinnohVictoryRoad_B1F_Text_HenryPost::
 	.string "If you don’t give up, you can reach\n"
 	.string "your goal.\p"
 	.string "That perseverance is what’s important\n"
-	.string "to Trainers. That’s in my book, too.$"
+	.string "to TRAINERS. That’s in my book, too.$"
 
 SinnohVictoryRoad_B1F_Text_HenryDefeat::
 	.string "That wasn’t how I planned the final\n"
 	.string "chapter to go in my writing class...$"
 
 SinnohVictoryRoad_B1F_Text_HenryIntro::
-	.string "Victory Road... Somehow, it feels as if\n"
+	.string "VICTORY ROAD... Somehow, it feels as if\n"
 	.string "my journey is now coming to an end.\p"
 	.string "But, before the final chapter is\n"
 	.string "written, I must pen your defeat!$"

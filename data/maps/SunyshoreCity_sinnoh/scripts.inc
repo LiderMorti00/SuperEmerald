@@ -16,10 +16,10 @@ SunyshoreCity_EventScript_PtNpc2::
 
 SunyshoreCity_Text_PtNpc2::
 	.string "The city uses a lot of electricity,\n"
-	.string "especially the lighthouse and the Gym.\p"
+	.string "especially the lighthouse and the GYM.\p"
 	.string "They finally decided to turn all the\n"
 	.string "city's roads into giant solar panels.\p"
-	.string "SUNYSHORE is the Sunshine City, so\n"
+	.string "SUNNYSHORE is the Sunshine City, so\n"
 	.string "the system works perfectly.$"
 
 SunyshoreCity_EventScript_PtNpc3::
@@ -36,7 +36,7 @@ SunyshoreCity_EventScript_PtNpc4::
 	end
 
 SunyshoreCity_Text_PtNpc4::
-	.string "The Gym Leader uses too much\n"
+	.string "The GYM LEADER uses too much\n"
 	.string "electricity!\p"
 	.string "He needs to think about the city's\n"
 	.string "power needs, too!$"
@@ -69,19 +69,19 @@ SunyshoreCity_EventScript_SNJasmine_T2::
 	.string "...That Hidden Machine... It contains\n"
 	.string "Waterfall.\p"
 	.string "If you use it, you can get to the\n"
-	.string "POKéMON League.\p"
+	.string "POKéMON LEAGUE.\p"
 	.string "...Um... I... I don’t know how I should say\n"
 	.string "this, but good luck.$"
 
 SunyshoreCity_EventScript_SNJasmine_T1::
-	.string "...Er...um... M-my name is Jasmine, and I’m\n"
-	.string "a Gym Leader.\p"
-	.string "Oh, I’m sorry, not the Gym Leader of\n"
+	.string "...Er...um... M-my name is JASMINE, and I’m\n"
+	.string "a GYM LEADER.\p"
+	.string "Oh, I’m sorry, not the GYM LEADER of\n"
 	.string "this town...\p"
-	.string "I’m a Gym Leader in the Johto region...\p"
+	.string "I’m a GYM LEADER in the JOHTO region...\p"
 	.string "...Er...um... It would be nice if you knew\n"
 	.string "about\p"
-	.string "the Johto region...$"
+	.string "the JOHTO region...$"
 
 SunyshoreCity_EventScript_SNFlint::
 	lock
@@ -97,12 +97,12 @@ SunyshoreCity_EventScript_SNFlint::
 SunyshoreCity_EventScript_SNFlint_T2::
 	.string "I just had this idea. Maybe you can pull\n"
 	.string "it off.\p"
-	.string "It’s about this town’s Gym Leader.\p"
+	.string "It’s about this town’s GYM LEADER.\p"
 	.string "He’s really lost his enthusiasm lately\n"
 	.string "because there’ve been so few good\p"
 	.string "challengers worth his time.\p"
 	.string "He’s been so bored, he spends all his\n"
-	.string "time renovating the Gym.\p"
+	.string "time renovating the GYM.\p"
 	.string "And then the blackout happened... That\n"
 	.string "sure didn’t help lift his mood.\p"
 	.string "You know where I’m going with this,\n"
@@ -113,13 +113,13 @@ SunyshoreCity_EventScript_SNFlint_T2::
 	.string "I’m counting on you, hotshot!$"
 
 SunyshoreCity_EventScript_SNFlint_T1::
-	.string "Yo! Fellow Trainer!\p"
+	.string "Yo! Fellow TRAINER!\p"
 	.string "Your POKéMON are secure inside their\n"
 	.string "POKé BALLS, but there’s no masking\p"
 	.string "that aura of serious toughness!\p"
 	.string "Oops, sorry, I should introduce myself.\p"
-	.string "The name’s Flint! I’m one of the\n"
-	.string "POKéMON League’s Elite Four!$"
+	.string "The name’s FLINT! I’m one of the\n"
+	.string "POKéMON LEAGUE’s ELITE FOUR!$"
 
 SunyshoreCity_EventScript_SNFlint_Wait::
 	msgbox SunyshoreCity_EventScript_SNFlint_T3, MSGBOX_DEFAULT
@@ -127,7 +127,7 @@ SunyshoreCity_EventScript_SNFlint_Wait::
 	end
 
 SunyshoreCity_EventScript_SNFlint_T3::
-	.string "Flint: Yo! Hiya! He hasn’t come back\n"
+	.string "FLINT: Yo! Hiya! He hasn’t come back\n"
 	.string "yet.\p"
 	.string "When he does, you know what you’ve\n"
 	.string "gotta do.\p"
@@ -141,7 +141,7 @@ SunyshoreCity_EventScript_SNFlint_Back::
 	end
 
 SunyshoreCity_EventScript_SNFlint_T4::
-	.string "Flint: Yo! Hiya! He’s finally come back!\p"
+	.string "FLINT: Yo! Hiya! He’s finally come back!\p"
 	.string "He seemed to be feeling upbeat, too.\p"
 	.string "I have a hunch that he recognized your\n"
 	.string "toughness right away.\p"
@@ -151,7 +151,7 @@ SunyshoreCity_EventScript_SNFlint_T4::
 	.string "Give him a battle that’s so hot, it will\n"
 	.string "reignite his passion for battling!\p"
 	.string "All right, hotshot! I’ll be waiting at\n"
-	.string "the POKéMON League!$"
+	.string "the POKéMON LEAGUE!$"
 
 SunyshoreCity_EventScript_SNBarry8::
 	lock
@@ -169,8 +169,8 @@ SunyshoreCity_EventScript_SNBarry8::
 SunyshoreCity_Text_SNBarry8::
 	.string "{RIVAL}: Hey! {PLAYER}!\p"
 	.string "What the...\p"
-	.string "You went and got all eight Gym Badges\n"
-	.string "of Sinnoh!\p"
+	.string "You went and got all eight GYM BADGES\n"
+	.string "of SINNOH!\p"
 	.string "Aww, you... That’s wicked! I envy you!\p"
 	.string "But don’t think you’ve won!$"
 
@@ -179,7 +179,7 @@ SunyshoreCity_EventScript_PtSign1::
 	end
 
 SunyshoreCity_Text_PtSign1::
-	.string "SUNYSHORE Market A Selection of the\n"
+	.string "SUNNYSHORE Market A Selection of the\n"
 	.string "World's Seals$"
 
 SunyshoreCity_EventScript_PtSign2::
@@ -187,7 +187,7 @@ SunyshoreCity_EventScript_PtSign2::
 	end
 
 SunyshoreCity_Text_PtSign2::
-	.string "SUNYSHORE CITY POKéMON Gym Leader:\n"
+	.string "SUNNYSHORE CITY POKéMON GYM LEADER:\n"
 	.string "VOLKNER The Shining, Shocking Star$"
 
 SunyshoreCity_EventScript_PtSign3::

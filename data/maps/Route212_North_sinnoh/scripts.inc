@@ -92,7 +92,7 @@ Route212_North_Text_ReinaDefeat::
 	.string "battling with my friends.$"
 
 Route212_North_Text_ReinaIntro::
-	.string "I've never battled a young Trainer\n"
+	.string "I've never battled a young TRAINER\n"
 	.string "like yourself. It's quite nerve\l"
 	.string "wracking.$"
 
@@ -241,5 +241,5 @@ Route212_North_EventScript_PtSign3::
 	end
 
 Route212_North_Text_PtSign3::
-	.string "Trainer Tips The items in the Bag can\n"
+	.string "TRAINER Tips The items in the Bag can\n"
 	.string "be reorganized by pressing SELECT.$"

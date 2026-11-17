@@ -49,8 +49,8 @@ Route228_House2_Text_PtNpc1_1::
 	.string "this to you...$"
 
 Route228_House2_Text_PtNpc1_0::
-	.string "That Badge... It’s from Sunyshore’s\n"
-	.string "Gym?\p"
+	.string "That BADGE... It’s from SUNNYSHORE’s\n"
+	.string "GYM?\p"
 	.string "You’ve been to that port town, then...\p"
 	.string "Would... Would you lend an ear to this\n"
 	.string "old man’s tale?$"

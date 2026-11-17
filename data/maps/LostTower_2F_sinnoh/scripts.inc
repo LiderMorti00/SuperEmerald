@@ -8,7 +8,7 @@ LostTower_2F_EventScript_Oliver::
 	end
 
 LostTower_2F_Text_OliverPost::
-	.string "I had to come to the Lost Tower on a\n"
+	.string "I had to come to the LOST TOWER on a\n"
 	.string "dare...\p"
 	.string "I have to go to the top and use Defog\n"
 	.string "there...$"

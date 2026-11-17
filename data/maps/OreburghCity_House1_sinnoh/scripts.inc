@@ -16,6 +16,6 @@ OreburghCity_House1_EventScript_PtNpc2::
 	end
 
 OreburghCity_House1_Text_PtNpc2::
-	.string "ROARK is our town's Gym Leader.\p"
+	.string "ROARK is our town's GYM LEADER.\p"
 	.string "He may be young, but he keeps the mine\n"
 	.string "running safely and efficiently.$"

@@ -38,7 +38,7 @@ PokemonLeague_BerthaRoom_EventScript_Defeated::
 	end
 
 PokemonLeague_BerthaRoom_Text_PostBattleSpeech::
-	.string "The Trainer in the next room is a much\n"
+	.string "The TRAINER in the next room is a much\n"
 	.string "more formidable opponent.\p"
 	.string "You really must have your wits about\n"
 	.string "you.\p"
@@ -47,9 +47,9 @@ PokemonLeague_BerthaRoom_Text_PostBattleSpeech::
 
 PokemonLeague_BerthaRoom_Text_IntroSpeech::
 	.string "Well, well.\p"
-	.string "You’re quite the adorable Trainer, but\n"
+	.string "You’re quite the adorable TRAINER, but\n"
 	.string "you’ve also got a spine.\p"
-	.string "Ahaha! I’m Bertha.\p"
+	.string "Ahaha! I’m BERTHA.\p"
 	.string "I have a preference for Ground-type\n"
 	.string "POKéMON.\p"
 	.string "Well, would you show this old lady how\n"

@@ -21,7 +21,7 @@ SurvivalArea_PokemonCenter_1F_EventScript_PtNpc1::
 
 SurvivalArea_PokemonCenter_1F_Text_PtNpc1_0::
 	.string "The building next door?\p"
-	.string "I see Gym Leaders go in and out every\n"
+	.string "I see GYM LEADERS go in and out every\n"
 	.string "so often.$"
 
 SurvivalArea_PokemonCenter_1F_EventScript_PtNpc1_ChallengeWithoutOwnPokemon::
@@ -30,7 +30,7 @@ SurvivalArea_PokemonCenter_1F_EventScript_PtNpc1_ChallengeWithoutOwnPokemon::
 	end
 
 SurvivalArea_PokemonCenter_1F_Text_PtNpc1_1::
-	.string "The Battle Factory lets you make\n"
+	.string "The BATTLE FACTORY lets you make\n"
 	.string "challenges without your own POKéMON.\p"
 	.string "Maybe I should try...$"
 

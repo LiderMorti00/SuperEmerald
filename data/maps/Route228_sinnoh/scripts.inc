@@ -74,7 +74,7 @@ Route228_EventScript_Krista::
 
 Route228_Text_KristaPost::
 	.string "The world is full of POKéMON and all\n"
-	.string "sorts of Trainers.$"
+	.string "sorts of TRAINERS.$"
 
 Route228_Text_KristaDefeat::
 	.string "You're not tired at all?!$"
@@ -91,7 +91,7 @@ Route228_EventScript_Keegan::
 Route228_Text_KeeganPost::
 	.string "It's not good enough for a POKéMON to\n"
 	.string "just be tough.\p"
-	.string "It's not good enough for a Trainer to\n"
+	.string "It's not good enough for a TRAINER to\n"
 	.string "just work hard.\p"
 	.string "Both have to grow together!$"
 
@@ -156,7 +156,7 @@ Route228_Text_DavonPost::
 	.string "became a fact...\p"
 	.string "I've let down my POKéMON...\p"
 	.string "They go to battle with faith in their\n"
-	.string "Trainer...$"
+	.string "TRAINER...$"
 
 Route228_EventScript_Davon_Rematch::
 	trainerbattle_rematch TRAINER_GARRISON_SINNOH, Route228_Text_DavonIntro, Route228_Text_DavonDefeat

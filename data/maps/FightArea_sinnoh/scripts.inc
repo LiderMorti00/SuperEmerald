@@ -28,16 +28,16 @@ FightArea_EventScript_PtNpc3::
 	end
 
 FightArea_Text_PtNpc3::
-	.string "The way the Battle Tower looms...\p"
+	.string "The way the BATTLE TOWER looms...\p"
 	.string "It really is a wall that stands before\n"
-	.string "every Trainer.$"
+	.string "every TRAINER.$"
 
 FightArea_EventScript_PtNpc4::
 	msgbox FightArea_Text_PtNpc4, MSGBOX_NPC
 	end
 
 FightArea_Text_PtNpc4::
-	.string "I've battled many Trainers over the\n"
+	.string "I've battled many TRAINERS over the\n"
 	.string "years.\p"
 	.string "I've gained some confidence in my\n"
 	.string "skill levels, too.\p"
@@ -49,7 +49,7 @@ FightArea_EventScript_PtNpc5::
 	end
 
 FightArea_Text_PtNpc5::
-	.string "The POKéMON LEAGUE's Elite Four come\n"
+	.string "The POKéMON LEAGUE's ELITE FOUR come\n"
 	.string "here sometimes!$"
 
 FightArea_EventScript_PtNpc6::
@@ -166,15 +166,15 @@ FightArea_EventScript_SNMulti_B7::
 	.string "the Tower Tycoon!\p"
 	.string "I want to be cool like my dad!\p"
 	.string "{PLAYER}, that’s the one reason I\n"
-	.string "decided to become a Trainer!$"
+	.string "decided to become a TRAINER!$"
 
 FightArea_EventScript_SNMulti_P2T::
 	.string "BARRY, your mother told me you’d gone\n"
-	.string "off to the Battle Zone.\p"
+	.string "off to the BATTLE ZONE.\p"
 	.string "So I had to come running looking for\n"
 	.string "you.\p"
 	.string "So, are you two going to take the\n"
-	.string "Battle Frontier challenge?\p"
+	.string "BATTLE FRONTIER challenge?\p"
 	.string "The Frontier has five facilities that\n"
 	.string "are all dedicated to battling.\p"
 	.string "Each one has a unique set of rules, so\n"
@@ -184,12 +184,12 @@ FightArea_EventScript_SNMulti_P2T::
 	.string "Anyway, I’m satisfied to see that\n"
 	.string "you’re both doing well.\p"
 	.string "I’ll go back to my usual place in the\n"
-	.string "Battle Tower.\p"
+	.string "BATTLE TOWER.\p"
 	.string "I’ll be looking forward to your\n"
 	.string "challenge.$"
 
 FightArea_EventScript_SNMulti_P1T::
-	.string "Palmer: Huh? Ah!\p"
+	.string "PALMER: Huh? Ah!\p"
 	.string "If it isn’t BARRY! You’ve grown all\n"
 	.string "sturdy!\p"
 	.string "And {PLAYER}, too! I haven’t seen you in\n"
@@ -210,26 +210,26 @@ FightArea_EventScript_SNMulti_B5::
 	.string "OK, I’m off to the Fronti...$"
 
 FightArea_EventScript_SNMulti_V4::
-	.string "Volkner: Hahaha! That was a blast!\p"
+	.string "VOLKNER: Hahaha! That was a blast!\p"
 	.string "Our combination came up short, but\n"
 	.string "you’re also a lot tougher as well.\p"
 	.string "Promise me we’ll do this again. I’ll see\n"
 	.string "to taking this husk home.$"
 
 FightArea_EventScript_SNMulti_V3::
-	.string "Volkner: Hey! Don’t burn out on us! Now\n"
+	.string "VOLKNER: Hey! Don’t burn out on us! Now\n"
 	.string "you’re just getting in the way.$"
 
 FightArea_EventScript_SNMulti_F3::
-	.string "Flint: ... ...\p"
+	.string "FLINT: ... ...\p"
 	.string "... ...\p"
 	.string "... ...$"
 
 FightArea_EventScript_SNMulti_DV::
-	.string "Volkner: Now that was electrifying!$"
+	.string "VOLKNER: Now that was electrifying!$"
 
 FightArea_EventScript_SNMulti_DF::
-	.string "Flint: Burned out...$"
+	.string "FLINT: Burned out...$"
 
 FightArea_EventScript_SNMulti_P2::
 	setfollowernpc LOCALID_SN_FIGHTAREA_BARRY, FNPC_ALL_LAND, 0, PARTNER_BARRY_TURTWIG
@@ -244,48 +244,48 @@ FightArea_EventScript_SNMulti_B4::
 	.string "tough we really are!$"
 
 FightArea_EventScript_SNMulti_V2::
-	.string "Volkner: I don’t know how I managed to\n"
+	.string "VOLKNER: I don’t know how I managed to\n"
 	.string "get myself into this, but...\p"
 	.string "Show me the skills that got you\n"
-	.string "through the POKéMON League!$"
+	.string "through the POKéMON LEAGUE!$"
 
 FightArea_EventScript_SNMulti_F2::
-	.string "Flint: This situation just cooks! The\n"
+	.string "FLINT: This situation just cooks! The\n"
 	.string "drama and tension sizzles!\p"
-	.string "Flint, the fiery master of fire\n"
+	.string "FLINT, the fiery master of fire\n"
 	.string "POKéMON, is going to put you to the\l"
 	.string "test!\p"
-	.string "Let Flint see how hot your spirit\n"
+	.string "Let FLINT see how hot your spirit\n"
 	.string "burns!$"
 
 FightArea_EventScript_SNMulti_B3::
 	.string "BARRY: Yeah, that’s what I’m talking\n"
 	.string "about!\p"
-	.string "So there’s an Elite Four and a Gym\n"
-	.string "Leader. We can whoop ’em!$"
+	.string "So there’s an ELITE FOUR and a GYM\n"
+	.string "LEADER. We can whoop ’em!$"
 
 FightArea_EventScript_SNMulti_V1::
-	.string "Volkner: You only want to go into the\n"
+	.string "VOLKNER: You only want to go into the\n"
 	.string "Frontier, don’t you?\p"
 	.string "I’m sorry about my friend. He’s off on\n"
 	.string "his own thing...$"
 
 FightArea_EventScript_SNMulti_F1::
-	.string "Flint: Yo, Trainer! It’s been too long,\n"
+	.string "FLINT: Yo, TRAINER! It’s been too long,\n"
 	.string "amigo!\p"
 	.string "Now I don’t know what your pal speedy\n"
 	.string "there’s been spouting...\p"
 	.string "But we’re not doing this out of spite\n"
 	.string "or anything bad natured like that.\p"
-	.string "The Battle Frontier behind us is where\n"
-	.string "the best Trainers gather.\p"
+	.string "The BATTLE FRONTIER behind us is where\n"
+	.string "the best TRAINERS gather.\p"
 	.string "We’re being kind enough to let you see\n"
 	.string "if you’re up to the challenge!\p"
 	.string "You really ought to be grateful!$"
 
 FightArea_EventScript_SNMulti_B2::
 	.string "BARRY: {PLAYER}, I tried to get into the\n"
-	.string "Battle Frontier,\p"
+	.string "BATTLE FRONTIER,\p"
 	.string "which happens to be right here.\p"
 	.string "Then these guys came along and got in\n"
 	.string "my face about it.\p"
@@ -293,7 +293,7 @@ FightArea_EventScript_SNMulti_B2::
 	.string "me if I’m good enough and all that.\p"
 	.string "Like, as if I need to prove anything.\n"
 	.string "So, let’s team up.\p"
-	.string "Like we did at the Spear Pillar. Let’s\n"
+	.string "Like we did at the SPEAR PILLAR. Let’s\n"
 	.string "show those guys how good we are!$"
 
 FightArea_EventScript_SNMulti_B1::
@@ -348,9 +348,9 @@ FightArea_EventScript_SNMulti_K1::
 	.string "Hey, hey. I just watched you two\n"
 	.string "battle.\p"
 	.string "You’re something special, aren’t you?\n"
-	.string "Beating an Elite Four like that.\p"
-	.string "Oh, right, howdy. The name’s Buck.\p"
+	.string "Beating an ELITE FOUR like that.\p"
+	.string "Oh, right, howdy. The name’s BUCK.\p"
 	.string "I’m usually training at the Survival\n"
-	.string "Area or Stark Mountain.\p"
+	.string "Area or STARK MOUNTAIN.\p"
 	.string "You should come up there. You’ll get\n"
 	.string "toughened up for sure!$"

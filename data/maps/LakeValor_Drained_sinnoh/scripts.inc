@@ -9,19 +9,19 @@ LakeValor_Drained_EventScript_Grunt::
 
 LakeValor_Drained_Text_GruntPost::
 	.string "But so what? You aim to take us all on?\p"
-	.string "Dream on! Team Galactic is huge in\n"
+	.string "Dream on! TEAM GALACTIC is huge in\n"
 	.string "number.\p"
 	.string "Even as we speak, other members should\n"
-	.string "be near Twinleaf Town.\p"
+	.string "be near TWINLEAF TOWN.\p"
 	.string "That’s right, they’re on the way to\n"
-	.string "Lake Verity!$"
+	.string "LAKE VERITY!$"
 
 LakeValor_Drained_Text_GruntDefeat::
 	.string "Your POKéMON attack with phenomenal\n"
 	.string "power...$"
 
 LakeValor_Drained_Text_GruntIntro::
-	.string "We set off the Galactic Bomb! Its\n"
+	.string "We set off the GALACTIC Bomb! Its\n"
 	.string "blast force was phenomenal!$"
 
 LakeValor_Drained_EventScript_Grunt2::
@@ -33,7 +33,7 @@ LakeValor_Drained_Text_Grunt2Post::
 	.string "I played you for a child, and paid a\n"
 	.string "stiff price for my arrogance...\p"
 	.string "However, you’re much too late.\p"
-	.string "Team Galactic has already found the\n"
+	.string "TEAM GALACTIC has already found the\n"
 	.string "sunken island under the lake.\p"
 	.string "And the POKéMON that lay in it? Well,\n"
 	.string "what do you think?$"
@@ -51,7 +51,7 @@ LakeValor_Drained_EventScript_Grunt3::
 	end
 
 LakeValor_Drained_Text_Grunt3Post::
-	.string "We’re Team Galactic! The no. 1\n"
+	.string "We’re TEAM GALACTIC! The no. 1\n"
 	.string "syndicate in the world!\p"
 	.string "To defy us is to defy the universe!$"
 
@@ -60,7 +60,7 @@ LakeValor_Drained_Text_Grunt3Defeat::
 
 LakeValor_Drained_Text_Grunt3Intro::
 	.string "I’ll punish you in place of our boss for\n"
-	.string "defying Team Galactic!$"
+	.string "defying TEAM GALACTIC!$"
 
 LakeValor_Drained_EventScript_PtNpc1::
 	lock
@@ -77,7 +77,7 @@ LakeValor_Drained_Text_PtNpc1_0::
 	.string "Things are going to get really\n"
 	.string "interesting now.\p"
 	.string "All the legendary POKéMON are going to\n"
-	.string "be brought to our HQ in Veilstone!$"
+	.string "be brought to our HQ in VEILSTONE!$"
 
 LakeValor_Drained_EventScript_PtNpc2::
 	lock
@@ -87,7 +87,7 @@ LakeValor_Drained_EventScript_PtNpc2::
 	end
 
 LakeValor_Drained_Text_PtNpc2_0::
-	.string "Even Team Galactic has no use for\n"
+	.string "Even TEAM GALACTIC has no use for\n"
 	.string "MAGIKARP! Worthless, all of them!$"
 
 LakeValor_Drained_EventScript_PtNpc3::
@@ -98,9 +98,9 @@ LakeValor_Drained_EventScript_PtNpc3::
 	end
 
 LakeValor_Drained_Text_PtNpc3_0::
-	.string "Hahaha! Next stop, Lake Verity!\p"
+	.string "Hahaha! Next stop, LAKE VERITY!\p"
 	.string "The closest civilization is that hick\n"
-	.string "town called Twinleaf!\p"
+	.string "town called TWINLEAF!\p"
 	.string "We can roll in there completely\n"
 	.string "unopposed!$"
 

@@ -7,7 +7,7 @@ PastoriaCity_EventScript_PtNpc1::
 	end
 
 PastoriaCity_Text_PtNpc1::
-	.string "Some Trainers deliberately prevent\n"
+	.string "Some TRAINERS deliberately prevent\n"
 	.string "their POKéMON from evolving.\p"
 	.string "They wait until the POKéMON levels up\n"
 	.string "and learns certain moves.$"
@@ -21,7 +21,7 @@ PastoriaCity_EventScript_PtNpc2::
 	end
 
 PastoriaCity_Text_PtNpc2::
-	.string "PASTORIA's Gym Leader is awesome with\n"
+	.string "PASTORIA's GYM LEADER is awesome with\n"
 	.string "his water attacks.\p"
 	.string "You'll know what I mean when you\n"
 	.string "challenge him.$"
@@ -32,7 +32,7 @@ PastoriaCity_EventScript_PtNpc2_SNVar0::
 	end
 
 PastoriaCity_Text_PtNpc2_SNVar0::
-	.string "Wasn’t the Pastoria Gym Leader kind of\n"
+	.string "Wasn’t the PASTORIA GYM LEADER kind of\n"
 	.string "awesome in all sorts of ways?\p"
 	.string "But don’t judge him by the way he looks\n"
 	.string "and acts.\p"
@@ -77,7 +77,7 @@ PastoriaCity_EventScript_PtNpc6::
 
 PastoriaCity_Text_PtNpc6::
 	.string "I can't use the hidden move Surf until\n"
-	.string "I beat the local Gym Leader.$"
+	.string "I beat the local GYM LEADER.$"
 
 PastoriaCity_EventScript_PtNpc7::
 	msgbox PastoriaCity_Text_PtNpc7, MSGBOX_NPC
@@ -85,7 +85,7 @@ PastoriaCity_EventScript_PtNpc7::
 
 PastoriaCity_Text_PtNpc7::
 	.string "Have you been to the POKéMON\n"
-	.string "Mansion? It's on Route 212.\p"
+	.string "Mansion? It's on ROUTE 212.\p"
 	.string "The owner, Mr. Backlot, likes to brag\n"
 	.string "about his herd of rare POKéMON.$"
 
@@ -158,15 +158,15 @@ PastoriaCity_EventScript_SNGrunt::
 	end
 
 PastoriaCity_Text_SNGrunt3::
-	.string "The Galactic grunt ran off toward\n"
+	.string "The GALACTIC grunt ran off toward\n"
 	.string "ROUTE 213 and VALOR LAKEFRONT!$"
 
 PastoriaCity_Text_SNGrunt2::
-	.string "Grunt: What’ve I done, you’re asking?\n"
+	.string "GRUNT: What’ve I done, you’re asking?\n"
 	.string "Well, technically speaking, it wasn’t\l"
 	.string "me.\p"
 	.string "The package that arrived, see, that\n"
-	.string "was a bomb, named the Galactic Bomb.\p"
+	.string "was a bomb, named the GALACTIC Bomb.\p"
 	.string "Me, I was told to push the button. So I\n"
 	.string "did. Like, “Poink!”\p"
 	.string "Oh, that’s right! Mustn’t forget! The\n"
@@ -215,8 +215,8 @@ PastoriaCity_Text_SNWA5::
 	.string "Marsh!$"
 
 PastoriaCity_Text_SNWA4::
-	.string "Wake: WHAAAAT?!\p"
-	.string "No one messes with Pastoria! Not on my\n"
+	.string "WAKE: WHAAAAT?!\p"
+	.string "No one messes with PASTORIA! Not on my\n"
 	.string "watch!\p"
 	.string "{RIVAL}: Hey! Master! Wait!$"
 
@@ -225,21 +225,21 @@ PastoriaCity_Text_SNWA3::
 	.string "you my master! I decided!\p"
 	.string "But forget that! There’s trouble\n"
 	.string "brewing!\p"
-	.string "There’s a Team Galactic goon in front\n"
+	.string "There’s a TEAM GALACTIC goon in front\n"
 	.string "of the Observatory Gate.\p"
 	.string "He said something about using a bomb!$"
 
 PastoriaCity_Text_SNWA2::
-	.string "Wake: ...Listen, kid. I know your father.\n"
+	.string "WAKE: ...Listen, kid. I know your father.\n"
 	.string "I won’t deny that.\p"
 	.string "But I don’t recall ever taking you on\n"
 	.string "as an apprentice. Not in the least.\p"
-	.string "Wake: Besides, you two don’t need me.\p"
+	.string "WAKE: Besides, you two don’t need me.\p"
 	.string "You can become strong on your own\n"
 	.string "without being my apprentice.$"
 
 PastoriaCity_Text_SNWA1::
-	.string "Wake: What’s this racket, then? Oh, it’s\n"
+	.string "WAKE: What’s this racket, then? Oh, it’s\n"
 	.string "you two.\p"
 	.string "{RIVAL}: Oh, Master!$"
 
@@ -296,10 +296,10 @@ PastoriaCity_EventScript_SNBomb::
 
 PastoriaCity_Text_SNWB4::
 	.string "{RIVAL}: Hey! {PLAYER}! You go after\n"
-	.string "that Galactic goon!\p"
+	.string "that GALACTIC goon!\p"
 	.string "I’m staying here like Master said!\n"
 	.string "Gotta keep others from going in!\p"
-	.string "Don’t let that Galactic guy get away!$"
+	.string "Don’t let that GALACTIC guy get away!$"
 
 PastoriaCity_Text_SNDoNotFollow::
 	.string "You two! Do NOT follow me! Don’t let\n"
@@ -308,11 +308,11 @@ PastoriaCity_Text_SNDoNotFollow::
 	.string "that bomb left!$"
 
 PastoriaCity_Text_SNGreatMarsh::
-	.string "Wake: The Great Marsh is invaluable...$"
+	.string "WAKE: The GREAT MARSH is invaluable...$"
 
 PastoriaCity_Text_SNWB3::
-	.string "Grunt: Fweh! That was rough.\p"
-	.string "Wake: YOU! What’ve you done?!$"
+	.string "GRUNT: Fweh! That was rough.\p"
+	.string "WAKE: YOU! What’ve you done?!$"
 
 PastoriaCity_Text_SNWB2::
 	.string "DDDOOOMMM!!$"
@@ -321,7 +321,7 @@ PastoriaCity_Text_SNWB1::
 	.string "{RIVAL}: Hey!\p"
 	.string "What am I, chopped liver? Don’t forget\n"
 	.string "I’m here, too!\p"
-	.string "Wake: So, where’s this Galac...$"
+	.string "WAKE: So, where’s this Galac...$"
 
 PastoriaCity_EventScript_SNPtSCIENTISTM::
 	msgbox PastoriaCity_EventScript_SNPtSCIENTISTM_Text, MSGBOX_NPC
@@ -329,7 +329,7 @@ PastoriaCity_EventScript_SNPtSCIENTISTM::
 
 PastoriaCity_EventScript_SNPtSCIENTISTM_Text::
 	.string "I study rare POKéMON that appear only\n"
-	.string "in the Great Marsh.$"
+	.string "in the GREAT MARSH.$"
 
 PastoriaCity_EventScript_SNPtPARASOLLADY::
 	msgbox PastoriaCity_EventScript_SNPtPARASOLLADY_Text, MSGBOX_NPC
@@ -354,7 +354,7 @@ PastoriaCity_EventScript_SNBarryGuard::
 PastoriaCity_Text_SNWhyArentYouGone::
 	.string "{RIVAL}: What’s the matter?! Why\n"
 	.string "aren’t you gone already?!\p"
-	.string "Go after that Galactic goon!$"
+	.string "Go after that GALACTIC goon!$"
 
 PastoriaCity_EventScript_PtSign1::
 	msgbox PastoriaCity_Text_PtSign1, MSGBOX_SIGN
@@ -368,7 +368,7 @@ PastoriaCity_EventScript_PtSign2::
 	end
 
 PastoriaCity_Text_PtSign2::
-	.string "PASTORIA CITY POKéMON Gym Leader:\n"
+	.string "PASTORIA CITY POKéMON GYM LEADER:\n"
 	.string "CRASHER WAKE The Torrential Masked\l"
 	.string "Master!$"
 
@@ -377,7 +377,7 @@ PastoriaCity_EventScript_PtSign3::
 	end
 
 PastoriaCity_Text_PtSign3::
-	.string "PASTORIA Great Marsh Observatory\n"
+	.string "PASTORIA GREAT MARSH Observatory\n"
 	.string "Gate$"
 
 PastoriaCity_EventScript_PtSign4::
@@ -386,4 +386,4 @@ PastoriaCity_EventScript_PtSign4::
 
 PastoriaCity_Text_PtSign4::
 	.string "Try the Safari Game in PASTORIA's\n"
-	.string "Great Marsh!$"
+	.string "GREAT MARSH!$"

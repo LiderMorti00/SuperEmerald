@@ -18,9 +18,9 @@ MtCoronet_4F_Room1_Text_GruntDefeat::
 	.string "foolish, you say...$"
 
 MtCoronet_4F_Room1_Text_GruntIntro::
-	.string "Team Galactic is all powerful!\p"
+	.string "TEAM GALACTIC is all powerful!\p"
 	.string "Only a fool would show defiance to the\n"
-	.string "mighty might of Team Galactic!$"
+	.string "mighty might of TEAM GALACTIC!$"
 
 MtCoronet_4F_Room1_EventScript_Grunt2::
 	trainerbattle_single TRAINER_VALERIE_4_SINNOH, MtCoronet_4F_Room1_Text_Grunt2Intro, MtCoronet_4F_Room1_Text_Grunt2Defeat
@@ -29,7 +29,7 @@ MtCoronet_4F_Room1_EventScript_Grunt2::
 
 MtCoronet_4F_Room1_Text_Grunt2Post::
 	.string "You can struggle all you want, but you\n"
-	.string "can’t stop Team Galactic alone!\p"
+	.string "can’t stop TEAM GALACTIC alone!\p"
 	.string "It doesn’t matter how many POKéMON\n"
 	.string "you try to use as your tools!$"
 

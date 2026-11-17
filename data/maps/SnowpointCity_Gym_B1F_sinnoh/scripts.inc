@@ -16,7 +16,7 @@ SnowpointCity_Gym_B1F_Text_AntonDefeat::
 
 SnowpointCity_Gym_B1F_Text_AntonIntro::
 	.string "We spend all our time battling in the\n"
-	.string "blizzards of Snowpoint City.\p"
+	.string "blizzards of SNOWPOINT CITY.\p"
 	.string "We’ll show you how it’s toughened us\n"
 	.string "up!$"
 
@@ -34,7 +34,7 @@ SnowpointCity_Gym_B1F_Text_SavannahDefeat::
 	.string "have my warm boots.$"
 
 SnowpointCity_Gym_B1F_Text_SavannahIntro::
-	.string "Is the Gym’s trick floor making you a\n"
+	.string "Is the GYM’s trick floor making you a\n"
 	.string "little hot under the collar?\p"
 	.string "If you can’t maintain your cool in\n"
 	.string "battle, you’ll freeze up.$"
@@ -45,18 +45,18 @@ SnowpointCity_Gym_B1F_EventScript_Alicia::
 	end
 
 SnowpointCity_Gym_B1F_Text_AliciaPost::
-	.string "The Trainer’s feelings... The POKéMON’s\n"
+	.string "The TRAINER’s feelings... The POKéMON’s\n"
 	.string "feelings...\p"
 	.string "If they are one and the same, you will\n"
 	.string "never lose.$"
 
 SnowpointCity_Gym_B1F_Text_AliciaDefeat::
-	.string "That’s right. A good Trainer will win, no\n"
+	.string "That’s right. A good TRAINER will win, no\n"
 	.string "matter what the situation may be.$"
 
 SnowpointCity_Gym_B1F_Text_AliciaIntro::
 	.string "Are you feeling all run-down?\p"
-	.string "But a good Trainer is one who wins no\n"
+	.string "But a good TRAINER is one who wins no\n"
 	.string "matter the situation!$"
 
 SnowpointCity_Gym_B1F_EventScript_Isaiah::
@@ -65,7 +65,7 @@ SnowpointCity_Gym_B1F_EventScript_Isaiah::
 	end
 
 SnowpointCity_Gym_B1F_Text_IsaiahPost::
-	.string "I’ve battled countless Trainers and\n"
+	.string "I’ve battled countless TRAINERS and\n"
 	.string "many more POKéMON still.\p"
 	.string "My spirit has been hardened from all\n"
 	.string "the battles I have fought.$"

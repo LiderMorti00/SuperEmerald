@@ -10,7 +10,7 @@ PastoriaCity_House1_EventScript_PtNpc1::
 	end
 
 PastoriaCity_House1_Text_PtNpc1_0::
-	.string "In the Great Marsh, Quick Trams on\n"
+	.string "In the GREAT MARSH, Quick Trams on\n"
 	.string "rails are used for transportation.\p"
 	.string "They prevent damage to the Great\n"
 	.string "Marsh’s ecosystem.$"
@@ -37,4 +37,4 @@ PastoriaCity_House1_Text_PtNpc3_0::
 	.string "Though the name says “Quick,” their\n"
 	.string "movements are anything but!\p"
 	.string "They’re the Quick Trams that traverse\n"
-	.string "the Great Marsh.$"
+	.string "the GREAT MARSH.$"

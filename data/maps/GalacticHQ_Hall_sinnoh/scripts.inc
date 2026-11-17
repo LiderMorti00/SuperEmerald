@@ -30,12 +30,12 @@ GalacticHQ_Hall_EventScript_SNSpeech::
 	end
 
 GalacticHQ_Hall_EventScript_SNSpeech_T5::
-	.string "Looker: ...Whew.\p"
-	.string "So, that was Cyrus, the boss of the\n"
-	.string "Team Galactic.\p"
+	.string "LOOKER: ...Whew.\p"
+	.string "So, that was CYRUS, the boss of the\n"
+	.string "TEAM GALACTIC.\p"
 	.string "Quite the performance, no? Mesmerizing\n"
 	.string "for one only 27 years old.\p"
-	.string "...But to make a world for Team Galactic\n"
+	.string "...But to make a world for TEAM GALACTIC\n"
 	.string "and none other?\p"
 	.string "It is preposterous. So much so that it\n"
 	.string "makes my head spin.\p"
@@ -49,36 +49,36 @@ GalacticHQ_Hall_EventScript_SNSpeech_T5::
 	.string "care, my friend!$"
 
 GalacticHQ_Hall_EventScript_SNSpeech_T4::
-	.string "Grunts: WROOOAR!!$"
+	.string "GRUNTS: WROOOAR!!$"
 
 GalacticHQ_Hall_EventScript_SNSpeech_T3::
 	.string "Understand it, fellow members!\p"
 	.string "My long-held dreamworld is on the\n"
 	.string "verge of becoming reality.\p"
-	.string "All those headed to Mt. Coronet, and\n"
+	.string "All those headed to MT. CORONET, and\n"
 	.string "those who remain here...\p"
 	.string "Though our missions may differ, our\n"
 	.string "hearts beat as one.\p"
-	.string "Let there be glory for Team Galactic!$"
+	.string "Let there be glory for TEAM GALACTIC!$"
 
 GalacticHQ_Hall_EventScript_SNSpeech_T2::
 	.string "Then, who will change it?\p"
-	.string "Me, Cyrus. And Team Galactic. Yes, all of\n"
+	.string "Me, CYRUS. And TEAM GALACTIC. Yes, all of\n"
 	.string "you.\p"
 	.string "Together we pored over myths and\n"
 	.string "exposed their secrets.\p"
 	.string "Together we captured legendary\n"
 	.string "POKéMON.\p"
-	.string "And now, Team Galactic has obtained\n"
+	.string "And now, TEAM GALACTIC has obtained\n"
 	.string "the energy to change the world!\p"
 	.string "The power of dreams is within our\n"
 	.string "grasp!$"
 
 GalacticHQ_Hall_EventScript_SNSpeech_T1::
-	.string "Cyrus: Fellow members of Team Galactic!\n"
+	.string "CYRUS: Fellow members of TEAM GALACTIC!\n"
 	.string "Hear me!\p"
 	.string "My name, as I appear to you today, is\n"
-	.string "Cyrus.\p"
+	.string "CYRUS.\p"
 	.string "This world of ours is a crude one. In a\n"
 	.string "word, it is incomplete.\p"
 	.string "It has been, and always will be, a\n"
@@ -94,8 +94,8 @@ GalacticHQ_Hall_EventScript_SNSpeech_T1::
 	.string "must change.$"
 
 GalacticHQ_Hall_EventScript_SNSpeech_T0::
-	.string "Looker: Psst! Here. Over here.\p"
-	.string "This gathering of the Team Galactic...\n"
+	.string "LOOKER: Psst! Here. Over here.\p"
+	.string "This gathering of the TEAM GALACTIC...\n"
 	.string "What is the meaning of it?$"
 
 GalacticHQ_Hall_EventScript_SNSpeech_Cyrus::
@@ -107,4 +107,4 @@ GalacticHQ_Hall_EventScript_SNSpeech_Grunt::
 	end
 
 GalacticHQ_Hall_EventScript_SNSpeech_T6::
-	.string "Grunt: Master Cyrus is the greatest!$"
+	.string "GRUNT: Master CYRUS is the greatest!$"

@@ -136,7 +136,7 @@ FuegoIronworks_Inside_EventScript_SNFuego_None::
 
 FuegoIronworks_Inside_EventScript_SNFuego_NoneT::
 	.string "Come back when you find a Star Piece.\n"
-	.string "They’re buried on Iron Island, you\l"
+	.string "They’re buried on IRON ISLAND, you\l"
 	.string "know.$"
 
 FuegoIronworks_Inside_EventScript_SNFuego_Hello::

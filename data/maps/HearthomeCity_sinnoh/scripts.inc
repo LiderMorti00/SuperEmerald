@@ -26,7 +26,7 @@ HearthomeCity_Text_SNHappy::
 	.string "another person.$"
 
 HearthomeCity_Text_SNContestHall::
-	.string "This is the Contest Hall. Please, do go\n"
+	.string "This is the CONTEST Hall. Please, do go\n"
 	.string "inside.$"
 
 HearthomeCity_Text_PtNpc1_Yes::
@@ -43,24 +43,24 @@ HearthomeCity_Text_PtNpc1_No::
 
 HearthomeCity_Text_PtNpc1::
 	.string "I'm visiting here all the way from the\n"
-	.string "Hoenn region.\p"
-	.string "I had been hoping to find the Contest\n"
+	.string "HOENN region.\p"
+	.string "I had been hoping to find the CONTEST\n"
 	.string "Hall, but being new, I lost my way.\p"
 	.string "Fortunately, the local people very\n"
 	.string "kindly led me to my destination.\p"
 	.string "I was impressed by their kindness and\n"
 	.string "generosity to a complete stranger.\p"
 	.string "Now, may I offer you the courtesy of\n"
-	.string "showing you to the Contest Hall?$"
+	.string "showing you to the CONTEST Hall?$"
 
 HearthomeCity_EventScript_PtNpc2::
 	msgbox HearthomeCity_Text_PtNpc2, MSGBOX_NPC
 	end
 
 HearthomeCity_Text_PtNpc2::
-	.string "You're a Trainer, are you?\p"
+	.string "You're a TRAINER, are you?\p"
 	.string "You've got two choices of challenges,\n"
-	.string "either the Gym or a Contest, right?$"
+	.string "either the GYM or a CONTEST, right?$"
 
 HearthomeCity_EventScript_PtNpc3::
 	msgbox HearthomeCity_Text_PtNpc3, MSGBOX_NPC
@@ -78,10 +78,10 @@ HearthomeCity_EventScript_PtNpc4::
 	end
 
 HearthomeCity_Text_PtNpc4::
-	.string "At the Lost Tower, people unburden\n"
+	.string "At the LOST TOWER, people unburden\n"
 	.string "themselves of unbearable sorrow...\p"
 	.string "You'll understand what I mean if you\n"
-	.string "visit the Lost Tower on Route 209.$"
+	.string "visit the LOST TOWER on ROUTE 209.$"
 
 HearthomeCity_EventScript_PtNpc5::
 	msgbox HearthomeCity_Text_PtNpc5, MSGBOX_NPC
@@ -106,8 +106,8 @@ HearthomeCity_EventScript_SNMrGoods::
 	end
 
 HearthomeCity_EventScript_SNMrGoods_Sent::
-	.string "A fine Trainer like you deserves a fine\n"
-	.string "decoration! Decorate your Secret Base\l"
+	.string "A fine TRAINER like you deserves a fine\n"
+	.string "decoration! Decorate your SECRET BASE\l"
 	.string "with it!$"
 
 HearthomeCity_EventScript_SNMrGoods_Full::
@@ -125,8 +125,8 @@ HearthomeCity_EventScript_SNMrGoods_Later::
 	end
 
 HearthomeCity_EventScript_SNMrGoods_LaterT::
-	.string "Show me a Badge from the Hearthome\n"
-	.string "Gym, and I may have something rare for\l"
+	.string "Show me a BADGE from the HEARTHOME\n"
+	.string "GYM, and I may have something rare for\l"
 	.string "you.$"
 
 HearthomeCity_EventScript_SNMrGoods_Hello::
@@ -189,7 +189,7 @@ HearthomeCity_EventScript_PtNpc11::
 HearthomeCity_Text_PtNpc11::
 	.string "I lived in total seclusion up in the\n"
 	.string "mountains for thirty years!\p"
-	.string "I'm going to clean up some Contests\n"
+	.string "I'm going to clean up some CONTESTS\n"
 	.string "with a dance move I came up with!$"
 
 HearthomeCity_EventScript_PtNpc12::
@@ -219,7 +219,7 @@ HearthomeCity_EventScript_PtNpc14::
 HearthomeCity_Text_PtNpc14::
 	.string "I put my Vs. Seeker through its paces\n"
 	.string "a lot.\p"
-	.string "I battled this one intriguing Trainer\n"
+	.string "I battled this one intriguing TRAINER\n"
 	.string "over and over using it.\p"
 	.string "She asked me, “Do you like me?” Like,\n"
 	.string "oops! Hahahahah!$"
@@ -275,12 +275,12 @@ HearthomeCity_EventScript_SNKeira::
 	end
 
 HearthomeCity_EventScript_SNKeira_T3::
-	.string "I’m Keira! I’m a POKéMON Contest Judge.\p"
-	.string "Be sure to drop by the Contest Hall so\n"
+	.string "I’m KEIRA! I’m a POKéMON CONTEST Judge.\p"
+	.string "Be sure to drop by the CONTEST Hall so\n"
 	.string "I can thank you properly!$"
 
 HearthomeCity_EventScript_SNKeira_T2::
-	.string "Baby BUNEARY, back into the Poké Ball\n"
+	.string "Baby BUNEARY, back into the POKé BALL\n"
 	.string "you go!$"
 
 HearthomeCity_EventScript_SNKeira_T1::
@@ -294,15 +294,15 @@ HearthomeCity_EventScript_SNGymBlock::
 	end
 
 HearthomeCity_EventScript_SNGymBlock_T::
-	.string "Hey, there! How’s it going, Trainer?\p"
+	.string "Hey, there! How’s it going, TRAINER?\p"
 	.string "You being here tells me you’re going to\n"
-	.string "challenge the Gym Leader.\p"
+	.string "challenge the GYM LEADER.\p"
 	.string "Well... I hate to break it to you, but\n"
 	.string "that’s impossible.\p"
 	.string "You’re questioning why, and the answer\n"
 	.string "is: she’s not here.\p"
 	.string "Not to worry, though. We know she’s at\n"
-	.string "the Contest Hall.\p"
+	.string "the CONTEST Hall.\p"
 	.string "Come back another time, OK? I’ll be\n"
 	.string "waiting right here.$"
 
@@ -333,7 +333,7 @@ HearthomeCity_EventScript_PtSign4::
 	end
 
 HearthomeCity_Text_PtSign4::
-	.string "POKéMON Contest Hall Calling All\n"
+	.string "POKéMON CONTEST Hall Calling All\n"
 	.string "Enthusiasts!$"
 
 HearthomeCity_EventScript_PtSign5::
@@ -349,14 +349,14 @@ HearthomeCity_EventScript_PtSign6::
 	end
 
 HearthomeCity_Text_PtSign6::
-	.string "POKéMON Fan Club All Trainers Welcome$"
+	.string "POKéMON Fan Club All TRAINERS Welcome$"
 
 HearthomeCity_EventScript_PtSign7::
 	msgbox HearthomeCity_Text_PtSign7, MSGBOX_SIGN
 	end
 
 HearthomeCity_Text_PtSign7::
-	.string "HEARTHOME CITY POKéMON Gym Leader:\n"
+	.string "HEARTHOME CITY POKéMON GYM LEADER:\n"
 	.string "FANTINA The Alluring, Soulful Dancer!$"
 
 HearthomeCity_EventScript_PtSign8::

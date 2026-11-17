@@ -9,12 +9,12 @@ PastoriaCity_Gym_EventScript_Jacky::
 
 PastoriaCity_Gym_Text_JackyPost::
 	.string "Maybe I’ll do like Wake,\p"
-	.string "I mean, Crasher Wake, and wear the same\n"
+	.string "I mean, CRASHER WAKE, and wear the same\n"
 	.string "kind of mask.$"
 
 PastoriaCity_Gym_Text_JackyDefeat::
-	.string "Wow, Trainer! You just might be tougher\n"
-	.string "than our Gym Leader!$"
+	.string "Wow, TRAINER! You just might be tougher\n"
+	.string "than our GYM LEADER!$"
 
 PastoriaCity_Gym_Text_JackyIntro::
 	.string "My body isn’t the only thing I work on\n"
@@ -37,7 +37,7 @@ PastoriaCity_Gym_Text_DamianDefeat::
 PastoriaCity_Gym_Text_DamianIntro::
 	.string "I’ve been around the world, going from\n"
 	.string "place to place training POKéMON.\p"
-	.string "It’s this Gym I’ve chosen to make my\n"
+	.string "It’s this GYM I’ve chosen to make my\n"
 	.string "home!\p"
 	.string "You can bet it’s tough!$"
 
@@ -48,15 +48,15 @@ PastoriaCity_Gym_EventScript_Caitlyn::
 
 PastoriaCity_Gym_Text_CaitlynPost::
 	.string "Maybe I’ll do like Wake...\p"
-	.string "I mean, Crasher Wake, and use the same\n"
+	.string "I mean, CRASHER WAKE, and use the same\n"
 	.string "kinds of POKéMON.$"
 
 PastoriaCity_Gym_Text_CaitlynDefeat::
 	.string "Groan... You’re too much.$"
 
 PastoriaCity_Gym_Text_CaitlynIntro::
-	.string "I want to become a strong Trainer like\n"
-	.string "Crasher Wake!$"
+	.string "I want to become a strong TRAINER like\n"
+	.string "CRASHER WAKE!$"
 
 PastoriaCity_Gym_EventScript_Samson::
 	trainerbattle_single TRAINER_WALTER_4_SINNOH, PastoriaCity_Gym_Text_SamsonIntro, PastoriaCity_Gym_Text_SamsonDefeat
@@ -120,7 +120,7 @@ PastoriaCity_Gym_EventScript_Leader::
 
 PastoriaCity_Gym_Text_LeaderPostBattle::
 	.string "The styles of battling and winning are\n"
-	.string "as widely varied as Trainers are.\p"
+	.string "as widely varied as TRAINERS are.\p"
 	.string "Do you want to know how I battle? I\n"
 	.string "battle so I can say I had fun at\p"
 	.string "the end, whether I win or lose!$"
@@ -155,13 +155,13 @@ PastoriaCity_Gym_EventScript_LeaderDefeated::
 	goto PastoriaCity_Gym_EventScript_GiveTM
 
 PastoriaCity_Gym_Text_ExplainBadge::
-	.string "You need that Fen Badge to use the\n"
+	.string "You need that Fen BADGE to use the\n"
 	.string "hidden move Surf outside of battle.\p"
 	.string "This is a special reward from me in\n"
 	.string "recognition of your team’s power.$"
 
 PastoriaCity_Gym_Text_ReceivedBadge::
-	.string "{PLAYER} received the Fen Badge from\n"
+	.string "{PLAYER} received the Fen BADGE from\n"
 	.string "Wake!$"
 
 PastoriaCity_Gym_Text_LeaderDefeat::
@@ -175,8 +175,8 @@ PastoriaCity_Gym_Text_LeaderIntro::
 	.string "Welcome! I don’t get challenged very\n"
 	.string "often!\p"
 	.string "The glory you are now beholding is the\n"
-	.string "Pastoria Gym Leader!\p"
-	.string "That’s right, I’m Crasher Wake!\p"
+	.string "PASTORIA GYM LEADER!\p"
+	.string "That’s right, I’m CRASHER WAKE!\p"
 	.string "My POKéMON were toughened up by\n"
 	.string "stormy white waters!\p"
 	.string "They’ll take everything you can throw\n"
@@ -201,7 +201,7 @@ PastoriaCity_Gym_EventScript_SNRematch_After::
 	.string "anytime for another match!$"
 
 PastoriaCity_Gym_EventScript_SNRematch_Defeat::
-	.string "Amazing... You really are the Champion!$"
+	.string "Amazing... You really are the CHAMPION!$"
 
 PastoriaCity_Gym_EventScript_SNRematch_Go::
 	.string "Then I won’t hold back this time!$"
@@ -215,7 +215,7 @@ PastoriaCity_Gym_EventScript_SNRematch_NoT::
 	.string "Come back whenever you’re ready!$"
 
 PastoriaCity_Gym_EventScript_SNRematch_Ask::
-	.string "Wake: You became the Champion! Welcome\n"
+	.string "WAKE: You became the CHAMPION! Welcome\n"
 	.string "back!\p"
 	.string "I’ve been training even harder since\n"
 	.string "our last battle.\p"
@@ -231,21 +231,21 @@ PastoriaCity_Gym_EventScript_PtGymGuide::
 	end
 
 PastoriaCity_Gym_Text_SNGuideInfo::
-	.string "Let me tell you about this Gym!\p"
-	.string "The Gym Leader is CRASHER WAKE, the\n"
+	.string "Let me tell you about this GYM!\p"
+	.string "The GYM LEADER is CRASHER WAKE, the\n"
 	.string "masked wrestler who is a master of\l"
 	.string "Water-type POKéMON.\p"
 	.string "He uses GYARADOS, QUAGSIRE and\n"
 	.string "FLOATZEL.\p"
 	.string "Water types are weak to Electric and\n"
 	.string "Grass moves!\p"
-	.string "The whole Gym is a big pool. Follow the\n"
+	.string "The whole GYM is a big pool. Follow the\n"
 	.string "walkway over the water and beat his\l"
-	.string "Trainers to reach the ring at the top!$"
+	.string "TRAINERS to reach the ring at the top!$"
 
 PastoriaCity_Gym_Text_PtGymGuide::
-	.string "The Gym Leader Wake... Uh, I mean\n"
-	.string "Crasher Wake, is a master of\p"
+	.string "The GYM LEADER WAKE... Uh, I mean\n"
+	.string "CRASHER WAKE, is a master of\p"
 	.string "Water-type POKéMON.\p"
 	.string "I’d say you’ve got guts if you try to\n"
 	.string "face down Water types with Fire-\p"
@@ -259,14 +259,14 @@ PastoriaCity_Gym_EventScript_PtGymGuideAfter::
 	end
 
 PastoriaCity_Gym_Text_PtGymGuideAfter::
-	.string "Oh! {PLAYER}! You’ve beaten the Gym\n"
-	.string "Leader!\p"
+	.string "Oh! {PLAYER}! You’ve beaten the GYM\n"
+	.string "LEADER!\p"
 	.string "So, how was it?\p"
 	.string "Did you enjoy your battle against\n"
-	.string "Wake... I mean Crasher Wake?\p"
+	.string "Wake... I mean CRASHER WAKE?\p"
 	.string "Sure, winning is important, but don’t\n"
 	.string "forget to have fun, too!\p"
-	.string "I think Wake... I mean Crasher Wake,\n"
+	.string "I think Wake... I mean CRASHER WAKE,\n"
 	.string "showed you what I mean by fun.$"
 
 PastoriaCity_Gym_EventScript_PtGymStatue::
@@ -277,9 +277,9 @@ PastoriaCity_Gym_EventScript_PtGymStatue::
 	end
 
 PastoriaCity_Gym_Text_PtGymStatue::
-	.string "Pastoria City POKéMON Gym\n"
-	.string "Leader: Crasher Wake\p"
-	.string "Certified Trainers:\n"
+	.string "PASTORIA CITY POKéMON GYM\n"
+	.string "LEADER: CRASHER WAKE\p"
+	.string "Certified TRAINERS:\n"
 	.string "{RIVAL}$"
 
 PastoriaCity_Gym_EventScript_PtGymStatueWon::
@@ -288,8 +288,8 @@ PastoriaCity_Gym_EventScript_PtGymStatueWon::
 	end
 
 PastoriaCity_Gym_Text_PtGymStatueWon::
-	.string "Pastoria City POKéMON Gym\n"
-	.string "Leader: Crasher Wake\p"
-	.string "Certified Trainers:\n"
+	.string "PASTORIA CITY POKéMON GYM\n"
+	.string "LEADER: CRASHER WAKE\p"
+	.string "Certified TRAINERS:\n"
 	.string "{RIVAL}\n"
 	.string "{PLAYER}$"

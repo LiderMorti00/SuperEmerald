@@ -7,7 +7,7 @@ EternaCity_Flat1_F3_EventScript_PtNpc1::
 	end
 
 EternaCity_Flat1_F3_Text_PtNpc1::
-	.string "Badges from Gyms, or Contest wins...\n"
+	.string "BADGES from GYMS, or CONTEST wins...\n"
 	.string "There's more than just one way to be a\l"
 	.string "winner, it seems. Here's hoping you'll\l"
 	.string "find something in which you can be the\l"
@@ -29,7 +29,7 @@ EternaCity_Flat1_F3_Text_PtNpc3::
 	.string "I gathered up a lot of Berries, so I'm\n"
 	.string "trading them in for Accessories.\p"
 	.string "Next stop, HEARTHOME CITY! I'm taking\n"
-	.string "the Contest challenge!$"
+	.string "the CONTEST challenge!$"
 
 EternaCity_Flat1_F3_EventScript_PtNpc4::
 	msgbox EternaCity_Flat1_F3_Text_PtNpc4, MSGBOX_NPC

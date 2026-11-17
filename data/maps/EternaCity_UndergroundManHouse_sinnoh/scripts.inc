@@ -50,7 +50,7 @@ EternaCity_UndergroundManHouse_EventScript_UndergroundMan::
 
 EternaCity_UndergroundManHouse_Text_Man::
 	.string "UNDERGROUND MAN: Hohoh! I've dug\n"
-	.string "tunnels under all of Sinnoh!\p"
+	.string "tunnels under all of SINNOH!\p"
 	.string "The UNDERGROUND is closed to\n"
 	.string "visitors for now, but come back\l"
 	.string "someday. There are treasures down\n"
@@ -98,7 +98,7 @@ EternaCity_UndergroundManHouse_Text_SNSecretPower2::
 EternaCity_UndergroundManHouse_Text_SNSecretPower1::
 	.string "UNDERGROUND MAN: Oh! A new face!\n"
 	.string "I'm the UNDERGROUND MAN!\p"
-	.string "I've dug tunnels under all of Sinnoh,\n"
+	.string "I've dug tunnels under all of SINNOH,\n"
 	.string "and I've made secret hideouts too!\p"
 	.string "You look like you'd enjoy having a\n"
 	.string "secret hideout of your own.\p"
@@ -108,7 +108,7 @@ EternaCity_UndergroundManHouse_Text_SNSecretPower1::
 	.string "make your very own SECRET BASE!$"
 
 EternaCity_UndergroundManHouse_EventScript_SNFossilGift_T2::
-	.string "The scientist at the Oreburgh Mining\n"
+	.string "The scientist at the OREBURGH Mining\n"
 	.string "Museum can bring Fossils back to life!$"
 
 EternaCity_UndergroundManHouse_EventScript_SNFossilGift_T1::

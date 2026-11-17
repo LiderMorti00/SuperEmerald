@@ -90,7 +90,7 @@ Route205_South_Text_NicholasPost::
 	.string "long, I became a Hiker...$"
 
 Route205_South_Text_NicholasDefeat::
-	.string "Having lost his way, the Trainer lost\n"
+	.string "Having lost his way, the TRAINER lost\n"
 	.string "the battle too...$"
 
 Route205_South_Text_NicholasIntro::
@@ -167,9 +167,9 @@ Route205_South_EventScript_BridgeGrunts::
 Route205_South_Text_BridgeGrunts::
 	.string "Our research involves catching\n"
 	.string "POKéMON in the flowery meadows of\l"
-	.string "Floaroma.\p"
+	.string "FLOAROMA.\p"
 	.string "We are also covertly stealing the\n"
-	.string "energy of the Valley Windworks.\p"
+	.string "energy of the VALLEY WINDWORKS.\p"
 	.string "But that is of no concern to you!$"
 
 Route205_South_EventScript_Girl::
@@ -177,7 +177,7 @@ Route205_South_EventScript_Girl::
 	end
 
 Route205_South_Text_Girl::
-	.string "Help, help, Trainer! Please, I want to\n"
+	.string "Help, help, TRAINER! Please, I want to\n"
 	.string "see my papa.\p"
 	.string "My papa and I lived at the Valley\n"
 	.string "Windworks.\p"
@@ -185,7 +185,7 @@ Route205_South_Text_Girl::
 	.string "dressed like spacemen came...\p"
 	.string "They kicked me out, and they’re making\n"
 	.string "my papa do something.\p"
-	.string "Please, Trainer! I miss my papa!$"
+	.string "Please, TRAINER! I miss my papa!$"
 
 Route205_South_EventScript_PtNpc1::
 	msgbox Route205_South_Text_PtNpc1, MSGBOX_NPC

@@ -131,8 +131,8 @@ PokemonLeague_NorthPokemonCenter_1F_EventScript_PtNpc1::
 	end
 
 PokemonLeague_NorthPokemonCenter_1F_Text_PtNpc1::
-	.string "You will be facing the Elite Four of the\n"
-	.string "POKéMON League.\p"
+	.string "You will be facing the ELITE FOUR of the\n"
+	.string "POKéMON LEAGUE.\p"
 	.string "If you can’t beat all four of them in a\n"
 	.string "row, you have to start from\p"
 	.string "the first one again.$"
@@ -168,13 +168,13 @@ PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_After::
 
 PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_Post::
 	.string "{RIVAL}: I guess I’m not ready for the\n"
-	.string "POKéMON League if I’m losing\p"
+	.string "POKéMON LEAGUE if I’m losing\p"
 	.string "to you!\p"
 	.string "Darn it! You watch, though!\p"
 	.string "I’ll get tougher and win my way through\n"
-	.string "the POKéMON League!\p"
+	.string "the POKéMON LEAGUE!\p"
 	.string "Because I’m going to become the\n"
-	.string "Champion, the toughest Trainer!\p"
+	.string "CHAMPION, the toughest TRAINER!\p"
 	.string "{PLAYER}! You’d better not lose to\n"
 	.string "anyone before me!$"
 
@@ -188,7 +188,7 @@ PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_B1::
 PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_Intro::
 	.string "{RIVAL}: Hold it! Don’t go off without\n"
 	.string "me!\p"
-	.string "You’re challenging the POKéMON League,\n"
+	.string "You’re challenging the POKéMON LEAGUE,\n"
 	.string "aren’t you?\p"
 	.string "That’s why I’m here, too.\p"
 	.string "Let’s see who’s more worthy of making\n"
@@ -203,14 +203,14 @@ PokemonLeague_NorthPokemonCenter_1F_EventScript_SNPtLEAGUENORTHACETRAINERF_Text:
 	.string "Nor does it matter how many challenges\n"
 	.string "it takes.\p"
 	.string "I’m never giving up! Not until I beat\n"
-	.string "the Elite Four!$"
+	.string "the ELITE FOUR!$"
 
 PokemonLeague_NorthPokemonCenter_1F_EventScript_SNPtLEAGUENORTHGUITARIST::
 	msgbox PokemonLeague_NorthPokemonCenter_1F_EventScript_SNPtLEAGUENORTHGUITARIST_Text, MSGBOX_NPC
 	end
 
 PokemonLeague_NorthPokemonCenter_1F_EventScript_SNPtLEAGUENORTHGUITARIST_Text::
-	.string "What is the POKéMON League? Don’t\n"
+	.string "What is the POKéMON LEAGUE? Don’t\n"
 	.string "take my word for it.\p"
 	.string "Take the challenge and experience it\n"
 	.string "for yourself!$"

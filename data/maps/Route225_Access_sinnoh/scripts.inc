@@ -10,8 +10,8 @@ Route225_Access_EventScript_PtNpc1::
 	end
 
 Route225_Access_Text_PtNpc1_0::
-	.string "To the north is the Survival Area and\n"
-	.string "then Stark Mountain.\p"
+	.string "To the north is the SURVIVAL AREA and\n"
+	.string "then STARK MOUNTAIN.\p"
 	.string "The road there is too tough for me to\n"
 	.string "travel, though.$"
 
@@ -27,4 +27,4 @@ Route225_Access_Text_PtNpc2_0::
 	.string "In the tall grass past here, you’ll find\n"
 	.string "interesting POKéMON.\p"
 	.string "Like, POKéMON you never see anywhere\n"
-	.string "else in Sinnoh!$"
+	.string "else in SINNOH!$"

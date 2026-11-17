@@ -55,7 +55,7 @@ TwinleafTown_MainHouse_2F_Movement_LeaveRoom::
 
 TwinleafTown_MainHouse_2F_Text_SeeProfRowan::
 	.string "Oh, right, right! We’re going to go see\n"
-	.string "Prof. Rowan and get some POKéMON.\p"
+	.string "PROF. ROWAN and get some POKéMON.\p"
 	.string "I’ll be waiting outside.\p"
 	.string "OK, {PLAYER}? If you’re late, I’m fining\n"
 	.string "you $10 million!$"
@@ -69,7 +69,7 @@ TwinleafTown_MainHouse_2F_Text_NewPC::
 TwinleafTown_MainHouse_2F_Text_ProfRowan::
 	.string "Hey, {PLAYER}! Did you just see the TV?\n"
 	.string "Sure you did!\p"
-	.string "Prof. Rowan’s that really important guy\n"
+	.string "PROF. ROWAN’s that really important guy\n"
 	.string "who studies POKéMON, right?\p"
 	.string "That means he must have lots and lots\n"
 	.string "of POKéMON.\p"

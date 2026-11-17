@@ -9,7 +9,7 @@ Route219_EventScript_Trenton::
 
 Route219_Text_TrentonPost::
 	.string "I wish PROFESSOR ROWAN would give me\n"
-	.string "a Pokédex.\p"
+	.string "a POKéDEX.\p"
 	.string "But that old guy looks kind of scary.$"
 
 Route219_Text_TrentonDefeat::

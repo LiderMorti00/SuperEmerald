@@ -9,7 +9,7 @@ Route217_EventScript_Shawn::
 
 Route217_Text_ShawnPost::
 	.string "Maybe I should've studied at the\n"
-	.string "Trainers' school instead...$"
+	.string "TRAINERS' school instead...$"
 
 Route217_Text_ShawnDefeat::
 	.string "I don't believe it... My techniques\n"
@@ -43,7 +43,7 @@ Route217_EventScript_Bjorn::
 	end
 
 Route217_Text_BjornPost::
-	.string "Trainers get an appreciation of life\n"
+	.string "TRAINERS get an appreciation of life\n"
 	.string "through POKéMON. At least I think so.$"
 
 Route217_EventScript_Bjorn_Rematch::
@@ -204,7 +204,7 @@ Route217_EventScript_SNMaylene::
 
 Route217_EventScript_SNMaylene_T2::
 	.string "Um, are you maybe on your way to\n"
-	.string "Snowpoint City?\p"
+	.string "SNOWPOINT CITY?\p"
 	.string "That’s where I’m going, too.\p"
 	.string "If I use Fly, I can get there instantly,\n"
 	.string "but I’m walking for my training.\p"
@@ -217,7 +217,7 @@ Route217_EventScript_SNMaylene_T2::
 	.string "I’ll be going now. Please take care!$"
 
 Route217_EventScript_SNMaylene_T1::
-	.string "Maylene: Oh, {PLAYER}!$"
+	.string "MAYLENE: Oh, {PLAYER}!$"
 
 Route217_EventScript_SNIceRock::
 	msgbox Route217_EventScript_SNIceRock_Text, MSGBOX_SIGN

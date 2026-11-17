@@ -50,7 +50,7 @@ JubilifeCity_EventScript_PtNpc5::
 JubilifeCity_Text_PtNpc5_Yes::
 	.string "Ah, I see! You are knowledgeable!\p"
 	.string "I imagine you wouldn't see the need to\n"
-	.string "visit the Trainers' School, then.\p"
+	.string "visit the TRAINERS' School, then.\p"
 	.string "But do visit if you have the time. You\n"
 	.string "may discover something new!$"
 
@@ -62,12 +62,12 @@ JubilifeCity_EventScript_PtNpc5_No::
 JubilifeCity_Text_PtNpc5_No::
 	.string "Oh, you're not knowledgeable... But not\n"
 	.string "to worry!\p"
-	.string "There's the Trainers' School.\p"
+	.string "There's the TRAINERS' School.\p"
 	.string "The school will teach you the basics\n"
 	.string "of POKéMON.$"
 
 JubilifeCity_Text_PtNpc5::
-	.string "Hello, Trainer! Do you know much about\n"
+	.string "Hello, TRAINER! Do you know much about\n"
 	.string "POKéMON?$"
 
 JubilifeCity_EventScript_PtNpc6::
@@ -140,7 +140,7 @@ JubilifeCity_EventScript_PtNpc11::
 JubilifeCity_Text_PtNpc11::
 	.string "I made my POKéMON hold an item before\n"
 	.string "trading it.\p"
-	.string "That will make the other Trainer\n"
+	.string "That will make the other TRAINER\n"
 	.string "double happy!$"
 
 JubilifeCity_EventScript_Dawn::
@@ -246,8 +246,8 @@ JubilifeCity_EventScript_Looker::
 	end
 
 JubilifeCity_Text_Looker::
-	.string "Looker: Hello, my friend. Have you\n"
-	.string "visited the Trainers’ School?\p"
+	.string "LOOKER: Hello, my friend. Have you\n"
+	.string "visited the TRAINERS’ School?\p"
 	.string "Did your friend not guide you there\n"
 	.string "earlier?$"
 
@@ -317,7 +317,7 @@ JubilifeCity_EventScript_Sign10::
 
 JubilifeCity_Text_Sign10::
 	.string "JUBILIFE CITY\p"
-	.string "The most modern city in Sinnoh.$"
+	.string "The most modern city in SINNOH.$"
 
 JubilifeCity_EventScript_Sign8::
 	msgbox JubilifeCity_Text_Sign8, MSGBOX_SIGN
@@ -334,7 +334,7 @@ JubilifeCity_EventScript_Sign2::
 
 JubilifeCity_Text_Sign2::
 	.string "POKéNAV COMPANY\p"
-	.string "Making life easier for Trainers\n"
+	.string "Making life easier for TRAINERS\n"
 	.string "everywhere.$"
 
 JubilifeCity_EventScript_Sign3::
@@ -343,7 +343,7 @@ JubilifeCity_EventScript_Sign3::
 
 JubilifeCity_Text_Sign3::
 	.string "JUBILIFE TV\p"
-	.string "Broadcasting across all of Sinnoh.$"
+	.string "Broadcasting across all of SINNOH.$"
 
 JubilifeCity_EventScript_Sign1::
 	msgbox JubilifeCity_Text_Sign1, MSGBOX_SIGN
@@ -351,7 +351,7 @@ JubilifeCity_EventScript_Sign1::
 
 JubilifeCity_Text_Sign1::
 	.string "JUBILIFE CITY\p"
-	.string "The most modern city in Sinnoh.$"
+	.string "The most modern city in SINNOH.$"
 
 JubilifeCity_EventScript_Sign5::
 	msgbox JubilifeCity_Text_Sign5, MSGBOX_SIGN
@@ -359,7 +359,7 @@ JubilifeCity_EventScript_Sign5::
 
 JubilifeCity_Text_Sign5::
 	.string "JUBILIFE CITY\p"
-	.string "The most modern city in Sinnoh.$"
+	.string "The most modern city in SINNOH.$"
 
 JubilifeCity_EventScript_Sign6::
 	msgbox JubilifeCity_Text_Sign6, MSGBOX_SIGN
@@ -367,7 +367,7 @@ JubilifeCity_EventScript_Sign6::
 
 JubilifeCity_Text_Sign6::
 	.string "JUBILIFE CITY\p"
-	.string "The most modern city in Sinnoh.$"
+	.string "The most modern city in SINNOH.$"
 
 JubilifeCity_EventScript_Sign7::
 	msgbox JubilifeCity_Text_Sign7, MSGBOX_SIGN
@@ -375,7 +375,7 @@ JubilifeCity_EventScript_Sign7::
 
 JubilifeCity_Text_Sign7::
 	.string "JUBILIFE CITY\p"
-	.string "The most modern city in Sinnoh.$"
+	.string "The most modern city in SINNOH.$"
 
 JubilifeCity_EventScript_Sign4::
 	msgbox JubilifeCity_Text_Sign4, MSGBOX_SIGN
@@ -390,4 +390,4 @@ JubilifeCity_EventScript_Sign9::
 
 JubilifeCity_Text_Sign9::
 	.string "JUBILIFE CITY\p"
-	.string "The most modern city in Sinnoh.$"
+	.string "The most modern city in SINNOH.$"

@@ -3460,19 +3460,6 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_ROUTE104_PROTOTYPE",
-      "name": "Route104_Prototype_Layout",
-      "width": 1,
-      "height": 1,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
-      "border_filepath": "data/layouts/Route104_Prototype/border.bin",
-      "blockdata_filepath": "data/layouts/Route104_Prototype/map.bin",
-      "border_height": 0,
-      "border_width": 0,
-      "layout_version": "emerald"
-    },
-    {
       "id": "LAYOUT_GRANITE_CAVE_STEVENS_ROOM",
       "name": "GraniteCave_StevensRoom_Layout",
       "width": 15,
@@ -3819,45 +3806,6 @@
       "secondary_tileset": "gTileset_EliteFour",
       "border_filepath": "data/layouts/EverGrandeCity_Hall4/border.bin",
       "blockdata_filepath": "data/layouts/EverGrandeCity_Hall4/map.bin",
-      "border_height": 0,
-      "border_width": 0,
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_AQUA_HIDEOUT_UNUSED_RUBY_MAP1",
-      "name": "AquaHideout_UnusedRubyMap1_Layout",
-      "width": 28,
-      "height": 30,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/AquaHideout_UnusedRubyMap1/border.bin",
-      "blockdata_filepath": "data/layouts/AquaHideout_UnusedRubyMap1/map.bin",
-      "border_height": 0,
-      "border_width": 0,
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_AQUA_HIDEOUT_UNUSED_RUBY_MAP2",
-      "name": "AquaHideout_UnusedRubyMap2_Layout",
-      "width": 62,
-      "height": 24,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/AquaHideout_UnusedRubyMap2/border.bin",
-      "blockdata_filepath": "data/layouts/AquaHideout_UnusedRubyMap2/map.bin",
-      "border_height": 0,
-      "border_width": 0,
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_AQUA_HIDEOUT_UNUSED_RUBY_MAP3",
-      "name": "AquaHideout_UnusedRubyMap3_Layout",
-      "width": 34,
-      "height": 24,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/AquaHideout_UnusedRubyMap3/border.bin",
-      "blockdata_filepath": "data/layouts/AquaHideout_UnusedRubyMap3/map.bin",
       "border_height": 0,
       "border_width": 0,
       "layout_version": "emerald"
@@ -5800,19 +5748,6 @@
       "layout_version": "frlg"
     },
     {
-      "id": "LAYOUT_RECORD_CORNER_FRLG",
-      "name": "RecordCorner_FRLG_Layout",
-      "width": 20,
-      "height": 10,
-      "primary_tileset": "gTileset_BuildingFrlg",
-      "secondary_tileset": "gTileset_CableClub_Frlg",
-      "border_filepath": "data/layouts/RecordCorner_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/RecordCorner_Frlg/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg"
-    },
-    {
       "id": "LAYOUT_BATTLE_COLOSSEUM_4P_FRLG",
       "name": "BattleColosseum_4P_FRLG_Layout",
       "width": 14,
@@ -7594,19 +7529,6 @@
       "layout_version": "frlg"
     },
     {
-      "id": "LAYOUT_ROUTE22_NORTH_ENTRANCE",
-      "name": "Route22_NorthEntrance_Layout",
-      "width": 15,
-      "height": 12,
-      "primary_tileset": "gTileset_BuildingFrlg",
-      "secondary_tileset": "gTileset_GenericBuilding2",
-      "border_filepath": "data/layouts/Route22_NorthEntrance_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/Route22_NorthEntrance_Frlg/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg"
-    },
-    {
       "id": "LAYOUT_ROUTE16_NORTH_ENTRANCE_1F",
       "name": "Route16_NorthEntrance_1F_Layout",
       "width": 13,
@@ -8018,19 +7940,6 @@
       "secondary_tileset": "gTileset_HallOfFame",
       "border_filepath": "data/layouts/UnionRoom_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/UnionRoom_Frlg/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg"
-    },
-    {
-      "id": "LAYOUT_SAFFRON_CITY_POKEMON_TRAINER_FAN_CLUB",
-      "name": "SaffronCity_PokemonTrainerFanClub_Layout",
-      "width": 11,
-      "height": 17,
-      "primary_tileset": "gTileset_BuildingFrlg",
-      "secondary_tileset": "gTileset_FanClubDaycare",
-      "border_filepath": "data/layouts/SaffronCity_PokemonTrainerFanClub_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/SaffronCity_PokemonTrainerFanClub_Frlg/map.bin",
       "border_height": 2,
       "border_width": 2,
       "layout_version": "frlg"
@@ -10662,19 +10571,6 @@
       "layout_version": "frlg"
     },
     {
-      "id": "LAYOUT_GOLDENROD_CITY_DEPARTMENT_STORE_7FNIGHT_HNS",
-      "name": "GoldenrodCity_DepartmentStore_7FNight_hns_Layout",
-      "width": 32,
-      "height": 19,
-      "primary_tileset": "gTileset_Johto_Building_Hns",
-      "secondary_tileset": "gTileset_ShopRooftop_Hns",
-      "border_filepath": "data/layouts/GoldenrodCity_DepartmentStore_7FNight_hns/border.bin",
-      "blockdata_filepath": "data/layouts/GoldenrodCity_DepartmentStore_7FNight_hns/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg"
-    },
-    {
       "id": "LAYOUT_GOLDENROD_CITY_DEPARTMENT_STORE_ELEVATOR_HNS",
       "name": "GoldenrodCity_DepartmentStoreElevator_hns_Layout",
       "width": 5,
@@ -12170,19 +12066,6 @@
       "layout_version": "frlg"
     },
     {
-      "id": "LAYOUT_TIN_TOWER_ROOF_NIGHT_HNS",
-      "name": "TinTower_RoofNight_hns_Layout",
-      "width": 23,
-      "height": 21,
-      "primary_tileset": "gTileset_Johto_Building_Hns",
-      "secondary_tileset": "gTileset_PowerPlant_GeneratorRoom_Hns",
-      "border_filepath": "data/layouts/TinTower_RoofNight_hns/border.bin",
-      "blockdata_filepath": "data/layouts/TinTower_RoofNight_hns/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg"
-    },
-    {
       "id": "LAYOUT_TOHJO_FALLS_CAVERN_HNS",
       "name": "TohjoFalls_Cavern_hns_Layout",
       "width": 78,
@@ -12321,19 +12204,6 @@
       "secondary_tileset": "gTileset_MtSilverSnow_Hns",
       "border_filepath": "data/layouts/MtSilver_SummitDay_hns/border.bin",
       "blockdata_filepath": "data/layouts/MtSilver_SummitDay_hns/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg"
-    },
-    {
-      "id": "LAYOUT_MT_SILVER_SUMMIT_NIGHT_HNS",
-      "name": "MtSilver_SummitNight_hns_Layout",
-      "width": 21,
-      "height": 27,
-      "primary_tileset": "gTileset_Johto_General_Hns",
-      "secondary_tileset": "gTileset_MtSilverSnow_Hns",
-      "border_filepath": "data/layouts/MtSilver_SummitNight_hns/border.bin",
-      "blockdata_filepath": "data/layouts/MtSilver_SummitNight_hns/map.bin",
       "border_height": 2,
       "border_width": 2,
       "layout_version": "frlg"
@@ -13647,19 +13517,6 @@
       "secondary_tileset": "gTileset_Valor_Sinnoh",
       "border_filepath": "data/layouts/LakeValor_Drained_sinnoh/border.bin",
       "blockdata_filepath": "data/layouts/LakeValor_Drained_sinnoh/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_LAKE_ACUITY_LOW_WATER_SINNOH",
-      "name": "LakeAcuity_LowWater_Layout_Sinnoh",
-      "width": 48,
-      "height": 52,
-      "primary_tileset": "gTileset_General_Sinnoh",
-      "secondary_tileset": "gTileset_Snowpoint_Sinnoh",
-      "border_filepath": "data/layouts/LakeAcuity_LowWater_sinnoh/border.bin",
-      "blockdata_filepath": "data/layouts/LakeAcuity_LowWater_sinnoh/map.bin",
       "border_height": 2,
       "border_width": 2,
       "layout_version": "emerald"
@@ -15069,19 +14926,6 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_ROUTE226_ACCESS_SINNOH",
-      "name": "Route226_Access_Layout_Sinnoh",
-      "width": 13,
-      "height": 9,
-      "primary_tileset": "gTileset_Building_Sinnoh",
-      "secondary_tileset": "gTileset_Pasos_Sinnoh",
-      "border_filepath": "data/layouts/Route226_Access_sinnoh/border.bin",
-      "blockdata_filepath": "data/layouts/Route226_Access_sinnoh/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "emerald"
-    },
-    {
       "id": "LAYOUT_HOTEL_GRAND_LAKE_SINNOH",
       "name": "HotelGrandLake_Layout_Sinnoh",
       "width": 15,
@@ -16390,19 +16234,6 @@
       "secondary_tileset": "gTileset_Facility_Sinnoh",
       "border_filepath": "data/layouts/EternaCity_GalacticBuilding_B1F_sinnoh/border.bin",
       "blockdata_filepath": "data/layouts/EternaCity_GalacticBuilding_B1F_sinnoh/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "emerald"
-    },
-    {
-      "id": "LAYOUT_ETERNA_CITY_GALACTIC_BUILDING_ROTOMS_ROOM_SINNOH",
-      "name": "EternaCity_GalacticBuilding_RotomsRoom_Layout_Sinnoh",
-      "width": 18,
-      "height": 15,
-      "primary_tileset": "gTileset_Building_Sinnoh",
-      "secondary_tileset": "gTileset_Facility_Sinnoh",
-      "border_filepath": "data/layouts/EternaCity_GalacticBuilding_RotomsRoom_sinnoh/border.bin",
-      "blockdata_filepath": "data/layouts/EternaCity_GalacticBuilding_RotomsRoom_sinnoh/map.bin",
       "border_height": 2,
       "border_width": 2,
       "layout_version": "emerald"

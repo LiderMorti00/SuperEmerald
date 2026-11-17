@@ -4567,31 +4567,39 @@ Cry_Arceus::
 .endif @ P_FAMILY_ARCEUS
 
 .if P_FAMILY_VICTINI == TRUE
+.if P_FAMILY_VICTINI
 	.align 2
 Cry_Victini::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/victini.bin"
 .endif
+.endif @ P_FAMILY_VICTINI (Super Emerald)
 .endif @ P_FAMILY_VICTINI
 
 .if P_FAMILY_SNIVY == TRUE
+.if P_FAMILY_SNIVY
 	.align 2
 Cry_Snivy::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/snivy.bin"
 .endif
+.endif @ P_FAMILY_SNIVY (Super Emerald)
 
+.if P_FAMILY_SNIVY
 	.align 2
 Cry_Servine::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/servine.bin"
 .endif
+.endif @ P_FAMILY_SNIVY (Super Emerald)
 
+.if P_FAMILY_SNIVY
 	.align 2
 Cry_Serperior::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/serperior.bin"
 .endif
+.endif @ P_FAMILY_SNIVY (Super Emerald)
 .endif @ P_FAMILY_SNIVY
 
 .if P_FAMILY_TEPIG == TRUE
@@ -4643,17 +4651,21 @@ Cry_Samurott::
 .endif @ P_FAMILY_OSHAWOTT
 
 .if P_FAMILY_PATRAT == TRUE
+.if P_FAMILY_PATRAT
 	.align 2
 Cry_Patrat::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/patrat.bin"
 .endif
+.endif @ P_FAMILY_PATRAT (Super Emerald)
 
+.if P_FAMILY_PATRAT
 	.align 2
 Cry_Watchog::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/watchog.bin"
 .endif
+.endif @ P_FAMILY_PATRAT (Super Emerald)
 .endif @ P_FAMILY_PATRAT
 
 .if P_FAMILY_LILLIPUP == TRUE
@@ -4677,17 +4689,21 @@ Cry_Stoutland::
 .endif @ P_FAMILY_LILLIPUP
 
 .if P_FAMILY_PURRLOIN == TRUE
+.if P_FAMILY_PURRLOIN
 	.align 2
 Cry_Purrloin::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/purrloin.bin"
 .endif
+.endif @ P_FAMILY_PURRLOIN (Super Emerald)
 
+.if P_FAMILY_PURRLOIN
 	.align 2
 Cry_Liepard::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/liepard.bin"
 .endif
+.endif @ P_FAMILY_PURRLOIN (Super Emerald)
 .endif @ P_FAMILY_PURRLOIN
 
 .if P_FAMILY_PANSAGE == TRUE
@@ -4705,17 +4721,21 @@ Cry_Simisage::
 .endif @ P_FAMILY_PANSAGE
 
 .if P_FAMILY_PANSEAR == TRUE
+.if P_FAMILY_PANSEAR
 	.align 2
 Cry_Pansear::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pansear.bin"
 .endif
+.endif @ P_FAMILY_PANSEAR (Super Emerald)
 
+.if P_FAMILY_PANSEAR
 	.align 2
 Cry_Simisear::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/simisear.bin"
 .endif
+.endif @ P_FAMILY_PANSEAR (Super Emerald)
 .endif @ P_FAMILY_PANSEAR
 
 .if P_FAMILY_PANPOUR == TRUE
@@ -4767,17 +4787,21 @@ Cry_Unfezant::
 .endif @ P_FAMILY_PIDOVE
 
 .if P_FAMILY_BLITZLE == TRUE
+.if P_FAMILY_BLITZLE
 	.align 2
 Cry_Blitzle::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/blitzle.bin"
 .endif
+.endif @ P_FAMILY_BLITZLE (Super Emerald)
 
+.if P_FAMILY_BLITZLE
 	.align 2
 Cry_Zebstrika::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zebstrika.bin"
 .endif
+.endif @ P_FAMILY_BLITZLE (Super Emerald)
 .endif @ P_FAMILY_BLITZLE
 
 .if P_FAMILY_ROGGENROLA == TRUE
@@ -4801,17 +4825,21 @@ Cry_Gigalith::
 .endif @ P_FAMILY_ROGGENROLA
 
 .if P_FAMILY_WOOBAT == TRUE
+.if P_FAMILY_WOOBAT
 	.align 2
 Cry_Woobat::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/woobat.bin"
 .endif
+.endif @ P_FAMILY_WOOBAT (Super Emerald)
 
+.if P_FAMILY_WOOBAT
 	.align 2
 Cry_Swoobat::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/swoobat.bin"
 .endif
+.endif @ P_FAMILY_WOOBAT (Super Emerald)
 .endif @ P_FAMILY_WOOBAT
 
 .if P_FAMILY_DRILBUR == TRUE
@@ -4837,18 +4865,22 @@ Cry_ExcadrillMega::
 .endif @ P_FAMILY_DRILBUR
 
 .if P_FAMILY_AUDINO == TRUE
+.if P_FAMILY_AUDINO
 	.align 2
 Cry_Audino::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/audino.bin"
 .endif
+.endif @ P_FAMILY_AUDINO (Super Emerald)
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+.if P_FAMILY_AUDINO
 	.align 2
 Cry_AudinoMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/audino_mega.bin"
 .endif
+.endif @ P_FAMILY_AUDINO (Super Emerald)
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_AUDINO
 
@@ -4971,17 +5003,21 @@ Cry_Whimsicott::
 .endif @ P_FAMILY_COTTONEE
 
 .if P_FAMILY_PETILIL == TRUE
+.if P_FAMILY_PETILIL
 	.align 2
 Cry_Petilil::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/petilil.bin"
 .endif
+.endif @ P_FAMILY_PETILIL (Super Emerald)
 
+.if P_FAMILY_PETILIL
 	.align 2
 Cry_Lilligant::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/lilligant.bin"
 .endif
+.endif @ P_FAMILY_PETILIL (Super Emerald)
 .endif @ P_FAMILY_PETILIL
 
 .if P_FAMILY_BASCULIN == TRUE
@@ -5167,17 +5203,21 @@ Cry_Zoroark::
 .endif @ P_FAMILY_ZORUA
 
 .if P_FAMILY_MINCCINO == TRUE
+.if P_FAMILY_MINCCINO
 	.align 2
 Cry_Minccino::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/minccino.bin"
 .endif
+.endif @ P_FAMILY_MINCCINO (Super Emerald)
 
+.if P_FAMILY_MINCCINO
 	.align 2
 Cry_Cinccino::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cinccino.bin"
 .endif
+.endif @ P_FAMILY_MINCCINO (Super Emerald)
 .endif @ P_FAMILY_MINCCINO
 
 .if P_FAMILY_GOTHITA == TRUE
@@ -5277,17 +5317,21 @@ Cry_Emolga::
 .endif @ P_FAMILY_EMOLGA
 
 .if P_FAMILY_KARRABLAST == TRUE
+.if P_FAMILY_KARRABLAST
 	.align 2
 Cry_Karrablast::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/karrablast.bin"
 .endif
+.endif @ P_FAMILY_KARRABLAST (Super Emerald)
 
+.if P_FAMILY_KARRABLAST
 	.align 2
 Cry_Escavalier::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/escavalier.bin"
 .endif
+.endif @ P_FAMILY_KARRABLAST (Super Emerald)
 .endif @ P_FAMILY_KARRABLAST
 
 .if P_FAMILY_FOONGUS == TRUE
@@ -5375,30 +5419,38 @@ Cry_Klinklang::
 .endif @ P_FAMILY_KLINK
 
 .if P_FAMILY_TYNAMO == TRUE
+.if P_FAMILY_TYNAMO
 	.align 2
 Cry_Tynamo::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tynamo.bin"
 .endif
+.endif @ P_FAMILY_TYNAMO (Super Emerald)
 
+.if P_FAMILY_TYNAMO
 	.align 2
 Cry_Eelektrik::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/eelektrik.bin"
 .endif
+.endif @ P_FAMILY_TYNAMO (Super Emerald)
 
+.if P_FAMILY_TYNAMO
 	.align 2
 Cry_Eelektross::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/eelektross.bin"
 .endif
+.endif @ P_FAMILY_TYNAMO (Super Emerald)
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+.if P_FAMILY_TYNAMO
 	.align 2
 Cry_EelektrossMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/eelektross_mega.bin"
 .endif
+.endif @ P_FAMILY_TYNAMO (Super Emerald)
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_TYNAMO
 
@@ -5479,25 +5531,31 @@ Cry_Beartic::
 .endif @ P_FAMILY_CUBCHOO
 
 .if P_FAMILY_CRYOGONAL == TRUE
+.if P_FAMILY_CRYOGONAL
 	.align 2
 Cry_Cryogonal::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cryogonal.bin"
 .endif
+.endif @ P_FAMILY_CRYOGONAL (Super Emerald)
 .endif @ P_FAMILY_CRYOGONAL
 
 .if P_FAMILY_SHELMET == TRUE
+.if P_FAMILY_SHELMET
 	.align 2
 Cry_Shelmet::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/shelmet.bin"
 .endif
+.endif @ P_FAMILY_SHELMET (Super Emerald)
 
+.if P_FAMILY_SHELMET
 	.align 2
 Cry_Accelgor::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/accelgor.bin"
 .endif
+.endif @ P_FAMILY_SHELMET (Super Emerald)
 .endif @ P_FAMILY_SHELMET
 
 .if P_FAMILY_STUNFISK == TRUE
@@ -5661,27 +5719,33 @@ Cry_Volcarona::
 .endif @ P_FAMILY_LARVESTA
 
 .if P_FAMILY_COBALION == TRUE
+.if P_FAMILY_COBALION
 	.align 2
 Cry_Cobalion::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cobalion.bin"
 .endif
+.endif @ P_FAMILY_COBALION (Super Emerald)
 .endif @ P_FAMILY_COBALION
 
 .if P_FAMILY_TERRAKION == TRUE
+.if P_FAMILY_TERRAKION
 	.align 2
 Cry_Terrakion::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/terrakion.bin"
 .endif
+.endif @ P_FAMILY_TERRAKION (Super Emerald)
 .endif @ P_FAMILY_TERRAKION
 
 .if P_FAMILY_VIRIZION == TRUE
+.if P_FAMILY_VIRIZION
 	.align 2
 Cry_Virizion::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/virizion.bin"
 .endif
+.endif @ P_FAMILY_VIRIZION (Super Emerald)
 .endif @ P_FAMILY_VIRIZION
 
 .if P_FAMILY_TORNADUS == TRUE
@@ -5713,19 +5777,23 @@ Cry_ThundurusTherian::
 .endif @ P_FAMILY_THUNDURUS
 
 .if P_FAMILY_RESHIRAM == TRUE
+.if P_FAMILY_RESHIRAM
 	.align 2
 Cry_Reshiram::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/reshiram.bin"
 .endif
+.endif @ P_FAMILY_RESHIRAM (Super Emerald)
 .endif @ P_FAMILY_RESHIRAM
 
 .if P_FAMILY_ZEKROM == TRUE
+.if P_FAMILY_ZEKROM
 	.align 2
 Cry_Zekrom::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zekrom.bin"
 .endif
+.endif @ P_FAMILY_ZEKROM (Super Emerald)
 .endif @ P_FAMILY_ZEKROM
 
 .if P_FAMILY_LANDORUS == TRUE
@@ -5743,50 +5811,62 @@ Cry_LandorusTherian::
 .endif @ P_FAMILY_LANDORUS
 
 .if P_FAMILY_KYUREM == TRUE
+.if P_FAMILY_KYUREM
 	.align 2
 Cry_Kyurem::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/kyurem.bin"
 .endif
+.endif @ P_FAMILY_KYUREM (Super Emerald)
 
 .if P_FUSION_FORMS == TRUE
+.if P_FAMILY_KYUREM
 	.align 2
 Cry_KyuremWhite::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/kyurem_white.bin"
 .endif
+.endif @ P_FAMILY_KYUREM (Super Emerald)
 
+.if P_FAMILY_KYUREM
 	.align 2
 Cry_KyuremBlack::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/kyurem_black.bin"
 .endif
+.endif @ P_FAMILY_KYUREM (Super Emerald)
 
 .endif @ P_FUSION_FORMS
 .endif @ P_FAMILY_KYUREM
 
 .if P_FAMILY_KELDEO == TRUE
+.if P_FAMILY_KELDEO
 	.align 2
 Cry_Keldeo::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/keldeo.bin"
 .endif
+.endif @ P_FAMILY_KELDEO (Super Emerald)
 .endif @ P_FAMILY_KELDEO
 
 .if P_FAMILY_MELOETTA == TRUE
+.if P_FAMILY_MELOETTA
 	.align 2
 Cry_Meloetta::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/meloetta.bin"
 .endif
+.endif @ P_FAMILY_MELOETTA (Super Emerald)
 .endif @ P_FAMILY_MELOETTA
 
 .if P_FAMILY_GENESECT == TRUE
+.if P_FAMILY_GENESECT
 	.align 2
 Cry_Genesect::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/genesect.bin"
 .endif
+.endif @ P_FAMILY_GENESECT (Super Emerald)
 .endif @ P_FAMILY_GENESECT
 
 .if P_FAMILY_CHESPIN == TRUE
@@ -5818,30 +5898,38 @@ Cry_ChesnaughtMega::
 .endif @ P_FAMILY_CHESPIN
 
 .if P_FAMILY_FENNEKIN == TRUE
+.if P_FAMILY_FENNEKIN
 	.align 2
 Cry_Fennekin::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/fennekin.bin"
 .endif
+.endif @ P_FAMILY_FENNEKIN (Super Emerald)
 
+.if P_FAMILY_FENNEKIN
 	.align 2
 Cry_Braixen::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/braixen.bin"
 .endif
+.endif @ P_FAMILY_FENNEKIN (Super Emerald)
 
+.if P_FAMILY_FENNEKIN
 	.align 2
 Cry_Delphox::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/delphox.bin"
 .endif
+.endif @ P_FAMILY_FENNEKIN (Super Emerald)
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+.if P_FAMILY_FENNEKIN
 	.align 2
 Cry_DelphoxMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/delphox_mega.bin"
 .endif
+.endif @ P_FAMILY_FENNEKIN (Super Emerald)
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_FENNEKIN
 
@@ -5984,17 +6072,21 @@ Cry_Florges::
 .endif @ P_FAMILY_FLABEBE
 
 .if P_FAMILY_SKIDDO == TRUE
+.if P_FAMILY_SKIDDO
 	.align 2
 Cry_Skiddo::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/skiddo.bin"
 .endif
+.endif @ P_FAMILY_SKIDDO (Super Emerald)
 
+.if P_FAMILY_SKIDDO
 	.align 2
 Cry_Gogoat::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/gogoat.bin"
 .endif
+.endif @ P_FAMILY_SKIDDO (Super Emerald)
 .endif @ P_FAMILY_SKIDDO
 
 .if P_FAMILY_PANCHAM == TRUE
@@ -6042,23 +6134,29 @@ Cry_MeowsticMega::
 .endif @ P_FAMILY_ESPURR
 
 .if P_FAMILY_HONEDGE == TRUE
+.if P_FAMILY_HONEDGE
 	.align 2
 Cry_Honedge::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/honedge.bin"
 .endif
+.endif @ P_FAMILY_HONEDGE (Super Emerald)
 
+.if P_FAMILY_HONEDGE
 	.align 2
 Cry_Doublade::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/doublade.bin"
 .endif
+.endif @ P_FAMILY_HONEDGE (Super Emerald)
 
+.if P_FAMILY_HONEDGE
 	.align 2
 Cry_Aegislash::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/aegislash.bin"
 .endif
+.endif @ P_FAMILY_HONEDGE (Super Emerald)
 .endif @ P_FAMILY_HONEDGE
 
 .if P_FAMILY_SPRITZEE == TRUE
@@ -6244,23 +6342,29 @@ Cry_Carbink::
 .endif @ P_FAMILY_CARBINK
 
 .if P_FAMILY_GOOMY == TRUE
+.if P_FAMILY_GOOMY
 	.align 2
 Cry_Goomy::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/goomy.bin"
 .endif
+.endif @ P_FAMILY_GOOMY (Super Emerald)
 
+.if P_FAMILY_GOOMY
 	.align 2
 Cry_Sliggoo::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/sliggoo.bin"
 .endif
+.endif @ P_FAMILY_GOOMY (Super Emerald)
 
+.if P_FAMILY_GOOMY
 	.align 2
 Cry_Goodra::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/goodra.bin"
 .endif
+.endif @ P_FAMILY_GOOMY (Super Emerald)
 .endif @ P_FAMILY_GOOMY
 
 .if P_FAMILY_KLEFKI == TRUE
@@ -6312,17 +6416,21 @@ Cry_GourgeistSuper::
 .endif @ P_FAMILY_PUMPKABOO
 
 .if P_FAMILY_BERGMITE == TRUE
+.if P_FAMILY_BERGMITE
 	.align 2
 Cry_Bergmite::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/bergmite.bin"
 .endif
+.endif @ P_FAMILY_BERGMITE (Super Emerald)
 
+.if P_FAMILY_BERGMITE
 	.align 2
 Cry_Avalugg::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/avalugg.bin"
 .endif
+.endif @ P_FAMILY_BERGMITE (Super Emerald)
 .endif @ P_FAMILY_BERGMITE
 
 .if P_FAMILY_NOIBAT == TRUE
@@ -6340,85 +6448,107 @@ Cry_Noivern::
 .endif @ P_FAMILY_NOIBAT
 
 .if P_FAMILY_XERNEAS == TRUE
+.if P_FAMILY_XERNEAS
 	.align 2
 Cry_Xerneas::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/xerneas.bin"
 .endif
+.endif @ P_FAMILY_XERNEAS (Super Emerald)
 .endif @ P_FAMILY_XERNEAS
 
 .if P_FAMILY_YVELTAL == TRUE
+.if P_FAMILY_YVELTAL
 	.align 2
 Cry_Yveltal::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/yveltal.bin"
 .endif
+.endif @ P_FAMILY_YVELTAL (Super Emerald)
 .endif @ P_FAMILY_YVELTAL
 
 .if P_FAMILY_ZYGARDE == TRUE
+.if P_FAMILY_ZYGARDE
 	.align 2
 Cry_Zygarde50::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zygarde_50.bin"
 .endif
+.endif @ P_FAMILY_ZYGARDE (Super Emerald)
 
+.if P_FAMILY_ZYGARDE
 	.align 2
 Cry_Zygarde10::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zygarde_10.bin"
 .endif
+.endif @ P_FAMILY_ZYGARDE (Super Emerald)
 
+.if P_FAMILY_ZYGARDE
 	.align 2
 Cry_ZygardeComplete::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zygarde_complete.bin"
 .endif
+.endif @ P_FAMILY_ZYGARDE (Super Emerald)
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+.if P_FAMILY_ZYGARDE
 	.align 2
 Cry_ZygardeMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zygarde_mega.bin"
 .endif
+.endif @ P_FAMILY_ZYGARDE (Super Emerald)
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_ZYGARDE
 
 .if P_FAMILY_DIANCIE == TRUE
+.if P_FAMILY_DIANCIE
 	.align 2
 Cry_Diancie::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/diancie.bin"
 .endif
+.endif @ P_FAMILY_DIANCIE (Super Emerald)
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+.if P_FAMILY_DIANCIE
 	.align 2
 Cry_DiancieMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/diancie_mega.bin"
 .endif
+.endif @ P_FAMILY_DIANCIE (Super Emerald)
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_DIANCIE
 
 .if P_FAMILY_HOOPA == TRUE
+.if P_FAMILY_HOOPA
 	.align 2
 Cry_HoopaConfined::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/hoopa_confined.bin"
 .endif
+.endif @ P_FAMILY_HOOPA (Super Emerald)
 
+.if P_FAMILY_HOOPA
 	.align 2
 Cry_HoopaUnbound::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/hoopa_unbound.bin"
 .endif
+.endif @ P_FAMILY_HOOPA (Super Emerald)
 .endif @ P_FAMILY_HOOPA
 
 .if P_FAMILY_VOLCANION == TRUE
+.if P_FAMILY_VOLCANION
 	.align 2
 Cry_Volcanion::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/volcanion.bin"
 .endif
+.endif @ P_FAMILY_VOLCANION (Super Emerald)
 .endif @ P_FAMILY_VOLCANION
 
 .if P_FAMILY_ROWLET == TRUE
@@ -6442,23 +6572,29 @@ Cry_Decidueye::
 .endif @ P_FAMILY_ROWLET
 
 .if P_FAMILY_LITTEN == TRUE
+.if P_FAMILY_LITTEN
 	.align 2
 Cry_Litten::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/litten.bin"
 .endif
+.endif @ P_FAMILY_LITTEN (Super Emerald)
 
+.if P_FAMILY_LITTEN
 	.align 2
 Cry_Torracat::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/torracat.bin"
 .endif
+.endif @ P_FAMILY_LITTEN (Super Emerald)
 
+.if P_FAMILY_LITTEN
 	.align 2
 Cry_Incineroar::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/incineroar.bin"
 .endif
+.endif @ P_FAMILY_LITTEN (Super Emerald)
 .endif @ P_FAMILY_LITTEN
 
 .if P_FAMILY_POPPLIO == TRUE
@@ -6502,17 +6638,21 @@ Cry_Toucannon::
 .endif @ P_FAMILY_PIKIPEK
 
 .if P_FAMILY_YUNGOOS == TRUE
+.if P_FAMILY_YUNGOOS
 	.align 2
 Cry_Yungoos::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/yungoos.bin"
 .endif
+.endif @ P_FAMILY_YUNGOOS (Super Emerald)
 
+.if P_FAMILY_YUNGOOS
 	.align 2
 Cry_Gumshoos::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/gumshoos.bin"
 .endif
+.endif @ P_FAMILY_YUNGOOS (Super Emerald)
 .endif @ P_FAMILY_YUNGOOS
 
 .if P_FAMILY_GRUBBIN == TRUE
@@ -6624,17 +6764,21 @@ Cry_LycanrocDusk::
 .endif @ P_FAMILY_ROCKRUFF
 
 .if P_FAMILY_WISHIWASHI == TRUE
+.if P_FAMILY_WISHIWASHI
 	.align 2
 Cry_WishiwashiSolo::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/wishiwashi_solo.bin"
 .endif
+.endif @ P_FAMILY_WISHIWASHI (Super Emerald)
 
+.if P_FAMILY_WISHIWASHI
 	.align 2
 Cry_WishiwashiSchool::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/wishiwashi_school.bin"
 .endif
+.endif @ P_FAMILY_WISHIWASHI (Super Emerald)
 .endif @ P_FAMILY_WISHIWASHI
 
 .if P_FAMILY_MAREANIE == TRUE
@@ -6680,79 +6824,101 @@ Cry_Araquanid::
 .endif @ P_FAMILY_DEWPIDER
 
 .if P_FAMILY_FOMANTIS == TRUE
+.if P_FAMILY_FOMANTIS
 	.align 2
 Cry_Fomantis::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/fomantis.bin"
 .endif
+.endif @ P_FAMILY_FOMANTIS (Super Emerald)
 
+.if P_FAMILY_FOMANTIS
 	.align 2
 Cry_Lurantis::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/lurantis.bin"
 .endif
+.endif @ P_FAMILY_FOMANTIS (Super Emerald)
 .endif @ P_FAMILY_FOMANTIS
 
 .if P_FAMILY_MORELULL == TRUE
+.if P_FAMILY_MORELULL
 	.align 2
 Cry_Morelull::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/morelull.bin"
 .endif
+.endif @ P_FAMILY_MORELULL (Super Emerald)
 
+.if P_FAMILY_MORELULL
 	.align 2
 Cry_Shiinotic::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/shiinotic.bin"
 .endif
+.endif @ P_FAMILY_MORELULL (Super Emerald)
 .endif @ P_FAMILY_MORELULL
 
 .if P_FAMILY_SALANDIT == TRUE
+.if P_FAMILY_SALANDIT
 	.align 2
 Cry_Salandit::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/salandit.bin"
 .endif
+.endif @ P_FAMILY_SALANDIT (Super Emerald)
 
+.if P_FAMILY_SALANDIT
 	.align 2
 Cry_Salazzle::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/salazzle.bin"
 .endif
+.endif @ P_FAMILY_SALANDIT (Super Emerald)
 .endif @ P_FAMILY_SALANDIT
 
 .if P_FAMILY_STUFFUL == TRUE
+.if P_FAMILY_STUFFUL
 	.align 2
 Cry_Stufful::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/stufful.bin"
 .endif
+.endif @ P_FAMILY_STUFFUL (Super Emerald)
 
+.if P_FAMILY_STUFFUL
 	.align 2
 Cry_Bewear::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/bewear.bin"
 .endif
+.endif @ P_FAMILY_STUFFUL (Super Emerald)
 .endif @ P_FAMILY_STUFFUL
 
 .if P_FAMILY_BOUNSWEET == TRUE
+.if P_FAMILY_BOUNSWEET
 	.align 2
 Cry_Bounsweet::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/bounsweet.bin"
 .endif
+.endif @ P_FAMILY_BOUNSWEET (Super Emerald)
 
+.if P_FAMILY_BOUNSWEET
 	.align 2
 Cry_Steenee::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/steenee.bin"
 .endif
+.endif @ P_FAMILY_BOUNSWEET (Super Emerald)
 
+.if P_FAMILY_BOUNSWEET
 	.align 2
 Cry_Tsareena::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tsareena.bin"
 .endif
+.endif @ P_FAMILY_BOUNSWEET (Super Emerald)
 .endif @ P_FAMILY_BOUNSWEET
 
 .if P_FAMILY_COMFEY == TRUE
@@ -6772,11 +6938,13 @@ Cry_Oranguru::
 .endif @ P_FAMILY_ORANGURU
 
 .if P_FAMILY_PASSIMIAN == TRUE
+.if P_FAMILY_PASSIMIAN
 	.align 2
 Cry_Passimian::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/passimian.bin"
 .endif
+.endif @ P_FAMILY_PASSIMIAN (Super Emerald)
 .endif @ P_FAMILY_PASSIMIAN
 
 .if P_FAMILY_WIMPOD == TRUE
@@ -6824,25 +6992,31 @@ Cry_Pyukumuku::
 .endif @ P_FAMILY_PYUKUMUKU
 
 .if P_FAMILY_TYPE_NULL == TRUE
+.if P_FAMILY_TYPE_NULL
 	.align 2
 Cry_TypeNull::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/type_null.bin"
 .endif
+.endif @ P_FAMILY_TYPE_NULL (Super Emerald)
 
+.if P_FAMILY_TYPE_NULL
 	.align 2
 Cry_Silvally::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/silvally.bin"
 .endif
+.endif @ P_FAMILY_TYPE_NULL (Super Emerald)
 .endif @ P_FAMILY_TYPE_NULL
 
 .if P_FAMILY_MINIOR == TRUE
+.if P_FAMILY_MINIOR
 	.align 2
 Cry_Minior::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/minior.bin"
 .endif
+.endif @ P_FAMILY_MINIOR (Super Emerald)
 .endif @ P_FAMILY_MINIOR
 
 .if P_FAMILY_KOMALA == TRUE
@@ -6886,276 +7060,348 @@ Cry_Bruxish::
 .endif @ P_FAMILY_BRUXISH
 
 .if P_FAMILY_DRAMPA == TRUE
+.if P_FAMILY_DRAMPA
 	.align 2
 Cry_Drampa::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/drampa.bin"
 .endif
+.endif @ P_FAMILY_DRAMPA (Super Emerald)
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+.if P_FAMILY_DRAMPA
 	.align 2
 Cry_DrampaMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/drampa_mega.bin"
 .endif
+.endif @ P_FAMILY_DRAMPA (Super Emerald)
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_DRAMPA
 
 .if P_FAMILY_DHELMISE == TRUE
+.if P_FAMILY_DHELMISE
 	.align 2
 Cry_Dhelmise::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/dhelmise.bin"
 .endif
+.endif @ P_FAMILY_DHELMISE (Super Emerald)
 .endif @ P_FAMILY_DHELMISE
 
 .if P_FAMILY_JANGMO_O == TRUE
+.if P_FAMILY_JANGMO_O
 	.align 2
 Cry_JangmoO::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/jangmo_o.bin"
 .endif
+.endif @ P_FAMILY_JANGMO_O (Super Emerald)
 
+.if P_FAMILY_JANGMO_O
 	.align 2
 Cry_HakamoO::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/hakamo_o.bin"
 .endif
+.endif @ P_FAMILY_JANGMO_O (Super Emerald)
 
+.if P_FAMILY_JANGMO_O
 	.align 2
 Cry_KommoO::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/kommo_o.bin"
 .endif
+.endif @ P_FAMILY_JANGMO_O (Super Emerald)
 .endif @ P_FAMILY_JANGMO_O
 
 .if P_FAMILY_TAPU_KOKO == TRUE
+.if P_FAMILY_TAPU_KOKO
 	.align 2
 Cry_TapuKoko::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tapu_koko.bin"
 .endif
+.endif @ P_FAMILY_TAPU_KOKO (Super Emerald)
 .endif @ P_FAMILY_TAPU_KOKO
 
 .if P_FAMILY_TAPU_LELE == TRUE
+.if P_FAMILY_TAPU_LELE
 	.align 2
 Cry_TapuLele::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tapu_lele.bin"
 .endif
+.endif @ P_FAMILY_TAPU_LELE (Super Emerald)
 .endif @ P_FAMILY_TAPU_LELE
 
 .if P_FAMILY_TAPU_BULU == TRUE
+.if P_FAMILY_TAPU_BULU
 	.align 2
 Cry_TapuBulu::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tapu_bulu.bin"
 .endif
+.endif @ P_FAMILY_TAPU_BULU (Super Emerald)
 .endif @ P_FAMILY_TAPU_BULU
 
 .if P_FAMILY_TAPU_FINI == TRUE
+.if P_FAMILY_TAPU_FINI
 	.align 2
 Cry_TapuFini::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tapu_fini.bin"
 .endif
+.endif @ P_FAMILY_TAPU_FINI (Super Emerald)
 .endif @ P_FAMILY_TAPU_FINI
 
 .if P_FAMILY_COSMOG == TRUE
+.if P_FAMILY_COSMOG
 	.align 2
 Cry_Cosmog::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cosmog.bin"
 .endif
+.endif @ P_FAMILY_COSMOG (Super Emerald)
 
+.if P_FAMILY_COSMOG
 	.align 2
 Cry_Cosmoem::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cosmoem.bin"
 .endif
+.endif @ P_FAMILY_COSMOG (Super Emerald)
 
+.if P_FAMILY_COSMOG
 	.align 2
 Cry_Solgaleo::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/solgaleo.bin"
 .endif
+.endif @ P_FAMILY_COSMOG (Super Emerald)
 
+.if P_FAMILY_COSMOG
 	.align 2
 Cry_Lunala::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/lunala.bin"
 .endif
+.endif @ P_FAMILY_COSMOG (Super Emerald)
 .endif @ P_FAMILY_COSMOG
 
 .if P_FAMILY_NIHILEGO == TRUE
+.if P_FAMILY_NIHILEGO
 	.align 2
 Cry_Nihilego::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/nihilego.bin"
 .endif
+.endif @ P_FAMILY_NIHILEGO (Super Emerald)
 .endif @ P_FAMILY_NIHILEGO
 
 .if P_FAMILY_BUZZWOLE == TRUE
+.if P_FAMILY_BUZZWOLE
 	.align 2
 Cry_Buzzwole::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/buzzwole.bin"
 .endif
+.endif @ P_FAMILY_BUZZWOLE (Super Emerald)
 .endif @ P_FAMILY_BUZZWOLE
 
 .if P_FAMILY_PHEROMOSA == TRUE
+.if P_FAMILY_PHEROMOSA
 	.align 2
 Cry_Pheromosa::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pheromosa.bin"
 .endif
+.endif @ P_FAMILY_PHEROMOSA (Super Emerald)
 .endif @ P_FAMILY_PHEROMOSA
 
 .if P_FAMILY_XURKITREE == TRUE
+.if P_FAMILY_XURKITREE
 	.align 2
 Cry_Xurkitree::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/xurkitree.bin"
 .endif
+.endif @ P_FAMILY_XURKITREE (Super Emerald)
 .endif @ P_FAMILY_XURKITREE
 
 .if P_FAMILY_CELESTEELA == TRUE
+.if P_FAMILY_CELESTEELA
 	.align 2
 Cry_Celesteela::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/celesteela.bin"
 .endif
+.endif @ P_FAMILY_CELESTEELA (Super Emerald)
 .endif @ P_FAMILY_CELESTEELA
 
 .if P_FAMILY_KARTANA == TRUE
+.if P_FAMILY_KARTANA
 	.align 2
 Cry_Kartana::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/kartana.bin"
 .endif
+.endif @ P_FAMILY_KARTANA (Super Emerald)
 .endif @ P_FAMILY_KARTANA
 
 .if P_FAMILY_GUZZLORD == TRUE
+.if P_FAMILY_GUZZLORD
 	.align 2
 Cry_Guzzlord::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/guzzlord.bin"
 .endif
+.endif @ P_FAMILY_GUZZLORD (Super Emerald)
 .endif @ P_FAMILY_GUZZLORD
 
 .if P_FAMILY_NECROZMA == TRUE
+.if P_FAMILY_NECROZMA
 	.align 2
 Cry_Necrozma::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/necrozma.bin"
 .endif
+.endif @ P_FAMILY_NECROZMA (Super Emerald)
 
 .if P_FUSION_FORMS == TRUE
+.if P_FAMILY_NECROZMA
 	.align 2
 Cry_NecrozmaDuskMane::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/necrozma_dusk_mane.bin"
 .endif
+.endif @ P_FAMILY_NECROZMA (Super Emerald)
 
+.if P_FAMILY_NECROZMA
 	.align 2
 Cry_NecrozmaDawnWings::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/necrozma_dawn_wings.bin"
 .endif
+.endif @ P_FAMILY_NECROZMA (Super Emerald)
 
 .if P_ULTRA_BURST_FORMS == TRUE
+.if P_FAMILY_NECROZMA
 	.align 2
 Cry_NecrozmaUltra::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/necrozma_ultra.bin"
 .endif
+.endif @ P_FAMILY_NECROZMA (Super Emerald)
 
 .endif @ P_ULTRA_BURST_FORMS
 .endif @ P_FUSION_FORMS
 .endif @ P_FAMILY_NECROZMA
 
 .if P_FAMILY_MAGEARNA == TRUE
+.if P_FAMILY_MAGEARNA
 	.align 2
 Cry_Magearna::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/magearna.bin"
 .endif
+.endif @ P_FAMILY_MAGEARNA (Super Emerald)
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+.if P_FAMILY_MAGEARNA
 	.align 2
 Cry_MagearnaMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/magearna_mega.bin"
 .endif
+.endif @ P_FAMILY_MAGEARNA (Super Emerald)
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_MAGEARNA
 
 .if P_FAMILY_MARSHADOW == TRUE
+.if P_FAMILY_MARSHADOW
 	.align 2
 Cry_Marshadow::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/marshadow.bin"
 .endif
+.endif @ P_FAMILY_MARSHADOW (Super Emerald)
 .endif @ P_FAMILY_MARSHADOW
 
 .if P_FAMILY_POIPOLE == TRUE
+.if P_FAMILY_POIPOLE
 	.align 2
 Cry_Poipole::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/poipole.bin"
 .endif
+.endif @ P_FAMILY_POIPOLE (Super Emerald)
 
+.if P_FAMILY_POIPOLE
 	.align 2
 Cry_Naganadel::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/naganadel.bin"
 .endif
+.endif @ P_FAMILY_POIPOLE (Super Emerald)
 .endif @ P_FAMILY_POIPOLE
 
 .if P_FAMILY_STAKATAKA == TRUE
+.if P_FAMILY_STAKATAKA
 	.align 2
 Cry_Stakataka::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/stakataka.bin"
 .endif
+.endif @ P_FAMILY_STAKATAKA (Super Emerald)
 .endif @ P_FAMILY_STAKATAKA
 
 .if P_FAMILY_BLACEPHALON == TRUE
+.if P_FAMILY_BLACEPHALON
 	.align 2
 Cry_Blacephalon::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/blacephalon.bin"
 .endif
+.endif @ P_FAMILY_BLACEPHALON (Super Emerald)
 .endif @ P_FAMILY_BLACEPHALON
 
 .if P_FAMILY_ZERAORA == TRUE
+.if P_FAMILY_ZERAORA
 	.align 2
 Cry_Zeraora::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zeraora.bin"
 .endif
+.endif @ P_FAMILY_ZERAORA (Super Emerald)
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+.if P_FAMILY_ZERAORA
 	.align 2
 Cry_ZeraoraMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zeraora_mega.bin"
 .endif
+.endif @ P_FAMILY_ZERAORA (Super Emerald)
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_ZERAORA
 
 .if P_FAMILY_MELTAN == TRUE
+.if P_FAMILY_MELTAN
 	.align 2
 Cry_Meltan::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/meltan.bin"
 .endif
+.endif @ P_FAMILY_MELTAN (Super Emerald)
 
+.if P_FAMILY_MELTAN
 	.align 2
 Cry_Melmetal::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/melmetal.bin"
 .endif
+.endif @ P_FAMILY_MELTAN (Super Emerald)
 .endif @ P_FAMILY_MELTAN
 
 .if P_FAMILY_GROOKEY == TRUE
@@ -7179,23 +7425,29 @@ Cry_Rillaboom::
 .endif @ P_FAMILY_GROOKEY
 
 .if P_FAMILY_SCORBUNNY == TRUE
+.if P_FAMILY_SCORBUNNY
 	.align 2
 Cry_Scorbunny::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/scorbunny.bin"
 .endif
+.endif @ P_FAMILY_SCORBUNNY (Super Emerald)
 
+.if P_FAMILY_SCORBUNNY
 	.align 2
 Cry_Raboot::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/raboot.bin"
 .endif
+.endif @ P_FAMILY_SCORBUNNY (Super Emerald)
 
+.if P_FAMILY_SCORBUNNY
 	.align 2
 Cry_Cinderace::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cinderace.bin"
 .endif
+.endif @ P_FAMILY_SCORBUNNY (Super Emerald)
 .endif @ P_FAMILY_SCORBUNNY
 
 .if P_FAMILY_SOBBLE == TRUE
@@ -7273,31 +7525,39 @@ Cry_Orbeetle::
 .endif @ P_FAMILY_BLIPBUG
 
 .if P_FAMILY_NICKIT == TRUE
+.if P_FAMILY_NICKIT
 	.align 2
 Cry_Nickit::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/nickit.bin"
 .endif
+.endif @ P_FAMILY_NICKIT (Super Emerald)
 
+.if P_FAMILY_NICKIT
 	.align 2
 Cry_Thievul::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/thievul.bin"
 .endif
+.endif @ P_FAMILY_NICKIT (Super Emerald)
 .endif @ P_FAMILY_NICKIT
 
 .if P_FAMILY_GOSSIFLEUR == TRUE
+.if P_FAMILY_GOSSIFLEUR
 	.align 2
 Cry_Gossifleur::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/gossifleur.bin"
 .endif
+.endif @ P_FAMILY_GOSSIFLEUR (Super Emerald)
 
+.if P_FAMILY_GOSSIFLEUR
 	.align 2
 Cry_Eldegoss::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/eldegoss.bin"
 .endif
+.endif @ P_FAMILY_GOSSIFLEUR (Super Emerald)
 .endif @ P_FAMILY_GOSSIFLEUR
 
 .if P_FAMILY_WOOLOO == TRUE
@@ -7329,17 +7589,21 @@ Cry_Drednaw::
 .endif @ P_FAMILY_CHEWTLE
 
 .if P_FAMILY_YAMPER == TRUE
+.if P_FAMILY_YAMPER
 	.align 2
 Cry_Yamper::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/yamper.bin"
 .endif
+.endif @ P_FAMILY_YAMPER (Super Emerald)
 
+.if P_FAMILY_YAMPER
 	.align 2
 Cry_Boltund::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/boltund.bin"
 .endif
+.endif @ P_FAMILY_YAMPER (Super Emerald)
 .endif @ P_FAMILY_YAMPER
 
 .if P_FAMILY_ROLYCOLY == TRUE
@@ -7473,17 +7737,21 @@ Cry_Centiskorch::
 .endif @ P_FAMILY_SIZZLIPEDE
 
 .if P_FAMILY_CLOBBOPUS == TRUE
+.if P_FAMILY_CLOBBOPUS
 	.align 2
 Cry_Clobbopus::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/clobbopus.bin"
 .endif
+.endif @ P_FAMILY_CLOBBOPUS (Super Emerald)
 
+.if P_FAMILY_CLOBBOPUS
 	.align 2
 Cry_Grapploct::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/grapploct.bin"
 .endif
+.endif @ P_FAMILY_CLOBBOPUS (Super Emerald)
 .endif @ P_FAMILY_CLOBBOPUS
 
 .if P_FAMILY_SINISTEA == TRUE
@@ -7571,33 +7839,41 @@ Cry_FalinksMega::
 .endif @ P_FAMILY_FALINKS
 
 .if P_FAMILY_PINCURCHIN == TRUE
+.if P_FAMILY_PINCURCHIN
 	.align 2
 Cry_Pincurchin::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pincurchin.bin"
 .endif
+.endif @ P_FAMILY_PINCURCHIN (Super Emerald)
 .endif @ P_FAMILY_PINCURCHIN
 
 .if P_FAMILY_SNOM == TRUE
+.if P_FAMILY_SNOM
 	.align 2
 Cry_Snom::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/snom.bin"
 .endif
+.endif @ P_FAMILY_SNOM (Super Emerald)
 
+.if P_FAMILY_SNOM
 	.align 2
 Cry_Frosmoth::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/frosmoth.bin"
 .endif
+.endif @ P_FAMILY_SNOM (Super Emerald)
 .endif @ P_FAMILY_SNOM
 
 .if P_FAMILY_STONJOURNER == TRUE
+.if P_FAMILY_STONJOURNER
 	.align 2
 Cry_Stonjourner::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/stonjourner.bin"
 .endif
+.endif @ P_FAMILY_STONJOURNER (Super Emerald)
 .endif @ P_FAMILY_STONJOURNER
 
 .if P_FAMILY_EISCUE == TRUE
@@ -7629,47 +7905,59 @@ Cry_IndeedeeF::
 .endif @ P_FAMILY_INDEEDEE
 
 .if P_FAMILY_MORPEKO == TRUE
+.if P_FAMILY_MORPEKO
 	.align 2
 Cry_MorpekoFullBelly::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/morpeko_full_belly.bin"
 .endif
+.endif @ P_FAMILY_MORPEKO (Super Emerald)
 
+.if P_FAMILY_MORPEKO
 	.align 2
 Cry_MorpekoHangry::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/morpeko_hangry.bin"
 .endif
+.endif @ P_FAMILY_MORPEKO (Super Emerald)
 .endif @ P_FAMILY_MORPEKO
 
 .if P_FAMILY_CUFANT == TRUE
+.if P_FAMILY_CUFANT
 	.align 2
 Cry_Cufant::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cufant.bin"
 .endif
+.endif @ P_FAMILY_CUFANT (Super Emerald)
 
+.if P_FAMILY_CUFANT
 	.align 2
 Cry_Copperajah::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/copperajah.bin"
 .endif
+.endif @ P_FAMILY_CUFANT (Super Emerald)
 .endif @ P_FAMILY_CUFANT
 
 .if P_FAMILY_DRACOZOLT == TRUE
+.if P_FAMILY_DRACOZOLT
 	.align 2
 Cry_Dracozolt::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/dracozolt.bin"
 .endif
+.endif @ P_FAMILY_DRACOZOLT (Super Emerald)
 .endif @ P_FAMILY_DRACOZOLT
 
 .if P_FAMILY_ARCTOZOLT == TRUE
+.if P_FAMILY_ARCTOZOLT
 	.align 2
 Cry_Arctozolt::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/arctozolt.bin"
 .endif
+.endif @ P_FAMILY_ARCTOZOLT (Super Emerald)
 .endif @ P_FAMILY_ARCTOZOLT
 
 .if P_FAMILY_DRACOVISH == TRUE
@@ -7723,73 +8011,93 @@ Cry_Dragapult::
 .endif @ P_FAMILY_DREEPY
 
 .if P_FAMILY_ZACIAN == TRUE
+.if P_FAMILY_ZACIAN
 	.align 2
 Cry_ZacianHero::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zacian_hero.bin"
 .endif
+.endif @ P_FAMILY_ZACIAN (Super Emerald)
 
+.if P_FAMILY_ZACIAN
 	.align 2
 Cry_ZacianCrowned::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zacian_crowned.bin"
 .endif
+.endif @ P_FAMILY_ZACIAN (Super Emerald)
 .endif @ P_FAMILY_ZACIAN
 
 .if P_FAMILY_ZAMAZENTA == TRUE
+.if P_FAMILY_ZAMAZENTA
 	.align 2
 Cry_ZamazentaHero::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zamazenta_hero.bin"
 .endif
+.endif @ P_FAMILY_ZAMAZENTA (Super Emerald)
 
+.if P_FAMILY_ZAMAZENTA
 	.align 2
 Cry_ZamazentaCrowned::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zamazenta_crowned.bin"
 .endif
+.endif @ P_FAMILY_ZAMAZENTA (Super Emerald)
 .endif @ P_FAMILY_ZAMAZENTA
 
 .if P_FAMILY_ETERNATUS == TRUE
+.if P_FAMILY_ETERNATUS
 	.align 2
 Cry_Eternatus::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/eternatus.bin"
 .endif
+.endif @ P_FAMILY_ETERNATUS (Super Emerald)
 
+.if P_FAMILY_ETERNATUS
 	.align 2
 Cry_EternatusEternamax::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/eternatus_eternamax.bin"
 .endif
+.endif @ P_FAMILY_ETERNATUS (Super Emerald)
 .endif @ P_FAMILY_ETERNATUS
 
 .if P_FAMILY_KUBFU == TRUE
+.if P_FAMILY_KUBFU
 	.align 2
 Cry_Kubfu::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/kubfu.bin"
 .endif
+.endif @ P_FAMILY_KUBFU (Super Emerald)
 
+.if P_FAMILY_KUBFU
 	.align 2
 Cry_UrshifuSingleStrike::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/urshifu_single_strike.bin"
 .endif
+.endif @ P_FAMILY_KUBFU (Super Emerald)
 
+.if P_FAMILY_KUBFU
 	.align 2
 Cry_UrshifuRapidStrike::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/urshifu_rapid_strike.bin"
 .endif
+.endif @ P_FAMILY_KUBFU (Super Emerald)
 .endif @ P_FAMILY_KUBFU
 
 .if P_FAMILY_ZARUDE == TRUE
+.if P_FAMILY_ZARUDE
 	.align 2
 Cry_Zarude::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/zarude.bin"
 .endif
+.endif @ P_FAMILY_ZARUDE (Super Emerald)
 .endif @ P_FAMILY_ZARUDE
 
 .if P_FAMILY_REGIELEKI == TRUE
@@ -7809,40 +8117,50 @@ Cry_Regidrago::
 .endif @ P_FAMILY_REGIDRAGO
 
 .if P_FAMILY_GLASTRIER == TRUE
+.if P_FAMILY_GLASTRIER
 	.align 2
 Cry_Glastrier::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/glastrier.bin"
 .endif
+.endif @ P_FAMILY_GLASTRIER (Super Emerald)
 .endif @ P_FAMILY_GLASTRIER
 
 .if P_FAMILY_SPECTRIER == TRUE
+.if P_FAMILY_SPECTRIER
 	.align 2
 Cry_Spectrier::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/spectrier.bin"
 .endif
+.endif @ P_FAMILY_SPECTRIER (Super Emerald)
 .endif @ P_FAMILY_SPECTRIER
 
 .if P_FAMILY_CALYREX == TRUE
+.if P_FAMILY_CALYREX
 	.align 2
 Cry_Calyrex::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/calyrex.bin"
 .endif
+.endif @ P_FAMILY_CALYREX (Super Emerald)
 
 .if P_FUSION_FORMS == TRUE
+.if P_FAMILY_CALYREX
 	.align 2
 Cry_CalyrexIce::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/calyrex_ice.bin"
 .endif
+.endif @ P_FAMILY_CALYREX (Super Emerald)
 
+.if P_FAMILY_CALYREX
 	.align 2
 Cry_CalyrexShadow::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/calyrex_shadow.bin"
 .endif
+.endif @ P_FAMILY_CALYREX (Super Emerald)
 
 .endif @ P_FUSION_FORMS
 .endif @ P_FAMILY_CALYREX
@@ -7882,23 +8200,29 @@ Cry_Meowscarada::
 .endif @ P_FAMILY_SPRIGATITO
 
 .if P_FAMILY_FUECOCO == TRUE
+.if P_FAMILY_FUECOCO
 	.align 2
 Cry_Fuecoco::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/fuecoco.bin"
 .endif
+.endif @ P_FAMILY_FUECOCO (Super Emerald)
 
+.if P_FAMILY_FUECOCO
 	.align 2
 Cry_Crocalor::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/crocalor.bin"
 .endif
+.endif @ P_FAMILY_FUECOCO (Super Emerald)
 
+.if P_FAMILY_FUECOCO
 	.align 2
 Cry_Skeledirge::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/skeledirge.bin"
 .endif
+.endif @ P_FAMILY_FUECOCO (Super Emerald)
 .endif @ P_FAMILY_FUECOCO
 
 .if P_FAMILY_QUAXLY == TRUE
@@ -7922,71 +8246,91 @@ Cry_Quaquaval::
 .endif @ P_FAMILY_QUAXLY
 
 .if P_FAMILY_LECHONK == TRUE
+.if P_FAMILY_LECHONK
 	.align 2
 Cry_Lechonk::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/lechonk.bin"
 .endif
+.endif @ P_FAMILY_LECHONK (Super Emerald)
 
+.if P_FAMILY_LECHONK
 	.align 2
 Cry_OinkologneM::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/oinkologne_m.bin"
 .endif
+.endif @ P_FAMILY_LECHONK (Super Emerald)
 
+.if P_FAMILY_LECHONK
 	.align 2
 Cry_OinkologneF::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/oinkologne_f.bin"
 .endif
+.endif @ P_FAMILY_LECHONK (Super Emerald)
 .endif @ P_FAMILY_LECHONK
 
 .if P_FAMILY_TAROUNTULA == TRUE
+.if P_FAMILY_TAROUNTULA
 	.align 2
 Cry_Tarountula::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tarountula.bin"
 .endif
+.endif @ P_FAMILY_TAROUNTULA (Super Emerald)
 
+.if P_FAMILY_TAROUNTULA
 	.align 2
 Cry_Spidops::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/spidops.bin"
 .endif
+.endif @ P_FAMILY_TAROUNTULA (Super Emerald)
 .endif @ P_FAMILY_TAROUNTULA
 
 .if P_FAMILY_NYMBLE == TRUE
+.if P_FAMILY_NYMBLE
 	.align 2
 Cry_Nymble::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/nymble.bin"
 .endif
+.endif @ P_FAMILY_NYMBLE (Super Emerald)
 
+.if P_FAMILY_NYMBLE
 	.align 2
 Cry_Lokix::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/lokix.bin"
 .endif
+.endif @ P_FAMILY_NYMBLE (Super Emerald)
 .endif @ P_FAMILY_NYMBLE
 
 .if P_FAMILY_PAWMI == TRUE
+.if P_FAMILY_PAWMI
 	.align 2
 Cry_Pawmi::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pawmi.bin"
 .endif
+.endif @ P_FAMILY_PAWMI (Super Emerald)
 
+.if P_FAMILY_PAWMI
 	.align 2
 Cry_Pawmo::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pawmo.bin"
 .endif
+.endif @ P_FAMILY_PAWMI (Super Emerald)
 
+.if P_FAMILY_PAWMI
 	.align 2
 Cry_Pawmot::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pawmot.bin"
 .endif
+.endif @ P_FAMILY_PAWMI (Super Emerald)
 .endif @ P_FAMILY_PAWMI
 
 .if P_FAMILY_TANDEMAUS == TRUE
@@ -8044,11 +8388,13 @@ Cry_Arboliva::
 .endif @ P_FAMILY_SMOLIV
 
 .if P_FAMILY_SQUAWKABILLY == TRUE
+.if P_FAMILY_SQUAWKABILLY
 	.align 2
 Cry_Squawkabilly::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/squawkabilly.bin"
 .endif
+.endif @ P_FAMILY_SQUAWKABILLY (Super Emerald)
 .endif @ P_FAMILY_SQUAWKABILLY
 
 .if P_FAMILY_NACLI == TRUE
@@ -8092,17 +8438,21 @@ Cry_Ceruledge::
 .endif @ P_FAMILY_CHARCADET
 
 .if P_FAMILY_TADBULB == TRUE
+.if P_FAMILY_TADBULB
 	.align 2
 Cry_Tadbulb::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/tadbulb.bin"
 .endif
+.endif @ P_FAMILY_TADBULB (Super Emerald)
 
+.if P_FAMILY_TADBULB
 	.align 2
 Cry_Bellibolt::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/bellibolt.bin"
 .endif
+.endif @ P_FAMILY_TADBULB (Super Emerald)
 .endif @ P_FAMILY_TADBULB
 
 .if P_FAMILY_WATTREL == TRUE
@@ -8206,17 +8556,21 @@ Cry_ScovillainMega::
 .endif @ P_FAMILY_CAPSAKID
 
 .if P_FAMILY_RELLOR == TRUE
+.if P_FAMILY_RELLOR
 	.align 2
 Cry_Rellor::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/rellor.bin"
 .endif
+.endif @ P_FAMILY_RELLOR (Super Emerald)
 
+.if P_FAMILY_RELLOR
 	.align 2
 Cry_Rabsca::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/rabsca.bin"
 .endif
+.endif @ P_FAMILY_RELLOR (Super Emerald)
 .endif @ P_FAMILY_RELLOR
 
 .if P_FAMILY_FLITTLE == TRUE
@@ -8268,11 +8622,13 @@ Cry_Wugtrio::
 .endif @ P_FAMILY_WIGLETT
 
 .if P_FAMILY_BOMBIRDIER == TRUE
+.if P_FAMILY_BOMBIRDIER
 	.align 2
 Cry_Bombirdier::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/bombirdier.bin"
 .endif
+.endif @ P_FAMILY_BOMBIRDIER (Super Emerald)
 .endif @ P_FAMILY_BOMBIRDIER
 
 .if P_FAMILY_FINIZEN == TRUE
@@ -8304,11 +8660,13 @@ Cry_Revavroom::
 .endif @ P_FAMILY_VAROOM
 
 .if P_FAMILY_CYCLIZAR == TRUE
+.if P_FAMILY_CYCLIZAR
 	.align 2
 Cry_Cyclizar::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cyclizar.bin"
 .endif
+.endif @ P_FAMILY_CYCLIZAR (Super Emerald)
 .endif @ P_FAMILY_CYCLIZAR
 
 .if P_FAMILY_ORTHWORM == TRUE
@@ -8364,17 +8722,21 @@ Cry_Flamigo::
 .endif @ P_FAMILY_FLAMIGO
 
 .if P_FAMILY_CETODDLE == TRUE
+.if P_FAMILY_CETODDLE
 	.align 2
 Cry_Cetoddle::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cetoddle.bin"
 .endif
+.endif @ P_FAMILY_CETODDLE (Super Emerald)
 
+.if P_FAMILY_CETODDLE
 	.align 2
 Cry_Cetitan::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/cetitan.bin"
 .endif
+.endif @ P_FAMILY_CETODDLE (Super Emerald)
 .endif @ P_FAMILY_CETODDLE
 
 .if P_FAMILY_VELUZA == TRUE
@@ -8422,227 +8784,285 @@ Cry_TatsugiriMega::
 .endif @ P_FAMILY_TATSUGIRI
 
 .if P_FAMILY_GREAT_TUSK == TRUE
+.if P_FAMILY_GREAT_TUSK
 	.align 2
 Cry_GreatTusk::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/great_tusk.bin"
 .endif
+.endif @ P_FAMILY_GREAT_TUSK (Super Emerald)
 .endif @ P_FAMILY_GREAT_TUSK
 
 .if P_FAMILY_SCREAM_TAIL == TRUE
+.if P_FAMILY_SCREAM_TAIL
 	.align 2
 Cry_ScreamTail::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/scream_tail.bin"
 .endif
+.endif @ P_FAMILY_SCREAM_TAIL (Super Emerald)
 .endif @ P_FAMILY_SCREAM_TAIL
 
 .if P_FAMILY_BRUTE_BONNET == TRUE
+.if P_FAMILY_BRUTE_BONNET
 	.align 2
 Cry_BruteBonnet::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/brute_bonnet.bin"
 .endif
+.endif @ P_FAMILY_BRUTE_BONNET (Super Emerald)
 .endif @ P_FAMILY_BRUTE_BONNET
 
 .if P_FAMILY_FLUTTER_MANE == TRUE
+.if P_FAMILY_FLUTTER_MANE
 	.align 2
 Cry_FlutterMane::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/flutter_mane.bin"
 .endif
+.endif @ P_FAMILY_FLUTTER_MANE (Super Emerald)
 .endif @ P_FAMILY_FLUTTER_MANE
 
 .if P_FAMILY_SLITHER_WING == TRUE
+.if P_FAMILY_SLITHER_WING
 	.align 2
 Cry_SlitherWing::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/slither_wing.bin"
 .endif
+.endif @ P_FAMILY_SLITHER_WING (Super Emerald)
 .endif @ P_FAMILY_SLITHER_WING
 
 .if P_FAMILY_SANDY_SHOCKS == TRUE
+.if P_FAMILY_SANDY_SHOCKS
 	.align 2
 Cry_SandyShocks::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/sandy_shocks.bin"
 .endif
+.endif @ P_FAMILY_SANDY_SHOCKS (Super Emerald)
 .endif @ P_FAMILY_SANDY_SHOCKS
 
 .if P_FAMILY_IRON_TREADS == TRUE
+.if P_FAMILY_IRON_TREADS
 	.align 2
 Cry_IronTreads::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/iron_treads.bin"
 .endif
+.endif @ P_FAMILY_IRON_TREADS (Super Emerald)
 .endif @ P_FAMILY_IRON_TREADS
 
 .if P_FAMILY_IRON_BUNDLE == TRUE
+.if P_FAMILY_IRON_BUNDLE
 	.align 2
 Cry_IronBundle::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/iron_bundle.bin"
 .endif
+.endif @ P_FAMILY_IRON_BUNDLE (Super Emerald)
 .endif @ P_FAMILY_IRON_BUNDLE
 
 .if P_FAMILY_IRON_HANDS == TRUE
+.if P_FAMILY_IRON_HANDS
 	.align 2
 Cry_IronHands::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/iron_hands.bin"
 .endif
+.endif @ P_FAMILY_IRON_HANDS (Super Emerald)
 .endif @ P_FAMILY_IRON_HANDS
 
 .if P_FAMILY_IRON_JUGULIS == TRUE
+.if P_FAMILY_IRON_JUGULIS
 	.align 2
 Cry_IronJugulis::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/iron_jugulis.bin"
 .endif
+.endif @ P_FAMILY_IRON_JUGULIS (Super Emerald)
 .endif @ P_FAMILY_IRON_JUGULIS
 
 .if P_FAMILY_IRON_MOTH == TRUE
+.if P_FAMILY_IRON_MOTH
 	.align 2
 Cry_IronMoth::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/iron_moth.bin"
 .endif
+.endif @ P_FAMILY_IRON_MOTH (Super Emerald)
 .endif @ P_FAMILY_IRON_MOTH
 
 .if P_FAMILY_IRON_THORNS == TRUE
+.if P_FAMILY_IRON_THORNS
 	.align 2
 Cry_IronThorns::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/iron_thorns.bin"
 .endif
+.endif @ P_FAMILY_IRON_THORNS (Super Emerald)
 .endif @ P_FAMILY_IRON_THORNS
 
 .if P_FAMILY_FRIGIBAX == TRUE
+.if P_FAMILY_FRIGIBAX
 	.align 2
 Cry_Frigibax::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/frigibax.bin"
 .endif
+.endif @ P_FAMILY_FRIGIBAX (Super Emerald)
 
+.if P_FAMILY_FRIGIBAX
 	.align 2
 Cry_Arctibax::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/arctibax.bin"
 .endif
+.endif @ P_FAMILY_FRIGIBAX (Super Emerald)
 
+.if P_FAMILY_FRIGIBAX
 	.align 2
 Cry_Baxcalibur::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/baxcalibur.bin"
 .endif
+.endif @ P_FAMILY_FRIGIBAX (Super Emerald)
 
 .if P_MODIFIED_MEGA_CRIES == TRUE
+.if P_FAMILY_FRIGIBAX
 	.align 2
 Cry_BaxcaliburMega::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/baxcalibur_mega.bin"
 .endif
+.endif @ P_FAMILY_FRIGIBAX (Super Emerald)
 .endif @ P_MODIFIED_MEGA_CRIES
 .endif @ P_FAMILY_FRIGIBAX
 
 .if P_FAMILY_GIMMIGHOUL == TRUE
+.if P_FAMILY_GIMMIGHOUL
 	.align 2
 Cry_GimmighoulChest::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/gimmighoul_chest.bin"
 .endif
+.endif @ P_FAMILY_GIMMIGHOUL (Super Emerald)
 
+.if P_FAMILY_GIMMIGHOUL
 	.align 2
 Cry_GimmighoulRoaming::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/gimmighoul_roaming.bin"
 .endif
+.endif @ P_FAMILY_GIMMIGHOUL (Super Emerald)
 
+.if P_FAMILY_GIMMIGHOUL
 	.align 2
 Cry_Gholdengo::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/gholdengo.bin"
 .endif
+.endif @ P_FAMILY_GIMMIGHOUL (Super Emerald)
 .endif @ P_FAMILY_GIMMIGHOUL
 
 .if P_FAMILY_WO_CHIEN == TRUE
+.if P_FAMILY_WO_CHIEN
 	.align 2
 Cry_WoChien::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/wo_chien.bin"
 .endif
+.endif @ P_FAMILY_WO_CHIEN (Super Emerald)
 .endif @ P_FAMILY_WO_CHIEN
 
 .if P_FAMILY_CHIEN_PAO == TRUE
+.if P_FAMILY_CHIEN_PAO
 	.align 2
 Cry_ChienPao::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/chien_pao.bin"
 .endif
+.endif @ P_FAMILY_CHIEN_PAO (Super Emerald)
 .endif @ P_FAMILY_CHIEN_PAO
 
 .if P_FAMILY_TING_LU == TRUE
+.if P_FAMILY_TING_LU
 	.align 2
 Cry_TingLu::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/ting_lu.bin"
 .endif
+.endif @ P_FAMILY_TING_LU (Super Emerald)
 .endif @ P_FAMILY_TING_LU
 
 .if P_FAMILY_CHI_YU == TRUE
+.if P_FAMILY_CHI_YU
 	.align 2
 Cry_ChiYu::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/chi_yu.bin"
 .endif
+.endif @ P_FAMILY_CHI_YU (Super Emerald)
 .endif @ P_FAMILY_CHI_YU
 
 .if P_FAMILY_ROARING_MOON == TRUE
+.if P_FAMILY_ROARING_MOON
 	.align 2
 Cry_RoaringMoon::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/roaring_moon.bin"
 .endif
+.endif @ P_FAMILY_ROARING_MOON (Super Emerald)
 .endif @ P_FAMILY_ROARING_MOON
 
 .if P_FAMILY_IRON_VALIANT == TRUE
+.if P_FAMILY_IRON_VALIANT
 	.align 2
 Cry_IronValiant::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/iron_valiant.bin"
 .endif
+.endif @ P_FAMILY_IRON_VALIANT (Super Emerald)
 .endif @ P_FAMILY_IRON_VALIANT
 
 .if P_FAMILY_KORAIDON == TRUE
+.if P_FAMILY_KORAIDON
 	.align 2
 Cry_Koraidon::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/koraidon.bin"
 .endif
+.endif @ P_FAMILY_KORAIDON (Super Emerald)
 .endif @ P_FAMILY_KORAIDON
 
 .if P_FAMILY_MIRAIDON == TRUE
+.if P_FAMILY_MIRAIDON
 	.align 2
 Cry_Miraidon::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/miraidon.bin"
 .endif
+.endif @ P_FAMILY_MIRAIDON (Super Emerald)
 .endif @ P_FAMILY_MIRAIDON
 
 .if P_FAMILY_WALKING_WAKE == TRUE
+.if P_FAMILY_WALKING_WAKE
 	.align 2
 Cry_WalkingWake::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/walking_wake.bin"
 .endif
+.endif @ P_FAMILY_WALKING_WAKE (Super Emerald)
 .endif @ P_FAMILY_WALKING_WAKE
 
 .if P_FAMILY_IRON_LEAVES == TRUE
+.if P_FAMILY_IRON_LEAVES
 	.align 2
 Cry_IronLeaves::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/iron_leaves.bin"
 .endif
+.endif @ P_FAMILY_IRON_LEAVES (Super Emerald)
 .endif @ P_FAMILY_IRON_LEAVES
 
 .if P_FAMILY_POLTCHAGEIST == TRUE
@@ -8660,83 +9080,103 @@ Cry_Sinistcha::
 .endif @ P_FAMILY_POLTCHAGEIST
 
 .if P_FAMILY_OKIDOGI == TRUE
+.if P_FAMILY_OKIDOGI
 	.align 2
 Cry_Okidogi::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/okidogi.bin"
 .endif
+.endif @ P_FAMILY_OKIDOGI (Super Emerald)
 .endif @ P_FAMILY_OKIDOGI
 
 .if P_FAMILY_MUNKIDORI == TRUE
+.if P_FAMILY_MUNKIDORI
 	.align 2
 Cry_Munkidori::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/munkidori.bin"
 .endif
+.endif @ P_FAMILY_MUNKIDORI (Super Emerald)
 .endif @ P_FAMILY_MUNKIDORI
 
 .if P_FAMILY_FEZANDIPITI == TRUE
+.if P_FAMILY_FEZANDIPITI
 	.align 2
 Cry_Fezandipiti::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/fezandipiti.bin"
 .endif
+.endif @ P_FAMILY_FEZANDIPITI (Super Emerald)
 .endif @ P_FAMILY_FEZANDIPITI
 
 .if P_FAMILY_OGERPON == TRUE
+.if P_FAMILY_OGERPON
 	.align 2
 Cry_Ogerpon::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/ogerpon.bin"
 .endif
+.endif @ P_FAMILY_OGERPON (Super Emerald)
 .endif @ P_FAMILY_OGERPON
 
 .if P_FAMILY_GOUGING_FIRE == TRUE
+.if P_FAMILY_GOUGING_FIRE
 	.align 2
 Cry_GougingFire::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/gouging_fire.bin"
 .endif
+.endif @ P_FAMILY_GOUGING_FIRE (Super Emerald)
 .endif @ P_FAMILY_GOUGING_FIRE
 
 .if P_FAMILY_RAGING_BOLT == TRUE
+.if P_FAMILY_RAGING_BOLT
 	.align 2
 Cry_RagingBolt::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/raging_bolt.bin"
 .endif
+.endif @ P_FAMILY_RAGING_BOLT (Super Emerald)
 .endif @ P_FAMILY_RAGING_BOLT
 
 .if P_FAMILY_IRON_BOULDER == TRUE
+.if P_FAMILY_IRON_BOULDER
 	.align 2
 Cry_IronBoulder::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/iron_boulder.bin"
 .endif
+.endif @ P_FAMILY_IRON_BOULDER (Super Emerald)
 .endif @ P_FAMILY_IRON_BOULDER
 
 .if P_FAMILY_IRON_CROWN == TRUE
+.if P_FAMILY_IRON_CROWN
 	.align 2
 Cry_IronCrown::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/iron_crown.bin"
 .endif
+.endif @ P_FAMILY_IRON_CROWN (Super Emerald)
 .endif @ P_FAMILY_IRON_CROWN
 
 .if P_FAMILY_TERAPAGOS == TRUE
+.if P_FAMILY_TERAPAGOS
 	.align 2
 Cry_Terapagos::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/terapagos.bin"
 .endif
+.endif @ P_FAMILY_TERAPAGOS (Super Emerald)
 .endif @ P_FAMILY_TERAPAGOS
 
 .if P_FAMILY_PECHARUNT == TRUE
+.if P_FAMILY_PECHARUNT
 	.align 2
 Cry_Pecharunt::
 .if TESTING == FALSE
 	.incbin "sound/direct_sound_samples/cries/pecharunt.bin"
 .endif
+.endif @ P_FAMILY_PECHARUNT (Super Emerald)
 .endif @ P_FAMILY_PECHARUNT
 .endif @ P_CRIES_ENABLED
 

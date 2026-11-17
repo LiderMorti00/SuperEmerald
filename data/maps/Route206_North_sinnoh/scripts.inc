@@ -38,11 +38,11 @@ Route206_North_EventScript_SNDawnFather_T3::
 	.string "Also, a POKéMON you get in a trade may\n"
 	.string "disobey you if it is too high in level.\p"
 	.string "Don’t worry, though. It will obey if you\n"
-	.string "have enough Gym Badges.$"
+	.string "have enough GYM BADGES.$"
 
 Route206_North_EventScript_SNDawnFather_T2::
 	.string "Oh, my! You’ve met {STR_VAR_1} POKéMON!\p"
-	.string "Wonderful! Yes, bravo! Professor Rowan\n"
+	.string "Wonderful! Yes, bravo! PROFESSOR ROWAN\n"
 	.string "should be delighted!\p"
 	.string "Here is something for you!$"
 
@@ -55,13 +55,13 @@ Route206_North_EventScript_SNDawnFather_NotYetT::
 	.string "You’ve met only {STR_VAR_1} POKéMON?\p"
 	.string "Hmm... You’ve got to find at least 35.\p"
 	.string "If you can’t, it will be tough to\n"
-	.string "complete the Sinnoh POKéDEX.$"
+	.string "complete the SINNOH POKéDEX.$"
 
 Route206_North_EventScript_SNDawnFather_T1::
 	.string "{PLAYER}, long time, no see!\p"
 	.string "Oh? You look puzzled. You’re wondering\n"
 	.string "who I am.\p"
-	.string "I’m Professor Rowan’s assistant and\n"
+	.string "I’m PROFESSOR ROWAN’s assistant and\n"
 	.string "DAWN’s father.\p"
 	.string "I’ve come a long way to help you on\n"
 	.string "your adventure at the professor’s\p"
@@ -77,7 +77,7 @@ Route206_North_EventScript_SNDawnFather_T1L::
 	.string "{PLAYER}, long time, no see!\p"
 	.string "Oh? You look puzzled. You’re wondering\n"
 	.string "who I am.\p"
-	.string "I’m Professor Rowan’s assistant and\n"
+	.string "I’m PROFESSOR ROWAN’s assistant and\n"
 	.string "LUCAS’s father.\p"
 	.string "I’ve come a long way to help you on\n"
 	.string "your adventure at the professor’s\p"

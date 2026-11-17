@@ -11,7 +11,7 @@ CanalaveCity_Library_F1_EventScript_PtNpc1::
 	end
 
 CanalaveCity_Library_F1_Text_PtNpc1_0::
-	.string "Hello. This is the Canalave Library.\p"
+	.string "Hello. This is the CANALAVE Library.\p"
 	.string "Please keep quiet while you’re on the\n"
 	.string "premises.$"
 
@@ -21,7 +21,7 @@ CanalaveCity_Library_F1_EventScript_PtNpc1_ThatWasntMeScreaming::
 	end
 
 CanalaveCity_Library_F1_Text_PtNpc1_1::
-	.string "H-hello! This is the Canalave Library.\p"
+	.string "H-hello! This is the CANALAVE Library.\p"
 	.string "Please keep quiet while you’re on the\n"
 	.string "premises.\p"
 	.string "It certainly wasn’t me who screamed,\p"
@@ -66,7 +66,7 @@ CanalaveCity_Library_F1_EventScript_SNLucianLeave::
 
 CanalaveCity_Library_F1_Text_SNSeeAtLeague::
 	.string "I imagine we’ll see each other again at\n"
-	.string "the POKéMON League. Take care.$"
+	.string "the POKéMON LEAGUE. Take care.$"
 
 CanalaveCity_Library_F1_Text_SNBook0::
 	.string "I was just reading a collection of\n"
@@ -143,7 +143,7 @@ CanalaveCity_Library_F1_Text_SNBook1::
 	.string "it exist for us?$"
 
 CanalaveCity_Library_F1_Text_PtNpc3::
-	.string "Lucian: ...Ah, hello. You’re here to read,\n"
+	.string "LUCIAN: ...Ah, hello. You’re here to read,\n"
 	.string "too?\p"
 	.string "Books are wonderful things.\p"
 	.string "The thoughts of people written in\n"

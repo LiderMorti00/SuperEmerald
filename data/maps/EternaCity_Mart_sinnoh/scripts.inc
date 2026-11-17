@@ -7,11 +7,11 @@ EternaCity_Mart_EventScript_PtNpc1::
 	end
 
 EternaCity_Mart_Text_PtNpc1::
-	.string "The more Gym Badges you have, the\n"
+	.string "The more GYM BADGES you have, the\n"
 	.string "better they treat you at Poké Marts.\p"
 	.string "You get to buy a better selection of\n"
 	.string "merchandise, you see.\p"
-	.string "But I don't have a single Gym Badge.\n"
+	.string "But I don't have a single GYM BADGE.\n"
 	.string "It's because GARDENIA's too much!\p"
 	.string "Argh! I don't want to see another\n"
 	.string "grass POKéMON ever again!\p"

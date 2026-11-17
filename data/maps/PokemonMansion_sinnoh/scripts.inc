@@ -116,14 +116,14 @@ PokemonMansion_EventScript_PtNpc3::
 PokemonMansion_Text_SNMExplain::
 	.string "Welcome.\p"
 	.string "Here, you may challenge the mansion’s\n"
-	.string "pride--the five Trainer maids.\p"
+	.string "pride--the five TRAINER maids.\p"
 	.string "The challenge is to beat all five of us\n"
 	.string "in a row without a break.\p"
 	.string "In addition to beating us, if you can\n"
 	.string "beat us in a specific number of turns,\p"
 	.string "there will be a special gift.\p"
 	.string "Incidentally, a turn refers to the time\n"
-	.string "it takes for a Trainer and the\l"
+	.string "it takes for a TRAINER and the\l"
 	.string "opponent\p"
 	.string "to each make an action.\p"
 	.string "In this case, action refers to making a\n"
@@ -171,7 +171,7 @@ PokemonMansion_Text_SNMLiamWon::
 	.string "Sweeping the floor with the five maids\n"
 	.string "wasn’t enough for you, oh no!\p"
 	.string "Why, to think you would triumph over\n"
-	.string "even our Master Liam!$"
+	.string "even our Master LIAM!$"
 
 PokemonMansion_EventScript_SNMCelesteWon::
 	msgbox PokemonMansion_Text_SNMCelesteWon, MSGBOX_DEFAULT
@@ -195,14 +195,14 @@ PokemonMansion_Movement_SNMLeave::
 	step_end
 
 PokemonMansion_Text_SNMLiamDefeat::
-	.string "Wonderful! You’re a marvel of a Trainer!\p"
+	.string "Wonderful! You’re a marvel of a TRAINER!\p"
 	.string "Oh, I’ll ask you not to pry into what I’m\n"
 	.string "doing in the back of the mansion.\p"
 	.string "This knowing wink is all you’ll get out\n"
 	.string "of me.$"
 
 PokemonMansion_Text_SNMLiamIntro::
-	.string "A Trainer would come here and pull me\n"
+	.string "A TRAINER would come here and pull me\n"
 	.string "into a battle...?\p"
 	.string "I never expected this, but I may as\n"
 	.string "well enjoy it, don’t you think?$"
@@ -239,7 +239,7 @@ PokemonMansion_Text_SNMLiamHit::
 	.string "For making the sweep in the targeted\n"
 	.string "number of turns, a special gift!\p"
 	.string "The chance to battle our very own\n"
-	.string "prodigy, Master Liam!$"
+	.string "prodigy, Master LIAM!$"
 
 PokemonMansion_EventScript_SNMCeleste::
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_SINNOH_LADY

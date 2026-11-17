@@ -60,7 +60,7 @@ VeilstoneCity_DepartmentStore_5F_EventScript_PtSign3::
 
 VeilstoneCity_DepartmentStore_5F_Text_PtSign3::
 	.string "B1F: Food & Produce\p"
-	.string "1F: Trainers’ Zone\p"
+	.string "1F: TRAINERS’ Zone\p"
 	.string "2F: Battle Collection\p"
 	.string "3F: TM Corner\p"
 	.string "4F: Poké Dolls & Goods\p"

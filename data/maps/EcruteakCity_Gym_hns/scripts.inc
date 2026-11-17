@@ -107,7 +107,7 @@ MortyIntroText::
 	.string "always been revered.\p"
 	.string "It's said that a rainbow-colored\n"
 	.string "POKéMON will come down to\l"
-	.string "appear before a true Trainer.\p"
+	.string "appear before a true TRAINER.\p"
 	.string "I believed that tale, so I've\n"
 	.string "trained here in secret.\p"
 	.string "As a result, I can now see what\n"

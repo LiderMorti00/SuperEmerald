@@ -8,14 +8,14 @@ EternaCity_Flat1_F2_EventScript_PtNpc1::
 
 EternaCity_Flat1_F2_Text_PtNpc1::
 	.string "My grandmother knows all the old\n"
-	.string "legends of Sinnoh.$"
+	.string "legends of SINNOH.$"
 
 EternaCity_Flat1_F2_EventScript_PtNpc2::
 	msgbox EternaCity_Flat1_F2_Text_PtNpc2, MSGBOX_NPC
 	end
 
 EternaCity_Flat1_F2_Text_PtNpc2::
-	.string "GARDENIA, our Gym Leader, goes out to\n"
+	.string "GARDENIA, our GYM LEADER, goes out to\n"
 	.string "ETERNA FOREST every so often.\p"
 	.string "I always wonder what she does there.$"
 

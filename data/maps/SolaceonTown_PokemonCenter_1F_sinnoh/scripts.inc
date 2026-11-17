@@ -30,8 +30,8 @@ SolaceonTown_PokemonCenter_1F_EventScript_PtNpc2::
 	end
 
 SolaceonTown_PokemonCenter_1F_Text_PtNpc2_0::
-	.string "It’s quite far from Solaceon Town to\n"
-	.string "Veilstone City.\p"
+	.string "It’s quite far from SOLACEON TOWN to\n"
+	.string "VEILSTONE CITY.\p"
 	.string "There’s a café along the way where you\n"
 	.string "can get some rest, though.$"
 
@@ -44,7 +44,7 @@ SolaceonTown_PokemonCenter_1F_EventScript_PtNpc3::
 
 SolaceonTown_PokemonCenter_1F_Text_PtNpc3_0::
 	.string "The Hidden Machine Defog can be found\n"
-	.string "in the Solaceon Ruins.\p"
+	.string "in the SOLACEON RUINS.\p"
 	.string "But my POKéMON can’t learn the hidden\n"
 	.string "move.\p"
 	.string "I’m going to give the ruins a miss, this\n"

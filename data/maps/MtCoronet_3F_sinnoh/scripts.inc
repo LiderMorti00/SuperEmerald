@@ -8,7 +8,7 @@ MtCoronet_3F_EventScript_Grunt::
 	end
 
 MtCoronet_3F_Text_GruntPost::
-	.string "Join Team Galactic and then abide by\n"
+	.string "Join TEAM GALACTIC and then abide by\n"
 	.string "our rules.\p"
 	.string "That would solve all our problems!$"
 
@@ -17,7 +17,7 @@ MtCoronet_3F_Text_GruntDefeat::
 	.string "this!$"
 
 MtCoronet_3F_Text_GruntIntro::
-	.string "We Grunts have two jobs.\p"
+	.string "We GRUNTS have two jobs.\p"
 	.string "One, ensure the success of our\n"
 	.string "operation at the summit.\p"
 	.string "Two, utterly destroy any intruders to\n"
@@ -37,5 +37,5 @@ MtCoronet_3F_Text_Grunt2Defeat::
 	.string "When’s it gonna be my turn...$"
 
 MtCoronet_3F_Text_Grunt2Intro::
-	.string "Our time has come! It’s Team Galactic’s\n"
+	.string "Our time has come! It’s TEAM GALACTIC’s\n"
 	.string "time now!$"

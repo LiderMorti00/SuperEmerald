@@ -101,7 +101,7 @@ Route208_EventScript_Hannah::
 Route208_Text_HannahPost::
 	.string "You and your POKéMON have so much\n"
 	.string "energy.\p"
-	.string "I think you would do well in Contests,\n"
+	.string "I think you would do well in CONTESTS,\n"
 	.string "too.$"
 
 Route208_Text_HannahDefeat::
@@ -109,7 +109,7 @@ Route208_Text_HannahDefeat::
 
 Route208_Text_HannahIntro::
 	.string "Oh, you want to have a battle?\p"
-	.string "I was meaning to enter a Contest, but\n"
+	.string "I was meaning to enter a CONTEST, but\n"
 	.string "beating you won't take long...$"
 
 Route208_EventScript_William::
@@ -159,7 +159,7 @@ Route208_EventScript_PtNpc1_Received::
 	end
 
 Route208_Text_PtNpc1_Received::
-	.string "Go to Route 209! Go underground!\p"
+	.string "Go to ROUTE 209! Go underground!\p"
 	.string "Listen to the stone pillar! Talk to\n"
 	.string "people underground!$"
 
@@ -225,7 +225,7 @@ Route208_EventScript_PtSign4::
 	end
 
 Route208_Text_PtSign4::
-	.string "Trainer Tips After a Berry is planted,\n"
+	.string "TRAINER Tips After a Berry is planted,\n"
 	.string "watch the color of the soil.\p"
 	.string "If the soil is dark, it means it has\n"
 	.string "plenty of moisture.\p"

@@ -10,8 +10,8 @@ VeilstoneCity_House1_EventScript_PtNpc1::
 	end
 
 VeilstoneCity_House1_Text_PtNpc1_0::
-	.string "A myth says that Mt. Coronet parted\n"
-	.string "Sinnoh into halves.\p"
+	.string "A myth says that MT. CORONET parted\n"
+	.string "SINNOH into halves.\p"
 	.string "Seeing the POKéMON SHELLOS makes me\n"
 	.string "think maybe the myth is real.$"
 

@@ -81,8 +81,8 @@ CanalaveCity_House3_Text_SNSailor::
 	.string "I’m going to be a Sailor like my daddy!\p"
 	.string "He’s a real man among men! Even the sea\n"
 	.string "doesn’t scare him!\p"
-	.string "Oh, but a Gym Leader’d be cool, too!\n"
-	.string "Byron is so awesome!$"
+	.string "Oh, but a GYM LEADER’d be cool, too!\n"
+	.string "BYRON is so awesome!$"
 
 CanalaveCity_House3_EventScript_PtNpc2::
 	lock
@@ -105,14 +105,14 @@ CanalaveCity_House3_EventScript_SNMomWorried::
 CanalaveCity_House3_Text_PtNpc2::
 	.string "I never thought our boy would fall into\n"
 	.string "this endless nightmare...\p"
-	.string "It’s happened in the past in Canalave...\p"
+	.string "It’s happened in the past in CANALAVE...\p"
 	.string "There were people who never woke up\n"
 	.string "from their nightmares...\p"
 	.string "...That is, until they were awoken using\n"
 	.string "something called the Lunar Wing.\p"
 	.string "My husband went to find a Lunar Wing\n"
-	.string "on Fullmoon Island, but he failed...\p"
-	.string "Does it take a Trainer to do that? We\n"
+	.string "on FULLMOON ISLAND, but he failed...\p"
+	.string "Does it take a TRAINER to do that? We\n"
 	.string "feel so frustrated by this...$"
 
 CanalaveCity_House3_EventScript_SNMomThanks::

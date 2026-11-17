@@ -19,8 +19,8 @@ SunyshoreCity_PokemonCenter_1F_EventScript_PtNpc1::
 	end
 
 SunyshoreCity_PokemonCenter_1F_Text_PtNpc1_0::
-	.string "I once dreamed of becoming a Gym\n"
-	.string "Leader...\p"
+	.string "I once dreamed of becoming a GYM\n"
+	.string "LEADER...\p"
 	.string "Though that dream never came true, I\n"
 	.string "got to live with POKéMON all\p"
 	.string "this time.\p"
@@ -36,9 +36,9 @@ SunyshoreCity_PokemonCenter_1F_EventScript_PtNpc2::
 
 SunyshoreCity_PokemonCenter_1F_Text_PtNpc2_0::
 	.string "Wow, you’re really cool! You have seven\n"
-	.string "Gym Badges!\p"
+	.string "GYM BADGES!\p"
 	.string "All you need is one more to challenge\n"
-	.string "the POKéMON League.$"
+	.string "the POKéMON LEAGUE.$"
 
 SunyshoreCity_PokemonCenter_1F_EventScript_PtNpc2_AwesomelyCoolEightBadges::
 	msgbox SunyshoreCity_PokemonCenter_1F_Text_PtNpc2_1, MSGBOX_DEFAULT
@@ -47,9 +47,9 @@ SunyshoreCity_PokemonCenter_1F_EventScript_PtNpc2_AwesomelyCoolEightBadges::
 
 SunyshoreCity_PokemonCenter_1F_Text_PtNpc2_1::
 	.string "Wow! You’re awesomely cool! You have\n"
-	.string "all eight Gym Badges!\p"
+	.string "all eight GYM BADGES!\p"
 	.string "Now, you have to challenge the POKéMON\n"
-	.string "League!$"
+	.string "LEAGUE!$"
 
 SunyshoreCity_PokemonCenter_1F_EventScript_PtNpc3::
 	lock
@@ -63,7 +63,7 @@ SunyshoreCity_PokemonCenter_1F_Text_PtNpc3_0::
 	.string "city built roads out of solar panels.\p"
 	.string "Those solar panels provide us with\n"
 	.string "clean energy, and they’re good roads.\p"
-	.string "It’s a symbol of Sunyshore’s will to\n"
+	.string "It’s a symbol of SUNNYSHORE’s will to\n"
 	.string "survive, I think.$"
 
 SE_SunyshoreCity_PC_OnTransition::

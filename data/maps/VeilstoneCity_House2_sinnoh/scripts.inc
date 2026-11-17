@@ -25,7 +25,7 @@ VeilstoneCity_House2_Text_SNPory3::
 	.string "Excellent! Thanks! That’ll make the\n"
 	.string "PORYGON happy, too.\p"
 	.string "I suspect it ran away from those Team\n"
-	.string "Galactic goons.$"
+	.string "GALACTIC goons.$"
 
 VeilstoneCity_House2_Text_SNPory2::
 	.string "{PLAYER} accepted the PORYGON!$"
@@ -46,7 +46,7 @@ VeilstoneCity_House2_Text_SNPoryFull::
 	.string "put one in a PC Box first.$"
 
 VeilstoneCity_House2_Text_SNPory1::
-	.string "You’re a Trainer, aren’t you?\p"
+	.string "You’re a TRAINER, aren’t you?\p"
 	.string "You see, there’s this POKéMON I’d like\n"
 	.string "someone to look after.\p"
 	.string "It’s a POKéMON called PORYGON. Can you\n"
@@ -58,7 +58,7 @@ VeilstoneCity_House2_EventScript_SNPorygonDone::
 	end
 
 VeilstoneCity_House2_Text_PtNpc1::
-	.string "Team Galactic’s building bugs me so\n"
+	.string "TEAM GALACTIC’s building bugs me so\n"
 	.string "much, I can’t sleep well.\p"
 	.string "It’s so bizarre, like a robot that’s\n"
 	.string "about to start moving.$"
@@ -75,5 +75,5 @@ VeilstoneCity_House2_Text_PtNpc2_0::
 	.string "The way it moves meaninglessly...\p"
 	.string "I don’t understand their idea of\n"
 	.string "“awesomely fashionable” at all.\p"
-	.string "Still, Team Galactic does seem to have\n"
+	.string "Still, TEAM GALACTIC does seem to have\n"
 	.string "a huge supply of energy.$"

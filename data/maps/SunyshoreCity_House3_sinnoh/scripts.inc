@@ -49,9 +49,9 @@ SunyshoreCity_House3_EventScript_PtNpc4::
 	end
 
 SunyshoreCity_House3_Text_PtNpc4_0::
-	.string "The Underground Man in Eterna and\n"
-	.string "Byron of Canalave are related.\p"
-	.string "Add Byron’s son Roark, and you have a\n"
+	.string "The UNDERGROUND Man in ETERNA and\n"
+	.string "BYRON of CANALAVE are related.\p"
+	.string "Add BYRON’s son ROARK, and you have a\n"
 	.string "trio of dedicated diggers.$"
 
 SunyshoreCity_House3_EventScript_PtNpc5::
@@ -77,8 +77,8 @@ SunyshoreCity_House3_EventScript_PtNpc6::
 
 SunyshoreCity_House3_Text_PtNpc6_0::
 	.string "Get Flags from your friends to make\n"
-	.string "your Secret Base better.\p"
-	.string "Try to hide your Secret Base, and get\n"
+	.string "your SECRET BASE better.\p"
+	.string "Try to hide your SECRET BASE, and get\n"
 	.string "good at discovering your\p"
 	.string "friends’ bases.$"
 

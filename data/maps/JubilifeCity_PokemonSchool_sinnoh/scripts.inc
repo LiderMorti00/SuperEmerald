@@ -7,7 +7,7 @@ JubilifeCity_PokemonSchool_EventScript_PtNpc1::
 	end
 
 JubilifeCity_PokemonSchool_Text_PtNpc1::
-	.string "It's perfectly fine for Trainers and\n"
+	.string "It's perfectly fine for TRAINERS and\n"
 	.string "POKéMON to develop at their own pace.\p"
 	.string "If there is anything you're not\n"
 	.string "familiar with, you can look it up here.$"
@@ -39,7 +39,7 @@ JubilifeCity_PokemonSchool_EventScript_PtNpc4::
 
 JubilifeCity_PokemonSchool_Text_PtNpc4::
 	.string "I wrote an essay in my notebook on\n"
-	.string "what makes a true POKéMON Trainer.$"
+	.string "what makes a true POKéMON TRAINER.$"
 
 JubilifeCity_PokemonSchool_EventScript_PtNpc5::
 	lock

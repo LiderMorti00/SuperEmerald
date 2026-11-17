@@ -70,9 +70,9 @@ Route224_EventScript_Armando::
 	end
 
 Route224_Text_ArmandoPost::
-	.string "I've seen countless Trainers and even\n"
+	.string "I've seen countless TRAINERS and even\n"
 	.string "more POKéMON.\p"
-	.string "You're a strong Trainer. Moreover,\n"
+	.string "You're a strong TRAINER. Moreover,\n"
 	.string "your heart is strong.$"
 
 Route224_EventScript_Armando_Rematch::
@@ -84,9 +84,9 @@ Route224_Text_ArmandoDefeat::
 	.string "I see... Simply outstanding.$"
 
 Route224_Text_ArmandoIntro::
-	.string "I've seen countless Trainers and even\n"
+	.string "I've seen countless TRAINERS and even\n"
 	.string "more POKéMON!\p"
-	.string "So, what kind of a Trainer are you?$"
+	.string "So, what kind of a TRAINER are you?$"
 
 Route224_EventScript_Brittney::
 	trainerbattle_single TRAINER_MARLEY_SINNOH, Route224_Text_BrittneyIntro, Route224_Text_BrittneyDefeat
@@ -160,7 +160,7 @@ Route224_EventScript_Hayden::
 
 Route224_Text_HaydenPost::
 	.string "It's been several years since I left\n"
-	.string "the Dragon's Den.\p"
+	.string "the DRAGON'S DEN.\p"
 	.string "I've got to say, your POKéMON are in\n"
 	.string "the top class for toughness.$"
 
@@ -241,7 +241,7 @@ Route224_EventScript_SNOak::
 	end
 
 Route224_Text_SNOak4::
-	.string "Oak: ?! What was that POKéMON?\p"
+	.string "OAK: ?! What was that POKéMON?\p"
 	.string "Is it somehow connected to the stone\n"
 	.string "tablet?\p"
 	.string "Hmm... Where did that POKéMON go? Its\n"
@@ -252,11 +252,11 @@ Route224_Text_SNOak3::
 	.string "to everyone met on the journey...$"
 
 Route224_Text_SNMarley2::
-	.string "Marley: That stone tablet... It has a\n"
+	.string "MARLEY: That stone tablet... It has a\n"
 	.string "strange feel to it...$"
 
 Route224_Text_SNMarley1::
-	.string "Marley: I... I don’t like to talk...\p"
+	.string "MARLEY: I... I don’t like to talk...\p"
 	.string "I choose my words carefully, but they\n"
 	.string "may still hurt someone accidentally...\p"
 	.string "When I think of that, I clam up...\p"
@@ -266,12 +266,12 @@ Route224_Text_SNMarley1::
 	.string "feelings of gratitude in a nice way...$"
 
 Route224_Text_SNOak2::
-	.string "Oak: I tried deciphering the\n"
+	.string "OAK: I tried deciphering the\n"
 	.string "engravings on the stone tablet.\p"
-	.string "Apparently, it is for a Trainer to\n"
+	.string "Apparently, it is for a TRAINER to\n"
 	.string "engrave his or her thoughts after\p"
 	.string "growing as a person on an adventure.\p"
-	.string "A Trainer fitting that description\n"
+	.string "A TRAINER fitting that description\n"
 	.string "would be you.\p"
 	.string "That’s why I’m asking you for your help.\p"
 	.string "You’ve met many people and POKéMON;\n"
@@ -283,10 +283,10 @@ Route224_Text_SNOak2::
 	.string "say your thanks?$"
 
 Route224_Text_SNOak1::
-	.string "Oak: Ah, {PLAYER}! It’s good to see you!\p"
+	.string "OAK: Ah, {PLAYER}! It’s good to see you!\p"
 	.string "Without any further ado, I’d like you\n"
 	.string "to examine this stone tablet.\p"
 	.string "Something just like it was also\n"
-	.string "discovered in the Kanto region.\p"
+	.string "discovered in the KANTO region.\p"
 	.string "I want to ask for your help in solving\n"
 	.string "the mystery behind this.$"

@@ -26,7 +26,7 @@ Route211_East_EventScript_Nick::
 
 Route211_East_Text_NickPost::
 	.string "I'll wait here for a weaker-looking\n"
-	.string "Trainer and then ambush them!$"
+	.string "TRAINER and then ambush them!$"
 
 Route211_East_Text_NickDefeat::
 	.string "I did a lot to conceal myself, too...$"
@@ -71,11 +71,11 @@ Route211_East_EventScript_Harry_Rematch::
 
 Route211_East_Text_HarryDefeat::
 	.string "My investigation has revealed the\n"
-	.string "Trainer to be tough! Ouch...$"
+	.string "TRAINER to be tough! Ouch...$"
 
 Route211_East_Text_HarryIntro::
 	.string "Whilst exploring the ruins, I spotted\n"
-	.string "a Trainer! I must investigate!$"
+	.string "a TRAINER! I must investigate!$"
 
 Route211_East_EventScript_SNPtACETRAINERM::
 	msgbox Route211_East_EventScript_SNPtACETRAINERM_Text, MSGBOX_NPC
@@ -96,9 +96,9 @@ Route211_East_EventScript_PtSign1::
 	end
 
 Route211_East_Text_PtSign1::
-	.string "Trainer Tips Even Veterans can get\n"
+	.string "TRAINER Tips Even Veterans can get\n"
 	.string "lost inside of MT. CORONET.\p"
-	.string "Trainers should check their supply of\n"
+	.string "TRAINERS should check their supply of\n"
 	.string "medicine and items before trying to\l"
 	.string "venture through.$"
 

@@ -7,7 +7,7 @@ Route214_Access_EventScript_PtNpc1::
 	end
 
 Route214_Access_Text_PtNpc1::
-	.string "Are you going to take Route 214?\n"
+	.string "Are you going to take ROUTE 214?\n"
 	.string "You're serious, aren't you?\p"
 	.string "It's too badly chewed up, and there's\n"
 	.string "nothing to see there.\p"

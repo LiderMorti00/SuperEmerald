@@ -147,7 +147,7 @@ Route207_EventScript_SNCounterpart_End::
 
 Route207_EventScript_SNCounterpart_D2::
 	.string "{STR_VAR_1}: Using that Vs. Seeker, you\n"
-	.string "can find Trainers who want a rematch\p"
+	.string "can find TRAINERS who want a rematch\p"
 	.string "with you.\p"
 	.string "Oh, {PLAYER}, do you also have a\n"
 	.string "POKéTCH?\p"
@@ -163,7 +163,7 @@ Route207_EventScript_SNCounterpart_D2::
 	.string "You should try it out.\p"
 	.string "OK, let’s keep working on our\n"
 	.string "POKéDEXes.\p"
-	.string "Professor Rowan is counting on us!$"
+	.string "PROFESSOR ROWAN is counting on us!$"
 
 Route207_EventScript_SNCounterpart_D1::
 	.string "{STR_VAR_1}: Hi, {PLAYER}! How’s your\n"
@@ -187,7 +187,7 @@ Route207_EventScript_SNCounterpart_Lucas::
 
 Route207_EventScript_SNCounterpart_L2::
 	.string "{STR_VAR_1}: Using that Vs. Seeker, you\n"
-	.string "can find Trainers who want to battle\l"
+	.string "can find TRAINERS who want to battle\l"
 	.string "with\p"
 	.string "you again.\p"
 	.string "{PLAYER}, what about a POKéTCH? Do you\n"
@@ -203,7 +203,7 @@ Route207_EventScript_SNCounterpart_L2::
 	.string "Try it out now. I think there’s\n"
 	.string "something here.\p"
 	.string "OK, keep working on your POKéDEX.\n"
-	.string "Professor Rowan is counting on us!$"
+	.string "PROFESSOR ROWAN is counting on us!$"
 
 Route207_EventScript_SNCounterpart_L1::
 	.string "{STR_VAR_1}: Hey, {PLAYER}! How’s your\n"
@@ -238,7 +238,7 @@ Route207_EventScript_PtSign3::
 	end
 
 Route207_Text_PtSign3::
-	.string "Trainer Tips POKéMON may become\n"
+	.string "TRAINER Tips POKéMON may become\n"
 	.string "immobilized if they are asleep or\l"
 	.string "paralyzed.\p"
 	.string "If it happens to your POKéMON, it\n"

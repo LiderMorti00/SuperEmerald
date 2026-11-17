@@ -25,7 +25,7 @@ Route213_House3_Text_PtNpc1_1::
 	.string "Before the faster can move, the\n"
 	.string "slowest gets to attack!\p"
 	.string "How you use the move is up to you,\n"
-	.string "Trainer...$"
+	.string "TRAINER...$"
 
 Route213_House3_Text_PtNpc1_0::
 	.string "We’re a traveling troupe of street\n"

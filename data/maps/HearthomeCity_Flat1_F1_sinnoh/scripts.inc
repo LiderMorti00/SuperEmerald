@@ -10,7 +10,7 @@ HearthomeCity_Flat1_F1_EventScript_PtNpc1::
 	end
 
 HearthomeCity_Flat1_F1_Text_PtNpc1_0::
-	.string "Well, now, you’re a Trainer?\p"
+	.string "Well, now, you’re a TRAINER?\p"
 	.string "That makes you both papa and mama to\n"
 	.string "your POKéMON.\p"
 	.string "You know how having POKéMON around\n"
@@ -61,7 +61,7 @@ HearthomeCity_Flat1_F1_EventScript_PtNpc5::
 
 HearthomeCity_Flat1_F1_Text_PtNpc5_0::
 	.string "When I get bigger, I’m going to be a\n"
-	.string "Trainer, too!$"
+	.string "TRAINER, too!$"
 
 HearthomeCity_Flat1_F1_EventScript_PtNpc6::
 	lock
@@ -82,7 +82,7 @@ HearthomeCity_Flat1_F1_EventScript_PtNpc7::
 	end
 
 HearthomeCity_Flat1_F1_Text_PtNpc7_0::
-	.string "Oh, wow, you’re a POKéMON Trainer.\p"
+	.string "Oh, wow, you’re a POKéMON TRAINER.\p"
 	.string "Having lots of POKéMON around is a lot\n"
 	.string "of responsibility.\p"
 	.string "But that also comes with a lot of fun!$"
