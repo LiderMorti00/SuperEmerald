@@ -1883,8 +1883,7 @@
     "FightArea_House2_sinnoh",
     "FightArea_PokemonCenter_1F_sinnoh",
     "FightArea_PokemonCenter_2F_sinnoh",
-    "FightArea_Mart_sinnoh",
-    "FightArea_FrontierGate_sinnoh"
+    "FightArea_Mart_sinnoh"
   ],
   "gMapGroup_IndoorSurvivalArea_Sinnoh": [
     "SurvivalArea_House1_sinnoh",

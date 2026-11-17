@@ -1,4 +1,7 @@
 GoldenrodCity_TrainStation_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_GoldenrodStation_OnTransition
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, SE_GoldenrodStation_OnWarpInto
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SE_GoldenrodStation_OnFrame
 	.byte 0
 
 

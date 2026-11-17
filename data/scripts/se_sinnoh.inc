@@ -53,7 +53,8 @@ SE_EventScript_SlateportToCanalave::
 	setvar VAR_SE_SINNOH_ARRIVAL, 1
 SE_EventScript_SlateportToCanalaveGo::
 	call SlateportCity_Harbor_EventScript_BoardFerry
-	warp MAP_CANALAVE_CITY_SINNOH, 22, 16
+	setvar VAR_SE_CRUISE_DEST, 4
+	goto SE_EventScript_BoardTidal
 	waitstate
 	release
 	end
@@ -123,7 +124,8 @@ SE_EventScript_CanalaveToSlateport::
 	playse SE_SHIP
 	fadescreenspeed FADE_TO_BLACK, 12
 	delay 60
-	warp MAP_SLATEPORT_CITY_HARBOR, 8, 11
+	setvar VAR_SE_CRUISE_DEST, 2
+	goto SE_EventScript_BoardTidal
 	waitstate
 	release
 	end
@@ -134,7 +136,8 @@ SE_EventScript_CanalaveToOlivine::
 	playse SE_SHIP
 	fadescreenspeed FADE_TO_BLACK, 12
 	delay 60
-	warp MAP_OLIVINE_CITY_PORT_INSIDE_HNS, 8, 16
+	setvar VAR_SE_CRUISE_DEST, 1
+	goto SE_EventScript_BoardTidal
 	waitstate
 	release
 	end

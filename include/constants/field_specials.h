@@ -35,6 +35,7 @@ enum SSTidalState
 };
 
 #define SS_TIDAL_MAX_STEPS 205
+#define SE_CRUISE_START_STEPS (SS_TIDAL_MAX_STEPS - 90) // Super Emerald: region-to-region trips last 90 steps
 
 // Scrollable Multichoice Menus
 enum ScrollMulti

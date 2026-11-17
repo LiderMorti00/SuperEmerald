@@ -1652,7 +1652,6 @@ gStdScripts_End::
 	.include "data/maps/FightArea_PokemonCenter_1F_sinnoh/scripts.inc"
 	.include "data/maps/FightArea_PokemonCenter_2F_sinnoh/scripts.inc"
 	.include "data/maps/FightArea_Mart_sinnoh/scripts.inc"
-	.include "data/maps/FightArea_FrontierGate_sinnoh/scripts.inc"
 	.include "data/maps/SurvivalArea_House1_sinnoh/scripts.inc"
 	.include "data/maps/SurvivalArea_House2_sinnoh/scripts.inc"
 	.include "data/maps/SurvivalArea_PokemonCenter_1F_sinnoh/scripts.inc"
@@ -2354,6 +2353,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/flash.inc"
 	.include "data/scripts/players_house.inc"
 	.include "data/scripts/se_postgame.inc" @ Super Emerald
+	.include "data/scripts/se_cruise.inc" @ Super Emerald
 	.include "data/scripts/berry_blender.inc"
 	.include "data/text/mauville_man.inc"
 	.include "data/text/trainers.inc"

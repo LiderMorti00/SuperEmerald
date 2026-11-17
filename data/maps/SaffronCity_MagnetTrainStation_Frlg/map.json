@@ -84,7 +84,23 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_TEMP_11",
+      "local_id": "LOCALID_SAFFRON_TRAIN"
+    },
+    {
+      "local_id": "LOCALID_SAFFRON_TRAIN_ARRIVING",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_TRAIN_EAST_HNS",
+      "x": 112,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_TEMP_12"
     }
   ],
   "warp_events": [

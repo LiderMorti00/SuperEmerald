@@ -77,14 +77,14 @@
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_FIGHT_AREA_SINNOH",
-      "dest_warp_id": "5"
+      "dest_warp_id": "3"
     },
     {
       "x": 4,
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_FIGHT_AREA_SINNOH",
-      "dest_warp_id": "5"
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [],

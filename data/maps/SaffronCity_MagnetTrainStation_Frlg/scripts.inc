@@ -1,4 +1,7 @@
 SaffronCity_MagnetTrainStation_Frlg_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_SaffronStation_OnTransition
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, SE_SaffronStation_OnWarpInto
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SE_SaffronStation_OnFrame
 	.byte 0
 
 @ Super Emerald: HGSS look, texts from Pokemon Heart & Soul (tools/sfr/hns/import_kanto_hgss.py)

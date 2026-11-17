@@ -17643,19 +17643,6 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_FIGHT_AREA_FRONTIER_GATE_SINNOH",
-      "name": "FightArea_FrontierGate_Layout_Sinnoh",
-      "width": 9,
-      "height": 11,
-      "border_width": 2,
-      "border_height": 2,
-      "primary_tileset": "gTileset_Building_Sinnoh",
-      "secondary_tileset": "gTileset_Pasos_Sinnoh",
-      "border_filepath": "data/layouts/FightArea_FrontierGate_sinnoh/border.bin",
-      "blockdata_filepath": "data/layouts/FightArea_FrontierGate_sinnoh/map.bin",
-      "layout_version": "emerald"
-    },
-    {
       "id": "LAYOUT_SURVIVAL_AREA_HOUSE1_SINNOH",
       "name": "SurvivalArea_House1_Layout_Sinnoh",
       "width": 10,

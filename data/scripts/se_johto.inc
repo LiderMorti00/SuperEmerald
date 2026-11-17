@@ -46,7 +46,8 @@ SE_EventScript_SlateportOfferJohto::
 	setvar VAR_SE_JOHTO_ARRIVAL, 1
 SE_EventScript_SlateportToOlivine::
 	call SlateportCity_Harbor_EventScript_BoardFerry
-	warp MAP_OLIVINE_CITY_PORT_INSIDE_HNS, 8, 16
+	setvar VAR_SE_CRUISE_DEST, 1
+	goto SE_EventScript_BoardTidal
 	waitstate
 	release
 	end
@@ -85,7 +86,8 @@ SE_EventScript_OlivineToSlateport::
 	playse SE_SHIP
 	fadescreenspeed FADE_TO_BLACK, 12
 	delay 60
-	warp MAP_SLATEPORT_CITY_HARBOR, 8, 11
+	setvar VAR_SE_CRUISE_DEST, 2
+	goto SE_EventScript_BoardTidal
 	waitstate
 	release
 	end
@@ -97,7 +99,8 @@ SE_EventScript_OlivineToVermilion::
 	playse SE_SHIP
 	fadescreenspeed FADE_TO_BLACK, 12
 	delay 60
-	warp MAP_VERMILION_CITY, 23, 32
+	setvar VAR_SE_CRUISE_DEST, 3
+	goto SE_EventScript_BoardAqua
 	waitstate
 	release
 	end
@@ -880,11 +883,8 @@ SE_EventScript_MagnetTrainGoldenrod::
 	closemessage
 	playse SE_DOOR
 	fadescreen FADE_TO_BLACK
-	playbgm MUS_HG_MAGNET_TRAIN, FALSE
-	delay 150
-	playse SE_TRUCK_STOP
-	delay 30
-	warp MAP_SAFFRON_CITY_MAGNET_TRAIN_STATION, 137, 21
+	setvar VAR_SE_TRAIN_RIDE, 1
+	warpsilent MAP_GOLDENROD_CITY_TRAIN_STATION_HNS, 4, 5
 	waitstate
 	release
 	end
@@ -898,11 +898,8 @@ SE_EventScript_MagnetTrainSaffron::
 	closemessage
 	playse SE_DOOR
 	fadescreen FADE_TO_BLACK
-	playbgm MUS_HG_MAGNET_TRAIN, FALSE
-	delay 150
-	playse SE_TRUCK_STOP
-	delay 30
-	warp MAP_GOLDENROD_CITY_TRAIN_STATION_HNS, 16, 21
+	setvar VAR_SE_TRAIN_RIDE, 3
+	warpsilent MAP_SAFFRON_CITY_MAGNET_TRAIN_STATION, 149, 5
 	waitstate
 	release
 	end
@@ -1868,3 +1865,165 @@ SE_Text_LeagueClosedToday:
 	.string "The ELITE FOUR have already faced a\n"
 	.string "challenger today.\p"
 	.string "Please come back tomorrow!$"
+
+@ ---------------------------------------------------------------------------
+@ Magnet Train ride: the train leaves one station along the track, then
+@ arrives at the other one (VAR_SE_TRAIN_RIDE: 1 leave Goldenrod,
+@ 2 reach Saffron, 3 leave Saffron, 4 reach Goldenrod)
+SE_GoldenrodStation_OnTransition:
+	call_if_ne VAR_SE_TRAIN_RIDE, 4, SE_EventScript_HideArrivingTrain
+	call_if_eq VAR_SE_TRAIN_RIDE, 4, SE_EventScript_HideParkedTrain
+	call_if_ne VAR_SE_TRAIN_RIDE, 0, SE_EventScript_TrainRideMusic
+	end
+
+SE_SaffronStation_OnTransition:
+	call_if_ne VAR_SE_TRAIN_RIDE, 2, SE_EventScript_HideArrivingTrain
+	call_if_eq VAR_SE_TRAIN_RIDE, 2, SE_EventScript_HideParkedTrain
+	call_if_ne VAR_SE_TRAIN_RIDE, 0, SE_EventScript_TrainRideMusic
+	end
+
+SE_EventScript_HideArrivingTrain::
+	setflag FLAG_TEMP_12
+	return
+
+SE_EventScript_HideParkedTrain::
+	setflag FLAG_TEMP_11
+	return
+
+SE_EventScript_TrainRideMusic::
+	playbgm MUS_HG_MAGNET_TRAIN, FALSE
+	return
+
+SE_GoldenrodStation_OnWarpInto:
+	map_script_2 VAR_SE_TRAIN_RIDE, 1, SE_EventScript_TrainHidePlayer
+	map_script_2 VAR_SE_TRAIN_RIDE, 4, SE_EventScript_TrainHidePlayer
+	.2byte 0
+
+SE_SaffronStation_OnWarpInto:
+	map_script_2 VAR_SE_TRAIN_RIDE, 2, SE_EventScript_TrainHidePlayer
+	map_script_2 VAR_SE_TRAIN_RIDE, 3, SE_EventScript_TrainHidePlayer
+	.2byte 0
+
+SE_EventScript_TrainHidePlayer::
+	hideplayer
+	end
+
+SE_GoldenrodStation_OnFrame:
+	map_script_2 VAR_SE_TRAIN_RIDE, 1, SE_EventScript_TrainLeaveGoldenrod
+	map_script_2 VAR_SE_TRAIN_RIDE, 4, SE_EventScript_TrainReachGoldenrod
+	.2byte 0
+
+SE_SaffronStation_OnFrame:
+	map_script_2 VAR_SE_TRAIN_RIDE, 2, SE_EventScript_TrainReachSaffron
+	map_script_2 VAR_SE_TRAIN_RIDE, 3, SE_EventScript_TrainLeaveSaffron
+	.2byte 0
+
+SE_EventScript_TrainLeaveGoldenrod::
+	lockall
+	hidefollower
+	hideplayer
+	delay 30
+	applymovement LOCALID_GOLDENROD_CITY_TRAIN_STATION_TRAIN, SE_Movement_TrainRight
+	applymovement OBJ_EVENT_ID_PLAYER, SE_Movement_TrainRight
+	waitmovement 0
+	setvar VAR_SE_TRAIN_RIDE, 2
+	fadescreen FADE_TO_BLACK
+	warpsilent MAP_SAFFRON_CITY_MAGNET_TRAIN_STATION, 115, 5
+	waitstate
+	releaseall
+	end
+
+SE_EventScript_TrainReachSaffron::
+	lockall
+	hidefollower
+	hideplayer
+	applymovement LOCALID_SAFFRON_TRAIN_ARRIVING, SE_Movement_TrainRightStop
+	applymovement OBJ_EVENT_ID_PLAYER, SE_Movement_TrainRightStop
+	waitmovement 0
+	playse SE_TRUCK_STOP
+	delay 40
+	setvar VAR_SE_TRAIN_RIDE, 0
+	fadescreen FADE_TO_BLACK
+	warp MAP_SAFFRON_CITY_MAGNET_TRAIN_STATION, 137, 21
+	waitstate
+	releaseall
+	end
+
+SE_EventScript_TrainLeaveSaffron::
+	lockall
+	hidefollower
+	hideplayer
+	delay 30
+	applymovement LOCALID_SAFFRON_TRAIN, SE_Movement_TrainLeft
+	applymovement OBJ_EVENT_ID_PLAYER, SE_Movement_TrainLeft
+	waitmovement 0
+	setvar VAR_SE_TRAIN_RIDE, 4
+	fadescreen FADE_TO_BLACK
+	warpsilent MAP_GOLDENROD_CITY_TRAIN_STATION_HNS, 43, 5
+	waitstate
+	releaseall
+	end
+
+SE_EventScript_TrainReachGoldenrod::
+	lockall
+	hidefollower
+	hideplayer
+	applymovement LOCALID_GOLDENROD_TRAIN_ARRIVING, SE_Movement_TrainLeftStop
+	applymovement OBJ_EVENT_ID_PLAYER, SE_Movement_TrainLeftStop
+	waitmovement 0
+	playse SE_TRUCK_STOP
+	delay 40
+	setvar VAR_SE_TRAIN_RIDE, 0
+	fadescreen FADE_TO_BLACK
+	warp MAP_GOLDENROD_CITY_TRAIN_STATION_HNS, 16, 21
+	waitstate
+	releaseall
+	end
+
+SE_Movement_TrainRight:
+	walk_slow_right
+	walk_right
+	walk_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	.rept 26
+	walk_faster_right
+	.endr
+	step_end
+
+SE_Movement_TrainRightStop:
+	.rept 20
+	walk_faster_right
+	.endr
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_right
+	walk_right
+	walk_slow_right
+	step_end
+
+SE_Movement_TrainLeft:
+	walk_slow_left
+	walk_left
+	walk_left
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	.rept 26
+	walk_faster_left
+	.endr
+	step_end
+
+SE_Movement_TrainLeftStop:
+	.rept 20
+	walk_faster_left
+	.endr
+	walk_fast_left
+	walk_fast_left
+	walk_fast_left
+	walk_left
+	walk_left
+	walk_slow_left
+	step_end

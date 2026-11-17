@@ -23,7 +23,8 @@ SE_EventScript_VermilionToOlivine::
 	playse SE_SHIP
 	fadescreenspeed FADE_TO_BLACK, 12
 	delay 60
-	warp MAP_OLIVINE_CITY_PORT_INSIDE_HNS, 8, 16
+	setvar VAR_SE_CRUISE_DEST, 1
+	goto SE_EventScript_BoardAqua
 	waitstate
 	release
 	end
@@ -34,7 +35,8 @@ SE_EventScript_VermilionToSlateport::
 	playse SE_SHIP
 	fadescreenspeed FADE_TO_BLACK, 12
 	delay 60
-	warp MAP_SLATEPORT_CITY_HARBOR, 8, 11
+	setvar VAR_SE_CRUISE_DEST, 2
+	goto SE_EventScript_BoardTidal
 	waitstate
 	release
 	end

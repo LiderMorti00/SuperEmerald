@@ -1,4 +1,5 @@
 SSAqua_1F_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SSAqua_1F_OnFrame
 	.byte 0
 
 
@@ -28,5 +29,6 @@ SSAqua_1F_Text_Sailor1_ToVermilion::
     .string "we arrive.$"
 
 SE_J_SSAqua_1F_hns_SSAqua_1F_EventScript_DoorSailor::
+	goto_if_ne VAR_SE_CRUISE_STATE, 0, SE_EventScript_CruiseExitSailor
 	msgbox SSAqua_1F_Text_Sailor1_ToVermilion, MSGBOX_NPC
 	end

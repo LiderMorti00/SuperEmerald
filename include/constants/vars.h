@@ -401,6 +401,9 @@
 #define VAR_SE_ELEVATOR               0x5006 // 1 = just rode the Goldenrod Dept. Store elevator
 #define VAR_SE_ALPH_FOSSIL_STATE      0x5007 // Ruins of Alph lab: 0 none, 1 reviving, 2 ready
 #define VAR_SE_ALPH_FOSSIL_SPECIES    0x5008 // species being revived at the Ruins of Alph lab
+#define VAR_SE_CRUISE_DEST            0x5009 // ship trips between regions: 1 Olivine, 2 Slateport, 3 Vermilion, 4 Canalave
+#define VAR_SE_CRUISE_STATE           0x500A // 0 none, 1 boarding, 2 sailing, 3 arrived
+#define VAR_SE_TRAIN_RIDE             0x500B // Magnet Train ride scene: 1 leave Goldenrod, 2 reach Saffron, 3 leave Saffron, 4 reach Goldenrod
 #define VAR_SE_JOHTO_ARRIVAL          0x5001 // 1 = just arrived at Olivine by ship, 2 = met Jasmine
 
 #define VAR_SE_SINNOH_STATE_VERSION   0x5040 // Super Emerald: bump SE_SINNOH_STATE_VERSION when the Sinnoh state changes

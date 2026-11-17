@@ -3,6 +3,7 @@ SSTidalCorridor_MapScripts::
 	.byte 0
 
 SSTidalCorridor_OnFrame:
+	map_script_2 VAR_SE_CRUISE_STATE, 1, SE_EventScript_CruiseDepart
 	map_script_2 VAR_SS_TIDAL_SCOTT_STATE, 0, SSTidalCorridor_EventScript_ScottScene
 	map_script_2 VAR_SS_TIDAL_STATE, SS_TIDAL_BOARD_SLATEPORT, SSTidalCorridor_EventScript_DepartSlateportForLilycove
 	map_script_2 VAR_SS_TIDAL_STATE, SS_TIDAL_BOARD_LILYCOVE, SSTidalCorridor_EventScript_DepartLilycoveForSlateport
@@ -42,6 +43,7 @@ SSTidalRooms_EventScript_ArrivedInLilycove::
 	return
 
 SSTidalCorridor_EventScript_ReachedStepCount::
+	goto_if_eq VAR_SE_CRUISE_STATE, 2, SE_EventScript_CruiseArrive
 	goto_if_eq VAR_SS_TIDAL_STATE, SS_TIDAL_DEPART_SLATEPORT, SSTidalCorridor_EventScript_HalfwayToLilycove
 	goto_if_eq VAR_SS_TIDAL_STATE, SS_TIDAL_HALFWAY_SLATEPORT, SSTidalCorridor_EventScript_ArrivedInSlateport
 	end
@@ -72,6 +74,7 @@ SSTidalRooms_EventScript_ArrivedInSlateport::
 	return
 
 SSTidalRooms_EventScript_ProgessCruiseAfterBed::
+	goto_if_eq VAR_SE_CRUISE_STATE, 2, SE_EventScript_CruiseArriveAfterBed
 	switch VAR_SS_TIDAL_STATE
 	case SS_TIDAL_DEPART_SLATEPORT, SSTidalRooms_EventScript_ArrivedInLilycove
 	case SS_TIDAL_HALFWAY_LILYCOVE, SSTidalRooms_EventScript_ArrivedInLilycove
@@ -110,6 +113,7 @@ SSTidalCorridor_EventScript_Cabin4Sign::
 	end
 
 SSTidalCorridor_EventScript_ExitSailor::
+	goto_if_ne VAR_SE_CRUISE_STATE, 0, SE_EventScript_CruiseExitSailor
 	lock
 	faceplayer
 	goto_if_eq VAR_SS_TIDAL_STATE, SS_TIDAL_LAND_LILYCOVE, SSTidalCorridor_EventScript_ExitLilycove
