@@ -3012,16 +3012,16 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Voltorb
+Togedemaru
 Level: 60
 
-Voltorb
+Sandslash-Alola
 Level: 60
 
-Electrode
+Mimikyu
 Level: 60
 
-Mr Mime
+Marowak-Alola
 Level: 61
 
 === TRAINER_JUGGLER_KAYDEN ===
@@ -7588,13 +7588,13 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Natu
+Minior
 Level: 61
 
-Slowbro
+Oranguru
 Level: 61
 
-Kadabra
+Bruxish
 Level: 61
 
 === TRAINER_CRUSH_GIRL_SHARON ===
@@ -7606,10 +7606,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Mankey @ Black Belt
+Hakamo-o @ Black Belt
 Level: 57
 
-Primeape @ Black Belt
+Kommo-o @ Black Belt
 Level: 57
 
 === TRAINER_TUBER_AMIRA ===
@@ -7621,13 +7621,13 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Poliwag
+Popplio
 Level: 56
 
-Poliwhirl
+Sandygast
 Level: 56
 
-Poliwag
+Wishiwashi
 Level: 56
 
 === TRAINER_PKMN_BREEDER_ALIZE ===
@@ -7639,13 +7639,13 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Pikachu
+Hakamo-o
 Level: 61
 
-Clefairy
+Charjabug
 Level: 61
 
-Marill
+Trumbeak
 Level: 61
 
 === TRAINER_PKMN_RANGER_NICOLAS ===
@@ -7658,10 +7658,10 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Weepinbell
+Toucannon
 Level: 62
 
-Victreebel
+Bewear
 Level: 62
 
 === TRAINER_PKMN_RANGER_MADELINE ===
@@ -7674,10 +7674,10 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Gloom
+Bewear
 Level: 62
 
-Vileplume
+Lycanroc
 Level: 62
 
 === TRAINER_AROMA_LADY_NIKKI ===
@@ -7689,10 +7689,10 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Bellsprout
+Tsareena
 Level: 57
 
-Weepinbell
+Lurantis
 Level: 57
 
 === TRAINER_RUIN_MANIAC_STANLY ===
@@ -7704,13 +7704,13 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Graveler
+Graveler-Alola
 Level: 61
 
-Onix
+Minior
 Level: 61
 
-Graveler
+Minior
 Level: 61
 
 === TRAINER_LADY_JACKI ===
@@ -7723,10 +7723,10 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
 
-Hoppip @ Stardust
+Tsareena @ Stardust
 Level: 61
 
-Skiploom @ Stardust
+Ribombee @ Stardust
 Level: 61
 
 === TRAINER_PAINTER_DAISY ===
@@ -7738,7 +7738,7 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Smeargle
+Shiinotic
 Level: 61
 
 === TRAINER_BIKER_GOON ===
@@ -8096,13 +8096,13 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Seel
+Golisopod
 Level: 56
 
-Seel
+Pyukumuku
 Level: 56
 
-Dewgong
+Toxapex
 Level: 56
 
 === TRAINER_SWIMMER_FEMALE_MARIA ===
@@ -8114,10 +8114,10 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Seadra
+Wishiwashi
 Level: 57
 
-Seadra
+Mareanie
 Level: 57
 
 === TRAINER_SWIMMER_FEMALE_ABIGAIL ===
@@ -8129,13 +8129,13 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Psyduck
+Golisopod
 Level: 56
 
-Psyduck
+Pyukumuku
 Level: 56
 
-Golduck
+Toxapex
 Level: 57
 
 === TRAINER_SWIMMER_MALE_FINN ===
@@ -8147,7 +8147,7 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Starmie
+Toxapex
 Level: 57
 
 === TRAINER_SWIMMER_MALE_GARRETT ===
@@ -8159,13 +8159,13 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Shellder
+Toxapex
 Level: 56
 
-Cloyster
+Dewpider
 Level: 56
 
-Wartortle
+Dhelmise
 Level: 57
 
 === TRAINER_FISHERMAN_TOMMY ===
@@ -8177,19 +8177,19 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Goldeen
+Golisopod
 Level: 55
 
-Goldeen
+Pyukumuku
 Level: 55
 
-Seaking
+Toxapex
 Level: 56
 
-Seaking
+Dewpider
 Level: 56
 
-Seaking
+Dhelmise
 Level: 56
 
 === TRAINER_CRUSH_GIRL_TANYA ===
@@ -8201,10 +8201,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Hitmonlee @ Black Belt
+Bewear @ Black Belt
 Level: 57
 
-Hitmonchan @ Black Belt
+Passimian @ Black Belt
 Level: 57
 
 === TRAINER_BLACK_BELT_SHEA ===
@@ -8216,10 +8216,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Machop @ Black Belt
+Kommo-o @ Black Belt
 Level: 57
 
-Machoke @ Black Belt
+Bewear @ Black Belt
 Level: 57
 
 === TRAINER_BLACK_BELT_HUGH ===
@@ -8231,10 +8231,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Machop @ Black Belt
+Hakamo-o @ Black Belt
 Level: 57
 
-Machoke @ Black Belt
+Kommo-o @ Black Belt
 Level: 57
 
 === TRAINER_CAMPER_BRYCE ===
@@ -8246,13 +8246,13 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Nidorino
+Raticate-Alola
 Level: 56
 
-Raticate
+Gumshoos
 Level: 56
 
-Sandslash
+Vikavolt
 Level: 56
 
 === TRAINER_PICNICKER_CLAIRE ===
@@ -8264,16 +8264,16 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Meowth
+Lurantis
 Level: 56
 
-Meowth
+Tsareena
 Level: 56
 
-Pikachu
+Comfey
 Level: 56
 
-Clefairy
+Shiinotic
 Level: 56
 
 === TRAINER_CRUSH_KIN_MIK_KIA ===
@@ -8285,10 +8285,10 @@ Music: Serious
 Double Battle: Yes
 AI: Check Bad Move
 
-Machoke @ Black Belt
+Crabominable @ Black Belt
 Level: 57
 
-Primeape @ Black Belt
+Bewear @ Black Belt
 Level: 57
 
 === TRAINER_AROMA_LADY_VIOLET ===
@@ -8300,13 +8300,13 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Bulbasaur
+Comfey
 Level: 56
 
-Ivysaur
+Ribombee
 Level: 56
 
-Ivysaur
+Steenee
 Level: 56
 
 === TRAINER_TUBER_ALEXIS ===
@@ -8318,16 +8318,16 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Staryu
+Dewpider
 Level: 56
 
-Staryu
+Pyukumuku
 Level: 56
 
-Krabby
+Popplio
 Level: 56
 
-Krabby
+Sandygast
 Level: 56
 
 === TRAINER_TWINS_JOY_MEG ===
@@ -8339,10 +8339,10 @@ Music: Cute
 Double Battle: Yes
 AI: Check Bad Move
 
-Clefairy
+Komala
 Level: 57
 
-Clefairy
+Togedemaru
 Level: 57
 
 === TRAINER_SWIMMER_FEMALE_TISHA ===
@@ -8354,7 +8354,7 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Kingler
+Dewpider
 Level: 57
 
 === TRAINER_PAINTER_CELINA ===
@@ -8366,7 +8366,7 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Smeargle
+Shiinotic
 Level: 61
 
 === TRAINER_PAINTER_RAYNA ===
@@ -8378,7 +8378,7 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Smeargle
+Ribombee
 Level: 61
 
 === TRAINER_LADY_GILLIAN ===
@@ -8391,13 +8391,13 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move
 
-Mareep @ Stardust
+Ninetales-Alola @ Stardust
 Level: 60
 
-Mareep @ Stardust
+Comfey @ Stardust
 Level: 61
 
-Flaaffy @ Nugget
+Persian-Alola @ Nugget
 Level: 61
 
 === TRAINER_YOUNGSTER_DESTIN ===
@@ -8409,10 +8409,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Raticate
+Raticate-Alola
 Level: 61
 
-Pidgeotto
+Vikavolt
 Level: 61
 
 === TRAINER_SWIMMER_MALE_TOBY ===
@@ -8424,13 +8424,13 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Poliwhirl
+Wishiwashi
 Level: 61
 
-Tentacool
+Mareanie
 Level: 61
 
-Tentacruel
+Golisopod
 Level: 61
 
 === TRAINER_TEAM_ROCKET_GRUNT_49 ===
@@ -8509,10 +8509,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Pidgey
+Trumbeak
 Level: 60
 
-Pidgeotto
+Oricorio
 Level: 61
 
 === TRAINER_BIRD_KEEPER_CHAZ ===
@@ -8524,10 +8524,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Spearow
+Oricorio-Sensu
 Level: 60
 
-Fearow
+Toucannon
 Level: 61
 
 === TRAINER_BIRD_KEEPER_HAROLD ===
@@ -8539,10 +8539,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Hoothoot
+Trumbeak
 Level: 60
 
-Noctowl
+Oricorio
 Level: 61
 
 === TRAINER_FISHERMAN_TYLOR ===
@@ -8554,10 +8554,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Qwilfish
+Mareanie
 Level: 61
 
-Qwilfish
+Golisopod
 Level: 61
 
 === TRAINER_SWIMMER_MALE_MYMO ===
@@ -8569,10 +8569,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Kingler
+Araquanid
 Level: 61
 
-Wartortle
+Wishiwashi
 Level: 61
 
 === TRAINER_SWIMMER_FEMALE_NICOLE ===
@@ -8584,7 +8584,7 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Marill
+Golisopod
 Level: 61
 
 === TRAINER_SIS_AND_BRO_AVA_GEB ===
@@ -8596,10 +8596,10 @@ Music: Serious
 Double Battle: Yes
 AI: Check Bad Move
 
-Poliwhirl
+Primarina
 Level: 61
 
-Starmie
+Raichu-Alola
 Level: 61
 
 === TRAINER_AROMA_LADY_ROSE ===
@@ -8611,10 +8611,10 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Sunkern
+Lurantis
 Level: 61
 
-Sunflora
+Shiinotic
 Level: 61
 
 === TRAINER_SWIMMER_MALE_SAMIR ===
@@ -8626,7 +8626,7 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Gyarados
+Pyukumuku
 Level: 61
 
 === TRAINER_SWIMMER_FEMALE_DENISE ===
@@ -8638,10 +8638,10 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Chinchou
+Pyukumuku
 Level: 61
 
-Lanturn
+Toxapex
 Level: 61
 
 === TRAINER_TWINS_MIU_MIA ===
@@ -8653,10 +8653,10 @@ Music: Cute
 Double Battle: Yes
 AI: Check Bad Move
 
-Pikachu
+Comfey
 Level: 61
 
-Pikachu
+Komala
 Level: 61
 
 === TRAINER_HIKER_EARL ===
@@ -8668,10 +8668,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Onix
+Palossand
 Level: 61
 
-Machoke
+Minior
 Level: 61
 
 === TRAINER_RUIN_MANIAC_FOSTER ===
@@ -8683,7 +8683,7 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Golem
+Mudsdale
 Level: 61
 
 === TRAINER_RUIN_MANIAC_LARRY ===
@@ -8695,10 +8695,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Machoke
+Minior
 Level: 61
 
-Machoke
+Dugtrio-Alola
 Level: 61
 
 === TRAINER_HIKER_DARYL ===
@@ -8710,7 +8710,7 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Sudowoodo
+Palossand
 Level: 61
 
 === TRAINER_POKEMANIAC_HECTOR ===
@@ -8722,10 +8722,10 @@ Music: Dangerous
 Double Battle: No
 AI: Check Bad Move
 
-Rhyhorn
+Drampa
 Level: 61
 
-Kangaskhan
+Mimikyu
 Level: 61
 
 === TRAINER_PSYCHIC_DARIO ===
@@ -8737,7 +8737,7 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Girafarig
+Minior
 Level: 62
 
 === TRAINER_PSYCHIC_RODETTE ===
@@ -8749,13 +8749,13 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Natu
+Oranguru
 Level: 61
 
-Drowzee
+Bruxish
 Level: 61
 
-Hypno
+Exeggutor-Alola
 Level: 61
 
 === TRAINER_AROMA_LADY_MIAH ===
@@ -8767,10 +8767,10 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Bellossom
+Tsareena
 Level: 61
 
-Bellossom
+Lurantis
 Level: 61
 
 === TRAINER_YOUNG_COUPLE_EVE_JON ===
@@ -8782,10 +8782,10 @@ Music: Cute
 Double Battle: Yes
 AI: Check Bad Move
 
-Golduck
+Ribombee
 Level: 61
 
-Psyduck
+Raichu-Alola
 Level: 61
 
 === TRAINER_JUGGLER_MASON ===
@@ -8797,16 +8797,16 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Voltorb
+Togedemaru
 Level: 60
 
-Pineco
+Sandslash-Alola
 Level: 60
 
-Voltorb
+Mimikyu
 Level: 60
 
-Pineco
+Marowak-Alola
 Level: 60
 
 === TRAINER_CRUSH_GIRL_CYNDY ===
@@ -8818,13 +8818,13 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Primeape @ Black Belt
+Kommo-o @ Black Belt
 Level: 61
 
-Hitmontop @ Black Belt
+Bewear @ Black Belt
 Level: 61
 
-Machoke @ Black Belt
+Passimian @ Black Belt
 Level: 61
 
 === TRAINER_CRUSH_GIRL_JOCELYN ===
@@ -8851,13 +8851,13 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Sandslash
+Kommo-o
 Level: 61
 
-Lickitung
+Turtonator
 Level: 61
 
-Ursaring
+Bewear
 Level: 61
 
 === TRAINER_POKEMANIAC_MARK_2 ===
@@ -8901,13 +8901,13 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Tangela
+Bewear
 Level: 61
 
-Exeggcute
+Lycanroc
 Level: 61
 
-Exeggutor
+Kommo-o
 Level: 61
 
 === TRAINER_PKMN_RANGER_BETH ===
@@ -8939,7 +8939,7 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Chansey
+Salazzle
 Level: 62
 
 === TRAINER_COOLTRAINER_LEROY ===
@@ -8952,19 +8952,19 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Rhydon
+Drampa
 Level: 60
 
-Slowbro
+Vikavolt
 Level: 61
 
-Kangaskhan
+Kommo-o
 Level: 60
 
-Machoke
+Tsareena
 Level: 61
 
-Ursaring
+Salazzle
 Level: 61
 
 === TRAINER_COOLTRAINER_MICHELLE ===
@@ -8977,19 +8977,19 @@ Items: Hyper Potion
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Persian
+Lycanroc
 Level: 60
 
-Dewgong
+Toucannon
 Level: 60
 
-Ninetales
+Turtonator
 Level: 61
 
-Rapidash
+Golisopod
 Level: 61
 
-Girafarig
+Mimikyu
 Level: 61
 
 === TRAINER_COOL_COUPLE_LEX_NYA ===
@@ -9002,10 +9002,10 @@ Items: Full Restore / Full Restore
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Miltank
+Kommo-o
 Level: 62
 
-Tauros
+Tsareena
 Level: 62
 
 === TRAINER_RUIN_MANIAC_BRANDON ===
@@ -9017,7 +9017,7 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Onix
+Palossand
 Level: 61
 
 === TRAINER_RUIN_MANIAC_BENJAMIN ===
@@ -9029,13 +9029,13 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Geodude
+Dugtrio-Alola
 Level: 61
 
-Graveler
+Palossand
 Level: 61
 
-Graveler
+Palossand
 Level: 61
 
 === TRAINER_PAINTER_EDNA ===
@@ -9059,10 +9059,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Marowak
+Oranguru
 Level: 61
 
-Golduck
+Persian-Alola
 Level: 61
 
 === TRAINER_LADY_SELPHY ===
@@ -10384,7 +10384,7 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Starmie
+Golisopod
 Level: 60
 
 === TRAINER_CRUSH_GIRL_SHARON_2 ===
@@ -10396,10 +10396,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Mankey @ Black Belt
+Hakamo-o @ Black Belt
 Level: 60
 
-Primeape @ Black Belt
+Kommo-o @ Black Belt
 Level: 60
 
 === TRAINER_CRUSH_GIRL_SHARON_3 ===
@@ -10411,10 +10411,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Mankey @ Black Belt
+Hakamo-o @ Black Belt
 Level: 63
 
-Primeape @ Black Belt
+Kommo-o @ Black Belt
 Level: 63
 
 === TRAINER_CRUSH_GIRL_TANYA_2 ===
@@ -10426,10 +10426,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Hitmonlee @ Black Belt
+Crabominable @ Black Belt
 Level: 60
 
-Hitmonchan @ Black Belt
+Hakamo-o @ Black Belt
 Level: 60
 
 === TRAINER_CRUSH_GIRL_TANYA_3 ===
@@ -10441,10 +10441,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Hitmonlee @ Black Belt
+Hakamo-o @ Black Belt
 Level: 63
 
-Hitmonchan @ Black Belt
+Kommo-o @ Black Belt
 Level: 63
 
 === TRAINER_BLACK_BELT_SHEA_2 ===
@@ -10456,10 +10456,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Machop @ Black Belt
+Hakamo-o @ Black Belt
 Level: 60
 
-Machoke @ Black Belt
+Kommo-o @ Black Belt
 Level: 60
 
 === TRAINER_BLACK_BELT_SHEA_3 ===
@@ -10471,10 +10471,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Machop @ Black Belt
+Passimian @ Black Belt
 Level: 63
 
-Machoke @ Black Belt
+Crabominable @ Black Belt
 Level: 63
 
 === TRAINER_BLACK_BELT_HUGH_2 ===
@@ -10486,10 +10486,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Machop @ Black Belt
+Passimian @ Black Belt
 Level: 60
 
-Machoke @ Black Belt
+Crabominable @ Black Belt
 Level: 60
 
 === TRAINER_BLACK_BELT_HUGH_3 ===
@@ -10501,10 +10501,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Machop @ Black Belt
+Passimian @ Black Belt
 Level: 63
 
-Machoke @ Black Belt
+Crabominable @ Black Belt
 Level: 63
 
 === TRAINER_CRUSH_KIN_MIK_KIA_2 ===
@@ -10516,10 +10516,10 @@ Music: Serious
 Double Battle: Yes
 AI: Check Bad Move
 
-Machoke @ Black Belt
+Hakamo-o @ Black Belt
 Level: 60
 
-Primeape @ Black Belt
+Crabominable @ Black Belt
 Level: 60
 
 === TRAINER_CRUSH_KIN_MIK_KIA_3 ===
@@ -10531,10 +10531,10 @@ Music: Serious
 Double Battle: Yes
 AI: Check Bad Move
 
-Machoke @ Black Belt
+Crabrawler @ Black Belt
 Level: 63
 
-Primeape @ Black Belt
+Stufful @ Black Belt
 Level: 63
 
 === TRAINER_TUBER_AMIRA_2 ===
@@ -10546,13 +10546,13 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Poliwag
+Popplio
 Level: 59
 
-Poliwhirl
+Sandygast
 Level: 59
 
-Poliwag
+Wishiwashi
 Level: 59
 
 === TRAINER_TWINS_JOY_MEG_2 ===
@@ -10564,10 +10564,10 @@ Music: Cute
 Double Battle: Yes
 AI: Check Bad Move
 
-Clefairy
+Ribombee
 Level: 60
 
-Clefairy
+Comfey
 Level: 60
 
 === TRAINER_PAINTER_RAYNA_2 ===
@@ -10579,7 +10579,7 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Smeargle
+Shiinotic
 Level: 64
 
 === TRAINER_YOUNGSTER_DESTIN_2 ===
@@ -10591,10 +10591,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Raticate
+Vikavolt
 Level: 64
 
-Pidgeotto
+Gumshoos
 Level: 64
 
 === TRAINER_PKMN_BREEDER_ALIZE_2 ===
@@ -10606,13 +10606,13 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Pikachu
+Salandit
 Level: 64
 
-Clefairy
+Steenee
 Level: 64
 
-Marill
+Hakamo-o
 Level: 64
 
 === TRAINER_YOUNG_COUPLE_GIA_JES_2 ===
@@ -10654,10 +10654,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Pidgey
+Toucannon
 Level: 63
 
-Pidgeotto
+Trumbeak
 Level: 64
 
 === TRAINER_BIRD_KEEPER_CHAZ_2 ===
@@ -10669,10 +10669,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Spearow
+Toucannon
 Level: 63
 
-Fearow
+Trumbeak
 Level: 64
 
 === TRAINER_BIRD_KEEPER_HAROLD_2 ===
@@ -10684,10 +10684,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Hoothoot
+Toucannon
 Level: 63
 
-Noctowl
+Trumbeak
 Level: 64
 
 === TRAINER_SWIMMER_FEMALE_NICOLE_2 ===
@@ -10699,7 +10699,7 @@ Music: Cute
 Double Battle: No
 AI: Check Bad Move
 
-Marill
+Dhelmise
 Level: 64
 
 === TRAINER_PSYCHIC_JACLYN_2 ===
@@ -10711,13 +10711,13 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Natu
+Mimikyu
 Level: 64
 
-Slowbro
+Minior
 Level: 64
 
-Kadabra
+Oranguru
 Level: 64
 
 === TRAINER_SWIMMER_MALE_SAMIR_2 ===
@@ -10729,7 +10729,7 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Gyarados
+Pyukumuku
 Level: 64
 
 === TRAINER_HIKER_EARL_2 ===
@@ -10741,10 +10741,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Onix
+Mudsdale
 Level: 64
 
-Machoke
+Palossand
 Level: 64
 
 === TRAINER_RUIN_MANIAC_LARRY_2 ===
@@ -10756,10 +10756,10 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Machoke
+Dugtrio-Alola
 Level: 64
 
-Machoke
+Palossand
 Level: 64
 
 === TRAINER_POKEMANIAC_HECTOR_2 ===
@@ -10771,10 +10771,10 @@ Music: Dangerous
 Double Battle: No
 AI: Check Bad Move
 
-Rhyhorn
+Turtonator
 Level: 64
 
-Kangaskhan
+Komala
 Level: 64
 
 === TRAINER_PSYCHIC_DARIO_2 ===
@@ -10786,7 +10786,7 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Girafarig
+Minior
 Level: 65
 
 === TRAINER_PSYCHIC_RODETTE_2 ===
@@ -10798,13 +10798,13 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Natu
+Mimikyu
 Level: 64
 
-Drowzee
+Minior
 Level: 64
 
-Hypno
+Oranguru
 Level: 64
 
 === TRAINER_JUGGLER_MASON_2 ===
@@ -10816,16 +10816,16 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Voltorb
+Togedemaru
 Level: 63
 
-Pineco
+Sandslash-Alola
 Level: 63
 
-Voltorb
+Mimikyu
 Level: 63
 
-Pineco
+Marowak-Alola
 Level: 63
 
 === TRAINER_PKMN_RANGER_NICOLAS_2 ===
@@ -10838,10 +10838,10 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Weepinbell
+Lycanroc
 Level: 65
 
-Victreebel
+Kommo-o
 Level: 65
 
 === TRAINER_PKMN_RANGER_MADELINE_2 ===
@@ -10854,10 +10854,10 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Gloom
+Lycanroc
 Level: 65
 
-Vileplume
+Kommo-o
 Level: 65
 
 === TRAINER_CRUSH_GIRL_CYNDY_2 ===
@@ -10869,13 +10869,13 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Primeape @ Black Belt
+Kommo-o @ Black Belt
 Level: 64
 
-Hitmontop @ Black Belt
+Bewear @ Black Belt
 Level: 64
 
-Machoke @ Black Belt
+Passimian @ Black Belt
 Level: 64
 
 === TRAINER_TAMER_EVAN_2 ===
@@ -10887,13 +10887,13 @@ Music: Serious
 Double Battle: No
 AI: Check Bad Move
 
-Sandslash
+Kommo-o
 Level: 64
 
-Lickitung
+Turtonator
 Level: 64
 
-Ursaring
+Bewear
 Level: 64
 
 === TRAINER_PKMN_RANGER_JACKSON_2 ===
@@ -10906,13 +10906,13 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Tangela
+Mudsdale
 Level: 64
 
-Exeggcute
+Lurantis
 Level: 64
 
-Exeggutor
+Toucannon
 Level: 64
 
 === TRAINER_PKMN_RANGER_KATELYN_2 ===
@@ -10925,7 +10925,7 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Chansey
+Kommo-o
 Level: 65
 
 === TRAINER_COOLTRAINER_LEROY_2 ===
@@ -10938,19 +10938,19 @@ Items: Full Restore
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Rhydon
+Mimikyu
 Level: 63
 
-Slowbro
+Drampa
 Level: 64
 
-Kangaskhan
+Vikavolt
 Level: 63
 
-Machoke
+Kommo-o
 Level: 64
 
-Ursaring
+Tsareena
 Level: 64
 
 === TRAINER_COOLTRAINER_MICHELLE_2 ===
@@ -10963,19 +10963,19 @@ Items: Hyper Potion
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Persian
+Vikavolt
 Level: 63
 
-Dewgong
+Kommo-o
 Level: 63
 
-Ninetales
+Tsareena
 Level: 64
 
-Rapidash
+Salazzle
 Level: 64
 
-Girafarig
+Lycanroc
 Level: 64
 
 === TRAINER_COOL_COUPLE_LEX_NYA_2 ===
@@ -10988,10 +10988,10 @@ Items: Full Restore / Full Restore
 Double Battle: Yes
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Miltank
+Kommo-o
 Level: 65
 
-Tauros
+Tsareena
 Level: 65
 
 === TRAINER_BUG_CATCHER_COLTON_2 ===

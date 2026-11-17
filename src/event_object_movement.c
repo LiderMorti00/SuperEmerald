@@ -3088,6 +3088,16 @@ void TrySpawnLightSprites(s16 camX, s16 camY)
     }
 }
 
+// Super Emerald: the National Dex legendaries only show up once the Sinnoh League is cleared
+static bool32 IsObjectTemplateHidden(u16 flagId)
+{
+    if (FlagGet(flagId))
+        return TRUE;
+    if (flagId >= FLAG_SE_LEGENDS_START && flagId <= FLAG_SE_LEGENDS_END && !FlagGet(FLAG_SE_SINNOH_LEAGUE_CLEARED))
+        return TRUE;
+    return FALSE;
+}
+
 void TrySpawnObjectEvents(s16 cameraX, s16 cameraY)
 {
     u8 i;
@@ -3113,7 +3123,7 @@ void TrySpawnObjectEvents(s16 cameraX, s16 cameraY)
             s16 npcX = template->x + MAP_OFFSET;
             s16 npcY = template->y + MAP_OFFSET;
 
-            if (top <= npcY && bottom >= npcY && left <= npcX && right >= npcX && !FlagGet(template->flagId))
+            if (top <= npcY && bottom >= npcY && left <= npcX && right >= npcX && !IsObjectTemplateHidden(template->flagId))
             {
                 if (template->graphicsId == OBJ_EVENT_GFX_LIGHT_SPRITE)
                     SpawnLightSprite(npcX, npcY, cameraX, cameraY, template->trainerRange_berryTreeId); // light sprite instead
