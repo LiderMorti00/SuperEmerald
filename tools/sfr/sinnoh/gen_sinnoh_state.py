@@ -10,7 +10,7 @@ from common import ours, read, write
 
 flags = re.findall(r'#define (FLAG_\w+)\s+0x[0-9a-f]+', read(ours('include/constants/flags_sinnoh.h')))
 # shown in the post-story world
-KEEP = r'CYCLE_SHOP_OWNER|_BG_|MYSTERY_GIFT_MAN|VILLA_PTNPC|VILLA_OWNER|HALL_SPEECH'
+KEEP = r'CYCLE_SHOP_OWNER|_BG_|VILLA_PTNPC|VILLA_OWNER|HALL_SPEECH'
 sets, clears = [], []
 for f in flags:
     if f.startswith('FLAG_SINNOH_BADGE') or f == 'FLAG_SE_SINNOH_INITIALIZED' or 'ITEM' in f or 'DAILY' in f:

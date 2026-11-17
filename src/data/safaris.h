@@ -22,4 +22,15 @@ static const struct SafariData sSafariZones[SAFARI_EVENT_COUNT] = {
             .warpId = 0
         }
     },
+    [SAFARI_EVENT_SINNOH] = {
+        .actions = SAFARI_ACTIONS_RSE,
+        .startingBalls = 30,
+        .startingSteps = 500,
+        .catchMultiplier = 150,
+        .exitWarp = {
+            .mapGroup = MAP_GROUP(MAP_PASTORIA_CITY_GREAT_MARSH_GATE_SINNOH),
+            .mapNum = MAP_NUM(MAP_PASTORIA_CITY_GREAT_MARSH_GATE_SINNOH),
+            .warpId = 1
+        }
+    },
 };

@@ -185,7 +185,7 @@
 #define VAR_MOSSDEEP_SPACE_CENTER_STATE                  0x409F
 #define VAR_SLATEPORT_HARBOR_STATE                       0x40A0
 #define VAR_SE_KANTO_STATE_VERSION                       0x40A1 // Super Emerald: version of the Kanto world state applied to this save
-#define SE_KANTO_STATE_VERSION                           3      // bump when SE_EventScript_KantoWorldState changes
+#define SE_KANTO_STATE_VERSION                           4      // bump when SE_EventScript_KantoWorldState changes
 #define VAR_SEAFLOOR_CAVERN_STATE                        0x40A2
 #define VAR_CABLE_CAR_STATION_STATE                      0x40A3
 #define VAR_SAFARI_WARP_STATE                            0x40A4 // see include/constants/safaris.h
@@ -393,7 +393,7 @@
 #define SINNOH_VARS_START             0x5040 // 64 vars
 
 #define VAR_SE_JOHTO_STATE_VERSION    0x5000 // Super Emerald: bump SE_JOHTO_STATE_VERSION when the Johto state changes
-#define SE_JOHTO_STATE_VERSION        3
+#define SE_JOHTO_STATE_VERSION        4
 #define VAR_SE_JOHTO_STARTER          0x5002 // 1 Cyndaquil, 2 Totodile, 3 Chikorita (0 = unknown)
 #define VAR_SE_ORO_STATE              0x5003 // Oro (Gold) rival battles won: 0-3
 #define VAR_BUG_CONTEST_STATE         0x5004 // Bug-Catching Contest (Heart & Soul scripts)
@@ -402,7 +402,7 @@
 #define VAR_SE_JOHTO_ARRIVAL          0x5001 // 1 = just arrived at Olivine by ship, 2 = met Jasmine
 
 #define VAR_SE_SINNOH_STATE_VERSION   0x5040 // Super Emerald: bump SE_SINNOH_STATE_VERSION when the Sinnoh state changes
-#define SE_SINNOH_STATE_VERSION       2
+#define SE_SINNOH_STATE_VERSION       3
 #define VAR_SE_SINNOH_STARTER         0x5041 // 1 Turtwig, 2 Chimchar, 3 Piplup (0 = none yet)
 #define VAR_SE_LUCAS_STATE            0x5042 // Lucas rival battles won: 0-3
 #define VAR_SE_SINNOH_ARRIVAL         0x5043 // 1 = just arrived at Canalave by ship, 2 = met Dawn
@@ -413,6 +413,7 @@
 #define VAR_SN_HONEY_TREE             0x5046
 #define VAR_SN_HONEY_DAY              0x5047
 #define VAR_SN_TROPHY_SPECIES         0x5048
+#define VAR_SN_SAFARI_START           0x5049 // Pokémon owned when the Great Marsh Safari Game started
 
 #define SPECIAL_VARS_START            0x8000
 // special vars

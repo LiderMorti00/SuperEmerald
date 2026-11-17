@@ -1,5 +1,70 @@
 SurvivalArea_Battleground_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SurvivalArea_Battleground_OnTransitionSN
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SurvivalArea_Battleground_OnFrameSN
 	.byte 0
+
+@ Super Emerald: daily visitors of the Battleground (from the Sinnoh repo)
+SurvivalArea_Battleground_OnTransitionSN::
+	setflag FLAG_SN_VISITED_BATTLEGROUND
+	clearflag FLAG_SN_HIDE_BG_ROARK
+	clearflag FLAG_SN_HIDE_BG_GARDENIA
+	clearflag FLAG_SN_HIDE_BG_FANTINA
+	clearflag FLAG_SN_HIDE_BG_MAYLENE
+	clearflag FLAG_SN_HIDE_BG_WAKE
+	clearflag FLAG_SN_HIDE_BG_BYRON
+	clearflag FLAG_SN_HIDE_BG_CANDICE
+	clearflag FLAG_SN_HIDE_BG_VOLKNER
+	clearflag FLAG_SN_HIDE_BG_BUCK
+	clearflag FLAG_SN_HIDE_BG_CHERYL
+	clearflag FLAG_SN_HIDE_BG_RILEY
+	clearflag FLAG_SN_HIDE_BG_MARLEY
+	clearflag FLAG_SN_HIDE_BG_MIRA
+	special SinnohBattlegroundSelect
+	special SinnohBattlegroundMsgSet
+	setflag FLAG_SN_HIDE_BG_BUCK_INTRO
+	goto_if_set FLAG_SN_BG_BUCK_LEFT, SurvivalArea_Battleground_OnTransitionSN_Welcome
+	clearflag FLAG_SN_HIDE_BG_BUCK_INTRO
+SurvivalArea_Battleground_OnTransitionSN_Welcome::
+	setvar VAR_TEMP_3, 0
+	goto_if_set FLAG_SN_BG_WELCOMED, SurvivalArea_Battleground_OnTransitionSN_End
+	setvar VAR_TEMP_3, 1
+SurvivalArea_Battleground_OnTransitionSN_End::
+	end
+
+SurvivalArea_Battleground_OnFrameSN::
+	map_script_2 VAR_TEMP_3, 1, SurvivalArea_Battleground_EventScript_SNWelcome
+	.2byte 0
+
+SurvivalArea_Battleground_EventScript_SNWelcome::
+	lockall
+	setvar VAR_TEMP_3, 0
+	setflag FLAG_SN_BG_WELCOMED
+	applymovement LOCALID_BG_EXPERT, Common_Movement_ExclamationMark
+	waitmovement 0
+	sn_walktoplayer LOCALID_BG_EXPERT, SN_SPEED_NORMAL, 0, 0
+	waitmovement LOCALID_BG_EXPERT
+	sn_playerface LOCALID_BG_EXPERT, 1
+	waitmovement OBJ_EVENT_ID_PLAYER
+	msgbox SurvivalArea_Battleground_Text_SNWelcome, MSGBOX_DEFAULT
+	closemessage
+	sn_walkto LOCALID_BG_EXPERT, 9, 3, SN_SPEED_NORMAL, DIR_SOUTH, 0, 0
+	waitmovement LOCALID_BG_EXPERT
+	releaseall
+	end
+
+SurvivalArea_Battleground_Text_SNWelcome::
+	.string "Oh? So, you are?! You’re Buck’s friend,\n"
+	.string "yes!\p"
+	.string "I’ve heard about you from both Buck\n"
+	.string "and Wake.\p"
+	.string "Well, my young friend, you’re always\n"
+	.string "welcome here from now on!\p"
+	.string "This is a private club for only Sinnoh’s\n"
+	.string "Gym Leaders, or those vouched for by\p"
+	.string "those selfsame Gym Leaders.\p"
+	.string "It’s a place where the best seek to\n"
+	.string "better themselves.\p"
+	.string "Welcome to the Battleground!$"
 
 
 SurvivalArea_Battleground_EventScript_PtNpc1::

@@ -886,4 +886,77 @@ SE_EventScript_SinnohOnTransition::
 	call SE_EventScript_LucasHearthomeOnTransition
 	call SE_EventScript_LucasVictoryRoadOnTransition
 	call SE_EventScript_SinnohLegendaries
+	call SE_EventScript_RileyOnTransition
 	end
+
+@ ---------------------------------------------------------------------------
+@ Riley waits outside Iron Island with the Riolu Egg (the story escort is skipped)
+SE_EventScript_RileyOnTransition::
+	setflag FLAG_SN_HIDE_IRON_RILEY
+	goto_if_set FLAG_SN_RECEIVED_RIOLU_EGG, Common_EventScript_NopReturn
+	clearflag FLAG_SN_HIDE_IRON_RILEY
+	return
+
+SE_EventScript_RileyEgg::
+	lock
+	faceplayer
+	msgbox SE_Text_RileyEgg, MSGBOX_DEFAULT
+	getpartysize
+	goto_if_eq VAR_RESULT, PARTY_SIZE, SE_EventScript_RileyEggNoRoom
+	giveegg SPECIES_RIOLU
+	playfanfare MUS_OBTAIN_ITEM
+	message SE_Text_RileyGotEgg
+	waitfanfare
+	waitmessage
+	setflag FLAG_SN_RECEIVED_RIOLU_EGG
+	msgbox SE_Text_RileyEggBye, MSGBOX_DEFAULT
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	setflag FLAG_SN_HIDE_IRON_RILEY
+	fadescreen FADE_FROM_BLACK
+	release
+	end
+
+SE_EventScript_RileyEggNoRoom::
+	msgbox SE_Text_RileyEggNoRoom, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_RileyEgg:
+	.string "RILEY: So you're the TRAINER who\n"
+	.string "helped save SINNOH. I'm RILEY.\p"
+	.string "I have a POKéMON EGG here.\n"
+	.string "Would you take it with you?$"
+
+SE_Text_RileyGotEgg:
+	.string "{PLAYER} received an EGG from RILEY!$"
+
+SE_Text_RileyEggBye:
+	.string "RILEY: Show the POKéMON inside the\n"
+	.string "EGG all sorts of new places.\p"
+	.string "I'll be training at the BATTLEGROUND.\n"
+	.string "Let's meet again!$"
+
+SE_Text_RileyEggNoRoom:
+	.string "RILEY: Your party is full.\n"
+	.string "Come back when you have room.$"
+
+@ Super Emerald: NPCs that had nothing to say
+SE_EventScript_RowanAideA::
+	msgbox SE_EventScript_RowanAideA_Text, MSGBOX_NPC
+	end
+
+SE_EventScript_RowanAideA_Text:
+	.string "PROF. ROWAN studies how POKéMON\n"
+	.string "evolve.\p"
+	.string "He says evolution is a mystery\n"
+	.string "we've barely begun to solve.$"
+
+SE_EventScript_RowanAideB::
+	msgbox SE_EventScript_RowanAideB_Text, MSGBOX_NPC
+	end
+
+SE_EventScript_RowanAideB_Text:
+	.string "PROF. ROWAN looks scary, but he\n"
+	.string "really cares about POKéMON!$"

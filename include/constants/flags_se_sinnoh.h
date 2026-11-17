@@ -39,5 +39,6 @@
 #define FLAG_SE_VISITED_FIGHT_AREA_SINNOH        0x322F
 #define FLAG_SE_VISITED_SURVIVAL_AREA_SINNOH     0x3230
 #define FLAG_SE_VISITED_RESORT_AREA_SINNOH       0x3231
+#define FLAG_SN_BG_WELCOMED                      0x3232 // the Battleground expert has welcomed the player
 
 #endif // GUARD_CONSTANTS_FLAGS_SE_SINNOH_H

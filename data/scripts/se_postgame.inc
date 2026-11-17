@@ -595,6 +595,7 @@ SE_EventScript_InitKantoPostgame::
 SE_EventScript_KantoWorldState::
 	@ FireRed story and link-only people that never appear here
 	setflag FLAG_HIDE_OAK_IN_CHAMP_ROOM
+	setflag FLAG_HIDE_POKEDEX
 	setflag FLAG_HIDE_MG_DELIVERYMEN
 	setflag FLAG_HIDE_VERMILION_CITY_OAKS_AIDE
 	setflag FLAG_HIDE_FOUR_ISLAND_RIVAL

@@ -59,7 +59,26 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 2,
+      "elevation": 3,
+      "var": "VAR_TEMP_F",
+      "var_value": "0",
+      "script": "PastoriaCity_GreatMarshGate_EventScript_SNCounter"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 2,
+      "elevation": 3,
+      "var": "VAR_TEMP_F",
+      "var_value": "0",
+      "script": "PastoriaCity_GreatMarshGate_EventScript_SNCounter"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

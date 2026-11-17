@@ -1469,3 +1469,88 @@ SE_Movement_JumpUp1:
 SE_Movement_JumpDown1:
 	jump_down
 	step_end
+
+SE_EventScript_RadioTowerDirector::
+	msgbox SE_Text_RadioTowerDirector, MSGBOX_NPC
+	end
+
+SE_Text_RadioTowerDirector:
+	.string "I'm the DIRECTOR of the RADIO TOWER.\p"
+	.string "Our programs reach every corner of\n"
+	.string "JOHTO and KANTO.\p"
+	.string "Busy days, but I wouldn't have it\n"
+	.string "any other way!$"
+
+@ Super Emerald: NPCs that had nothing to say
+SE_EventScript_StationEngineer::
+	msgbox SE_EventScript_StationEngineer_Text, MSGBOX_NPC
+	end
+
+SE_EventScript_StationEngineer_Text:
+	.string "I keep the MAGNET TRAIN running.\n"
+	.string "It links GOLDENROD and SAFFRON!$"
+
+SE_EventScript_StationBlackBelt::
+	msgbox SE_EventScript_StationBlackBelt_Text, MSGBOX_NPC
+	end
+
+SE_EventScript_StationBlackBelt_Text:
+	.string "I train in SAFFRON every weekend.\p"
+	.string "The MAGNET TRAIN gets me there\n"
+	.string "in no time.$"
+
+SE_EventScript_StationWoman::
+	msgbox SE_EventScript_StationWoman_Text, MSGBOX_NPC
+	end
+
+SE_EventScript_StationWoman_Text:
+	.string "I'm going shopping in KANTO.\n"
+	.string "I hear SAFFRON has huge stores!$"
+
+SE_EventScript_StationOldWoman::
+	msgbox SE_EventScript_StationOldWoman_Text, MSGBOX_NPC
+	end
+
+SE_EventScript_StationOldWoman_Text:
+	.string "In my day, going to KANTO took\n"
+	.string "several days on foot!$"
+
+SE_EventScript_OlivineWoman::
+	msgbox SE_EventScript_OlivineWoman_Text, MSGBOX_NPC
+	end
+
+SE_EventScript_OlivineWoman_Text:
+	.string "Ships from all over the world stop\n"
+	.string "at OLIVINE's port.$"
+
+SE_EventScript_Route38TwinA::
+	msgbox SE_EventScript_Route38TwinA_Text, MSGBOX_NPC
+	end
+
+SE_EventScript_Route38TwinA_Text:
+	.string "We love the cows at MOOMOO FARM!$"
+
+SE_EventScript_Route38TwinB::
+	msgbox SE_EventScript_Route38TwinB_Text, MSGBOX_NPC
+	end
+
+SE_EventScript_Route38TwinB_Text:
+	.string "The MILTANK milk here is the\n"
+	.string "best in JOHTO!$"
+
+SE_EventScript_SafariIndoorAttendant::
+	msgbox SE_EventScript_SafariIndoorAttendant_Text, MSGBOX_NPC
+	end
+
+SE_EventScript_SafariIndoorAttendant_Text:
+	.string "This is a rest house for visitors\n"
+	.string "of the SAFARI ZONE.\p"
+	.string "Take your time!$"
+
+SE_EventScript_SafariIndoorWorker::
+	msgbox SE_EventScript_SafariIndoorWorker_Text, MSGBOX_NPC
+	end
+
+SE_EventScript_SafariIndoorWorker_Text:
+	.string "We're always working to make the\n"
+	.string "SAFARI ZONE better for POKéMON.$"
