@@ -6,15 +6,8 @@
 SFR_EventScript_VermilionHoennSailor::
 	lock
 	faceplayer
-	message SE_Text_VermilionSailorWhere
-	waitmessage
-	dynmultipush SE_Text_ChoiceOlivine, 0
-	dynmultipush SE_Text_ChoiceSlateport, 1
-	dynmultichoice 18, 6, FALSE, 2, 0, DYN_MULTICHOICE_CB_NONE
-	switch VAR_RESULT
-	case 0, SE_EventScript_VermilionToOlivine
-	case 1, SE_EventScript_VermilionToSlateport
-	goto SFR_EventScript_VermilionHoennSailorDeclined
+	setvar VAR_0x8008, 3
+	goto SE_EventScript_ShipSailor
 	end
 
 SE_EventScript_VermilionToOlivine::
@@ -64,7 +57,7 @@ SFR_Text_VermilionSailorComeBackAnytime:
 @ ---------------------------------------------------------------------------
 @ Slateport / Lilycove harbors: S.S. Tidal to Vermilion City with the Kanto Ticket
 SE_EventScript_SlateportOfferKanto::
-	goto SE_EventScript_SlateportOfferJohto
+	goto SE_EventScript_SlateportShips
 
 @ Super Emerald: Kanto is reached from Johto now; Lilycove has no ferry to Kanto.
 SE_EventScript_LilycoveOfferKanto::
@@ -274,7 +267,7 @@ SFR_EventScript_OakSinnohStarterChoose::
 	dynmultipush SFR_Text_Turtwig, 0
 	dynmultipush SFR_Text_Chimchar, 1
 	dynmultipush SFR_Text_Piplup, 2
-	dynmultichoice 20, 4, TRUE, 3, 0, DYN_MULTICHOICE_CB_NONE
+	dynmultistack 20, 4, TRUE, 3, FALSE, 0, DYN_MULTICHOICE_CB_NONE
 	switch VAR_RESULT
 	case 0, SFR_EventScript_OakTurtwig
 	case 1, SFR_EventScript_OakChimchar
@@ -795,7 +788,7 @@ SE_EventScript_VermilionOakChoose::
 	dynmultipush SE_Text_Bulbasaur, 0
 	dynmultipush SE_Text_Charmander, 1
 	dynmultipush SE_Text_Squirtle, 2
-	dynmultichoice 20, 4, TRUE, 3, 0, DYN_MULTICHOICE_CB_NONE
+	dynmultistack 20, 4, TRUE, 3, FALSE, 0, DYN_MULTICHOICE_CB_NONE
 	switch VAR_RESULT
 	case 0, SE_EventScript_OakBulbasaur
 	case 1, SE_EventScript_OakCharmander

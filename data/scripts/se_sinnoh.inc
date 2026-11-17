@@ -42,7 +42,7 @@ SE_EventScript_SlateportOfferJohtoSinnoh::
 	waitmessage
 	dynmultipush SE_Text_ChoiceOlivine, 0
 	dynmultipush SE_Text_ChoiceCanalave, 1
-	dynmultichoice 18, 6, FALSE, 2, 0, DYN_MULTICHOICE_CB_NONE
+	dynmultistack 18, 6, FALSE, 2, FALSE, 0, DYN_MULTICHOICE_CB_NONE
 	switch VAR_RESULT
 	case 0, SE_EventScript_SlateportToOlivine
 	case 1, SE_EventScript_SlateportToCanalave
@@ -106,16 +106,8 @@ SE_Text_DawnWelcome:
 SE_EventScript_CanalaveSailor::
 	lock
 	faceplayer
-	message SE_Text_SlateportWhere
-	waitmessage
-	dynmultipush SE_Text_ChoiceSlateport, 0
-	dynmultipush SE_Text_ChoiceOlivine, 1
-	dynmultichoice 18, 6, FALSE, 2, 0, DYN_MULTICHOICE_CB_NONE
-	switch VAR_RESULT
-	case 0, SE_EventScript_CanalaveToSlateport
-	case 1, SE_EventScript_CanalaveToOlivine
-	msgbox SFR_Text_VermilionSailorComeBackAnytime, MSGBOX_DEFAULT
-	release
+	setvar VAR_0x8008, 4
+	goto SE_EventScript_ShipSailor
 	end
 
 SE_EventScript_CanalaveToSlateport::
@@ -155,7 +147,7 @@ SE_EventScript_RowanChoose::
 	dynmultipush SE_Text_ChoiceTurtwig, 0
 	dynmultipush SE_Text_ChoiceChimchar, 1
 	dynmultipush SE_Text_ChoicePiplup, 2
-	dynmultichoice 17, 4, FALSE, 3, 0, DYN_MULTICHOICE_CB_NONE
+	dynmultistack 17, 4, FALSE, 3, FALSE, 0, DYN_MULTICHOICE_CB_NONE
 	switch VAR_RESULT
 	case 0, SE_EventScript_RowanTurtwig
 	case 1, SE_EventScript_RowanChimchar

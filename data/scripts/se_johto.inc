@@ -62,10 +62,8 @@ SE_Text_HarborJohtoTicket:
 SE_EventScript_OlivinePortSailor::
 	lock
 	faceplayer
-	goto_if_set FLAG_SE_JOHTO_LEAGUE_CLEARED, SE_EventScript_OlivinePortSailorKanto
-	msgbox SE_Text_OlivineSailorSlateport, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, SE_EventScript_OlivinePortSailorDeclined
-	goto SE_EventScript_OlivineToSlateport
+	setvar VAR_0x8008, 1
+	goto SE_EventScript_ShipSailor
 	end
 
 SE_EventScript_OlivinePortSailorKanto::
@@ -73,7 +71,7 @@ SE_EventScript_OlivinePortSailorKanto::
 	waitmessage
 	dynmultipush SE_Text_ChoiceSlateport, 0
 	dynmultipush SE_Text_ChoiceVermilion, 1
-	dynmultichoice 18, 6, FALSE, 2, 0, DYN_MULTICHOICE_CB_NONE
+	dynmultistack 18, 6, FALSE, 2, FALSE, 0, DYN_MULTICHOICE_CB_NONE
 	switch VAR_RESULT
 	case 0, SE_EventScript_OlivineToSlateport
 	case 1, SE_EventScript_OlivineToVermilion
@@ -1164,7 +1162,7 @@ SE_EventScript_Kurt::
 	dynmultipush SE_Text_KurtMoon, 4
 	dynmultipush SE_Text_KurtFast, 5
 	dynmultipush SE_Text_KurtLevel, 6
-	dynmultichoice 0, 0, FALSE, 7, 0, DYN_MULTICHOICE_CB_NONE
+	dynmultistack 0, 0, FALSE, 7, FALSE, 0, DYN_MULTICHOICE_CB_NONE
 	goto_if_eq VAR_RESULT, 0, SE_EventScript_KurtLove
 	goto_if_eq VAR_RESULT, 1, SE_EventScript_KurtLure
 	goto_if_eq VAR_RESULT, 2, SE_EventScript_KurtFriend
@@ -1376,7 +1374,7 @@ SE_GoldenrodElevator_EventScript_Enter::
 	dynmultipush SE_GoldenrodElevator_Text_2F, 4
 	dynmultipush SE_GoldenrodElevator_Text_1F, 5
 	dynmultipush SE_GoldenrodElevator_Text_B1F, 6
-	dynmultichoice 0, 0, FALSE, 7, 0, DYN_MULTICHOICE_CB_NONE
+	dynmultistack 0, 0, FALSE, 7, FALSE, 0, DYN_MULTICHOICE_CB_NONE
 	closemessage
 	switch VAR_RESULT
 	case 0, SE_GoldenrodElevator_EventScript_6F
