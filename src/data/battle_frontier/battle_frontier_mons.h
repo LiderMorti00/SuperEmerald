@@ -7055,5 +7055,4582 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
         .ev = TRAINER_PARTY_EVS(170, 0, 170, 0, 0, 170),
         .nature = NATURE_MODEST,
         .ball = BALL_POKE
-    }
+    },
+    // Super Emerald: Pokemon from every generation
+    [FRONTIER_MON_TORTERRA] = {
+        .species = SPECIES_TORTERRA,
+        .moves = {MOVE_WOOD_HAMMER, MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_INFERNAPE] = {
+        .species = SPECIES_INFERNAPE,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_CLOSE_COMBAT, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_EMPOLEON] = {
+        .species = SPECIES_EMPOLEON,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BIBAREL] = {
+        .species = SPECIES_BIBAREL,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_WATERFALL, MOVE_IRON_TAIL, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_KRICKETUNE] = {
+        .species = SPECIES_KRICKETUNE,
+        .moves = {MOVE_X_SCISSOR, MOVE_STRENGTH, MOVE_BRICK_BREAK, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_LUXRAY] = {
+        .species = SPECIES_LUXRAY,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_SPARK, MOVE_CRUNCH, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_RAMPARDOS] = {
+        .species = SPECIES_RAMPARDOS,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BASTIODON] = {
+        .species = SPECIES_BASTIODON,
+        .moves = {MOVE_IRON_HEAD, MOVE_DOUBLE_EDGE, MOVE_ROCK_SLIDE, MOVE_TOXIC},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_WORMADAM_PLANT] = {
+        .species = SPECIES_WORMADAM_PLANT,
+        .moves = {MOVE_LEAF_STORM, MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_TOXIC},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_VESPIQUEN] = {
+        .species = SPECIES_VESPIQUEN,
+        .moves = {MOVE_ATTACK_ORDER, MOVE_AERIAL_ACE, MOVE_SLASH, MOVE_TOXIC},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PACHIRISU] = {
+        .species = SPECIES_PACHIRISU,
+        .moves = {MOVE_THUNDER_PUNCH, MOVE_IRON_TAIL, MOVE_SECRET_POWER, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FLOATZEL] = {
+        .species = SPECIES_FLOATZEL,
+        .moves = {MOVE_WATERFALL, MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_BULK_UP},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CHERRIM_OVERCAST] = {
+        .species = SPECIES_CHERRIM_OVERCAST,
+        .moves = {MOVE_GIGA_DRAIN, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE, MOVE_NONE},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GASTRODON_WEST] = {
+        .species = SPECIES_GASTRODON_WEST,
+        .moves = {MOVE_SURF, MOVE_SLUDGE_BOMB, MOVE_ICE_BEAM, MOVE_RECOVER},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_AMBIPOM] = {
+        .species = SPECIES_AMBIPOM,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_THUNDER_PUNCH, MOVE_IRON_TAIL, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DRIFBLIM] = {
+        .species = SPECIES_DRIFBLIM,
+        .moves = {MOVE_SHADOW_BALL, MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_CALM_MIND},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_LOPUNNY] = {
+        .species = SPECIES_LOPUNNY,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_JUMP_KICK, MOVE_THUNDER_PUNCH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MISMAGIUS] = {
+        .species = SPECIES_MISMAGIUS,
+        .moves = {MOVE_SHADOW_BALL, MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_CALM_MIND},
+        .heldItem = ITEM_CHESTO_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_HONCHKROW] = {
+        .species = SPECIES_HONCHKROW,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_NIGHT_SLASH, MOVE_WING_ATTACK, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PURUGLY] = {
+        .species = SPECIES_PURUGLY,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_IRON_TAIL, MOVE_THIEF, MOVE_TOXIC},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SKUNTANK] = {
+        .species = SPECIES_SKUNTANK,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_NIGHT_SLASH, MOVE_IRON_TAIL, MOVE_TOXIC},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BRONZONG] = {
+        .species = SPECIES_BRONZONG,
+        .moves = {MOVE_EARTHQUAKE, MOVE_BODY_SLAM, MOVE_PSYCHIC, MOVE_CALM_MIND},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CHATOT] = {
+        .species = SPECIES_CHATOT,
+        .moves = {MOVE_HYPER_VOICE, MOVE_CHATTER, MOVE_STEEL_WING, MOVE_ROOST},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SPIRITOMB] = {
+        .species = SPECIES_SPIRITOMB,
+        .moves = {MOVE_THIEF, MOVE_BODY_SLAM, MOVE_SHADOW_BALL, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GARCHOMP] = {
+        .species = SPECIES_GARCHOMP,
+        .moves = {MOVE_EARTHQUAKE, MOVE_DRAGON_CLAW, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_LUCARIO] = {
+        .species = SPECIES_LUCARIO,
+        .moves = {MOVE_AURA_SPHERE, MOVE_PSYCHIC, MOVE_DRAGON_PULSE, MOVE_CALM_MIND},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_HIPPOWDON] = {
+        .species = SPECIES_HIPPOWDON,
+        .moves = {MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_TOXIC},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DRAPION] = {
+        .species = SPECIES_DRAPION,
+        .moves = {MOVE_CRUNCH, MOVE_CROSS_POISON, MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TOXICROAK] = {
+        .species = SPECIES_TOXICROAK,
+        .moves = {MOVE_POISON_JAB, MOVE_BRICK_BREAK, MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CARNIVINE] = {
+        .species = SPECIES_CARNIVINE,
+        .moves = {MOVE_POWER_WHIP, MOVE_CRUNCH, MOVE_SECRET_POWER, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_LUMINEON] = {
+        .species = SPECIES_LUMINEON,
+        .moves = {MOVE_WATERFALL, MOVE_SECRET_POWER, MOVE_THIEF, MOVE_TOXIC},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ABOMASNOW] = {
+        .species = SPECIES_ABOMASNOW,
+        .moves = {MOVE_WOOD_HAMMER, MOVE_DOUBLE_EDGE, MOVE_ICE_PUNCH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_WEAVILE] = {
+        .species = SPECIES_WEAVILE,
+        .moves = {MOVE_ICE_PUNCH, MOVE_NIGHT_SLASH, MOVE_MEGA_KICK, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MAGNEZONE] = {
+        .species = SPECIES_MAGNEZONE,
+        .moves = {MOVE_THUNDERBOLT, MOVE_MIRROR_SHOT, MOVE_DOUBLE_EDGE, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_LICKILICKY] = {
+        .species = SPECIES_LICKILICKY,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_POWER_WHIP, MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_RHYPERIOR] = {
+        .species = SPECIES_RHYPERIOR,
+        .moves = {MOVE_EARTHQUAKE, MOVE_STONE_EDGE, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TANGROWTH] = {
+        .species = SPECIES_TANGROWTH,
+        .moves = {MOVE_WRING_OUT, MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ELECTIVIRE] = {
+        .species = SPECIES_ELECTIVIRE,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_THUNDER_PUNCH, MOVE_EARTHQUAKE, MOVE_BULK_UP},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MAGMORTAR] = {
+        .species = SPECIES_MAGMORTAR,
+        .moves = {MOVE_OVERHEAT, MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_TOXIC},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TOGEKISS] = {
+        .species = SPECIES_TOGEKISS,
+        .moves = {MOVE_AIR_SLASH, MOVE_FIRE_BLAST, MOVE_PSYCHIC, MOVE_CALM_MIND},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_YANMEGA] = {
+        .species = SPECIES_YANMEGA,
+        .moves = {MOVE_BUG_BUZZ, MOVE_AIR_SLASH, MOVE_PSYCHIC, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_LEAFEON] = {
+        .species = SPECIES_LEAFEON,
+        .moves = {MOVE_LEAF_BLADE, MOVE_DOUBLE_EDGE, MOVE_IRON_TAIL, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GLACEON] = {
+        .species = SPECIES_GLACEON,
+        .moves = {MOVE_ICE_BEAM, MOVE_SHADOW_BALL, MOVE_DOUBLE_EDGE, MOVE_CALM_MIND},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GLISCOR] = {
+        .species = SPECIES_GLISCOR,
+        .moves = {MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE, MOVE_AERIAL_ACE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MAMOSWINE] = {
+        .species = SPECIES_MAMOSWINE,
+        .moves = {MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE, MOVE_ICE_FANG, MOVE_TOXIC},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PORYGON_Z] = {
+        .species = SPECIES_PORYGON_Z,
+        .moves = {MOVE_TRI_ATTACK, MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GALLADE] = {
+        .species = SPECIES_GALLADE,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_PSYCHO_CUT, MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PROBOPASS] = {
+        .species = SPECIES_PROBOPASS,
+        .moves = {MOVE_POWER_GEM, MOVE_THUNDERBOLT, MOVE_EARTH_POWER, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_CHOICE_SPECS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DUSKNOIR] = {
+        .species = SPECIES_DUSKNOIR,
+        .moves = {MOVE_EARTHQUAKE, MOVE_SHADOW_PUNCH, MOVE_MEGA_KICK, MOVE_CALM_MIND},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FROSLASS] = {
+        .species = SPECIES_FROSLASS,
+        .moves = {MOVE_ICE_PUNCH, MOVE_BODY_SLAM, MOVE_WAKE_UP_SLAP, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ROTOM] = {
+        .species = SPECIES_ROTOM,
+        .moves = {MOVE_THUNDERBOLT, MOVE_SHADOW_BALL, MOVE_SWIFT, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_UXIE] = {
+        .species = SPECIES_UXIE,
+        .moves = {MOVE_THUNDER_PUNCH, MOVE_IRON_TAIL, MOVE_ICE_PUNCH, MOVE_CALM_MIND},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MESPRIT] = {
+        .species = SPECIES_MESPRIT,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_THUNDER_PUNCH, MOVE_IRON_TAIL, MOVE_CALM_MIND},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_AZELF] = {
+        .species = SPECIES_AZELF,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_THUNDER_PUNCH, MOVE_IRON_TAIL, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_HEATRAN] = {
+        .species = SPECIES_HEATRAN,
+        .moves = {MOVE_OVERHEAT, MOVE_EARTH_POWER, MOVE_IRON_HEAD, MOVE_TOXIC},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SERPERIOR] = {
+        .species = SPECIES_SERPERIOR,
+        .moves = {MOVE_LEAF_BLADE, MOVE_DOUBLE_EDGE, MOVE_IRON_TAIL, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_EMBOAR] = {
+        .species = SPECIES_EMBOAR,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_HAMMER_ARM, MOVE_DOUBLE_EDGE, MOVE_BULK_UP},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SAMUROTT] = {
+        .species = SPECIES_SAMUROTT,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_SWIFT, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_WATCHOG] = {
+        .species = SPECIES_WATCHOG,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_THUNDER_PUNCH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_LIEPARD] = {
+        .species = SPECIES_LIEPARD,
+        .moves = {MOVE_NIGHT_SLASH, MOVE_SLASH, MOVE_IRON_TAIL, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SIMISAGE] = {
+        .species = SPECIES_SIMISAGE,
+        .moves = {MOVE_SEED_BOMB, MOVE_IRON_TAIL, MOVE_BRICK_BREAK, MOVE_TOXIC},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SIMISEAR] = {
+        .species = SPECIES_SIMISEAR,
+        .moves = {MOVE_FIRE_PUNCH, MOVE_IRON_TAIL, MOVE_BRICK_BREAK, MOVE_TOXIC},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SIMIPOUR] = {
+        .species = SPECIES_SIMIPOUR,
+        .moves = {MOVE_WATERFALL, MOVE_IRON_TAIL, MOVE_ICE_PUNCH, MOVE_TOXIC},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MUSHARNA] = {
+        .species = SPECIES_MUSHARNA,
+        .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_SWIFT, MOVE_CALM_MIND},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ZEBSTRIKA] = {
+        .species = SPECIES_ZEBSTRIKA,
+        .moves = {MOVE_WILD_CHARGE, MOVE_DOUBLE_EDGE, MOVE_OVERHEAT, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SWOOBAT] = {
+        .species = SPECIES_SWOOBAT,
+        .moves = {MOVE_PSYCHIC, MOVE_AIR_SLASH, MOVE_SHADOW_BALL, MOVE_CALM_MIND},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_EXCADRILL] = {
+        .species = SPECIES_EXCADRILL,
+        .moves = {MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE, MOVE_BRICK_BREAK, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_AUDINO] = {
+        .species = SPECIES_AUDINO,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_THUNDER_PUNCH, MOVE_IRON_TAIL, MOVE_CALM_MIND},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CONKELDURR] = {
+        .species = SPECIES_CONKELDURR,
+        .moves = {MOVE_HAMMER_ARM, MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_BULK_UP},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_THROH] = {
+        .species = SPECIES_THROH,
+        .moves = {MOVE_BRICK_BREAK, MOVE_EARTHQUAKE, MOVE_MEGA_KICK, MOVE_BULK_UP},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SAWK] = {
+        .species = SPECIES_SAWK,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_EARTHQUAKE, MOVE_MEGA_KICK, MOVE_BULK_UP},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_WHIMSICOTT] = {
+        .species = SPECIES_WHIMSICOTT,
+        .moves = {MOVE_GIGA_DRAIN, MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_TOXIC},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_LILLIGANT] = {
+        .species = SPECIES_LILLIGANT,
+        .moves = {MOVE_GIGA_DRAIN, MOVE_SECRET_POWER, MOVE_QUIVER_DANCE, MOVE_NONE},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BASCULIN_RED_STRIPED] = {
+        .species = SPECIES_BASCULIN_RED_STRIPED,
+        .moves = {MOVE_AQUA_TAIL, MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_TOXIC},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DARMANITAN_STANDARD] = {
+        .species = SPECIES_DARMANITAN_STANDARD,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_EARTHQUAKE, MOVE_MEGA_KICK, MOVE_BULK_UP},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MARACTUS] = {
+        .species = SPECIES_MARACTUS,
+        .moves = {MOVE_GIGA_DRAIN, MOVE_SECRET_POWER, MOVE_AERIAL_ACE, MOVE_SYNTHESIS},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SCRAFTY] = {
+        .species = SPECIES_SCRAFTY,
+        .moves = {MOVE_HIGH_JUMP_KICK, MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SIGILYPH] = {
+        .species = SPECIES_SIGILYPH,
+        .moves = {MOVE_PSYCHIC, MOVE_AIR_SLASH, MOVE_ICE_BEAM, MOVE_CALM_MIND},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_COFAGRIGUS] = {
+        .species = SPECIES_COFAGRIGUS,
+        .moves = {MOVE_SHADOW_BALL, MOVE_PSYCHIC, MOVE_SHOCK_WAVE, MOVE_CALM_MIND},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CARRACOSTA] = {
+        .species = SPECIES_CARRACOSTA,
+        .moves = {MOVE_AQUA_TAIL, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_TOXIC},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ARCHEOPS] = {
+        .species = SPECIES_ARCHEOPS,
+        .moves = {MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_WING_ATTACK, MOVE_TOXIC},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GARBODOR] = {
+        .species = SPECIES_GARBODOR,
+        .moves = {MOVE_GUNK_SHOT, MOVE_BODY_SLAM, MOVE_THIEF, MOVE_TOXIC},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ZOROARK] = {
+        .species = SPECIES_ZOROARK,
+        .moves = {MOVE_NIGHT_DAZE, MOVE_SLUDGE_BOMB, MOVE_PSYCHIC, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CINCCINO] = {
+        .species = SPECIES_CINCCINO,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_IRON_TAIL, MOVE_THIEF, MOVE_CALM_MIND},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GOTHITELLE] = {
+        .species = SPECIES_GOTHITELLE,
+        .moves = {MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL, MOVE_CALM_MIND},
+        .heldItem = ITEM_WISE_GLASSES,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_REUNICLUS] = {
+        .species = SPECIES_REUNICLUS,
+        .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_THUNDER, MOVE_CALM_MIND},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SWANNA] = {
+        .species = SPECIES_SWANNA,
+        .moves = {MOVE_BRAVE_BIRD, MOVE_DOUBLE_EDGE, MOVE_SURF, MOVE_ROOST},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_VANILLUXE] = {
+        .species = SPECIES_VANILLUXE,
+        .moves = {MOVE_ICE_BEAM, MOVE_WATER_PULSE, MOVE_MIRROR_SHOT, MOVE_TOXIC},
+        .heldItem = ITEM_CHESTO_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SAWSBUCK_SPRING] = {
+        .species = SPECIES_SAWSBUCK_SPRING,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_HORN_LEECH, MOVE_MEGAHORN, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_EMOLGA] = {
+        .species = SPECIES_EMOLGA,
+        .moves = {MOVE_SPARK, MOVE_AERIAL_ACE, MOVE_IRON_TAIL, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ESCAVALIER] = {
+        .species = SPECIES_ESCAVALIER,
+        .moves = {MOVE_X_SCISSOR, MOVE_IRON_HEAD, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_AMOONGUSS] = {
+        .species = SPECIES_AMOONGUSS,
+        .moves = {MOVE_BODY_SLAM, MOVE_SLUDGE_BOMB, MOVE_GIGA_DRAIN, MOVE_SYNTHESIS},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_JELLICENT] = {
+        .species = SPECIES_JELLICENT,
+        .moves = {MOVE_WATER_SPOUT, MOVE_WRING_OUT, MOVE_SHADOW_BALL, MOVE_RECOVER},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ALOMOMOLA] = {
+        .species = SPECIES_ALOMOMOLA,
+        .moves = {MOVE_WATERFALL, MOVE_BODY_SLAM, MOVE_WAKE_UP_SLAP, MOVE_CALM_MIND},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GALVANTULA] = {
+        .species = SPECIES_GALVANTULA,
+        .moves = {MOVE_THUNDERBOLT, MOVE_BUG_BUZZ, MOVE_GIGA_DRAIN, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FERROTHORN] = {
+        .species = SPECIES_FERROTHORN,
+        .moves = {MOVE_POWER_WHIP, MOVE_IRON_HEAD, MOVE_STRENGTH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_KLINKLANG] = {
+        .species = SPECIES_KLINKLANG,
+        .moves = {MOVE_GEAR_GRIND, MOVE_SECRET_POWER, MOVE_THUNDERBOLT, MOVE_SHIFT_GEAR},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_EELEKTROSS] = {
+        .species = SPECIES_EELEKTROSS,
+        .moves = {MOVE_THUNDER_PUNCH, MOVE_BODY_SLAM, MOVE_WATERFALL, MOVE_BULK_UP},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BEHEEYEM] = {
+        .species = SPECIES_BEHEEYEM,
+        .moves = {MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL, MOVE_CALM_MIND},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CHANDELURE] = {
+        .species = SPECIES_CHANDELURE,
+        .moves = {MOVE_OVERHEAT, MOVE_SHADOW_BALL, MOVE_PSYCHIC, MOVE_CALM_MIND},
+        .heldItem = ITEM_WISE_GLASSES,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_HAXORUS] = {
+        .species = SPECIES_HAXORUS,
+        .moves = {MOVE_DRAGON_CLAW, MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ACCELGOR] = {
+        .species = SPECIES_ACCELGOR,
+        .moves = {MOVE_BUG_BUZZ, MOVE_SLUDGE_BOMB, MOVE_GIGA_DRAIN, MOVE_RECOVER},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_STUNFISK] = {
+        .species = SPECIES_STUNFISK,
+        .moves = {MOVE_THUNDERBOLT, MOVE_SURF, MOVE_SLUDGE_BOMB, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MIENSHAO] = {
+        .species = SPECIES_MIENSHAO,
+        .moves = {MOVE_HIGH_JUMP_KICK, MOVE_DOUBLE_EDGE, MOVE_ROCK_SLIDE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DRUDDIGON] = {
+        .species = SPECIES_DRUDDIGON,
+        .moves = {MOVE_DRAGON_CLAW, MOVE_EARTHQUAKE, MOVE_BODY_SLAM, MOVE_TOXIC},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GOLURK] = {
+        .species = SPECIES_GOLURK,
+        .moves = {MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE, MOVE_SHADOW_PUNCH, MOVE_TOXIC},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BOUFFALANT] = {
+        .species = SPECIES_BOUFFALANT,
+        .moves = {MOVE_HEAD_CHARGE, MOVE_MEGAHORN, MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BRAVIARY] = {
+        .species = SPECIES_BRAVIARY,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_BRAVE_BIRD, MOVE_ROCK_SLIDE, MOVE_BULK_UP},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MANDIBUZZ] = {
+        .species = SPECIES_MANDIBUZZ,
+        .moves = {MOVE_BRAVE_BIRD, MOVE_DOUBLE_EDGE, MOVE_THIEF, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_HEATMOR] = {
+        .species = SPECIES_HEATMOR,
+        .moves = {MOVE_OVERHEAT, MOVE_GIGA_DRAIN, MOVE_BODY_SLAM, MOVE_TOXIC},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DURANT] = {
+        .species = SPECIES_DURANT,
+        .moves = {MOVE_X_SCISSOR, MOVE_IRON_HEAD, MOVE_STRENGTH, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_HYDREIGON] = {
+        .species = SPECIES_HYDREIGON,
+        .moves = {MOVE_DRAGON_PULSE, MOVE_FIRE_BLAST, MOVE_SURF, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_CHOICE_SPECS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_VOLCARONA] = {
+        .species = SPECIES_VOLCARONA,
+        .moves = {MOVE_OVERHEAT, MOVE_BUG_BUZZ, MOVE_PSYCHIC, MOVE_QUIVER_DANCE},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_COBALION] = {
+        .species = SPECIES_COBALION,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_IRON_HEAD, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TERRAKION] = {
+        .species = SPECIES_TERRAKION,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_STONE_EDGE, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_VIRIZION] = {
+        .species = SPECIES_VIRIZION,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_LEAF_BLADE, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TORNADUS_INCARNATE] = {
+        .species = SPECIES_TORNADUS_INCARNATE,
+        .moves = {MOVE_HURRICANE, MOVE_SLUDGE_BOMB, MOVE_PSYCHIC, MOVE_BULK_UP},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_THUNDURUS_INCARNATE] = {
+        .species = SPECIES_THUNDURUS_INCARNATE,
+        .moves = {MOVE_THUNDERBOLT, MOVE_SLUDGE_BOMB, MOVE_PSYCHIC, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_LANDORUS_INCARNATE] = {
+        .species = SPECIES_LANDORUS_INCARNATE,
+        .moves = {MOVE_EARTHQUAKE, MOVE_HAMMER_ARM, MOVE_BODY_SLAM, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CHESNAUGHT] = {
+        .species = SPECIES_CHESNAUGHT,
+        .moves = {MOVE_WOOD_HAMMER, MOVE_HAMMER_ARM, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DELPHOX] = {
+        .species = SPECIES_DELPHOX,
+        .moves = {MOVE_OVERHEAT, MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_CALM_MIND},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GRENINJA] = {
+        .species = SPECIES_GRENINJA,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_EXTRASENSORY, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DIGGERSBY] = {
+        .species = SPECIES_DIGGERSBY,
+        .moves = {MOVE_EARTHQUAKE, MOVE_MEGA_KICK, MOVE_HAMMER_ARM, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TALONFLAME] = {
+        .species = SPECIES_TALONFLAME,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_BRAVE_BIRD, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PYROAR] = {
+        .species = SPECIES_PYROAR,
+        .moves = {MOVE_OVERHEAT, MOVE_HYPER_VOICE, MOVE_CRUNCH, MOVE_TOXIC},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GOGOAT] = {
+        .species = SPECIES_GOGOAT,
+        .moves = {MOVE_LEAF_BLADE, MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_BULK_UP},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PANGORO] = {
+        .species = SPECIES_PANGORO,
+        .moves = {MOVE_HAMMER_ARM, MOVE_CRUNCH, MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MEOWSTIC_M] = {
+        .species = SPECIES_MEOWSTIC_M,
+        .moves = {MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL, MOVE_CALM_MIND},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_AROMATISSE] = {
+        .species = SPECIES_AROMATISSE,
+        .moves = {MOVE_MOONBLAST, MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_CALM_MIND},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SLURPUFF] = {
+        .species = SPECIES_SLURPUFF,
+        .moves = {MOVE_THUNDERBOLT, MOVE_SURF, MOVE_PSYCHIC, MOVE_CALM_MIND},
+        .heldItem = ITEM_WISE_GLASSES,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MALAMAR] = {
+        .species = SPECIES_MALAMAR,
+        .moves = {MOVE_FOUL_PLAY, MOVE_PSYCHO_CUT, MOVE_SLASH, MOVE_BULK_UP},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BARBARACLE] = {
+        .species = SPECIES_BARBARACLE,
+        .moves = {MOVE_WATERFALL, MOVE_STONE_EDGE, MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DRAGALGE] = {
+        .species = SPECIES_DRAGALGE,
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_DRAGON_PULSE, MOVE_THUNDERBOLT, MOVE_TOXIC},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CLAWITZER] = {
+        .species = SPECIES_CLAWITZER,
+        .moves = {MOVE_SURF, MOVE_SLUDGE_BOMB, MOVE_ICE_BEAM, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_HELIOLISK] = {
+        .species = SPECIES_HELIOLISK,
+        .moves = {MOVE_THUNDERBOLT, MOVE_SWIFT, MOVE_SURF, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_CHOICE_SPECS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TYRANTRUM] = {
+        .species = SPECIES_TYRANTRUM,
+        .moves = {MOVE_DRAGON_CLAW, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_TOXIC},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_AURORUS] = {
+        .species = SPECIES_AURORUS,
+        .moves = {MOVE_ICE_BEAM, MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_CALM_MIND},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SYLVEON] = {
+        .species = SPECIES_SYLVEON,
+        .moves = {MOVE_MOONBLAST, MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_CALM_MIND},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_HAWLUCHA] = {
+        .species = SPECIES_HAWLUCHA,
+        .moves = {MOVE_HIGH_JUMP_KICK, MOVE_WING_ATTACK, MOVE_MEGA_KICK, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DEDENNE] = {
+        .species = SPECIES_DEDENNE,
+        .moves = {MOVE_THUNDERBOLT, MOVE_PLAY_ROUGH, MOVE_SWIFT, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CARBINK] = {
+        .species = SPECIES_CARBINK,
+        .moves = {MOVE_STONE_EDGE, MOVE_DOUBLE_EDGE, MOVE_MOONBLAST, MOVE_CALM_MIND},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GOODRA] = {
+        .species = SPECIES_GOODRA,
+        .moves = {MOVE_DRAGON_PULSE, MOVE_FIRE_BLAST, MOVE_THUNDERBOLT, MOVE_TOXIC},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_KLEFKI] = {
+        .species = SPECIES_KLEFKI,
+        .moves = {MOVE_PLAY_ROUGH, MOVE_FOUL_PLAY, MOVE_SECRET_POWER, MOVE_CALM_MIND},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TREVENANT] = {
+        .species = SPECIES_TREVENANT,
+        .moves = {MOVE_WOOD_HAMMER, MOVE_SHADOW_CLAW, MOVE_EARTHQUAKE, MOVE_CALM_MIND},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GOURGEIST_AVERAGE] = {
+        .species = SPECIES_GOURGEIST_AVERAGE,
+        .moves = {MOVE_SEED_BOMB, MOVE_SECRET_POWER, MOVE_ROCK_SLIDE, MOVE_TOXIC},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_AVALUGG] = {
+        .species = SPECIES_AVALUGG,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_ICE_FANG, MOVE_RECOVER},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_NOIVERN] = {
+        .species = SPECIES_NOIVERN,
+        .moves = {MOVE_BOOMBURST, MOVE_DRAGON_PULSE, MOVE_HURRICANE, MOVE_ROOST},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DECIDUEYE] = {
+        .species = SPECIES_DECIDUEYE,
+        .moves = {MOVE_SPIRIT_SHACKLE, MOVE_LEAF_BLADE, MOVE_BRAVE_BIRD, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_INCINEROAR] = {
+        .species = SPECIES_INCINEROAR,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_DARKEST_LARIAT, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PRIMARINA] = {
+        .species = SPECIES_PRIMARINA,
+        .moves = {MOVE_MOONBLAST, MOVE_SURF, MOVE_PSYCHIC, MOVE_CALM_MIND},
+        .heldItem = ITEM_CHESTO_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TOUCANNON] = {
+        .species = SPECIES_TOUCANNON,
+        .moves = {MOVE_BEAK_BLAST, MOVE_SECRET_POWER, MOVE_BRICK_BREAK, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GUMSHOOS] = {
+        .species = SPECIES_GUMSHOOS,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_CRUNCH, MOVE_TOXIC},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_VIKAVOLT] = {
+        .species = SPECIES_VIKAVOLT,
+        .moves = {MOVE_THUNDERBOLT, MOVE_BUG_BUZZ, MOVE_AIR_SLASH, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CRABOMINABLE] = {
+        .species = SPECIES_CRABOMINABLE,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_ICE_HAMMER, MOVE_EARTHQUAKE, MOVE_BULK_UP},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ORICORIO_BAILE] = {
+        .species = SPECIES_ORICORIO_BAILE,
+        .moves = {MOVE_HURRICANE, MOVE_REVELATION_DANCE, MOVE_ICY_WIND, MOVE_CALM_MIND},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_RIBOMBEE] = {
+        .species = SPECIES_RIBOMBEE,
+        .moves = {MOVE_POLLEN_PUFF, MOVE_DAZZLING_GLEAM, MOVE_PSYCHIC, MOVE_QUIVER_DANCE},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_LYCANROC_MIDDAY] = {
+        .species = SPECIES_LYCANROC_MIDDAY,
+        .moves = {MOVE_STONE_EDGE, MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_WISHIWASHI_SOLO] = {
+        .species = SPECIES_WISHIWASHI_SOLO,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_DOUBLE_EDGE, MOVE_TOXIC},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TOXAPEX] = {
+        .species = SPECIES_TOXAPEX,
+        .moves = {MOVE_LIQUIDATION, MOVE_POISON_JAB, MOVE_BODY_SLAM, MOVE_RECOVER},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MUDSDALE] = {
+        .species = SPECIES_MUDSDALE,
+        .moves = {MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE, MOVE_ROCK_SLIDE, MOVE_TOXIC},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ARAQUANID] = {
+        .species = SPECIES_ARAQUANID,
+        .moves = {MOVE_LIQUIDATION, MOVE_LUNGE, MOVE_BODY_SLAM, MOVE_TOXIC},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_LURANTIS] = {
+        .species = SPECIES_LURANTIS,
+        .moves = {MOVE_PETAL_BLIZZARD, MOVE_X_SCISSOR, MOVE_SLASH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SHIINOTIC] = {
+        .species = SPECIES_SHIINOTIC,
+        .moves = {MOVE_MOONBLAST, MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_MOONLIGHT},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SALAZZLE] = {
+        .species = SPECIES_SALAZZLE,
+        .moves = {MOVE_OVERHEAT, MOVE_SLUDGE_BOMB, MOVE_DRAGON_PULSE, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_CHOICE_SPECS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BEWEAR] = {
+        .species = SPECIES_BEWEAR,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_HAMMER_ARM, MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TSAREENA] = {
+        .species = SPECIES_TSAREENA,
+        .moves = {MOVE_POWER_WHIP, MOVE_HIGH_JUMP_KICK, MOVE_MEGA_KICK, MOVE_TOXIC},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_COMFEY] = {
+        .species = SPECIES_COMFEY,
+        .moves = {MOVE_GIGA_DRAIN, MOVE_DRAINING_KISS, MOVE_SWIFT, MOVE_CALM_MIND},
+        .heldItem = ITEM_CHESTO_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ORANGURU] = {
+        .species = SPECIES_ORANGURU,
+        .moves = {MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_SWIFT, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_CHOICE_SPECS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PASSIMIAN] = {
+        .species = SPECIES_PASSIMIAN,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_BULK_UP},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GOLISOPOD] = {
+        .species = SPECIES_GOLISOPOD,
+        .moves = {MOVE_LIQUIDATION, MOVE_BUG_BITE, MOVE_SLASH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PALOSSAND] = {
+        .species = SPECIES_PALOSSAND,
+        .moves = {MOVE_EARTH_POWER, MOVE_SHADOW_BALL, MOVE_SLUDGE_BOMB, MOVE_TOXIC},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PYUKUMUKU] = {
+        .species = SPECIES_PYUKUMUKU,
+        .moves = {MOVE_RECOVER, MOVE_SOAK, MOVE_TOXIC, MOVE_MEMENTO},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_KOMALA] = {
+        .species = SPECIES_KOMALA,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_WOOD_HAMMER, MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TURTONATOR] = {
+        .species = SPECIES_TURTONATOR,
+        .moves = {MOVE_OVERHEAT, MOVE_DRAGON_PULSE, MOVE_SHOCK_WAVE, MOVE_BULK_UP},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TOGEDEMARU] = {
+        .species = SPECIES_TOGEDEMARU,
+        .moves = {MOVE_WILD_CHARGE, MOVE_IRON_TAIL, MOVE_SECRET_POWER, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MIMIKYU_DISGUISED] = {
+        .species = SPECIES_MIMIKYU_DISGUISED,
+        .moves = {MOVE_PLAY_ROUGH, MOVE_WOOD_HAMMER, MOVE_SHADOW_CLAW, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BRUXISH] = {
+        .species = SPECIES_BRUXISH,
+        .moves = {MOVE_PSYCHIC_FANGS, MOVE_AQUA_TAIL, MOVE_CRUNCH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DRAMPA] = {
+        .species = SPECIES_DRAMPA,
+        .moves = {MOVE_HYPER_VOICE, MOVE_DRAGON_PULSE, MOVE_FIRE_BLAST, MOVE_CALM_MIND},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DHELMISE] = {
+        .species = SPECIES_DHELMISE,
+        .moves = {MOVE_POWER_WHIP, MOVE_EARTHQUAKE, MOVE_ANCHOR_SHOT, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_KOMMO_O] = {
+        .species = SPECIES_KOMMO_O,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_DRAGON_CLAW, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TAPU_KOKO] = {
+        .species = SPECIES_TAPU_KOKO,
+        .moves = {MOVE_WILD_CHARGE, MOVE_BRAVE_BIRD, MOVE_SECRET_POWER, MOVE_CALM_MIND},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TAPU_LELE] = {
+        .species = SPECIES_TAPU_LELE,
+        .moves = {MOVE_MOONBLAST, MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_CALM_MIND},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TAPU_BULU] = {
+        .species = SPECIES_TAPU_BULU,
+        .moves = {MOVE_WOOD_HAMMER, MOVE_MEGAHORN, MOVE_BRICK_BREAK, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TAPU_FINI] = {
+        .species = SPECIES_TAPU_FINI,
+        .moves = {MOVE_MOONBLAST, MOVE_SURF, MOVE_ICE_BEAM, MOVE_CALM_MIND},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_NIHILEGO] = {
+        .species = SPECIES_NIHILEGO,
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_POWER_GEM, MOVE_THUNDERBOLT, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BUZZWOLE] = {
+        .species = SPECIES_BUZZWOLE,
+        .moves = {MOVE_HAMMER_ARM, MOVE_LUNGE, MOVE_EARTHQUAKE, MOVE_BULK_UP},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PHEROMOSA] = {
+        .species = SPECIES_PHEROMOSA,
+        .moves = {MOVE_HIGH_JUMP_KICK, MOVE_LUNGE, MOVE_SECRET_POWER, MOVE_QUIVER_DANCE},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_XURKITREE] = {
+        .species = SPECIES_XURKITREE,
+        .moves = {MOVE_THUNDERBOLT, MOVE_SIGNAL_BEAM, MOVE_POWER_WHIP, MOVE_CALM_MIND},
+        .heldItem = ITEM_CHESTO_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CELESTEELA] = {
+        .species = SPECIES_CELESTEELA,
+        .moves = {MOVE_FLASH_CANNON, MOVE_AIR_SLASH, MOVE_FIRE_BLAST, MOVE_TOXIC},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_KARTANA] = {
+        .species = SPECIES_KARTANA,
+        .moves = {MOVE_LEAF_BLADE, MOVE_SACRED_SWORD, MOVE_X_SCISSOR, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GUZZLORD] = {
+        .species = SPECIES_GUZZLORD,
+        .moves = {MOVE_DRAGON_CLAW, MOVE_CRUNCH, MOVE_EARTHQUAKE, MOVE_TOXIC},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_NAGANADEL] = {
+        .species = SPECIES_NAGANADEL,
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_DRAGON_PULSE, MOVE_FIRE_BLAST, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_WISE_GLASSES,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_STAKATAKA] = {
+        .species = SPECIES_STAKATAKA,
+        .moves = {MOVE_IRON_HEAD, MOVE_DOUBLE_EDGE, MOVE_ROCK_SLIDE, MOVE_TOXIC},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BLACEPHALON] = {
+        .species = SPECIES_BLACEPHALON,
+        .moves = {MOVE_OVERHEAT, MOVE_SHADOW_BALL, MOVE_PSYCHIC, MOVE_CALM_MIND},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_RILLABOOM] = {
+        .species = SPECIES_RILLABOOM,
+        .moves = {MOVE_WOOD_HAMMER, MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CINDERACE] = {
+        .species = SPECIES_CINDERACE,
+        .moves = {MOVE_PYRO_BALL, MOVE_DOUBLE_EDGE, MOVE_SHADOW_BALL, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_INTELEON] = {
+        .species = SPECIES_INTELEON,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_SHADOW_BALL, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GREEDENT] = {
+        .species = SPECIES_GREEDENT,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_IRON_TAIL, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CORVIKNIGHT] = {
+        .species = SPECIES_CORVIKNIGHT,
+        .moves = {MOVE_BRAVE_BIRD, MOVE_DOUBLE_EDGE, MOVE_STEEL_WING, MOVE_BULK_UP},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ORBEETLE] = {
+        .species = SPECIES_ORBEETLE,
+        .moves = {MOVE_PSYCHIC, MOVE_BUG_BUZZ, MOVE_SHADOW_BALL, MOVE_CALM_MIND},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_THIEVUL] = {
+        .species = SPECIES_THIEVUL,
+        .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_SNARL, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ELDEGOSS] = {
+        .species = SPECIES_ELDEGOSS,
+        .moves = {MOVE_LEAF_STORM, MOVE_HYPER_VOICE, MOVE_SYNTHESIS, MOVE_NONE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DUBWOOL] = {
+        .species = SPECIES_DUBWOOL,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_DOUBLE_KICK, MOVE_SWORDS_DANCE, MOVE_NONE},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DREDNAW] = {
+        .species = SPECIES_DREDNAW,
+        .moves = {MOVE_LIQUIDATION, MOVE_DOUBLE_EDGE, MOVE_ROCK_SLIDE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BOLTUND] = {
+        .species = SPECIES_BOLTUND,
+        .moves = {MOVE_WILD_CHARGE, MOVE_DOUBLE_EDGE, MOVE_PLAY_ROUGH, MOVE_BULK_UP},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_COALOSSAL] = {
+        .species = SPECIES_COALOSSAL,
+        .moves = {MOVE_FIRE_PUNCH, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_STEALTH_ROCK},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FLAPPLE] = {
+        .species = SPECIES_FLAPPLE,
+        .moves = {MOVE_GRAV_APPLE, MOVE_DRAGON_RUSH, MOVE_SECRET_POWER, MOVE_DRAGON_DANCE},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_APPLETUN] = {
+        .species = SPECIES_APPLETUN,
+        .moves = {MOVE_ENERGY_BALL, MOVE_DRAGON_PULSE, MOVE_EARTHQUAKE, MOVE_RECOVER},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SANDACONDA] = {
+        .species = SPECIES_SANDACONDA,
+        .moves = {MOVE_EARTHQUAKE, MOVE_BODY_SLAM, MOVE_ROCK_SLIDE, MOVE_COIL},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CRAMORANT] = {
+        .species = SPECIES_CRAMORANT,
+        .moves = {MOVE_DRILL_PECK, MOVE_SURF, MOVE_SECRET_POWER, MOVE_PROTECT},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BARRASKEWDA] = {
+        .species = SPECIES_BARRASKEWDA,
+        .moves = {MOVE_LIQUIDATION, MOVE_DOUBLE_EDGE, MOVE_THROAT_CHOP, MOVE_PROTECT},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TOXTRICITY_AMPED] = {
+        .species = SPECIES_TOXTRICITY_AMPED,
+        .moves = {MOVE_BOOMBURST, MOVE_THUNDERBOLT, MOVE_SLUDGE_BOMB, MOVE_SHIFT_GEAR},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CENTISKORCH] = {
+        .species = SPECIES_CENTISKORCH,
+        .moves = {MOVE_FIRE_LASH, MOVE_LUNGE, MOVE_CRUNCH, MOVE_COIL},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GRAPPLOCT] = {
+        .species = SPECIES_GRAPPLOCT,
+        .moves = {MOVE_BRICK_BREAK, MOVE_BODY_SLAM, MOVE_WATERFALL, MOVE_BULK_UP},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_POLTEAGEIST_PHONY] = {
+        .species = SPECIES_POLTEAGEIST_PHONY,
+        .moves = {MOVE_SHADOW_BALL, MOVE_PSYCHIC, MOVE_GIGA_DRAIN, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_HATTERENE] = {
+        .species = SPECIES_HATTERENE,
+        .moves = {MOVE_PSYCHIC, MOVE_DAZZLING_GLEAM, MOVE_SHADOW_BALL, MOVE_CALM_MIND},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GRIMMSNARL] = {
+        .species = SPECIES_GRIMMSNARL,
+        .moves = {MOVE_FOUL_PLAY, MOVE_PLAY_ROUGH, MOVE_MEGA_KICK, MOVE_BULK_UP},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_OBSTAGOON] = {
+        .species = SPECIES_OBSTAGOON,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_NIGHT_SLASH, MOVE_CROSS_CHOP, MOVE_BULK_UP},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PERRSERKER] = {
+        .species = SPECIES_PERRSERKER,
+        .moves = {MOVE_IRON_HEAD, MOVE_DOUBLE_EDGE, MOVE_BRICK_BREAK, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CURSOLA] = {
+        .species = SPECIES_CURSOLA,
+        .moves = {MOVE_SHADOW_BALL, MOVE_SURF, MOVE_PSYCHIC, MOVE_CALM_MIND},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SIRFETCHD] = {
+        .species = SPECIES_SIRFETCHD,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_BRAVE_BIRD, MOVE_BRICK_BREAK, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MR_RIME] = {
+        .species = SPECIES_MR_RIME,
+        .moves = {MOVE_PSYCHIC, MOVE_ICE_BEAM, MOVE_THUNDERBOLT, MOVE_CALM_MIND},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_RUNERIGUS] = {
+        .species = SPECIES_RUNERIGUS,
+        .moves = {MOVE_EARTHQUAKE, MOVE_SHADOW_CLAW, MOVE_SECRET_POWER, MOVE_CALM_MIND},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FALINKS] = {
+        .species = SPECIES_FALINKS,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_MEGAHORN, MOVE_BODY_SLAM, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PINCURCHIN] = {
+        .species = SPECIES_PINCURCHIN,
+        .moves = {MOVE_ZING_ZAP, MOVE_BODY_SLAM, MOVE_POISON_JAB, MOVE_RECOVER},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FROSMOTH] = {
+        .species = SPECIES_FROSMOTH,
+        .moves = {MOVE_ICE_BEAM, MOVE_BUG_BUZZ, MOVE_GIGA_DRAIN, MOVE_QUIVER_DANCE},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_STONJOURNER] = {
+        .species = SPECIES_STONJOURNER,
+        .moves = {MOVE_STONE_EDGE, MOVE_EARTHQUAKE, MOVE_MEGA_KICK, MOVE_STEALTH_ROCK},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_EISCUE_ICE] = {
+        .species = SPECIES_EISCUE_ICE,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_ICE_PUNCH, MOVE_WATERFALL, MOVE_PROTECT},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_INDEEDEE_M] = {
+        .species = SPECIES_INDEEDEE_M,
+        .moves = {MOVE_PSYCHIC, MOVE_SWIFT, MOVE_SHADOW_BALL, MOVE_CALM_MIND},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MORPEKO_FULL_BELLY] = {
+        .species = SPECIES_MORPEKO_FULL_BELLY,
+        .moves = {MOVE_AURA_WHEEL, MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_COPPERAJAH] = {
+        .species = SPECIES_COPPERAJAH,
+        .moves = {MOVE_IRON_HEAD, MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_PROTECT},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DRACOZOLT] = {
+        .species = SPECIES_DRACOZOLT,
+        .moves = {MOVE_DRAGON_CLAW, MOVE_BOLT_BEAK, MOVE_EARTHQUAKE, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ARCTOZOLT] = {
+        .species = SPECIES_ARCTOZOLT,
+        .moves = {MOVE_BOLT_BEAK, MOVE_ICICLE_CRASH, MOVE_MEGA_KICK, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DRACOVISH] = {
+        .species = SPECIES_DRACOVISH,
+        .moves = {MOVE_WATERFALL, MOVE_DRAGON_RUSH, MOVE_EARTHQUAKE, MOVE_PROTECT},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ARCTOVISH] = {
+        .species = SPECIES_ARCTOVISH,
+        .moves = {MOVE_WATERFALL, MOVE_ICICLE_CRASH, MOVE_BODY_SLAM, MOVE_PROTECT},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DRAGAPULT] = {
+        .species = SPECIES_DRAGAPULT,
+        .moves = {MOVE_DRAGON_CLAW, MOVE_DOUBLE_EDGE, MOVE_SHADOW_BALL, MOVE_DRAGON_DANCE},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_URSHIFU_SINGLE_STRIKE] = {
+        .species = SPECIES_URSHIFU_SINGLE_STRIKE,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_DOUBLE_EDGE, MOVE_WICKED_BLOW, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_REGIELEKI] = {
+        .species = SPECIES_REGIELEKI,
+        .moves = {MOVE_BODY_SLAM, MOVE_THUNDERBOLT, MOVE_ANCIENT_POWER, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_REGIDRAGO] = {
+        .species = SPECIES_REGIDRAGO,
+        .moves = {MOVE_DRAGON_ENERGY, MOVE_EARTHQUAKE, MOVE_HAMMER_ARM, MOVE_DRAGON_DANCE},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GLASTRIER] = {
+        .species = SPECIES_GLASTRIER,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_ICICLE_CRASH, MOVE_DOUBLE_KICK, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SPECTRIER] = {
+        .species = SPECIES_SPECTRIER,
+        .moves = {MOVE_SHADOW_BALL, MOVE_PSYCHIC, MOVE_DOUBLE_EDGE, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_WYRDEER] = {
+        .species = SPECIES_WYRDEER,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_PSYSHIELD_BASH, MOVE_EARTHQUAKE, MOVE_CALM_MIND},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_KLEAVOR] = {
+        .species = SPECIES_KLEAVOR,
+        .moves = {MOVE_X_SCISSOR, MOVE_DOUBLE_EDGE, MOVE_CLOSE_COMBAT, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_URSALUNA] = {
+        .species = SPECIES_URSALUNA,
+        .moves = {MOVE_HEADLONG_RUSH, MOVE_DOUBLE_EDGE, MOVE_PLAY_ROUGH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BASCULEGION_M] = {
+        .species = SPECIES_BASCULEGION_M,
+        .moves = {MOVE_WAVE_CRASH, MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_CALM_MIND},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SNEASLER] = {
+        .species = SPECIES_SNEASLER,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_POISON_JAB, MOVE_SLASH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_OVERQWIL] = {
+        .species = SPECIES_OVERQWIL,
+        .moves = {MOVE_POISON_JAB, MOVE_DOUBLE_EDGE, MOVE_AQUA_TAIL, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ENAMORUS_INCARNATE] = {
+        .species = SPECIES_ENAMORUS_INCARNATE,
+        .moves = {MOVE_MOONBLAST, MOVE_SLUDGE_BOMB, MOVE_PSYCHIC, MOVE_CALM_MIND},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MEOWSCARADA] = {
+        .species = SPECIES_MEOWSCARADA,
+        .moves = {MOVE_SEED_BOMB, MOVE_NIGHT_SLASH, MOVE_PLAY_ROUGH, MOVE_PROTECT},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SKELEDIRGE] = {
+        .species = SPECIES_SKELEDIRGE,
+        .moves = {MOVE_OVERHEAT, MOVE_SHADOW_BALL, MOVE_HYPER_VOICE, MOVE_WILL_O_WISP},
+        .heldItem = ITEM_WISE_GLASSES,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_QUAQUAVAL] = {
+        .species = SPECIES_QUAQUAVAL,
+        .moves = {MOVE_WAVE_CRASH, MOVE_CLOSE_COMBAT, MOVE_MEGA_KICK, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_OINKOLOGNE_M] = {
+        .species = SPECIES_OINKOLOGNE_M,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_THIEF, MOVE_EARTH_POWER, MOVE_PROTECT},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SPIDOPS] = {
+        .species = SPECIES_SPIDOPS,
+        .moves = {MOVE_SKITTER_SMACK, MOVE_BODY_SLAM, MOVE_THROAT_CHOP, MOVE_PROTECT},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_LOKIX] = {
+        .species = SPECIES_LOKIX,
+        .moves = {MOVE_THROAT_CHOP, MOVE_LUNGE, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PAWMOT] = {
+        .species = SPECIES_PAWMOT,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_WILD_CHARGE, MOVE_DOUBLE_EDGE, MOVE_BULK_UP},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MAUSHOLD_THREE] = {
+        .species = SPECIES_MAUSHOLD_THREE,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_PLAY_ROUGH, MOVE_THIEF, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DACHSBUN] = {
+        .species = SPECIES_DACHSBUN,
+        .moves = {MOVE_PLAY_ROUGH, MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_PROTECT},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ARBOLIVA] = {
+        .species = SPECIES_ARBOLIVA,
+        .moves = {MOVE_ENERGY_BALL, MOVE_SWIFT, MOVE_PROTECT, MOVE_NONE},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SQUAWKABILLY_GREEN] = {
+        .species = SPECIES_SQUAWKABILLY_GREEN,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_BRAVE_BIRD, MOVE_THIEF, MOVE_ROOST},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GARGANACL] = {
+        .species = SPECIES_GARGANACL,
+        .moves = {MOVE_STONE_EDGE, MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_RECOVER},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ARMAROUGE] = {
+        .species = SPECIES_ARMAROUGE,
+        .moves = {MOVE_ARMOR_CANNON, MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_CALM_MIND},
+        .heldItem = ITEM_CHOICE_SPECS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CERULEDGE] = {
+        .species = SPECIES_CERULEDGE,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_SHADOW_CLAW, MOVE_DRAGON_CLAW, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BELLIBOLT] = {
+        .species = SPECIES_BELLIBOLT,
+        .moves = {MOVE_THUNDERBOLT, MOVE_WATER_PULSE, MOVE_SWIFT, MOVE_SLACK_OFF},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_KILOWATTREL] = {
+        .species = SPECIES_KILOWATTREL,
+        .moves = {MOVE_THUNDERBOLT, MOVE_HURRICANE, MOVE_SWIFT, MOVE_ROOST},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MABOSSTIFF] = {
+        .species = SPECIES_MABOSSTIFF,
+        .moves = {MOVE_JAW_LOCK, MOVE_DOUBLE_EDGE, MOVE_LICK, MOVE_PROTECT},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GRAFAIAI] = {
+        .species = SPECIES_GRAFAIAI,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_GUNK_SHOT, MOVE_KNOCK_OFF, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BRAMBLEGHAST] = {
+        .species = SPECIES_BRAMBLEGHAST,
+        .moves = {MOVE_POWER_WHIP, MOVE_SECRET_POWER, MOVE_SHADOW_BALL, MOVE_PROTECT},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TOEDSCRUEL] = {
+        .species = SPECIES_TOEDSCRUEL,
+        .moves = {MOVE_EARTH_POWER, MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_TOXIC},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_KLAWF] = {
+        .species = SPECIES_KLAWF,
+        .moves = {MOVE_ROCK_SLIDE, MOVE_HIGH_HORSEPOWER, MOVE_BODY_SLAM, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SCOVILLAIN] = {
+        .species = SPECIES_SCOVILLAIN,
+        .moves = {MOVE_SEED_BOMB, MOVE_OVERHEAT, MOVE_CRUNCH, MOVE_PROTECT},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_RABSCA] = {
+        .species = SPECIES_RABSCA,
+        .moves = {MOVE_PSYCHIC, MOVE_BUG_BUZZ, MOVE_SLUDGE_BOMB, MOVE_CALM_MIND},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ESPATHRA] = {
+        .species = SPECIES_ESPATHRA,
+        .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_DAZZLING_GLEAM, MOVE_CALM_MIND},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TINKATON] = {
+        .species = SPECIES_TINKATON,
+        .moves = {MOVE_PLAY_ROUGH, MOVE_BRICK_BREAK, MOVE_METAL_CLAW, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_WUGTRIO] = {
+        .species = SPECIES_WUGTRIO,
+        .moves = {MOVE_LIQUIDATION, MOVE_THROAT_CHOP, MOVE_SECRET_POWER, MOVE_PROTECT},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BOMBIRDIER] = {
+        .species = SPECIES_BOMBIRDIER,
+        .moves = {MOVE_KNOCK_OFF, MOVE_WING_ATTACK, MOVE_SECRET_POWER, MOVE_PROTECT},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PALAFIN_ZERO] = {
+        .species = SPECIES_PALAFIN_ZERO,
+        .moves = {MOVE_WAVE_CRASH, MOVE_BODY_SLAM, MOVE_ICE_PUNCH, MOVE_BULK_UP},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_REVAVROOM] = {
+        .species = SPECIES_REVAVROOM,
+        .moves = {MOVE_SPIN_OUT, MOVE_GUNK_SHOT, MOVE_DOUBLE_EDGE, MOVE_SHIFT_GEAR},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CYCLIZAR] = {
+        .species = SPECIES_CYCLIZAR,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_DRAGON_CLAW, MOVE_IRON_TAIL, MOVE_SHIFT_GEAR},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ORTHWORM] = {
+        .species = SPECIES_ORTHWORM,
+        .moves = {MOVE_IRON_HEAD, MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_PROTECT},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GLIMMORA] = {
+        .species = SPECIES_GLIMMORA,
+        .moves = {MOVE_SLUDGE_WAVE, MOVE_POWER_GEM, MOVE_SECRET_POWER, MOVE_TOXIC},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_HOUNDSTONE] = {
+        .species = SPECIES_HOUNDSTONE,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_PLAY_ROUGH, MOVE_CRUNCH, MOVE_PROTECT},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FLAMIGO] = {
+        .species = SPECIES_FLAMIGO,
+        .moves = {MOVE_BRAVE_BIRD, MOVE_MEGA_KICK, MOVE_THROAT_CHOP, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CETITAN] = {
+        .species = SPECIES_CETITAN,
+        .moves = {MOVE_ICE_SPINNER, MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_PROTECT},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_VELUZA] = {
+        .species = SPECIES_VELUZA,
+        .moves = {MOVE_LIQUIDATION, MOVE_DOUBLE_EDGE, MOVE_PSYCHO_CUT, MOVE_PROTECT},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DONDOZO] = {
+        .species = SPECIES_DONDOZO,
+        .moves = {MOVE_WAVE_CRASH, MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_PROTECT},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TATSUGIRI_CURLY] = {
+        .species = SPECIES_TATSUGIRI_CURLY,
+        .moves = {MOVE_SURF, MOVE_DRAGON_PULSE, MOVE_ICY_WIND, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ANNIHILAPE] = {
+        .species = SPECIES_ANNIHILAPE,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_BULK_UP},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CLODSIRE] = {
+        .species = SPECIES_CLODSIRE,
+        .moves = {MOVE_EARTHQUAKE, MOVE_POISON_JAB, MOVE_DOUBLE_EDGE, MOVE_TOXIC},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FARIGIRAF] = {
+        .species = SPECIES_FARIGIRAF,
+        .moves = {MOVE_PSYCHIC, MOVE_DOUBLE_EDGE, MOVE_THUNDERBOLT, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DUDUNSPARCE_TWO_SEGMENT] = {
+        .species = SPECIES_DUDUNSPARCE_TWO_SEGMENT,
+        .moves = {MOVE_HYPER_DRILL, MOVE_EARTHQUAKE, MOVE_DRAGON_RUSH, MOVE_COIL},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_KINGAMBIT] = {
+        .species = SPECIES_KINGAMBIT,
+        .moves = {MOVE_KOWTOW_CLEAVE, MOVE_IRON_HEAD, MOVE_SLASH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GREAT_TUSK] = {
+        .species = SPECIES_GREAT_TUSK,
+        .moves = {MOVE_HEADLONG_RUSH, MOVE_CLOSE_COMBAT, MOVE_DOUBLE_EDGE, MOVE_BULK_UP},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SCREAM_TAIL] = {
+        .species = SPECIES_SCREAM_TAIL,
+        .moves = {MOVE_PSYCHIC_FANGS, MOVE_PLAY_ROUGH, MOVE_DOUBLE_EDGE, MOVE_BULK_UP},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BRUTE_BONNET] = {
+        .species = SPECIES_BRUTE_BONNET,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_THIEF, MOVE_GIGA_DRAIN, MOVE_SYNTHESIS},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FLUTTER_MANE] = {
+        .species = SPECIES_FLUTTER_MANE,
+        .moves = {MOVE_MOONBLAST, MOVE_SHADOW_BALL, MOVE_THUNDERBOLT, MOVE_CALM_MIND},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SLITHER_WING] = {
+        .species = SPECIES_SLITHER_WING,
+        .moves = {MOVE_LUNGE, MOVE_DOUBLE_EDGE, MOVE_BRICK_BREAK, MOVE_BULK_UP},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SANDY_SHOCKS] = {
+        .species = SPECIES_SANDY_SHOCKS,
+        .moves = {MOVE_THUNDERBOLT, MOVE_EARTH_POWER, MOVE_TRI_ATTACK, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_IRON_TREADS] = {
+        .species = SPECIES_IRON_TREADS,
+        .moves = {MOVE_EARTHQUAKE, MOVE_IRON_HEAD, MOVE_DOUBLE_EDGE, MOVE_PROTECT},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_IRON_BUNDLE] = {
+        .species = SPECIES_IRON_BUNDLE,
+        .moves = {MOVE_ICE_BEAM, MOVE_HYDRO_PUMP, MOVE_SWIFT, MOVE_PROTECT},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_IRON_HANDS] = {
+        .species = SPECIES_IRON_HANDS,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_WILD_CHARGE, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_IRON_JUGULIS] = {
+        .species = SPECIES_IRON_JUGULIS,
+        .moves = {MOVE_DARK_PULSE, MOVE_AIR_SLASH, MOVE_FIRE_BLAST, MOVE_PROTECT},
+        .heldItem = ITEM_WISE_GLASSES,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_IRON_MOTH] = {
+        .species = SPECIES_IRON_MOTH,
+        .moves = {MOVE_OVERHEAT, MOVE_SLUDGE_WAVE, MOVE_PSYCHIC, MOVE_TOXIC},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_IRON_THORNS] = {
+        .species = SPECIES_IRON_THORNS,
+        .moves = {MOVE_WILD_CHARGE, MOVE_STONE_EDGE, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BAXCALIBUR] = {
+        .species = SPECIES_BAXCALIBUR,
+        .moves = {MOVE_GLAIVE_RUSH, MOVE_DOUBLE_EDGE, MOVE_ICICLE_CRASH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GHOLDENGO] = {
+        .species = SPECIES_GHOLDENGO,
+        .moves = {MOVE_MAKE_IT_RAIN, MOVE_SHADOW_BALL, MOVE_THUNDERBOLT, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_WO_CHIEN] = {
+        .species = SPECIES_WO_CHIEN,
+        .moves = {MOVE_LEAF_STORM, MOVE_DARK_PULSE, MOVE_BODY_SLAM, MOVE_PROTECT},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CHIEN_PAO] = {
+        .species = SPECIES_CHIEN_PAO,
+        .moves = {MOVE_THROAT_CHOP, MOVE_ICICLE_CRASH, MOVE_SACRED_SWORD, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TING_LU] = {
+        .species = SPECIES_TING_LU,
+        .moves = {MOVE_EARTHQUAKE, MOVE_THROAT_CHOP, MOVE_DOUBLE_EDGE, MOVE_PROTECT},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CHI_YU] = {
+        .species = SPECIES_CHI_YU,
+        .moves = {MOVE_OVERHEAT, MOVE_DARK_PULSE, MOVE_PSYCHIC, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_WISE_GLASSES,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ROARING_MOON] = {
+        .species = SPECIES_ROARING_MOON,
+        .moves = {MOVE_THROAT_CHOP, MOVE_DRAGON_CLAW, MOVE_DOUBLE_EDGE, MOVE_DRAGON_DANCE},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_IRON_VALIANT] = {
+        .species = SPECIES_IRON_VALIANT,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_SPIRIT_BREAK, MOVE_LEAF_BLADE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_WALKING_WAKE] = {
+        .species = SPECIES_WALKING_WAKE,
+        .moves = {MOVE_SURF, MOVE_DRAGON_PULSE, MOVE_FLAMETHROWER, MOVE_PROTECT},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_IRON_LEAVES] = {
+        .species = SPECIES_IRON_LEAVES,
+        .moves = {MOVE_LEAF_BLADE, MOVE_PSYBLADE, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SINISTCHA_UNREMARKABLE] = {
+        .species = SPECIES_SINISTCHA_UNREMARKABLE,
+        .moves = {MOVE_LEAF_STORM, MOVE_SHADOW_BALL, MOVE_FOUL_PLAY, MOVE_CALM_MIND},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_OKIDOGI] = {
+        .species = SPECIES_OKIDOGI,
+        .moves = {MOVE_POISON_JAB, MOVE_DOUBLE_EDGE, MOVE_BRICK_BREAK, MOVE_BULK_UP},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MUNKIDORI] = {
+        .species = SPECIES_MUNKIDORI,
+        .moves = {MOVE_SLUDGE_WAVE, MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FEZANDIPITI] = {
+        .species = SPECIES_FEZANDIPITI,
+        .moves = {MOVE_CROSS_POISON, MOVE_MOONBLAST, MOVE_SECRET_POWER, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ARCHALUDON] = {
+        .species = SPECIES_ARCHALUDON,
+        .moves = {MOVE_FLASH_CANNON, MOVE_THUNDERBOLT, MOVE_DRAGON_CLAW, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_HYDRAPPLE] = {
+        .species = SPECIES_HYDRAPPLE,
+        .moves = {MOVE_ENERGY_BALL, MOVE_DRAGON_PULSE, MOVE_DOUBLE_EDGE, MOVE_RECOVER},
+        .heldItem = ITEM_CHESTO_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GOUGING_FIRE] = {
+        .species = SPECIES_GOUGING_FIRE,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_DRAGON_CLAW, MOVE_DOUBLE_EDGE, MOVE_PROTECT},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_RAGING_BOLT] = {
+        .species = SPECIES_RAGING_BOLT,
+        .moves = {MOVE_THUNDERBOLT, MOVE_DRAGON_PULSE, MOVE_DOUBLE_EDGE, MOVE_CALM_MIND},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_IRON_BOULDER] = {
+        .species = SPECIES_IRON_BOULDER,
+        .moves = {MOVE_MIGHTY_CLEAVE, MOVE_DOUBLE_EDGE, MOVE_PSYCHO_CUT, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_IRON_CROWN] = {
+        .species = SPECIES_IRON_CROWN,
+        .moves = {MOVE_PSYCHIC, MOVE_FLASH_CANNON, MOVE_DOUBLE_EDGE, MOVE_CALM_MIND},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TURTWIG] = {
+        .species = SPECIES_TURTWIG,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_LEAF_STORM, MOVE_CRUNCH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GROTLE] = {
+        .species = SPECIES_GROTLE,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_LEAF_STORM, MOVE_CRUNCH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CHIMCHAR] = {
+        .species = SPECIES_CHIMCHAR,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_FIRE_PUNCH, MOVE_THUNDER_PUNCH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MONFERNO] = {
+        .species = SPECIES_MONFERNO,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_CLOSE_COMBAT, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PIPLUP] = {
+        .species = SPECIES_PIPLUP,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_DOUBLE_EDGE, MOVE_TOXIC},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PRINPLUP] = {
+        .species = SPECIES_PRINPLUP,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_DOUBLE_EDGE, MOVE_TOXIC},
+        .heldItem = ITEM_CHOICE_SPECS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_STARLY] = {
+        .species = SPECIES_STARLY,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_BRAVE_BIRD, MOVE_STEEL_WING, MOVE_TOXIC},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_STARAVIA] = {
+        .species = SPECIES_STARAVIA,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_BRAVE_BIRD, MOVE_STEEL_WING, MOVE_TOXIC},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BIDOOF] = {
+        .species = SPECIES_BIDOOF,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_IRON_TAIL, MOVE_THIEF, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_KRICKETOT] = {
+        .species = SPECIES_KRICKETOT,
+        .moves = {MOVE_BUG_BITE, MOVE_MUD_SLAP, MOVE_NONE, MOVE_NONE},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SHINX] = {
+        .species = SPECIES_SHINX,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_SPARK, MOVE_CRUNCH, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_LUXIO] = {
+        .species = SPECIES_LUXIO,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_SPARK, MOVE_CRUNCH, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BUDEW] = {
+        .species = SPECIES_BUDEW,
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_GIGA_DRAIN, MOVE_SHADOW_BALL, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_CHESTO_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CRANIDOS] = {
+        .species = SPECIES_CRANIDOS,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SHIELDON] = {
+        .species = SPECIES_SHIELDON,
+        .moves = {MOVE_IRON_HEAD, MOVE_DOUBLE_EDGE, MOVE_ROCK_SLIDE, MOVE_TOXIC},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BURMY_PLANT] = {
+        .species = SPECIES_BURMY_PLANT,
+        .moves = {MOVE_BUG_BITE, MOVE_TACKLE, MOVE_PROTECT, MOVE_NONE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_COMBEE] = {
+        .species = SPECIES_COMBEE,
+        .moves = {MOVE_BUG_BITE, MOVE_SWIFT, MOVE_MUD_SLAP, MOVE_GUST},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BUIZEL] = {
+        .species = SPECIES_BUIZEL,
+        .moves = {MOVE_WATERFALL, MOVE_STRENGTH, MOVE_IRON_TAIL, MOVE_BULK_UP},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CHERUBI] = {
+        .species = SPECIES_CHERUBI,
+        .moves = {MOVE_GIGA_DRAIN, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE, MOVE_NONE},
+        .heldItem = ITEM_CHESTO_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SHELLOS_WEST] = {
+        .species = SPECIES_SHELLOS_WEST,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_MUD_BOMB, MOVE_RECOVER},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DRIFLOON] = {
+        .species = SPECIES_DRIFLOON,
+        .moves = {MOVE_SHADOW_BALL, MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_CALM_MIND},
+        .heldItem = ITEM_CHOICE_SPECS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BUNEARY] = {
+        .species = SPECIES_BUNEARY,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_JUMP_KICK, MOVE_THUNDER_PUNCH, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GLAMEOW] = {
+        .species = SPECIES_GLAMEOW,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_IRON_TAIL, MOVE_THIEF, MOVE_TOXIC},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CHINGLING] = {
+        .species = SPECIES_CHINGLING,
+        .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_DOUBLE_EDGE, MOVE_CALM_MIND},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_STUNKY] = {
+        .species = SPECIES_STUNKY,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_NIGHT_SLASH, MOVE_IRON_TAIL, MOVE_TOXIC},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BRONZOR] = {
+        .species = SPECIES_BRONZOR,
+        .moves = {MOVE_EARTHQUAKE, MOVE_BODY_SLAM, MOVE_PSYCHIC, MOVE_CALM_MIND},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BONSLY] = {
+        .species = SPECIES_BONSLY,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_CALM_MIND},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MIME_JR] = {
+        .species = SPECIES_MIME_JR,
+        .moves = {MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL, MOVE_CALM_MIND},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_HAPPINY] = {
+        .species = SPECIES_HAPPINY,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_FIRE_BLAST, MOVE_PSYCHIC, MOVE_CALM_MIND},
+        .heldItem = ITEM_CHESTO_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GIBLE] = {
+        .species = SPECIES_GIBLE,
+        .moves = {MOVE_EARTHQUAKE, MOVE_DRAGON_CLAW, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GABITE] = {
+        .species = SPECIES_GABITE,
+        .moves = {MOVE_EARTHQUAKE, MOVE_DRAGON_CLAW, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MUNCHLAX] = {
+        .species = SPECIES_MUNCHLAX,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_THUNDER_PUNCH, MOVE_TOXIC},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_RIOLU] = {
+        .species = SPECIES_RIOLU,
+        .moves = {MOVE_BRICK_BREAK, MOVE_EARTHQUAKE, MOVE_MEGA_KICK, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_HIPPOPOTAS] = {
+        .species = SPECIES_HIPPOPOTAS,
+        .moves = {MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_TOXIC},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SKORUPI] = {
+        .species = SPECIES_SKORUPI,
+        .moves = {MOVE_CROSS_POISON, MOVE_BUG_BITE, MOVE_STRENGTH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CROAGUNK] = {
+        .species = SPECIES_CROAGUNK,
+        .moves = {MOVE_POISON_JAB, MOVE_BRICK_BREAK, MOVE_EARTHQUAKE, MOVE_BULK_UP},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FINNEON] = {
+        .species = SPECIES_FINNEON,
+        .moves = {MOVE_WATERFALL, MOVE_SECRET_POWER, MOVE_THIEF, MOVE_TOXIC},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MANTYKE] = {
+        .species = SPECIES_MANTYKE,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_DOUBLE_EDGE, MOVE_TOXIC},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SNOVER] = {
+        .species = SPECIES_SNOVER,
+        .moves = {MOVE_WOOD_HAMMER, MOVE_DOUBLE_EDGE, MOVE_ICE_PUNCH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SNIVY] = {
+        .species = SPECIES_SNIVY,
+        .moves = {MOVE_LEAF_BLADE, MOVE_DOUBLE_EDGE, MOVE_IRON_TAIL, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SERVINE] = {
+        .species = SPECIES_SERVINE,
+        .moves = {MOVE_LEAF_BLADE, MOVE_DOUBLE_EDGE, MOVE_IRON_TAIL, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TEPIG] = {
+        .species = SPECIES_TEPIG,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_DOUBLE_EDGE, MOVE_IRON_TAIL, MOVE_TOXIC},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PIGNITE] = {
+        .species = SPECIES_PIGNITE,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_DOUBLE_EDGE, MOVE_BRICK_BREAK, MOVE_BULK_UP},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_OSHAWOTT] = {
+        .species = SPECIES_OSHAWOTT,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_SWIFT, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_WISE_GLASSES,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DEWOTT] = {
+        .species = SPECIES_DEWOTT,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_SWIFT, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PATRAT] = {
+        .species = SPECIES_PATRAT,
+        .moves = {MOVE_HYPER_FANG, MOVE_CRUNCH, MOVE_IRON_TAIL, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_LILLIPUP] = {
+        .species = SPECIES_LILLIPUP,
+        .moves = {MOVE_TAKE_DOWN, MOVE_CRUNCH, MOVE_AERIAL_ACE, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_HERDIER] = {
+        .species = SPECIES_HERDIER,
+        .moves = {MOVE_STRENGTH, MOVE_CRUNCH, MOVE_AERIAL_ACE, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PURRLOIN] = {
+        .species = SPECIES_PURRLOIN,
+        .moves = {MOVE_NIGHT_SLASH, MOVE_SLASH, MOVE_IRON_TAIL, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PANSAGE] = {
+        .species = SPECIES_PANSAGE,
+        .moves = {MOVE_SEED_BOMB, MOVE_CRUNCH, MOVE_IRON_TAIL, MOVE_TOXIC},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PANSEAR] = {
+        .species = SPECIES_PANSEAR,
+        .moves = {MOVE_FIRE_PUNCH, MOVE_CRUNCH, MOVE_IRON_TAIL, MOVE_TOXIC},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PANPOUR] = {
+        .species = SPECIES_PANPOUR,
+        .moves = {MOVE_WATERFALL, MOVE_CRUNCH, MOVE_IRON_TAIL, MOVE_TOXIC},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MUNNA] = {
+        .species = SPECIES_MUNNA,
+        .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_SWIFT, MOVE_CALM_MIND},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PIDOVE] = {
+        .species = SPECIES_PIDOVE,
+        .moves = {MOVE_SECRET_POWER, MOVE_AERIAL_ACE, MOVE_STEEL_WING, MOVE_ROOST},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TRANQUILL] = {
+        .species = SPECIES_TRANQUILL,
+        .moves = {MOVE_SECRET_POWER, MOVE_AERIAL_ACE, MOVE_STEEL_WING, MOVE_ROOST},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BLITZLE] = {
+        .species = SPECIES_BLITZLE,
+        .moves = {MOVE_WILD_CHARGE, MOVE_DOUBLE_EDGE, MOVE_FLAME_CHARGE, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ROGGENROLA] = {
+        .species = SPECIES_ROGGENROLA,
+        .moves = {MOVE_STONE_EDGE, MOVE_EARTHQUAKE, MOVE_STRENGTH, MOVE_TOXIC},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BOLDORE] = {
+        .species = SPECIES_BOLDORE,
+        .moves = {MOVE_STONE_EDGE, MOVE_EARTHQUAKE, MOVE_STRENGTH, MOVE_TOXIC},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DRILBUR] = {
+        .species = SPECIES_DRILBUR,
+        .moves = {MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE, MOVE_BRICK_BREAK, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TIMBURR] = {
+        .species = SPECIES_TIMBURR,
+        .moves = {MOVE_HAMMER_ARM, MOVE_DOUBLE_EDGE, MOVE_STONE_EDGE, MOVE_BULK_UP},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GURDURR] = {
+        .species = SPECIES_GURDURR,
+        .moves = {MOVE_HAMMER_ARM, MOVE_DOUBLE_EDGE, MOVE_STONE_EDGE, MOVE_BULK_UP},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TYMPOLE] = {
+        .species = SPECIES_TYMPOLE,
+        .moves = {MOVE_SURF, MOVE_SECRET_POWER, MOVE_SLUDGE_BOMB, MOVE_TOXIC},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PALPITOAD] = {
+        .species = SPECIES_PALPITOAD,
+        .moves = {MOVE_SURF, MOVE_SECRET_POWER, MOVE_SLUDGE_BOMB, MOVE_TOXIC},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SEWADDLE] = {
+        .species = SPECIES_SEWADDLE,
+        .moves = {MOVE_BUG_BITE, MOVE_RAZOR_LEAF, MOVE_SECRET_POWER, MOVE_CALM_MIND},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SWADLOON] = {
+        .species = SPECIES_SWADLOON,
+        .moves = {MOVE_BUG_BITE, MOVE_RAZOR_LEAF, MOVE_SECRET_POWER, MOVE_CALM_MIND},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_VENIPEDE] = {
+        .species = SPECIES_VENIPEDE,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_STEAMROLLER, MOVE_POISON_TAIL, MOVE_TOXIC},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_WHIRLIPEDE] = {
+        .species = SPECIES_WHIRLIPEDE,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_STEAMROLLER, MOVE_POISON_TAIL, MOVE_TOXIC},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_COTTONEE] = {
+        .species = SPECIES_COTTONEE,
+        .moves = {MOVE_ENERGY_BALL, MOVE_SWIFT, MOVE_TOXIC, MOVE_NONE},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PETILIL] = {
+        .species = SPECIES_PETILIL,
+        .moves = {MOVE_LEAF_STORM, MOVE_SECRET_POWER, MOVE_SYNTHESIS, MOVE_NONE},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SANDILE] = {
+        .species = SPECIES_SANDILE,
+        .moves = {MOVE_EARTHQUAKE, MOVE_FOUL_PLAY, MOVE_DOUBLE_EDGE, MOVE_TOXIC},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_KROKOROK] = {
+        .species = SPECIES_KROKOROK,
+        .moves = {MOVE_EARTHQUAKE, MOVE_FOUL_PLAY, MOVE_DOUBLE_EDGE, MOVE_TOXIC},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DARUMAKA] = {
+        .species = SPECIES_DARUMAKA,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_MEGA_KICK, MOVE_BRICK_BREAK, MOVE_TOXIC},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DWEBBLE] = {
+        .species = SPECIES_DWEBBLE,
+        .moves = {MOVE_X_SCISSOR, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SCRAGGY] = {
+        .species = SPECIES_SCRAGGY,
+        .moves = {MOVE_HIGH_JUMP_KICK, MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_BULK_UP},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_YAMASK] = {
+        .species = SPECIES_YAMASK,
+        .moves = {MOVE_SHADOW_BALL, MOVE_PSYCHIC, MOVE_SHOCK_WAVE, MOVE_CALM_MIND},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TIRTOUGA] = {
+        .species = SPECIES_TIRTOUGA,
+        .moves = {MOVE_AQUA_TAIL, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_TOXIC},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ARCHEN] = {
+        .species = SPECIES_ARCHEN,
+        .moves = {MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_WING_ATTACK, MOVE_TOXIC},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TRUBBISH] = {
+        .species = SPECIES_TRUBBISH,
+        .moves = {MOVE_GUNK_SHOT, MOVE_TAKE_DOWN, MOVE_THIEF, MOVE_TOXIC},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ZORUA] = {
+        .species = SPECIES_ZORUA,
+        .moves = {MOVE_NIGHT_DAZE, MOVE_SLUDGE_BOMB, MOVE_SHADOW_BALL, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MINCCINO] = {
+        .species = SPECIES_MINCCINO,
+        .moves = {MOVE_SECRET_POWER, MOVE_IRON_TAIL, MOVE_WAKE_UP_SLAP, MOVE_CALM_MIND},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GOTHITA] = {
+        .species = SPECIES_GOTHITA,
+        .moves = {MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL, MOVE_CALM_MIND},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GOTHORITA] = {
+        .species = SPECIES_GOTHORITA,
+        .moves = {MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL, MOVE_CALM_MIND},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SOLOSIS] = {
+        .species = SPECIES_SOLOSIS,
+        .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_THUNDER, MOVE_CALM_MIND},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DUOSION] = {
+        .species = SPECIES_DUOSION,
+        .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_THUNDER, MOVE_CALM_MIND},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DUCKLETT] = {
+        .species = SPECIES_DUCKLETT,
+        .moves = {MOVE_BRAVE_BIRD, MOVE_DOUBLE_EDGE, MOVE_SURF, MOVE_ROOST},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_VANILLITE] = {
+        .species = SPECIES_VANILLITE,
+        .moves = {MOVE_ICE_BEAM, MOVE_WATER_PULSE, MOVE_MIRROR_SHOT, MOVE_TOXIC},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_VANILLISH] = {
+        .species = SPECIES_VANILLISH,
+        .moves = {MOVE_ICE_BEAM, MOVE_WATER_PULSE, MOVE_MIRROR_SHOT, MOVE_TOXIC},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DEERLING_SPRING] = {
+        .species = SPECIES_DEERLING_SPRING,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_JUMP_KICK, MOVE_ENERGY_BALL, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_KARRABLAST] = {
+        .species = SPECIES_KARRABLAST,
+        .moves = {MOVE_X_SCISSOR, MOVE_DOUBLE_EDGE, MOVE_AERIAL_ACE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FOONGUS] = {
+        .species = SPECIES_FOONGUS,
+        .moves = {MOVE_BODY_SLAM, MOVE_SLUDGE_BOMB, MOVE_GIGA_DRAIN, MOVE_SYNTHESIS},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FRILLISH] = {
+        .species = SPECIES_FRILLISH,
+        .moves = {MOVE_WATER_SPOUT, MOVE_WRING_OUT, MOVE_SHADOW_BALL, MOVE_RECOVER},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_JOLTIK] = {
+        .species = SPECIES_JOLTIK,
+        .moves = {MOVE_THUNDERBOLT, MOVE_BUG_BUZZ, MOVE_GIGA_DRAIN, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FERROSEED] = {
+        .species = SPECIES_FERROSEED,
+        .moves = {MOVE_IRON_HEAD, MOVE_SECRET_POWER, MOVE_GIGA_DRAIN, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_KLINK] = {
+        .species = SPECIES_KLINK,
+        .moves = {MOVE_GEAR_GRIND, MOVE_SECRET_POWER, MOVE_THUNDERBOLT, MOVE_SHIFT_GEAR},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_KLANG] = {
+        .species = SPECIES_KLANG,
+        .moves = {MOVE_GEAR_GRIND, MOVE_SECRET_POWER, MOVE_THUNDERBOLT, MOVE_SHIFT_GEAR},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TYNAMO] = {
+        .species = SPECIES_TYNAMO,
+        .moves = {MOVE_SPARK, MOVE_TACKLE, MOVE_THUNDER_WAVE, MOVE_NONE},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_EELEKTRIK] = {
+        .species = SPECIES_EELEKTRIK,
+        .moves = {MOVE_WILD_CHARGE, MOVE_BODY_SLAM, MOVE_CRUNCH, MOVE_COIL},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ELGYEM] = {
+        .species = SPECIES_ELGYEM,
+        .moves = {MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL, MOVE_CALM_MIND},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_LITWICK] = {
+        .species = SPECIES_LITWICK,
+        .moves = {MOVE_OVERHEAT, MOVE_SHADOW_BALL, MOVE_PSYCHIC, MOVE_CALM_MIND},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_LAMPENT] = {
+        .species = SPECIES_LAMPENT,
+        .moves = {MOVE_OVERHEAT, MOVE_SHADOW_BALL, MOVE_PSYCHIC, MOVE_CALM_MIND},
+        .heldItem = ITEM_CHOICE_SPECS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_AXEW] = {
+        .species = SPECIES_AXEW,
+        .moves = {MOVE_DRAGON_CLAW, MOVE_DOUBLE_EDGE, MOVE_IRON_TAIL, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FRAXURE] = {
+        .species = SPECIES_FRAXURE,
+        .moves = {MOVE_DRAGON_CLAW, MOVE_DOUBLE_EDGE, MOVE_IRON_TAIL, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CUBCHOO] = {
+        .species = SPECIES_CUBCHOO,
+        .moves = {MOVE_ICE_PUNCH, MOVE_MEGA_KICK, MOVE_ROCK_SLIDE, MOVE_TOXIC},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SHELMET] = {
+        .species = SPECIES_SHELMET,
+        .moves = {MOVE_LEECH_LIFE, MOVE_DOUBLE_EDGE, MOVE_SLUDGE_BOMB, MOVE_RECOVER},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MIENFOO] = {
+        .species = SPECIES_MIENFOO,
+        .moves = {MOVE_HIGH_JUMP_KICK, MOVE_MEGA_KICK, MOVE_ROCK_SLIDE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GOLETT] = {
+        .species = SPECIES_GOLETT,
+        .moves = {MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE, MOVE_SHADOW_PUNCH, MOVE_TOXIC},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PAWNIARD] = {
+        .species = SPECIES_PAWNIARD,
+        .moves = {MOVE_IRON_HEAD, MOVE_NIGHT_SLASH, MOVE_SLASH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BISHARP] = {
+        .species = SPECIES_BISHARP,
+        .moves = {MOVE_IRON_HEAD, MOVE_NIGHT_SLASH, MOVE_SLASH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_RUFFLET] = {
+        .species = SPECIES_RUFFLET,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_BRAVE_BIRD, MOVE_ROCK_SLIDE, MOVE_BULK_UP},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_VULLABY] = {
+        .species = SPECIES_VULLABY,
+        .moves = {MOVE_BRAVE_BIRD, MOVE_DOUBLE_EDGE, MOVE_THIEF, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DEINO] = {
+        .species = SPECIES_DEINO,
+        .moves = {MOVE_CRUNCH, MOVE_DRAGON_RUSH, MOVE_BODY_SLAM, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ZWEILOUS] = {
+        .species = SPECIES_ZWEILOUS,
+        .moves = {MOVE_CRUNCH, MOVE_DRAGON_RUSH, MOVE_BODY_SLAM, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_LARVESTA] = {
+        .species = SPECIES_LARVESTA,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_LEECH_LIFE, MOVE_DOUBLE_EDGE, MOVE_CALM_MIND},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CHESPIN] = {
+        .species = SPECIES_CHESPIN,
+        .moves = {MOVE_WOOD_HAMMER, MOVE_BODY_SLAM, MOVE_THUNDER_PUNCH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_QUILLADIN] = {
+        .species = SPECIES_QUILLADIN,
+        .moves = {MOVE_WOOD_HAMMER, MOVE_BODY_SLAM, MOVE_THUNDER_PUNCH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FENNEKIN] = {
+        .species = SPECIES_FENNEKIN,
+        .moves = {MOVE_OVERHEAT, MOVE_PSYCHIC, MOVE_SWIFT, MOVE_CALM_MIND},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BRAIXEN] = {
+        .species = SPECIES_BRAIXEN,
+        .moves = {MOVE_OVERHEAT, MOVE_PSYCHIC, MOVE_SWIFT, MOVE_CALM_MIND},
+        .heldItem = ITEM_WISE_GLASSES,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FROAKIE] = {
+        .species = SPECIES_FROAKIE,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_SWIFT, MOVE_TOXIC},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FROGADIER] = {
+        .species = SPECIES_FROGADIER,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_SWIFT, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BUNNELBY] = {
+        .species = SPECIES_BUNNELBY,
+        .moves = {MOVE_STRENGTH, MOVE_EARTHQUAKE, MOVE_IRON_TAIL, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FLETCHLING] = {
+        .species = SPECIES_FLETCHLING,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_AERIAL_ACE, MOVE_OVERHEAT, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FLETCHINDER] = {
+        .species = SPECIES_FLETCHINDER,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_OVERHEAT, MOVE_AERIAL_ACE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_LITLEO] = {
+        .species = SPECIES_LITLEO,
+        .moves = {MOVE_OVERHEAT, MOVE_HYPER_VOICE, MOVE_CRUNCH, MOVE_TOXIC},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SKIDDO] = {
+        .species = SPECIES_SKIDDO,
+        .moves = {MOVE_LEAF_BLADE, MOVE_DOUBLE_EDGE, MOVE_IRON_TAIL, MOVE_BULK_UP},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PANCHAM] = {
+        .species = SPECIES_PANCHAM,
+        .moves = {MOVE_SKY_UPPERCUT, MOVE_MEGA_KICK, MOVE_CRUNCH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ESPURR] = {
+        .species = SPECIES_ESPURR,
+        .moves = {MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_SHADOW_BALL, MOVE_CALM_MIND},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_HONEDGE] = {
+        .species = SPECIES_HONEDGE,
+        .moves = {MOVE_IRON_HEAD, MOVE_SACRED_SWORD, MOVE_SLASH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DOUBLADE] = {
+        .species = SPECIES_DOUBLADE,
+        .moves = {MOVE_IRON_HEAD, MOVE_SACRED_SWORD, MOVE_SLASH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SPRITZEE] = {
+        .species = SPECIES_SPRITZEE,
+        .moves = {MOVE_MOONBLAST, MOVE_THUNDERBOLT, MOVE_PSYCHIC, MOVE_CALM_MIND},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SWIRLIX] = {
+        .species = SPECIES_SWIRLIX,
+        .moves = {MOVE_THUNDERBOLT, MOVE_SURF, MOVE_PSYCHIC, MOVE_CALM_MIND},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_INKAY] = {
+        .species = SPECIES_INKAY,
+        .moves = {MOVE_FOUL_PLAY, MOVE_PSYCHO_CUT, MOVE_SLASH, MOVE_CALM_MIND},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BINACLE] = {
+        .species = SPECIES_BINACLE,
+        .moves = {MOVE_WATERFALL, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SKRELP] = {
+        .species = SPECIES_SKRELP,
+        .moves = {MOVE_AQUA_TAIL, MOVE_POISON_TAIL, MOVE_IRON_TAIL, MOVE_TOXIC},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CLAUNCHER] = {
+        .species = SPECIES_CLAUNCHER,
+        .moves = {MOVE_SURF, MOVE_SLUDGE_BOMB, MOVE_ICE_BEAM, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_HELIOPTILE] = {
+        .species = SPECIES_HELIOPTILE,
+        .moves = {MOVE_THUNDERBOLT, MOVE_SWIFT, MOVE_SURF, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_CHESTO_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TYRUNT] = {
+        .species = SPECIES_TYRUNT,
+        .moves = {MOVE_DRAGON_CLAW, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_TOXIC},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_AMAURA] = {
+        .species = SPECIES_AMAURA,
+        .moves = {MOVE_ICE_BEAM, MOVE_THUNDERBOLT, MOVE_ANCIENT_POWER, MOVE_CALM_MIND},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GOOMY] = {
+        .species = SPECIES_GOOMY,
+        .moves = {MOVE_DRAGON_PULSE, MOVE_THUNDERBOLT, MOVE_SURF, MOVE_TOXIC},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SLIGGOO] = {
+        .species = SPECIES_SLIGGOO,
+        .moves = {MOVE_DRAGON_PULSE, MOVE_THUNDERBOLT, MOVE_SURF, MOVE_TOXIC},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PHANTUMP] = {
+        .species = SPECIES_PHANTUMP,
+        .moves = {MOVE_WOOD_HAMMER, MOVE_STRENGTH, MOVE_ROCK_SLIDE, MOVE_WILL_O_WISP},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PUMPKABOO_AVERAGE] = {
+        .species = SPECIES_PUMPKABOO_AVERAGE,
+        .moves = {MOVE_SEED_BOMB, MOVE_SECRET_POWER, MOVE_ROCK_SLIDE, MOVE_TOXIC},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BERGMITE] = {
+        .species = SPECIES_BERGMITE,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_ICE_FANG, MOVE_ROCK_SLIDE, MOVE_RECOVER},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_NOIBAT] = {
+        .species = SPECIES_NOIBAT,
+        .moves = {MOVE_HURRICANE, MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_ROOST},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ROWLET] = {
+        .species = SPECIES_ROWLET,
+        .moves = {MOVE_BRAVE_BIRD, MOVE_LEAF_BLADE, MOVE_SECRET_POWER, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DARTRIX] = {
+        .species = SPECIES_DARTRIX,
+        .moves = {MOVE_BRAVE_BIRD, MOVE_LEAF_BLADE, MOVE_SECRET_POWER, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_LITTEN] = {
+        .species = SPECIES_LITTEN,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_DOUBLE_EDGE, MOVE_LICK, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TORRACAT] = {
+        .species = SPECIES_TORRACAT,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_DOUBLE_EDGE, MOVE_LICK, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_POPPLIO] = {
+        .species = SPECIES_POPPLIO,
+        .moves = {MOVE_SURF, MOVE_MOONBLAST, MOVE_ICE_BEAM, MOVE_TOXIC},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BRIONNE] = {
+        .species = SPECIES_BRIONNE,
+        .moves = {MOVE_SURF, MOVE_MOONBLAST, MOVE_ICE_BEAM, MOVE_TOXIC},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PIKIPEK] = {
+        .species = SPECIES_PIKIPEK,
+        .moves = {MOVE_DRILL_PECK, MOVE_SECRET_POWER, MOVE_BRICK_BREAK, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TRUMBEAK] = {
+        .species = SPECIES_TRUMBEAK,
+        .moves = {MOVE_DRILL_PECK, MOVE_SECRET_POWER, MOVE_BRICK_BREAK, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_YUNGOOS] = {
+        .species = SPECIES_YUNGOOS,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_CRUNCH, MOVE_TOXIC},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GRUBBIN] = {
+        .species = SPECIES_GRUBBIN,
+        .moves = {MOVE_X_SCISSOR, MOVE_CRUNCH, MOVE_SECRET_POWER, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CHARJABUG] = {
+        .species = SPECIES_CHARJABUG,
+        .moves = {MOVE_X_SCISSOR, MOVE_SPARK, MOVE_CRUNCH, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CRABRAWLER] = {
+        .species = SPECIES_CRABRAWLER,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_EARTHQUAKE, MOVE_CRABHAMMER, MOVE_BULK_UP},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CUTIEFLY] = {
+        .species = SPECIES_CUTIEFLY,
+        .moves = {MOVE_BUG_BUZZ, MOVE_DAZZLING_GLEAM, MOVE_PSYCHIC, MOVE_QUIVER_DANCE},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ROCKRUFF] = {
+        .species = SPECIES_ROCKRUFF,
+        .moves = {MOVE_STONE_EDGE, MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MAREANIE] = {
+        .species = SPECIES_MAREANIE,
+        .moves = {MOVE_LIQUIDATION, MOVE_POISON_JAB, MOVE_SECRET_POWER, MOVE_RECOVER},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MUDBRAY] = {
+        .species = SPECIES_MUDBRAY,
+        .moves = {MOVE_EARTHQUAKE, MOVE_DOUBLE_EDGE, MOVE_ROCK_SLIDE, MOVE_TOXIC},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DEWPIDER] = {
+        .species = SPECIES_DEWPIDER,
+        .moves = {MOVE_LIQUIDATION, MOVE_LUNGE, MOVE_CRUNCH, MOVE_TOXIC},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FOMANTIS] = {
+        .species = SPECIES_FOMANTIS,
+        .moves = {MOVE_LEAF_BLADE, MOVE_SLASH, MOVE_FURY_CUTTER, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MORELULL] = {
+        .species = SPECIES_MORELULL,
+        .moves = {MOVE_MOONBLAST, MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_MOONLIGHT},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SALANDIT] = {
+        .species = SPECIES_SALANDIT,
+        .moves = {MOVE_OVERHEAT, MOVE_SLUDGE_BOMB, MOVE_DRAGON_PULSE, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_STUFFUL] = {
+        .species = SPECIES_STUFFUL,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_HAMMER_ARM, MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BOUNSWEET] = {
+        .species = SPECIES_BOUNSWEET,
+        .moves = {MOVE_RAZOR_LEAF, MOVE_SECRET_POWER, MOVE_TOXIC, MOVE_NONE},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_STEENEE] = {
+        .species = SPECIES_STEENEE,
+        .moves = {MOVE_LEAF_STORM, MOVE_SECRET_POWER, MOVE_TOXIC, MOVE_NONE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_WIMPOD] = {
+        .species = SPECIES_WIMPOD,
+        .moves = {MOVE_WATERFALL, MOVE_SECRET_POWER, MOVE_STRUGGLE_BUG, MOVE_TOXIC},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SANDYGAST] = {
+        .species = SPECIES_SANDYGAST,
+        .moves = {MOVE_EARTH_POWER, MOVE_SHADOW_BALL, MOVE_SLUDGE_BOMB, MOVE_TOXIC},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TYPE_NULL] = {
+        .species = SPECIES_TYPE_NULL,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_X_SCISSOR, MOVE_IRON_HEAD, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_JANGMO_O] = {
+        .species = SPECIES_JANGMO_O,
+        .moves = {MOVE_DRAGON_CLAW, MOVE_EARTHQUAKE, MOVE_BODY_SLAM, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_HAKAMO_O] = {
+        .species = SPECIES_HAKAMO_O,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_DRAGON_CLAW, MOVE_DOUBLE_EDGE, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_POIPOLE] = {
+        .species = SPECIES_POIPOLE,
+        .moves = {MOVE_POISON_JAB, MOVE_IRON_TAIL, MOVE_SECRET_POWER, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GROOKEY] = {
+        .species = SPECIES_GROOKEY,
+        .moves = {MOVE_WOOD_HAMMER, MOVE_MEGA_KICK, MOVE_KNOCK_OFF, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_THWACKEY] = {
+        .species = SPECIES_THWACKEY,
+        .moves = {MOVE_WOOD_HAMMER, MOVE_DOUBLE_EDGE, MOVE_KNOCK_OFF, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SCORBUNNY] = {
+        .species = SPECIES_SCORBUNNY,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_OVERHEAT, MOVE_DOUBLE_KICK, MOVE_PROTECT},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_RABOOT] = {
+        .species = SPECIES_RABOOT,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_OVERHEAT, MOVE_DOUBLE_KICK, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SOBBLE] = {
+        .species = SPECIES_SOBBLE,
+        .moves = {MOVE_SURF, MOVE_SWIFT, MOVE_PROTECT, MOVE_NONE},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DRIZZILE] = {
+        .species = SPECIES_DRIZZILE,
+        .moves = {MOVE_SURF, MOVE_SWIFT, MOVE_PROTECT, MOVE_NONE},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SKWOVET] = {
+        .species = SPECIES_SKWOVET,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_IRON_TAIL, MOVE_THIEF, MOVE_PROTECT},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ROOKIDEE] = {
+        .species = SPECIES_ROOKIDEE,
+        .moves = {MOVE_BRAVE_BIRD, MOVE_SECRET_POWER, MOVE_THIEF, MOVE_PROTECT},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CORVISQUIRE] = {
+        .species = SPECIES_CORVISQUIRE,
+        .moves = {MOVE_BRAVE_BIRD, MOVE_SECRET_POWER, MOVE_THIEF, MOVE_PROTECT},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BLIPBUG] = {
+        .species = SPECIES_BLIPBUG,
+        .moves = {MOVE_STRUGGLE_BUG, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DOTTLER] = {
+        .species = SPECIES_DOTTLER,
+        .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_STRUGGLE_BUG, MOVE_CALM_MIND},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_NICKIT] = {
+        .species = SPECIES_NICKIT,
+        .moves = {MOVE_SNARL, MOVE_SWIFT, MOVE_NASTY_PLOT, MOVE_NONE},
+        .heldItem = ITEM_CHESTO_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GOSSIFLEUR] = {
+        .species = SPECIES_GOSSIFLEUR,
+        .moves = {MOVE_LEAF_STORM, MOVE_SECRET_POWER, MOVE_SYNTHESIS, MOVE_NONE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_WOOLOO] = {
+        .species = SPECIES_WOOLOO,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_DOUBLE_KICK, MOVE_THUNDER_WAVE, MOVE_NONE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CHEWTLE] = {
+        .species = SPECIES_CHEWTLE,
+        .moves = {MOVE_LIQUIDATION, MOVE_BODY_SLAM, MOVE_JAW_LOCK, MOVE_PROTECT},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_YAMPER] = {
+        .species = SPECIES_YAMPER,
+        .moves = {MOVE_WILD_CHARGE, MOVE_DOUBLE_EDGE, MOVE_PLAY_ROUGH, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ROLYCOLY] = {
+        .species = SPECIES_ROLYCOLY,
+        .moves = {MOVE_ROCK_SLIDE, MOVE_BODY_SLAM, MOVE_INCINERATE, MOVE_STEALTH_ROCK},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CARKOL] = {
+        .species = SPECIES_CARKOL,
+        .moves = {MOVE_ROCK_SLIDE, MOVE_OVERHEAT, MOVE_BODY_SLAM, MOVE_STEALTH_ROCK},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_APPLIN] = {
+        .species = SPECIES_APPLIN,
+        .moves = {MOVE_ASTONISH, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SILICOBRA] = {
+        .species = SPECIES_SILICOBRA,
+        .moves = {MOVE_EARTHQUAKE, MOVE_BODY_SLAM, MOVE_ROCK_SLIDE, MOVE_COIL},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ARROKUDA] = {
+        .species = SPECIES_ARROKUDA,
+        .moves = {MOVE_LIQUIDATION, MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_PROTECT},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TOXEL] = {
+        .species = SPECIES_TOXEL,
+        .moves = {MOVE_ACID, MOVE_SECRET_POWER, MOVE_NUZZLE, MOVE_PROTECT},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SIZZLIPEDE] = {
+        .species = SPECIES_SIZZLIPEDE,
+        .moves = {MOVE_FIRE_LASH, MOVE_LUNGE, MOVE_CRUNCH, MOVE_COIL},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CLOBBOPUS] = {
+        .species = SPECIES_CLOBBOPUS,
+        .moves = {MOVE_BRICK_BREAK, MOVE_BODY_SLAM, MOVE_WATERFALL, MOVE_BULK_UP},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SINISTEA_PHONY] = {
+        .species = SPECIES_SINISTEA_PHONY,
+        .moves = {MOVE_SHADOW_BALL, MOVE_PSYCHIC, MOVE_GIGA_DRAIN, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_CHOICE_SPECS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_HATENNA] = {
+        .species = SPECIES_HATENNA,
+        .moves = {MOVE_PSYCHIC, MOVE_DAZZLING_GLEAM, MOVE_GIGA_DRAIN, MOVE_CALM_MIND},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_HATTREM] = {
+        .species = SPECIES_HATTREM,
+        .moves = {MOVE_PSYCHIC, MOVE_DAZZLING_GLEAM, MOVE_GIGA_DRAIN, MOVE_CALM_MIND},
+        .heldItem = ITEM_CHOICE_SPECS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_IMPIDIMP] = {
+        .species = SPECIES_IMPIDIMP,
+        .moves = {MOVE_DARK_PULSE, MOVE_PLAY_ROUGH, MOVE_MEGA_KICK, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MORGREM] = {
+        .species = SPECIES_MORGREM,
+        .moves = {MOVE_DARK_PULSE, MOVE_PLAY_ROUGH, MOVE_MEGA_KICK, MOVE_NASTY_PLOT},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MILCERY] = {
+        .species = SPECIES_MILCERY,
+        .moves = {MOVE_DAZZLING_GLEAM, MOVE_SECRET_POWER, MOVE_RECOVER, MOVE_NONE},
+        .heldItem = ITEM_CHOICE_SPECS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SNOM] = {
+        .species = SPECIES_SNOM,
+        .moves = {MOVE_ICY_WIND, MOVE_STRUGGLE_BUG, MOVE_SECRET_POWER, MOVE_PROTECT},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CUFANT] = {
+        .species = SPECIES_CUFANT,
+        .moves = {MOVE_IRON_HEAD, MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_PROTECT},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DURALUDON] = {
+        .species = SPECIES_DURALUDON,
+        .moves = {MOVE_FLASH_CANNON, MOVE_THUNDERBOLT, MOVE_DRAGON_CLAW, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_TIMID,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DREEPY] = {
+        .species = SPECIES_DREEPY,
+        .moves = {MOVE_SECRET_POWER, MOVE_ASTONISH, MOVE_INFESTATION, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DRAKLOAK] = {
+        .species = SPECIES_DRAKLOAK,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_DRAGON_RUSH, MOVE_SHADOW_BALL, MOVE_DRAGON_DANCE},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_KUBFU] = {
+        .species = SPECIES_KUBFU,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_DOUBLE_EDGE, MOVE_IRON_HEAD, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SPRIGATITO] = {
+        .species = SPECIES_SPRIGATITO,
+        .moves = {MOVE_SEED_BOMB, MOVE_PLAY_ROUGH, MOVE_SLASH, MOVE_PROTECT},
+        .heldItem = ITEM_CHOICE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FLORAGATO] = {
+        .species = SPECIES_FLORAGATO,
+        .moves = {MOVE_SEED_BOMB, MOVE_PLAY_ROUGH, MOVE_SLASH, MOVE_PROTECT},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FUECOCO] = {
+        .species = SPECIES_FUECOCO,
+        .moves = {MOVE_OVERHEAT, MOVE_HYPER_VOICE, MOVE_SNARL, MOVE_PROTECT},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CROCALOR] = {
+        .species = SPECIES_CROCALOR,
+        .moves = {MOVE_OVERHEAT, MOVE_HYPER_VOICE, MOVE_SNARL, MOVE_WILL_O_WISP},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_QUAXLY] = {
+        .species = SPECIES_QUAXLY,
+        .moves = {MOVE_LIQUIDATION, MOVE_SECRET_POWER, MOVE_WING_ATTACK, MOVE_PROTECT},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_QUAXWELL] = {
+        .species = SPECIES_QUAXWELL,
+        .moves = {MOVE_LIQUIDATION, MOVE_SECRET_POWER, MOVE_LOW_SWEEP, MOVE_PROTECT},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_LECHONK] = {
+        .species = SPECIES_LECHONK,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_THIEF, MOVE_MUD_SHOT, MOVE_PROTECT},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TAROUNTULA] = {
+        .species = SPECIES_TAROUNTULA,
+        .moves = {MOVE_SKITTER_SMACK, MOVE_BODY_SLAM, MOVE_THROAT_CHOP, MOVE_PROTECT},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_NYMBLE] = {
+        .species = SPECIES_NYMBLE,
+        .moves = {MOVE_BUG_BITE, MOVE_SECRET_POWER, MOVE_THIEF, MOVE_PROTECT},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PAWMI] = {
+        .species = SPECIES_PAWMI,
+        .moves = {MOVE_WILD_CHARGE, MOVE_SECRET_POWER, MOVE_THIEF, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_WHITE_HERB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_PAWMO] = {
+        .species = SPECIES_PAWMO,
+        .moves = {MOVE_WILD_CHARGE, MOVE_SECRET_POWER, MOVE_THIEF, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TANDEMAUS] = {
+        .species = SPECIES_TANDEMAUS,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_PLAY_ROUGH, MOVE_THIEF, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FIDOUGH] = {
+        .species = SPECIES_FIDOUGH,
+        .moves = {MOVE_PLAY_ROUGH, MOVE_DOUBLE_EDGE, MOVE_CRUNCH, MOVE_PROTECT},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SMOLIV] = {
+        .species = SPECIES_SMOLIV,
+        .moves = {MOVE_ENERGY_BALL, MOVE_SWIFT, MOVE_PROTECT, MOVE_NONE},
+        .heldItem = ITEM_BRIGHT_POWDER,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DOLLIV] = {
+        .species = SPECIES_DOLLIV,
+        .moves = {MOVE_ENERGY_BALL, MOVE_SWIFT, MOVE_PROTECT, MOVE_NONE},
+        .heldItem = ITEM_CHOICE_SPECS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_NACLI] = {
+        .species = SPECIES_NACLI,
+        .moves = {MOVE_STONE_EDGE, MOVE_EARTHQUAKE, MOVE_BODY_SLAM, MOVE_RECOVER},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_NACLSTACK] = {
+        .species = SPECIES_NACLSTACK,
+        .moves = {MOVE_STONE_EDGE, MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_RECOVER},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CHARCADET] = {
+        .species = SPECIES_CHARCADET,
+        .moves = {MOVE_OVERHEAT, MOVE_SECRET_POWER, MOVE_ASTONISH, MOVE_WILL_O_WISP},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TADBULB] = {
+        .species = SPECIES_TADBULB,
+        .moves = {MOVE_THUNDERBOLT, MOVE_WATER_PULSE, MOVE_SWIFT, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_WATTREL] = {
+        .species = SPECIES_WATTREL,
+        .moves = {MOVE_THUNDERBOLT, MOVE_SWIFT, MOVE_PLUCK, MOVE_ROOST},
+        .heldItem = ITEM_CHESTO_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_MASCHIFF] = {
+        .species = SPECIES_MASCHIFF,
+        .moves = {MOVE_JAW_LOCK, MOVE_DOUBLE_EDGE, MOVE_LICK, MOVE_PROTECT},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_SHROODLE] = {
+        .species = SPECIES_SHROODLE,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_GUNK_SHOT, MOVE_KNOCK_OFF, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_BRAMBLIN] = {
+        .species = SPECIES_BRAMBLIN,
+        .moves = {MOVE_POWER_WHIP, MOVE_SECRET_POWER, MOVE_SHADOW_BALL, MOVE_PROTECT},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TOEDSCOOL] = {
+        .species = SPECIES_TOEDSCOOL,
+        .moves = {MOVE_EARTH_POWER, MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_TOXIC},
+        .heldItem = ITEM_WISE_GLASSES,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CAPSAKID] = {
+        .species = SPECIES_CAPSAKID,
+        .moves = {MOVE_SEED_BOMB, MOVE_CRUNCH, MOVE_ZEN_HEADBUTT, MOVE_PROTECT},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_RELLOR] = {
+        .species = SPECIES_RELLOR,
+        .moves = {MOVE_LUNGE, MOVE_TAKE_DOWN, MOVE_THIEF, MOVE_PROTECT},
+        .heldItem = ITEM_MUSCLE_BAND,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FLITTLE] = {
+        .species = SPECIES_FLITTLE,
+        .moves = {MOVE_PSYCHIC, MOVE_SWIFT, MOVE_DISARMING_VOICE, MOVE_CALM_MIND},
+        .heldItem = ITEM_CHOICE_SPECS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TINKATINK] = {
+        .species = SPECIES_TINKATINK,
+        .moves = {MOVE_PLAY_ROUGH, MOVE_METAL_CLAW, MOVE_SECRET_POWER, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_TINKATUFF] = {
+        .species = SPECIES_TINKATUFF,
+        .moves = {MOVE_PLAY_ROUGH, MOVE_BRICK_BREAK, MOVE_METAL_CLAW, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_WIGLETT] = {
+        .species = SPECIES_WIGLETT,
+        .moves = {MOVE_LIQUIDATION, MOVE_THROAT_CHOP, MOVE_SECRET_POWER, MOVE_PROTECT},
+        .heldItem = ITEM_LUM_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FINIZEN] = {
+        .species = SPECIES_FINIZEN,
+        .moves = {MOVE_AQUA_TAIL, MOVE_BODY_SLAM, MOVE_ACROBATICS, MOVE_PROTECT},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_VAROOM] = {
+        .species = SPECIES_VAROOM,
+        .moves = {MOVE_SPIN_OUT, MOVE_GUNK_SHOT, MOVE_DOUBLE_EDGE, MOVE_TOXIC},
+        .heldItem = ITEM_SCOPE_LENS,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GLIMMET] = {
+        .species = SPECIES_GLIMMET,
+        .moves = {MOVE_SLUDGE_WAVE, MOVE_POWER_GEM, MOVE_SECRET_POWER, MOVE_TOXIC},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GREAVARD] = {
+        .species = SPECIES_GREAVARD,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_PLAY_ROUGH, MOVE_CRUNCH, MOVE_PROTECT},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_CETODDLE] = {
+        .species = SPECIES_CETODDLE,
+        .moves = {MOVE_ICE_SPINNER, MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_PROTECT},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_FRIGIBAX] = {
+        .species = SPECIES_FRIGIBAX,
+        .moves = {MOVE_DRAGON_CLAW, MOVE_ICICLE_CRASH, MOVE_BODY_SLAM, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SHELL_BELL,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_ARCTIBAX] = {
+        .species = SPECIES_ARCTIBAX,
+        .moves = {MOVE_DRAGON_CLAW, MOVE_ICICLE_CRASH, MOVE_BODY_SLAM, MOVE_SWORDS_DANCE},
+        .heldItem = ITEM_SITRUS_BERRY,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_GIMMIGHOUL_CHEST] = {
+        .species = SPECIES_GIMMIGHOUL_CHEST,
+        .moves = {MOVE_SHADOW_BALL, MOVE_SECRET_POWER, MOVE_THIEF, MOVE_PROTECT},
+        .heldItem = ITEM_QUICK_CLAW,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_DIPPLIN] = {
+        .species = SPECIES_DIPPLIN,
+        .moves = {MOVE_ENERGY_BALL, MOVE_DRAGON_PULSE, MOVE_BODY_SLAM, MOVE_RECOVER},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_POLTCHAGEIST_COUNTERFEIT] = {
+        .species = SPECIES_POLTCHAGEIST_COUNTERFEIT,
+        .moves = {MOVE_LEAF_STORM, MOVE_SHADOW_BALL, MOVE_FOUL_PLAY, MOVE_CALM_MIND},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(6, 0, 0, 252, 252, 0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [FRONTIER_MON_REGIGIGAS] = {
+        .species = SPECIES_REGIGIGAS,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_THUNDER_PUNCH, MOVE_THUNDER_WAVE},
+        .heldItem = ITEM_KINGS_ROCK,
+        .ev = TRAINER_PARTY_EVS(6, 252, 0, 252, 0, 0),
+        .nature = NATURE_JOLLY,
+        .ball = BALL_POKE
+    },
 };

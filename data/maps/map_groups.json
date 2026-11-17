@@ -1342,7 +1342,6 @@
     "Gate_EcruteakCity_Route42_hns",
     "Gate_MahoganyTown_Route43_hns",
     "Gate_Route43_hns",
-    "Gate_Route40_TrainerHill_Courtyard_hns",
     "Route39_FarmHouse_hns",
     "Route39_Barn_hns",
     "Route30_House_hns",
@@ -1451,11 +1450,7 @@
     "SafariZone_Low_Left_hns",
     "SafariZone_Low_Right_hns",
     "SafariZone_Top_Mid_hns",
-    "SafariZone_Top_Right_hns",
-    "SafariZone1_hns",
-    "SafariZone2_hns",
-    "SafariZone3_hns",
-    "SafariZoneIndoor_hns"
+    "SafariZone_Top_Right_hns"
   ],
   "gMapGroup_SinnohTownsRoutes_Sinnoh": [
     "TwinleafTown_sinnoh",

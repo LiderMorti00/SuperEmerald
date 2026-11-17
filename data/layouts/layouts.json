@@ -11221,19 +11221,6 @@
       "layout_version": "frlg"
     },
     {
-      "id": "LAYOUT_GATE_ROUTE40_TRAINER_HILL_COURTYARD_HNS",
-      "name": "Gate_Route40_TrainerHill_Courtyard_hns_Layout",
-      "width": 15,
-      "height": 12,
-      "primary_tileset": "gTileset_Johto_Building_Hns",
-      "secondary_tileset": "gTileset_Gate_Standard_Hns",
-      "border_filepath": "data/layouts/Gate_Route40_TrainerHill_Courtyard_hns/border.bin",
-      "blockdata_filepath": "data/layouts/Gate_Route40_TrainerHill_Courtyard_hns/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg"
-    },
-    {
       "id": "LAYOUT_ROUTE39_FARM_HOUSE_HNS",
       "name": "Route39_FarmHouse_hns_Layout",
       "width": 13,
@@ -12555,58 +12542,6 @@
       "secondary_tileset": "gTileset_CianwoodCity_Hns",
       "border_filepath": "data/layouts/SafariZone_Top_Right_hns/border.bin",
       "blockdata_filepath": "data/layouts/SafariZone_Top_Right_hns/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg"
-    },
-    {
-      "id": "LAYOUT_SAFARI_ZONE1_HNS",
-      "name": "SafariZone1_hns_Layout",
-      "width": 51,
-      "height": 36,
-      "primary_tileset": "gTileset_Johto_General_Hns",
-      "secondary_tileset": "gTileset_SafariZoneJohto_Hns",
-      "border_filepath": "data/layouts/SafariZone1_hns/border.bin",
-      "blockdata_filepath": "data/layouts/SafariZone1_hns/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg"
-    },
-    {
-      "id": "LAYOUT_SAFARI_ZONE2_HNS",
-      "name": "SafariZone2_hns_Layout",
-      "width": 54,
-      "height": 35,
-      "primary_tileset": "gTileset_Johto_NorthEast_Hns",
-      "secondary_tileset": "gTileset_SafariZoneJohto_Hns",
-      "border_filepath": "data/layouts/SafariZone2_hns/border.bin",
-      "blockdata_filepath": "data/layouts/SafariZone2_hns/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg"
-    },
-    {
-      "id": "LAYOUT_SAFARI_ZONE3_HNS",
-      "name": "SafariZone3_hns_Layout",
-      "width": 48,
-      "height": 36,
-      "primary_tileset": "gTileset_Johto_NorthEast_Hns",
-      "secondary_tileset": "gTileset_SafariZoneJohto_Hns",
-      "border_filepath": "data/layouts/SafariZone3_hns/border.bin",
-      "blockdata_filepath": "data/layouts/SafariZone3_hns/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg"
-    },
-    {
-      "id": "LAYOUT_SAFARI_ZONE_INDOOR_HNS",
-      "name": "SafariZoneIndoor_hns_Layout",
-      "width": 13,
-      "height": 11,
-      "primary_tileset": "gTileset_Johto_Building_Hns",
-      "secondary_tileset": "gTileset_SafariZone_Entrance_Hns",
-      "border_filepath": "data/layouts/SafariZoneIndoor_hns/border.bin",
-      "blockdata_filepath": "data/layouts/SafariZoneIndoor_hns/map.bin",
       "border_height": 2,
       "border_width": 2,
       "layout_version": "frlg"
