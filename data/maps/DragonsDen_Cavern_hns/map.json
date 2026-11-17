@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
@@ -71,8 +72,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_DRAGONSDEN2_CLAIR",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CLAIR_HNS",
       "x": 29,
       "y": 14,
@@ -492,8 +493,8 @@
       "flag": "FLAG_HIDE_DRAGONS_DEN_CAVERN_LANCE"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_DEN_CLAIR",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CLAIR_HNS",
       "x": 31,
       "y": 19,
@@ -579,7 +580,9 @@
       "y": 16,
       "elevation": 0,
       "item": "ITEM_MAX_ELIXIR",
-      "flag": "FLAG_HIDDEN_ITEM_DRAGONSDEN_CAVERN_MAX_ELIXIR"
+      "flag": "FLAG_HIDDEN_ITEM_DRAGONSDEN_CAVERN_MAX_ELIXIR",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -587,7 +590,9 @@
       "y": 16,
       "elevation": 0,
       "item": "ITEM_MAX_POTION",
-      "flag": "FLAG_HIDDEN_ITEM_DRAGONSDEN_CAVERN_MAX_POTION"
+      "flag": "FLAG_HIDDEN_ITEM_DRAGONSDEN_CAVERN_MAX_POTION",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

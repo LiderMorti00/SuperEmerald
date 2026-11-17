@@ -16,7 +16,7 @@
   "connections": [
     {
       "map": "MAP_CINNABAR_ISLAND",
-      "offset": 0,
+      "offset": -16,
       "direction": "left"
     },
     {

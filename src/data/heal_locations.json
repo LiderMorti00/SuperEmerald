@@ -257,8 +257,8 @@
     {
       "id": "HEAL_LOCATION_CINNABAR_ISLAND",
       "map": "MAP_CINNABAR_ISLAND",
-      "x": 14,
-      "y": 12,
+      "x": 22,
+      "y": 24,
       "respawn_map": "MAP_CINNABAR_ISLAND_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_CINNABAR_NURSE"
     },
@@ -434,31 +434,41 @@
       "id": "HEAL_LOCATION_MT_SILVER_HNS",
       "map": "MAP_MT_SILVER_OUTSIDE_HNS",
       "x": 25,
-      "y": 15
+      "y": 15,
+      "respawn_map": "",
+      "respawn_npc": ""
     },
     {
       "id": "HEAL_LOCATION_LAKE_OF_RAGE_HNS",
       "map": "MAP_LAKE_OF_RAGE_HNS",
       "x": 31,
-      "y": 43
+      "y": 43,
+      "respawn_map": "",
+      "respawn_npc": ""
     },
     {
       "id": "HEAL_LOCATION_SAFARI_ZONE_GATE_HNS",
       "map": "MAP_SAFARI_ZONE_GATE_HNS",
       "x": 11,
-      "y": 16
+      "y": 16,
+      "respawn_map": "",
+      "respawn_npc": ""
     },
     {
       "id": "HEAL_LOCATION_ROUTE_32_HNS",
       "map": "MAP_ROUTE32_HNS",
       "x": 25,
-      "y": 85
+      "y": 85,
+      "respawn_map": "",
+      "respawn_npc": ""
     },
     {
       "id": "HEAL_LOCATION_ROUTE26NORTH_HNS",
       "map": "MAP_ROUTE26NORTH_HNS",
       "x": 12,
-      "y": 6
+      "y": 6,
+      "respawn_map": "",
+      "respawn_npc": ""
     },
     {
       "id": "HEAL_LOCATION_SANDGEM_TOWN_SINNOH",
@@ -544,7 +554,7 @@
       "id": "HEAL_LOCATION_CANALAVE_CITY_SINNOH",
       "map": "MAP_CANALAVE_CITY_SINNOH",
       "x": 28,
-      "y": 23,
+      "y": 27,
       "respawn_map": "MAP_CANALAVE_CITY_POKEMON_CENTER_1F_SINNOH",
       "respawn_npc": "LOCALID_CANALAVE_CITY_NURSE"
     },

@@ -36,7 +36,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_F",
       "x": 21,
       "y": 21,
@@ -50,7 +49,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_M",
       "x": 49,
       "y": 17,
@@ -64,7 +62,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY",
       "x": 21,
       "y": 51,
@@ -78,7 +75,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL_FRLG",
       "x": 37,
       "y": 14,
@@ -92,7 +88,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
       "x": 48,
       "y": 40,
@@ -106,7 +101,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY",
       "x": 54,
       "y": 30,
@@ -120,7 +114,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
       "x": 45,
       "y": 26,
@@ -134,7 +127,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_M",
       "x": 40,
       "y": 21,
@@ -148,7 +140,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_M",
       "x": 30,
       "y": 35,
@@ -162,7 +153,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GBA_KID",
       "x": 56,
       "y": 42,
@@ -176,7 +166,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GBA_KID",
       "x": 57,
       "y": 41,
@@ -190,7 +179,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_JUBILIFE_DAWN",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 49,
@@ -205,7 +193,6 @@
       "flag": "FLAG_HIDE_JUBILIFE_DAWN"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_JUBILIFE_CLOWN_1",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_CLOWN",
       "x": 58,
@@ -220,7 +207,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_JUBILIFE_CLOWN_2",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_CLOWN",
       "x": 19,
@@ -235,7 +221,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_JUBILIFE_CLOWN_3",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_CLOWN",
       "x": 41,
@@ -250,7 +235,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_JUBILIFE_ROWAN",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ROWAN",
       "x": 51,
@@ -265,7 +249,6 @@
       "flag": "FLAG_HIDE_JUBILIFE_GRUNTS"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_JUBILIFE_GRUNT_1",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GALAXY_GRUNT_M",
       "x": 50,
@@ -280,7 +263,6 @@
       "flag": "FLAG_HIDE_JUBILIFE_GRUNTS"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_JUBILIFE_GRUNT_2",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GALAXY_GRUNT_M",
       "x": 50,
@@ -295,7 +277,6 @@
       "flag": "FLAG_HIDE_JUBILIFE_GRUNTS"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_JUBILIFE_LOOKER",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_LOOKER",
       "x": 47,
@@ -310,7 +291,6 @@
       "flag": "FLAG_HIDE_JUBILIFE_LOOKER"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_JUBILIFE_PRESIDENT",
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN_FRLG",
       "x": 41,
@@ -325,7 +305,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 25,
       "y": 7,

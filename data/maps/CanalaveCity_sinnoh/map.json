@@ -15,16 +15,15 @@
   "connections": [
     {
       "map": "MAP_ROUTE218_SINNOH",
-      "offset": 30,
+      "offset": 34,
       "direction": "right"
     }
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_FAT_MAN",
       "x": 28,
-      "y": 47,
+      "y": 51,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -35,10 +34,9 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_LASS",
       "x": 22,
-      "y": 17,
+      "y": 21,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -49,10 +47,9 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BREEDER_M",
       "x": 29,
-      "y": 27,
+      "y": 31,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
@@ -63,10 +60,9 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_F",
       "x": 3,
-      "y": 29,
+      "y": 33,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 1,
@@ -77,10 +73,9 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_2",
       "x": 11,
-      "y": 34,
+      "y": 38,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 1,
@@ -91,10 +86,9 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 6,
-      "y": 61,
+      "y": 65,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -105,10 +99,9 @@
       "flag": "FLAG_ITEM_CANALAVECITY_TM_U_TURN"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
       "x": 15,
-      "y": 46,
+      "y": 50,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -119,10 +112,9 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MON_PSYDUCK",
       "x": 22,
-      "y": 18,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -133,10 +125,9 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
       "x": 16,
-      "y": 47,
+      "y": 51,
       "elevation": 1,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -147,11 +138,10 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_CANALAVECITY_BARRY",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BARRY",
       "x": 12,
-      "y": 25,
+      "y": 29,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -162,10 +152,9 @@
       "flag": "FLAG_SN_HIDE_CANAL_BARRY"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 6,
-      "y": 60,
+      "y": 64,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -176,11 +165,10 @@
       "flag": "FLAG_ITEM_SN_CANALAVECITY_TM89"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_CANAL_GYM_BARRY",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BARRY",
       "x": 10,
-      "y": 32,
+      "y": 36,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -191,11 +179,10 @@
       "flag": "FLAG_SN_HIDE_CANAL_GYM_BARRY"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_CANAL_ROWAN",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ROWAN",
       "x": 7,
-      "y": 20,
+      "y": 24,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -206,11 +193,10 @@
       "flag": "FLAG_SN_HIDE_CANAL_EXPLOSION"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_CANAL_COUNTERPART",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 8,
-      "y": 19,
+      "y": 23,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -221,11 +207,10 @@
       "flag": "FLAG_SN_HIDE_CANAL_EXPLOSION"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_CANAL_EXP_BARRY",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BARRY",
       "x": 6,
-      "y": 19,
+      "y": 23,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -236,11 +221,10 @@
       "flag": "FLAG_SN_HIDE_CANAL_EXPLOSION"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_CANAL_SAILOR",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
       "x": 12,
-      "y": 25,
+      "y": 29,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -254,7 +238,7 @@
       "local_id": "LOCALID_CANALAVE_SE_DAWN",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_DAWN",
       "x": 13,
-      "y": 46,
+      "y": 50,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -263,75 +247,88 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
       "flag": "FLAG_SE_HIDE_CANALAVE_DAWN"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SS_TIDAL",
+      "x": 22,
+      "y": 13,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
       "x": 33,
-      "y": 50,
+      "y": 54,
       "elevation": 0,
       "dest_map": "MAP_ROUTE218_WEST_SINNOH",
       "dest_warp_id": "1"
     },
     {
       "x": 9,
-      "y": 31,
+      "y": 35,
       "elevation": 0,
       "dest_map": "MAP_CANALAVE_CITY_GYM_SINNOH",
       "dest_warp_id": "0"
     },
     {
       "x": 28,
-      "y": 22,
+      "y": 26,
       "elevation": 0,
       "dest_map": "MAP_CANALAVE_CITY_POKEMON_CENTER_1F_SINNOH",
       "dest_warp_id": "0"
     },
     {
       "x": 24,
-      "y": 39,
+      "y": 43,
       "elevation": 0,
       "dest_map": "MAP_CANALAVE_CITY_MART_SINNOH",
       "dest_warp_id": "0"
     },
     {
       "x": 7,
-      "y": 17,
+      "y": 21,
       "elevation": 0,
       "dest_map": "MAP_CANALAVE_CITY_LIBRARY_F1_SINNOH",
       "dest_warp_id": "0"
     },
     {
       "x": 24,
-      "y": 45,
+      "y": 49,
       "elevation": 0,
       "dest_map": "MAP_CANALAVE_CITY_HOUSE4_SINNOH",
       "dest_warp_id": "0"
     },
     {
       "x": 28,
-      "y": 13,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_CANALAVE_CITY_HARBOR_INN_SINNOH",
       "dest_warp_id": "0"
     },
     {
       "x": 9,
-      "y": 45,
+      "y": 49,
       "elevation": 0,
       "dest_map": "MAP_CANALAVE_CITY_HOUSE3_SINNOH",
       "dest_warp_id": "0"
     },
     {
       "x": 24,
-      "y": 31,
+      "y": 35,
       "elevation": 0,
       "dest_map": "MAP_CANALAVE_CITY_HOUSE2_SINNOH",
       "dest_warp_id": "0"
     },
     {
       "x": 8,
-      "y": 39,
+      "y": 43,
       "elevation": 0,
       "dest_map": "MAP_CANALAVE_CITY_HOUSE1_SINNOH",
       "dest_warp_id": "0"
@@ -342,7 +339,7 @@
     {
       "type": "sign",
       "x": 5,
-      "y": 22,
+      "y": 26,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CanalaveCity_EventScript_PtSign1"
@@ -350,7 +347,7 @@
     {
       "type": "sign",
       "x": 6,
-      "y": 30,
+      "y": 34,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CanalaveCity_EventScript_PtSign2"
@@ -358,7 +355,7 @@
     {
       "type": "sign",
       "x": 11,
-      "y": 48,
+      "y": 52,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CanalaveCity_EventScript_PtSign3"
@@ -366,7 +363,7 @@
     {
       "type": "sign",
       "x": 24,
-      "y": 52,
+      "y": 56,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CanalaveCity_EventScript_PtSign4"
@@ -374,7 +371,7 @@
     {
       "type": "sign",
       "x": 7,
-      "y": 45,
+      "y": 49,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CanalaveCity_EventScript_PtSign5"
@@ -382,7 +379,7 @@
     {
       "type": "sign",
       "x": 26,
-      "y": 14,
+      "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CanalaveCity_EventScript_PtSign6"
@@ -390,7 +387,7 @@
     {
       "type": "hidden_item",
       "x": 6,
-      "y": 49,
+      "y": 53,
       "elevation": 3,
       "item": "ITEM_BIG_PEARL",
       "flag": "FLAG_SN_HIDDEN_ITEM_LILYCOVE_CITY_HEART_SCALE"
