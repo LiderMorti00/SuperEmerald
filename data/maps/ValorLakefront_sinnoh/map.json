@@ -179,15 +179,15 @@
       "x": 41,
       "y": 27,
       "elevation": 0,
-      "dest_map": "MAP_DYNAMIC",
-      "dest_warp_id": "WARP_ID_DYNAMIC"
+      "dest_map": "MAP_LAKE_VALOR_SINNOH",
+      "dest_warp_id": "0"
     },
     {
       "x": 41,
       "y": 28,
       "elevation": 0,
-      "dest_map": "MAP_DYNAMIC",
-      "dest_warp_id": "WARP_ID_DYNAMIC"
+      "dest_map": "MAP_LAKE_VALOR_SINNOH",
+      "dest_warp_id": "0"
     },
     {
       "x": 28,

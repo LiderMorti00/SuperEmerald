@@ -1,4 +1,5 @@
 BlackthornCity_Gym_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, BlackthornGym_OnLoad
 	.byte 0
 
 
@@ -171,3 +172,172 @@ BlackthornGym_Text_GymStatueCertified::
 	.string "BLACKTHORN CITY POKéMON GYM\p"
 	.string "CLAIR'S CERTIFIED TRAINERS:\n"
 	.string "{PLAYER}$"
+
+@ Super Emerald: gym puzzle from Heart & Soul
+BlackthornGym_OnLoad::
+	call_if_eq VAR_BLACKTHORN_GYM_STATE, 1, BlackthornGym_MapScript_Var1
+	call_if_eq VAR_BLACKTHORN_GYM_STATE, 2, BlackthornGym_MapScript_Var2
+	call_if_eq VAR_BLACKTHORN_GYM_STATE, 3, BlackthornGym_MapScript_Var3
+	call_if_eq VAR_BLACKTHORN_GYM_STATE, 4, BlackthornGym_MapScript_Var4
+	end
+
+BlackthornGym_MapScript_Var1::
+	call BlackthornGym_MapScript_BuildBridge1
+	end
+
+BlackthornGym_MapScript_Var2::
+	call BlackthornGym_MapScript_BuildBridge1
+	call BlackthornGym_MapScript_BuildBridge2
+	end
+
+BlackthornGym_MapScript_Var3::
+	call BlackthornGym_MapScript_BuildBridge1
+	call BlackthornGym_MapScript_BuildBridge2
+	call BlackthornGym_MapScript_BuildBridge3
+	end
+
+BlackthornGym_MapScript_Var4::
+	call BlackthornGym_MapScript_BuildBridge1
+	call BlackthornGym_MapScript_BuildBridge2
+	call BlackthornGym_MapScript_BuildBridge3
+	call BlackthornGym_MapScript_BuildBridge4
+	end
+
+BlackthornGym_TriggerBridge1::
+	call BlackthornGym_MapScript_BuildBridge1
+	playse SE_BANG
+	special DrawWholeMapView
+	setvar VAR_BLACKTHORN_GYM_STATE, 1
+	end
+
+BlackthornGym_MapScript_BuildBridge1::
+	setmetatile 19, 47, 0x35A, FALSE
+	setmetatile 19, 48, 0x35A, FALSE
+	setmetatile 19, 49, 0x35A, FALSE
+	setmetatile 19, 50, 0x35A, FALSE
+	setmetatile 19, 51, 0x35A, FALSE
+	setmetatile 19, 52, 0x35A, FALSE
+	setmetatile 19, 53, 0x35A, FALSE
+	setmetatile 19, 54, 0x35A, FALSE
+	setmetatile 20, 47, 0x35A, FALSE
+	setmetatile 20, 48, 0x35A, FALSE
+	setmetatile 20, 49, 0x35A, FALSE
+	setmetatile 20, 50, 0x35A, FALSE
+	setmetatile 20, 51, 0x35A, FALSE
+	setmetatile 20, 52, 0x35A, FALSE
+	setmetatile 20, 53, 0x35A, FALSE
+	setmetatile 20, 54, 0x35A, FALSE
+	setmetatile 21, 47, 0x35A, FALSE
+	setmetatile 21, 48, 0x35A, FALSE
+	setmetatile 21, 49, 0x35A, FALSE
+	setmetatile 21, 50, 0x35A, FALSE
+	setmetatile 21, 51, 0x35A, FALSE
+	setmetatile 21, 52, 0x35A, FALSE
+	setmetatile 21, 53, 0x35A, FALSE
+	setmetatile 21, 54, 0x35A, FALSE
+	return
+
+BlackthornGym_TriggerBridge2::
+	call BlackthornGym_MapScript_BuildBridge2
+	playse SE_BANG
+	special DrawWholeMapView
+	setvar VAR_BLACKTHORN_GYM_STATE, 2
+	end
+
+BlackthornGym_MapScript_BuildBridge2::
+	setmetatile 17, 35, 0x35A, FALSE
+	setmetatile 17, 36, 0x35A, FALSE
+	setmetatile 17, 37, 0x35A, FALSE
+	setmetatile 17, 38, 0x35A, FALSE
+	setmetatile 17, 39, 0x35A, FALSE
+	setmetatile 17, 40, 0x35A, FALSE
+	setmetatile 18, 35, 0x35A, FALSE
+	setmetatile 18, 36, 0x35A, FALSE
+	setmetatile 18, 37, 0x35A, FALSE
+	setmetatile 18, 38, 0x35A, FALSE
+	setmetatile 18, 39, 0x35A, FALSE
+	setmetatile 18, 40, 0x35A, FALSE
+	setmetatile 19, 35, 0x35A, FALSE
+	setmetatile 19, 36, 0x35A, FALSE
+	setmetatile 19, 37, 0x35A, FALSE
+	setmetatile 19, 38, 0x35A, FALSE
+	setmetatile 19, 39, 0x35A, FALSE
+	setmetatile 19, 40, 0x35A, FALSE
+	setmetatile 20, 32, 0x359, FALSE
+	setmetatile 21, 32, 0x359, FALSE
+	setmetatile 22, 32, 0x359, FALSE
+	setmetatile 20, 35, 0x361, TRUE
+	setmetatile 21, 35, 0x361, TRUE
+	setmetatile 22, 35, 0x361, TRUE
+	setmetatile 20, 33, 0x35A, FALSE
+	setmetatile 20, 34, 0x35A, FALSE
+	setmetatile 21, 33, 0x35A, FALSE
+	setmetatile 21, 34, 0x35A, FALSE
+	setmetatile 22, 33, 0x35A, FALSE
+	setmetatile 22, 34, 0x35A, FALSE
+	return
+
+BlackthornGym_TriggerBridge3::
+	call BlackthornGym_MapScript_BuildBridge3
+	playse SE_BANG
+	special DrawWholeMapView
+	setvar VAR_BLACKTHORN_GYM_STATE, 3
+	end
+
+BlackthornGym_MapScript_BuildBridge3::
+	setmetatile 17, 26, 0x359, FALSE
+	setmetatile 18, 26, 0x359, FALSE
+	setmetatile 19, 26, 0x359, FALSE
+	setmetatile 20, 26, 0x359, FALSE
+	setmetatile 21, 26, 0x359, FALSE
+	setmetatile 22, 26, 0x359, FALSE
+	setmetatile 23, 26, 0x359, FALSE
+
+	setmetatile 17, 29, 0x361, TRUE
+	setmetatile 18, 29, 0x361, TRUE
+	setmetatile 19, 29, 0x361, TRUE
+	setmetatile 20, 29, 0x361, TRUE
+	setmetatile 21, 29, 0x361, TRUE
+	setmetatile 22, 29, 0x361, TRUE
+	setmetatile 23, 29, 0x361, TRUE
+
+	setmetatile 17, 27, 0x35A, FALSE
+	setmetatile 17, 28, 0x35A, FALSE
+	setmetatile 18, 27, 0x35A, FALSE
+	setmetatile 18, 28, 0x35A, FALSE
+	setmetatile 19, 27, 0x35A, FALSE
+	setmetatile 19, 28, 0x35A, FALSE
+	setmetatile 20, 27, 0x35A, FALSE
+	setmetatile 20, 28, 0x35A, FALSE
+	setmetatile 21, 27, 0x35A, FALSE
+	setmetatile 21, 28, 0x35A, FALSE
+	setmetatile 22, 27, 0x35A, FALSE
+	setmetatile 22, 28, 0x35A, FALSE
+	setmetatile 23, 27, 0x35A, FALSE
+	setmetatile 23, 28, 0x35A, FALSE
+	return
+
+BlackthornGym_TriggerBridge4::
+	call BlackthornGym_MapScript_BuildBridge4
+	playse SE_BANG
+	special DrawWholeMapView
+	setvar VAR_BLACKTHORN_GYM_STATE, 4
+	end
+
+BlackthornGym_MapScript_BuildBridge4::
+	setmetatile 19, 11, 0x35A, FALSE
+	setmetatile 19, 12, 0x35A, FALSE
+	setmetatile 19, 13, 0x35A, FALSE
+	setmetatile 19, 14, 0x35A, FALSE
+	setmetatile 19, 15, 0x35A, FALSE
+	setmetatile 20, 11, 0x35A, FALSE
+	setmetatile 20, 12, 0x35A, FALSE
+	setmetatile 20, 13, 0x35A, FALSE
+	setmetatile 20, 14, 0x35A, FALSE
+	setmetatile 20, 15, 0x35A, FALSE
+	setmetatile 21, 11, 0x35A, FALSE
+	setmetatile 21, 12, 0x35A, FALSE
+	setmetatile 21, 13, 0x35A, FALSE
+	setmetatile 21, 14, 0x35A, FALSE
+	setmetatile 21, 15, 0x35A, FALSE
+	return

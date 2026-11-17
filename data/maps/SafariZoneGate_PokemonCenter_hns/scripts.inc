@@ -1,5 +1,10 @@
 SafariZoneGate_PokemonCenter_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SafariZoneGate_PokemonCenter_hns_OnTransition
 	.byte 0
+
+SafariZoneGate_PokemonCenter_hns_OnTransition:
+	setrespawn HEAL_LOCATION_SAFARI_ZONE_GATE_HNS
+	end
 
 
 SafariZoneGate_PokemonCenter_EventScript_NPC1::

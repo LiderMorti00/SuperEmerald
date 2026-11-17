@@ -1,5 +1,11 @@
 BurnedTower_1F_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, BurnedTower_1F_OnLoad
 	.byte 0
+
+@ Super Emerald: post-story Burned Tower, the floor has fallen in (Heart & Soul)
+BurnedTower_1F_OnLoad::
+	setmetatile 16, 12, 0x37E, FALSE
+	end
 
 
 BurnedTower_1F_EventScript_Eusine::

@@ -1,5 +1,10 @@
 MtSilver_PokemonCenter_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, MtSilver_PokemonCenter_hns_OnTransition
 	.byte 0
+
+MtSilver_PokemonCenter_hns_OnTransition:
+	setrespawn HEAL_LOCATION_MT_SILVER_HNS
+	end
 
 
 MtSilver_PokemonCenter_Text_Meara1::

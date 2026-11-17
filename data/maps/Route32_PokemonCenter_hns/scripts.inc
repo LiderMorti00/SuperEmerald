@@ -1,5 +1,10 @@
 Route32_PokemonCenter_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route32_PokemonCenter_hns_OnTransition
 	.byte 0
+
+Route32_PokemonCenter_hns_OnTransition:
+	setrespawn HEAL_LOCATION_ROUTE_32_HNS
+	end
 
 
 Route32_PokemonCenter_EventScript_FishingGuru::

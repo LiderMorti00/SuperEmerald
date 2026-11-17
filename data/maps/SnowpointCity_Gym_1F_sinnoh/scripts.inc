@@ -1,5 +1,84 @@
 SnowpointCity_Gym_1F_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SnowpointCity_Gym_1F_OnFrame
+	map_script MAP_SCRIPT_ON_RESUME, SnowpointCity_Gym_1F_OnResume
+	map_script MAP_SCRIPT_ON_LOAD, SnowpointCity_Gym_1F_OnLoad
+	map_script MAP_SCRIPT_ON_TRANSITION, SnowpointCity_Gym_1F_OnTransition
 	.byte 0
+
+@ Super Emerald: ice puzzle from the Sinnoh repo
+SnowpointCity_Gym_1F_OnTransition::
+	setvar VAR_ICE_STEP_COUNT, 1
+	end
+
+SnowpointCity_Gym_1F_OnResume::
+	setstepcallback STEP_CB_SOOTOPOLIS_ICE
+	end
+
+SnowpointCity_Gym_1F_OnLoad::
+	call SnowpointCity_Gym_1F_EventScript_CheckSetStairMetatiles
+	special SetSootopolisGymCrackedIceMetatiles
+	end
+
+SnowpointCity_Gym_1F_EventScript_CheckSetStairMetatiles::
+	goto_if_lt VAR_ICE_STEP_COUNT, 8, SnowpointCity_Gym_1F_EventScript_StopCheckingStairs  @ All stairs ice
+	goto_if_lt VAR_ICE_STEP_COUNT, 28, SnowpointCity_Gym_1F_EventScript_OpenFirstStairs
+	goto_if_lt VAR_ICE_STEP_COUNT, 67, SnowpointCity_Gym_1F_EventScript_OpenFirstAndSecondStairs
+	setmetatile 8, 4, METATILE_SootopolisGym_Stairs, FALSE
+	setmetatile 8, 5, METATILE_SootopolisGym_Stairs, FALSE
+SnowpointCity_Gym_1F_EventScript_OpenFirstAndSecondStairs::
+	setmetatile 8, 10, METATILE_SootopolisGym_Stairs, FALSE
+	setmetatile 8, 11, METATILE_SootopolisGym_Stairs, FALSE
+SnowpointCity_Gym_1F_EventScript_OpenFirstStairs::
+	setmetatile 8, 15, METATILE_SootopolisGym_Stairs, FALSE
+	setmetatile 8, 16, METATILE_SootopolisGym_Stairs, FALSE
+SnowpointCity_Gym_1F_EventScript_StopCheckingStairs::
+	return
+
+SnowpointCity_Gym_1F_OnFrame::
+	map_script_2 VAR_ICE_STEP_COUNT, 8, SnowpointCity_Gym_1F_EventScript_UnlockFirstStairs
+	map_script_2 VAR_ICE_STEP_COUNT, 28, SnowpointCity_Gym_1F_EventScript_UnlockSecondStairs
+	map_script_2 VAR_ICE_STEP_COUNT, 67, SnowpointCity_Gym_1F_EventScript_UnlockThirdStairs
+	map_script_2 VAR_ICE_STEP_COUNT, 0, SnowpointCity_Gym_1F_EventScript_FallThroughIce
+	.2byte 0
+
+SnowpointCity_Gym_1F_EventScript_UnlockFirstStairs::
+	addvar VAR_ICE_STEP_COUNT, 1
+	delay 40
+	playse SE_ICE_STAIRS
+	call SnowpointCity_Gym_1F_EventScript_CheckSetStairMetatiles
+	special DrawWholeMapView
+	end
+
+SnowpointCity_Gym_1F_EventScript_UnlockSecondStairs::
+	addvar VAR_ICE_STEP_COUNT, 1
+	delay 40
+	playse SE_ICE_STAIRS
+	call SnowpointCity_Gym_1F_EventScript_CheckSetStairMetatiles
+	special DrawWholeMapView
+	end
+
+SnowpointCity_Gym_1F_EventScript_UnlockThirdStairs::
+	addvar VAR_ICE_STEP_COUNT, 1
+	delay 40
+	playse SE_ICE_STAIRS
+	call SnowpointCity_Gym_1F_EventScript_CheckSetStairMetatiles
+	special DrawWholeMapView
+	end
+
+SnowpointCity_Gym_1F_EventScript_FallThroughIce::
+	lockall
+	delay 20
+	applymovement LOCALID_PLAYER, SnowpointCity_Gym_1F_Movement_FallThroughIce
+	waitmovement 0
+	playse SE_FALL
+	delay 60
+	warphole MAP_SNOWPOINT_CITY_GYM_B1F_SINNOH
+	waitstate
+	end
+
+SnowpointCity_Gym_1F_Movement_FallThroughIce::
+	set_invisible
+	step_end
 
 
 SnowpointCity_Gym_1F_EventScript_Leader::

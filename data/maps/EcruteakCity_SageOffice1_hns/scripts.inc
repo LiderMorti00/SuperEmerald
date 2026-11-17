@@ -1,5 +1,13 @@
 EcruteakCity_SageOffice1_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, EcruteakCity_SageOffice1_OnTransition
 	.byte 0
+
+@ Super Emerald: the sage lets you through to the Tin Tower once you have the Fog Badge
+EcruteakCity_SageOffice1_OnTransition::
+	goto_if_unset FLAG_JOHTO_BADGE4_GET, EcruteakCity_SageOffice1_OnTransition_End
+	setobjectxyperm LOCALID_SAGEOFFICE_SAGE, 15, 2
+EcruteakCity_SageOffice1_OnTransition_End::
+	end
 
 
 EcruteakTinTowerEntrance_Text_WanderingSage::

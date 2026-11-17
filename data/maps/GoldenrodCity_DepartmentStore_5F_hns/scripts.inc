@@ -1,4 +1,5 @@
 GoldenrodCity_DepartmentStore_5F_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SE_GoldenrodElevator_OnFrame
 	.byte 0
 
 

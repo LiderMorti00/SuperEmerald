@@ -1,5 +1,12 @@
 Mahoganytown_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, Mahoganytown_OnLoad
 	.byte 0
+
+@ Super Emerald: post-story Mahogany (Heart & Soul FixTree)
+Mahoganytown_OnLoad::
+	setmetatile 18, 8, 0x378, FALSE
+	setmetatile 19, 8, 0x379, FALSE
+	end
 
 
 MahoganyTown_Text_Gramps::

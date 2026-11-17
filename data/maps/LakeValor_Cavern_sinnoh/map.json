@@ -48,8 +48,8 @@
       "x": 15,
       "y": 30,
       "elevation": 0,
-      "dest_map": "MAP_DYNAMIC",
-      "dest_warp_id": "WARP_ID_DYNAMIC"
+      "dest_map": "MAP_LAKE_VALOR_SINNOH",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [],

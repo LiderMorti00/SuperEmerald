@@ -29,6 +29,10 @@ SE_EventScript_SinnohLegendaries::
 	call_if_set FLAG_SN_DONE_DIALGA, SE_EventScript_SinnohHide_DIALGA
 	clearflag FLAG_SN_HIDE_PALKIA
 	call_if_set FLAG_SN_DONE_PALKIA, SE_EventScript_SinnohHide_PALKIA
+	clearflag FLAG_SN_HIDE_DRIFLOON
+	call_if_set FLAG_SN_DONE_DRIFLOON, SE_EventScript_SinnohHide_DRIFLOON
+	setflag FLAG_SN_HIDE_GRISEOUS
+	call_if_set FLAG_SN_DONE_GIRATINA, SE_EventScript_SinnohShow_GRISEOUS
 	setflag FLAG_SN_HIDE_ARCEUS
 	goto_if_set FLAG_SN_DONE_ARCEUS, Common_EventScript_NopReturn
 	call_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, SE_EventScript_SinnohShow_ARCEUS
@@ -36,6 +40,11 @@ SE_EventScript_SinnohLegendaries::
 
 SE_EventScript_SinnohShow_ARCEUS::
 	clearflag FLAG_SN_HIDE_ARCEUS
+	return
+
+SE_EventScript_SinnohShow_GRISEOUS::
+	goto_if_set FLAG_SN_GOT_GRISEOUS_ORB, Common_EventScript_NopReturn
+	clearflag FLAG_SN_HIDE_GRISEOUS
 	return
 
 SE_EventScript_SinnohHide_REGICE::
@@ -92,6 +101,10 @@ SE_EventScript_SinnohHide_DIALGA::
 
 SE_EventScript_SinnohHide_PALKIA::
 	setflag FLAG_SN_HIDE_PALKIA
+	return
+
+SE_EventScript_SinnohHide_DRIFLOON::
+	setflag FLAG_SN_HIDE_DRIFLOON
 	return
 
 SE_EventScript_StaticMesprit::

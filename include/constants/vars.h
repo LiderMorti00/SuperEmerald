@@ -397,6 +397,8 @@
 #define VAR_SE_JOHTO_STARTER          0x5002 // 1 Cyndaquil, 2 Totodile, 3 Chikorita (0 = unknown)
 #define VAR_SE_ORO_STATE              0x5003 // Oro (Gold) rival battles won: 0-3
 #define VAR_BUG_CONTEST_STATE         0x5004 // Bug-Catching Contest (Heart & Soul scripts)
+#define VAR_BLACKTHORN_GYM_STATE      0x5005 // Blackthorn Gym bridges built: 0-4 (Heart & Soul scripts)
+#define VAR_SE_ELEVATOR               0x5006 // 1 = just rode the Goldenrod Dept. Store elevator
 #define VAR_SE_JOHTO_ARRIVAL          0x5001 // 1 = just arrived at Olivine by ship, 2 = met Jasmine
 
 #define VAR_SE_SINNOH_STATE_VERSION   0x5040 // Super Emerald: bump SE_SINNOH_STATE_VERSION when the Sinnoh state changes

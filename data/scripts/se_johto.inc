@@ -1324,3 +1324,148 @@ Common_Movement_WalkUp1::
 Common_Movement_WalkLeft1::
 	walk_left
 	step_end
+
+@ ---------------------------------------------------------------------------
+@ Goldenrod Dept. Store elevator (Heart & Soul). The player walks in from the
+@ tile below the elevator door; the door is two tiles north of that tile.
+SE_GoldenrodElevator_OnFrame::
+	map_script_2 VAR_SE_ELEVATOR, 1, SE_GoldenrodElevator_EventScript_Exit
+	.2byte 0
+
+SE_GoldenrodElevator_EventScript_Exit::
+	lockall
+	getplayerxy VAR_0x8004, VAR_0x8005
+	addvar VAR_0x8005, 1
+	opendoor VAR_0x8004, VAR_0x8005
+	waitdooranim
+	applymovement OBJ_EVENT_ID_PLAYER, SE_GoldenrodElevator_Movement_Out
+	waitmovement 0
+	closedoor VAR_0x8004, VAR_0x8005
+	waitdooranim
+	setvar VAR_SE_ELEVATOR, 0
+	releaseall
+	end
+
+SE_GoldenrodElevator_EventScript_Enter::
+	lockall
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	delay 8
+	getplayerxy VAR_0x8004, VAR_0x8005
+	subvar VAR_0x8005, 1
+	opendoor VAR_0x8004, VAR_0x8005
+	waitdooranim
+	applymovement OBJ_EVENT_ID_PLAYER, SE_GoldenrodElevator_Movement_In
+	waitmovement 0
+	closedoor VAR_0x8004, VAR_0x8005
+	waitdooranim
+	message SE_GoldenrodElevator_Text_WhichFloor
+	waitmessage
+	dynmultipush SE_GoldenrodElevator_Text_6F, 0
+	dynmultipush SE_GoldenrodElevator_Text_5F, 1
+	dynmultipush SE_GoldenrodElevator_Text_4F, 2
+	dynmultipush SE_GoldenrodElevator_Text_3F, 3
+	dynmultipush SE_GoldenrodElevator_Text_2F, 4
+	dynmultipush SE_GoldenrodElevator_Text_1F, 5
+	dynmultipush SE_GoldenrodElevator_Text_B1F, 6
+	dynmultichoice 0, 0, FALSE, 7, 0, DYN_MULTICHOICE_CB_NONE
+	closemessage
+	switch VAR_RESULT
+	case 0, SE_GoldenrodElevator_EventScript_6F
+	case 1, SE_GoldenrodElevator_EventScript_5F
+	case 2, SE_GoldenrodElevator_EventScript_4F
+	case 3, SE_GoldenrodElevator_EventScript_3F
+	case 4, SE_GoldenrodElevator_EventScript_2F
+	case 5, SE_GoldenrodElevator_EventScript_1F
+	case 6, SE_GoldenrodElevator_EventScript_B1F
+	opendoor VAR_0x8004, VAR_0x8005
+	waitdooranim
+	applymovement OBJ_EVENT_ID_PLAYER, SE_GoldenrodElevator_Movement_Out
+	waitmovement 0
+	closedoor VAR_0x8004, VAR_0x8005
+	waitdooranim
+	releaseall
+	end
+
+SE_GoldenrodElevator_EventScript_Ride::
+	setvar VAR_SE_ELEVATOR, 1
+	playse SE_ELEVATOR
+	waitse
+	fadescreen FADE_TO_BLACK
+	return
+
+SE_GoldenrodElevator_EventScript_6F::
+	call SE_GoldenrodElevator_EventScript_Ride
+	warp MAP_GOLDENROD_CITY_DEPARTMENT_STORE_6F_HNS, 9, 3
+	waitstate
+	end
+
+SE_GoldenrodElevator_EventScript_5F::
+	call SE_GoldenrodElevator_EventScript_Ride
+	warp MAP_GOLDENROD_CITY_DEPARTMENT_STORE_5F_HNS, 9, 3
+	waitstate
+	end
+
+SE_GoldenrodElevator_EventScript_4F::
+	call SE_GoldenrodElevator_EventScript_Ride
+	warp MAP_GOLDENROD_CITY_DEPARTMENT_STORE_4F_HNS, 9, 3
+	waitstate
+	end
+
+SE_GoldenrodElevator_EventScript_3F::
+	call SE_GoldenrodElevator_EventScript_Ride
+	warp MAP_GOLDENROD_CITY_DEPARTMENT_STORE_3F_HNS, 9, 3
+	waitstate
+	end
+
+SE_GoldenrodElevator_EventScript_2F::
+	call SE_GoldenrodElevator_EventScript_Ride
+	warp MAP_GOLDENROD_CITY_DEPARTMENT_STORE_2F_HNS, 9, 3
+	waitstate
+	end
+
+SE_GoldenrodElevator_EventScript_1F::
+	call SE_GoldenrodElevator_EventScript_Ride
+	warp MAP_GOLDENROD_CITY_DEPARTMENT_STORE_1F_HNS, 9, 3
+	waitstate
+	end
+
+SE_GoldenrodElevator_EventScript_B1F::
+	call SE_GoldenrodElevator_EventScript_Ride
+	warp MAP_GOLDENROD_CITY_DEPARTMENT_STORE_BASEMENT_HNS, 10, 5
+	waitstate
+	end
+
+SE_GoldenrodElevator_Movement_In:
+	walk_up
+	walk_up
+	step_end
+
+SE_GoldenrodElevator_Movement_Out:
+	walk_down
+	walk_down
+	step_end
+
+SE_GoldenrodElevator_Text_WhichFloor:
+	.string "Which floor?$"
+SE_GoldenrodElevator_Text_6F:
+	.string "6F$"
+SE_GoldenrodElevator_Text_5F:
+	.string "5F$"
+SE_GoldenrodElevator_Text_4F:
+	.string "4F$"
+SE_GoldenrodElevator_Text_3F:
+	.string "3F$"
+SE_GoldenrodElevator_Text_2F:
+	.string "2F$"
+SE_GoldenrodElevator_Text_1F:
+	.string "1F$"
+SE_GoldenrodElevator_Text_B1F:
+	.string "B1F$"
+
+SE_Movement_JumpUp1:
+	jump_up
+	step_end
+
+SE_Movement_JumpDown1:
+	jump_down
+	step_end

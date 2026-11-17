@@ -1,5 +1,34 @@
 GoldenrodCity_DepartmentStoreBasement_hns_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SE_GoldenrodElevator_OnFrame
+	map_script MAP_SCRIPT_ON_LOAD, GoldenrodCity_DepartmentStoreBasement_OnLoad
 	.byte 0
+
+@ Super Emerald: Machoke positions from Heart & Soul
+GoldenrodCity_DepartmentStoreBasement_OnLoad::
+	call_if_set FLAG_GOLDENROD_MACHOKE_1, GoldenrodCity_DepartmentStoreBasement_TryMachoke1
+	call_if_set FLAG_GOLDENROD_MACHOKE_2, GoldenrodCity_DepartmentStoreBasement_TryMachoke2
+	call_if_set FLAG_GOLDENROD_MACHOKE_3, GoldenrodCity_DepartmentStoreBasement_TryMachoke3
+
+	end
+
+GoldenrodCity_DepartmentStoreBasement_TryMachoke1::
+	setobjectxyperm LOCALID_GOLDENROD_MACHOKE1, 1, 12
+	setobjectxyperm LOCALID_GOLDENROD_BOULDER1, 1, 11
+	setobjectmovementtype LOCALID_GOLDENROD_MACHOKE1, MOVEMENT_TYPE_FACE_RIGHT
+	return
+
+GoldenrodCity_DepartmentStoreBasement_TryMachoke2::
+	setobjectxyperm LOCALID_GOLDENROD_MACHOKE2, 10, 11
+	setobjectxyperm LOCALID_GOLDENROD_BOULDER2, 9, 11	
+	setobjectmovementtype LOCALID_GOLDENROD_MACHOKE2, MOVEMENT_TYPE_FACE_DOWN
+	return
+
+GoldenrodCity_DepartmentStoreBasement_TryMachoke3::
+	setobjectxyperm LOCALID_GOLDENROD_MACHOKE3, 17, 16
+	setobjectxyperm LOCALID_GOLDENROD_BOULDER3, 18, 16
+	setobjectmovementtype LOCALID_GOLDENROD_MACHOKE3, MOVEMENT_TYPE_FACE_LEFT
+	return
+
 
 
 GoldenrodCity_DepartmentStoreBasement_EventScript_Item_AmuletCoin::
