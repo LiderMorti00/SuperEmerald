@@ -23,12 +23,26 @@ HearthomeCity_PoffinHouse_Text_PtNpc1_0::
 	.string "scrumptious and whirl it!$"
 
 HearthomeCity_PoffinHouse_EventScript_SNCase::
+	checkitem ITEM_POKEBLOCK_CASE
+	goto_if_eq VAR_RESULT, TRUE, HearthomeCity_PoffinHouse_EventScript_SNHasCase
 	msgbox HearthomeCity_PoffinHouse_Text_SNCase, MSGBOX_DEFAULT
 	giveitem ITEM_POKEBLOCK_CASE
 	setflag FLAG_SN_RECEIVED_POKEBLOCK_CASE
 	msgbox HearthomeCity_PoffinHouse_Text_SNCase2, MSGBOX_DEFAULT
 	release
 	end
+
+HearthomeCity_PoffinHouse_EventScript_SNHasCase::
+	setflag FLAG_SN_RECEIVED_POKEBLOCK_CASE
+	msgbox HearthomeCity_PoffinHouse_Text_SNHasCase, MSGBOX_DEFAULT
+	release
+	end
+
+HearthomeCity_PoffinHouse_Text_SNHasCase::
+	.string "Oh, you already have a POKéBLOCK CASE\n"
+	.string "from HOENN! Then you're all set.\p"
+	.string "Feed POKéBLOCKS to your POKéMON and\n"
+	.string "they'll shine in CONTESTS!$"
 
 HearthomeCity_PoffinHouse_Text_SNCase2::
 	.string "Put BERRIES in a BERRY BLENDER to\n"
@@ -76,8 +90,8 @@ HearthomeCity_PoffinHouse_EventScript_PtNpc4::
 	end
 
 HearthomeCity_PoffinHouse_Text_PtNpc4_0::
-	.string "At the Wi-Fi Club, I can cook up\n"
-	.string "POKéBLOCKS with my friends!$"
+	.string "At the BERRY BLENDERS in HOENN, I can\n"
+	.string "cook up POKéBLOCKS with my friends!$"
 
 Sinnoh_EventScript_GenericMart::
 	lock

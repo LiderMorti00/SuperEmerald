@@ -1,4 +1,5 @@
 #include "global.h"
+#include "regions.h"
 #include "gpu_regs.h"
 #include "palette.h"
 #include "script.h"
@@ -532,6 +533,10 @@ static void AdjustSecretPowerSpritePixelOffsets(void)
 bool32 SetUpFieldMove_SecretPower(void)
 {
     u8 mb;
+
+    // Super Emerald: SECRET BASES only exist in Hoenn
+    if (GetCurrentRegion() != REGION_HOENN)
+        return FALSE;
 
     CheckPlayerHasSecretBase();
 

@@ -76,11 +76,10 @@ SunyshoreCity_House3_EventScript_PtNpc6::
 	end
 
 SunyshoreCity_House3_Text_PtNpc6_0::
-	.string "Get Flags from your friends to make\n"
-	.string "your SECRET BASE better.\p"
-	.string "Try to hide your SECRET BASE, and get\n"
-	.string "good at discovering your\p"
-	.string "friends’ bases.$"
+	.string "My cousin in HOENN has a SECRET BASE\n"
+	.string "hidden in a tree!\p"
+	.string "There's no such thing here in SINNOH.\n"
+	.string "I'm so jealous!$"
 
 SunyshoreCity_House3_EventScript_PtNpc7::
 	lock

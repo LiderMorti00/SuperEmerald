@@ -18,8 +18,8 @@ VeilstoneCity_DepartmentStore_3F_EventScript_PtNpc2::
 	end
 
 VeilstoneCity_DepartmentStore_3F_Text_PtNpc2_0::
-	.string "A friend traded me a MACHOKE using DS\n"
-	.string "Wireless Communications.\p"
+	.string "A friend traded me a MACHOKE using\n"
+	.string "a link cable.\p"
 	.string "But instead of a MACHOKE, I got a\n"
 	.string "different POKéMON!$"
 

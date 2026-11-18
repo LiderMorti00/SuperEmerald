@@ -46,12 +46,10 @@ CanalaveCity_PokemonCenter_1F_EventScript_PtNpc3::
 
 CanalaveCity_PokemonCenter_1F_Text_PtNpc3_0::
 	.string "I heard this cool rumor.\p"
-	.string "If you can get on Nintendo Wi-Fi\n"
-	.string "Connection, you can go to the Wi-Fi\p"
-	.string "Plaza.\p"
-	.string "The access to the Wi-Fi Plaza is\n"
-	.string "through the basement of any POKéMON\l"
-	.string "Center.$"
+	.string "A ship from this port can take you\n"
+	.string "all the way to KANTO, JOHTO and\l"
+	.string "even HOENN!\p"
+	.string "I wonder what POKéMON live there…$"
 
 CanalaveCity_PokemonCenter_1F_EventScript_PtNpc4::
 	lock

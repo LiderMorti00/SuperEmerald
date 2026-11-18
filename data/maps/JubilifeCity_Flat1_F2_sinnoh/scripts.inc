@@ -26,7 +26,7 @@ JubilifeCity_Flat1_F2_EventScript_PtNpc3::
 
 JubilifeCity_Flat1_F2_Text_PtNpc3::
 	.string "You can trade POKéMON with people\n"
-	.string "around the world on Nintendo WFC...\p"
+	.string "from other regions these days...\p"
 	.string "Just hearing that gets my heart\n"
 	.string "racing. Such exciting times!$"
 
@@ -35,6 +35,6 @@ JubilifeCity_Flat1_F2_EventScript_PtNpc4::
 	end
 
 JubilifeCity_Flat1_F2_Text_PtNpc4::
-	.string "When you connect with people on\n"
-	.string "Nintendo WFC, it's hard to tell if the\l"
+	.string "With ships and trains linking every\n"
+	.string "region, it's hard to tell if the\l"
 	.string "world's big or small.$"

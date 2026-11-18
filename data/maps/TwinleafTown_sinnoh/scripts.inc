@@ -19,7 +19,7 @@ TwinleafTown_EventScript_PtNpc2::
 TwinleafTown_Text_PtNpc2::
 	.string "Technology just blows me away!\p"
 	.string "I mean, now you can play with people\n"
-	.string "around the world...wirelessly!$"
+	.string "from KANTO, JOHTO and HOENN!$"
 
 TwinleafTown_EventScript_PtNpc3::
 	msgbox TwinleafTown_Text_PtNpc3, MSGBOX_NPC

@@ -3088,15 +3088,31 @@ void TrySpawnLightSprites(s16 camX, s16 camY)
     }
 }
 
-// Super Emerald: side-quest characters that move from region to region
-static const struct { u16 flag; u16 var; u16 stage; } sSEQuestObjects[] =
+// Super Emerald: side-quest characters, shown only while their quest var is between
+// minStage and maxStage (and, when reqFlag is set, only once that flag is set)
+static const struct { u16 flag; u16 var; u8 minStage; u8 maxStage; u16 reqFlag; } sSEQuestObjects[] =
 {
-    { FLAG_SE_QUEST_WALLY_JOHTO,   VAR_SE_WALLY_QUEST,  0 },
-    { FLAG_SE_QUEST_WALLY_KANTO,   VAR_SE_WALLY_QUEST,  1 },
-    { FLAG_SE_QUEST_WALLY_SINNOH,  VAR_SE_WALLY_QUEST,  2 },
-    { FLAG_SE_QUEST_STEVEN_JOHTO,  VAR_SE_STEVEN_QUEST, 0 },
-    { FLAG_SE_QUEST_STEVEN_KANTO,  VAR_SE_STEVEN_QUEST, 1 },
-    { FLAG_SE_QUEST_STEVEN_SINNOH, VAR_SE_STEVEN_QUEST, 2 },
+    { FLAG_SE_QUEST_WALLY_JOHTO,    VAR_SE_WALLY_QUEST,    0, 0, 0 },
+    { FLAG_SE_QUEST_WALLY_KANTO,    VAR_SE_WALLY_QUEST,    1, 1, 0 },
+    { FLAG_SE_QUEST_WALLY_SINNOH,   VAR_SE_WALLY_QUEST,    2, 2, 0 },
+    { FLAG_SE_QUEST_STEVEN_JOHTO,   VAR_SE_STEVEN_QUEST,   0, 0, 0 },
+    { FLAG_SE_QUEST_STEVEN_KANTO,   VAR_SE_STEVEN_QUEST,   1, 1, 0 },
+    { FLAG_SE_QUEST_STEVEN_SINNOH,  VAR_SE_STEVEN_QUEST,   2, 2, 0 },
+    { FLAG_SE_QUEST_ROCKET_OFFICER, VAR_SE_ROCKET_QUEST,   0, 4, FLAG_SE_JOHTO_LEAGUE_CLEARED },
+    { FLAG_SE_QUEST_PROTON,         VAR_SE_ROCKET_QUEST,   0, 0, FLAG_SE_JOHTO_LEAGUE_CLEARED },
+    { FLAG_SE_QUEST_PETREL,         VAR_SE_ROCKET_QUEST,   1, 1, FLAG_SE_JOHTO_LEAGUE_CLEARED },
+    { FLAG_SE_QUEST_ARIANA,         VAR_SE_ROCKET_QUEST,   2, 2, FLAG_SE_JOHTO_LEAGUE_CLEARED },
+    { FLAG_SE_QUEST_ARCHER,         VAR_SE_ROCKET_QUEST,   3, 3, FLAG_SE_JOHTO_LEAGUE_CLEARED },
+    { FLAG_SE_QUEST_THIEF_MTMOON,   VAR_SE_THIEF_QUEST,    1, 1, 0 },
+    { FLAG_SE_QUEST_THIEF_ROUTE24,  VAR_SE_THIEF_QUEST,    2, 2, 0 },
+    { FLAG_SE_QUEST_SPIRIT_1,       VAR_SE_SPIRIT_QUEST,   1, 1, 0 },
+    { FLAG_SE_QUEST_SPIRIT_2,       VAR_SE_SPIRIT_QUEST,   2, 2, 0 },
+    { FLAG_SE_QUEST_SPIRIT_3,       VAR_SE_SPIRIT_QUEST,   3, 3, 0 },
+    { FLAG_SE_QUEST_LOOKER,         VAR_SE_GALACTIC_QUEST, 0, 6, FLAG_SE_SINNOH_LEAGUE_CLEARED },
+    { FLAG_SE_QUEST_MARS,           VAR_SE_GALACTIC_QUEST, 1, 1, FLAG_SE_SINNOH_LEAGUE_CLEARED },
+    { FLAG_SE_QUEST_JUPITER,        VAR_SE_GALACTIC_QUEST, 2, 2, FLAG_SE_SINNOH_LEAGUE_CLEARED },
+    { FLAG_SE_QUEST_SATURN,         VAR_SE_GALACTIC_QUEST, 3, 3, FLAG_SE_SINNOH_LEAGUE_CLEARED },
+    { FLAG_SE_QUEST_CHARON,         VAR_SE_GALACTIC_QUEST, 4, 4, FLAG_SE_SINNOH_LEAGUE_CLEARED },
 };
 
 // Super Emerald: the National Dex legendaries only show up once the Sinnoh League is cleared
@@ -3108,7 +3124,12 @@ static bool32 IsObjectTemplateHidden(u16 flagId)
         for (i = 0; i < ARRAY_COUNT(sSEQuestObjects); i++)
         {
             if (sSEQuestObjects[i].flag == flagId)
-                return VarGet(sSEQuestObjects[i].var) != sSEQuestObjects[i].stage;
+            {
+                u16 stage = VarGet(sSEQuestObjects[i].var);
+                if (sSEQuestObjects[i].reqFlag != 0 && !FlagGet(sSEQuestObjects[i].reqFlag))
+                    return TRUE;
+                return stage < sSEQuestObjects[i].minStage || stage > sSEQuestObjects[i].maxStage;
+            }
         }
     }
     if (FlagGet(flagId))

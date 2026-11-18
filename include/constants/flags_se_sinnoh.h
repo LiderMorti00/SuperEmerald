@@ -154,6 +154,23 @@
 #define FLAG_SE_QUEST_STEVEN_JOHTO       0x32C7
 #define FLAG_SE_QUEST_STEVEN_KANTO       0x32C8
 #define FLAG_SE_QUEST_STEVEN_SINNOH      0x32C9
-#define FLAG_SE_QUEST_OBJ_END            0x32C9
+#define FLAG_SE_QUEST_ROCKET_OFFICER     0x32CA
+#define FLAG_SE_QUEST_PROTON             0x32CB
+#define FLAG_SE_QUEST_PETREL             0x32CC
+#define FLAG_SE_QUEST_ARIANA             0x32CD
+#define FLAG_SE_QUEST_ARCHER             0x32CE
+#define FLAG_SE_QUEST_THIEF_MTMOON       0x32CF
+#define FLAG_SE_QUEST_THIEF_ROUTE24      0x32D0
+#define FLAG_SE_QUEST_SPIRIT_1           0x32D1
+#define FLAG_SE_QUEST_SPIRIT_2           0x32D2
+#define FLAG_SE_QUEST_SPIRIT_3           0x32D3
+#define FLAG_SE_QUEST_LOOKER             0x32D4
+#define FLAG_SE_QUEST_MARS               0x32D5
+#define FLAG_SE_QUEST_JUPITER            0x32D6
+#define FLAG_SE_QUEST_SATURN             0x32D7
+#define FLAG_SE_QUEST_CHARON             0x32D8
+#define FLAG_SE_QUEST_OBJ_END            0x32D8
+
+#define FLAG_SE_RECEIVED_ROTOM_CATALOG   0x32D9
 
 #endif // GUARD_CONSTANTS_FLAGS_SE_SINNOH_H

@@ -10,8 +10,7 @@ EternaCity_UndergroundManHouse_Text_PtNpc1::
 	.string "The underground tunnels go\n"
 	.string "everywhere!\p"
 	.string "Grab your friends and let's play\n"
-	.string "together using DS Wireless\l"
-	.string "Communications!$"
+	.string "together someday!$"
 
 EternaCity_UndergroundManHouse_EventScript_PtNpc2::
 	msgbox EternaCity_UndergroundManHouse_Text_PtNpc2, MSGBOX_NPC
@@ -82,30 +81,23 @@ EternaCity_UndergroundManHouse_EventScript_SNFossilGift::
 	faceplayer
 	goto_if_set FLAG_SN_RECEIVED_SECRET_POWER, EternaCity_UndergroundManHouse_EventScript_SNFossilGift_Fossil
 	msgbox EternaCity_UndergroundManHouse_Text_SNSecretPower1, MSGBOX_DEFAULT
-	giveitem ITEM_TM_SECRET_POWER
-	goto_if_eq VAR_RESULT, FALSE, EternaCity_UndergroundManHouse_EventScript_SNFossilGift_End
 	setflag FLAG_SN_RECEIVED_SECRET_POWER
 	msgbox EternaCity_UndergroundManHouse_Text_SNSecretPower2, MSGBOX_DEFAULT
 	goto EternaCity_UndergroundManHouse_EventScript_SNFossilGift_Fossil
 
 EternaCity_UndergroundManHouse_Text_SNSecretPower2::
-	.string "Decorate your SECRET BASE with the\n"
-	.string "decorations you collect. Your friends\l"
-	.string "will love visiting it!\p"
-	.string "Come back and see me sometime. I find\n"
-	.string "FOSSILS while digging every day!$"
+	.string "The tunnels are too dangerous for\n"
+	.string "visitors right now, though.\p"
+	.string "But come and see me every day.\n"
+	.string "I find FOSSILS while digging!$"
 
 EternaCity_UndergroundManHouse_Text_SNSecretPower1::
 	.string "UNDERGROUND MAN: Oh! A new face!\n"
 	.string "I'm the UNDERGROUND MAN!\p"
-	.string "I've dug tunnels under all of SINNOH,\n"
-	.string "and I've made secret hideouts too!\p"
-	.string "You look like you'd enjoy having a\n"
-	.string "secret hideout of your own.\p"
-	.string "Take this! It's a TM for SECRET\n"
-	.string "POWER. Use it on a hollow in a cliff,\l"
-	.string "a big bush or a tree, and you can\l"
-	.string "make your very own SECRET BASE!$"
+	.string "I've dug tunnels under all of SINNOH!\p"
+	.string "SECRET BASES, you say? Ah, those are\n"
+	.string "a HOENN thing. Here in SINNOH, we\l"
+	.string "dig for treasure instead!$"
 
 EternaCity_UndergroundManHouse_EventScript_SNFossilGift_T2::
 	.string "The scientist at the OREBURGH Mining\n"

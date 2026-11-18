@@ -28,7 +28,7 @@ HotelGrandLake_EventScript_SNGameDirector::
 	lock
 	faceplayer
 	msgbox HotelGrandLake_Text_SNDirector, MSGBOX_DEFAULT
-	specialvar VAR_RESULT, HasAllHoennMons
+	specialvar VAR_RESULT, HasAllMons
 	goto_if_eq VAR_RESULT, TRUE, LilycoveCity_CoveLilyMotel_2F_EventScript_AllHoennMonsFanfare
 	release
 	end
@@ -36,6 +36,6 @@ HotelGrandLake_EventScript_SNGameDirector::
 HotelGrandLake_Text_SNDirector::
 	.string "I’m the game director! I love POKéMON\n"
 	.string "and I made a game about them.\p"
-	.string "If you complete the SINNOH POKéDEX,\n"
+	.string "If you complete the NATIONAL POKéDEX,\n"
 	.string "show it to me! I will give you something\l"
 	.string "special.$"

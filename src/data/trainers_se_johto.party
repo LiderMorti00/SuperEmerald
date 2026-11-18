@@ -1398,3 +1398,414 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Fire Blast
 - Focus Blast
 - Shadow Ball
+
+=== TRAINER_SE_PROTON_RETURN ===
+Name: PROTON
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Golbat @ Black Sludge
+Level: 58
+Ability: Inner Focus
+Jolly Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Cross Poison
+- Wing Attack
+- Confuse Ray
+- Bite
+
+Weezing @ Black Sludge
+Level: 59
+Ability: Levitate
+Bold Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Sludge Bomb
+- Will-O-Wisp
+- Fire Blast
+- Pain Split
+
+Muk @ Leftovers
+Level: 60
+Ability: Poison Touch
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Gunk Shot
+- Shadow Sneak
+- Ice Punch
+- Curse
+
+Skuntank @ Life Orb
+Level: 61
+Ability: Aftermath
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Crunch
+- Poison Jab
+- Sucker Punch
+- Fire Blast
+
+=== TRAINER_SE_PETREL_RETURN ===
+Name: PETREL
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Koffing @ Eviolite
+Level: 59
+Ability: Levitate
+Bold Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Sludge Bomb
+- Will-O-Wisp
+- Thunderbolt
+- Pain Split
+
+Raticate @ Silk Scarf
+Level: 60
+Ability: Guts
+Jolly Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hyper Fang
+- Crunch
+- U-turn
+- Sucker Punch
+
+Gyarados @ Leftovers
+Level: 61
+Ability: Intimidate
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Waterfall
+- Crunch
+- Dragon Dance
+- Earthquake
+
+Weezing @ Rocky Helmet
+Level: 62
+Ability: Levitate
+Bold Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Sludge Bomb
+- Flamethrower
+- Toxic Spikes
+- Explosion
+
+=== TRAINER_SE_ARIANA_RETURN ===
+Name: ARIANA
+Class: Team Rocket Frlg
+Pic: Rocket Grunt F Frlg
+Gender: Female
+Music: Dangerous
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Arbok @ Black Sludge
+Level: 61
+Ability: Intimidate
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Gunk Shot
+- Crunch
+- Glare
+- Earthquake
+
+Vileplume @ Leftovers
+Level: 62
+Ability: Effect Spore
+Calm Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Giga Drain
+- Sludge Bomb
+- Moonblast
+- Sleep Powder
+
+Persian @ Life Orb
+Level: 62
+Ability: Technician
+Jolly Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Fake Out
+- Bite
+- Power Gem
+- Hypnosis
+
+Murkrow @ Eviolite
+Level: 63
+Ability: Prankster
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Brave Bird
+- Sucker Punch
+- Foul Play
+- Roost
+
+Houndoom @ Houndoominite
+Level: 64
+Ability: Flash Fire
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dark Pulse
+- Flamethrower
+- Sludge Bomb
+- Nasty Plot
+
+=== TRAINER_SE_ARCHER_RETURN ===
+Name: ARCHER
+Class: Team Rocket Frlg
+Pic: Rocket Grunt M Frlg
+Gender: Male
+Music: Dangerous
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Honchkrow @ Life Orb
+Level: 64
+Ability: Moxie
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Brave Bird
+- Sucker Punch
+- Night Slash
+- Heat Wave
+
+Weavile @ Focus Sash
+Level: 64
+Ability: Pressure
+Jolly Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Knock Off
+- Ice Shard
+- Triple Axel
+- Low Kick
+
+Crobat @ Black Sludge
+Level: 65
+Ability: Inner Focus
+Jolly Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Cross Poison
+- Brave Bird
+- U-turn
+- Super Fang
+
+Tyranitar @ Chople Berry
+Level: 66
+Ability: Sand Stream
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Stone Edge
+- Crunch
+- Earthquake
+- Dragon Dance
+
+Houndoom @ Houndoominite
+Level: 67
+Ability: Flash Fire
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dark Pulse
+- Fire Blast
+- Sludge Bomb
+- Nasty Plot
+
+=== TRAINER_SE_MUSEUM_THIEF ===
+Name: GRIMSLEY
+Class: Burglar Frlg
+Pic: Burglar Frlg
+Gender: Male
+Music: Suspicious
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Sableye @ Leftovers
+Level: 62
+Ability: Prankster
+Calm Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Foul Play
+- Will-O-Wisp
+- Recover
+- Shadow Ball
+
+Liepard @ Life Orb
+Level: 62
+Ability: Prankster
+Jolly Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Knock Off
+- U-turn
+- Fake Out
+- Play Rough
+
+Murkrow @ Eviolite
+Level: 63
+Ability: Super Luck
+Jolly Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Brave Bird
+- Night Slash
+- Sucker Punch
+- Haze
+
+Clefable @ Leftovers
+Level: 63
+Ability: Magic Guard
+Calm Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Moonblast
+- Moonlight
+- Calm Mind
+- Fire Blast
+
+Sneasel @ Razor Claw
+Level: 64
+Ability: Inner Focus
+Jolly Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Night Slash
+- Ice Shard
+- Icicle Crash
+- Fake Out
+
+=== TRAINER_SE_SPIRIT_CHANNELER_1 ===
+Name: HOPE
+Class: Channeler Frlg
+Pic: Channeler Frlg
+Gender: Female
+Music: Suspicious
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Haunter @ Eviolite
+Level: 63
+Ability: Levitate
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shadow Ball
+- Sludge Bomb
+- Hypnosis
+- Dazzling Gleam
+
+Misdreavus @ Eviolite
+Level: 63
+Ability: Levitate
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shadow Ball
+- Thunderbolt
+- Pain Split
+- Will-O-Wisp
+
+Banette @ Banettite
+Level: 64
+Ability: Frisk
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shadow Claw
+- Shadow Sneak
+- Gunk Shot
+- Knock Off
+
+=== TRAINER_SE_SPIRIT_CHANNELER_2 ===
+Name: PATIENCE
+Class: Channeler Frlg
+Pic: Channeler Frlg
+Gender: Female
+Music: Suspicious
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Dusclops @ Eviolite
+Level: 64
+Ability: Pressure
+Relaxed Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shadow Sneak
+- Will-O-Wisp
+- Pain Split
+- Ice Beam
+
+Mismagius @ Life Orb
+Level: 65
+Ability: Levitate
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shadow Ball
+- Mystical Fire
+- Dazzling Gleam
+- Nasty Plot
+
+Golurk @ Leftovers
+Level: 65
+Ability: No Guard
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dynamic Punch
+- Poltergeist
+- Earthquake
+- Rock Slide
+
+=== TRAINER_SE_SPIRIT_CHANNELER_3 ===
+Name: MERCY
+Class: Channeler Frlg
+Pic: Channeler Frlg
+Gender: Female
+Music: Suspicious
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Gengar @ Gengarite
+Level: 66
+Ability: Cursed Body
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shadow Ball
+- Sludge Bomb
+- Focus Blast
+- Thunderbolt
+
+Dusknoir @ Leftovers
+Level: 66
+Ability: Pressure
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Poltergeist
+- Ice Punch
+- Earthquake
+- Shadow Sneak
+
+Chandelure @ Choice Specs
+Level: 66
+Ability: Flash Fire
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shadow Ball
+- Fire Blast
+- Energy Ball
+- Trick
+
+Marowak-Alola @ Thick Club
+Level: 67
+Ability: Lightning Rod
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Poltergeist
+- Flare Blitz
+- Bonemerang
+- Swords Dance
+

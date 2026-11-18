@@ -50,5 +50,5 @@ SunyshoreCity_Market_EventScript_PtNpc5::
 SunyshoreCity_Market_Text_PtNpc5_0::
 	.string "I love Tap Toys! Plaza Games are great,\n"
 	.string "too!\p"
-	.string "I’m a huge fan of the Wi-Fi Plaza, so I’m\n"
-	.string "promoting it on my own.$"
+	.string "I’m a huge fan of the GAME CORNER in\n"
+	.string "VEILSTONE, so I’m promoting it!$"

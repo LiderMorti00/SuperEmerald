@@ -36,8 +36,8 @@ OreburghCity_PokemonCenter_1F_EventScript_PtNpc3::
 	end
 
 OreburghCity_PokemonCenter_1F_Text_PtNpc3::
-	.string "Yay! I got a Pal Pad at the POKéMON\n"
-	.string "Wi-Fi Club downstairs!$"
+	.string "Yay! I traded with a trainer from\n"
+	.string "JOHTO in the Union Room upstairs!$"
 
 OreburghCity_PokemonCenter_1F_EventScript_PtNpc4::
 	lock
@@ -76,7 +76,7 @@ OreburghCity_PokemonCenter_1F_EventScript_PtNpc5::
 
 OreburghCity_PokemonCenter_1F_Text_PtNpc5::
 	.string "You know how you can battle a friend\n"
-	.string "using wireless communications?\p"
+	.string "using a link cable?\p"
 	.string "Well now, you can capture it as a\n"
 	.string "Battle Video using a Vs. Recorder!$"
 

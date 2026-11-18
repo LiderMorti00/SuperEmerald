@@ -158,7 +158,7 @@ JubilifeCity_EventScript_Clown1::
 	faceplayer
 	checkitem ITEM_COUPON_1
 	goto_if_eq VAR_RESULT, TRUE, JubilifeCity_EventScript_ClownDone
-	goto_if_set FLAG_SYS_POKENAV_GET, JubilifeCity_EventScript_ClownDone
+	goto_if_set FLAG_SN_RECEIVED_POKENAV, JubilifeCity_EventScript_ClownDone
 	msgbox JubilifeCity_Text_ClownQuiz1, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, JubilifeCity_EventScript_ClownWrong
 	msgbox JubilifeCity_Text_ClownRight, MSGBOX_DEFAULT
@@ -172,8 +172,8 @@ JubilifeCity_EventScript_ClownRight::
 
 JubilifeCity_Text_ClownRight2::
 	.string "Collect all three COUPONS and\n"
-	.string "bring them to the POKéNAV\l"
-	.string "COMPANY's president!$"
+	.string "bring them to the president of the\l"
+	.string "POKéNAV COMPANY's SINNOH branch!$"
 
 JubilifeCity_Text_ClownRight::
 	.string "Correct! Here's your COUPON!$"
@@ -207,7 +207,7 @@ JubilifeCity_EventScript_Clown2::
 	faceplayer
 	checkitem ITEM_COUPON_2
 	goto_if_eq VAR_RESULT, TRUE, JubilifeCity_EventScript_ClownDone
-	goto_if_set FLAG_SYS_POKENAV_GET, JubilifeCity_EventScript_ClownDone
+	goto_if_set FLAG_SN_RECEIVED_POKENAV, JubilifeCity_EventScript_ClownDone
 	msgbox JubilifeCity_Text_ClownQuiz2, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, JubilifeCity_EventScript_ClownWrong
 	msgbox JubilifeCity_Text_ClownRight, MSGBOX_DEFAULT
@@ -224,7 +224,7 @@ JubilifeCity_EventScript_Clown3::
 	faceplayer
 	checkitem ITEM_COUPON_3
 	goto_if_eq VAR_RESULT, TRUE, JubilifeCity_EventScript_ClownDone
-	goto_if_set FLAG_SYS_POKENAV_GET, JubilifeCity_EventScript_ClownDone
+	goto_if_set FLAG_SN_RECEIVED_POKENAV, JubilifeCity_EventScript_ClownDone
 	msgbox JubilifeCity_Text_ClownQuiz3, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, JubilifeCity_EventScript_ClownWrong
 	msgbox JubilifeCity_Text_ClownRight, MSGBOX_DEFAULT
@@ -254,7 +254,7 @@ JubilifeCity_Text_Looker::
 JubilifeCity_EventScript_President::
 	lock
 	faceplayer
-	goto_if_set FLAG_SYS_POKENAV_GET, JubilifeCity_EventScript_PresidentAfter
+	goto_if_set FLAG_SN_RECEIVED_POKENAV, JubilifeCity_EventScript_PresidentAfter
 	checkitem ITEM_COUPON_1
 	goto_if_eq VAR_RESULT, FALSE, JubilifeCity_EventScript_PresidentNoCoupons
 	checkitem ITEM_COUPON_2
@@ -265,11 +265,7 @@ JubilifeCity_EventScript_President::
 	removeitem ITEM_COUPON_1
 	removeitem ITEM_COUPON_2
 	removeitem ITEM_COUPON_3
-	playfanfare MUS_OBTAIN_ITEM
-	message JubilifeCity_Text_ReceivedPokenav
-	waitfanfare
-	waitmessage
-	setflag FLAG_SYS_POKENAV_GET
+	giveitem ITEM_CATCHING_CHARM
 	setflag FLAG_SN_RECEIVED_POKENAV
 	call_if_eq VAR_SN_SINNOH_STORY, 15, JubilifeCity_EventScript_SetStory16
 	msgbox JubilifeCity_Text_PresidentPokenav, MSGBOX_DEFAULT
@@ -277,9 +273,11 @@ JubilifeCity_EventScript_President::
 	end
 
 JubilifeCity_Text_PresidentPokenav::
-	.string "The POKéNAV has a map and much\n"
-	.string "more. It will help you on your\l"
-	.string "journey!$"
+	.string "That's a CATCHING CHARM, made by our\n"
+	.string "SINNOH branch.\p"
+	.string "Keep it in your BAG and you'll get\n"
+	.string "more critical captures. Perfect for\l"
+	.string "filling up your POKéDEX!$"
 
 JubilifeCity_EventScript_SetStory16::
 	setvar VAR_SN_SINNOH_STORY, 16
@@ -290,7 +288,9 @@ JubilifeCity_Text_ReceivedPokenav::
 
 JubilifeCity_Text_PresidentCoupons::
 	.string "Wonderful! You found all three\n"
-	.string "COUPONS! Here's your prize!$"
+	.string "COUPONS!\p"
+	.string "Oh, you already carry a POKéNAV from\n"
+	.string "HOENN? Then this prize is for you!$"
 
 JubilifeCity_EventScript_PresidentNoCoupons::
 	msgbox JubilifeCity_Text_PresidentNoCoupons, MSGBOX_DEFAULT
@@ -308,8 +308,8 @@ JubilifeCity_EventScript_PresidentAfter::
 	end
 
 JubilifeCity_Text_PresidentAfter::
-	.string "How do you like your POKéNAV? Use\n"
-	.string "it well!$"
+	.string "How do you like the CATCHING CHARM?\n"
+	.string "Our SINNOH branch is very proud of it!$"
 
 JubilifeCity_EventScript_Sign10::
 	msgbox JubilifeCity_Text_Sign10, MSGBOX_SIGN

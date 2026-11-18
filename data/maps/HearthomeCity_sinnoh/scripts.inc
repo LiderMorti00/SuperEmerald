@@ -108,7 +108,7 @@ HearthomeCity_EventScript_SNMrGoods::
 HearthomeCity_EventScript_SNMrGoods_Sent::
 	.string "A fine TRAINER like you deserves a fine\n"
 	.string "decoration! Decorate your SECRET BASE\l"
-	.string "with it!$"
+	.string "in HOENN with it!$"
 
 HearthomeCity_EventScript_SNMrGoods_Full::
 	msgbox HearthomeCity_EventScript_SNMrGoods_FullT, MSGBOX_DEFAULT

@@ -1938,3 +1938,214 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Earthquake
 - Bullet Punch
 
+
+=== TRAINER_SE_MARS_RETURN ===
+Name: MARS
+Class: TRAINER_CLASS_GALACTIC_COMMANDER
+Pic: TRAINER_PIC_SINNOH_COMMANDER_MARS
+Gender: Female
+Music: Dangerous
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Bronzong @ Leftovers
+Level: 72
+Ability: Levitate
+Relaxed Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Gyro Ball
+- Earthquake
+- Stealth Rock
+- Hypnosis
+
+Golbat @ Eviolite
+Level: 72
+Ability: Inner Focus
+Jolly Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Cross Poison
+- Brave Bird
+- Super Fang
+- U-turn
+
+Mismagius @ Life Orb
+Level: 73
+Ability: Levitate
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Shadow Ball
+- Dazzling Gleam
+- Thunderbolt
+- Nasty Plot
+
+Purugly @ Silk Scarf
+Level: 74
+Ability: Thick Fat
+Jolly Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Body Slam
+- Fake Out
+- U-turn
+- Sucker Punch
+
+=== TRAINER_SE_JUPITER_RETURN ===
+Name: JUPITER
+Class: TRAINER_CLASS_GALACTIC_COMMANDER
+Pic: TRAINER_PIC_SINNOH_COMMANDER_JUPITER
+Gender: Female
+Music: Dangerous
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Bronzong @ Leftovers
+Level: 73
+Ability: Levitate
+Relaxed Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Gyro Ball
+- Earthquake
+- Trick Room
+- Hypnosis
+
+Golbat @ Eviolite
+Level: 73
+Ability: Inner Focus
+Jolly Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Cross Poison
+- Brave Bird
+- Super Fang
+- U-turn
+
+Toxicroak @ Life Orb
+Level: 74
+Ability: Dry Skin
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Drain Punch
+- Gunk Shot
+- Sucker Punch
+- Ice Punch
+
+Skuntank @ Black Sludge
+Level: 75
+Ability: Aftermath
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Crunch
+- Poison Jab
+- Sucker Punch
+- Flamethrower
+
+=== TRAINER_SE_SATURN_RETURN ===
+Name: SATURN
+Class: TRAINER_CLASS_GALACTIC_COMMANDER
+Pic: TRAINER_PIC_SINNOH_COMMANDER_SATURN
+Gender: Male
+Music: Dangerous
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Bronzong @ Leftovers
+Level: 74
+Ability: Levitate
+Relaxed Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Gyro Ball
+- Earthquake
+- Reflect
+- Hypnosis
+
+Kadabra @ Eviolite
+Level: 74
+Ability: Magic Guard
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Psychic
+- Shadow Ball
+- Energy Ball
+- Calm Mind
+
+Crobat @ Black Sludge
+Level: 75
+Ability: Inner Focus
+Jolly Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Cross Poison
+- Brave Bird
+- U-turn
+- Taunt
+
+Toxicroak @ Life Orb
+Level: 76
+Ability: Dry Skin
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Drain Punch
+- Gunk Shot
+- Sucker Punch
+- Swords Dance
+
+=== TRAINER_SE_CHARON_RETURN ===
+Name: CHARON
+Class: TRAINER_CLASS_SCIENTIST
+Pic: TRAINER_PIC_SINNOH_SCIENTIST
+Gender: Male
+Music: Dangerous
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Rotom-Heat @ Leftovers
+Level: 76
+Ability: Levitate
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Overheat
+- Thunderbolt
+- Will-O-Wisp
+- Volt Switch
+
+Magnezone @ Choice Specs
+Level: 76
+Ability: Magnet Pull
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Tri Attack
+
+Porygon-Z @ Life Orb
+Level: 77
+Ability: Adaptability
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Tri Attack
+- Ice Beam
+- Thunderbolt
+- Nasty Plot
+
+Electivire @ Expert Belt
+Level: 77
+Ability: Motor Drive
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Wild Charge
+- Ice Punch
+- Cross Chop
+- Earthquake
+
+Bronzong @ Leftovers
+Level: 78
+Ability: Heatproof
+Relaxed Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Gyro Ball
+- Earthquake
+- Trick Room
+- Explosion
+
