@@ -2350,6 +2350,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/se_postgame.inc" @ Super Emerald
 	.include "data/scripts/se_cruise.inc" @ Super Emerald
 	.include "data/scripts/se_dexfill.inc" @ Super Emerald
+	.include "data/scripts/se_quests.inc" @ Super Emerald
 	.include "data/scripts/se_ships.inc" @ Super Emerald
 	.include "data/scripts/berry_blender.inc"
 	.include "data/text/mauville_man.inc"

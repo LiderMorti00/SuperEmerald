@@ -146,4 +146,14 @@
 #define FLAG_SE_LEG_MELMETAL             0x32C3
 #define FLAG_SE_LEGENDS_END                      0x32C3
 
+// Super Emerald: side-quest objects. Never set; each one is shown only at its quest stage (see IsObjectTemplateHidden)
+#define FLAG_SE_QUEST_OBJ_START          0x32C4
+#define FLAG_SE_QUEST_WALLY_JOHTO        0x32C4
+#define FLAG_SE_QUEST_WALLY_KANTO        0x32C5
+#define FLAG_SE_QUEST_WALLY_SINNOH       0x32C6
+#define FLAG_SE_QUEST_STEVEN_JOHTO       0x32C7
+#define FLAG_SE_QUEST_STEVEN_KANTO       0x32C8
+#define FLAG_SE_QUEST_STEVEN_SINNOH      0x32C9
+#define FLAG_SE_QUEST_OBJ_END            0x32C9
+
 #endif // GUARD_CONSTANTS_FLAGS_SE_SINNOH_H

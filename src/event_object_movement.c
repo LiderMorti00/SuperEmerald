@@ -3088,9 +3088,29 @@ void TrySpawnLightSprites(s16 camX, s16 camY)
     }
 }
 
+// Super Emerald: side-quest characters that move from region to region
+static const struct { u16 flag; u16 var; u16 stage; } sSEQuestObjects[] =
+{
+    { FLAG_SE_QUEST_WALLY_JOHTO,   VAR_SE_WALLY_QUEST,  0 },
+    { FLAG_SE_QUEST_WALLY_KANTO,   VAR_SE_WALLY_QUEST,  1 },
+    { FLAG_SE_QUEST_WALLY_SINNOH,  VAR_SE_WALLY_QUEST,  2 },
+    { FLAG_SE_QUEST_STEVEN_JOHTO,  VAR_SE_STEVEN_QUEST, 0 },
+    { FLAG_SE_QUEST_STEVEN_KANTO,  VAR_SE_STEVEN_QUEST, 1 },
+    { FLAG_SE_QUEST_STEVEN_SINNOH, VAR_SE_STEVEN_QUEST, 2 },
+};
+
 // Super Emerald: the National Dex legendaries only show up once the Sinnoh League is cleared
 static bool32 IsObjectTemplateHidden(u16 flagId)
 {
+    if (flagId >= FLAG_SE_QUEST_OBJ_START && flagId <= FLAG_SE_QUEST_OBJ_END)
+    {
+        u32 i;
+        for (i = 0; i < ARRAY_COUNT(sSEQuestObjects); i++)
+        {
+            if (sSEQuestObjects[i].flag == flagId)
+                return VarGet(sSEQuestObjects[i].var) != sSEQuestObjects[i].stage;
+        }
+    }
     if (FlagGet(flagId))
         return TRUE;
     if (flagId >= FLAG_SE_LEGENDS_START && flagId <= FLAG_SE_LEGENDS_END && !FlagGet(FLAG_SE_SINNOH_LEAGUE_CLEARED))

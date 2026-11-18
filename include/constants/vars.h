@@ -405,6 +405,11 @@
 #define VAR_SE_CRUISE_STATE           0x500A // 0 none, 1 boarding, 2 sailing, 3 arrived
 #define VAR_SE_TRAIN_RIDE             0x500B // Magnet Train ride scene: 1 leave Goldenrod, 2 reach Saffron, 3 leave Saffron, 4 reach Goldenrod
 #define VAR_SE_JOHTO_ARRIVAL          0x5001 // 1 = just arrived at Olivine by ship, 2 = met Jasmine
+#define VAR_SE_WALLY_QUEST            0x500C // Wally's journey: 0 Ecruteak, 1 Celadon, 2 Hearthome, 3 done
+#define VAR_SE_STEVEN_QUEST           0x500D // Steven's journey: 0 Ruins of Alph, 1 Pewter, 2 Oreburgh, 3 done
+#define VAR_SE_REQUEST_JOHTO          0x500E // Goldenrod researcher requests done: 0-3
+#define VAR_SE_REQUEST_KANTO          0x500F // Celadon researcher requests done: 0-3
+#define VAR_SE_REQUEST_SINNOH         0x5010 // Hearthome researcher requests done: 0-3
 
 #define VAR_SE_SINNOH_STATE_VERSION   0x5040 // Super Emerald: bump SE_SINNOH_STATE_VERSION when the Sinnoh state changes
 #define SE_SINNOH_STATE_VERSION       3

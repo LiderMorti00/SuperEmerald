@@ -46,11 +46,67 @@ for k,v in MAP.items():
     S,E=conv.convert(src,'sound/songs/midi/mus_dpp_%s.mid'%k)
     print(k,v,S,E)
     cfg=re.sub(r'^(mus_dpp_%s\.mid:.*)-G_sinnoh_gm'%k,r'\1-G_sinnoh_pt',cfg,flags=re.M)
-# master volume: Platinum's sequence volume, scaled to sit with the other regions' music
+# master volume: Platinum's sequence volume, scaled to sit with the other regions' music.
+# VOLFIX: per-song boost measured in game (RMS of each song vs the Hoenn/Johto/Kanto songs)
+VOLFIX = {"canalave": 1.09,
+          "celestic": 1.17,
+          "cycling": 1.16,
+          "eterna": 1.23,
+          "eterna_forest": 2.09,
+          "fight_area": 1.14,
+          "floaroma": 1.28,
+          "galactic_hq": 1.06,
+          "game_corner": 1.24,
+          "great_marsh": 1.17,
+          "gym": 1.0,
+          "hall_of_fame": 1.42,
+          "hearthome": 1.2,
+          "jubilife": 1.06,
+          "lab": 1.12,
+          "lake": 1.33,
+          "league_inside": 1.33,
+          "league_outside": 1.56,
+          "mart": 1.35,
+          "mt_coronet": 1.11,
+          "old_chateau": 2.11,
+          "oreburgh": 1.0,
+          "pastoria": 1.0,
+          "pc": 1.0,
+          "route201": 1.66,
+          "route203": 1.0,
+          "route205": 1.56,
+          "route206": 1.05,
+          "route209": 1.47,
+          "route210": 1.08,
+          "route213": 1.52,
+          "route216": 1.62,
+          "route225": 1.58,
+          "route228": 1.47,
+          "sandgem": 1.06,
+          "snowpoint": 2.2,
+          "stark_mountain": 1.33,
+          "sunyshore": 1.0,
+          "survival_area": 1.07,
+          "twinleaf": 1.07,
+          "veilstone": 1.0,
+          "victory_elite_four": 1.4,
+          "victory_gym_leader": 1.2,
+          "victory_road": 2.2,
+          "victory_trainer": 1.0,
+          "victory_wild": 1.86,
+          "vs_cynthia": 1.04,
+          "vs_dialga_palkia": 1.05,
+          "vs_elite_four": 1.36,
+          "vs_galactic_commander": 1.58,
+          "vs_galactic_grunt": 1.35,
+          "vs_gym_leader": 1.43,
+          "vs_rival": 1.21,
+          "vs_trainer": 1.31,
+          "vs_wild": 1.28}
 import json
 d=json.load(open(os.path.join(PLAT,'res/sound/pl_sound_data.json')))
 by={x['fileName']:x for x in d['seqInfo'] if x.get('fileName')}
 for k,v in MAP.items():
     vol=by[(v if v.startswith(('BATTLE','VICTORY')) else 'SEQ_'+v)+'.sseq']['volume']  # VOLUME
-    cfg=re.sub(r'^(mus_dpp_%s\.mid:\s*)-E -R\d+ -G_sinnoh_pt -V\d+'%k, r'\g<1>-E -R0 -G_sinnoh_pt -V%03d'%round(vol*0.65), cfg, flags=re.M)
+    cfg=re.sub(r'^(mus_dpp_%s\.mid:\s*)-E -R\d+ -G_sinnoh_pt -V\d+'%k, r'\g<1>-E -R0 -G_sinnoh_pt -V%03d'%min(127,round(vol*0.65*VOLFIX.get(k,1.0))), cfg, flags=re.M)
 open('sound/songs/midi/midi.cfg','w').write(cfg)

@@ -2,7 +2,7 @@
   "id": "MAP_CIANWOOD_POKECENTER_HNS",
   "name": "CianwoodPokecenter_hns",
   "layout": "LAYOUT_CIANWOOD_POKECENTER_HNS",
-  "music": "MUS_POKE_CENTER",
+  "music": "MUS_DPP_PC",
   "region_map_section": "MAPSEC_CIANWOOD_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
