@@ -2,7 +2,7 @@
   "id": "MAP_SURVIVAL_AREA_BATTLEGROUND_SINNOH",
   "name": "SurvivalArea_Battleground_sinnoh",
   "layout": "LAYOUT_SURVIVAL_AREA_BATTLEGROUND_SINNOH",
-  "music": "MUS_RG_CELADON",
+  "music": "MUS_DPP_SURVIVAL_AREA",
   "region_map_section": "MAPSEC_SURVIVAL_AREA",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

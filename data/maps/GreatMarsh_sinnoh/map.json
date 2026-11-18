@@ -2,7 +2,7 @@
   "id": "MAP_GREAT_MARSH_SINNOH",
   "name": "GreatMarsh_sinnoh",
   "layout": "LAYOUT_GREAT_MARSH_SINNOH",
-  "music": "MUS_DPP_PASTORIA",
+  "music": "MUS_DPP_GREAT_MARSH",
   "region_map_section": "MAPSEC_GREAT_MARSH",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

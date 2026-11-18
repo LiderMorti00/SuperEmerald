@@ -2,7 +2,7 @@
   "id": "MAP_IRON_ISLAND_B2F_RIGHT_SINNOH",
   "name": "IronIsland_B2F_Right_sinnoh",
   "layout": "LAYOUT_IRON_ISLAND_B2F_RIGHT_SINNOH",
-  "music": "MUS_RG_MT_MOON",
+  "music": "MUS_DPP_VICTORY_ROAD",
   "region_map_section": "MAPSEC_IRON_ISLAND",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

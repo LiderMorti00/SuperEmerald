@@ -2,7 +2,7 @@
   "id": "MAP_ROCK_PEAK_RUINS_SINNOH",
   "name": "RockPeakRuins_sinnoh",
   "layout": "LAYOUT_ROCK_PEAK_RUINS_SINNOH",
-  "music": "MUS_RG_SEVII_CAVE",
+  "music": "MUS_DPP_VICTORY_ROAD",
   "region_map_section": "MAPSEC_ROCK_PEAK_RUINS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

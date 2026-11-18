@@ -598,7 +598,7 @@ gSongTable::
 	song mus_hg_bug_catching_contest, MUSIC_PLAYER_BGM, 0
 	song mus_hg_bug_contest_prep, MUSIC_PLAYER_BGM, 0
 	song mus_hg_magnet_train, MUSIC_PLAYER_BGM, 0
-	song mus_hg_mt_moon_square, MUSIC_PLAYER_BGM, 0
+	song mus_dummy, MUSIC_PLAYER_BGM, 0 @ mus_hg_mt_moon_square (unused in Super Emerald)
 	song mus_hg_vs_wild, MUSIC_PLAYER_BGM, 0
 	song mus_hg_vs_trainer, MUSIC_PLAYER_BGM, 0
 	song mus_hg_vs_gym_leader, MUSIC_PLAYER_BGM, 0
@@ -649,6 +649,25 @@ gSongTable::
 	song mus_dpp_route209, MUSIC_PLAYER_BGM, 0
 	song mus_dpp_route225, MUSIC_PLAYER_BGM, 0
 	song mus_dpp_route228, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_pc, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_mart, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_gym, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_celestic, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_survival_area, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_fight_area, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_stark_mountain, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_great_marsh, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_game_corner, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_hall_of_fame, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_vs_trainer, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_vs_gym_leader, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_vs_elite_four, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_vs_rival, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_vs_galactic_grunt, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_vs_galactic_commander, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_victory_trainer, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_victory_gym_leader, MUSIC_PLAYER_BGM, 0
+	song mus_dpp_victory_elite_four, MUSIC_PLAYER_BGM, 0
 @ Super Emerald: Sinnoh end
 @ Super Emerald: HnS end
 	song ph_trap_blend, MUSIC_PLAYER_SE2, 2

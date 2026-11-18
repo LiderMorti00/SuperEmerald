@@ -2,7 +2,7 @@
   "id": "MAP_ETERNA_CITY_GYM_SINNOH",
   "name": "EternaCity_Gym_sinnoh",
   "layout": "LAYOUT_ETERNA_CITY_GYM_SINNOH",
-  "music": "MUS_GYM",
+  "music": "MUS_DPP_GYM",
   "region_map_section": "MAPSEC_ETERNA_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

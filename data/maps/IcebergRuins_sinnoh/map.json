@@ -2,7 +2,7 @@
   "id": "MAP_ICEBERG_RUINS_SINNOH",
   "name": "IcebergRuins_sinnoh",
   "layout": "LAYOUT_ICEBERG_RUINS_SINNOH",
-  "music": "MUS_RG_SEVII_CAVE",
+  "music": "MUS_DPP_VICTORY_ROAD",
   "region_map_section": "MAPSEC_ICEBERG_RUINS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

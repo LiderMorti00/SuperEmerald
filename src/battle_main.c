@@ -5126,6 +5126,16 @@ static void HandleEndTurn_BattleWon(void)
             PlayBGM((cls == TRAINER_CLASS_LEADER || cls == TRAINER_CLASS_ELITE_FOUR || cls == TRAINER_CLASS_CHAMPION)
                     ? MUS_HG_VICTORY_GYM_LEADER : MUS_HG_VICTORY_TRAINER);
         }
+        else if (GetCurrentRegion() == REGION_SINNOH) // Super Emerald: Platinum victory themes
+        {
+            enum TrainerClassID cls = GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA);
+            if (cls == TRAINER_CLASS_ELITE_FOUR || cls == TRAINER_CLASS_CHAMPION)
+                PlayBGM(MUS_DPP_VICTORY_ELITE_FOUR);
+            else if (cls == TRAINER_CLASS_LEADER)
+                PlayBGM(MUS_DPP_VICTORY_GYM_LEADER);
+            else
+                PlayBGM(MUS_DPP_VICTORY_TRAINER);
+        }
         else switch (GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA))
         {
         case TRAINER_CLASS_ELITE_FOUR:

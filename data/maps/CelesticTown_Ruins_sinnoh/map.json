@@ -2,7 +2,7 @@
   "id": "MAP_CELESTIC_TOWN_RUINS_SINNOH",
   "name": "CelesticTown_Ruins_sinnoh",
   "layout": "LAYOUT_CELESTIC_TOWN_RUINS_SINNOH",
-  "music": "MUS_DEWFORD",
+  "music": "MUS_DPP_CELESTIC",
   "region_map_section": "MAPSEC_CELESTIC_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

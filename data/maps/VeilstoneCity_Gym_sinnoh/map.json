@@ -2,7 +2,7 @@
   "id": "MAP_VEILSTONE_CITY_GYM_SINNOH",
   "name": "VeilstoneCity_Gym_sinnoh",
   "layout": "LAYOUT_VEILSTONE_CITY_GYM_SINNOH",
-  "music": "MUS_GYM",
+  "music": "MUS_DPP_GYM",
   "region_map_section": "MAPSEC_VEILSTONE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

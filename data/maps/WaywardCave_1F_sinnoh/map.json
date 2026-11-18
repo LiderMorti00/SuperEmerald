@@ -2,7 +2,7 @@
   "id": "MAP_WAYWARD_CAVE_1F_SINNOH",
   "name": "WaywardCave_1F_sinnoh",
   "layout": "LAYOUT_WAYWARD_CAVE_1F_SINNOH",
-  "music": "MUS_RG_MT_MOON",
+  "music": "MUS_DPP_VICTORY_ROAD",
   "region_map_section": "MAPSEC_WAYWARD_CAVE",
   "requires_flash": true,
   "weather": "WEATHER_NONE",

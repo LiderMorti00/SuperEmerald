@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE218_WEST_SINNOH",
   "name": "Route218_West_sinnoh",
   "layout": "LAYOUT_ROUTE218_WEST_SINNOH",
-  "music": "MUS_POKE_CENTER",
+  "music": "MUS_DPP_PC",
   "region_map_section": "MAPSEC_ROUTE_218",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

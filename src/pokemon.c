@@ -5160,6 +5160,28 @@ u16 GetBattleBGM(void)
             }
         }
 
+        // Super Emerald: Platinum battle themes in Sinnoh
+        if (GetCurrentRegion() == REGION_SINNOH)
+        {
+            switch (trainerClass)
+            {
+            case TRAINER_CLASS_LEADER:
+                return MUS_DPP_VS_GYM_LEADER;
+            case TRAINER_CLASS_ELITE_FOUR:
+                return MUS_DPP_VS_ELITE_FOUR;
+            case TRAINER_CLASS_CHAMPION:
+                return MUS_DPP_VS_CYNTHIA;
+            case TRAINER_CLASS_RIVAL:
+                return MUS_DPP_VS_RIVAL;
+            case TRAINER_CLASS_TEAM_GALACTIC:
+                return MUS_DPP_VS_GALACTIC_GRUNT;
+            case TRAINER_CLASS_GALACTIC_COMMANDER:
+                return MUS_DPP_VS_GALACTIC_COMMANDER;
+            default:
+                return MUS_DPP_VS_TRAINER;
+            }
+        }
+
         switch (trainerClass)
         {
         case TRAINER_CLASS_AQUA_LEADER:

@@ -2,7 +2,7 @@
   "id": "MAP_STARK_MOUNTAIN_ROOM2_EAST_SINNOH",
   "name": "StarkMountain_Room2_East_sinnoh",
   "layout": "LAYOUT_STARK_MOUNTAIN_ROOM2_EAST_SINNOH",
-  "music": "MUS_RG_MT_MOON",
+  "music": "MUS_DPP_STARK_MOUNTAIN",
   "region_map_section": "MAPSEC_MT_STARK",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -2,7 +2,7 @@
   "id": "MAP_OREBURGH_GATE_1F_SINNOH",
   "name": "OreburghGate_1F_sinnoh",
   "layout": "LAYOUT_OREBURGH_GATE_1F_SINNOH",
-  "music": "MUS_RG_SEVII_CAVE",
+  "music": "MUS_DPP_VICTORY_ROAD",
   "region_map_section": "MAPSEC_OREBURGH_GATE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

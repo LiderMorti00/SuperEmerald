@@ -2,7 +2,7 @@
   "id": "MAP_FIGHT_AREA_POKEMON_CENTER_1F_SINNOH",
   "name": "FightArea_PokemonCenter_1F_sinnoh",
   "layout": "LAYOUT_FIGHT_AREA_POKEMON_CENTER_1F_SINNOH",
-  "music": "MUS_POKE_CENTER",
+  "music": "MUS_DPP_PC",
   "region_map_section": "MAPSEC_FIGHT_AREA",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

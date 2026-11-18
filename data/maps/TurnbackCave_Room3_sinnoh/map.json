@@ -2,7 +2,7 @@
   "id": "MAP_TURNBACK_CAVE_ROOM3_SINNOH",
   "name": "TurnbackCave_Room3_sinnoh",
   "layout": "LAYOUT_TURNBACK_CAVE_ROOM3_SINNOH",
-  "music": "MUS_RG_SEVII_CAVE",
+  "music": "MUS_DPP_VICTORY_ROAD",
   "region_map_section": "MAPSEC_TURNBACK_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE215_ACCESS_SINNOH",
   "name": "Route215_Access_sinnoh",
   "layout": "LAYOUT_ROUTE215_ACCESS_SINNOH",
-  "music": "MUS_POKE_CENTER",
+  "music": "MUS_DPP_PC",
   "region_map_section": "MAPSEC_ROUTE_215",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

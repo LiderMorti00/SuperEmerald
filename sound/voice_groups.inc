@@ -252,5 +252,5 @@
 .include "sound/voicegroups/voicegroup273.inc"
 @ Super Emerald: HnS end
 @ Super Emerald: Sinnoh begin
-.include "sound/voicegroups/sinnoh_gm.inc"
+.include "sound/voicegroups/sinnoh_pt.inc"
 @ Super Emerald: Sinnoh end

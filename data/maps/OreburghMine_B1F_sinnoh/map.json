@@ -2,7 +2,7 @@
   "id": "MAP_OREBURGH_MINE_B1F_SINNOH",
   "name": "OreburghMine_B1F_sinnoh",
   "layout": "LAYOUT_OREBURGH_MINE_B1F_SINNOH",
-  "music": "MUS_RG_MT_MOON",
+  "music": "MUS_DPP_VICTORY_ROAD",
   "region_map_section": "MAPSEC_OREBURGH_MINE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

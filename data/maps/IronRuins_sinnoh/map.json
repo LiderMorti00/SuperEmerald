@@ -2,7 +2,7 @@
   "id": "MAP_IRON_RUINS_SINNOH",
   "name": "IronRuins_sinnoh",
   "layout": "LAYOUT_IRON_RUINS_SINNOH",
-  "music": "MUS_RG_SEVII_CAVE",
+  "music": "MUS_DPP_VICTORY_ROAD",
   "region_map_section": "MAPSEC_IRON_RUINS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

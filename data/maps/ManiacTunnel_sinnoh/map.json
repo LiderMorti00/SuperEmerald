@@ -2,7 +2,7 @@
   "id": "MAP_MANIAC_TUNNEL_SINNOH",
   "name": "ManiacTunnel_sinnoh",
   "layout": "LAYOUT_MANIAC_TUNNEL_SINNOH",
-  "music": "MUS_RG_MT_MOON",
+  "music": "MUS_DPP_VICTORY_ROAD",
   "region_map_section": "MAPSEC_MANIAC_TUNNEL",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

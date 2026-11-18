@@ -2,7 +2,7 @@
   "id": "MAP_SOLACEON_RUINS_ROOM3_SOUTHWEST_SINNOH",
   "name": "SolaceonRuins_Room3_Southwest_sinnoh",
   "layout": "LAYOUT_SOLACEON_RUINS_ROOM3_SOUTHWEST_SINNOH",
-  "music": "MUS_RG_SEVII_CAVE",
+  "music": "MUS_DPP_VICTORY_ROAD",
   "region_map_section": "MAPSEC_SOLACEON_RUINS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

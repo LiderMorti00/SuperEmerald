@@ -2,7 +2,7 @@
   "id": "MAP_RAVAGED_PATH_SINNOH",
   "name": "RavagedPath_sinnoh",
   "layout": "LAYOUT_RAVAGED_PATH_SINNOH",
-  "music": "MUS_RG_MT_MOON",
+  "music": "MUS_DPP_VICTORY_ROAD",
   "region_map_section": "MAPSEC_RAVAGED_PATH",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

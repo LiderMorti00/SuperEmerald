@@ -2,7 +2,7 @@
   "id": "MAP_CANALAVE_CITY_POKEMON_CENTER_1F_SINNOH",
   "name": "CanalaveCity_PokemonCenter_1F_sinnoh",
   "layout": "LAYOUT_CANALAVE_CITY_POKEMON_CENTER_1F_SINNOH",
-  "music": "MUS_POKE_CENTER",
+  "music": "MUS_DPP_PC",
   "region_map_section": "MAPSEC_CANALAVE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

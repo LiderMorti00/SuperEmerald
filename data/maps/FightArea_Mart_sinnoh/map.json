@@ -2,7 +2,7 @@
   "id": "MAP_FIGHT_AREA_MART_SINNOH",
   "name": "FightArea_Mart_sinnoh",
   "layout": "LAYOUT_FIGHT_AREA_MART_SINNOH",
-  "music": "MUS_POKE_MART",
+  "music": "MUS_DPP_MART",
   "region_map_section": "MAPSEC_FIGHT_AREA",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

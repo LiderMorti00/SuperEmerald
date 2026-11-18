@@ -2,7 +2,7 @@
   "id": "MAP_VEILSTONE_CITY_GAME_CORNER_SINNOH",
   "name": "VeilstoneCity_GameCorner_sinnoh",
   "layout": "LAYOUT_VEILSTONE_CITY_GAME_CORNER_SINNOH",
-  "music": "MUS_GAME_CORNER",
+  "music": "MUS_DPP_GAME_CORNER",
   "region_map_section": "MAPSEC_VEILSTONE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

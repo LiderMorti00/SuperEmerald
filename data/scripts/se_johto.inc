@@ -924,11 +924,8 @@ SE_EventScript_MagnetTrainNo::
 	end
 
 SE_Text_MagnetTrainClosed:
-	.string "Sorry, you need a PASS to ride\n"
-	.string "the MAGNET TRAIN.\p"
-	.string "PROF. ELM in NEW BARK TOWN gives\n"
-	.string "one to TRAINERS who beat the\l"
-	.string "JOHTO LEAGUE.$"
+	.string "Sorry, you can't board the\n"
+	.string "MAGNET TRAIN without a PASS.$"
 
 SE_Text_MagnetTrainToSaffron:
 	.string "Welcome to the MAGNET TRAIN!\p"

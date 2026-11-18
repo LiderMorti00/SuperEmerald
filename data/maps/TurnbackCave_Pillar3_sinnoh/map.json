@@ -2,7 +2,7 @@
   "id": "MAP_TURNBACK_CAVE_PILLAR3_SINNOH",
   "name": "TurnbackCave_Pillar3_sinnoh",
   "layout": "LAYOUT_TURNBACK_CAVE_PILLAR3_SINNOH",
-  "music": "MUS_RG_SEVII_CAVE",
+  "music": "MUS_DPP_VICTORY_ROAD",
   "region_map_section": "MAPSEC_TURNBACK_CAVE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
