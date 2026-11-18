@@ -232,11 +232,8 @@ static void PrintRegionMapSecName(void)
 static void PrintTitleWindowText(void)
 {
     static const u8 FlyPromptText[] = _("{R_BUTTON} FLY");
-    const u8 *region;
-    if (IsInKanto()) // Super Fire Red
-        region = gText_Kanto;
-    else
-        region = gText_Hoenn;
+    // Super Emerald: the same title for every region's map
+    static const u8 region[] = _("WORLD");
     u32 hoennOffset = GetStringCenterAlignXOffset(FONT_NORMAL, region, 0x38);
     u32 flyOffset = GetStringCenterAlignXOffset(FONT_NORMAL, FlyPromptText, 0x38);
 
