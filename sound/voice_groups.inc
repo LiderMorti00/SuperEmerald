@@ -253,4 +253,6 @@
 @ Super Emerald: HnS end
 @ Super Emerald: Sinnoh begin
 .include "sound/voicegroups/sinnoh_pt.inc"
+.include "sound/voicegroups/sinnoh_pt_drums.inc"
+.include "sound/voicegroups/sinnoh_pt_banks.inc"
 @ Super Emerald: Sinnoh end

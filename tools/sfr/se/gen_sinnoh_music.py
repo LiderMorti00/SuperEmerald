@@ -17,11 +17,12 @@ gm=vlines('sound/voicegroups/sinnoh_gm.inc')
 hg=vlines('sound/voicegroups/voicegroup229.inc')
 hgx=[l.lstrip('@').strip() for l in open('sound/voicegroups/voicegroup229.inc').read().split('\n') if l.strip().startswith('@\tvoice_') or l.strip().startswith('@ voice_') or l.strip().startswith('@voice_')]
 # Platinum program -> HGSS voicegroup 229 entry
-H={1:39,6:39,16:39,2:0,3:1,4:3,5:4,9:9,10:10,11:5,12:6,13:7,14:8,15:10,17:12,18:11,20:13,21:13,23:13,
+H={2:0,3:1,4:3,5:4,9:9,10:10,11:5,12:6,13:7,14:8,15:10,17:12,18:11,20:13,21:13,23:13,
    24:14,25:15,26:18,27:18,28:18,29:16,30:17,32:19,33:20,34:20,35:41,36:21,37:21,38:22,39:22,40:24,41:24,
    42:25,43:25,44:23,45:26,46:27,47:28,48:23,49:23,50:23,51:23,55:37,56:29,57:30,59:29,60:31,61:32,62:32,63:32,
    68:33,69:33,70:36,71:34,72:35,73:35,74:35,107:42}
-X={52:'voice_directsound 60, 0, DirectSoundWaveData_dp_sopranochoir60, 255, 197, 255, 171',
+X={1:'voice_keysplit_all voicegroup_sinnoh_pt_drums',6:'voice_keysplit_all voicegroup_sinnoh_pt_drums',16:'voice_keysplit_all voicegroup_sinnoh_pt_drums',
+   52:'voice_directsound 60, 0, DirectSoundWaveData_dp_sopranochoir60, 255, 197, 255, 171',
    53:'voice_directsound 60, 0, DirectSoundWaveData_dp_tenorchoir48, 255, 197, 255, 171',
    54:'voice_directsound 60, 0, DirectSoundWaveData_dp_sopranochoir60, 255, 197, 255, 171',
    64:'voice_directsound 60, 0, DirectSoundWaveData_dp_altosax_c3_16, 255, 216, 252, 192',
@@ -45,4 +46,11 @@ for k,v in MAP.items():
     S,E=conv.convert(src,'sound/songs/midi/mus_dpp_%s.mid'%k)
     print(k,v,S,E)
     cfg=re.sub(r'^(mus_dpp_%s\.mid:.*)-G_sinnoh_gm'%k,r'\1-G_sinnoh_pt',cfg,flags=re.M)
+# master volume: Platinum's sequence volume, scaled to sit with the other regions' music
+import json
+d=json.load(open(os.path.join(PLAT,'res/sound/pl_sound_data.json')))
+by={x['fileName']:x for x in d['seqInfo'] if x.get('fileName')}
+for k,v in MAP.items():
+    vol=by[(v if v.startswith(('BATTLE','VICTORY')) else 'SEQ_'+v)+'.sseq']['volume']  # VOLUME
+    cfg=re.sub(r'^(mus_dpp_%s\.mid:\s*)-E -R\d+ -G_sinnoh_pt -V\d+'%k, r'\g<1>-E -R0 -G_sinnoh_pt -V%03d'%round(vol*0.65), cfg, flags=re.M)
 open('sound/songs/midi/midi.cfg','w').write(cfg)
