@@ -31,7 +31,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "local_id": "LOCALID_ETERNA_BARRY",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BARRY",
       "x": 10,
@@ -46,7 +45,6 @@
       "flag": "FLAG_HIDE_ETERNA_BARRY"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_ETERNA_BARRY_STATUE",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BARRY",
       "x": 36,
@@ -61,7 +59,6 @@
       "flag": "FLAG_HIDE_ETERNA_STATUE"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_ETERNA_CYRUS",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_CYRUS",
       "x": 38,
@@ -76,7 +73,6 @@
       "flag": "FLAG_HIDE_ETERNA_STATUE"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_ETERNA_CYNTHIA",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_CYNTHIA",
       "x": 30,
@@ -91,7 +87,6 @@
       "flag": "FLAG_HIDE_ETERNA_STATUE"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BREEDER_M",
       "x": 14,
       "y": 45,
@@ -105,7 +100,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
       "x": 11,
       "y": 35,
@@ -119,7 +113,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY_FRLG",
       "x": 41,
       "y": 14,
@@ -133,7 +126,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MIDDLE_AGED_WOMAN",
       "x": 24,
       "y": 36,
@@ -147,7 +139,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_F",
       "x": 18,
       "y": 37,
@@ -161,7 +152,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BUG_CATCHER",
       "x": 13,
       "y": 25,
@@ -175,7 +165,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BREEDER_F",
       "x": 21,
       "y": 10,
@@ -189,7 +178,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BUG_CATCHER",
       "x": 8,
       "y": 18,
@@ -203,7 +191,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MIDDLE_AGED_WOMAN",
       "x": 13,
       "y": 48,
@@ -217,7 +204,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
       "x": 15,
       "y": 8,
@@ -231,7 +217,6 @@
       "flag": "FLAG_TEMP_11"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
       "x": 16,
       "y": 8,
@@ -245,7 +230,6 @@
       "flag": "FLAG_TEMP_12"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
       "x": 17,
       "y": 8,
@@ -259,7 +243,6 @@
       "flag": "FLAG_TEMP_13"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
       "x": 24,
       "y": 3,
@@ -273,7 +256,6 @@
       "flag": "FLAG_TEMP_14"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 37,
       "y": 5,
@@ -287,7 +269,6 @@
       "flag": "FLAG_SN_ITEM_OLD_MAGMA_HIDEOUT_B2F_NEST_BALL"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 27,
       "y": 45,
@@ -301,7 +282,6 @@
       "flag": "FLAG_SN_ITEM_MOSSDEEP_STEVENS_HOUSE_HM08"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GALAXY_GRUNT_M",
       "x": 42,
       "y": 24,
@@ -315,7 +295,6 @@
       "flag": "FLAG_HIDE_ETERNA_GALACTIC"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GALAXY_GRUNT_M",
       "x": 12,
       "y": 16,
@@ -329,7 +308,6 @@
       "flag": "FLAG_HIDE_ETERNA_GALACTIC"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GALAXY_GRUNT_M",
       "x": 25,
       "y": 22,
@@ -343,7 +321,6 @@
       "flag": "FLAG_HIDE_ETERNA_GALACTIC"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_ETERNA_CYNTHIA",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_CYNTHIA",
       "x": 18,
@@ -358,7 +335,6 @@
       "flag": "FLAG_SN_HIDE_ETERNA_CYNTHIA_EGG"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 36,
       "y": 5,

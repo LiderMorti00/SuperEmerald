@@ -26,7 +26,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
       "x": 61,
       "y": 44,
@@ -40,7 +39,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_POKEFAN_F",
       "x": 33,
       "y": 23,
@@ -54,7 +52,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MIDDLE_AGED_WOMAN",
       "x": 28,
       "y": 19,
@@ -68,7 +65,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_WORKER",
       "x": 19,
       "y": 13,
@@ -82,7 +78,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
       "x": 44,
       "y": 42,
@@ -96,7 +91,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 55,
       "y": 37,
@@ -110,7 +104,7 @@
       "flag": "FLAG_ITEM_SUNYSHORECITY_THUNDER_STONE"
     },
     {
-      "type": "object",
+      "local_id": "LOCALID_SN_SUNY_JASMINE",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_JASMINE",
       "x": 30,
       "y": 13,
@@ -121,11 +115,9 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SunyshoreCity_EventScript_SNJasmine",
-      "flag": "FLAG_SN_HIDE_JASMINE",
-      "local_id": "LOCALID_SN_SUNY_JASMINE"
+      "flag": "FLAG_SN_HIDE_JASMINE"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_FLINT",
       "x": 17,
       "y": 11,
@@ -139,7 +131,6 @@
       "flag": "FLAG_SN_HIDE_FLINT"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_SUNY_BARRY",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BARRY",
       "x": 18,

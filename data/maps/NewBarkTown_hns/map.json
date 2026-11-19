@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -26,6 +27,7 @@
   ],
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN_HNS",
       "x": 20,
       "y": 18,
@@ -40,6 +42,7 @@
     },
     {
       "local_id": "LOCALID_LASS",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LASS_HNS",
       "x": 9,
       "y": 16,
@@ -54,6 +57,7 @@
     },
     {
       "local_id": "LOCALID_SILVER",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SILVER_HNS",
       "x": 7,
       "y": 7,
@@ -67,6 +71,7 @@
       "flag": "FLAG_HIDE_SILVER_NEWBARKTOWN"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_WOOPER",
       "x": 10,
       "y": 23,
@@ -80,6 +85,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PINECO",
       "x": 27,
       "y": 21,
@@ -93,6 +99,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PINECO",
       "x": -2,
       "y": 23,
@@ -106,6 +113,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PINECO",
       "x": 16,
       "y": 4,
@@ -119,6 +127,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PINECO",
       "x": 10,
       "y": 27,
@@ -132,6 +141,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PINECO",
       "x": 7,
       "y": 2,
@@ -146,6 +156,7 @@
     },
     {
       "local_id": "LOCALID_NEWBARK_SE_ORO",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GOLD_NORMAL_HNS",
       "x": 16,
       "y": 13,
@@ -269,6 +280,5 @@
       "quantity": 0,
       "underfoot": false
     }
-  ],
-  "floor_number": 0
+  ]
 }

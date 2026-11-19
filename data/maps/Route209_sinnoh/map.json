@@ -26,7 +26,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BREEDER_M",
       "x": 14,
       "y": 60,
@@ -40,7 +39,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BREEDER_F",
       "x": 46,
       "y": 44,
@@ -54,7 +52,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER_FRLG",
       "x": 52,
       "y": 23,
@@ -68,7 +65,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_M",
       "x": 32,
       "y": 50,
@@ -82,7 +78,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_M",
       "x": 53,
       "y": 50,
@@ -96,7 +91,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_POKE_KID",
       "x": 44,
       "y": 57,
@@ -110,7 +104,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL_FRLG",
       "x": 36,
       "y": 54,
@@ -124,7 +117,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL_FRLG",
       "x": 37,
       "y": 54,
@@ -138,7 +130,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BEAUTY",
       "x": 53,
       "y": 18,
@@ -152,7 +143,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GUITARIST",
       "x": 53,
       "y": 17,
@@ -166,7 +156,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_POKEFAN_M",
       "x": 62,
       "y": 19,
@@ -180,7 +169,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
       "x": 65,
       "y": 24,
@@ -194,7 +182,6 @@
       "flag": "FLAG_TEMP_11"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 19,
       "y": 42,
@@ -208,7 +195,6 @@
       "flag": "FLAG_SN_ITEM_TRICK_HOUSE_PUZZLE_1_ORANGE_MAIL"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 49,
       "y": 55,
@@ -222,7 +208,6 @@
       "flag": "FLAG_SN_ITEM_TRICK_HOUSE_PUZZLE_2_HARBOR_MAIL"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 64,
       "y": 25,
@@ -236,7 +221,6 @@
       "flag": "FLAG_SN_ITEM_TRICK_HOUSE_PUZZLE_2_WAVE_MAIL"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 42,
       "y": 8,
@@ -250,7 +234,6 @@
       "flag": "FLAG_SN_ITEM_TRICK_HOUSE_PUZZLE_3_SHADOW_MAIL"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 60,
       "y": 62,
@@ -264,7 +247,6 @@
       "flag": "FLAG_SN_ITEM_TRICK_HOUSE_PUZZLE_3_WOOD_MAIL"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 48,
       "y": 37,
@@ -278,7 +260,6 @@
       "flag": "FLAG_SN_ITEM_TRICK_HOUSE_PUZZLE_4_MECH_MAIL"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 22,
       "y": 46,
@@ -292,7 +273,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 23,
       "y": 46,
@@ -306,7 +286,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 58,
       "y": 30,
@@ -320,7 +299,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 59,
       "y": 30,
@@ -334,7 +312,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FISHER",
       "x": 23,
       "y": 62,
@@ -348,7 +325,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 43,
       "y": 41,
@@ -362,7 +338,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 63,
       "y": 25,
@@ -376,7 +351,6 @@
       "flag": "FLAG_ITEM_SN_ROUTE209_TM47"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 61,
       "y": 62,

@@ -15,7 +15,6 @@
   "connections": null,
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
       "x": 24,
       "y": 18,
@@ -29,7 +28,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_LASS",
       "x": 24,
       "y": 2,
@@ -43,7 +41,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_SCHOOL_KID_F",
       "x": 4,
       "y": 2,
@@ -57,7 +54,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_M",
       "x": 14,
       "y": 2,
@@ -71,7 +67,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY",
       "x": 4,
       "y": 10,
@@ -85,7 +80,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_F",
       "x": 4,
       "y": 18,
@@ -99,7 +93,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_FANTINA",
       "x": 14,
       "y": 11,
@@ -113,7 +106,7 @@
       "flag": "0"
     },
     {
-      "type": "object",
+      "local_id": "LOCALID_HEARTHOME_GYM_GUIDE",
       "graphics_id": "OBJ_EVENT_GFX_GYM_GUY",
       "x": 15,
       "y": 20,
@@ -124,8 +117,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "HearthomeCity_Gym_EventScript_PtGymGuide",
-      "flag": "0",
-      "local_id": "LOCALID_HEARTHOME_GYM_GUIDE"
+      "flag": "0"
     }
   ],
   "warp_events": [

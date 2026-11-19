@@ -26,7 +26,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_RICH_BOY",
       "x": 26,
       "y": 46,
@@ -40,7 +39,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_LADY",
       "x": 29,
       "y": 47,
@@ -54,7 +52,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GENTLEMAN",
       "x": 9,
       "y": 63,
@@ -68,7 +65,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_SOCIALITE",
       "x": 12,
       "y": 63,
@@ -82,7 +78,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_POLICEMAN",
       "x": 12,
       "y": 26,
@@ -96,7 +91,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_POLICEMAN",
       "x": 12,
       "y": 44,
@@ -110,7 +104,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_POLICEMAN",
       "x": 14,
       "y": 54,
@@ -124,7 +117,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_POLICEMAN",
       "x": 20,
       "y": 64,
@@ -138,7 +130,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
       "x": 15,
       "y": 72,
@@ -152,7 +143,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_FAT_MAN",
       "x": 8,
       "y": 15,
@@ -166,7 +156,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
       "x": 8,
       "y": 74,
@@ -180,7 +169,6 @@
       "flag": "FLAG_TEMP_11"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 10,
       "y": 58,
@@ -194,7 +182,6 @@
       "flag": "FLAG_SN_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_2_SCANNER"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 4,
       "y": 44,
@@ -208,7 +195,6 @@
       "flag": "FLAG_SN_ITEM_SCORCHED_SLAB_TM_SUNNY_DAY"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 13,
       "y": 88,
@@ -222,7 +208,6 @@
       "flag": "FLAG_SN_ITEM_METEOR_FALLS_B1F_2R_TM_DRAGON_CLAW"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 30,
       "y": 35,
@@ -236,7 +221,6 @@
       "flag": "FLAG_SN_ITEM_SHOAL_CAVE_ENTRANCE_BIG_PEARL"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 15,
       "y": 33,
@@ -250,7 +234,6 @@
       "flag": "FLAG_SN_ITEM_SHOAL_CAVE_INNER_ROOM_RARE_CANDY"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 14,
       "y": 64,
@@ -264,7 +247,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 15,
       "y": 64,
@@ -278,7 +260,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 2,
       "y": 84,
@@ -292,7 +273,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 3,
       "y": 84,
@@ -306,7 +286,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 18,
       "y": 50,
@@ -320,7 +299,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 3,
       "y": 44,

@@ -21,7 +21,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
       "x": 4,
       "y": 58,
@@ -35,7 +34,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 21,
       "y": 56,
@@ -49,7 +47,6 @@
       "flag": "FLAG_SN_ITEM_METEOR_FALLS_1F_1R_PP_UP"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_SNOW_F",
       "x": 15,
       "y": 55,
@@ -63,7 +60,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_LASS",
       "x": 26,
       "y": 22,
@@ -77,7 +73,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_SNOW_F",
       "x": 17,
       "y": 9,
@@ -91,7 +86,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_LASS",
       "x": 5,
       "y": 32,
@@ -105,7 +99,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SS_TIDAL",
       "x": 8,
       "y": 60,
@@ -119,7 +112,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_SNOW_CYNTHIA",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_CYNTHIA",
       "x": 6,
@@ -134,7 +126,6 @@
       "flag": "FLAG_SN_HIDE_SNOW_CYNTHIA"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_SKIER_M",
       "x": 11,
       "y": 27,

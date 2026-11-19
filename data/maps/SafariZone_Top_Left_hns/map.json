@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -139,6 +140,7 @@
     },
     {
       "local_id": "LOCALID_SE_LEG_OKIDOGI",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(OKIDOGI)",
       "x": 7,
       "y": 17,
@@ -153,6 +155,7 @@
     },
     {
       "local_id": "LOCALID_SE_LEG_MUNKIDORI",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MUNKIDORI)",
       "x": 22,
       "y": 21,
@@ -167,6 +170,7 @@
     },
     {
       "local_id": "LOCALID_SE_LEG_FEZANDIPITI",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(FEZANDIPITI)",
       "x": 13,
       "y": 22,
@@ -181,6 +185,7 @@
     },
     {
       "local_id": "LOCALID_SE_LEG_WALKING_WAKE",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(WALKING_WAKE)",
       "x": 12,
       "y": 13,
@@ -195,6 +200,7 @@
     },
     {
       "local_id": "LOCALID_SE_LEG_IRON_LEAVES",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(IRON_LEAVES)",
       "x": 17,
       "y": 20,

@@ -36,7 +36,7 @@
   ],
   "object_events": [
     {
-      "type": "object",
+      "local_id": "LOCALID_HEARTHOME_FISHERMAN",
       "graphics_id": "OBJ_EVENT_GFX_FISHER",
       "x": 37,
       "y": 34,
@@ -47,11 +47,9 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "HearthomeCity_EventScript_PtNpc1",
-      "flag": "0",
-      "local_id": "LOCALID_HEARTHOME_FISHERMAN"
+      "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_POKEFAN_M",
       "x": 27,
       "y": 42,
@@ -65,7 +63,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MIDDLE_AGED_WOMAN",
       "x": 49,
       "y": 30,
@@ -79,7 +76,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BREEDER_M",
       "x": 41,
       "y": 17,
@@ -93,7 +89,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_POKEFAN_F",
       "x": 41,
       "y": 25,
@@ -107,7 +102,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ARTIST",
       "x": 20,
       "y": 25,
@@ -121,7 +115,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BATTLE_GIRL",
       "x": 26,
       "y": 25,
@@ -135,7 +128,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BATTLE_GIRL",
       "x": 13,
       "y": 34,
@@ -149,7 +141,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_HIKER",
       "x": 8,
       "y": 14,
@@ -163,7 +154,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MIDDLE_AGED_WOMAN",
       "x": 13,
       "y": 23,
@@ -177,10 +167,9 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_FRLG",
       "x": 22,
-      "y": 9,
+      "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -191,7 +180,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BREEDER_M",
       "x": 24,
       "y": 34,
@@ -205,7 +193,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ARTIST",
       "x": 33,
       "y": 28,
@@ -219,7 +206,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_FRLG",
       "x": 52,
       "y": 20,
@@ -233,7 +219,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MIDDLE_AGED_WOMAN",
       "x": 48,
       "y": 30,
@@ -247,7 +232,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MON_PACHIRISU",
       "x": 8,
       "y": 17,
@@ -261,7 +245,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL_FRLG",
       "x": 23,
       "y": 34,
@@ -275,7 +258,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_KEIRA",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BEAUTY",
       "x": 7,
@@ -290,7 +272,6 @@
       "flag": "FLAG_SN_HIDE_KEIRA"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_BUNEARY",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MON_BUNEARY",
       "x": 6,
@@ -305,7 +286,6 @@
       "flag": "FLAG_SN_HIDE_KEIRA"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GYM_GUY",
       "x": 49,
       "y": 20,
@@ -333,7 +313,6 @@
       "flag": "FLAG_SE_HIDE_LUCAS_HEARTHOME"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WALLY",
       "x": 28,
       "y": 22,
@@ -380,7 +359,7 @@
       "x": 29,
       "y": 12,
       "elevation": 0,
-      "dest_map": "MAP_HEARTHOME_CITY_SINNOH",
+      "dest_map": "MAP_HEARTHOME_CITY_CONTEST_LOBBY",
       "dest_warp_id": "0"
     },
     {

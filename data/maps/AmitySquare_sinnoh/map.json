@@ -21,7 +21,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 31,
       "y": 15,
@@ -35,7 +34,6 @@
       "flag": "FLAG_ITEM_AMITYSQUARE_TM45"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 21,
       "y": 31,
@@ -49,7 +47,6 @@
       "flag": "FLAG_ITEM_AMITYSQUARE_TM43"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 39,
       "y": 37,
@@ -63,7 +60,6 @@
       "flag": "FLAG_ITEM_AMITYSQUARE_SPOOKY_PLATE"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 43,
       "y": 3,
@@ -77,7 +73,6 @@
       "flag": "FLAG_ITEM_AMITYSQUARE_AMULET_COIN"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_RECEPTIONIST",
       "x": 3,
       "y": 43,
@@ -91,7 +86,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_RECEPTIONIST",
       "x": 48,
       "y": 43,
@@ -105,7 +99,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BREEDER_M",
       "x": 34,
       "y": 21,
@@ -119,7 +112,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MON_DRIFLOON",
       "x": 35,
       "y": 21,
@@ -133,7 +125,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MON_HAPPINY",
       "x": 31,
       "y": 7,
@@ -147,7 +138,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MIDDLE_AGED_WOMAN",
       "x": 30,
       "y": 7,
@@ -161,7 +151,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_FAT_MAN",
       "x": 11,
       "y": 28,
@@ -175,7 +164,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MON_PIKACHU",
       "x": 10,
       "y": 28,
@@ -189,7 +177,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL_FRLG",
       "x": 41,
       "y": 25,
@@ -203,7 +190,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MON_CLEFAIRY",
       "x": 42,
       "y": 25,
@@ -217,7 +203,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_COLLECTOR",
       "x": 14,
       "y": 8,
@@ -231,7 +216,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 30,
       "y": 5,
@@ -245,7 +229,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 43,
       "y": 5,
@@ -259,7 +242,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 5,
       "y": 7,
@@ -273,7 +255,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 13,
       "y": 7,
@@ -287,7 +268,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 5,
       "y": 15,
@@ -301,7 +281,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 5,
       "y": 18,
@@ -315,7 +294,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 14,
       "y": 25,
@@ -329,7 +307,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 44,
       "y": 26,
@@ -343,7 +320,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 47,
       "y": 26,
@@ -357,7 +333,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 4,
       "y": 36,
@@ -371,7 +346,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 7,
       "y": 36,
@@ -385,7 +359,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 7,
       "y": 39,

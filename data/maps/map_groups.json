@@ -1766,7 +1766,9 @@
     "HearthomeCity_EastGate_sinnoh",
     "HearthomeCity_Mart_sinnoh",
     "HearthomeCity_Gym_sinnoh",
-    "HearthomeCity_PokemonFanClub_sinnoh"
+    "HearthomeCity_PokemonFanClub_sinnoh",
+    "HearthomeCity_ContestLobby",
+    "HearthomeCity_ContestHall"
   ],
   "gMapGroup_IndoorSolaceon_Sinnoh": [
     "SolaceonTown_House1_sinnoh",
