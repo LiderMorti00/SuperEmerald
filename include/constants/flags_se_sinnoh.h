@@ -173,6 +173,17 @@
 
 #define FLAG_SE_RECEIVED_ROTOM_CATALOG   0x32D9
 #define FLAG_SE_SINNOH_TOWER             0x32DA // set while in Sinnoh's Battle Tower: Palmer is the Frontier Brain and warps lead to the Sinnoh maps
+#define FLAG_SE_TOWER_DATA_SINNOH        0x32DC // the Battle Tower records loaded in the save are Sinnoh's (Hoenn's are in VAR_SE_TOWER_DATA)
 #define FLAG_SE_HEARTHOME_CONTEST        0x32DB // set in Hearthome's contest lobby: Sinnoh opponents, return there after the contest
+
+#define FLAG_SE_EEVEE_FAN_VAPOREON   0x32DD // Celadon Condominiums Eevee fan (Kanto): shown
+#define FLAG_SE_EEVEE_FAN_JOLTEON    0x32DE // Celadon Condominiums Eevee fan (Kanto): shown
+#define FLAG_SE_EEVEE_FAN_FLAREON    0x32DF // Celadon Condominiums Eevee fan (Kanto): shown
+#define FLAG_SE_EEVEE_FAN_ESPEON     0x32E0 // Celadon Condominiums Eevee fan (Kanto): shown
+#define FLAG_SE_EEVEE_FAN_UMBREON    0x32E1 // Celadon Condominiums Eevee fan (Kanto): shown
+#define FLAG_SE_EEVEE_FAN_LEAFEON    0x32E2 // Celadon Condominiums Eevee fan (Kanto): shown
+#define FLAG_SE_EEVEE_FAN_GLACEON    0x32E3 // Celadon Condominiums Eevee fan (Kanto): shown
+#define FLAG_SE_EEVEE_FAN_SYLVEON    0x32E4 // Celadon Condominiums Eevee fan (Kanto): shown
+#define FLAG_SE_EEVEE_FAN_DONE       0x32E5 // Eevee fan: all eight shown, Ability Patch given
 
 #endif // GUARD_CONSTANTS_FLAGS_SE_SINNOH_H

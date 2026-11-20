@@ -5852,3 +5852,63 @@ void SE_CheckPartyHeadbutt(void)
     }
     gSpecialVar_Result = PARTY_SIZE;
 }
+
+// Super Emerald: the Type Master of the National Park (Johto) asks for a different type every day.
+static const u16 sSETypeMasterItems[NUMBER_OF_MON_TYPES] =
+{
+    [TYPE_NORMAL] = ITEM_SILK_SCARF,      [TYPE_FIGHTING] = ITEM_BLACK_BELT,   [TYPE_FLYING] = ITEM_SHARP_BEAK,
+    [TYPE_POISON] = ITEM_POISON_BARB,     [TYPE_GROUND] = ITEM_SOFT_SAND,      [TYPE_ROCK] = ITEM_HARD_STONE,
+    [TYPE_BUG] = ITEM_SILVER_POWDER,      [TYPE_GHOST] = ITEM_SPELL_TAG,       [TYPE_STEEL] = ITEM_METAL_COAT,
+    [TYPE_FIRE] = ITEM_CHARCOAL,          [TYPE_WATER] = ITEM_MYSTIC_WATER,    [TYPE_GRASS] = ITEM_MIRACLE_SEED,
+    [TYPE_ELECTRIC] = ITEM_MAGNET,        [TYPE_PSYCHIC] = ITEM_TWISTED_SPOON, [TYPE_ICE] = ITEM_NEVER_MELT_ICE,
+    [TYPE_DRAGON] = ITEM_DRAGON_FANG,     [TYPE_DARK] = ITEM_BLACK_GLASSES,    [TYPE_FAIRY] = ITEM_FAIRY_FEATHER,
+};
+
+static const u8 sSETypeMasterTypes[] =
+{
+    TYPE_NORMAL, TYPE_FIGHTING, TYPE_FLYING, TYPE_POISON, TYPE_GROUND, TYPE_ROCK, TYPE_BUG, TYPE_GHOST, TYPE_STEEL,
+    TYPE_FIRE, TYPE_WATER, TYPE_GRASS, TYPE_ELECTRIC, TYPE_PSYCHIC, TYPE_ICE, TYPE_DRAGON, TYPE_DARK, TYPE_FAIRY,
+};
+
+static u16 SE_GetDay(void)
+{
+    RtcCalcLocalTime();
+    return gLocalTime.days;
+}
+
+// Out: VAR_0x8004 = today's type, VAR_0x8005 = its reward, STR_VAR_1 = type name,
+//      VAR_RESULT = TRUE if the player already showed it today.
+void SE_GetDailyType(void)
+{
+    u16 day = SE_GetDay();
+    u8 type = sSETypeMasterTypes[(day * 7 + 5) % ARRAY_COUNT(sSETypeMasterTypes)];
+
+    gSpecialVar_0x8004 = type;
+    gSpecialVar_0x8005 = sSETypeMasterItems[type];
+    StringCopy(gStringVar1, gTypesInfo[type].name);
+    gSpecialVar_Result = (VarGet(VAR_SE_TYPE_MASTER_DAY) == (u16)(day + 1));
+}
+
+void SE_SetDailyTypeDone(void)
+{
+    VarSet(VAR_SE_TYPE_MASTER_DAY, SE_GetDay() + 1);
+}
+
+// In: VAR_0x8004 = type. Out: VAR_RESULT = TRUE if a party Pokemon (not an egg) has that type.
+void SE_CheckPartyHasType(void)
+{
+    u32 i;
+
+    gSpecialVar_Result = FALSE;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG);
+        if (species == SPECIES_NONE || species == SPECIES_EGG)
+            continue;
+        if (GetSpeciesType(species, 0) == gSpecialVar_0x8004 || GetSpeciesType(species, 1) == gSpecialVar_0x8004)
+        {
+            gSpecialVar_Result = TRUE;
+            return;
+        }
+    }
+}

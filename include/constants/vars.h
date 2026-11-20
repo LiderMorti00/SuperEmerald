@@ -415,6 +415,9 @@
 #define VAR_SE_THIEF_QUEST            0x5013 // Pewter Museum thief (Kanto): 0 unknown, 1 Mt. Moon, 2 Route 24, 3 caught, 4 rewarded
 #define VAR_SE_SPIRIT_QUEST           0x5014 // Restless spirits (Kanto): 0 unknown, 1-3 Pokemon Tower floors, 4 calmed, 5 rewarded
 #define VAR_SE_GALACTIC_QUEST         0x5015 // Looker's last case (Sinnoh): 0 Looker, 1 Mars, 2 Jupiter, 3 Saturn, 4 Charon, 5 back to Looker, 6 done
+#define VAR_SE_TOWER_DATA_START       0x5016 // 0x5016-0x5026: the Battle Tower data that isn't loaded (Hoenn or Sinnoh), see SE_SwapTowerData
+#define VAR_SE_TOWER_DATA_END         0x5026
+#define VAR_SE_TYPE_MASTER_DAY        0x5027 // National Park Type Master (Johto): day of the last shown type + 1
 
 #define VAR_SE_SINNOH_STATE_VERSION   0x5040 // Super Emerald: bump SE_SINNOH_STATE_VERSION when the Sinnoh state changes
 #define SE_SINNOH_STATE_VERSION       4

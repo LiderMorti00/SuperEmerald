@@ -3536,3 +3536,69 @@ static const struct FrontierBrainMon *SE_GetBrainMons(s32 facility, s32 symbol)
         return sSEPalmerMons[symbol];
     return sFrontierBrainsMons[facility][symbol];
 }
+
+// Super Emerald: Hoenn's and Sinnoh's Battle Towers keep separate records. The save holds the
+// records of the tower in use; the other tower's are kept in VAR_SE_TOWER_DATA_START..END.
+// Swapped: win streaks, record streaks, active-streak bits, Frontier Brain bits and symbols.
+#define SE_TOWER_STREAK_BITS (STREAK_TOWER_SINGLES_50 | STREAK_TOWER_SINGLES_OPEN | STREAK_TOWER_DOUBLES_50 | STREAK_TOWER_DOUBLES_OPEN)
+
+static void SE_SwapTowerData(void)
+{
+    u32 i, j, n = 0;
+    u16 packed, other;
+
+    for (i = 0; i < 4; i++)
+    {
+        for (j = 0; j < FRONTIER_LVL_MODE_COUNT; j++)
+        {
+            u16 tmp = gSaveBlock2Ptr->frontier.towerWinStreaks[i][j];
+            gSaveBlock2Ptr->frontier.towerWinStreaks[i][j] = VarGet(VAR_SE_TOWER_DATA_START + n);
+            VarSet(VAR_SE_TOWER_DATA_START + n, tmp);
+            tmp = gSaveBlock2Ptr->frontier.towerRecordWinStreaks[i][j];
+            gSaveBlock2Ptr->frontier.towerRecordWinStreaks[i][j] = VarGet(VAR_SE_TOWER_DATA_START + 8 + n);
+            VarSet(VAR_SE_TOWER_DATA_START + 8 + n, tmp);
+            n++;
+        }
+    }
+
+    packed = 0;
+    if (gSaveBlock2Ptr->frontier.winStreakActiveFlags & STREAK_TOWER_SINGLES_50)   packed |= 1 << 0;
+    if (gSaveBlock2Ptr->frontier.winStreakActiveFlags & STREAK_TOWER_SINGLES_OPEN) packed |= 1 << 1;
+    if (gSaveBlock2Ptr->frontier.winStreakActiveFlags & STREAK_TOWER_DOUBLES_50)   packed |= 1 << 2;
+    if (gSaveBlock2Ptr->frontier.winStreakActiveFlags & STREAK_TOWER_DOUBLES_OPEN) packed |= 1 << 3;
+    if (gSaveBlock2Ptr->frontier.battledBrainFlags & (1 << 0)) packed |= 1 << 4;
+    if (gSaveBlock2Ptr->frontier.battledBrainFlags & (1 << 1)) packed |= 1 << 5;
+    if (FlagGet(FLAG_SYS_TOWER_SILVER)) packed |= 1 << 6;
+    if (FlagGet(FLAG_SYS_TOWER_GOLD))   packed |= 1 << 7;
+    other = VarGet(VAR_SE_TOWER_DATA_END);
+    VarSet(VAR_SE_TOWER_DATA_END, packed);
+
+    gSaveBlock2Ptr->frontier.winStreakActiveFlags &= ~SE_TOWER_STREAK_BITS;
+    if (other & (1 << 0)) gSaveBlock2Ptr->frontier.winStreakActiveFlags |= STREAK_TOWER_SINGLES_50;
+    if (other & (1 << 1)) gSaveBlock2Ptr->frontier.winStreakActiveFlags |= STREAK_TOWER_SINGLES_OPEN;
+    if (other & (1 << 2)) gSaveBlock2Ptr->frontier.winStreakActiveFlags |= STREAK_TOWER_DOUBLES_50;
+    if (other & (1 << 3)) gSaveBlock2Ptr->frontier.winStreakActiveFlags |= STREAK_TOWER_DOUBLES_OPEN;
+    gSaveBlock2Ptr->frontier.battledBrainFlags &= ~((1 << 0) | (1 << 1));
+    if (other & (1 << 4)) gSaveBlock2Ptr->frontier.battledBrainFlags |= 1 << 0;
+    if (other & (1 << 5)) gSaveBlock2Ptr->frontier.battledBrainFlags |= 1 << 1;
+    if (other & (1 << 6)) FlagSet(FLAG_SYS_TOWER_SILVER); else FlagClear(FLAG_SYS_TOWER_SILVER);
+    if (other & (1 << 7)) FlagSet(FLAG_SYS_TOWER_GOLD);   else FlagClear(FLAG_SYS_TOWER_GOLD);
+}
+
+void SE_UseSinnohTowerData(void)
+{
+    if (!FlagGet(FLAG_SE_TOWER_DATA_SINNOH))
+    {
+        SE_SwapTowerData();
+        FlagSet(FLAG_SE_TOWER_DATA_SINNOH);
+    }
+}
+
+void SE_UseHoennTowerData(void)
+{
+    if (FlagGet(FLAG_SE_TOWER_DATA_SINNOH))
+    {
+        SE_SwapTowerData();
+        FlagClear(FLAG_SE_TOWER_DATA_SINNOH);
+    }
+}

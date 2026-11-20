@@ -12,7 +12,7 @@ PLAN={
 'CinnabarIsland_Frlg':['RESHIRAM'],
 'Route10_Frlg':['ZEKROM'],
 'SeafoamIslands_B4F_Frlg':['KYUREM'],
-'MossdeepCity':['JIRACHI'],
+'MeteorFalls_1F_1R':['JIRACHI'],
 'Route120':['XERNEAS'],
 'MtPyre_Summit':['YVELTAL'],
 'DesertUnderpass':['ZYGARDE'],

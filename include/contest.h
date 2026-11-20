@@ -76,7 +76,7 @@ enum {
     CONTEST_FILTER_NONE,
     CONTEST_FILTER_NO_POSTGAME,
     CONTEST_FILTER_ONLY_POSTGAME,
-    CONTEST_FILTER_SINNOH, // Super Emerald: only in Hearthome City's contests
+    CONTEST_FILTER_SINNOH, // Super Emerald: the stars (leaders, Elite Four, champions, Daisy): Hearthome, and Lilycove after the league
 };
 
 // Constants for changing in-contest Condition (the stars that appear during appeals)

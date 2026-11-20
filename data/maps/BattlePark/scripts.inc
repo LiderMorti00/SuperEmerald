@@ -1,6 +1,7 @@
 @ Super Emerald: Battle Park (outside Sinnoh's Battle Tower). NPCs from Pokémon Diamond's
 @ Battle Park (pret/pokediamond, zone 309 / message bank 281), adapted to this game.
 BattlePark_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_BattleTowerSinnoh_OnTransitionOutside
 	.byte 0
 
 BattlePark_EventScript_TowerSign::

@@ -10,4 +10,5 @@ BattleTower_Sinnoh_MapScripts::
 
 BattleTower_Sinnoh_OnTransition:
 	setflag FLAG_SE_SINNOH_TOWER
+	special SE_UseSinnohTowerData
 	goto SE_BattleTowerLobby_OnTransition

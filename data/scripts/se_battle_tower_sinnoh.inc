@@ -4,6 +4,12 @@
 
 SE_BattleTowerSinnoh_SetFlag::
 	setflag FLAG_SE_SINNOH_TOWER
+	special SE_UseSinnohTowerData
+	end
+
+@ Battle Park (outside): the save holds Hoenn's tower records again
+SE_BattleTowerSinnoh_OnTransitionOutside::
+	special SE_UseHoennTowerData
 	end
 
 SE_BattleTowerSinnoh_WarpToElevator::

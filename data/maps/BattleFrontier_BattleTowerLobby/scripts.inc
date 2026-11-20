@@ -11,6 +11,7 @@ BattleFrontier_BattleTowerLobby_OnResume:
 
 BattleFrontier_BattleTowerLobby_OnTransition:
 	clearflag FLAG_SE_SINNOH_TOWER
+	special SE_UseHoennTowerData
 SE_BattleTowerLobby_OnTransition:
 	call BattleFrontier_BattleTowerLobby_EventScript_ShowOrHideReporter
 	apprentice_shouldcheckgone

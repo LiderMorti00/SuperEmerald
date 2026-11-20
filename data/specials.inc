@@ -234,6 +234,11 @@ gSpecials::
 	def_special DoPCTurnOffEffect
 	def_special SetDeptStoreFloor
 	def_special SE_SetSinnohElevatorFloor
+	def_special SE_UseSinnohTowerData
+	def_special SE_UseHoennTowerData
+	def_special SE_GetDailyType
+	def_special SE_SetDailyTypeDone
+	def_special SE_CheckPartyHasType
 	def_special DoLotteryCornerComputerEffect
 	def_special EndLotteryCornerComputerEffect
 	def_special ChooseMonForMoveRelearner, waitstate=1

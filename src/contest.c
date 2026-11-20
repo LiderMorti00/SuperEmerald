@@ -2962,9 +2962,10 @@ void CreateContestMonFromParty(u8 partyIndex)
 void SetContestants(enum ContestCategories contestType, u8 rank)
 {
     s32 i;
-    u8 opponentsCount = 0;
-    u8 opponents[ARRAY_COUNT(gContestOpponents) + 1];
+    u16 opponentsCount = 0;
+    u16 opponents[ARRAY_COUNT(gContestOpponents) + 1];
     bool8 allowPostgameContestants = FALSE;
+    bool8 hearthome = FlagGet(FLAG_SE_HEARTHOME_CONTEST) && !(gLinkContestFlags & LINK_CONTEST_FLAG_IS_LINK);
 
     TryPutPlayerLast();
 
@@ -2976,8 +2977,11 @@ void SetContestants(enum ContestCategories contestType, u8 rank)
     {
         if (rank == gContestOpponents[i].whichRank)
         {
-            // Super Emerald: Hearthome's contests only have Sinnoh's leaders, Lilycove's never do
-            if ((gContestOpponents[i].filter == CONTEST_FILTER_SINNOH) != (FlagGet(FLAG_SE_HEARTHOME_CONTEST) && !(gLinkContestFlags & LINK_CONTEST_FLAG_IS_LINK)))
+            // Super Emerald: Hearthome's contests only have the stars (leaders, Elite Four, champions
+            // and Daisy); Lilycove's have the usual coordinators, plus the stars after the league
+            if (hearthome && gContestOpponents[i].filter != CONTEST_FILTER_SINNOH)
+                continue;
+            if (!hearthome && gContestOpponents[i].filter == CONTEST_FILTER_SINNOH && !allowPostgameContestants)
                 continue;
             if (allowPostgameContestants == TRUE)
             {
@@ -3001,7 +3005,7 @@ void SetContestants(enum ContestCategories contestType, u8 rank)
                 opponents[opponentsCount++] = i;
         }
     }
-    opponents[opponentsCount] = CONTESTANT_NONE;
+    opponents[opponentsCount] = 0xFFFF;
 
     // Choose three random opponents from the list
     for (i = 0; i < CONTESTANT_COUNT - 1; i++)
@@ -3010,7 +3014,7 @@ void SetContestants(enum ContestCategories contestType, u8 rank)
         s32 j;
 
         gContestMons[i] = gContestOpponents[opponents[rnd]];
-        for (j = rnd; opponents[j] != CONTESTANT_NONE; j++)
+        for (j = rnd; opponents[j] != 0xFFFF; j++)
             opponents[j] = opponents[j + 1];
         opponentsCount--;
     }
@@ -3021,8 +3025,8 @@ void SetContestants(enum ContestCategories contestType, u8 rank)
 void SetLinkAIContestants(enum ContestCategories contestType, u8 rank, bool32 isPostgame)
 {
     s32 i, j;
-    u8 opponentsCount = 0;
-    u8 opponents[ARRAY_COUNT(gContestOpponents) + 1];
+    u16 opponentsCount = 0;
+    u16 opponents[ARRAY_COUNT(gContestOpponents) + 1];
 
     if (gNumLinkContestPlayers == CONTESTANT_COUNT)
         return;
@@ -3052,7 +3056,7 @@ void SetLinkAIContestants(enum ContestCategories contestType, u8 rank, bool32 is
             || (contestType == CONTEST_CATEGORY_TOUGH && gContestOpponents[i].aiPool_Tough))
             opponents[opponentsCount++] = i;
     }
-    opponents[opponentsCount] = CONTESTANT_NONE;
+    opponents[opponentsCount] = 0xFFFF;
 
     // Fill remaining contestant slots with random AI opponents from the list
     for (i = 0; i < CONTESTANT_COUNT - gNumLinkContestPlayers; i++)
@@ -3062,7 +3066,7 @@ void SetLinkAIContestants(enum ContestCategories contestType, u8 rank, bool32 is
         gContestMons[gNumLinkContestPlayers + i] = gContestOpponents[opponents[rnd]];
         StripPlayerNameForLinkContest(gContestMons[gNumLinkContestPlayers + i].trainerName);
         StripMonNameForLinkContest(gContestMons[gNumLinkContestPlayers + i].nickname, GAME_LANGUAGE);
-        for (j = rnd; opponents[j] != CONTESTANT_NONE; j++)
+        for (j = rnd; opponents[j] != 0xFFFF; j++)
             opponents[j] = opponents[j + 1];
         opponentsCount--;
     }
