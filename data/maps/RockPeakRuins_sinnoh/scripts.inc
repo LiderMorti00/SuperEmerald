@@ -6,10 +6,10 @@ RockPeakRuins_EventScript_SNREGIROCK::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_REGIROCK, CRY_MODE_ENCOUNTER
+	playmoncry SPECIES_REGIDRAGO, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_REGIROCK, 65
+	setwildbattle SPECIES_REGIDRAGO, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
 	waitstate
@@ -22,7 +22,7 @@ RockPeakRuins_EventScript_SNREGIROCK::
 	goto Common_EventScript_RemoveStaticPokemon
 
 RockPeakRuins_EventScript_SNREGIROCK_Ran::
-	setvar VAR_0x8004, SPECIES_REGIROCK
+	setvar VAR_0x8004, SPECIES_REGIDRAGO
 	goto Common_EventScript_LegendaryFlewAway
 
 RockPeakRuins_EventScript_PtSign1::

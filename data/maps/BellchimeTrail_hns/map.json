@@ -693,6 +693,21 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "BellchimeTrail_EventScript_Morty",
       "flag": "FLAG_HIDE_BELLCHIME_MORTY"
+    },
+    {
+      "local_id": "LOCALID_SE_LEG_PECHARUNT",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(PECHARUNT)",
+      "x": 35,
+      "y": 34,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SE_EventScript_Leg_PECHARUNT",
+      "flag": "FLAG_SE_LEG_PECHARUNT"
     }
   ],
   "warp_events": [

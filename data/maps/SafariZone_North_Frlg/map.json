@@ -57,48 +57,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SafariZone_North_EventScript_ItemQuickClaw",
       "flag": "FLAG_HIDE_SAFARI_ZONE_NORTH_QUICK_CLAW"
-    },
-    {
-      "local_id": "LOCALID_SE_LEG_TORNADUS",
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(TORNADUS)",
-      "x": 46,
-      "y": 13,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_EventScript_Leg_TORNADUS",
-      "flag": "FLAG_SE_LEG_TORNADUS"
-    },
-    {
-      "local_id": "LOCALID_SE_LEG_THUNDURUS",
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(THUNDURUS)",
-      "x": 10,
-      "y": 28,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_EventScript_Leg_THUNDURUS",
-      "flag": "FLAG_SE_LEG_THUNDURUS"
-    },
-    {
-      "local_id": "LOCALID_SE_LEG_LANDORUS",
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(LANDORUS)",
-      "x": 21,
-      "y": 6,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_EventScript_Leg_LANDORUS",
-      "flag": "FLAG_SE_LEG_LANDORUS"
     }
   ],
   "warp_events": [

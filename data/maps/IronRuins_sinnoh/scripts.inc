@@ -6,10 +6,10 @@ IronRuins_EventScript_SNREGISTEEL::
 	lock
 	faceplayer
 	waitse
-	playmoncry SPECIES_REGISTEEL, CRY_MODE_ENCOUNTER
+	playmoncry SPECIES_REGIELEKI, CRY_MODE_ENCOUNTER
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_REGISTEEL, 65
+	setwildbattle SPECIES_REGIELEKI, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
 	waitstate
@@ -22,7 +22,7 @@ IronRuins_EventScript_SNREGISTEEL::
 	goto Common_EventScript_RemoveStaticPokemon
 
 IronRuins_EventScript_SNREGISTEEL_Ran::
-	setvar VAR_0x8004, SPECIES_REGISTEEL
+	setvar VAR_0x8004, SPECIES_REGIELEKI
 	goto Common_EventScript_LegendaryFlewAway
 
 IronRuins_EventScript_PtSign1::

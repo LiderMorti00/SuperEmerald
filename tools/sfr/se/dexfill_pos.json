@@ -1,215 +1,277 @@
 {
-"SafariZone_Center_Frlg": [
+"PokemonMansion_B1F_Frlg": [
 [
-10,
-23
+19,
+18
+]
 ],
-[
-41,
-7
-],
+"Route25_Frlg": [
 [
 36,
-28
+8
 ]
 ],
-"SafariZone_East_Frlg": [
-[
-13,
-19
-],
-[
-43,
-28
-],
-[
-34,
-7
-]
-],
-"SafariZone_North_Frlg": [
-[
-46,
-13
-],
+"Route14_Frlg": [
 [
 10,
-28
-],
-[
-21,
-6
-]
-],
-"SafariZone_West_Frlg": [
-[
-26,
-29
-],
-[
-8,
-11
-],
-[
-38,
-13
-]
-],
-"SafariZone_South": [
-[
-29,
-27
-]
-],
-"SafariZone_Southwest": [
-[
-8,
-6
-]
-],
-"SafariZone_North": [
-[
-22,
-28
-]
-],
-"SafariZone_Northwest": [
-[
-34,
-25
-]
-],
-"SafariZone_Southeast": [
-[
-31,
-36
-],
-[
-10,
-5
-]
-],
-"SafariZone_Northeast": [
-[
-6,
 30
 ]
 ],
-"SafariZone_Top_Mid_hns": [
+"RockTunnel_B1F_Frlg": [
 [
-20,
-7
-],
-[
-29,
-23
-],
-[
-8,
-16
-],
-[
-16,
-22
-]
-],
-"SafariZone_Low_Mid_hns": [
-[
-8,
-14
-],
-[
-27,
-27
-],
-[
-20,
-6
-],
-[
-13,
-24
-]
-],
-"SafariZone_Top_Left_hns": [
-[
-7,
-17
-],
-[
-22,
-21
-],
-[
-13,
-22
-],
-[
-12,
-13
-],
-[
-17,
+24,
 20
 ]
 ],
-"SafariZone_Top_Right_hns": [
+"CeruleanCave_2F_Frlg": [
+[
+30,
+9
+]
+],
+"ViridianForest_Frlg": [
+[
+22,
+32
+]
+],
+"Route9_Frlg": [
+[
+34,
+12
+]
+],
+"PowerPlant_Frlg": [
+[
+24,
+17
+]
+],
+"DiglettsCave_B1F_Frlg": [
+[
+42,
+39
+]
+],
+"CinnabarIsland_Frlg": [
+[
+26,
+21
+]
+],
+"Route10_Frlg": [
+[
+11,
+42
+]
+],
+"SeafoamIslands_B4F_Frlg": [
+[
+19,
+9
+]
+],
+"MossdeepCity": [
+[
+41,
+22
+]
+],
+"Route120": [
+[
+19,
+65
+]
+],
+"MtPyre_Summit": [
 [
 23,
-10
+17
+]
 ],
+"DesertUnderpass": [
 [
-5,
-18
+72,
+9
+]
 ],
-[
-16,
-26
-],
+"GraniteCave_B2F": [
 [
 20,
+13
+]
+],
+"MtPyre_6F": [
+[
+11,
+10
+]
+],
+"FieryPath": [
+[
+19,
 18
 ]
 ],
-"GreatMarsh_sinnoh": [
+"MtMortar_1F_North_hns": [
 [
-20,
-7
+38,
+43
+]
 ],
+"DragonsDen_Cavern_hns": [
 [
-62,
-78
+31,
+37
+]
 ],
+"MtSilver_3F_hns": [
 [
-3,
-56
+27,
+14
+]
 ],
+"BellchimeTrail_hns": [
 [
-44,
-39
+35,
+34
+]
 ],
+"UnionCave_B1F_hns": [
+[
+22,
+26
+]
+],
+"IcePath_B2F_hns": [
+[
+17,
+26
+]
+],
+"IlexForest_hns": [
+[
+42,
+34
+]
+],
+"BurnedTower_B1F_hns": [
+[
+8,
+8
+]
+],
+"Route47_hns": [
+[
+70,
+30
+]
+],
+"RuinsOfAlph_Outside_hns": [
 [
 23,
-86
+24
+]
 ],
+"NationalPark_Normal_hns": [
 [
-54,
-4
+24,
+28
+]
 ],
+"LakeOfRage_hns": [
 [
-9,
-29
+34,
+36
+]
 ],
+"Route36_hns": [
 [
-40,
-68
+37,
+15
+]
 ],
+"DarkCave_NorthSide_hns": [
 [
-25,
-50
+30,
+18
+]
 ],
+"OlivineCity_Lighthouse_hns": [
+[
+77,
+9
+]
+],
+"Route44_hns": [
 [
 39,
+15
+]
+],
+"Route28_hns": [
+[
+33,
+18
+]
+],
+"EternaForest_sinnoh": [
+[
+40,
+51
+]
+],
+"IronIsland_B2F_Left_sinnoh": [
+[
+22,
+27
+]
+],
+"WaywardCave_B1F_sinnoh": [
+[
+11,
+23
+]
+],
+"Route225_sinnoh": [
+[
+16,
+53
+]
+],
+"Route229_sinnoh": [
+[
+32,
+13
+]
+],
+"Route217_sinnoh": [
+[
+18,
+58
+]
+],
+"LostTower_5F_sinnoh": [
+[
+2,
+7
+]
+],
+"FloaromaMeadow_sinnoh": [
+[
+30,
+27
+]
+],
+"Route224_sinnoh": [
+[
+32,
+47
+]
+],
+"Route230_sinnoh": [
+[
+48,
 16
 ]
 ],

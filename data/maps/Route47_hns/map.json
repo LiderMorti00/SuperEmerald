@@ -482,6 +482,21 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route47_EventScript_Item_LuckyPunch",
       "flag": "FLAG_ITEM_LUCKY_PUNCH"
+    },
+    {
+      "local_id": "LOCALID_SE_LEG_OKIDOGI",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(OKIDOGI)",
+      "x": 70,
+      "y": 30,
+      "elevation": 4,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SE_EventScript_Leg_OKIDOGI",
+      "flag": "FLAG_SE_LEG_OKIDOGI"
     }
   ],
   "warp_events": [

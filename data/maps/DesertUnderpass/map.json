@@ -28,6 +28,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DesertUnderpass_EventScript_Fossil",
       "flag": "FLAG_HIDE_DESERT_UNDERPASS_FOSSIL"
+    },
+    {
+      "local_id": "LOCALID_SE_LEG_ZYGARDE",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(ZYGARDE)",
+      "x": 72,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SE_EventScript_Leg_ZYGARDE",
+      "flag": "FLAG_SE_LEG_ZYGARDE"
     }
   ],
   "warp_events": [
