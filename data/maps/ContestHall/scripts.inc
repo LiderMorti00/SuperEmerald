@@ -401,6 +401,7 @@ ContestHall_EventScript_CreateWirelessContestAudience::
 
 ContestHall_EventScript_SetExitWarp::
 	special ClearLinkContestFlags
+	goto_if_set FLAG_SE_HEARTHOME_CONTEST, SE_ContestHall_ExitToHearthome
 	switch VAR_CONTEST_TYPE
 	case CONTEST_TYPE_NPC_NORMAL, ContestHall_EventScript_SetExitWarpNormalContest
 	case CONTEST_TYPE_NPC_SUPER, ContestHall_EventScript_SetExitWarpSuperContest
@@ -408,6 +409,11 @@ ContestHall_EventScript_SetExitWarp::
 	case CONTEST_TYPE_NPC_MASTER, ContestHall_EventScript_SetExitWarpMasterContest
 	case CONTEST_TYPE_LINK, ContestHall_EventScript_SetExitWarpLinkContest
 	return
+
+SE_ContestHall_ExitToHearthome::
+	warp MAP_HEARTHOME_CITY_CONTEST_LOBBY, 14, 4
+	waitstate
+	end
 
 ContestHall_EventScript_SetExitWarpNormalContest::
 	warp MAP_LILYCOVE_CITY_CONTEST_LOBBY, 14, 4

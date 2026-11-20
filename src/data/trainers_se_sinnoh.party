@@ -2149,3 +2149,17 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Trick Room
 - Explosion
 
+
+=== TRAINER_SE_PALMER ===
+Name: PALMER
+Class: Tower Tycoon
+Pic: Sinnoh Tower Tycoon Palmer
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Rhyperior
+Level: 50
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+

@@ -33,6 +33,7 @@ BattleFrontier_BattleTowerCorridor_EventScript_WalkToFarDoor::
 
 BattleFrontier_BattleTowerCorridor_EventScript_WarpToBattleRoom::
 	setvar VAR_TEMP_0, 0
+	goto_if_set FLAG_SE_SINNOH_TOWER, SE_BattleTowerSinnoh_WarpToBattleRoom
 	warp MAP_BATTLE_FRONTIER_BATTLE_TOWER_BATTLE_ROOM, 4, 8
 	waitstate
 	end

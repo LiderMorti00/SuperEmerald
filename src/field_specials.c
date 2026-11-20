@@ -1873,6 +1873,35 @@ void SetDeptStoreFloor(void)
     VarSet(VAR_DEPT_STORE_FLOOR, deptStoreFloor);
 }
 
+// Super Emerald: elevators of the Veilstone Dept. Store and the Sunyshore Vista Lighthouse.
+// Sets VAR_DEPT_STORE_FLOOR to the floor the player got on at (from the dynamic warp).
+static const struct { u16 map; u8 floor; } sSESinnohElevatorFloors[] =
+{
+    { MAP_VEILSTONE_CITY_DEPARTMENT_STORE_1F_SINNOH, DEPT_STORE_FLOORNUM_1F },
+    { MAP_VEILSTONE_CITY_DEPARTMENT_STORE_2F_SINNOH, DEPT_STORE_FLOORNUM_2F },
+    { MAP_VEILSTONE_CITY_DEPARTMENT_STORE_3F_SINNOH, DEPT_STORE_FLOORNUM_3F },
+    { MAP_VEILSTONE_CITY_DEPARTMENT_STORE_4F_SINNOH, DEPT_STORE_FLOORNUM_4F },
+    { MAP_VEILSTONE_CITY_DEPARTMENT_STORE_5F_SINNOH, DEPT_STORE_FLOORNUM_5F },
+    { MAP_SUNYSHORE_CITY_SINNOH,                     DEPT_STORE_FLOORNUM_1F },
+    { MAP_SUNYSHORE_CITY_VISTA_LIGHTHOUSE_SINNOH,    DEPT_STORE_FLOORNUM_ROOFTOP },
+};
+
+void SE_SetSinnohElevatorFloor(void)
+{
+    u32 i;
+    u16 map = (gSaveBlock1Ptr->dynamicWarp.mapGroup << 8) | gSaveBlock1Ptr->dynamicWarp.mapNum;
+
+    VarSet(VAR_DEPT_STORE_FLOOR, DEPT_STORE_FLOORNUM_1F);
+    for (i = 0; i < ARRAY_COUNT(sSESinnohElevatorFloors); i++)
+    {
+        if (sSESinnohElevatorFloors[i].map == map)
+        {
+            VarSet(VAR_DEPT_STORE_FLOOR, sSESinnohElevatorFloors[i].floor);
+            break;
+        }
+    }
+}
+
 u16 GetDeptStoreDefaultFloorChoice(void)
 {
     sLilycoveDeptStore_DefaultFloorChoice = 0;

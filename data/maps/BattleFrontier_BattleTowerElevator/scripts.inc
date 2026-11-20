@@ -30,6 +30,7 @@ BattleFrontier_BattleTowerElevator_EventScript_WarpToNextRoom::
 	return
 
 BattleFrontier_BattleTowerElevator_EventScript_WarpToCorridor::
+	goto_if_set FLAG_SE_SINNOH_TOWER, SE_BattleTowerSinnoh_WarpToCorridor
 	warp MAP_BATTLE_FRONTIER_BATTLE_TOWER_CORRIDOR, 8, 1
 	waitstate
 	return

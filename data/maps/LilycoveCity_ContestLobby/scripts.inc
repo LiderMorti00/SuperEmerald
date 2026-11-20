@@ -6,6 +6,8 @@ LilycoveCity_ContestLobby_MapScripts::
 @ Some scripts for this room are split into data/scripts/contest_hall and data/scripts/berry_blender
 
 LilycoveCity_ContestLobby_OnTransition:
+	clearflag FLAG_SE_HEARTHOME_CONTEST
+SE_ContestLobby_OnTransition:
 	call LilycoveCity_ContestLobby_EventScript_TryShowContestReporter
 	call LilycoveCity_ContestLobby_EventScript_TryShowBlendMaster
 	end

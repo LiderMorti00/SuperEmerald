@@ -17882,7 +17882,9 @@
       "primary_tileset": "gTileset_Building_Sinnoh",
       "secondary_tileset": "gTileset_Pasos_Sinnoh",
       "border_filepath": "data/layouts/BattlePark_Access/border.bin",
-      "blockdata_filepath": "data/layouts/BattlePark_Access/map.bin"
+      "blockdata_filepath": "data/layouts/BattlePark_Access/map.bin",
+      "border_width": 2,
+      "border_height": 2
     },
     {
       "id": "LAYOUT_BATTLE_PARK",
@@ -17902,7 +17904,9 @@
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleFrontier",
       "border_filepath": "data/layouts/BattleTower_Corridor_Sinnoh/border.bin",
-      "blockdata_filepath": "data/layouts/BattleTower_Corridor_Sinnoh/map.bin"
+      "blockdata_filepath": "data/layouts/BattleTower_Corridor_Sinnoh/map.bin",
+      "border_width": 0,
+      "border_height": 0
     },
     {
       "id": "LAYOUT_BATTLE_TOWER_SINNOH",
@@ -17912,7 +17916,9 @@
       "primary_tileset": "gTileset_Building_Sinnoh",
       "secondary_tileset": "gTileset_BattleFrontier",
       "border_filepath": "data/layouts/BattleTower_Sinnoh/border.bin",
-      "blockdata_filepath": "data/layouts/BattleTower_Sinnoh/map.bin"
+      "blockdata_filepath": "data/layouts/BattleTower_Sinnoh/map.bin",
+      "border_width": 0,
+      "border_height": 0
     },
     {
       "id": "LAYOUT_BATTLE_TOWER_BATTLE_ROOM_SINNOH",
@@ -17922,7 +17928,9 @@
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleFrontier",
       "border_filepath": "data/layouts/BattleTower_BattleRoom_Sinnoh/border.bin",
-      "blockdata_filepath": "data/layouts/BattleTower_BattleRoom_Sinnoh/map.bin"
+      "blockdata_filepath": "data/layouts/BattleTower_BattleRoom_Sinnoh/map.bin",
+      "border_width": 0,
+      "border_height": 0
     },
     {
       "id": "LAYOUT_BATTLE_TOWE_ELEVATOR_SINNOH",
@@ -17932,7 +17940,9 @@
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleFrontier",
       "border_filepath": "data/layouts/BattleTowe_Elevator_Sinnoh/border.bin",
-      "blockdata_filepath": "data/layouts/BattleTowe_Elevator_Sinnoh/map.bin"
+      "blockdata_filepath": "data/layouts/BattleTowe_Elevator_Sinnoh/map.bin",
+      "border_width": 0,
+      "border_height": 0
     },
     {
       "id": "LAYOUT_SUNYSHORE_CITY_LIGHT_HOUSE_ELEVATOR",
@@ -17942,7 +17952,9 @@
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleFrontier",
       "border_filepath": "data/layouts/SunyshoreCity_LightHouse_Elevator/border.bin",
-      "blockdata_filepath": "data/layouts/SunyshoreCity_LightHouse_Elevator/map.bin"
+      "blockdata_filepath": "data/layouts/SunyshoreCity_LightHouse_Elevator/map.bin",
+      "border_width": 0,
+      "border_height": 0
     },
     {
       "id": "LAYOUT_VEILSTONE_CITY_DEPARTAMENT_STORE_ELEVATOR",
@@ -17952,7 +17964,9 @@
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleFrontier",
       "border_filepath": "data/layouts/VeilstoneCity_Departament_Store_Elevator/border.bin",
-      "blockdata_filepath": "data/layouts/VeilstoneCity_Departament_Store_Elevator/map.bin"
+      "blockdata_filepath": "data/layouts/VeilstoneCity_Departament_Store_Elevator/map.bin",
+      "border_width": 0,
+      "border_height": 0
     }
   ]
 }

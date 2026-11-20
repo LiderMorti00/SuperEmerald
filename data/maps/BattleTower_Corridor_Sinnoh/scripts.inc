@@ -1,2 +1,5 @@
 BattleTower_Corridor_Sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_BattleTowerSinnoh_SetFlag
+	map_script MAP_SCRIPT_ON_LOAD, BattleFrontier_BattleTowerCorridor_OnLoad
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, BattleFrontier_BattleTowerCorridor_OnFrame
 	.byte 0

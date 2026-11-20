@@ -2963,7 +2963,7 @@ void SetContestants(enum ContestCategories contestType, u8 rank)
 {
     s32 i;
     u8 opponentsCount = 0;
-    u8 opponents[100];
+    u8 opponents[ARRAY_COUNT(gContestOpponents) + 1];
     bool8 allowPostgameContestants = FALSE;
 
     TryPutPlayerLast();
@@ -2976,6 +2976,9 @@ void SetContestants(enum ContestCategories contestType, u8 rank)
     {
         if (rank == gContestOpponents[i].whichRank)
         {
+            // Super Emerald: Hearthome's contests only have Sinnoh's leaders, Lilycove's never do
+            if ((gContestOpponents[i].filter == CONTEST_FILTER_SINNOH) != (FlagGet(FLAG_SE_HEARTHOME_CONTEST) && !(gLinkContestFlags & LINK_CONTEST_FLAG_IS_LINK)))
+                continue;
             if (allowPostgameContestants == TRUE)
             {
                 if (gContestOpponents[i].filter == CONTEST_FILTER_NO_POSTGAME)
@@ -3019,7 +3022,7 @@ void SetLinkAIContestants(enum ContestCategories contestType, u8 rank, bool32 is
 {
     s32 i, j;
     u8 opponentsCount = 0;
-    u8 opponents[100];
+    u8 opponents[ARRAY_COUNT(gContestOpponents) + 1];
 
     if (gNumLinkContestPlayers == CONTESTANT_COUNT)
         return;
@@ -3028,6 +3031,8 @@ void SetLinkAIContestants(enum ContestCategories contestType, u8 rank, bool32 is
     for (i = 0; i < ARRAY_COUNT(gContestOpponents); i++)
     {
         if (rank != gContestOpponents[i].whichRank)
+            continue;
+        if (gContestOpponents[i].filter == CONTEST_FILTER_SINNOH)
             continue;
 
         if (isPostgame == TRUE)

@@ -258,12 +258,6 @@ static void (*const sCameraObjectFuncs[])(struct Sprite *) = {
 };
 
 #include "data/object_events/object_event_graphics.h"
-// Super Emerald: Sinnoh begin
-#include "data/object_events/sinnoh/graphics.h"
-// Super Emerald: Sinnoh end
-// Super Emerald: HnS begin
-#include "data/object_events/hns/graphics.h"
-// Super Emerald: HnS end
 
 // movement type callbacks
 static void (*const sMovementTypeCallbacks[])(struct Sprite *) =
@@ -500,21 +494,13 @@ const u8 gInitialMovementTypeFacingDirections[NUM_MOVEMENT_TYPES] = {
 #include "data/object_events/object_event_anims.h"
 // Super Emerald: Sinnoh begin
 #include "data/object_events/sinnoh/anims.h"
-#include "data/object_events/sinnoh/pic_tables.h"
 // Super Emerald: Sinnoh end
 // Super Emerald: HnS begin
 #include "data/object_events/hns/anims.h"
-#include "data/object_events/hns/pic_tables.h"
 // Super Emerald: HnS end
 #include "data/object_events/base_oam.h"
 #include "data/object_events/object_event_subsprites.h"
 #include "data/object_events/object_event_graphics_info.h"
-// Super Emerald: Sinnoh begin
-#include "data/object_events/sinnoh/graphics_info.h"
-// Super Emerald: Sinnoh end
-// Super Emerald: HnS begin
-#include "data/object_events/hns/graphics_info.h"
-// Super Emerald: HnS end
 #include "data/object_events/object_event_graphics_info_followers.h"
 
 static const struct SpritePalette sObjectEventSpritePalettes[] = {

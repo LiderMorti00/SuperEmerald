@@ -1049,17 +1049,6 @@ const struct Tileset gTileset_ViridianGym =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_HoennBuilding =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_HoennBuilding,
-    .palettes = gTilesetPalettes_HoennBuilding,
-    .metatiles = gMetatiles_HoennBuilding,
-    .metatileAttributes = gMetatileAttributes_HoennBuilding,
-    .callback = NULL,
-};
-
 const struct Tileset gTileset_GameCorner =
 {
     .isCompressed = TRUE,
@@ -2379,28 +2368,6 @@ const struct Tileset gTileset_Johto_NorthEast_Hns =
     .callback = InitTilesetAnim_JohtoGeneral,
 };
 
-const struct Tileset gTileset_Johto_NorthWest_Hns =
-{
-    .isCompressed = TRUE,
-    .isSecondary = FALSE,
-    .tiles = gTilesetTiles_Johto_NorthWest_Hns,
-    .palettes = gTilesetPalettes_Johto_NorthWest_Hns,
-    .metatiles = gMetatiles_Johto_NorthWest_Hns,
-    .metatileAttributes = gMetatileAttributes_Johto_NorthWest_Hns,
-    .callback = InitTilesetAnim_JohtoGeneral,
-};
-
-const struct Tileset gTileset_Johto_South_Hns =
-{
-    .isCompressed = TRUE,
-    .isSecondary = FALSE,
-    .tiles = gTilesetTiles_Johto_South_Hns,
-    .palettes = gTilesetPalettes_Johto_South_Hns,
-    .metatiles = gMetatiles_Johto_South_Hns,
-    .metatileAttributes = gMetatileAttributes_Johto_South_Hns,
-    .callback = InitTilesetAnim_JohtoGeneral,
-};
-
 
 const struct Tileset gTileset_Kanto_PokemonCenter_Hns =
 {
@@ -2455,28 +2422,6 @@ const struct Tileset gTileset_MtSilverSnow_Hns =
     .metatiles = gMetatiles_MtSilverSnow_Hns,
     .metatileAttributes = gMetatileAttributes_MtSilverSnow_Hns,
     .callback = NULL,
-};
-
-const struct Tileset gTileset_MtSilver_Ancient_Hns =
-{
-    .isCompressed = TRUE,
-    .isSecondary = TRUE,
-    .tiles = gTilesetTiles_MtSilver_Ancient_Hns,
-    .palettes = gTilesetPalettes_MtSilver_Ancient_Hns,
-    .metatiles = gMetatiles_MtSilver_Ancient_Hns,
-    .metatileAttributes = gMetatileAttributes_MtSilver_Ancient_Hns,
-    .callback = NULL,
-};
-
-const struct Tileset gTileset_MtSilver_Exp_Hns =
-{
-    .isCompressed = TRUE,
-    .isSecondary = FALSE,
-    .tiles = gTilesetTiles_MtSilver_Exp_Hns,
-    .palettes = gTilesetPalettes_MtSilver_Exp_Hns,
-    .metatiles = gMetatiles_MtSilver_Exp_Hns,
-    .metatileAttributes = gMetatileAttributes_MtSilver_Exp_Hns,
-    .callback = InitTilesetAnim_MtSilverExp,
 };
 
 const struct Tileset gTileset_NationalPark_Hns =

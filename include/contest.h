@@ -75,7 +75,8 @@ enum
 enum {
     CONTEST_FILTER_NONE,
     CONTEST_FILTER_NO_POSTGAME,
-    CONTEST_FILTER_ONLY_POSTGAME
+    CONTEST_FILTER_ONLY_POSTGAME,
+    CONTEST_FILTER_SINNOH, // Super Emerald: only in Hearthome City's contests
 };
 
 // Constants for changing in-contest Condition (the stars that appear during appeals)
@@ -90,7 +91,7 @@ struct ContestPokemon
     enum Species species;
     u8 nickname[POKEMON_NAME_LENGTH + 1];
     u8 trainerName[PLAYER_NAME_LENGTH + 1];
-    u8 trainerGfxId;
+    u16 trainerGfxId;
     u32 aiFlags;
     u8 whichRank:2;
     u8 aiPool_Cool:1;

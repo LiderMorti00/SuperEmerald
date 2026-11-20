@@ -172,5 +172,7 @@
 #define FLAG_SE_QUEST_OBJ_END            0x32D8
 
 #define FLAG_SE_RECEIVED_ROTOM_CATALOG   0x32D9
+#define FLAG_SE_SINNOH_TOWER             0x32DA // set while in Sinnoh's Battle Tower: Palmer is the Frontier Brain and warps lead to the Sinnoh maps
+#define FLAG_SE_HEARTHOME_CONTEST        0x32DB // set in Hearthome's contest lobby: Sinnoh opponents, return there after the contest
 
 #endif // GUARD_CONSTANTS_FLAGS_SE_SINNOH_H

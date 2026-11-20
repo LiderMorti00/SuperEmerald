@@ -273,8 +273,6 @@ const u16 gMetatileAttributes_ViridianGym[] = INCBIN_U16("data/tilesets/secondar
 const u16 gMetatiles_Building[] = INCBIN_U16("data/tilesets/primary/building/metatiles.bin");
 const u16 gMetatileAttributes_Building[] = INCBIN_U16("data/tilesets/primary/building/metatile_attributes.bin");
 
-const u16 gMetatiles_HoennBuilding[] = INCBIN_U16("data/tilesets/secondary/hoenn_building_frlg/metatiles.bin");
-const u16 gMetatileAttributes_HoennBuilding[] = INCBIN_U16("data/tilesets/secondary/hoenn_building_frlg/metatile_attributes.bin");
 
 const u16 gMetatiles_BikeShop_Frlg[] = INCBIN_U16("data/tilesets/secondary/bike_shop_frlg/metatiles.bin");
 const u16 gMetatileAttributes_BikeShop_Frlg[] = INCBIN_U16("data/tilesets/secondary/bike_shop_frlg/metatile_attributes.bin");
@@ -646,11 +644,7 @@ const u16 gMetatileAttributes_Johto_General_Hns[] = INCBIN_U16("data/tilesets/pr
 const u16 gMetatiles_Johto_NorthEast_Hns[] = INCBIN_U16("data/tilesets/primary/johto_north_east_hns/metatiles.bin");
 const u16 gMetatileAttributes_Johto_NorthEast_Hns[] = INCBIN_U16("data/tilesets/primary/johto_north_east_hns/metatile_attributes.bin");
 
-const u16 gMetatiles_Johto_NorthWest_Hns[] = INCBIN_U16("data/tilesets/primary/johto_north_west_hns/metatiles.bin");
-const u16 gMetatileAttributes_Johto_NorthWest_Hns[] = INCBIN_U16("data/tilesets/primary/johto_north_west_hns/metatile_attributes.bin");
 
-const u16 gMetatiles_Johto_South_Hns[] = INCBIN_U16("data/tilesets/primary/johto_south_hns/metatiles.bin");
-const u16 gMetatileAttributes_Johto_South_Hns[] = INCBIN_U16("data/tilesets/primary/johto_south_hns/metatile_attributes.bin");
 
 
 const u16 gMetatiles_Kanto_PokemonCenter_Hns[] = INCBIN_U16("data/tilesets/secondary/kanto_pokemon_center_hns/metatiles.bin");
@@ -668,11 +662,7 @@ const u16 gMetatileAttributes_MahoganyTown_Hns[] = INCBIN_U16("data/tilesets/sec
 const u16 gMetatiles_MtSilverSnow_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_snow_hns/metatiles.bin");
 const u16 gMetatileAttributes_MtSilverSnow_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_snow_hns/metatile_attributes.bin");
 
-const u16 gMetatiles_MtSilver_Ancient_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/metatiles.bin");
-const u16 gMetatileAttributes_MtSilver_Ancient_Hns[] = INCBIN_U16("data/tilesets/secondary/mt_silver_ancient_hns/metatile_attributes.bin");
 
-const u16 gMetatiles_MtSilver_Exp_Hns[] = INCBIN_U16("data/tilesets/primary/mt_silver_exp_hns/metatiles.bin");
-const u16 gMetatileAttributes_MtSilver_Exp_Hns[] = INCBIN_U16("data/tilesets/primary/mt_silver_exp_hns/metatile_attributes.bin");
 
 const u16 gMetatiles_NationalPark_Hns[] = INCBIN_U16("data/tilesets/secondary/national_park_hns/metatiles.bin");
 const u16 gMetatileAttributes_NationalPark_Hns[] = INCBIN_U16("data/tilesets/secondary/national_park_hns/metatile_attributes.bin");

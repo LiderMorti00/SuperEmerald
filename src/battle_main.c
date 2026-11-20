@@ -436,6 +436,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_TEAM_GALACTIC] = { _("GALACTIC"), 5 },
     [TRAINER_CLASS_VETERAN] = { _("VETERAN"), 20 },
     [TRAINER_CLASS_WORKER] = { _("TRAINER"), 10 },
+    [TRAINER_CLASS_TOWER_TYCOON] = { _("TOWER TYCOON"), 5, BALL_ULTRA },
     // Super Emerald: Sinnoh end
     // Super Emerald: HnS begin
     [TRAINER_CLASS_SAGE] = { _("SAGE"), 8 },

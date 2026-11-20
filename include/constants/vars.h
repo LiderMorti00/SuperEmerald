@@ -417,7 +417,7 @@
 #define VAR_SE_GALACTIC_QUEST         0x5015 // Looker's last case (Sinnoh): 0 Looker, 1 Mars, 2 Jupiter, 3 Saturn, 4 Charon, 5 back to Looker, 6 done
 
 #define VAR_SE_SINNOH_STATE_VERSION   0x5040 // Super Emerald: bump SE_SINNOH_STATE_VERSION when the Sinnoh state changes
-#define SE_SINNOH_STATE_VERSION       3
+#define SE_SINNOH_STATE_VERSION       4
 #define VAR_SE_SINNOH_STARTER         0x5041 // 1 Turtwig, 2 Chimchar, 3 Piplup (0 = none yet)
 #define VAR_SE_LUCAS_STATE            0x5042 // Lucas rival battles won: 0-3
 #define VAR_SE_SINNOH_ARRIVAL         0x5043 // 1 = just arrived at Canalave by ship, 2 = met Dawn

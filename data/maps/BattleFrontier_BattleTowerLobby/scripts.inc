@@ -10,6 +10,8 @@ BattleFrontier_BattleTowerLobby_OnResume:
 	end
 
 BattleFrontier_BattleTowerLobby_OnTransition:
+	clearflag FLAG_SE_SINNOH_TOWER
+SE_BattleTowerLobby_OnTransition:
 	call BattleFrontier_BattleTowerLobby_EventScript_ShowOrHideReporter
 	apprentice_shouldcheckgone
 	goto_if_eq VAR_0x8004, FALSE, BattleFrontier_BattleTowerLobby_EventScript_ShowApprentice  @ VAR_0x8004 always TRUE here
@@ -605,6 +607,7 @@ BattleFrontier_BattleTowerLobby_EventScript_WaitForLinkOpponentLoad::
 	goto_if_ne VAR_RESULT, 6, BattleFrontier_BattleTowerLobby_EventScript_WaitForLinkOpponentLoad
 	call BattleFrontier_BattleTowerLobby_EventScript_ShowYouToBattleRoom
 	clearflag FLAG_CANCEL_BATTLE_ROOM_CHALLENGE
+	goto_if_set FLAG_SE_SINNOH_TOWER, SE_BattleTowerSinnoh_WarpToElevator
 	warp MAP_BATTLE_FRONTIER_BATTLE_TOWER_ELEVATOR, 1, 6
 	setvar VAR_TEMP_CHALLENGE_STATUS, 0
 	waitstate
