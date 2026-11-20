@@ -26,7 +26,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_RUIN_MANIAC",
       "x": 19,
       "y": 30,
@@ -40,7 +39,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BATTLE_GIRL",
       "x": 12,
       "y": 21,
@@ -54,7 +52,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
       "x": 27,
       "y": 18,
@@ -68,7 +65,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CAMERAMAN",
       "x": 11,
       "y": 28,
@@ -82,7 +78,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 26,
       "y": 15,
@@ -96,7 +91,6 @@
       "flag": "FLAG_ITEM_SURVIVALAREA_RARE_CANDY"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 9,
       "y": 5,
@@ -110,7 +104,6 @@
       "flag": "FLAG_ITEM_SURVIVALAREA_RED_SHARD"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BARRY",
       "x": 10,
       "y": 19,
@@ -124,7 +117,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_SURV_BUCK",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BUCK",
       "x": 11,

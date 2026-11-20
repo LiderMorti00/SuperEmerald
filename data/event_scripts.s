@@ -2410,3 +2410,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/SunyshoreCity_LightHouse_Elevator/scripts.inc"
 
 	.include "data/maps/VeilstoneCity_Departament_Store_Elevator/scripts.inc"
+
+	.include "data/maps/Route226_Access_sinnoh/scripts.inc"

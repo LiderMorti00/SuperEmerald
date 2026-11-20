@@ -1672,7 +1672,8 @@
     "PokemonMansion_Office_sinnoh",
     "IronIsland_House_sinnoh",
     "FuegoIronworks_Inside_sinnoh",
-    "BattlePark_Access"
+    "BattlePark_Access",
+    "Route226_Access_sinnoh"
   ],
   "gMapGroup_IndoorTwinleaf_Sinnoh": [
     "TwinleafTown_MainHouse_1F_sinnoh",

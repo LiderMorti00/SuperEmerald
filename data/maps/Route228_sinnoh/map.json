@@ -26,7 +26,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_M",
       "x": 11,
       "y": 8,
@@ -40,7 +39,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_F",
       "x": 5,
       "y": 26,
@@ -54,7 +52,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_RANGER_M",
       "x": 21,
       "y": 55,
@@ -68,7 +65,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_RANGER_F",
       "x": 18,
       "y": 55,
@@ -82,10 +78,9 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_DRAGON_TAMER",
       "x": 27,
-      "y": 9,
+      "y": 8,
       "elevation": 4,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -96,7 +91,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_PSYCHIC_M",
       "x": 17,
       "y": 75,
@@ -110,7 +104,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_F",
       "x": 27,
       "y": 71,
@@ -124,7 +117,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_FRLG",
       "x": 8,
       "y": 21,
@@ -138,7 +130,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_FRLG",
       "x": 25,
       "y": 52,
@@ -152,7 +143,6 @@
       "flag": "FLAG_TEMP_11"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_FRLG",
       "x": 13,
       "y": 33,
@@ -166,7 +156,6 @@
       "flag": "FLAG_TEMP_12"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_FRLG",
       "x": 14,
       "y": 33,
@@ -180,7 +169,6 @@
       "flag": "FLAG_TEMP_13"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_FRLG",
       "x": 15,
       "y": 33,
@@ -194,7 +182,6 @@
       "flag": "FLAG_TEMP_14"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 17,
       "y": 13,
@@ -208,7 +195,6 @@
       "flag": "FLAG_SN_ITEM_ROUTE_115_PP_UP"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 28,
       "y": 29,
@@ -222,7 +208,6 @@
       "flag": "FLAG_SN_ITEM_ARTISAN_CAVE_B1F_HP_UP"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 26,
       "y": 63,
@@ -236,7 +221,6 @@
       "flag": "FLAG_SN_ITEM_ARTISAN_CAVE_1F_CARBOS"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 12,
       "y": 25,
@@ -250,7 +234,6 @@
       "flag": "FLAG_SN_ITEM_MAGMA_HIDEOUT_2F_2R_MAX_ELIXIR"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 11,
       "y": 59,
@@ -264,10 +247,9 @@
       "flag": "FLAG_SN_ITEM_MAGMA_HIDEOUT_2F_2R_FULL_RESTORE"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 11,
-      "y": 68,
+      "y": 67,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -278,10 +260,9 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 14,
-      "y": 68,
+      "y": 67,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -292,10 +273,9 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 12,
-      "y": 68,
+      "y": 67,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -306,10 +286,9 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 13,
-      "y": 68,
+      "y": 67,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -320,7 +299,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 11,
       "y": 58,
@@ -350,11 +328,18 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 9,
-      "y": 28,
+      "x": 8,
+      "y": 32,
       "elevation": 0,
       "dest_map": "MAP_ROCK_PEAK_RUINS_SINNOH",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 4,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE226_ACCESS_SINNOH",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],
@@ -426,7 +411,7 @@
     {
       "type": "sign",
       "x": 9,
-      "y": 29,
+      "y": 32,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_SOUTH",
       "script": "SE_EventScript_RockPeakRuinsEntrance"
