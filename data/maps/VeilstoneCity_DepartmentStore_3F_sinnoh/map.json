@@ -15,7 +15,6 @@
   "connections": null,
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_RECEPTIONIST",
       "x": 11,
       "y": 6,
@@ -29,7 +28,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL_FRLG",
       "x": 5,
       "y": 10,
@@ -43,7 +41,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GUITARIST",
       "x": 4,
       "y": 3,
@@ -57,10 +54,9 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CLERK",
-      "x": 1,
-      "y": 5,
+      "x": 10,
+      "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -71,7 +67,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CLERK",
       "x": 1,
       "y": 13,
@@ -85,7 +80,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MIDDLE_AGED_WOMAN",
       "x": 11,
       "y": 10,
@@ -112,6 +106,13 @@
       "y": 2,
       "elevation": 0,
       "dest_map": "MAP_VEILSTONE_CITY_DEPARTMENT_STORE_4F_SINNOH",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_VEILSTONE_CITY_DEPARTAMENT_STORE_ELEVATOR",
       "dest_warp_id": "0"
     }
   ],

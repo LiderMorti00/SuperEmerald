@@ -11,6 +11,7 @@
   "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
@@ -207,7 +208,9 @@
       "y": 20,
       "elevation": 0,
       "item": "ITEM_FULL_INCENSE",
-      "flag": "FLAG_HIDDEN_ITEM_MTMORTAR_2F_FULL_INCENSE"
+      "flag": "FLAG_HIDDEN_ITEM_MTMORTAR_2F_FULL_INCENSE",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -215,7 +218,9 @@
       "y": 37,
       "elevation": 0,
       "item": "ITEM_HP_UP",
-      "flag": "FLAG_HIDDEN_ITEM_MTMORTAR_2F_HP_UP"
+      "flag": "FLAG_HIDDEN_ITEM_MTMORTAR_2F_HP_UP",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

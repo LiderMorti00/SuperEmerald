@@ -11,12 +11,13 @@
   "allow_escaping": true,
   "allow_running": true,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
-      "type": "object",
       "local_id": "LOCALID_ICEPATH4_ICYWIND_DELIBIRD",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DELIBIRD",
       "x": 22,
       "y": 21,
@@ -30,8 +31,8 @@
       "flag": "FLAG_NIGHT_POKEMON"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_ICEPATH4_ICYWIND_SWINUB",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SWINUB",
       "x": 22,
       "y": 21,
@@ -59,8 +60,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_ICEPATH4_STUCK_SWINUB",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SWINUB",
       "x": 3,
       "y": 21,

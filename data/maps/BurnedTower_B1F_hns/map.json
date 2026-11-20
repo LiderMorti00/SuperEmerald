@@ -11,12 +11,13 @@
   "allow_escaping": true,
   "allow_running": false,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
-      "type": "object",
       "local_id": "LOCALID_BURNEDTOWER_ENTEI",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ENTEI",
       "x": 18,
       "y": 8,
@@ -30,8 +31,8 @@
       "flag": "FLAG_HIDE_BURNED_TOWER_BEASTS"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_BURNEDTOWER_RAIKOU",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_RAIKOU",
       "x": 14,
       "y": 8,
@@ -45,8 +46,8 @@
       "flag": "FLAG_HIDE_BURNED_TOWER_BEASTS"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_BURNEDTOWER_SUICUNE",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SUICUNE",
       "x": 16,
       "y": 9,
@@ -158,8 +159,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_BURNEDTOWER2_EUSINE",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_EUSINE_HNS",
       "x": 25,
       "y": 9,

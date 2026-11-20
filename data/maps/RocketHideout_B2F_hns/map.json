@@ -11,10 +11,12 @@
   "allow_escaping": true,
   "allow_running": false,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_LANCEELECTRODE3",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ELECTRODE",
       "x": 20,
@@ -26,10 +28,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_ROCKETHIDEOUT_ELECTRODE3",
-      "local_id": "LOCALID_LANCEELECTRODE3"
+      "flag": "FLAG_HIDE_ROCKETHIDEOUT_ELECTRODE3"
     },
     {
+      "local_id": "LOCALID_LANCEELECTRODE2",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ELECTRODE",
       "x": 20,
@@ -41,10 +43,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_ROCKETHIDEOUT_ELECTRODE2",
-      "local_id": "LOCALID_LANCEELECTRODE2"
+      "flag": "FLAG_HIDE_ROCKETHIDEOUT_ELECTRODE2"
     },
     {
+      "local_id": "LOCALID_LANCEELECTRODE1",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ELECTRODE",
       "x": 20,
@@ -56,8 +58,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_ROCKETHIDEOUT_ELECTRODE1",
-      "local_id": "LOCALID_LANCEELECTRODE1"
+      "flag": "FLAG_HIDE_ROCKETHIDEOUT_ELECTRODE1"
     },
     {
       "type": "object",
@@ -102,6 +103,7 @@
       "flag": "FLAG_HIDE_ROCKETHIDEOUT_ELECTRODE3"
     },
     {
+      "local_id": "LOCALID_ROCKETHIDEOUT2_LANCE",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LANCE_HNS",
       "x": 9,
@@ -113,10 +115,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_ROCKETHIDEOUT2_LANCE_DRAGONITE",
-      "local_id": "LOCALID_ROCKETHIDEOUT2_LANCE"
+      "flag": "FLAG_HIDE_ROCKETHIDEOUT2_LANCE_DRAGONITE"
     },
     {
+      "local_id": "LOCALID_ROCKETHIDEOUT2_DRAGONITE",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DRAGONITE",
       "x": 10,
@@ -128,8 +130,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_ROCKETHIDEOUT2_LANCE_DRAGONITE",
-      "local_id": "LOCALID_ROCKETHIDEOUT2_DRAGONITE"
+      "flag": "FLAG_HIDE_ROCKETHIDEOUT2_LANCE_DRAGONITE"
     },
     {
       "type": "object",
@@ -174,6 +175,7 @@
       "flag": "FLAG_HIDE_MAHOGANY_ROCKETS"
     },
     {
+      "local_id": "LOCALID_ROCKETHIDEOUT2_GRUNT",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M_HNS",
       "x": 14,
@@ -185,8 +187,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_ROCKETHIDEOUT2_ARIANA_AND_GRUNT",
-      "local_id": "LOCALID_ROCKETHIDEOUT2_GRUNT"
+      "flag": "FLAG_HIDE_ROCKETHIDEOUT2_ARIANA_AND_GRUNT"
     },
     {
       "type": "object",
@@ -203,6 +204,7 @@
       "flag": "FLAG_ITEM_ROCKETHIDEOUT2_TM_THIEF"
     },
     {
+      "local_id": "LOCALID_ROCKETHIDEOUT2_ARIANA",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARIANA_HNS",
       "x": 15,
@@ -214,10 +216,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SE_J_RocketHideout_B2F_hns_RocketHideout_B2F_EventScript_ReadyForBattlePrompt",
-      "flag": "FLAG_HIDE_ROCKETHIDEOUT2_ARIANA_AND_GRUNT",
-      "local_id": "LOCALID_ROCKETHIDEOUT2_ARIANA"
+      "flag": "FLAG_HIDE_ROCKETHIDEOUT2_ARIANA_AND_GRUNT"
     },
     {
+      "local_id": "LOCALID_ROCKETHIDEOUT2_MURKROWSTAIRS",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MURKROW",
       "x": 10,
@@ -229,10 +231,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "RocketHideout_B3F_EventScript_Murkrow",
-      "flag": "FLAG_HIDE_ROCKETHIDEOUT2_MURKROWSTAIRS",
-      "local_id": "LOCALID_ROCKETHIDEOUT2_MURKROWSTAIRS"
+      "flag": "FLAG_HIDE_ROCKETHIDEOUT2_MURKROWSTAIRS"
     },
     {
+      "local_id": "LOCALID_ROCKETHIDEOUT2_MURKROWGATE",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MURKROW",
       "x": 15,
@@ -244,8 +246,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "RocketHideout_B3F_EventScript_Murkrow",
-      "flag": "FLAG_HIDE_ROCKETHIDEOUT2_MURKROWGATE",
-      "local_id": "LOCALID_ROCKETHIDEOUT2_MURKROWGATE"
+      "flag": "FLAG_HIDE_ROCKETHIDEOUT2_MURKROWGATE"
     }
   ],
   "warp_events": [

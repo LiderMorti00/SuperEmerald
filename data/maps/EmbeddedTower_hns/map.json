@@ -11,10 +11,12 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_EMBEDDEDRAYQUAZA",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_RAYQUAZA",
       "x": 14,
@@ -26,8 +28,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EmbeddedTower_EventScript_Rayquaza",
-      "flag": "FLAG_HIDE_RAYQUAZA",
-      "local_id": "LOCALID_EMBEDDEDRAYQUAZA"
+      "flag": "FLAG_HIDE_RAYQUAZA"
     }
   ],
   "warp_events": [

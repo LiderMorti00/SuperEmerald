@@ -11,12 +11,13 @@
   "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
-      "type": "object",
       "local_id": "LOCALID_BURNED_TOWER_EUSINE",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_EUSINE_HNS",
       "x": 15,
       "y": 19,
@@ -44,8 +45,8 @@
       "flag": "FLAG_HIDE_BURNED_TOWER_NPCS"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_BURNED_TOWER_SILVER",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SILVER_HNS",
       "x": 18,
       "y": 12,

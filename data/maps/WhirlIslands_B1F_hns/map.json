@@ -11,6 +11,7 @@
   "allow_escaping": true,
   "allow_running": false,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
@@ -844,7 +845,9 @@
       "y": 21,
       "elevation": 0,
       "item": "ITEM_PEARL",
-      "flag": "FLAG_HIDDEN_ITEM_WHIRLISLANDS_PEARL"
+      "flag": "FLAG_HIDDEN_ITEM_WHIRLISLANDS_PEARL",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -852,7 +855,9 @@
       "y": 58,
       "elevation": 0,
       "item": "ITEM_FULL_RESTORE",
-      "flag": "FLAG_HIDDEN_ITEM_WHIRLISLANDS_FULL_RESTORE"
+      "flag": "FLAG_HIDDEN_ITEM_WHIRLISLANDS_FULL_RESTORE",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

@@ -15,7 +15,6 @@
   "connections": null,
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_LADY",
       "x": 9,
       "y": 13,
@@ -29,7 +28,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BUG_CATCHER",
       "x": 3,
       "y": 12,
@@ -43,7 +41,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CLERK",
       "x": 1,
       "y": 8,
@@ -57,7 +54,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_RECEPTIONIST",
       "x": 11,
       "y": 6,
@@ -71,7 +67,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CLERK",
       "x": 1,
       "y": 5,
@@ -85,7 +80,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CLERK",
       "x": 1,
       "y": 6,
@@ -99,7 +93,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BUG_CATCHER",
       "x": 3,
       "y": 10,
@@ -126,6 +119,13 @@
       "y": 2,
       "elevation": 3,
       "dest_map": "MAP_VEILSTONE_CITY_DEPARTMENT_STORE_3F_SINNOH",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_VEILSTONE_CITY_DEPARTAMENT_STORE_ELEVATOR",
       "dest_warp_id": "0"
     }
   ],

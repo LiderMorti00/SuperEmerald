@@ -11,6 +11,7 @@
   "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
@@ -179,7 +180,9 @@
       "y": 16,
       "elevation": 0,
       "item": "ITEM_BIG_MUSHROOM",
-      "flag": "FLAG_HIDDEN_ITEM_DARKCAVE_NORTHSIDE_BIG_MUSHROOM"
+      "flag": "FLAG_HIDDEN_ITEM_DARKCAVE_NORTHSIDE_BIG_MUSHROOM",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -187,7 +190,9 @@
       "y": 21,
       "elevation": 0,
       "item": "ITEM_REVIVE",
-      "flag": "FLAG_HIDDEN_ITEM_DARKCAVE_NORTHSIDE_REVIVE"
+      "flag": "FLAG_HIDDEN_ITEM_DARKCAVE_NORTHSIDE_REVIVE",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

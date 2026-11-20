@@ -11,6 +11,7 @@
   "allow_escaping": true,
   "allow_running": false,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
@@ -368,7 +369,9 @@
       "y": 15,
       "elevation": 0,
       "item": "ITEM_PROTEIN",
-      "flag": "FLAG_HIDDEN_ITEM_MT_SILVER_MOUNTAINSIDE_PROTEIN"
+      "flag": "FLAG_HIDDEN_ITEM_MT_SILVER_MOUNTAINSIDE_PROTEIN",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

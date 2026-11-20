@@ -11,6 +11,7 @@
   "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
@@ -403,7 +404,9 @@
       "y": 25,
       "elevation": 0,
       "item": "ITEM_PARALYZE_HEAL",
-      "flag": "FLAG_HIDDEN_ITEM_UNIONCAVE1F_PARALYZE_HEAL"
+      "flag": "FLAG_HIDDEN_ITEM_UNIONCAVE1F_PARALYZE_HEAL",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

@@ -15,7 +15,6 @@
   "connections": null,
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BUG_CATCHER",
       "x": 1,
       "y": 6,
@@ -29,7 +28,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BRUJA",
       "x": 8,
       "y": 10,
@@ -43,7 +41,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_FAT_MAN",
       "x": 6,
       "y": 13,
@@ -57,7 +54,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_FAT_MAN",
       "x": 5,
       "y": 14,
@@ -84,6 +80,13 @@
       "y": 2,
       "elevation": 3,
       "dest_map": "MAP_VEILSTONE_CITY_DEPARTMENT_STORE_ROOF_SINNOH",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_VEILSTONE_CITY_DEPARTAMENT_STORE_ELEVATOR",
       "dest_warp_id": "0"
     }
   ],

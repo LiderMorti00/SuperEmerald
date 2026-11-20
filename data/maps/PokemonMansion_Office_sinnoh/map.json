@@ -15,7 +15,6 @@
   "connections": null,
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 14,
       "y": 4,
@@ -29,7 +28,7 @@
       "flag": "FLAG_ITEM_POKEMONMANSION_OFFICE_TM87"
     },
     {
-      "type": "object",
+      "local_id": "LOCALID_MANSION_BACKLOT",
       "graphics_id": "OBJ_EVENT_GFX_MAN",
       "x": 9,
       "y": 8,
@@ -40,11 +39,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PokemonMansion_Office_EventScript_SNBacklot",
-      "flag": "0",
-      "local_id": "LOCALID_MANSION_BACKLOT"
+      "flag": "0"
     },
     {
-      "type": "object",
+      "local_id": "LOCALID_MANSION_BUTLER",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_2",
       "x": 8,
       "y": 8,
@@ -55,11 +53,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PokemonMansion_Office_EventScript_PtNpc2",
-      "flag": "0",
-      "local_id": "LOCALID_MANSION_BUTLER"
+      "flag": "0"
     },
     {
-      "type": "object",
+      "local_id": "LOCALID_MANSION_POLICEMAN",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_POLICEMAN",
       "x": 10,
       "y": 4,
@@ -70,8 +67,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PokemonMansion_Office_EventScript_PtNpc3",
-      "flag": "0",
-      "local_id": "LOCALID_MANSION_POLICEMAN"
+      "flag": "0"
     }
   ],
   "warp_events": [

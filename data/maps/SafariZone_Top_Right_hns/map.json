@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -181,6 +182,7 @@
     },
     {
       "local_id": "LOCALID_SE_LEG_IRON_BOULDER",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(IRON_BOULDER)",
       "x": 23,
       "y": 10,
@@ -195,6 +197,7 @@
     },
     {
       "local_id": "LOCALID_SE_LEG_IRON_CROWN",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(IRON_CROWN)",
       "x": 5,
       "y": 18,
@@ -209,6 +212,7 @@
     },
     {
       "local_id": "LOCALID_SE_LEG_RAGING_BOLT",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(RAGING_BOLT)",
       "x": 16,
       "y": 26,
@@ -223,6 +227,7 @@
     },
     {
       "local_id": "LOCALID_SE_LEG_GOUGING_FIRE",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(GOUGING_FIRE)",
       "x": 20,
       "y": 18,

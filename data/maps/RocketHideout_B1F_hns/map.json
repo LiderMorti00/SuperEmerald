@@ -11,10 +11,12 @@
   "allow_escaping": true,
   "allow_running": false,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_ROCKETHIDEOUT_GRUNTM1",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M_HNS",
       "x": 36,
@@ -26,10 +28,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_ROCKETHIDEOUT_ROCKETS",
-      "local_id": "LOCALID_ROCKETHIDEOUT_GRUNTM1"
+      "flag": "FLAG_HIDE_ROCKETHIDEOUT_ROCKETS"
     },
     {
+      "local_id": "LOCALID_ROCKETHIDEOUT_GRUNTM2",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M_HNS",
       "x": 33,
@@ -41,10 +43,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_ROCKETHIDEOUT_ROCKETS",
-      "local_id": "LOCALID_ROCKETHIDEOUT_GRUNTM2"
+      "flag": "FLAG_HIDE_ROCKETHIDEOUT_ROCKETS"
     },
     {
+      "local_id": "LOCALID_ROCKETHIDEOUT_GRUNTM3",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M_HNS",
       "x": 36,
@@ -56,10 +58,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_ROCKETHIDEOUT_ROCKETS",
-      "local_id": "LOCALID_ROCKETHIDEOUT_GRUNTM3"
+      "flag": "FLAG_HIDE_ROCKETHIDEOUT_ROCKETS"
     },
     {
+      "local_id": "LOCALID_ROCKETHIDEOUT_GRUNTM4",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M_HNS",
       "x": 36,
@@ -71,8 +73,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_ROCKETHIDEOUT_ROCKETS",
-      "local_id": "LOCALID_ROCKETHIDEOUT_GRUNTM4"
+      "flag": "FLAG_HIDE_ROCKETHIDEOUT_ROCKETS"
     },
     {
       "type": "object",

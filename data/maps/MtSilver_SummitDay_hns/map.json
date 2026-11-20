@@ -11,12 +11,13 @@
   "allow_escaping": true,
   "allow_running": false,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
-      "type": "object",
       "local_id": "LOCALID_MTSILVER_RED",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_RED_NORMAL_HNS",
       "x": 10,
       "y": 6,

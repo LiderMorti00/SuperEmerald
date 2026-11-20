@@ -11,6 +11,7 @@
   "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
@@ -267,8 +268,8 @@
       "flag": "FLAG_HIDE_SLOWPOKE_WELL_TAILLESS_SLOWPOKES"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_WELL_KURT",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_KURT_HNS",
       "x": 17,
       "y": 8,

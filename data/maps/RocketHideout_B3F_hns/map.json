@@ -11,6 +11,7 @@
   "allow_escaping": true,
   "allow_running": false,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
@@ -29,6 +30,7 @@
       "flag": "FLAG_HIDE_MAHOGANY_ROCKETS"
     },
     {
+      "local_id": "LOCALID_ROCKETHIDEOUT3_DRAGONITE",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DRAGONITE",
       "x": 25,
@@ -40,10 +42,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_ROCKETHIDEOUT3_LANCE_DRAGONITE",
-      "local_id": "LOCALID_ROCKETHIDEOUT3_DRAGONITE"
+      "flag": "FLAG_HIDE_ROCKETHIDEOUT3_LANCE_DRAGONITE"
     },
     {
+      "local_id": "LOCALID_ROCKETHIDEOUT3_LANCE",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LANCE_HNS",
       "x": 27,
@@ -55,8 +57,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_ROCKETHIDEOUT3_LANCE_DRAGONITE",
-      "local_id": "LOCALID_ROCKETHIDEOUT3_LANCE"
+      "flag": "FLAG_HIDE_ROCKETHIDEOUT3_LANCE_DRAGONITE"
     },
     {
       "type": "object",
@@ -73,6 +74,7 @@
       "flag": "FLAG_HIDE_MAHOGANY_ROCKETS"
     },
     {
+      "local_id": "LOCALID_ROCKETHIDEOUT3_SILVER",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SILVER_HNS",
       "x": 2,
@@ -84,8 +86,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_ROCKETHIDEOUT3_SILVER",
-      "local_id": "LOCALID_ROCKETHIDEOUT3_SILVER"
+      "flag": "FLAG_HIDE_ROCKETHIDEOUT3_SILVER"
     },
     {
       "type": "object",
@@ -200,6 +201,7 @@
       "flag": "FLAG_HIDE_MAHOGANY_ROCKETS"
     },
     {
+      "local_id": "LOCALID_ROCKETHIDEOUT3_MURKROW",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MURKROW",
       "x": 8,
@@ -211,10 +213,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "RocketHideout_B3F_EventScript_Murkrow",
-      "flag": "FLAG_HIDE_ROCKETHIDEOUT3_MURKROW",
-      "local_id": "LOCALID_ROCKETHIDEOUT3_MURKROW"
+      "flag": "FLAG_HIDE_ROCKETHIDEOUT3_MURKROW"
     },
     {
+      "local_id": "LOCALID_ROCKETHIDEOUT3_PETREL",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PETREL_HNS",
       "x": 10,
@@ -226,10 +228,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_ROCKETHIDEOUT3_PETREL",
-      "local_id": "LOCALID_ROCKETHIDEOUT3_PETREL"
+      "flag": "FLAG_HIDE_ROCKETHIDEOUT3_PETREL"
     },
     {
+      "local_id": "LOCALID_ROCKETHIDEOUT3_GIOVANNI",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GIOVANNI_HNS",
       "x": 10,
@@ -241,10 +243,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SE_J_RocketHideout_B3F_hns_RocketHideout_B3F_EventScript_Giovanni",
-      "flag": "FLAG_HIDE_ROCKETHIDEOUT3_GIOVANNI",
-      "local_id": "LOCALID_ROCKETHIDEOUT3_GIOVANNI"
+      "flag": "FLAG_HIDE_ROCKETHIDEOUT3_GIOVANNI"
     },
     {
+      "local_id": "LOCALID_ROCKETHIDEOUT3_MURKROWSTAIRS",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MURKROW",
       "x": 29,
@@ -256,8 +258,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "RocketHideout_B3F_EventScript_Murkrow",
-      "flag": "FLAG_HIDE_ROCKETHIDEOUT3_MURKROWSTAIRS",
-      "local_id": "LOCALID_ROCKETHIDEOUT3_MURKROWSTAIRS"
+      "flag": "FLAG_HIDE_ROCKETHIDEOUT3_MURKROWSTAIRS"
     }
   ],
   "warp_events": [

@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
@@ -43,6 +44,7 @@
       "flag": "FLAG_HIDE_TIN_TOWER_KIMONO_GIRLS"
     },
     {
+      "local_id": "LOCALID_KIMONO_1",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 9,
@@ -54,10 +56,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SE_J_TinTower_RoofDay_hns_TinTower_RoofDay_EventScript_Miki",
-      "flag": "FLAG_HIDE_TIN_TOWER_KIMONO_GIRLS",
-      "local_id": "LOCALID_KIMONO_1"
+      "flag": "FLAG_HIDE_TIN_TOWER_KIMONO_GIRLS"
     },
     {
+      "local_id": "LOCALID_KIMONO_MID",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 10,
@@ -69,10 +71,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SE_J_TinTower_RoofDay_hns_TinTower_RoofDay_EventScript_Zuki",
-      "flag": "FLAG_HIDE_TIN_TOWER_KIMONO_GIRLS",
-      "local_id": "LOCALID_KIMONO_MID"
+      "flag": "FLAG_HIDE_TIN_TOWER_KIMONO_GIRLS"
     },
     {
+      "local_id": "LOCALID_KIMONO_4",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 11,
@@ -84,10 +86,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SE_J_TinTower_RoofDay_hns_TinTower_RoofDay_EventScript_Naoko",
-      "flag": "FLAG_HIDE_TIN_TOWER_KIMONO_GIRLS",
-      "local_id": "LOCALID_KIMONO_4"
+      "flag": "FLAG_HIDE_TIN_TOWER_KIMONO_GIRLS"
     },
     {
+      "local_id": "LOCALID_TINTOWER_KIMONO_2",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 8,
@@ -99,10 +101,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SE_J_TinTower_RoofDay_hns_TinTower_RoofDay_EventScript_Sayo",
-      "flag": "FLAG_HIDE_TIN_TOWER_KIMONO_GIRLS",
-      "local_id": "LOCALID_TINTOWER_KIMONO_2"
+      "flag": "FLAG_HIDE_TIN_TOWER_KIMONO_GIRLS"
     },
     {
+      "local_id": "LOCALID_TINTOWER_KIMONO_3",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 12,
@@ -114,10 +116,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SE_J_TinTower_RoofDay_hns_TinTower_RoofDay_EventScript_Kuni",
-      "flag": "FLAG_HIDE_TIN_TOWER_KIMONO_GIRLS",
-      "local_id": "LOCALID_TINTOWER_KIMONO_3"
+      "flag": "FLAG_HIDE_TIN_TOWER_KIMONO_GIRLS"
     },
     {
+      "local_id": "LOCALID_HO_OH",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HO_OH",
       "x": 10,
@@ -129,8 +131,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SE_EventScript_HoOh",
-      "flag": "FLAG_J_HIDE_HO_OH",
-      "local_id": "LOCALID_HO_OH"
+      "flag": "FLAG_J_HIDE_HO_OH"
     }
   ],
   "warp_events": [

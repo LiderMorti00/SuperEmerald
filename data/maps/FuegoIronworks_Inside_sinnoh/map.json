@@ -15,7 +15,6 @@
   "connections": null,
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_WORKER",
       "x": 4,
       "y": 8,
@@ -29,7 +28,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_WORKER",
       "x": 27,
       "y": 6,
@@ -43,7 +41,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_WORKER",
       "x": 43,
       "y": 24,
@@ -57,7 +54,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 22,
       "y": 21,
@@ -71,7 +67,6 @@
       "flag": "FLAG_ITEM_FUEGOIRONWORKS_INSIDE_TM35"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 12,
       "y": 7,
@@ -85,7 +80,6 @@
       "flag": "FLAG_ITEM_FUEGOIRONWORKS_INSIDE_CALCIUM"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 47,
       "y": 21,
@@ -99,7 +93,6 @@
       "flag": "FLAG_ITEM_FUEGOIRONWORKS_INSIDE_ROCK_INCENSE"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 52,
       "y": 6,
@@ -113,7 +106,6 @@
       "flag": "FLAG_ITEM_FUEGOIRONWORKS_INSIDE_FIRE_STONE"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 41,
       "y": 19,
@@ -127,7 +119,6 @@
       "flag": "FLAG_ITEM_FUEGOIRONWORKS_INSIDE_BLUE_SHARD"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 28,
       "y": 16,
@@ -141,7 +132,6 @@
       "flag": "FLAG_ITEM_FUEGOIRONWORKS_INSIDE_RED_SHARD"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 45,
       "y": 6,
@@ -155,7 +145,6 @@
       "flag": "FLAG_ITEM_FUEGOIRONWORKS_INSIDE_GREEN_SHARD"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 12,
       "y": 18,
@@ -169,7 +158,6 @@
       "flag": "FLAG_ITEM_FUEGOIRONWORKS_INSIDE_YELLOW_SHARD"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MAN",
       "x": 26,
       "y": 19,

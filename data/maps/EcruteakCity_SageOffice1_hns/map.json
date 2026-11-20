@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
@@ -43,6 +44,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_SAGEOFFICE_SAGE",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SAGE_HNS",
       "x": 16,
@@ -54,8 +56,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SE_J_EcruteakCity_SageOffice1_hns_EcruteakCity_SageOffice2_EventScript_SageA",
-      "flag": "0",
-      "local_id": "LOCALID_SAGEOFFICE_SAGE"
+      "flag": "0"
     }
   ],
   "warp_events": [

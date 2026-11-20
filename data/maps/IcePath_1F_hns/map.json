@@ -11,6 +11,7 @@
   "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
@@ -127,8 +128,8 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_ICEPATH1_KIMONO",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 49,
       "y": 25,
@@ -208,7 +209,9 @@
       "y": 11,
       "elevation": 0,
       "item": "ITEM_ICE_HEAL",
-      "flag": "FLAG_HIDDEN_ITEM_ICEPATH_1F_ICE_HEAL"
+      "flag": "FLAG_HIDDEN_ITEM_ICEPATH_1F_ICE_HEAL",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -216,7 +219,9 @@
       "y": 20,
       "elevation": 0,
       "item": "ITEM_REVIVE",
-      "flag": "FLAG_HIDDEN_ITEM_ICEPATH_1F_REVIVE"
+      "flag": "FLAG_HIDDEN_ITEM_ICEPATH_1F_REVIVE",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

@@ -11,10 +11,12 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_SSAQUA_CAPTAINS_ROOM_CAPTAIN",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CAPTAIN_HNS",
       "x": 5,
@@ -26,10 +28,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SSAqua_CaptainsRoom_EventScript_Captain",
-      "flag": "0",
-      "local_id": "LOCALID_SSAQUA_CAPTAINS_ROOM_CAPTAIN"
+      "flag": "0"
     },
     {
+      "local_id": "LOCALID_SSAQUA_CAPTAINS_ROOM_GRANDDAUGHTER",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_TWIN_HNS",
       "x": 4,
@@ -41,8 +43,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SE_J_SSAqua_CaptainsRoom_hns_SSAqua_CaptainsRoom_EventScript_Granddaughter",
-      "flag": "FLAG_HIDE_SSAQUA_CAPTAINS_ROOM_GRANDDAUGHTER",
-      "local_id": "LOCALID_SSAQUA_CAPTAINS_ROOM_GRANDDAUGHTER"
+      "flag": "FLAG_HIDE_SSAQUA_CAPTAINS_ROOM_GRANDDAUGHTER"
     }
   ],
   "warp_events": [

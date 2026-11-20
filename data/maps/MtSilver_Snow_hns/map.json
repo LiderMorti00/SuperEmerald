@@ -11,6 +11,7 @@
   "allow_escaping": true,
   "allow_running": false,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
@@ -270,7 +271,9 @@
       "y": 52,
       "elevation": 0,
       "item": "ITEM_PURE_INCENSE",
-      "flag": "FLAG_HIDDEN_ITEM_MT_SILVER_SNOW_PURE_INCENSE"
+      "flag": "FLAG_HIDDEN_ITEM_MT_SILVER_SNOW_PURE_INCENSE",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -278,7 +281,9 @@
       "y": 41,
       "elevation": 0,
       "item": "ITEM_DAWN_STONE",
-      "flag": "FLAG_HIDDEN_ITEM_MT_SILVER_SNOW_DAWN_STONE"
+      "flag": "FLAG_HIDDEN_ITEM_MT_SILVER_SNOW_DAWN_STONE",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

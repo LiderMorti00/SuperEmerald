@@ -11,6 +11,7 @@
   "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
@@ -312,7 +313,9 @@
       "y": 16,
       "elevation": 0,
       "item": "ITEM_NUGGET",
-      "flag": "FLAG_HIDDEN_ITEM_MTMORTAR_1F_NORTH_NUGGET"
+      "flag": "FLAG_HIDDEN_ITEM_MTMORTAR_1F_NORTH_NUGGET",
+      "quantity": 0,
+      "underfoot": false
     },
     {
       "type": "hidden_item",
@@ -320,7 +323,9 @@
       "y": 45,
       "elevation": 0,
       "item": "ITEM_IRON_BALL",
-      "flag": "FLAG_HIDDEN_ITEM_MTMORTAR_1F_NORTH_IRON_BALL"
+      "flag": "FLAG_HIDDEN_ITEM_MTMORTAR_1F_NORTH_IRON_BALL",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

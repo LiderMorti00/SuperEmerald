@@ -11,10 +11,12 @@
   "allow_escaping": true,
   "allow_running": false,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
+      "local_id": "LOCALID_LUGIA",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_LUGIA",
       "x": 29,
@@ -26,10 +28,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SE_EventScript_Lugia",
-      "flag": "FLAG_J_HIDE_LUGIA",
-      "local_id": "LOCALID_LUGIA"
+      "flag": "FLAG_J_HIDE_LUGIA"
     },
     {
+      "local_id": "LOCALID_KIMONO_2",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 27,
@@ -41,10 +43,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SE_J_WhirlIslands_LugiaChamber_hns_WhirlIslands_LugiaChamber_EventScript_Sayo",
-      "flag": "FLAG_HIDE_WHIRL_ISLANDS_KIMONO_GIRLS",
-      "local_id": "LOCALID_KIMONO_2"
+      "flag": "FLAG_HIDE_WHIRL_ISLANDS_KIMONO_GIRLS"
     },
     {
+      "local_id": "LOCALID_KIMONO_1",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 28,
@@ -56,10 +58,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SE_J_WhirlIslands_LugiaChamber_hns_WhirlIslands_LugiaChamber_EventScript_Naoko",
-      "flag": "FLAG_HIDE_WHIRL_ISLANDS_KIMONO_GIRLS",
-      "local_id": "LOCALID_KIMONO_1"
+      "flag": "FLAG_HIDE_WHIRL_ISLANDS_KIMONO_GIRLS"
     },
     {
+      "local_id": "LOCALID_KIMONO_MID",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 29,
@@ -71,10 +73,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SE_J_WhirlIslands_LugiaChamber_hns_WhirlIslands_LugiaChamber_EventScript_Zuki",
-      "flag": "FLAG_HIDE_WHIRL_ISLANDS_KIMONO_GIRLS",
-      "local_id": "LOCALID_KIMONO_MID"
+      "flag": "FLAG_HIDE_WHIRL_ISLANDS_KIMONO_GIRLS"
     },
     {
+      "local_id": "LOCALID_KIMONO_4",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 30,
@@ -86,10 +88,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SE_J_WhirlIslands_LugiaChamber_hns_WhirlIslands_LugiaChamber_EventScript_Miki",
-      "flag": "FLAG_HIDE_WHIRL_ISLANDS_KIMONO_GIRLS",
-      "local_id": "LOCALID_KIMONO_4"
+      "flag": "FLAG_HIDE_WHIRL_ISLANDS_KIMONO_GIRLS"
     },
     {
+      "local_id": "LOCALID_KIMONO_3",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_KIMONO_HNS",
       "x": 31,
@@ -101,8 +103,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SE_J_WhirlIslands_LugiaChamber_hns_WhirlIslands_LugiaChamber_EventScript_Kuni",
-      "flag": "FLAG_HIDE_WHIRL_ISLANDS_KIMONO_GIRLS",
-      "local_id": "LOCALID_KIMONO_3"
+      "flag": "FLAG_HIDE_WHIRL_ISLANDS_KIMONO_GIRLS"
     },
     {
       "type": "object",

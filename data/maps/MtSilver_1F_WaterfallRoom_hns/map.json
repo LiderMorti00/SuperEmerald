@@ -11,6 +11,7 @@
   "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
@@ -267,8 +268,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_MT_SILVER_1F_WATERFALL_ROOM_SCIENTIST",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_F_HNS",
       "x": 42,
       "y": 9,
@@ -348,7 +349,9 @@
       "y": 28,
       "elevation": 0,
       "item": "ITEM_EXPERT_BELT",
-      "flag": "FLAG_HIDDEN_ITEM_MT_SILVER_1F_WATERFALL_ROOM_EXPERT_BELT"
+      "flag": "FLAG_HIDDEN_ITEM_MT_SILVER_1F_WATERFALL_ROOM_EXPERT_BELT",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

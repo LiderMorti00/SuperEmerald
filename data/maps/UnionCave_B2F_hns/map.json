@@ -11,6 +11,7 @@
   "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
@@ -85,8 +86,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_UNION_CAVE_LAPRAS",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMING_LAPRAS_HNS",
       "x": 15,
       "y": 38,
@@ -201,7 +202,9 @@
       "y": 34,
       "elevation": 0,
       "item": "ITEM_CALCIUM",
-      "flag": "FLAG_HIDDEN_ITEM_UNIONCAVEB2F_CALCIUM"
+      "flag": "FLAG_HIDDEN_ITEM_UNIONCAVEB2F_CALCIUM",
+      "quantity": 0,
+      "underfoot": false
     }
   ]
 }

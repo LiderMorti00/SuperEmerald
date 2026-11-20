@@ -11,7 +11,6 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -22,7 +21,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_HIKER",
       "x": 51,
       "y": 28,
@@ -36,7 +34,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_SCHOOL_KID_F",
       "x": 36,
       "y": 20,
@@ -50,7 +47,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_POKEFAN_F",
       "x": 50,
       "y": 40,
@@ -65,7 +61,6 @@
     },
     {
       "local_id": "LOCALID_ORE_YOUNGSTER",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
       "x": 15,
       "y": 18,
@@ -79,7 +74,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_WORKER",
       "x": 14,
       "y": 26,
@@ -93,7 +87,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_WORKER",
       "x": 61,
       "y": 57,
@@ -107,7 +100,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CAMPER_FRLG",
       "x": 41,
       "y": 22,
@@ -121,7 +113,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_WORKER",
       "x": 42,
       "y": 41,
@@ -135,7 +126,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_WORKER",
       "x": 55,
       "y": 42,
@@ -149,7 +139,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GUITARIST",
       "x": 27,
       "y": 14,
@@ -163,7 +152,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BATTLE_GIRL",
       "x": 41,
       "y": 25,
@@ -177,7 +165,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MON_MACHOP",
       "x": 60,
       "y": 57,
@@ -191,7 +178,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MON_MACHOP",
       "x": 61,
       "y": 47,
@@ -205,7 +191,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MON_MACHOP",
       "x": 41,
       "y": 47,
@@ -219,7 +204,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BATTLE_GIRL",
       "x": 55,
       "y": 23,
@@ -233,7 +217,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 44,
       "y": 37,
@@ -247,7 +230,6 @@
       "flag": "FLAG_SN_ITEM_OLD_MAGMA_HIDEOUT_B1F_MASTER_BALL"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 41,
       "y": 39,
@@ -262,7 +244,6 @@
     },
     {
       "local_id": "LOCALID_SN_ORE_BARRY",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BARRY",
       "x": 30,
       "y": 23,
@@ -277,7 +258,6 @@
     },
     {
       "local_id": "LOCALID_SN_ORE_BARRY_POST",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BARRY",
       "x": 30,
       "y": 26,
@@ -291,7 +271,6 @@
       "flag": "FLAG_SN_HIDE_ORE_BARRY_POST"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_STEVEN",
       "x": 22,
       "y": 25,
@@ -487,5 +466,6 @@
       "quantity": 0,
       "underfoot": false
     }
-  ]
+  ],
+  "floor_number": 0
 }

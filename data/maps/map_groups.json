@@ -1534,7 +1534,12 @@
     "StarkMountain_sinnoh",
     "FlowerParadise_sinnoh",
     "SeabreakPath_North_sinnoh",
-    "SeabreakPath_South_sinnoh"
+    "SeabreakPath_South_sinnoh",
+    "BattlePark",
+    "BattleTower_Sinnoh",
+    "BattleTowe_Elevator_Sinnoh",
+    "BattleTower_Corridor_Sinnoh",
+    "BattleTower_BattleRoom_Sinnoh"
   ],
   "gMapGroup_DungeonsSinnoh_Sinnoh": [
     "OreburghGate_1F_sinnoh",
@@ -1666,7 +1671,8 @@
     "PokemonMansion_MaidsRoom_sinnoh",
     "PokemonMansion_Office_sinnoh",
     "IronIsland_House_sinnoh",
-    "FuegoIronworks_Inside_sinnoh"
+    "FuegoIronworks_Inside_sinnoh",
+    "BattlePark_Access"
   ],
   "gMapGroup_IndoorTwinleaf_Sinnoh": [
     "TwinleafTown_MainHouse_1F_sinnoh",
@@ -1805,7 +1811,8 @@
     "GalacticHQ_B2F_sinnoh",
     "GalacticHQ_Laboratory_sinnoh",
     "GalacticHQ_ControlRoom_sinnoh",
-    "GalacticHQ_Hall_sinnoh"
+    "GalacticHQ_Hall_sinnoh",
+    "VeilstoneCity_Departament_Store_Elevator"
   ],
   "gMapGroup_IndoorPastoria_Sinnoh": [
     "PastoriaCity_House1_sinnoh",
@@ -1861,7 +1868,8 @@
     "SunyshoreCity_VistaLighthouse_sinnoh",
     "SunyshoreCity_Market_sinnoh",
     "SunyshoreCity_Mart_sinnoh",
-    "SunyshoreCity_Gym_sinnoh"
+    "SunyshoreCity_Gym_sinnoh",
+    "SunyshoreCity_LightHouse_Elevator"
   ],
   "gMapGroup_IndoorPokemonLeague_Sinnoh": [
     "PokemonLeague_SouthPokemonCenter_1F_sinnoh",
