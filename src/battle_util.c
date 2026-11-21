@@ -2791,6 +2791,9 @@ bool32 TryFieldEffects(enum FieldEffectCases caseId)
                 }
                 break;
             case WEATHER_SNOW:
+            case WEATHER_SNOW_LIGHT:
+            case WEATHER_SNOW_HEAVY:
+            case WEATHER_BLIZZARD:
                 if (!(gBattleWeather & B_WEATHER_ICY_ANY))
                 {
                     if (B_OVERWORLD_SNOW >= GEN_9)
@@ -11437,7 +11440,10 @@ u32 GetWeatherFromOverworldWeather(u32 owWeather)
     case WEATHER_SUNNY_CLOUDS:          return B_WEATHER_NONE;
     case WEATHER_SUNNY:                 return B_WEATHER_NONE;
     case WEATHER_RAIN:                  return B_WEATHER_RAIN_NORMAL;
-    case WEATHER_SNOW:                  return B_OVERWORLD_SNOW >= GEN_9 ? B_WEATHER_SNOW : B_WEATHER_HAIL;
+    case WEATHER_SNOW:
+    case WEATHER_SNOW_LIGHT:
+    case WEATHER_SNOW_HEAVY:
+    case WEATHER_BLIZZARD:              return B_OVERWORLD_SNOW >= GEN_9 ? B_WEATHER_SNOW : B_WEATHER_HAIL;
     case WEATHER_RAIN_THUNDERSTORM:     return B_WEATHER_RAIN_NORMAL;
     case WEATHER_FOG_HORIZONTAL:        return B_OVERWORLD_FOG == GEN_4 ? B_WEATHER_FOG : B_WEATHER_NONE;
     case WEATHER_VOLCANIC_ASH:          return B_WEATHER_NONE;
@@ -11465,6 +11471,9 @@ enum BattleTerrain GetBattleTerrainFromOverworldWeather(u32 owWeather)
     case WEATHER_SUNNY:                 return B_TERRAIN_NONE;
     case WEATHER_RAIN:                  return B_TERRAIN_NONE;
     case WEATHER_SNOW:                  return B_TERRAIN_NONE;
+    case WEATHER_SNOW_LIGHT:            return B_TERRAIN_NONE;
+    case WEATHER_SNOW_HEAVY:            return B_TERRAIN_NONE;
+    case WEATHER_BLIZZARD:              return B_TERRAIN_NONE;
     case WEATHER_RAIN_THUNDERSTORM:     return B_THUNDERSTORM_TERRAIN ? B_TERRAIN_ELECTRIC : B_TERRAIN_NONE;
     case WEATHER_FOG_HORIZONTAL:        return B_OVERWORLD_FOG >= GEN_8 ? B_TERRAIN_MISTY : B_TERRAIN_NONE;
     case WEATHER_VOLCANIC_ASH:          return B_TERRAIN_NONE;

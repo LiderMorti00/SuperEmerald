@@ -18009,14 +18009,14 @@
       "blockdata_filepath": "data/layouts/PokemonWorldTournamentCorridor/map.bin"
     },
     {
-      "id": "LAYOUT_POKWMON_WORLD_TOURNAMENT_LOBBY",
-      "name": "PokwmonWorldTournamentLobby_Layout",
+      "id": "LAYOUT_POKEMON_WORLD_TOURNAMENT_LOBBY",
+      "name": "PokemonWorldTournamentLobby_Layout",
       "width": 23,
       "height": 17,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BattleDome",
-      "border_filepath": "data/layouts/PokwmonWorldTournamentLobby/border.bin",
-      "blockdata_filepath": "data/layouts/PokwmonWorldTournamentLobby/map.bin"
+      "border_filepath": "data/layouts/PokemonWorldTournamentLobby/border.bin",
+      "blockdata_filepath": "data/layouts/PokemonWorldTournamentLobby/map.bin"
     },
     {
       "id": "LAYOUT_POKEMON_WORLD_TOURNAMENT_PRE_BATTLE_ROOM",

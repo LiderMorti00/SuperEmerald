@@ -48,10 +48,9 @@ BattleFrontier_BattleDomeBattleRoom_EventScript_EnterRoom::
 	applymovement LOCALID_DOME_ANNOUNCER, Common_Movement_WalkInPlaceDown
 	waitmovement 0
 	call BattleFrontier_BattleDomeBattleRoom_EventScript_AnnouncePlayer
-	call SE_Pwt_BufferDomeName
 	msgbox BattleFrontier_BattleDomeBattleRoom_Text_PlayerHasEnteredDome, MSGBOX_DEFAULT
 	closemessage
-	call SE_Pwt_ShowDomePlayer
+	showobjectat LOCALID_DOME_PLAYER, MAP_BATTLE_FRONTIER_BATTLE_DOME_BATTLE_ROOM
 	goto_if_ne VAR_TEMP_F, DOME_FINAL, BattleFrontier_BattleDomeBattleRoom_EventScript_PlayerEnter
 	goto_if_ne VAR_TEMP_E, FRONTIER_BRAIN_NOT_READY, BattleFrontier_BattleDomeBattleRoom_EventScript_PlayerEnterForTucker
 BattleFrontier_BattleDomeBattleRoom_EventScript_PlayerEnter::
@@ -149,7 +148,6 @@ BattleFrontier_BattleDomeBattleRoom_EventScript_DefeatedOpponent::
 	switch VAR_RESULT
 	case DOME_ROUNDS_COUNT, BattleFrontier_BattleDomeBattleRoom_EventScript_WonTourney
 	setvar VAR_0x8006, 1
-	goto_if_set FLAG_SE_PWT, SE_PwtWarp_4
 	warp MAP_BATTLE_FRONTIER_BATTLE_DOME_PRE_BATTLE_ROOM, 5, 3
 	waitstate
 
@@ -333,7 +331,6 @@ BattleFrontier_BattleDomeBattleRoom_EventScript_AnnounceTucker::
 	case FRONTIER_BRAIN_STREAK_LONG, BattleFrontier_BattleDomeBattleRoom_EventScript_AnnounceTuckerGold
 
 BattleFrontier_BattleDomeBattleRoom_EventScript_AnnounceTuckerSilver::
-	call SE_Pwt_BufferDomeName
 	msgbox BattleFrontier_BattleDomeBattleRoom_Text_MakeWayForDomeAceTucker, MSGBOX_DEFAULT
 	goto BattleFrontier_BattleDomeBattleRoom_EventScript_TuckerEnter
 
@@ -371,7 +368,6 @@ BattleFrontier_BattleDomeBattleRoom_EventScript_TuckerEnter::
 	case FRONTIER_BRAIN_STREAK_LONG, BattleFrontier_BattleDomeBattleRoom_EventScript_BattleTuckerGold
 	frontier_get FRONTIER_DATA_HEARD_BRAIN_SPEECH
 	goto_if_ne VAR_RESULT, FALSE, BattleFrontier_BattleDomeBattleRoom_EventScript_BattleTuckerSilver
-	call SE_Pwt_BufferDomeName
 	msgbox BattleFrontier_BattleDomeBattleRoom_Text_TuckerSilverIntro, MSGBOX_DEFAULT
 	frontier_set FRONTIER_DATA_HEARD_BRAIN_SPEECH
 BattleFrontier_BattleDomeBattleRoom_EventScript_BattleTuckerSilver::
@@ -462,7 +458,7 @@ BattleFrontier_BattleDomeBattleRoom_OnWarp:
 	.2byte 0
 
 BattleFrontier_BattleDomeBattleRoom_EventScript_SetUpObjects::
-	call SE_Pwt_HideDomePlayer
+	hideobjectat LOCALID_DOME_PLAYER, MAP_BATTLE_FRONTIER_BATTLE_DOME_BATTLE_ROOM
 	call BattleFrontier_BattleDomeBattleRoom_EventScript_AddAudience
 	call BattleFrontier_BattleDomeBattleRoom_EventScript_SetPlayerGfx
 	setvar VAR_TEMP_1, 1
@@ -856,13 +852,11 @@ BattleFrontier_BattleDomeBattleRoom_EventScript_AudienceLookAround::
 BattleFrontier_BattleDomeBattleRoom_EventScript_WarpToLobby::
 	copyvar VAR_RESULT, VAR_FRONTIER_BATTLE_MODE
 	goto_if_eq VAR_RESULT, FRONTIER_MODE_DOUBLES, BattleFrontier_BattleDomePreBattleRoom_EventScript_WarpToLobbyDoubles
-	goto_if_set FLAG_SE_PWT, SE_PwtWarp_5
 	warp MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY, 5, 11
 	waitstate
 	end
 
 BattleFrontier_BattleDomePreBattleRoom_EventScript_WarpToLobbyDoubles::
-	goto_if_set FLAG_SE_PWT, SE_PwtWarp_6
 	warp MAP_BATTLE_FRONTIER_BATTLE_DOME_LOBBY, 17, 11
 	waitstate
 	end
@@ -929,7 +923,7 @@ BattleFrontier_BattleDomeBattleRoom_Movement_RefereeExit:
 	step_end
 
 BattleFrontier_BattleDomeBattleRoom_Text_PlayerHasEnteredDome:
-	.string "{PLAYER} has entered the {STR_VAR_3}!$"
+	.string "{PLAYER} has entered the BATTLE DOME!$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_PlayerVersusTrainer:
 	.string "{STR_VAR_1}\n"
@@ -1061,7 +1055,7 @@ BattleFrontier_BattleDomeBattleRoom_Text_MakeWayForDomeAceTucker:
 	.string "And now… The TRAINER standing in\n"
 	.string "{PLAYER}'s record-setting path…\p"
 	.string "Yes! The one and only!\n"
-	.string "The {STR_VAR_3} COMMISSIONER!\l"
+	.string "The BATTLE DOME COMMISSIONER!\l"
 	.string "Our very own DOME ACE!\l"
 	.string "Make way for TUCKER!$"
 
@@ -1077,7 +1071,7 @@ BattleFrontier_BattleDomeBattleRoom_Text_TuckerSilverIntro:
 	.string "I bet you're twitching all over from\n"
 	.string "the tension of getting to battle me!\p"
 	.string "But don't you worry about a thing!\p"
-	.string "I'm the no. 1 star of the {STR_VAR_3}!\n"
+	.string "I'm the no. 1 star of the BATTLE DOME!\n"
 	.string "I, TUCKER the DOME ACE, will bathe you\l"
 	.string "in my brilliant glow!$"
 

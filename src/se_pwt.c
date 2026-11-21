@@ -1,5 +1,5 @@
 // Super Emerald: Pokemon World Tournament (Johto, Route 40).
-// It runs on the Battle Dome engine: while FLAG_SE_PWT is set, the Dome uses the PWT roster
+// It runs on the Battle Dome engine: while the player is in the PWT maps, the Dome uses the PWT roster
 // (gym leaders, Elite Four and champions of every region) instead of the Frontier trainers,
 // the player's Pokemon are set to level 50 for the battles, there's no Frontier Brain and
 // the Battle Points depend on the cup. The PWT keeps its own Dome records (see SE_SwapDomeData).
@@ -16,6 +16,7 @@
 #include "constants/items.h"
 #include "constants/moves.h"
 #include "constants/se_pwt.h"
+#include "constants/map_groups.h"
 #include "constants/species.h"
 #include "constants/trainers.h"
 #include "constants/easy_chat.h"
@@ -23,9 +24,14 @@
 
 #include "data/battle_frontier/se_pwt.h"
 
+// The PWT maps have their own scripts (copies of the Dome's); the engine tells it's the PWT by the map
 bool32 SE_IsPwt(void)
 {
-    return FlagGet(FLAG_SE_PWT);
+    u16 map = (gSaveBlock1Ptr->location.mapGroup << 8) | gSaveBlock1Ptr->location.mapNum;
+    return map == MAP_POKEMON_WORLD_TOURNAMENT_LOBBY
+        || map == MAP_POKEMON_WORLD_TOURNAMENT_CORRIDOR
+        || map == MAP_POKEMON_WORLD_TOURNAMENT_PRE_BATTLE_ROOM
+        || map == MAP_POKEMON_WORLD_TOURNAMENT_ROOM;
 }
 
 const struct BattleFrontierTrainer *SE_FrontierTrainerList(void)
@@ -250,7 +256,6 @@ static void SE_SwapDomeData(void)
 // PWT lobby (on transition)
 void SE_EnterPwt(void)
 {
-    FlagSet(FLAG_SE_PWT);
     if (!FlagGet(FLAG_SE_DOME_DATA_PWT))
     {
         SE_SwapDomeData();
@@ -261,7 +266,6 @@ void SE_EnterPwt(void)
 // Outside the PWT and in Hoenn's Battle Dome lobby (on transition)
 void SE_LeavePwt(void)
 {
-    FlagClear(FLAG_SE_PWT);
     if (FlagGet(FLAG_SE_DOME_DATA_PWT))
     {
         SE_SwapDomeData();

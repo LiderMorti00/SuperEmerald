@@ -142,6 +142,9 @@ static const struct WeatherCallbacks sWeatherFuncs[] =
     [WEATHER_DROUGHT]            = {Drought_InitVars,       Drought_Main,       Drought_InitAll,       Drought_Finish},
     [WEATHER_DOWNPOUR]           = {Downpour_InitVars,      Thunderstorm_Main,  Downpour_InitAll,      Thunderstorm_Finish},
     [WEATHER_UNDERWATER_BUBBLES] = {Bubbles_InitVars,       Bubbles_Main,       Bubbles_InitAll,       Bubbles_Finish},
+    [WEATHER_SNOW_LIGHT]         = {SnowLight_InitVars,     SnowLight_Main,     SnowLight_InitAll,     SnowLight_Finish},
+    [WEATHER_SNOW_HEAVY]         = {SnowHeavy_InitVars,     SnowHeavy_Main,     SnowHeavy_InitAll,     SnowHeavy_Finish},
+    [WEATHER_BLIZZARD]           = {Blizzard_InitVars,      Blizzard_Main,      Blizzard_InitAll,      Blizzard_Finish},
 };
 
 void (*const gWeatherPalStateFuncs[])(void) =
@@ -1218,6 +1221,9 @@ static const u8 sWeatherNames[WEATHER_COUNT][24] = {
     [WEATHER_ROUTE119_CYCLE]     = _("ROUTE119 CYCLE"),
     [WEATHER_ROUTE123_CYCLE]     = _("ROUTE123 CYCLE"),
     [WEATHER_FOG]                = _("FOG"),
+    [WEATHER_SNOW_LIGHT]         = _("SNOW LIGHT"),
+    [WEATHER_SNOW_HEAVY]         = _("SNOW HEAVY"),
+    [WEATHER_BLIZZARD]           = _("BLIZZARD"),
 };
 
 static const u8 sDebugText_WeatherNotDefined[] = _("NOT DEFINED!!!");

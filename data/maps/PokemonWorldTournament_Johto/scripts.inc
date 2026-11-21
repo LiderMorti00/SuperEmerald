@@ -1,5 +1,5 @@
 PokemonWorldTournament_Johto_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, SE_Pwt_LeaveOnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_Dome_UseHoennRecords
 	.byte 0
 
 PokemonWorldTournament_Johto_EventScript_Sign::

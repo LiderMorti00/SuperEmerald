@@ -617,7 +617,7 @@ static u32 WildEncounterOdds(u32 encounterRate, bool8 ignoreAbility)
             encounterRate *= 2;
         else if (ability == ABILITY_SAND_VEIL && gSaveBlock1Ptr->weather == WEATHER_SANDSTORM)
             encounterRate /= 2;
-        else if (ability == ABILITY_SNOW_CLOAK && gSaveBlock1Ptr->weather == WEATHER_SNOW)
+        else if (ability == ABILITY_SNOW_CLOAK && (gSaveBlock1Ptr->weather == WEATHER_SNOW || gSaveBlock1Ptr->weather == WEATHER_SNOW_LIGHT || gSaveBlock1Ptr->weather == WEATHER_SNOW_HEAVY || gSaveBlock1Ptr->weather == WEATHER_BLIZZARD))
             encounterRate /= 2;
         else if (ability == ABILITY_QUICK_FEET)
             encounterRate /= 2;

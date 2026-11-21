@@ -1,5 +1,5 @@
 BattleFrontier_BattleDomeLobby_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, SE_Pwt_LeaveOnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, SE_Dome_UseHoennRecords
 	map_script MAP_SCRIPT_ON_RESUME, BattleFrontier_BattleDomeLobby_OnResume
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, BattleFrontier_BattleDomeLobby_OnFrame
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, BattleFrontier_BattleDomeLobby_OnWarp
@@ -56,7 +56,6 @@ BattleFrontier_BattleDomeLobby_EventScript_GiveBattlePoints::
 	msgbox BattleFrontier_BattleDomeLobby_Text_AwardTheseBattlePoints, MSGBOX_DEFAULT
 	frontier_givepoints
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_GETPOINTS
-	call_if_set FLAG_SE_PWT, SE_Pwt_GiveCupPrize
 	message BattleFrontier_BattleDomeLobby_Text_RecordWillBeSaved
 	waitmessage
 	special LoadPlayerParty
@@ -89,7 +88,6 @@ BattleFrontier_BattleDomeLobby_EventScript_AskRecordBattle::
 	waitse
 	call BattleFrontier_EventScript_GetCantRecordBattle
 	goto_if_eq VAR_RESULT, TRUE, BattleFrontier_BattleDomeLobby_EventScript_EndChallenge
-	call SE_Pwt_BufferDomeName
 	message BattleFrontier_BattleDomeLobby_Text_RecordLastMatch
 	waitmessage
 	multichoicedefault 20, 8, MULTI_YESNO, 1, FALSE
@@ -110,7 +108,6 @@ BattleFrontier_BattleDomeLobby_EventScript_EndChallenge::
 BattleFrontier_BattleDomeLobby_EventScript_ResumeChallenge::
 	lockall
 	msgbox BattleFrontier_BattleDomeLobby_Text_WeveBeenWaitingForYou, MSGBOX_DEFAULT
-	call SE_Pwt_BufferDomeName
 	message BattleFrontier_BattleDomeLobby_Text_OkayToSaveBeforeChallenge2
 	waitmessage
 	dome_save CHALLENGE_STATUS_SAVING
@@ -152,14 +149,12 @@ BattleFrontier_BattleDomeLobby_EventScript_AskTakeChallenge::
 	case MULTI_B_PRESSED, BattleFrontier_BattleDomeLobby_EventScript_CancelChallenge
 
 BattleFrontier_BattleDomeLobby_EventScript_TryEnterChallenge::
-	goto_if_set FLAG_SE_PWT, SE_Pwt_ChooseCup
 	message BattleFrontier_BattleDomeLobby_Text_WhichLevelMode
 	waitmessage
 	multichoice 17, 6, MULTI_LEVEL_MODE, FALSE
 	switch VAR_RESULT
 	case FRONTIER_LVL_TENT, BattleFrontier_BattleDomeLobby_EventScript_CancelChallenge
 	case MULTI_B_PRESSED, BattleFrontier_BattleDomeLobby_EventScript_CancelChallenge
-BattleFrontier_BattleDomeLobby_EventScript_CheckEligible::
 	frontier_checkineligible
 	goto_if_eq VAR_0x8004, TRUE, BattleFrontier_BattleDomeLobby_EventScript_NotEnoughValidMons
 	frontier_set FRONTIER_DATA_LVL_MODE, VAR_RESULT
@@ -170,7 +165,6 @@ BattleFrontier_BattleDomeLobby_EventScript_CheckEligible::
 	copyvar VAR_0x8004, VAR_RESULT
 	choosepartyforbattlefrontier FRONTIER_PARTY_SIZE
 	goto_if_eq VAR_RESULT, 0, BattleFrontier_BattleDomeLobby_EventScript_LoadPartyCancelChallenge
-	call SE_Pwt_BufferDomeName
 	msgbox BattleFrontier_BattleDomeLobby_Text_OkayToSaveBeforeChallenge, MSGBOX_YESNO
 	switch VAR_RESULT
 	case NO, BattleFrontier_BattleDomeLobby_EventScript_LoadPartyCancelChallenge
@@ -194,12 +188,10 @@ BattleFrontier_BattleDomeLobby_EventScript_EnterChallenge::
 	special SavePlayerParty
 	frontier_setpartyorder FRONTIER_PARTY_SIZE
 	dome_settrainers
-	call SE_Pwt_BufferDomeName
 	msgbox BattleFrontier_BattleDomeLobby_Text_ShowYouToBattleDome, MSGBOX_DEFAULT
 	closemessage
 	call BattleFrontier_BattleDomeLobby_EventScript_WalkToDoor
 	special HealPlayerParty
-	goto_if_set FLAG_SE_PWT, SE_PwtWarp_1
 	warp MAP_BATTLE_FRONTIER_BATTLE_DOME_CORRIDOR, 23, 6
 	setvar VAR_TEMP_CHALLENGE_STATUS, 0
 	waitstate
@@ -211,7 +203,6 @@ BattleFrontier_BattleDomeLobby_EventScript_ExplainChallenge::
 	goto BattleFrontier_BattleDomeLobby_EventScript_AskTakeChallenge
 
 BattleFrontier_BattleDomeLobby_EventScript_NotEnoughValidMons::
-	goto_if_set FLAG_SE_PWT, BattleFrontier_BattleDomeLobby_EventScript_NotEnoughValidMonsLvOpen
 	switch VAR_RESULT
 	case FRONTIER_LVL_50, BattleFrontier_BattleDomeLobby_EventScript_NotEnoughValidMonsLv50
 	case FRONTIER_LVL_OPEN, BattleFrontier_BattleDomeLobby_EventScript_NotEnoughValidMonsLvOpen
@@ -275,12 +266,10 @@ BattleFrontier_BattleDomeLobby_EventScript_DoublesAttendantEnterDoor::
 	return
 
 BattleFrontier_BattleDomeLobby_EventScript_WelcomeSingles::
-	call SE_Pwt_BufferDomeName
 	msgbox BattleFrontier_BattleDomeLobby_Text_WelcomeSingleBattle, MSGBOX_DEFAULT
 	return
 
 BattleFrontier_BattleDomeLobby_EventScript_WelcomeDoubles::
-	call SE_Pwt_BufferDomeName
 	msgbox BattleFrontier_BattleDomeLobby_Text_WelcomeDoubleBattle, MSGBOX_DEFAULT
 	return
 
@@ -294,12 +283,10 @@ BattleFrontier_BattleDomeLobby_EventScript_TakeDoublesChallenge::
 
 BattleFrontier_BattleDomeLobby_EventScript_ExplainSinglesChallenge::
 	msgbox BattleFrontier_BattleDomeLobby_Text_ExplainSinglesChallenge, MSGBOX_DEFAULT
-	call_if_set FLAG_SE_PWT, SE_Pwt_ExplainCups
 	return
 
 BattleFrontier_BattleDomeLobby_EventScript_ExplainDoublesChallenge::
 	msgbox BattleFrontier_BattleDomeLobby_Text_ExplainDoublesChallenge, MSGBOX_DEFAULT
-	call_if_set FLAG_SE_PWT, SE_Pwt_ExplainCups
 	return
 
 BattleFrontier_BattleDomeLobby_EventScript_OpenSinglesDoor::
@@ -386,7 +373,6 @@ BattleFrontier_BattleDomeLobby_EventScript_Maniac::
 	end
 
 BattleFrontier_BattleDomeLobby_EventScript_Lass::
-	call SE_Pwt_BufferDomeName
 	msgbox BattleFrontier_BattleDomeLobby_Text_WinnersGainReputation, MSGBOX_NPC
 	end
 
@@ -453,7 +439,7 @@ BattleFrontier_BattleDomeLobby_EventScript_ExitRules::
 BattleFrontier_BattleDomeLobby_Text_WelcomeSingleBattle:
 	.string "Where the strategies of TRAINERS\n"
 	.string "are put to the test!\p"
-	.string "Welcome to the {STR_VAR_3}!\p"
+	.string "Welcome to the BATTLE DOME!\p"
 	.string "I am your guide to the SINGLE BATTLE\n"
 	.string "Tournament.$"
 
@@ -486,7 +472,7 @@ BattleFrontier_BattleDomeLobby_Text_ExplainSinglesChallenge:
 	.string "you will be disqualified.$"
 
 BattleFrontier_BattleDomeLobby_Text_OkayToSaveBeforeChallenge:
-	.string "Before I show you to the {STR_VAR_3},\n"
+	.string "Before I show you to the BATTLE DOME,\n"
 	.string "I must save the data. Is that okay?$"
 
 BattleFrontier_BattleDomeLobby_Text_WhichLevelMode:
@@ -519,7 +505,7 @@ BattleFrontier_BattleDomeLobby_Text_NotEnoughValidMonsLv50:
 
 BattleFrontier_BattleDomeLobby_Text_ShowYouToBattleDome:
 	.string "I will now show you to\n"
-	.string "the {STR_VAR_3}.$"
+	.string "the BATTLE DOME.$"
 
 BattleFrontier_BattleDomeLobby_Text_DidntSaveBeforeQuitting:
 	.string "Excuse me!\p"
@@ -559,13 +545,13 @@ BattleFrontier_BattleDomeLobby_Text_WeveBeenWaitingForYou:
 	.string "We've been waiting for you!$"
 
 BattleFrontier_BattleDomeLobby_Text_OkayToSaveBeforeChallenge2:
-	.string "Before I show you to the {STR_VAR_3},\n"
+	.string "Before I show you to the BATTLE DOME,\n"
 	.string "I must save the data. Is that okay?$"
 
 BattleFrontier_BattleDomeLobby_Text_WelcomeDoubleBattle:
 	.string "Where the strategies of TRAINERS\n"
 	.string "are put to the test!\p"
-	.string "Welcome to the {STR_VAR_3}!\p"
+	.string "Welcome to the BATTLE DOME!\p"
 	.string "I am your guide to the DOUBLE BATTLE\n"
 	.string "Tournament.$"
 
@@ -634,10 +620,10 @@ BattleFrontier_OutsideWest_Text_QuestionMarkUnderConstruction:
 
 BattleFrontier_BattleDomeLobby_Text_WinnersGainReputation:
 	.string "When a TRAINER chains tournament\n"
-	.string "wins at the {STR_VAR_3}, he or she\l"
+	.string "wins at the BATTLE DOME, he or she\l"
 	.string "gains a reputation as a star.\p"
 	.string "Tough TRAINERS are drawn by that\n"
-	.string "reputation to the {STR_VAR_3}.\p"
+	.string "reputation to the BATTLE DOME.\p"
 	.string "A true superstar is a TRAINER who\n"
 	.string "can keep winning tournaments.$"
 
@@ -665,7 +651,7 @@ BattleFrontier_BattleDomeLobby_Text_AwardTheseBattlePoints:
 
 BattleFrontier_BattleDomeLobby_Text_RecordLastMatch:
 	.string "Would you like to record your\n"
-	.string "last {STR_VAR_3} match on your\l"
+	.string "last BATTLE DOME match on your\l"
 	.string "FRONTIER PASS?$"
 
 BattleFrontier_BattleDomeLobby_Text_RulesAreListed:

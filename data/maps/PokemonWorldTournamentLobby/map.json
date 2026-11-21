@@ -1,7 +1,7 @@
 {
-  "id": "MAP_POKWMON_WORLD_TOURNAMENT_LOBBY",
-  "name": "PokwmonWorldTournamentLobby",
-  "layout": "LAYOUT_POKWMON_WORLD_TOURNAMENT_LOBBY",
+  "id": "MAP_POKEMON_WORLD_TOURNAMENT_LOBBY",
+  "name": "PokemonWorldTournamentLobby",
+  "layout": "LAYOUT_POKEMON_WORLD_TOURNAMENT_LOBBY",
   "music": "MUS_B_DOME_LOBBY",
   "region_map_section": "MAPSEC_ROUTE_40",
   "requires_flash": false,
@@ -25,7 +25,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "BattleFrontier_BattleDomeLobby_EventScript_SinglesAttendant",
+      "script": "PokemonWorldTournamentLobby_EventScript_SinglesAttendant",
       "flag": "0"
     },
     {
@@ -38,7 +38,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "BattleFrontier_BattleDomeLobby_EventScript_Man",
+      "script": "PokemonWorldTournamentLobby_EventScript_Man",
       "flag": "0"
     },
     {
@@ -51,7 +51,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "BattleFrontier_BattleDomeLobby_EventScript_Lass",
+      "script": "PokemonWorldTournamentLobby_EventScript_Lass",
       "flag": "0"
     },
     {
@@ -64,7 +64,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "BattleFrontier_BattleDomeLobby_EventScript_FatMan",
+      "script": "PokemonWorldTournamentLobby_EventScript_FatMan",
       "flag": "0"
     },
     {
@@ -77,7 +77,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "BattleFrontier_BattleDomeLobby_EventScript_Maniac",
+      "script": "PokemonWorldTournamentLobby_EventScript_Maniac",
       "flag": "0"
     },
     {
@@ -91,7 +91,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "BattleFrontier_BattleDomeLobby_EventScript_DoublesAttendant",
+      "script": "PokemonWorldTournamentLobby_EventScript_DoublesAttendant",
       "flag": "0"
     },
     {
@@ -145,7 +145,7 @@
       "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "BattleFrontier_BattleDomeLobby_EventScript_ShowSinglesResults"
+      "script": "PokemonWorldTournamentLobby_EventScript_ShowSinglesResults"
     },
     {
       "type": "sign",
@@ -153,7 +153,7 @@
       "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "BattleFrontier_BattleDomeLobby_EventScript_ShowPrevTourneyTree"
+      "script": "PokemonWorldTournamentLobby_EventScript_ShowPrevTourneyTree"
     },
     {
       "type": "sign",
@@ -161,7 +161,7 @@
       "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "BattleFrontier_BattleDomeLobby_EventScript_ShowDoublesResults"
+      "script": "PokemonWorldTournamentLobby_EventScript_ShowDoublesResults"
     },
     {
       "type": "sign",
@@ -169,7 +169,7 @@
       "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "BattleFrontier_BattleDomeLobby_EventScript_RulesBoard"
+      "script": "PokemonWorldTournamentLobby_EventScript_RulesBoard"
     }
   ]
 }

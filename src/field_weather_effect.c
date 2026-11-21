@@ -769,6 +769,7 @@ static bool8 UpdateVisibleSnowflakeSprites(void);
 static bool8 CreateSnowflakeSprite(void);
 static bool8 DestroySnowflakeSprite(void);
 static void InitSnowflakeSpriteMovement(struct Sprite *);
+static void UpdateSnowflakeSprite(struct Sprite *);
 
 void Snow_InitVars(void)
 {
@@ -825,12 +826,33 @@ bool8 Snow_Finish(void)
     return FALSE;
 }
 
+// Super Emerald: Sinnoh snow, from the Sinnoh project. SnowLight (8 flakes), SnowHeavy (32)
+// and Blizzard (64 fast flakes, darker)
+void SnowLight_InitVars(void) { Snow_InitVars(); gWeatherPtr->targetSnowflakeSpriteCount = 8; }
+void SnowLight_InitAll(void) { u16 i; SnowLight_InitVars(); while (!gWeatherPtr->weatherGfxLoaded) { SnowLight_Main(); for (i = 0; i < gWeatherPtr->snowflakeSpriteCount; i++) UpdateSnowflakeSprite(gWeatherPtr->sprites.s1.snowflakeSprites[i]); } }
+void SnowLight_Main(void) { Snow_Main(); }
+bool8 SnowLight_Finish(void) { return Snow_Finish(); }
+
+void SnowHeavy_InitVars(void) { Snow_InitVars(); gWeatherPtr->targetSnowflakeSpriteCount = 32; }
+void SnowHeavy_InitAll(void) { u16 i; SnowHeavy_InitVars(); while (!gWeatherPtr->weatherGfxLoaded) { SnowHeavy_Main(); for (i = 0; i < gWeatherPtr->snowflakeSpriteCount; i++) UpdateSnowflakeSprite(gWeatherPtr->sprites.s1.snowflakeSprites[i]); } }
+void SnowHeavy_Main(void) { Snow_Main(); }
+bool8 SnowHeavy_Finish(void) { return Snow_Finish(); }
+
+void Blizzard_InitVars(void) { Snow_InitVars(); gWeatherPtr->targetColorMapIndex = 3; gWeatherPtr->targetSnowflakeSpriteCount = 64; }
+void Blizzard_InitAll(void) { u16 i; Blizzard_InitVars(); while (!gWeatherPtr->weatherGfxLoaded) { Blizzard_Main(); for (i = 0; i < gWeatherPtr->snowflakeSpriteCount; i++) UpdateSnowflakeSprite(gWeatherPtr->sprites.s1.snowflakeSprites[i]); } }
+void Blizzard_Main(void) { Snow_Main(); }
+bool8 Blizzard_Finish(void) { return Snow_Finish(); }
+
 static bool8 UpdateVisibleSnowflakeSprites(void)
 {
+    u16 spawnDelay = (gWeatherPtr->currWeather == WEATHER_SNOW_LIGHT) ? 45 :
+                     (gWeatherPtr->currWeather == WEATHER_SNOW_HEAVY) ? 10 :
+                     (gWeatherPtr->currWeather == WEATHER_BLIZZARD) ? 3 : 36;
+
     if (gWeatherPtr->snowflakeSpriteCount == gWeatherPtr->targetSnowflakeSpriteCount)
         return FALSE;
 
-    if (++gWeatherPtr->snowflakeVisibleCounter > 36)
+    if (++gWeatherPtr->snowflakeVisibleCounter > spawnDelay)
     {
         gWeatherPtr->snowflakeVisibleCounter = 0;
         if (gWeatherPtr->snowflakeSpriteCount < gWeatherPtr->targetSnowflakeSpriteCount)
@@ -961,7 +983,19 @@ static void UpdateSnowflakeSprite(struct Sprite *sprite)
 {
     s16 x;
 
-    sprite->tPosY += sprite->tDeltaY;
+    if (gWeatherPtr->currWeather == WEATHER_BLIZZARD)
+    {
+        sprite->tPosY += sprite->tDeltaY * 2;
+        sprite->x -= 3;
+    }
+    else if (gWeatherPtr->currWeather == WEATHER_SNOW_HEAVY)
+    {
+        sprite->tPosY += (sprite->tDeltaY * 3) / 2;
+    }
+    else
+    {
+        sprite->tPosY += sprite->tDeltaY;
+    }
     sprite->y = sprite->tPosY >> 7;
     sprite->tWaveIndex += sprite->tWaveDelta;
     sprite->tWaveIndex &= 0xFF;
@@ -2687,6 +2721,9 @@ static enum OverworldWeather TranslateWeatherNum(enum OverworldWeather weather)
     case WEATHER_ROUTE119_CYCLE:     return sWeatherCycleRoute119[gSaveBlock1Ptr->weatherCycleStage];
     case WEATHER_ROUTE123_CYCLE:     return sWeatherCycleRoute123[gSaveBlock1Ptr->weatherCycleStage];
     case WEATHER_DYNAMIC:            return GetDynamicWeather();
+    case WEATHER_SNOW_LIGHT:         return WEATHER_SNOW_LIGHT;
+    case WEATHER_SNOW_HEAVY:         return WEATHER_SNOW_HEAVY;
+    case WEATHER_BLIZZARD:           return WEATHER_BLIZZARD;
     }
 
     return WEATHER_NONE;

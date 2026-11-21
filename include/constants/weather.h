@@ -23,6 +23,10 @@ enum OverworldWeather
     WEATHER_ROUTE123_CYCLE,
     WEATHER_FOG, // Aggregate of WEATHER_FOG_HORIZONTAL and WEATHER_FOG_DIAGONAL
     WEATHER_DYNAMIC,
+    // Super Emerald: Sinnoh snow, like Platinum (Snowpoint, Route 216, Route 217)
+    WEATHER_SNOW_LIGHT,
+    WEATHER_SNOW_HEAVY,
+    WEATHER_BLIZZARD,
     WEATHER_COUNT,
 };
 

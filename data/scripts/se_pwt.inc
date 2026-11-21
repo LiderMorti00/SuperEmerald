@@ -1,41 +1,17 @@
 @ Super Emerald: Pokemon World Tournament (Johto, Route 40).
-@ The PWT maps are copies of the Battle Dome ones and use its scripts: FLAG_SE_PWT is set in the
-@ PWT lobby (SE_EnterPwt) and cleared outside and in Hoenn's Dome lobby (SE_LeavePwt). While it's
-@ set, the Dome engine uses the PWT roster and the warps below lead to the PWT maps.
+@ The PWT maps have their own copies of the Battle Dome scripts (data/maps/PokemonWorldTournament*);
+@ the C side knows it's the PWT by the map the player is on (SE_IsPwt).
 @ See src/se_pwt.c.
 
-SE_Pwt_EnterOnTransition::
+@ The save holds the Dome records of one facility at a time; the other's are kept in vars
+@ (see SE_SwapDomeData). PWT lobby: PWT records. Hoenn's Dome lobby and the PWT outside: Hoenn's.
+SE_Pwt_UsePwtRecords::
 	special SE_EnterPwt
 	end
 
-SE_Pwt_LeaveOnTransition::
+SE_Dome_UseHoennRecords::
 	special SE_LeavePwt
 	end
-
-@ "BATTLE DOME" in the Dome texts is {STR_VAR_3}
-SE_Pwt_BufferDomeName::
-	goto_if_set FLAG_SE_PWT, SE_Pwt_BufferPwtName
-	bufferstring STR_VAR_3, SE_Text_BattleDomeName
-	return
-SE_Pwt_BufferPwtName:
-	bufferstring STR_VAR_3, SE_Text_PwtName
-	return
-
-SE_Pwt_ShowDomePlayer::
-	goto_if_set FLAG_SE_PWT, SE_Pwt_ShowPwtPlayer
-	showobjectat LOCALID_DOME_PLAYER, MAP_BATTLE_FRONTIER_BATTLE_DOME_BATTLE_ROOM
-	return
-SE_Pwt_ShowPwtPlayer:
-	showobjectat LOCALID_DOME_PLAYER, MAP_POKEMON_WORLD_TOURNAMENT_ROOM
-	return
-
-SE_Pwt_HideDomePlayer::
-	goto_if_set FLAG_SE_PWT, SE_Pwt_HidePwtPlayer
-	hideobjectat LOCALID_DOME_PLAYER, MAP_BATTLE_FRONTIER_BATTLE_DOME_BATTLE_ROOM
-	return
-SE_Pwt_HidePwtPlayer:
-	hideobjectat LOCALID_DOME_PLAYER, MAP_POKEMON_WORLD_TOURNAMENT_ROOM
-	return
 
 @ Lobby: choose the cup instead of the level mode (always level 50)
 SE_Pwt_ChooseCup::
@@ -50,12 +26,12 @@ SE_Pwt_ChooseCup::
 	dynmultipush SE_Text_CupWorld, SE_PWT_CUP_WORLD
 	dynmultipush gText_Cancel, SE_PWT_CUPS_COUNT
 	dynmultistack 0, 0, FALSE, 5, FALSE, 0, DYN_MULTICHOICE_CB_NONE
-	goto_if_ge VAR_RESULT, SE_PWT_CUPS_COUNT, BattleFrontier_BattleDomeLobby_EventScript_CancelChallenge
+	goto_if_ge VAR_RESULT, SE_PWT_CUPS_COUNT, PokemonWorldTournamentLobby_EventScript_CancelChallenge
 	copyvar VAR_SE_PWT_CUP, VAR_RESULT
 	special SE_PwtBufferCupName
 	msgbox SE_Text_PwtCupChosen, MSGBOX_DEFAULT
 	setvar VAR_RESULT, FRONTIER_LVL_50
-	goto BattleFrontier_BattleDomeLobby_EventScript_CheckEligible
+	goto PokemonWorldTournamentLobby_EventScript_CheckEligible
 
 @ First win of each cup: a prize typical of the region
 SE_Pwt_GiveCupPrize::
@@ -76,43 +52,6 @@ SE_Pwt_ExplainCups::
 	msgbox SE_Text_PwtExplainCups, MSGBOX_DEFAULT
 	return
 
-@ Warps of the Dome scripts while in the PWT
-SE_PwtWarp_1::
-	warp MAP_POKEMON_WORLD_TOURNAMENT_CORRIDOR, 23, 6
-	setvar VAR_TEMP_CHALLENGE_STATUS, 0
-	waitstate
-	end
-
-SE_PwtWarp_2::
-	warp MAP_POKEMON_WORLD_TOURNAMENT_PRE_BATTLE_ROOM, 5, 7
-	waitstate
-	end
-
-SE_PwtWarp_3::
-	warp MAP_POKEMON_WORLD_TOURNAMENT_ROOM, 9, 5
-	setvar VAR_TEMP_0, 0
-	waitstate
-	end
-
-SE_PwtWarp_4::
-	warp MAP_POKEMON_WORLD_TOURNAMENT_PRE_BATTLE_ROOM, 5, 3
-	waitstate
-	end
-
-SE_PwtWarp_5::
-	warp MAP_POKWMON_WORLD_TOURNAMENT_LOBBY, 5, 11
-	waitstate
-	end
-
-SE_PwtWarp_6::
-	warp MAP_POKWMON_WORLD_TOURNAMENT_LOBBY, 17, 11
-	waitstate
-	end
-
-SE_Text_BattleDomeName:
-	.string "BATTLE DOME$"
-SE_Text_PwtName:
-	.string "PWT$"
 SE_Text_CupKanto:
 	.string "KANTO LEADERS$"
 SE_Text_CupJohto:
