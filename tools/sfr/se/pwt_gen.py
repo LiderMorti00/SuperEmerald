@@ -1,7 +1,9 @@
-import sys,re; sys.path.insert(0,'/tmp/pwt'); from roster import R,EV
+import sys,re; sys.path.insert(0,'/home/claude/superfirered/tools/sfr/se'); from pwt_roster import R,EV
 ROOT='/home/claude/superfirered/'
-# 1) facility classes enum
+# 1) facility classes enum (idempotent: drop the old generated lines first)
 p=ROOT+'include/constants/trainers.h'; s=open(p).read()
+s=re.sub(r'    FACILITY_CLASS_SE_\w+,\n','',s)
+s=s.replace('    // Super Emerald: Pokemon World Tournament (Johto) stars\n','')
 enum=''.join('    FACILITY_CLASS_SE_%s,\n'%r[0] for r in R)
 s=s.replace('    FACILITY_CLASS_LASS_FRLG,\n    FACILITY_CLASSES_COUNT,','    FACILITY_CLASS_LASS_FRLG,\n    // Super Emerald: Pokemon World Tournament (Johto) stars\n'+enum+'    FACILITY_CLASSES_COUNT,',1)
 s=s.replace('    FACILITY_CLASSES_COUNT,\n','    FACILITY_CLASSES_COUNT,\n',1)
@@ -10,6 +12,7 @@ if 'FACILITY_CLASS_SE_FIRST' not in s:
 open(p,'w').write(s)
 # 2) lookups
 p=ROOT+'src/data/pokemon/trainer_class_lookups.h'; s=open(p).read()
+s=re.sub(r'    \[FACILITY_CLASS_SE_\w+\] = \w+,\n','',s)
 a='    [FACILITY_CLASS_LASS_FRLG]          = TRAINER_PIC_LASS_FRLG,\n'
 s=s.replace(a,a+''.join('    [FACILITY_CLASS_SE_%s] = TRAINER_PIC_%s,\n'%(r[0],r[2]) for r in R),1)
 a='    [FACILITY_CLASS_LASS_FRLG]          = TRAINER_CLASS_LASS_FRLG,\n'
