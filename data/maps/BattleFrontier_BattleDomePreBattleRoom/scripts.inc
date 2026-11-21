@@ -156,6 +156,7 @@ BattleFrontier_BattleDomePreBattleRoom_EventScript_ContinueChallenge::
 	waitmovement 0
 	closedoor 5, 1
 	waitdooranim
+	goto_if_set FLAG_SE_PWT, SE_PwtWarp_3
 	warp MAP_BATTLE_FRONTIER_BATTLE_DOME_BATTLE_ROOM, 9, 5
 	setvar VAR_TEMP_0, 0
 	waitstate

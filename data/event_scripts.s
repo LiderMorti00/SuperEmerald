@@ -27,6 +27,7 @@
 #include "constants/difficulty.h"
 #include "constants/easy_chat.h"
 #include "constants/event_objects.h"
+#include "constants/se_pwt.h"
 #include "constants/event_object_movement.h"
 #include "constants/fame_checker.h"
 #include "constants/field_effects.h"
@@ -2353,6 +2354,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/se_quests.inc" @ Super Emerald
 	.include "data/scripts/se_quests2.inc" @ Super Emerald
 	.include "data/scripts/se_quests3.inc" @ Super Emerald
+	.include "data/scripts/se_pwt.inc" @ Super Emerald
 	.include "data/scripts/se_battle_tower_sinnoh.inc" @ Super Emerald
 	.include "data/scripts/se_elevators.inc" @ Super Emerald
 	.include "data/scripts/se_ships.inc" @ Super Emerald

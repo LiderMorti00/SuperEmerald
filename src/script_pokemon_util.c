@@ -1,4 +1,5 @@
 #include "global.h"
+#include "se_pwt.h"
 #include "battle.h"
 #include "battle_gfx_sfx_util.h"
 #include "berry.h"
@@ -261,6 +262,7 @@ void ReducePlayerPartyToSelectedMons(void)
     }
 
     CalculatePlayerPartyCount();
+    SE_PwtScaleParty(); // Super Emerald: level 50 in the PWT
 }
 
 void CanHyperTrain(struct ScriptContext *ctx)

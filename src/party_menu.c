@@ -1,4 +1,5 @@
 #include "global.h"
+#include "se_pwt.h"
 #include "malloc.h"
 #include "battle.h"
 #include "battle_anim.h"
@@ -7477,6 +7478,8 @@ static u8 GetBattleEntryLevelCap(void)
     case FACILITY_UNION_ROOM:
         return UNION_ROOM_MAX_LEVEL;
     default: // Battle Frontier
+        if (SE_IsPwt()) // Super Emerald: the PWT sets every Pokemon to level 50
+            return MAX_LEVEL;
         if (gSpecialVar_0x8004 == FRONTIER_LVL_50)
             return FRONTIER_MAX_LEVEL_50;
         return FRONTIER_MAX_LEVEL_OPEN;

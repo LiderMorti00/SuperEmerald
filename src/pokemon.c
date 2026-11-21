@@ -1,4 +1,5 @@
 #include "global.h"
+#include "se_pwt.h"
 #include "malloc.h"
 #include "apprentice.h"
 #include "battle.h"
@@ -6777,6 +6778,13 @@ u8 *GetSavedPlayerPartyCount(void)
 
 void SavePlayerPartyMon(u32 index, struct Pokemon *mon)
 {
+    if (gSEPwtPartyScaled) // Super Emerald: don't save the PWT's level 50
+    {
+        struct Pokemon copy = *mon;
+        SE_PwtKeepRealLevel(index, &copy);
+        gSaveBlock1Ptr->playerParty[index] = copy;
+        return;
+    }
     gSaveBlock1Ptr->playerParty[index] = *mon;
 }
 

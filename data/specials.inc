@@ -239,6 +239,9 @@ gSpecials::
 	def_special SE_GetDailyType
 	def_special SE_SetDailyTypeDone
 	def_special SE_CheckPartyHasType
+	def_special SE_EnterPwt
+	def_special SE_LeavePwt
+	def_special SE_PwtBufferCupName
 	def_special DoLotteryCornerComputerEffect
 	def_special EndLotteryCornerComputerEffect
 	def_special ChooseMonForMoveRelearner, waitstate=1

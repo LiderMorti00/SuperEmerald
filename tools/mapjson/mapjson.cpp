@@ -853,8 +853,20 @@ string generate_layout_headers_text(Json layouts_data) {
 
         if (layout_version == "frlg")
         {
-            text << "\t.byte " << json_to_string(layout, "border_width") << "\n"
-                 << "\t.byte " << json_to_string(layout, "border_height") << "\n"
+            // Super Emerald: Porymap without custom border sizes drops these; work them out from the border file
+            string border_width = json_to_string(layout, "border_width", true);
+            string border_height = json_to_string(layout, "border_height", true);
+            if (border_width.empty() || border_height.empty())
+            {
+                auto tiles = std::filesystem::file_size(json_to_string(layout, "border_filepath")) / 2;
+                int w = 2, h = 2;
+                if (tiles == 6) { w = 3; h = 2; }
+                else { while ((w + 1) * (w + 1) <= (int)tiles) w++; h = w; }
+                border_width = std::to_string(w);
+                border_height = std::to_string(h);
+            }
+            text << "\t.byte " << border_width << "\n"
+                 << "\t.byte " << border_height << "\n"
                  << "\t.byte 0\n";
         }
         else

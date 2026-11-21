@@ -418,6 +418,9 @@
 #define VAR_SE_TOWER_DATA_START       0x5016 // 0x5016-0x5026: the Battle Tower data that isn't loaded (Hoenn or Sinnoh), see SE_SwapTowerData
 #define VAR_SE_TOWER_DATA_END         0x5026
 #define VAR_SE_TYPE_MASTER_DAY        0x5027 // National Park Type Master (Johto): day of the last shown type + 1
+#define VAR_SE_DOME_DATA_START        0x5028 // 0x5028-0x5034: the Battle Dome records that aren't loaded (Hoenn's Dome or the PWT), see SE_SwapDomeData
+#define VAR_SE_DOME_DATA_END          0x5034
+#define VAR_SE_PWT_CUP                0x5035 // Pokemon World Tournament: chosen cup (SE_PWT_CUP_*)
 
 #define VAR_SE_SINNOH_STATE_VERSION   0x5040 // Super Emerald: bump SE_SINNOH_STATE_VERSION when the Sinnoh state changes
 #define SE_SINNOH_STATE_VERSION       4

@@ -1,4 +1,5 @@
 #include "global.h"
+#include "se_pwt.h"
 #include "battle_dome.h"
 #include "battle.h"
 #include "battle_ai_util.h"
@@ -1938,11 +1939,24 @@ static void InitDomeTrainers(void)
         gSaveBlock2Ptr->frontier.domePlayerPartyData[i].nature = GetNature(&gParties[B_TRAINER_PLAYER][gSaveBlock2Ptr->frontier.selectedPartyMons[i] - 1]);
     }
 
+    // Super Emerald: the PWT's roster comes from the chosen cup
+    if (SE_IsPwt())
+    {
+        u16 pwtIds[DOME_TOURNAMENT_TRAINERS_COUNT - 1];
+        SE_PwtPickTrainers(pwtIds, DOME_TOURNAMENT_TRAINERS_COUNT - 1);
+        for (i = 1; i < DOME_TOURNAMENT_TRAINERS_COUNT; i++)
+            DOME_TRAINERS[i].trainerId = pwtIds[i - 1];
+    }
+
     // Populate the tourney roster with random frontier trainers (dependent on streak)
     for (i = 1; i < DOME_TOURNAMENT_TRAINERS_COUNT; i++)
     {
         // Choose trainer. First 5/16 trainers are easier than the rest
-        if (i > 5)
+        if (SE_IsPwt())
+        {
+            trainerId = DOME_TRAINERS[i].trainerId;
+        }
+        else if (i > 5)
         {
             do
             {
@@ -1970,8 +1984,8 @@ static void InitDomeTrainers(void)
         }
 
         struct FacilityMonGenerator generator = {
-            .frontierTrainerList = gBattleFrontierTrainers,
-            .facilityMonList = gBattleFrontierMons,
+            .frontierTrainerList = SE_FrontierTrainerList(),
+            .facilityMonList = SE_FrontierMonList(),
             .partySize = FRONTIER_PARTY_SIZE,
             .lvlMode = gSaveBlock2Ptr->frontier.lvlMode
         };
@@ -2397,7 +2411,9 @@ static u8 GetDomeTrainerMonIvs(u16 trainerId)
 {
     u8 fixedIv;
 
-    if (trainerId <= FRONTIER_TRAINER_JILL)         // 0 - 99
+    if (SE_IsPwt())
+        fixedIv = MAX_PER_STAT_IVS;
+    else if (trainerId <= FRONTIER_TRAINER_JILL)         // 0 - 99
         fixedIv = 3;
     else if (trainerId <= FRONTIER_TRAINER_CHLOE)   // 100 - 119
         fixedIv = 6;
@@ -5522,8 +5538,8 @@ static void VblankCb_TourneyTree(void)
 
 static void SetFacilityTrainerAndMonPtrs(void)
 {
-    gFacilityTrainerMons = gBattleFrontierMons;
-    gFacilityTrainers = gBattleFrontierTrainers;
+    gFacilityTrainerMons = SE_FrontierMonList();
+    gFacilityTrainers = SE_FrontierTrainerList();
 }
 
 static void ResetSketchedMoves(void)
@@ -5866,6 +5882,10 @@ static void CopyDomeTrainerName(u8 *str, u16 trainerId)
         {
             for (i = 0; i < PLAYER_NAME_LENGTH; i++)
                 str[i] = gSaveBlock2Ptr->playerName[i];
+        }
+        else if (SE_PwtCopyTrainerName(str, trainerId))
+        {
+            return;
         }
         else if (trainerId < FRONTIER_TRAINERS_COUNT)
         {

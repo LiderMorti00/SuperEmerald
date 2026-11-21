@@ -1,4 +1,5 @@
 #include "global.h"
+#include "se_pwt.h"
 #include "malloc.h"
 #include "berry_powder.h"
 #include "fake_rtc.h"
@@ -179,6 +180,8 @@ void SavePlayerParty(void)
 void LoadPlayerParty(void)
 {
     int i;
+
+    gSEPwtPartyScaled = FALSE; // Super Emerald: the real party (not the PWT's level 50 copy)
 
     gPartiesCount[B_TRAINER_PLAYER] = *GetSavedPlayerPartyCount();
 

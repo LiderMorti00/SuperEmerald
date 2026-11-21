@@ -1,4 +1,5 @@
 #include "global.h"
+#include "se_pwt.h"
 #include "battle_tower.h"
 #include "apprentice.h"
 #include "event_data.h"
@@ -1945,8 +1946,8 @@ struct FacilityMonGenerator GetFacilityMonGenerator(u16 trainerId)
     }
     else if (generator.lvlMode < FRONTIER_LVL_MODE_COUNT)
     {
-        generator.frontierTrainerList = gBattleFrontierTrainers;
-        generator.facilityMonList = gBattleFrontierMons;
+        generator.frontierTrainerList = SE_FrontierTrainerList();
+        generator.facilityMonList = SE_FrontierMonList();
         if (generator.lvlMode == FRONTIER_LVL_50)
             partyLevel = FRONTIER_MAX_LEVEL_50;
         if (generator.lvlMode == FRONTIER_LVL_OPEN)

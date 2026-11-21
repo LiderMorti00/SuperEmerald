@@ -1,4 +1,5 @@
 #include "global.h"
+#include "se_pwt.h"
 #include "frontier_util.h"
 #include "easy_chat.h"
 #include "event_data.h"
@@ -993,7 +994,7 @@ static void DoSoftReset_(void)
 
 static void SetFrontierTrainers(void)
 {
-    gFacilityTrainers = gBattleFrontierTrainers;
+    gFacilityTrainers = SE_FrontierTrainerList();
 }
 
 static void SaveSelectedParty(void)
@@ -1756,6 +1757,8 @@ u8 GetFrontierBrainStatus(void)
 
     if (battleMode != FRONTIER_MODE_SINGLES)
         return FRONTIER_BRAIN_NOT_READY;
+    if (SE_IsPwt()) // Super Emerald: no Frontier Brain in the PWT
+        return FRONTIER_BRAIN_NOT_READY;
 
     symbolsCount = GetPlayerSymbolCountForFacility(facility);
     switch (symbolsCount)
@@ -1993,6 +1996,8 @@ static void GiveBattlePoints(void)
     points = sBattlePointAwards[facility][battleMode][challengeNum];
     if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_FRONTIER_BRAIN)
         points += 10;
+    if (SE_IsPwt())
+        points = SE_PwtBattlePoints();
     gSaveBlock2Ptr->frontier.battlePoints += points;
     ConvertIntToDecimalStringN(gStringVar1, points, STR_CONV_MODE_LEFT_ALIGN, 2);
     if (gSaveBlock2Ptr->frontier.battlePoints > MAX_BATTLE_FRONTIER_POINTS)
@@ -2057,7 +2062,7 @@ static void AppendIfValid(enum Species species, enum Item heldItem, u16 hp, enum
         return;
     if (gSpeciesInfo[species].isFrontierBanned)
         return;
-    if (lvlMode == FRONTIER_LVL_50 && monLevel > FRONTIER_MAX_LEVEL_50)
+    if (lvlMode == FRONTIER_LVL_50 && monLevel > FRONTIER_MAX_LEVEL_50 && !SE_IsPwt())
         return;
 
     for (i = 0; i < *count && speciesArray[i] != species; i++)
@@ -2536,11 +2541,13 @@ void SaveGameFrontier(void)
         monsParty[i] = gParties[B_TRAINER_PLAYER][i];
 
     i = gPartiesCount[B_TRAINER_PLAYER];
+    bool8 pwtScaled = gSEPwtPartyScaled;
     LoadPlayerParty();
     SetContinueGameWarpStatusToDynamicWarp();
     TrySavingData(SAVE_LINK);
     ClearContinueGameWarpStatus2();
     gPartiesCount[B_TRAINER_PLAYER] = i;
+    gSEPwtPartyScaled = pwtScaled;
 
     for (i = 0; i < PARTY_SIZE; i++)
         gParties[B_TRAINER_PLAYER][i] = monsParty[i];
@@ -2799,7 +2806,9 @@ u8 GetFrontierTrainerFixedIvs(u16 trainerId)
 {
     u8 fixedIv;
 
-    if (trainerId <= FRONTIER_TRAINER_JILL)         // 0 - 99
+    if (SE_IsPwt())
+        fixedIv = MAX_PER_STAT_IVS;
+    else if (trainerId <= FRONTIER_TRAINER_JILL)         // 0 - 99
         fixedIv = 3;
     else if (trainerId <= FRONTIER_TRAINER_CHLOE)   // 100 - 119
         fixedIv = 6;
@@ -2908,6 +2917,24 @@ void SetBattleFacilityTrainerGfxId(u16 trainerId, u8 tempVarId)
     else
     {
         facilityClass = gApprentices[gSaveBlock2Ptr->apprentices[trainerId - TRAINER_RECORD_MIXING_APPRENTICE].id].facilityClass;
+    }
+
+    // Super Emerald: PWT stars (their gfx ids don't fit in a u8)
+    if (facilityClass >= FACILITY_CLASS_SE_FIRST && facilityClass < FACILITY_CLASSES_COUNT)
+    {
+        switch (tempVarId)
+        {
+        case 0:
+        default:
+            VarSet(VAR_OBJ_GFX_ID_0, SE_PwtFacilityClassGfx(facilityClass));
+            return;
+        case 1:
+            VarSet(VAR_OBJ_GFX_ID_1, SE_PwtFacilityClassGfx(facilityClass));
+            return;
+        case 15:
+            VarSet(VAR_OBJ_GFX_ID_E, SE_PwtFacilityClassGfx(facilityClass));
+            return;
+        }
     }
 
     // Search male classes.
@@ -3176,6 +3203,10 @@ void GetFrontierTrainerName(u8 *dst, u16 trainerId)
         for (i = 0; gBattlePartners[difficulty][trainerId - TRAINER_PARTNER(PARTNER_NONE)].trainerName[i] != EOS; i++)
             dst[i] = gBattlePartners[difficulty][trainerId - TRAINER_PARTNER(PARTNER_NONE)].trainerName[i];
     }
+    else if (SE_PwtCopyTrainerName(dst, trainerId))
+    {
+        return;
+    }
     else if (trainerId < FRONTIER_TRAINERS_COUNT)
     {
         for (i = 0; i < PLAYER_NAME_LENGTH; i++)
@@ -3267,8 +3298,8 @@ u8 SetFacilityPtrsGetLevel(void)
     }
     else
     {
-        gFacilityTrainers = gBattleFrontierTrainers;
-        gFacilityTrainerMons = gBattleFrontierMons;
+        gFacilityTrainers = SE_FrontierTrainerList();
+        gFacilityTrainerMons = SE_FrontierMonList();
         return GetFrontierEnemyMonLevel(gSaveBlock2Ptr->frontier.lvlMode);
     }
 }
@@ -3316,6 +3347,9 @@ u16 FacilityClassToGraphicsId(u8 facilityClass)
 {
     u16 trainerObjectGfxId;
     u8 i;
+
+    if (facilityClass >= FACILITY_CLASS_SE_FIRST && facilityClass < FACILITY_CLASSES_COUNT)
+        return SE_PwtFacilityClassGfx(facilityClass);
 
     // Search male classes.
     for (i = 0; i < ARRAY_COUNT(gTowerMaleFacilityClasses); i++)

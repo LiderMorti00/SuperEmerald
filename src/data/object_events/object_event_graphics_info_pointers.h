@@ -628,6 +628,19 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SinnohWaite
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SinnohWaitress;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SinnohWake;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SinnohWorker;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SEAlder;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SEClemont;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SEDiantha;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SEGrant;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SEIris;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SEKorrina;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SELisia;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SEMrStone;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SEOlympia;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SERamos;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SEValerie;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SEViola;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SEWulfric;
 // Super Emerald: Sinnoh end
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -736,6 +749,19 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SINNOH_WAITRESS] = &gObjectEventGraphicsInfo_SinnohWaitress,
     [OBJ_EVENT_GFX_SINNOH_WAKE] = &gObjectEventGraphicsInfo_SinnohWake,
     [OBJ_EVENT_GFX_SINNOH_WORKER] = &gObjectEventGraphicsInfo_SinnohWorker,
+    [OBJ_EVENT_GFX_SE_ALDER] = &gObjectEventGraphicsInfo_SEAlder,
+    [OBJ_EVENT_GFX_SE_CLEMONT] = &gObjectEventGraphicsInfo_SEClemont,
+    [OBJ_EVENT_GFX_SE_DIANTHA] = &gObjectEventGraphicsInfo_SEDiantha,
+    [OBJ_EVENT_GFX_SE_GRANT] = &gObjectEventGraphicsInfo_SEGrant,
+    [OBJ_EVENT_GFX_SE_IRIS] = &gObjectEventGraphicsInfo_SEIris,
+    [OBJ_EVENT_GFX_SE_KORRINA] = &gObjectEventGraphicsInfo_SEKorrina,
+    [OBJ_EVENT_GFX_SE_LISIA] = &gObjectEventGraphicsInfo_SELisia,
+    [OBJ_EVENT_GFX_SE_MR_STONE] = &gObjectEventGraphicsInfo_SEMrStone,
+    [OBJ_EVENT_GFX_SE_OLYMPIA] = &gObjectEventGraphicsInfo_SEOlympia,
+    [OBJ_EVENT_GFX_SE_RAMOS] = &gObjectEventGraphicsInfo_SERamos,
+    [OBJ_EVENT_GFX_SE_VALERIE] = &gObjectEventGraphicsInfo_SEValerie,
+    [OBJ_EVENT_GFX_SE_VIOLA] = &gObjectEventGraphicsInfo_SEViola,
+    [OBJ_EVENT_GFX_SE_WULFRIC] = &gObjectEventGraphicsInfo_SEWulfric,
     // Super Emerald: Sinnoh end
     // Super Emerald: HnS begin
     [OBJ_EVENT_GFX_ARCHER_HNS] = &gObjectEventGraphicsInfo_Archer_hns,
