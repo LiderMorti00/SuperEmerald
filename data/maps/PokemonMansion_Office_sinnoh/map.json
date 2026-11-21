@@ -11,10 +11,12 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 14,
       "y": 4,
@@ -29,6 +31,7 @@
     },
     {
       "local_id": "LOCALID_MANSION_BACKLOT",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MAN",
       "x": 9,
       "y": 8,
@@ -43,6 +46,7 @@
     },
     {
       "local_id": "LOCALID_MANSION_BUTLER",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_2",
       "x": 8,
       "y": 8,
@@ -57,6 +61,7 @@
     },
     {
       "local_id": "LOCALID_MANSION_POLICEMAN",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_POLICEMAN",
       "x": 10,
       "y": 4,

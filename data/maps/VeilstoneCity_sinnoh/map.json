@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -26,6 +27,7 @@
   ],
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GUITARIST",
       "x": 46,
       "y": 39,
@@ -39,6 +41,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_POKEFAN_M",
       "x": 30,
       "y": 39,
@@ -52,6 +55,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BATTLE_GIRL",
       "x": 25,
       "y": 43,
@@ -65,6 +69,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_LADY",
       "x": 23,
       "y": 32,
@@ -78,6 +83,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BATTLE_GIRL",
       "x": 34,
       "y": 31,
@@ -91,6 +97,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
       "x": 33,
       "y": 38,
@@ -104,6 +111,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GUITARIST",
       "x": 35,
       "y": 49,
@@ -117,6 +125,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BATTLE_GIRL",
       "x": 29,
       "y": 56,
@@ -130,6 +139,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GUITARIST",
       "x": 19,
       "y": 39,
@@ -143,6 +153,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 14,
       "y": 37,
@@ -156,6 +167,7 @@
       "flag": "FLAG_SN_ITEM_MOSSDEEP_CITY_NET_BALL"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 34,
       "y": 10,
@@ -169,6 +181,7 @@
       "flag": "FLAG_SN_ITEM_METEOR_FALLS_1F_1R_TM_IRON_TAIL"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 17,
       "y": 10,
@@ -182,6 +195,7 @@
       "flag": "FLAG_SN_ITEM_METEOR_FALLS_1F_1R_FULL_HEAL"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
       "x": 11,
       "y": 48,
@@ -196,6 +210,7 @@
     },
     {
       "local_id": "LOCALID_SN_GYM_CP",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 6,
       "y": 37,
@@ -210,6 +225,7 @@
     },
     {
       "local_id": "LOCALID_SN_GYM_WAKE",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_WAKE",
       "x": 8,
       "y": 36,
@@ -224,6 +240,7 @@
     },
     {
       "local_id": "LOCALID_SN_WH_GRUNT0",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GALAXY_GRUNT_M",
       "x": 25,
       "y": 18,
@@ -238,6 +255,7 @@
     },
     {
       "local_id": "LOCALID_SN_WH_GRUNT1",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GALAXY_GRUNT_M",
       "x": 26,
       "y": 18,
@@ -252,6 +270,7 @@
     },
     {
       "local_id": "LOCALID_SN_WH_CP",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 24,
       "y": 21,
@@ -266,6 +285,7 @@
     },
     {
       "local_id": "LOCALID_SN_WH_LOOKER",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_LOOKER",
       "x": 22,
       "y": 21,
@@ -280,6 +300,7 @@
     },
     {
       "local_id": "LOCALID_SN_KEY_GRUNT",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GALAXY_GRUNT_M",
       "x": 45,
       "y": 18,
@@ -294,6 +315,7 @@
     },
     {
       "local_id": "LOCALID_SN_KEY_LOOKER",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_LOOKER",
       "x": 46,
       "y": 19,
@@ -307,6 +329,7 @@
       "flag": "FLAG_SN_HIDE_KEY_LOOKER"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_LOOKER",
       "x": 33,
       "y": 34,

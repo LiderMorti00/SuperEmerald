@@ -2,7 +2,7 @@
   "id": "MAP_HEARTHOME_CITY_FOREIGN_BUILDING_SINNOH",
   "name": "HearthomeCity_ForeignBuilding_sinnoh",
   "layout": "LAYOUT_HEARTHOME_CITY_FOREIGN_BUILDING_SINNOH",
-  "music": "MUS_DPP_TWINLEAF",
+  "music": "MUS_NONE",
   "region_map_section": "MAPSEC_HEARTHOME_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
