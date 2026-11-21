@@ -242,6 +242,8 @@ gSpecials::
 	def_special SE_EnterPwt
 	def_special SE_LeavePwt
 	def_special SE_PwtBufferCupName
+	def_special SE_PwtGetCupPrize
+	def_special SE_PwtSetCupPrizeReceived
 	def_special DoLotteryCornerComputerEffect
 	def_special EndLotteryCornerComputerEffect
 	def_special ChooseMonForMoveRelearner, waitstate=1

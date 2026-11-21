@@ -21,7 +21,7 @@ open(p,'w').write(s)
 # 3) data header
 SPEECH=[('EC_WORD_I_AM, EC_WORD_NEVER, EC_WORD_GOING, EC_WORD_TO, EC_WORD_LOSE, EC_WORD_EXCL','EC_WORD_A, EC_WORD_WIN, EC_WORD_IS, EC_WORD_JUST, EC_WORD_AWESOME, EC_EMPTY_WORD','EC_WORD_YOU, EC_WORD_WON, EC_WORD_EXCL, EC_WORD_MOVE, EC_WORD_ON, EC_WORD_EXCL')]
 REG={'K':'SE_PWT_KANTO','J':'SE_PWT_JOHTO','H':'SE_PWT_HOENN','S':'SE_PWT_SINNOH','X':'SE_PWT_KALOS','U':'SE_PWT_UNOVA'}
-RANK={'L':'SE_PWT_RANK_LEADER','E':'SE_PWT_RANK_ELITE','C':'SE_PWT_RANK_CHAMPION','B':'SE_PWT_RANK_BRAIN'}
+RANK={'L':'SE_PWT_RANK_LEADER','E':'SE_PWT_RANK_ELITE','C':'SE_PWT_RANK_CHAMPION','B':'SE_PWT_RANK_BRAIN','T':'SE_PWT_RANK_TRAINER'}
 o='// Super Emerald: Pokemon World Tournament (Johto) roster. Generated from tools/sfr/se/pwt_roster.py\n\n'
 mons=[];sets=[]
 for r in R:
@@ -60,6 +60,7 @@ c+='''// Regions (bits of gSEPwtRegions)
 #define SE_PWT_RANK_ELITE     1
 #define SE_PWT_RANK_CHAMPION  2
 #define SE_PWT_RANK_BRAIN     3
+#define SE_PWT_RANK_TRAINER   4 // regional trainers: only fill the regional cups
 
 // Cups (VAR_SE_PWT_CUP)
 #define SE_PWT_CUP_KANTO      0

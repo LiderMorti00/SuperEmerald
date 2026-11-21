@@ -57,6 +57,21 @@ SE_Pwt_ChooseCup::
 	setvar VAR_RESULT, FRONTIER_LVL_50
 	goto BattleFrontier_BattleDomeLobby_EventScript_CheckEligible
 
+@ First win of each cup: a prize typical of the region
+SE_Pwt_GiveCupPrize::
+	special SE_PwtGetCupPrize
+	goto_if_eq VAR_RESULT, FALSE, SE_Pwt_GiveCupPrizeEnd
+	special SE_PwtBufferCupName
+	msgbox SE_Text_PwtFirstWinPrize, MSGBOX_DEFAULT
+	giveitem VAR_0x8004
+	goto_if_eq VAR_RESULT, FALSE, SE_Pwt_GiveCupPrizeBagFull
+	special SE_PwtSetCupPrizeReceived
+SE_Pwt_GiveCupPrizeEnd:
+	return
+SE_Pwt_GiveCupPrizeBagFull:
+	msgbox SE_Text_PwtPrizeBagFull, MSGBOX_DEFAULT
+	return
+
 SE_Pwt_ExplainCups::
 	msgbox SE_Text_PwtExplainCups, MSGBOX_DEFAULT
 	return
@@ -136,3 +151,12 @@ SE_Text_PwtExplainCups:
 	.string "while battling, whatever its level.\p"
 	.string "Win the tournament to earn\n"
 	.string "BATTLE POINTS!$"
+
+SE_Text_PwtFirstWinPrize:
+	.string "This is your first win in the\n"
+	.string "{STR_VAR_3}!\p"
+	.string "Please accept this special prize!$"
+
+SE_Text_PwtPrizeBagFull:
+	.string "Oh, your BAG is full…\n"
+	.string "Win this cup again to get your prize!$"

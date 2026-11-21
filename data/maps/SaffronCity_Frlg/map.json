@@ -267,7 +267,7 @@
       "y": 4,
       "elevation": 0,
       "dest_map": "MAP_ROUTE5_SOUTH_ENTRANCE",
-      "dest_warp_id": "1"
+      "dest_warp_id": "0"
     },
     {
       "x": 28,
@@ -281,7 +281,7 @@
       "y": 27,
       "elevation": 0,
       "dest_map": "MAP_ROUTE7_EAST_ENTRANCE",
-      "dest_warp_id": "0"
+      "dest_warp_id": "2"
     },
     {
       "x": 62,
@@ -302,7 +302,7 @@
       "y": 4,
       "elevation": 0,
       "dest_map": "MAP_ROUTE5_SOUTH_ENTRANCE",
-      "dest_warp_id": "1"
+      "dest_warp_id": "2"
     },
     {
       "x": 17,

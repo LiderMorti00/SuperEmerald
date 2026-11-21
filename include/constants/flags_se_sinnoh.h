@@ -187,5 +187,6 @@
 #define FLAG_SE_EEVEE_FAN_DONE       0x32E5 // Eevee fan: all eight shown, Ability Patch given
 #define FLAG_SE_PWT                  0x32E6 // in the Pokemon World Tournament (Johto): the Battle Dome engine uses the PWT roster
 #define FLAG_SE_DOME_DATA_PWT        0x32E7 // the Battle Dome records loaded in the save are the PWT's (Hoenn's are in VAR_SE_DOME_DATA)
+#define FLAG_SE_PWT_PRIZE_KANTO      0x32E8 // 0x32E8-0x32EE: first-win prize of each PWT cup received (SE_PWT_CUP_* order)
 
 #endif // GUARD_CONSTANTS_FLAGS_SE_SINNOH_H

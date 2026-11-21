@@ -56,6 +56,7 @@ BattleFrontier_BattleDomeLobby_EventScript_GiveBattlePoints::
 	msgbox BattleFrontier_BattleDomeLobby_Text_AwardTheseBattlePoints, MSGBOX_DEFAULT
 	frontier_givepoints
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_GETPOINTS
+	call_if_set FLAG_SE_PWT, SE_Pwt_GiveCupPrize
 	message BattleFrontier_BattleDomeLobby_Text_RecordWillBeSaved
 	waitmessage
 	special LoadPlayerParty

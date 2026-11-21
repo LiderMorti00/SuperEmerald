@@ -56,27 +56,40 @@ u16 SE_PwtFacilityClassGfx(u8 facilityClass)
 
 // --- Choosing the 15 opponents of the cup ----------------------------------------
 
-static bool32 IsInCup(u32 id, u32 cup)
+static bool32 IsInRegionCup(u32 id, u32 cup)
 {
     switch (cup)
     {
-    case SE_PWT_CUP_KANTO:     return (gSEPwtRegions[id] & (1 << SE_PWT_KANTO)) != 0;
-    case SE_PWT_CUP_JOHTO:     return (gSEPwtRegions[id] & (1 << SE_PWT_JOHTO)) != 0;
-    case SE_PWT_CUP_HOENN:     return (gSEPwtRegions[id] & (1 << SE_PWT_HOENN)) != 0;
-    case SE_PWT_CUP_SINNOH:    return (gSEPwtRegions[id] & (1 << SE_PWT_SINNOH)) != 0;
-    case SE_PWT_CUP_KALOS:     return (gSEPwtRegions[id] & (1 << SE_PWT_KALOS)) != 0;
-    case SE_PWT_CUP_CHAMPIONS: return gSEPwtRanks[id] == SE_PWT_RANK_CHAMPION;
-    default:                   return TRUE;
+    case SE_PWT_CUP_KANTO:  return (gSEPwtRegions[id] & (1 << SE_PWT_KANTO)) != 0;
+    case SE_PWT_CUP_JOHTO:  return (gSEPwtRegions[id] & (1 << SE_PWT_JOHTO)) != 0;
+    case SE_PWT_CUP_HOENN:  return (gSEPwtRegions[id] & (1 << SE_PWT_HOENN)) != 0;
+    case SE_PWT_CUP_SINNOH: return (gSEPwtRegions[id] & (1 << SE_PWT_SINNOH)) != 0;
+    case SE_PWT_CUP_KALOS:  return (gSEPwtRegions[id] & (1 << SE_PWT_KALOS)) != 0;
+    default:                return FALSE;
     }
 }
 
-// Second choice when the cup doesn't have 15 members: the Elite Four for the Champions Cup,
-// the same kind of trainer (leaders for a leaders cup) for the regional ones.
+// First choice: the stars of the cup (gym leaders, Elite Four and champions of the region)
+static bool32 IsInCup(u32 id, u32 cup)
+{
+    if (gSEPwtRanks[id] == SE_PWT_RANK_TRAINER)
+        return FALSE;
+    if (cup == SE_PWT_CUP_CHAMPIONS)
+        return gSEPwtRanks[id] == SE_PWT_RANK_CHAMPION;
+    if (cup == SE_PWT_CUP_WORLD)
+        return TRUE;
+    return IsInRegionCup(id, cup);
+}
+
+// When the cup doesn't have 15 stars: the Elite Four for the Champions Cup,
+// the region's own trainers for the regional cups.
 static bool32 IsCupFiller(u32 id, u32 cup)
 {
     if (cup == SE_PWT_CUP_CHAMPIONS)
         return gSEPwtRanks[id] == SE_PWT_RANK_ELITE;
-    return gSEPwtRanks[id] == SE_PWT_RANK_LEADER;
+    if (gSEPwtRanks[id] != SE_PWT_RANK_TRAINER)
+        return FALSE;
+    return IsInRegionCup(id, cup);
 }
 
 static void SE_PwtShuffle(u16 *list, u32 count)
@@ -295,4 +308,35 @@ void SE_PwtBufferCupName(void)
     if (cup >= SE_PWT_CUPS_COUNT)
         cup = SE_PWT_CUP_WORLD;
     StringCopy(gStringVar3, sCupNames[cup]);
+}
+
+// --- First win of each cup: an item typical of the region ----------------------------
+
+static const u16 sCupPrizes[SE_PWT_CUPS_COUNT] =
+{
+    [SE_PWT_CUP_KANTO]     = ITEM_MASTER_BALL,     // Silph Co.
+    [SE_PWT_CUP_JOHTO]     = ITEM_SACRED_ASH,      // Ho-Oh, Bell Tower
+    [SE_PWT_CUP_HOENN]     = ITEM_SOUL_DEW,        // Latias and Latios
+    [SE_PWT_CUP_SINNOH]    = ITEM_GRISEOUS_ORB,    // Giratina
+    [SE_PWT_CUP_KALOS]     = ITEM_LUCARIONITE,     // Mega Evolution, Korrina
+    [SE_PWT_CUP_CHAMPIONS] = ITEM_ABILITY_PATCH,
+    [SE_PWT_CUP_WORLD]     = ITEM_GOLD_BOTTLE_CAP,
+};
+
+// Out: VAR_RESULT = TRUE if this cup's prize hasn't been given yet, VAR_0x8004 = the item
+void SE_PwtGetCupPrize(void)
+{
+    u32 cup = VarGet(VAR_SE_PWT_CUP);
+    if (cup >= SE_PWT_CUPS_COUNT)
+        cup = SE_PWT_CUP_WORLD;
+    gSpecialVar_0x8004 = sCupPrizes[cup];
+    gSpecialVar_Result = !FlagGet(FLAG_SE_PWT_PRIZE_KANTO + cup);
+}
+
+void SE_PwtSetCupPrizeReceived(void)
+{
+    u32 cup = VarGet(VAR_SE_PWT_CUP);
+    if (cup >= SE_PWT_CUPS_COUNT)
+        cup = SE_PWT_CUP_WORLD;
+    FlagSet(FLAG_SE_PWT_PRIZE_KANTO + cup);
 }
