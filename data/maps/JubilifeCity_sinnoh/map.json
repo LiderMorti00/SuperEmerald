@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -36,6 +37,7 @@
   ],
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_F",
       "x": 21,
       "y": 21,
@@ -49,6 +51,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_M",
       "x": 49,
       "y": 17,
@@ -62,6 +65,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY",
       "x": 21,
       "y": 51,
@@ -75,6 +79,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL_FRLG",
       "x": 37,
       "y": 14,
@@ -88,6 +93,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
       "x": 48,
       "y": 40,
@@ -101,6 +107,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY",
       "x": 54,
       "y": 30,
@@ -114,6 +121,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
       "x": 45,
       "y": 26,
@@ -127,6 +135,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_M",
       "x": 40,
       "y": 21,
@@ -140,6 +149,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_M",
       "x": 30,
       "y": 35,
@@ -153,6 +163,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GBA_KID",
       "x": 56,
       "y": 42,
@@ -166,6 +177,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GBA_KID",
       "x": 57,
       "y": 41,
@@ -180,6 +192,7 @@
     },
     {
       "local_id": "LOCALID_JUBILIFE_DAWN",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_VAR_0",
       "x": 49,
       "y": 49,
@@ -194,6 +207,7 @@
     },
     {
       "local_id": "LOCALID_JUBILIFE_CLOWN_1",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_CLOWN",
       "x": 58,
       "y": 29,
@@ -208,6 +222,7 @@
     },
     {
       "local_id": "LOCALID_JUBILIFE_CLOWN_2",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_CLOWN",
       "x": 19,
       "y": 15,
@@ -222,6 +237,7 @@
     },
     {
       "local_id": "LOCALID_JUBILIFE_CLOWN_3",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_CLOWN",
       "x": 41,
       "y": 14,
@@ -236,6 +252,7 @@
     },
     {
       "local_id": "LOCALID_JUBILIFE_ROWAN",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ROWAN",
       "x": 51,
       "y": 2,
@@ -250,6 +267,7 @@
     },
     {
       "local_id": "LOCALID_JUBILIFE_GRUNT_1",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GALAXY_GRUNT_M",
       "x": 50,
       "y": 1,
@@ -264,6 +282,7 @@
     },
     {
       "local_id": "LOCALID_JUBILIFE_GRUNT_2",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GALAXY_GRUNT_M",
       "x": 50,
       "y": 2,
@@ -278,6 +297,7 @@
     },
     {
       "local_id": "LOCALID_JUBILIFE_LOOKER",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_LOOKER",
       "x": 47,
       "y": 36,
@@ -292,6 +312,7 @@
     },
     {
       "local_id": "LOCALID_JUBILIFE_PRESIDENT",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN_FRLG",
       "x": 41,
       "y": 38,
@@ -305,6 +326,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 25,
       "y": 7,
@@ -318,6 +340,7 @@
       "flag": "FLAG_SN_ITEM_ROUTE_123_RARE_CANDY"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 47,
       "y": 11,
@@ -331,6 +354,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 52,
       "y": 11,
@@ -344,6 +368,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 34,
       "y": 15,
@@ -357,6 +382,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 60,
       "y": 16,
@@ -370,6 +396,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 60,
       "y": 21,
@@ -383,6 +410,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 47,
       "y": 24,
@@ -396,6 +424,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 52,
       "y": 24,
@@ -409,6 +438,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 47,
       "y": 34,
@@ -422,6 +452,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 52,
       "y": 34,
@@ -435,6 +466,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 47,
       "y": 48,
@@ -448,6 +480,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LIGHT_SPRITE",
       "x": 52,
       "y": 48,
