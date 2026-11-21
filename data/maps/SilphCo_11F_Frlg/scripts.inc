@@ -9,6 +9,7 @@ SilphCo_11F_OnLoad::
 SilphCo_11F_EventScript_President::
 	lock
 	faceplayer
+	call SE_EventScript_SilphPresidentGift
 	goto_if_set FLAG_GOT_MASTER_BALL_FROM_SILPH, SilphCo_11F_EventScript_AlreadyGotMasterBall
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, SilphCo_11F_EventScript_PresidentThanksMale

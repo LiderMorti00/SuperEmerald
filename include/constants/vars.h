@@ -410,7 +410,7 @@
 #define VAR_SE_REQUEST_JOHTO          0x500E // Goldenrod researcher requests done: 0-3
 #define VAR_SE_REQUEST_KANTO          0x500F // Celadon researcher requests done: 0-3
 #define VAR_SE_REQUEST_SINNOH         0x5010 // Hearthome researcher requests done: 0-3
-#define VAR_SE_ROCKET_QUEST           0x5011 // Rocket's return (Johto): 0 Proton, 1 Petrel, 2 Ariana, 3 Archer, 4 done
+#define VAR_SE_ROCKET_QUEST           0x5011 // Rocket's return: 0 Proton, 1 Petrel, 2 Ariana, 3 Archer (Johto), 4 Mahogany hideout, 5 Five Island warehouse, 6 Giovanni (Celadon), 7 done
 #define VAR_SE_MOOMOO                 0x5012 // Sick Miltank (Route 39): berries fed 0-7, 8 = rewarded
 #define VAR_SE_THIEF_QUEST            0x5013 // Pewter Museum thief (Kanto): 0 unknown, 1 Mt. Moon, 2 Route 24, 3 caught, 4 rewarded
 #define VAR_SE_SPIRIT_QUEST           0x5014 // Restless spirits (Kanto): 0 unknown, 1-3 Pokemon Tower floors, 4 calmed, 5 rewarded

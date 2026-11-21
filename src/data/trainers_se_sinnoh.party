@@ -2163,3 +2163,169 @@ Rhyperior
 Level: 50
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+
+=== TRAINER_SE_ETERNA_GRUNT_1 ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Skuntank
+Level: 74
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Toxicroak
+Level: 74
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Bronzong
+Level: 75
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+
+=== TRAINER_SE_ETERNA_GRUNT_2 ===
+Name: GRUNT
+Class: TRAINER_CLASS_TEAM_GALACTIC
+Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Check Bad Move / Try To Faint
+
+Purugly
+Level: 74
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Golbat
+Level: 75
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+Glameow
+Level: 75
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+
+
+=== TRAINER_SE_ETERNA_SCIENTIST ===
+Name: TRAVIS
+Class: TRAINER_CLASS_SCIENTIST
+Pic: TRAINER_PIC_SINNOH_SCIENTIST
+Gender: Male
+Music: Aqua
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Magnezone @ Leftovers
+Level: 76
+Ability: Magnet Pull
+Modest Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Thunderbolt
+- Flash Cannon
+- Volt Switch
+- Thunder Wave
+
+Porygon-Z @ Choice Specs
+Level: 76
+Ability: Adaptability
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Tri Attack
+- Thunderbolt
+- Ice Beam
+- Shadow Ball
+
+Bronzong @ Leftovers
+Level: 77
+Ability: Levitate
+Relaxed Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Gyro Ball
+- Earthquake
+- Stealth Rock
+- Trick Room
+
+Rotom-Wash @ Sitrus Berry
+Level: 77
+Ability: Levitate
+Bold Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hydro Pump
+- Volt Switch
+- Will-O-Wisp
+- Pain Split
+
+
+=== TRAINER_SE_CYRUS_FINAL ===
+Name: CYRUS
+Class: TRAINER_CLASS_BOSS_FRLG
+Pic: TRAINER_PIC_SINNOH_GALACTIC_BOSS_CYRUS
+Gender: Male
+Music: Aqua
+Items: Full Restore / Full Restore / Full Restore
+Double Battle: No
+AI: Check Bad Move / Try To Faint / Check Viability
+
+Houndoom @ Life Orb
+Level: 80
+Ability: Flash Fire
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Dark Pulse
+- Fire Blast
+- Sludge Bomb
+- Nasty Plot
+
+Honchkrow @ Life Orb
+Level: 81
+Ability: Moxie
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Brave Bird
+- Sucker Punch
+- Night Slash
+- Heat Wave
+
+Crobat @ Black Sludge
+Level: 81
+Ability: Inner Focus
+Jolly Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Cross Poison
+- Brave Bird
+- U-turn
+- Super Fang
+
+Weavile @ Focus Sash
+Level: 82
+Ability: Pressure
+Jolly Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Knock Off
+- Triple Axel
+- Ice Shard
+- Low Kick
+
+Porygon-Z @ Choice Specs
+Level: 83
+Ability: Adaptability
+Timid Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hyper Beam
+- Thunderbolt
+- Ice Beam
+- Shadow Ball
+
+Gyarados @ Gyaradosite
+Level: 84
+Ability: Intimidate
+Adamant Nature
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Waterfall
+- Crunch
+- Earthquake
+- Dragon Dance
+

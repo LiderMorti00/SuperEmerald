@@ -15,6 +15,9 @@ SE_EventScript_RocketOfficer::
 	case 1, SE_EventScript_RocketOfficer1
 	case 2, SE_EventScript_RocketOfficer2
 	case 3, SE_EventScript_RocketOfficer3
+	case 4, SE_EventScript_RocketOfficer4
+	case 5, SE_EventScript_RocketOfficer5
+	case 6, SE_EventScript_RocketOfficer6
 	msgbox SE_Text_RocketOfficerDone, MSGBOX_DEFAULT
 	release
 	end
@@ -32,6 +35,19 @@ SE_EventScript_RocketOfficer2::
 	end
 SE_EventScript_RocketOfficer3::
 	msgbox SE_Text_RocketOfficer3, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_RocketOfficer4::
+	msgbox SE_Text_RocketOfficer4, MSGBOX_DEFAULT
+	release
+	end
+SE_EventScript_RocketOfficer5::
+	msgbox SE_Text_RocketOfficer5, MSGBOX_DEFAULT
+	release
+	end
+SE_EventScript_RocketOfficer6::
+	msgbox SE_Text_RocketOfficer6, MSGBOX_DEFAULT
 	release
 	end
 
@@ -313,6 +329,8 @@ SE_EventScript_LookerCase::
 	case 0, SE_EventScript_LookerCase0
 	case 5, SE_EventScript_LookerCase5
 	case 6, SE_EventScript_LookerCase6
+	case 7, SE_EventScript_LookerCase7
+	case 8, SE_EventScript_LookerCase8
 	msgbox SE_Text_LookerHunting, MSGBOX_DEFAULT
 	release
 	end
@@ -326,11 +344,19 @@ SE_EventScript_LookerCase5::
 	giveitem ITEM_OVAL_CHARM
 	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_QuestBagFull
 	setvar VAR_SE_GALACTIC_QUEST, 6
-	msgbox SE_Text_LookerBye, MSGBOX_DEFAULT
+	msgbox SE_Text_LookerNext, MSGBOX_DEFAULT
 	release
 	end
 SE_EventScript_LookerCase6::
 	msgbox SE_Text_Looker6, MSGBOX_DEFAULT
+	release
+	end
+SE_EventScript_LookerCase7::
+	msgbox SE_Text_Looker7, MSGBOX_DEFAULT
+	release
+	end
+SE_EventScript_LookerCase8::
+	msgbox SE_Text_LookerBye, MSGBOX_DEFAULT
 	release
 	end
 
@@ -437,6 +463,21 @@ SE_Text_RocketOfficer3:
 	.string "the RADIO TOWER again! It's the last\l"
 	.string "one. You can do it!$"
 
+SE_Text_RocketOfficer4:
+	.string "OFFICER: ARCHER fled to MAHOGANY\n"
+	.string "TOWN. They're using their old\l"
+	.string "hideout under the souvenir shop!$"
+
+SE_Text_RocketOfficer5:
+	.string "OFFICER: The KANTO police say TEAM\n"
+	.string "ROCKET has a warehouse on FIVE\l"
+	.string "ISLAND, with their last supplies!$"
+
+SE_Text_RocketOfficer6:
+	.string "OFFICER: GIOVANNI himself is back?!\n"
+	.string "The old hideout under the CELADON\l"
+	.string "GAME CORNER… Please, stop him!$"
+
 SE_Text_RocketOfficerDone:
 	.string "OFFICER: TEAM ROCKET is gone for\n"
 	.string "good, thanks to you. JOHTO owes you\l"
@@ -497,14 +538,15 @@ SE_Text_ArcherDefeat:
 	.string "…So this is the end of TEAM ROCKET.$"
 
 SE_Text_ArcherAfter:
-	.string "ARCHER: GIOVANNI never answered.\n"
-	.string "Maybe he never will.\p"
+	.string "ARCHER: Grr… GIOVANNI hasn't\n"
+	.string "answered us… yet.\p"
 	.string "Take this. We stole it from a lab\n"
 	.string "in KANTO. I have no use for it now.$"
 
 SE_Text_ArcherBye:
-	.string "ARCHER: TEAM ROCKET is disbanded.\n"
-	.string "For real, this time.$"
+	.string "ARCHER: But this isn't over. We'll\n"
+	.string "regroup where it all began…\p"
+	.string "Don't follow us, CHAMPION!$"
 
 SE_Text_MoomooSick:
 	.string "MILTANK: …Moo…\n"
@@ -697,21 +739,37 @@ SE_Text_LookerHunting:
 	.string "here in VEILSTONE!$"
 
 SE_Text_Looker5:
-	.string "LOOKER: You caught CHARON! The case\n"
-	.string "of TEAM GALACTIC is closed at last.\p"
+	.string "LOOKER: You caught CHARON! But his\n"
+	.string "notes worry me…\p"
 	.string "The INTERNATIONAL POLICE thanks you.\n"
 	.string "Please, accept this.$"
 
-SE_Text_LookerBye:
+SE_Text_LookerNext:
 	.string "LOOKER: With that charm, POKéMON\n"
 	.string "EGGS will be found more often at the\l"
 	.string "DAY CARE.\p"
-	.string "Now I must go. Another region needs\n"
-	.string "LOOKER! Farewell, my friend!$"
+	.string "Now, CHARON's notes speak of a\n"
+	.string "scientist working for CYRUS himself!\p"
+	.string "He is hiding in the old GALACTIC\n"
+	.string "BUILDING of ETERNA CITY. Go!$"
 
 SE_Text_Looker6:
-	.string "LOOKER: My work here is done.\n"
-	.string "Farewell, my friend!$"
+	.string "LOOKER: The scientist is in the\n"
+	.string "GALACTIC BUILDING of ETERNA CITY.\l"
+	.string "Be careful, my friend!$"
+
+SE_Text_Looker7:
+	.string "LOOKER: CYRUS is back?! In the\n"
+	.string "GALACTIC HQ, here in VEILSTONE?\p"
+	.string "This is beyond the INTERNATIONAL\n"
+	.string "POLICE. Only you can face him!$"
+
+SE_Text_LookerBye:
+	.string "LOOKER: CYRUS gave up for good…\n"
+	.string "The case of TEAM GALACTIC is closed\l"
+	.string "at last, thanks to you.\p"
+	.string "Now I must go. Another region needs\n"
+	.string "LOOKER! Farewell, my friend!$"
 
 SE_Text_MarsIntro:
 	.string "MARS: Oh, it's you! I've been waiting\n"

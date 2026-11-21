@@ -27,6 +27,21 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "GalacticHQ_4F_EventScript_SNCyrus",
       "flag": "FLAG_SN_HIDE_HQ_CYRUS"
+    },
+    {
+      "type": "object",
+      "local_id": "LOCALID_SE_FINAL_CYRUS",
+      "graphics_id": "OBJ_EVENT_GFX_SINNOH_CYRUS",
+      "x": 9,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SE_EventScript_CyrusFinal",
+      "flag": "FLAG_SE_QUEST_CYRUS"
     }
   ],
   "warp_events": [

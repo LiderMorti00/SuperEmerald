@@ -189,4 +189,15 @@
 #define FLAG_SE_DOME_DATA_PWT        0x32E7 // the Battle Dome records loaded in the save are the PWT's (Hoenn's are in VAR_SE_DOME_DATA)
 #define FLAG_SE_PWT_PRIZE_KANTO      0x32E8 // 0x32E8-0x32EE: first-win prize of each PWT cup received (SE_PWT_CUP_* order)
 
+// Super Emerald: villain bases after the story (second block of side-quest objects, never set;
+// shown at their quest stage, see sSEQuestObjects in event_object_movement.c)
+#define FLAG_SE_QUEST2_OBJ_START     0x32EF
+#define FLAG_SE_QUEST_MAHOGANY       0x32EF // Rocket's return, stage 4: Mahogany hideout grunts, Archer and Ariana
+#define FLAG_SE_QUEST_WAREHOUSE      0x32F0 // stage 5: Five Island Rocket Warehouse grunts and Proton
+#define FLAG_SE_QUEST_CELADON        0x32F1 // stage 6: Celadon Rocket Hideout grunts and Giovanni
+#define FLAG_SE_QUEST_ETERNA         0x32F2 // Looker's last case, stage 6: Eterna Galactic Building
+#define FLAG_SE_QUEST_CYRUS          0x32F3 // stage 7: Cyrus in the Galactic HQ
+#define FLAG_SE_QUEST2_OBJ_END       0x32F3
+#define FLAG_SE_SILPH_GIFT           0x32F4 // Silph Co. president's Porygon2, after Giovanni
+
 #endif // GUARD_CONSTANTS_FLAGS_SE_SINNOH_H

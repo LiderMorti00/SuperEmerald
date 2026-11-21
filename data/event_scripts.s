@@ -2354,6 +2354,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/se_quests.inc" @ Super Emerald
 	.include "data/scripts/se_quests2.inc" @ Super Emerald
 	.include "data/scripts/se_quests3.inc" @ Super Emerald
+	.include "data/scripts/se_quests4.inc" @ Super Emerald: villain bases after the story
 	.include "data/scripts/se_pwt.inc" @ Super Emerald
 	.include "data/scripts/se_battle_tower_sinnoh.inc" @ Super Emerald
 	.include "data/scripts/se_elevators.inc" @ Super Emerald

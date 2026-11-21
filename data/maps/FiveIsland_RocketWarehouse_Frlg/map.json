@@ -159,6 +159,63 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "FiveIsland_RocketWarehouse_EventScript_ItemUpGrade",
       "flag": "FLAG_HIDE_FIVE_ISLAND_ROCKET_WAREHOUSE_UP_GRADE"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
+      "x": 15,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "SE_EventScript_WarehouseGrunt1",
+      "flag": "FLAG_SE_QUEST_WAREHOUSE"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_F",
+      "x": 6,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_RIGHT",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "SE_EventScript_WarehouseGrunt2",
+      "flag": "FLAG_SE_QUEST_WAREHOUSE"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
+      "x": 17,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "SE_EventScript_WarehouseGrunt3",
+      "flag": "FLAG_SE_QUEST_WAREHOUSE"
+    },
+    {
+      "type": "object",
+      "local_id": "LOCALID_SE_WAREHOUSE_PROTON",
+      "graphics_id": "OBJ_EVENT_GFX_PROTON_HNS",
+      "x": 25,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SE_EventScript_WarehouseProton",
+      "flag": "FLAG_SE_QUEST_WAREHOUSE"
     }
   ],
   "warp_events": [
