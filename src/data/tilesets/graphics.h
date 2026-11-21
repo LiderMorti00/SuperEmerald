@@ -4740,27 +4740,6 @@ const u16 gTilesetPalettes_ssaqua_Hns[][16] =
 
 // Super Emerald: Sinnoh keeps its own copies of the Hoenn tilesets, so editing one never changes the other
 const u32 gTilesetTiles_BikeShop_Sinnoh[] = INCGFX_U32("data/tilesets/secondary/bike_shop_sinnoh/tiles.png", ".4bpp.smol");
-const u32 gTilesetTiles_BrendansMaysHouse_Sinnoh[] = INCGFX_U32("data/tilesets/secondary/brendans_mays_house_sinnoh/tiles.png", ".4bpp.smol");
-const u16 gTilesetPalettes_BrendansMaysHouse_Sinnoh[][16] =
-{
-    INCGFX_U16("data/tilesets/secondary/brendans_mays_house_sinnoh/palettes/00.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/brendans_mays_house_sinnoh/palettes/01.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/brendans_mays_house_sinnoh/palettes/02.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/brendans_mays_house_sinnoh/palettes/03.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/brendans_mays_house_sinnoh/palettes/04.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/brendans_mays_house_sinnoh/palettes/05.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/brendans_mays_house_sinnoh/palettes/06.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/brendans_mays_house_sinnoh/palettes/07.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/brendans_mays_house_sinnoh/palettes/08.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/brendans_mays_house_sinnoh/palettes/09.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/brendans_mays_house_sinnoh/palettes/10.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/brendans_mays_house_sinnoh/palettes/11.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/brendans_mays_house_sinnoh/palettes/12.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/brendans_mays_house_sinnoh/palettes/13.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/brendans_mays_house_sinnoh/palettes/14.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/brendans_mays_house_sinnoh/palettes/15.pal", ".gbapal"),
-};
-const u32 gTilesetTiles_Building_Sinnoh[] = INCGFX_U32("data/tilesets/primary/building_sinnoh/tiles.png", ".4bpp.smol");
 const u32 gTilesetTiles_CableClub_Sinnoh[] = INCGFX_U32("data/tilesets/secondary/cable_club_sinnoh/tiles.png", ".4bpp.smol");
 const u16 gTilesetPalettes_CableClub_Sinnoh[][16] =
 {
@@ -4842,26 +4821,6 @@ const u16 gTilesetPalettes_GenericBuilding_Sinnoh[][16] =
     INCGFX_U16("data/tilesets/secondary/generic_building_sinnoh/palettes/14.pal", ".gbapal"),
     INCGFX_U16("data/tilesets/secondary/generic_building_sinnoh/palettes/15.pal", ".gbapal"),
 };
-const u32 gTilesetTiles_Lab_Sinnoh[] = INCGFX_U32("data/tilesets/secondary/lab_sinnoh/tiles.png", ".4bpp.smol");
-const u16 gTilesetPalettes_Lab_Sinnoh[][16] =
-{
-    INCGFX_U16("data/tilesets/secondary/lab_sinnoh/palettes/00.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/lab_sinnoh/palettes/01.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/lab_sinnoh/palettes/02.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/lab_sinnoh/palettes/03.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/lab_sinnoh/palettes/04.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/lab_sinnoh/palettes/05.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/lab_sinnoh/palettes/06.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/lab_sinnoh/palettes/07.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/lab_sinnoh/palettes/08.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/lab_sinnoh/palettes/09.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/lab_sinnoh/palettes/10.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/lab_sinnoh/palettes/11.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/lab_sinnoh/palettes/12.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/lab_sinnoh/palettes/13.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/lab_sinnoh/palettes/14.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/lab_sinnoh/palettes/15.pal", ".gbapal"),
-};
 const u16 gTilesetPalettes_LilycoveMuseum_Sinnoh[][16] =
 {
     INCGFX_U16("data/tilesets/secondary/lilycove_museum_sinnoh/palettes/00.pal", ".gbapal"),
@@ -4920,25 +4879,6 @@ const u16 gTilesetPalettes_MauvilleGym_Sinnoh[][16] =
     INCGFX_U16("data/tilesets/secondary/mauville_gym_sinnoh/palettes/13.pal", ".gbapal"),
     INCGFX_U16("data/tilesets/secondary/mauville_gym_sinnoh/palettes/14.pal", ".gbapal"),
     INCGFX_U16("data/tilesets/secondary/mauville_gym_sinnoh/palettes/15.pal", ".gbapal"),
-};
-const u16 gTilesetPalettes_PokemonCenter_Sinnoh[][16] =
-{
-    INCGFX_U16("data/tilesets/secondary/pokemon_center_sinnoh/palettes/00.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/pokemon_center_sinnoh/palettes/01.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/pokemon_center_sinnoh/palettes/02.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/pokemon_center_sinnoh/palettes/03.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/pokemon_center_sinnoh/palettes/04.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/pokemon_center_sinnoh/palettes/05.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/pokemon_center_sinnoh/palettes/06.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/pokemon_center_sinnoh/palettes/07.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/pokemon_center_sinnoh/palettes/08.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/pokemon_center_sinnoh/palettes/09.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/pokemon_center_sinnoh/palettes/10.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/pokemon_center_sinnoh/palettes/11.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/pokemon_center_sinnoh/palettes/12.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/pokemon_center_sinnoh/palettes/13.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/pokemon_center_sinnoh/palettes/14.pal", ".gbapal"),
-    INCGFX_U16("data/tilesets/secondary/pokemon_center_sinnoh/palettes/15.pal", ".gbapal"),
 };
 const u16 gTilesetPalettes_PokemonDayCare_Sinnoh[][16] =
 {
