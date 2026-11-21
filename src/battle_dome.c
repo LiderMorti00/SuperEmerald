@@ -5572,6 +5572,11 @@ static void RestoreDomePlayerPartyHeldItems(void)
 {
     int i;
 
+    if (SE_IsPwt())
+    {
+        SE_PwtRestoreHeldItems();
+        return;
+    }
     for (i = 0; i < DOME_BATTLE_PARTY_SIZE; i++)
     {
         int playerMonId = gSaveBlock2Ptr->frontier.selectedPartyMons[gSelectedOrderFromParty[i] - 1] - 1;

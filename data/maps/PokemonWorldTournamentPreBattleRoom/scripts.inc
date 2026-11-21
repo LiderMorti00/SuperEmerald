@@ -136,17 +136,8 @@ PokemonWorldTournamentPreBattleRoom_EventScript_TourneyInFinals::
 	return
 
 PokemonWorldTournamentPreBattleRoom_EventScript_ContinueChallenge::
-	message PokemonWorldTournamentPreBattleRoom_Text_ChooseTwoMons
-	waitmessage
-	waitbuttonpress
-	fadescreen FADE_TO_BLACK
-	call BattleFrontier_EventScript_GetLvlMode
-	copyvar VAR_0x8004, VAR_RESULT
-	choosepartyforbattlefrontier DOME_BATTLE_PARTY_SIZE  @ 2 of the 3 party mons are selected for battle
+	@ Super Emerald: 6 against 6, the whole party battles (no choosing two)
 	frontier_resetsketch
-	goto_if_eq VAR_RESULT, 0, PokemonWorldTournamentPreBattleRoom_EventScript_AskReadyForNextRound
-	dome_set DOME_DATA_SELECTED_MONS
-	dome_reduceparty
 	dome_setopponent
 	msgbox PokemonWorldTournamentPreBattleRoom_Text_RightThisWay, MSGBOX_DEFAULT
 	closemessage
@@ -286,10 +277,6 @@ PokemonWorldTournamentPreBattleRoom_Text_ReadyForSemifinals:
 PokemonWorldTournamentPreBattleRoom_Text_ReadyForFinals:
 	.string "Your final match is next.\n"
 	.string "Are you ready?$"
-
-PokemonWorldTournamentPreBattleRoom_Text_ChooseTwoMons:
-	.string "Please choose the two POKéMON\n"
-	.string "that are to appear in battle.$"
 
 PokemonWorldTournamentPreBattleRoom_Text_RightThisWay:
 	.string "Right this way, please.$"

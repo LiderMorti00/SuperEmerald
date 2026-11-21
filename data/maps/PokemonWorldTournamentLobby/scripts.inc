@@ -166,11 +166,8 @@ PokemonWorldTournamentLobby_EventScript_CheckEligible::
 	goto_if_eq VAR_0x8004, TRUE, PokemonWorldTournamentLobby_EventScript_NotEnoughValidMons
 	frontier_set FRONTIER_DATA_LVL_MODE, VAR_RESULT
 	msgbox PokemonWorldTournamentLobby_Text_SelectThreeMons, MSGBOX_DEFAULT
-	fadescreen FADE_TO_BLACK
 	callnative RemoveFollowingPokemon
-	call BattleFrontier_EventScript_GetLvlMode
-	copyvar VAR_0x8004, VAR_RESULT
-	choosepartyforbattlefrontier FRONTIER_PARTY_SIZE
+	special SE_PwtEnterWholeParty  @ Super Emerald: 6 against 6, the whole party is entered
 	goto_if_eq VAR_RESULT, 0, PokemonWorldTournamentLobby_EventScript_LoadPartyCancelChallenge
 	msgbox PokemonWorldTournamentLobby_Text_OkayToSaveBeforeChallenge, MSGBOX_YESNO
 	switch VAR_RESULT
@@ -464,14 +461,10 @@ PokemonWorldTournamentLobby_Text_ExplainSinglesChallenge:
 	.string "The SINGLE BATTLE Tournament\n"
 	.string "is exactly as the name suggests--\l"
 	.string "a tournament of SINGLE BATTLES.\p"
-	.string "All participating TRAINERS must\n"
-	.string "enter three POKéMON each.\p"
-	.string "In each battle, one of the three\n"
-	.string "POKéMON must be held in reserve.\p"
-	.string "The other two POKéMON can battle\n"
-	.string "one at a time.\p"
-	.string "Choose the two battling POKéMON after\n"
-	.string "examining the opponent's trio.\p"
+	.string "All participating TRAINERS battle\n"
+	.string "with their whole party, six against\l"
+	.string "six, one POKéMON at a time.\p"
+	.string "Every POKéMON battles at Level 50.\p"
 	.string "You win the tournament by defeating\n"
 	.string "four TRAINERS.\p"
 	.string "Battle Points are awarded to\n"
@@ -491,8 +484,8 @@ PokemonWorldTournamentLobby_Text_WhichLevelMode:
 	.string "Which is your choice?$"
 
 PokemonWorldTournamentLobby_Text_SelectThreeMons:
-	.string "Now select the three POKéMON that\n"
-	.string "you wish to enter, please.$"
+	.string "All the POKéMON in your party will be\n"
+	.string "entered. They battle at Level 50.$"
 
 PokemonWorldTournamentLobby_Text_NotEnoughValidMonsLvOpen:
 	.string "Excuse me!\p"
@@ -573,14 +566,10 @@ PokemonWorldTournamentLobby_Text_ExplainDoublesChallenge:
 	.string "The DOUBLE BATTLE Tournament\n"
 	.string "is exactly as the name suggests--\l"
 	.string "a tournament of DOUBLE BATTLES.\p"
-	.string "All participating TRAINERS must\n"
-	.string "enter three POKéMON each.\p"
-	.string "In each battle, one of the three\n"
-	.string "POKéMON must be held in reserve.\p"
-	.string "The remaining two POKéMON must take\n"
-	.string "part in a DOUBLE BATTLE.\p"
-	.string "Choose the two battling POKéMON after\n"
-	.string "examining the opponent's trio.\p"
+	.string "All participating TRAINERS battle\n"
+	.string "with their whole party, six against\l"
+	.string "six, two POKéMON at a time.\p"
+	.string "Every POKéMON battles at Level 50.\p"
 	.string "You win the tournament by defeating\n"
 	.string "four TRAINERS.\p"
 	.string "Battle Points are awarded to\n"

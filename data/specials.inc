@@ -243,6 +243,7 @@ gSpecials::
 	def_special SE_LeavePwt
 	def_special SE_PwtBufferCupName
 	def_special SE_PwtGetCupPrize
+	def_special SE_PwtEnterWholeParty
 	def_special SE_SetContestHallStaffGfx
 	def_special SE_GetSinnohContestAudienceGfx
 	def_special SE_PwtSetCupPrizeReceived

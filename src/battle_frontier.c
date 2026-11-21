@@ -3,6 +3,7 @@
 #include "battle.h"
 #include "battle_main.h"
 #include "battle_frontier.h"
+#include "se_pwt.h"
 #include "battle_setup.h"
 #include "battle_dome.h"
 #include "battle_factory.h"
@@ -363,6 +364,10 @@ static void FillTrainerParty(u16 trainerId, enum BattleTrainer trainer, u8 monCo
     }
 
     generator.partySize = monCount;
+    // Super Emerald: the PWT's opponents battle with their whole team (6 against 6)
+    if (VarGet(VAR_FRONTIER_FACILITY) == FRONTIER_FACILITY_DOME
+     && SE_PwtFillOpponentParty(trainerId, gParties[trainer], &generator))
+        return;
     PickFacilityMons(&generator, trainerId);
     ModifyPartyOrder(&generator, trainerId);
     for (i = 0; i < generator.partySize; i++)

@@ -10,6 +10,10 @@
 #include "pokemon.h"
 #include "random.h"
 #include "string_util.h"
+#include "load_save.h"
+#include "party_menu.h"
+#include "script_pokemon_util.h"
+#include "battle_frontier.h"
 #include "constants/battle_frontier.h"
 #include "constants/event_objects.h"
 #include "constants/frontier_util.h"
@@ -343,4 +347,70 @@ void SE_PwtSetCupPrizeReceived(void)
     if (cup >= SE_PWT_CUPS_COUNT)
         cup = SE_PWT_CUP_WORLD;
     FlagSet(FLAG_SE_PWT_PRIZE_KANTO + cup);
+}
+
+// --- 6 against 6 ------------------------------------------------------------------
+// Like in B2W2, the player battles with the whole party (eggs and Frontier-banned Pokemon
+// stay out) and the opponents with their 6 Pokemon. The Dome bookkeeping (tourney tree,
+// info cards) keeps using the first 3.
+
+// Fills gSelectedOrderFromParty (1-based slots of the saved party) and returns how many
+u32 SE_PwtBuildPartyOrder(void)
+{
+    u32 i, n = 0;
+
+    for (i = 0; i < PARTY_SIZE; i++)
+        gSelectedOrderFromParty[i] = 0;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        struct Pokemon *mon = GetSavedPlayerPartyMon(i);
+        u32 species = GetMonData(mon, MON_DATA_SPECIES_OR_EGG);
+        if (species == SPECIES_NONE || species == SPECIES_EGG)
+            continue;
+        if (gSpeciesInfo[GetBaseSpecies(species)].isFrontierBanned)
+            continue;
+        gSelectedOrderFromParty[n++] = i + 1;
+    }
+    return n;
+}
+
+// Lobby: instead of choosing 3 Pokemon, the whole party is entered. The party is saved first
+// so the order is built from it. VAR_RESULT: 1 = entered (at least 3 Pokemon), 0 = not enough.
+void SE_PwtEnterWholeParty(void)
+{
+    SavePlayerParty();
+    gSpecialVar_Result = SE_PwtBuildPartyOrder() >= FRONTIER_PARTY_SIZE;
+}
+
+// The battle party: every entered Pokemon, in party order
+void SE_PwtReduceParty(void)
+{
+    if (SE_PwtBuildPartyOrder() != 0)
+        ReducePlayerPartyToSelectedMons();
+}
+
+// After a battle: berries and other consumed items come back
+void SE_PwtRestoreHeldItems(void)
+{
+    u32 i, n = SE_PwtBuildPartyOrder();
+
+    for (i = 0; i < n; i++)
+    {
+        u32 item = GetMonData(GetSavedPlayerPartyMon(gSelectedOrderFromParty[i] - 1), MON_DATA_HELD_ITEM);
+        SetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_HELD_ITEM, &item);
+    }
+}
+
+// The opponent's 6 Pokemon, straight from its PWT team
+bool32 SE_PwtFillOpponentParty(u16 trainerId, struct Pokemon *party, struct FacilityMonGenerator *generator)
+{
+    const u16 *set;
+    u32 i;
+
+    if (!SE_IsPwt() || trainerId >= SE_PWT_TRAINERS_COUNT)
+        return FALSE;
+    set = gSEPwtTrainers[trainerId].monSet;
+    for (i = 0; i < PARTY_SIZE && set[i] != 0xFFFF; i++)
+        CreateFacilityMon(&party[i], generator, set[i]);
+    return TRUE;
 }

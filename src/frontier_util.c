@@ -981,6 +981,11 @@ static void SetSelectedPartyOrder(void)
 {
     s32 i;
 
+    if (SE_IsPwt()) // Super Emerald: the whole party battles in the PWT
+    {
+        SE_PwtReduceParty();
+        return;
+    }
     ClearSelectedPartyOrder();
     for (i = 0; i < gSpecialVar_0x8005; i++)
         gSelectedOrderFromParty[i] = gSaveBlock2Ptr->frontier.selectedPartyMons[i];

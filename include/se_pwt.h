@@ -13,5 +13,11 @@ void SE_PwtPickTrainers(u16 *ids, u32 count);
 void SE_PwtScaleParty(void);
 void SE_PwtKeepRealLevel(u32 index, struct Pokemon *mon);
 u32 SE_PwtBattlePoints(void);
+u32 SE_PwtBuildPartyOrder(void);
+void SE_PwtEnterWholeParty(void);
+void SE_PwtReduceParty(void);
+void SE_PwtRestoreHeldItems(void);
+struct FacilityMonGenerator;
+bool32 SE_PwtFillOpponentParty(u16 trainerId, struct Pokemon *party, struct FacilityMonGenerator *generator);
 
 #endif // GUARD_SE_PWT_H
