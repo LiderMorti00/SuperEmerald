@@ -11,7 +11,6 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -27,7 +26,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_HNS",
       "x": 51,
       "y": 21,
@@ -41,7 +39,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_HNS",
       "x": 30,
       "y": 18,
@@ -55,7 +52,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_HNS",
       "x": 15,
       "y": 19,
@@ -69,7 +65,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_HNS",
       "x": 34,
       "y": 29,
@@ -83,7 +78,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_HNS",
       "x": 64,
       "y": 34,
@@ -97,7 +91,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_HNS",
       "x": 38,
       "y": 77,
@@ -111,7 +104,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_HNS",
       "x": 28,
       "y": 40,
@@ -125,7 +117,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_HNS",
       "x": 63,
       "y": 62,
@@ -139,7 +130,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_HNS",
       "x": 9,
       "y": 62,
@@ -153,7 +143,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_HNS",
       "x": 35,
       "y": 54,
@@ -167,7 +156,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CHINCHOU",
       "x": 18,
       "y": 12,
@@ -181,7 +169,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_LANTURN",
       "x": 5,
       "y": 12,
@@ -195,7 +182,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MANTINE",
       "x": 53,
       "y": 16,
@@ -209,7 +195,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HORSEA",
       "x": 68,
       "y": 26,
@@ -223,7 +208,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MANTINE",
       "x": 70,
       "y": 43,
@@ -237,7 +221,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TENTACOOL",
       "x": 69,
       "y": 61,
@@ -251,7 +234,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SHELLDER",
       "x": 14,
       "y": 80,
@@ -265,7 +247,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TENTACOOL",
       "x": 59,
       "y": 50,
@@ -279,7 +260,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TENTACOOL",
       "x": 10,
       "y": 46,
@@ -293,7 +273,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TENTACOOL",
       "x": 36,
       "y": 36,
@@ -307,7 +286,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TENTACOOL",
       "x": 47,
       "y": 51,
@@ -321,7 +299,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TENTACOOL",
       "x": 32,
       "y": 71,
@@ -335,7 +312,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TENTACRUEL",
       "x": 0,
       "y": 88,
@@ -349,7 +325,6 @@
       "flag": "FLAG_HIDE_WHIRL_ISLANDS_TENTACRUEL"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TENTACRUEL",
       "x": 2,
       "y": 88,
@@ -363,7 +338,6 @@
       "flag": "FLAG_HIDE_WHIRL_ISLANDS_TENTACRUEL"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TENTACRUEL",
       "x": 1,
       "y": 88,
@@ -377,7 +351,6 @@
       "flag": "FLAG_HIDE_WHIRL_ISLANDS_TENTACRUEL"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TENTACRUEL",
       "x": 3,
       "y": 88,
@@ -391,7 +364,6 @@
       "flag": "FLAG_HIDE_WHIRL_ISLANDS_TENTACRUEL"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PIDGEOTTO",
       "x": 38,
       "y": 51,
@@ -405,7 +377,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PIDGEOTTO",
       "x": 22,
       "y": 61,
@@ -419,7 +390,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PIDGEOTTO",
       "x": 41,
       "y": 69,
@@ -433,7 +403,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PIDGEOTTO",
       "x": 53,
       "y": 31,
@@ -447,7 +416,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PIDGEOTTO",
       "x": 24,
       "y": 34,
@@ -461,7 +429,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CHINCHOU",
       "x": 31,
       "y": 87,
@@ -475,7 +442,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_LANTURN",
       "x": 55,
       "y": 86,
@@ -489,7 +455,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WHIRLPOOL_HNS",
       "x": 27,
       "y": 66,
@@ -503,7 +468,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WHIRLPOOL_HNS",
       "x": 17,
       "y": 42,
@@ -517,7 +481,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WHIRLPOOL_HNS",
       "x": 42,
       "y": 46,
@@ -531,7 +494,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WHIRLPOOL_HNS",
       "x": 52,
       "y": 53,
@@ -545,7 +507,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WHIRLPOOL_HNS",
       "x": 58,
       "y": 76,
@@ -559,7 +520,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WHIRLPOOL_HNS",
       "x": 7,
       "y": 41,
@@ -573,7 +533,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 42,
       "y": 46,
@@ -587,7 +546,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 43,
       "y": 46,
@@ -601,7 +559,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 43,
       "y": 45,
@@ -615,7 +572,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 42,
       "y": 45,
@@ -629,7 +585,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 52,
       "y": 52,
@@ -643,7 +598,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 53,
       "y": 52,
@@ -657,7 +611,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 52,
       "y": 53,
@@ -671,7 +624,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 53,
       "y": 53,
@@ -685,7 +637,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 59,
       "y": 76,
@@ -699,7 +650,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 58,
       "y": 75,
@@ -713,7 +663,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 59,
       "y": 75,
@@ -727,7 +676,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 58,
       "y": 76,
@@ -741,7 +689,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 18,
       "y": 42,
@@ -755,7 +702,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 17,
       "y": 41,
@@ -769,7 +715,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 18,
       "y": 41,
@@ -783,7 +728,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 17,
       "y": 42,
@@ -797,7 +741,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 8,
       "y": 41,
@@ -811,7 +754,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 7,
       "y": 40,
@@ -825,7 +767,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 8,
       "y": 40,
@@ -839,7 +780,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 7,
       "y": 41,
@@ -853,7 +793,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 28,
       "y": 66,
@@ -867,7 +806,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 27,
       "y": 65,
@@ -881,7 +819,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 28,
       "y": 65,
@@ -895,7 +832,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ARCHER_HNS",
       "x": 27,
       "y": 66,
@@ -1010,9 +946,7 @@
       "y": 79,
       "elevation": 0,
       "item": "ITEM_STARDUST",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE41_STARDUST_1",
-      "quantity": 0,
-      "underfoot": false
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE41_STARDUST_1"
     },
     {
       "type": "hidden_item",
@@ -1020,9 +954,7 @@
       "y": 50,
       "elevation": 0,
       "item": "ITEM_STARDUST",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE41_STARDUST_2",
-      "quantity": 0,
-      "underfoot": false
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE41_STARDUST_2"
     }
   ]
 }

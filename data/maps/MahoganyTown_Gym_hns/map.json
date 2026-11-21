@@ -15,7 +15,6 @@
   "connections": null,
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SKIER_F_HNS",
       "x": 8,
       "y": 3,
@@ -29,7 +28,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SKIER_M_HNS",
       "x": 17,
       "y": 9,
@@ -43,7 +41,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SKIER_M_HNS",
       "x": 17,
       "y": 23,
@@ -57,7 +54,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SKIER_M_HNS",
       "x": 5,
       "y": 8,
@@ -71,7 +67,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SKIER_F_HNS",
       "x": 12,
       "y": 11,
@@ -85,7 +80,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PRYCE_HNS",
       "x": 12,
       "y": 4,
@@ -99,7 +93,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GYM_GUY_HNS",
       "x": 13,
       "y": 26,
@@ -113,7 +106,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DELIBIRD",
       "x": 8,
       "y": 18,

@@ -11,7 +11,6 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -27,7 +26,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
       "x": 16,
       "y": 13,
@@ -41,7 +39,6 @@
       "flag": "FLAG_TEMP_1"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
       "x": 9,
       "y": 14,
@@ -55,7 +52,6 @@
       "flag": "FLAG_TEMP_3"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
       "x": 9,
       "y": 16,
@@ -69,7 +65,6 @@
       "flag": "FLAG_TEMP_2"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS",
       "x": 13,
       "y": 14,
@@ -83,7 +78,6 @@
       "flag": "FLAG_TEMP_4"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_HNS",
       "x": 11,
       "y": 41,
@@ -97,7 +91,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY_2_HNS",
       "x": 25,
       "y": 21,
@@ -111,7 +104,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2_HNS",
       "x": 21,
       "y": 18,
@@ -125,7 +117,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_HNS",
       "x": 13,
       "y": 26,
@@ -139,7 +130,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_HNS",
       "x": 26,
       "y": 28,
@@ -153,7 +143,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_HNS",
       "x": 22,
       "y": 50,
@@ -167,7 +156,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KRABBY",
       "x": 16,
       "y": 20,
@@ -181,7 +169,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KRABBY",
       "x": 19,
       "y": 21,
@@ -195,7 +182,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KRABBY",
       "x": 30,
       "y": 22,
@@ -209,7 +195,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TEDDIURSA",
       "x": 2,
       "y": 16,
@@ -223,7 +208,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SHELLDER",
       "x": 24,
       "y": 37,
@@ -237,7 +221,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SHELLDER",
       "x": 25,
       "y": 50,
@@ -251,7 +234,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TENTACOOL",
       "x": 7,
       "y": 32,
@@ -265,7 +247,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SHELLDER",
       "x": 4,
       "y": 47,
@@ -279,7 +260,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TENTACOOL",
       "x": 27,
       "y": 43,
@@ -293,7 +273,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LASS_HNS",
       "x": 19,
       "y": 13,
@@ -370,6 +349,20 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE41_HNS",
       "dest_warp_id": "12"
+    },
+    {
+      "x": 11,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_GATE_ROUTE40_HNS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 12,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_GATE_ROUTE40_HNS",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

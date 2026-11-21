@@ -15,7 +15,6 @@
   "connections": null,
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_M",
       "x": 22,
       "y": 18,
@@ -29,7 +28,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_F",
       "x": 23,
       "y": 18,
@@ -43,7 +41,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_RICH_BOY",
       "x": 25,
       "y": 26,
@@ -57,7 +54,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_POKEFAN_F",
       "x": 14,
       "y": 28,
@@ -71,7 +67,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_POKE_KID",
       "x": 15,
       "y": 28,
@@ -85,7 +80,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BATTLE_GIRL",
       "x": 17,
       "y": 23,
@@ -99,7 +93,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_SCIENTIST_M",
       "x": 25,
       "y": 31,
@@ -113,7 +106,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GENTLEMAN",
       "x": 15,
       "y": 32,

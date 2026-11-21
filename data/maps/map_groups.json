@@ -1353,7 +1353,8 @@
     "SafariZoneGate_PokemonCenter_hns",
     "SafariZoneGate_SafariZoneEntrance_hns",
     "Route27_House_hns",
-    "MtSilver_PokemonCenter_hns"
+    "MtSilver_PokemonCenter_hns",
+    "Gate_Route40_hns"
   ],
   "gMapGroup_IndoorKantoRoutes_Hns": [
     "Route26_House1_hns",
@@ -1450,7 +1451,12 @@
     "SafariZone_Low_Left_hns",
     "SafariZone_Low_Right_hns",
     "SafariZone_Top_Mid_hns",
-    "SafariZone_Top_Right_hns"
+    "SafariZone_Top_Right_hns",
+    "PokemonWorldTournament_Johto",
+    "PokwmonWorldTournamentLobby",
+    "PokemonWorldTournamentCorridor",
+    "PokemonWorldTournamentPreBattleRoom",
+    "PokemonWorldTournamentRoom"
   ],
   "gMapGroup_SinnohTownsRoutes_Sinnoh": [
     "TwinleafTown_sinnoh",

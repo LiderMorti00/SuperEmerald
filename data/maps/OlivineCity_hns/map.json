@@ -11,7 +11,6 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -32,7 +31,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_HNS",
       "x": 21,
       "y": 28,
@@ -46,7 +44,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR_HNS",
       "x": 33,
       "y": 46,
@@ -60,7 +57,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR_HNS",
       "x": 11,
       "y": 44,
@@ -75,7 +71,6 @@
     },
     {
       "local_id": "LOCALID_OLIVINE_SILVER",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SILVER_HNS",
       "x": 11,
       "y": 27,
@@ -89,7 +84,6 @@
       "flag": "FLAG_HIDE_OLIVINE_SILVER"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PIDGEOTTO",
       "x": 11,
       "y": 11,
@@ -103,7 +97,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KRABBY",
       "x": 9,
       "y": 52,
@@ -117,7 +110,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KRABBY",
       "x": 33,
       "y": 60,
@@ -131,7 +123,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_KRABBY",
       "x": 39,
       "y": 61,
@@ -145,7 +136,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CORSOLA",
       "x": 12,
       "y": 58,
@@ -159,7 +149,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CORSOLA",
       "x": 7,
       "y": 61,
@@ -173,7 +162,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_TENTACOOL",
       "x": 25,
       "y": 57,
@@ -187,7 +175,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_PIDGEY",
       "x": 19,
       "y": 31,
@@ -201,7 +188,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MACHOKE",
       "x": 33,
       "y": 47,
@@ -215,7 +201,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_FURRET",
       "x": 26,
       "y": 34,
@@ -229,7 +214,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_FURRET",
       "x": 37,
       "y": 37,
@@ -243,7 +227,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SKARMORY",
       "x": 9,
       "y": 24,
@@ -257,7 +240,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SENTRET",
       "x": 26,
       "y": 17,
@@ -271,7 +253,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MACHOP",
       "x": 11,
       "y": 16,
@@ -285,7 +266,6 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MISDREAVUS",
       "x": 14,
       "y": 7,
@@ -299,7 +279,6 @@
       "flag": "FLAG_NIGHT_POKEMON"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1_HNS",
       "x": 7,
       "y": 16,
@@ -313,7 +292,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL_HNS",
       "x": 45,
       "y": 46,
@@ -327,7 +305,6 @@
       "flag": "FLAG_ITEM_OLIVINE_TM_CHARGEBEAM"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ATTENDANT_F_HNS",
       "x": 26,
       "y": 52,
@@ -341,7 +318,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_TWIN_HNS",
       "x": 28,
       "y": 41,
@@ -461,9 +437,7 @@
       "y": 50,
       "elevation": 0,
       "item": "ITEM_PROTEIN",
-      "flag": "FLAG_HIDDEN_ITEM_OLIVINE_PROTEIN",
-      "quantity": 0,
-      "underfoot": false
+      "flag": "FLAG_HIDDEN_ITEM_OLIVINE_PROTEIN"
     }
   ]
 }

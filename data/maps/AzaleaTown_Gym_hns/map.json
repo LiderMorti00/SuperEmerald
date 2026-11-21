@@ -15,7 +15,6 @@
   "connections": null,
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GYM_GUY_HNS",
       "x": 12,
       "y": 42,
@@ -29,7 +28,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUGSY_HNS",
       "x": 11,
       "y": 6,
@@ -43,7 +41,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_TWIN_HNS",
       "x": 5,
       "y": 26,
@@ -57,7 +54,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_TWIN_HNS",
       "x": 6,
       "y": 26,
@@ -71,7 +67,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER_HNS",
       "x": 17,
       "y": 26,
@@ -85,7 +80,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER_HNS",
       "x": 17,
       "y": 5,
@@ -99,7 +93,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER_HNS",
       "x": 6,
       "y": 6,
@@ -113,7 +106,7 @@
       "flag": "0"
     },
     {
-      "type": "object",
+      "local_id": "LOCALID_AZALEA_ARIADOS_LEFT1",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ARIADOS",
       "x": 6,
       "y": 33,
@@ -124,11 +117,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_AZALEA_ARIADOS_LEFT",
-      "local_id": "LOCALID_AZALEA_ARIADOS_LEFT1"
+      "flag": "FLAG_HIDE_AZALEA_ARIADOS_LEFT"
     },
     {
-      "type": "object",
+      "local_id": "LOCALID_AZALEA_ARIADOS_MID1",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ARIADOS",
       "x": 11,
       "y": 33,
@@ -139,11 +131,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_AZALEA_ARIADOS_MID",
-      "local_id": "LOCALID_AZALEA_ARIADOS_MID1"
+      "flag": "FLAG_HIDE_AZALEA_ARIADOS_MID"
     },
     {
-      "type": "object",
+      "local_id": "LOCALID_AZALEA_ARIADOS_RIGHT1",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ARIADOS",
       "x": 16,
       "y": 33,
@@ -154,11 +145,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_AZALEA_ARIADOS_RIGHT",
-      "local_id": "LOCALID_AZALEA_ARIADOS_RIGHT1"
+      "flag": "FLAG_HIDE_AZALEA_ARIADOS_RIGHT"
     },
     {
-      "type": "object",
+      "local_id": "LOCALID_AZALEA_ARIADOS_LEFT2",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ARIADOS",
       "x": 6,
       "y": 17,
@@ -169,11 +159,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_AZALEA_ARIADOS_LEFT",
-      "local_id": "LOCALID_AZALEA_ARIADOS_LEFT2"
+      "flag": "FLAG_HIDE_AZALEA_ARIADOS_LEFT"
     },
     {
-      "type": "object",
+      "local_id": "LOCALID_AZALEA_ARIADOS_MID2",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ARIADOS",
       "x": 11,
       "y": 17,
@@ -184,11 +173,10 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_AZALEA_ARIADOS_MID",
-      "local_id": "LOCALID_AZALEA_ARIADOS_MID2"
+      "flag": "FLAG_HIDE_AZALEA_ARIADOS_MID"
     },
     {
-      "type": "object",
+      "local_id": "LOCALID_AZALEA_ARIADOS_RIGHT2",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_ARIADOS",
       "x": 16,
       "y": 17,
@@ -199,8 +187,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_AZALEA_ARIADOS_RIGHT",
-      "local_id": "LOCALID_AZALEA_ARIADOS_RIGHT2"
+      "flag": "FLAG_HIDE_AZALEA_ARIADOS_RIGHT"
     }
   ],
   "warp_events": [

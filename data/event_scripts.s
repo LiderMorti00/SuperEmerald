@@ -2413,3 +2413,15 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/VeilstoneCity_Departament_Store_Elevator/scripts.inc"
 
 	.include "data/maps/Route226_Access_sinnoh/scripts.inc"
+
+	.include "data/maps/PokemonWorldTournament_Johto/scripts.inc"
+
+	.include "data/maps/Gate_Route40_hns/scripts.inc"
+
+	.include "data/maps/PokemonWorldTournamentCorridor/scripts.inc"
+
+	.include "data/maps/PokemonWorldTournamentPreBattleRoom/scripts.inc"
+
+	.include "data/maps/PokwmonWorldTournamentLobby/scripts.inc"
+
+	.include "data/maps/PokemonWorldTournamentRoom/scripts.inc"
