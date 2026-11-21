@@ -30,6 +30,9 @@ for l in lay:
     if 'id' not in l: continue
     if l.get('layout_version') == 'frlg' and ('border_width' not in l or 'border_height' not in l):
         err('porymap', '%s has no border size (Porymap: Maps > Enable Custom Border Size)' % l['id'])
+    tiles = l.get('primary_tileset', '') + l.get('secondary_tileset', '')
+    if ('_Hns' in tiles or 'Frlg' in tiles) and l.get('layout_version') != 'frlg':
+        err('porymap', '%s uses HnS/FRLG tilesets but has no "layout_version": "frlg" (it will look garbled)' % l['id'])
     for k in ('blockdata_filepath', 'border_filepath'):
         if not os.path.exists(l[k]): err('layout', '%s: missing %s' % (l['id'], l[k]))
 

@@ -5902,7 +5902,7 @@ void SE_CheckPartyHasType(void)
     gSpecialVar_Result = FALSE;
     for (i = 0; i < PARTY_SIZE; i++)
     {
-        u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG);
+        u16 species = GetMonData(&gParties[B_TRAINER_PLAYER][i], MON_DATA_SPECIES_OR_EGG);
         if (species == SPECIES_NONE || species == SPECIES_EGG)
             continue;
         if (GetSpeciesType(species, 0) == gSpecialVar_0x8004 || GetSpeciesType(species, 1) == gSpecialVar_0x8004)

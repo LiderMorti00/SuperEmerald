@@ -18004,7 +18004,8 @@
       "primary_tileset": "gTileset_Johto_Building_Hns",
       "secondary_tileset": "gTileset_Gate_Standard_Hns",
       "border_filepath": "data/layouts/Gate_Route40_hns/border.bin",
-      "blockdata_filepath": "data/layouts/Gate_Route40_hns/map.bin"
+      "blockdata_filepath": "data/layouts/Gate_Route40_hns/map.bin",
+      "layout_version": "frlg"
     },
     {
       "id": "LAYOUT_POKEMON_WORLD_TOURNAMENT_CORRIDOR",
