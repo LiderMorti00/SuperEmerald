@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -21,6 +22,7 @@
   ],
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_SNOW_M",
       "x": 68,
       "y": 25,
@@ -34,6 +36,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_SNOW_F",
       "x": 41,
       "y": 27,
@@ -47,6 +50,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_FRLG",
       "x": 50,
       "y": 15,
@@ -60,6 +64,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_SKIER_M",
       "x": 63,
       "y": 15,
@@ -73,6 +78,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_SNOW_M",
       "x": 11,
       "y": 18,
@@ -86,6 +92,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_SNOW_F",
       "x": 57,
       "y": 32,
@@ -99,6 +106,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_SKIER_F",
       "x": 55,
       "y": 8,
@@ -112,6 +120,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_SKIER_M",
       "x": 24,
       "y": 25,
@@ -125,6 +134,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_SKIER_F",
       "x": 79,
       "y": 13,
@@ -138,6 +148,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 90,
       "y": 15,
@@ -151,6 +162,7 @@
       "flag": "FLAG_SN_ITEM_ROUTE_120_NEST_BALL"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 55,
       "y": 19,
@@ -164,6 +176,7 @@
       "flag": "FLAG_SN_ITEM_ROUTE_123_ELIXIR"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 71,
       "y": 12,
@@ -177,6 +190,7 @@
       "flag": "FLAG_SN_ITEM_NEW_MAUVILLE_THUNDER_STONE"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 80,
       "y": 9,
@@ -190,6 +204,7 @@
       "flag": "FLAG_SN_ITEM_FIERY_PATH_FIRE_STONE"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 82,
       "y": 20,
@@ -203,6 +218,7 @@
       "flag": "FLAG_SN_ITEM_SHOAL_CAVE_ICE_ROOM_TM_HAIL"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 44,
       "y": 32,
@@ -216,6 +232,7 @@
       "flag": "FLAG_SN_ITEM_SHOAL_CAVE_ICE_ROOM_NEVER_MELT_ICE"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 90,
       "y": 14,
