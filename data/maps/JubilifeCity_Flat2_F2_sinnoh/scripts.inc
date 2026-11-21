@@ -20,7 +20,7 @@ JubilifeCity_Flat2_F2_EventScript_PtNpc2::
 JubilifeCity_Flat2_F2_Text_PtNpc2::
 	.string "Evolution makes POKéMON just that\n"
 	.string "much more fascinating.\p"
-	.string "The mysteries of evolution... Can that\n"
+	.string "The mysteries of evolution… Can that\n"
 	.string "dandy PROF. ROWAN unravel them?$"
 
 JubilifeCity_Flat2_F2_EventScript_PtNpc3::

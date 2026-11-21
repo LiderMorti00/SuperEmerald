@@ -8,14 +8,14 @@ MtCoronet_4F_Room1_EventScript_Grunt::
 	end
 
 MtCoronet_4F_Room1_Text_GruntPost::
-	.string "It doesn’t matter if you’re an adult or\n"
-	.string "a kid if you have POKéMON...\p"
+	.string "It doesn't matter if you're an adult or\n"
+	.string "a kid if you have POKéMON…\p"
 	.string "POKéMON are the equalizers. I should\n"
-	.string "have realized sooner...$"
+	.string "have realized sooner…$"
 
 MtCoronet_4F_Room1_Text_GruntDefeat::
 	.string "Not standing up to the mighty is\n"
-	.string "foolish, you say...$"
+	.string "foolish, you say…$"
 
 MtCoronet_4F_Room1_Text_GruntIntro::
 	.string "TEAM GALACTIC is all powerful!\p"
@@ -29,8 +29,8 @@ MtCoronet_4F_Room1_EventScript_Grunt2::
 
 MtCoronet_4F_Room1_Text_Grunt2Post::
 	.string "You can struggle all you want, but you\n"
-	.string "can’t stop TEAM GALACTIC alone!\p"
-	.string "It doesn’t matter how many POKéMON\n"
+	.string "can't stop TEAM GALACTIC alone!\p"
+	.string "It doesn't matter how many POKéMON\n"
 	.string "you try to use as your tools!$"
 
 MtCoronet_4F_Room1_Text_Grunt2Defeat::
@@ -38,5 +38,5 @@ MtCoronet_4F_Room1_Text_Grunt2Defeat::
 
 MtCoronet_4F_Room1_Text_Grunt2Intro::
 	.string "Our time is coming! A time for us alone!\p"
-	.string "We’ll send you back in time. A time\n"
+	.string "We'll send you back in time. A time\n"
 	.string "before you started training!$"

@@ -43,7 +43,7 @@ DayOfWeekSiblingsHouse_Text_Pokedex2::
     .string "To my brothers and sisters:\p"
     .string "We take pride in serving POKéMON\n"
     .string "trainers.\p"
-    .string "When trainers talk to you, give\n"
+    .string "When TRAINERS talk to you, give\n"
     .string "them something useful.\p"
     .string "Love,\n"
     .string "MONICA\p"

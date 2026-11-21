@@ -10,12 +10,12 @@ SunyshoreCity_Mart_EventScript_PtNpc1::
 	end
 
 SunyshoreCity_Mart_Text_PtNpc1_0::
-	.string "I’ve heard about VICTORY ROAD, which\n"
+	.string "I've heard about VICTORY ROAD, which\n"
 	.string "leads to the POKéMON LEAGUE.\p"
 	.string "The word is the road is harsh and\n"
 	.string "harrowing.\p"
-	.string "I’d better load up on as many items and\n"
-	.string "as much medicine as I can carry...$"
+	.string "I'd better load up on as many items and\n"
+	.string "as much medicine as I can carry…$"
 
 SunyshoreCity_Mart_EventScript_PtNpc2::
 	lock

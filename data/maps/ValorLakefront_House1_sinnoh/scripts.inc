@@ -14,7 +14,7 @@ ValorLakefront_House1_EventScript_PtNpc1::
 	end
 
 ValorLakefront_House1_Text_PtNpc1_0::
-	.string "Thanks for helping me out. Here’s\n"
+	.string "Thanks for helping me out. Here's\n"
 	.string "something for your trouble!$"
 
 ValorLakefront_House1_EventScript_PtNpc1_BlowToAttractPokemon::
@@ -23,7 +23,7 @@ ValorLakefront_House1_EventScript_PtNpc1_BlowToAttractPokemon::
 	end
 
 ValorLakefront_House1_Text_PtNpc1_1::
-	.string "Blow the White Flute if you want to\n"
+	.string "Blow the WHITE FLUTE if you want to\n"
 	.string "attract more wild POKéMON.\p"
-	.string "It’s a rare glass flute you can only\n"
+	.string "It's a rare glass flute you can only\n"
 	.string "get in the HOENN region.$"

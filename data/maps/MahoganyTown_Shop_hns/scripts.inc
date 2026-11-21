@@ -4,7 +4,7 @@ MahoganyTown_Shop_hns_MapScripts::
 
 MahoganyTown_Shop_Text_Granny::
 	.string "Please come back another time.\n"
-	.string "The store is... closed\l"
+	.string "The store is… closed\l"
 	.string "right now.$"
 
 SE_J_MahoganyTown_Shop_hns_MahoganyTown_Shop_EventScript_Granny::

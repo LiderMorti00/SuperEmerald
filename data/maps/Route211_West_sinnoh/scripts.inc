@@ -54,7 +54,7 @@ Route211_West_EventScript_Zach_Rematch::
 	end
 
 Route211_West_Text_ZachDefeat::
-	.string "Oh! My ZUBAT tristars...$"
+	.string "Oh! My ZUBAT tristars…$"
 
 Route211_West_Text_ZachIntro::
 	.string "ZUBAT! Doesn't that sound like a ninja\n"

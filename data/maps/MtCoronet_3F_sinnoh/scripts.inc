@@ -13,7 +13,7 @@ MtCoronet_3F_Text_GruntPost::
 	.string "That would solve all our problems!$"
 
 MtCoronet_3F_Text_GruntDefeat::
-	.string "I don’t accept this! I will not accept\n"
+	.string "I don't accept this! I will not accept\n"
 	.string "this!$"
 
 MtCoronet_3F_Text_GruntIntro::
@@ -29,13 +29,13 @@ MtCoronet_3F_EventScript_Grunt2::
 	end
 
 MtCoronet_3F_Text_Grunt2Post::
-	.string "It’s too late!\p"
+	.string "It's too late!\p"
 	.string "No amount of desperation from a kid\n"
 	.string "like you will make a difference!$"
 
 MtCoronet_3F_Text_Grunt2Defeat::
-	.string "When’s it gonna be my turn...$"
+	.string "When's it gonna be my turn…$"
 
 MtCoronet_3F_Text_Grunt2Intro::
-	.string "Our time has come! It’s TEAM GALACTIC’s\n"
+	.string "Our time has come! It's TEAM GALACTIC's\n"
 	.string "time now!$"

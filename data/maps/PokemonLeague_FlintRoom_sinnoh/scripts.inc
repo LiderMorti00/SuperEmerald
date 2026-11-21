@@ -19,11 +19,11 @@ PokemonLeague_FlintRoom_EventScript_Glacia::
 	goto PokemonLeague_FlintRoom_EventScript_SNAfterBattle
 
 PokemonLeague_FlintRoom_Text_Defeat::
-	.string "... ...\p"
-	.string "... ...\p"
-	.string "... ...\p"
-	.string "...Whew... ...Burnt right down to\n"
-	.string "cinders...$"
+	.string "… …\p"
+	.string "… …\p"
+	.string "… …\p"
+	.string "…Whew… …Burnt right down to\n"
+	.string "cinders…$"
 
 PokemonLeague_FlintRoom_EventScript_SNRematchBattle::
 	trainerbattle_no_intro TRAINER_SE_ELITE_FOUR_FLINT_REMATCH, PokemonLeague_FlintRoom_Text_Defeat
@@ -37,13 +37,13 @@ PokemonLeague_FlintRoom_EventScript_Defeated::
 	end
 
 PokemonLeague_FlintRoom_Text_PostBattleSpeech::
-	.string "... ...\p"
-	.string "... ...\p"
-	.string "... ...\p"
-	.string "...Keep going...$"
+	.string "… …\p"
+	.string "… …\p"
+	.string "… …\p"
+	.string "…Keep going…$"
 
 PokemonLeague_FlintRoom_Text_IntroSpeech::
-	.string "...$"
+	.string "…$"
 
 PokemonLeague_FlintRoom_EventScript_PostBattleSpeech::
 	msgbox PokemonLeague_FlintRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT

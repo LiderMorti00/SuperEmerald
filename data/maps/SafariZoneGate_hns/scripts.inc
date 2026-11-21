@@ -11,7 +11,7 @@ SafariZoneGate_EventScript_Silent::
 	end
 
 SafariZone_Text_SilentNPC::
-	.string "..................\p"
+	.string "………………\p"
 	.string "(I am not a talker.)$"
 
 SE_J_SafariZoneGate_hns_SafariZoneGate_EventScript_IncenseClerk::
@@ -68,7 +68,7 @@ SafariZoneGate_EventScript_WorkerM::
 	end
 
 SafariZone_Text_ForeignFeeling::
-	.string "SAFARI ZONE...\n"
+	.string "SAFARI ZONE…\n"
 	.string "It makes me feel like I am in a\l"
 	.string "foreign country.\p"
 	.string "It brings up a strange feeling.$"
@@ -96,7 +96,7 @@ SafariZoneGate_EventScript_Kangaskhan::
 	end
 
 SafariZone_Text_Kangaskhan::
-	.string "KANGASKHAN: ..................$"
+	.string "KANGASKHAN: ………………$"
 
 SafariZoneGate_EventScript_Engineer::
 	lock

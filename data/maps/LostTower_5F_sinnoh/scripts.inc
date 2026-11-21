@@ -21,15 +21,15 @@ LostTower_5F_EventScript_PtNpc1_FantinaIsARegularVisitor::
 	end
 
 LostTower_5F_Text_PtNpc1_2::
-	.string "That FANTINA... It’s hard to tell what\n"
-	.string "she’s thinking.\p"
+	.string "That FANTINA… It's hard to tell what\n"
+	.string "she's thinking.\p"
 	.string "But she has a compassionate heart. You\n"
-	.string "know, she’s a regular visitor.$"
+	.string "know, she's a regular visitor.$"
 
 LostTower_5F_Text_PtNpc1_0::
 	.string "Oh! The fog is gone and, with it, all\n"
 	.string "doubt in my heart!\p"
-	.string "This is my thanks. Don’t be shy! Take\n"
+	.string "This is my thanks. Don't be shy! Take\n"
 	.string "it!$"
 
 LostTower_5F_EventScript_PtNpc1_ThisFogObscuresEverything::
@@ -38,7 +38,7 @@ LostTower_5F_EventScript_PtNpc1_ThisFogObscuresEverything::
 	end
 
 LostTower_5F_Text_PtNpc1_1::
-	.string "I can’t see! This fog obscures\n"
+	.string "I can't see! This fog obscures\n"
 	.string "everything!\p"
 	.string "I wish this fog could be blown away like\n"
 	.string "the doubt in my heart!$"
@@ -64,10 +64,10 @@ LostTower_5F_EventScript_PtNpc2_PokemonFindSolaceHere::
 LostTower_5F_Text_PtNpc2_2::
 	.string "The LOST TOWER is where the spirits of\n"
 	.string "departed POKéMON are put to rest.\p"
-	.string "Those that enjoyed long lives... Those\n"
-	.string "whose times were short...\p"
+	.string "Those that enjoyed long lives… Those\n"
+	.string "whose times were short…\p"
 	.string "All the departed POKéMON shall find\n"
-	.string "solace here...$"
+	.string "solace here…$"
 
 LostTower_5F_Text_PtNpc2_0::
 	.string "Let me make your journey out of this\n"
@@ -79,7 +79,7 @@ LostTower_5F_EventScript_PtNpc2_ThisFogObscuresEverything2::
 	end
 
 LostTower_5F_Text_PtNpc2_1::
-	.string "I can’t see! This fog obscures\n"
+	.string "I can't see! This fog obscures\n"
 	.string "everything!\p"
 	.string "I wish this fog could be blown away like\n"
 	.string "the doubt in my heart!$"

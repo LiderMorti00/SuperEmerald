@@ -64,6 +64,6 @@ FloaromaTown_Mart_EventScript_PtNpc2::
 
 FloaromaTown_Mart_Text_PtNpc2::
 	.string "You can't buy Berries or Accessories\n"
-	.string "at Poké Marts.\p"
+	.string "at POKé MARTs.\p"
 	.string "It's better for me that way. I won't\n"
 	.string "waste money impulse shopping.$"

@@ -8,7 +8,7 @@ SSAqua_1F_EventScript_Sailor3::
 	end
 
 SSAqua_1F_Text_Sailor3::
-    .string "The passengers are all trainers.\p"
+    .string "The passengers are all TRAINERS.\p"
     .string "They're all itching to battle in\n"
     .string "their cabins.$"
 

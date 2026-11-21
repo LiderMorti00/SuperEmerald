@@ -12,7 +12,7 @@ CelesticTown_House3_EventScript_PtNpc1::
 CelesticTown_House3_Text_PtNpc1_0::
 	.string "MT. CORONET towers at the center of\n"
 	.string "SINNOH.\p"
-	.string "In a way, it’s the closest place to the\n"
+	.string "In a way, it's the closest place to the\n"
 	.string "sky, and to space, in this region.$"
 
 CelesticTown_House3_EventScript_PtNpc2::

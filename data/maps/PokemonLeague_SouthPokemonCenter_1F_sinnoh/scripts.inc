@@ -24,8 +24,8 @@ PokemonLeague_SouthPokemonCenter_1F_Text_PtNpc1_0::
 	.string "Stay focused and never lose sight of\n"
 	.string "that goal.\p"
 	.string "It will sustain you as you fight\n"
-	.string "through the long and arduous Victory\l"
-	.string "Road.$"
+	.string "through the long and arduous VICTORY\l"
+	.string "ROAD.$"
 
 PokemonLeague_SouthPokemonCenter_1F_EventScript_PtNpc2::
 	lock

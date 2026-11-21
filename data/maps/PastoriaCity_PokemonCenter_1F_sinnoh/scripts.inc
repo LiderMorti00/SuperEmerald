@@ -32,11 +32,11 @@ PastoriaCity_PokemonCenter_1F_EventScript_PtNpc2::
 	end
 
 PastoriaCity_PokemonCenter_1F_Text_PtNpc2_0::
-	.string "PASTORIA’s GREAT MARSH was once a part\n"
+	.string "PASTORIA's GREAT MARSH was once a part\n"
 	.string "of the sea.\p"
 	.string "The seawater drained slowly away over\n"
 	.string "time, leaving the huge marshland.\p"
-	.string "That’s why they say there are rare\n"
+	.string "That's why they say there are rare\n"
 	.string "POKéMON that you can only see here.$"
 
 SE_PastoriaCity_PC_OnTransition::

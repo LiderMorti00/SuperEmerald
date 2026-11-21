@@ -19,10 +19,10 @@ FightArea_PokemonCenter_1F_EventScript_PtNpc1::
 	end
 
 FightArea_PokemonCenter_1F_Text_PtNpc1_0::
-	.string "The BATTLE FRONTIER’s as tough as they\n"
-	.string "say...\p"
+	.string "The BATTLE FRONTIER's as tough as they\n"
+	.string "say…\p"
 	.string "None of the facilities are cakewalks,\n"
-	.string "that’s for sure.$"
+	.string "that's for sure.$"
 
 FightArea_PokemonCenter_1F_EventScript_PtNpc2::
 	lock
@@ -33,7 +33,7 @@ FightArea_PokemonCenter_1F_EventScript_PtNpc2::
 
 FightArea_PokemonCenter_1F_Text_PtNpc2_0::
 	.string "The best TRAINERS from around the\n"
-	.string "country...\p"
+	.string "country…\p"
 	.string "No, the best TRAINERS from around the\n"
 	.string "world gather at the BATTLE ZONE.$"
 

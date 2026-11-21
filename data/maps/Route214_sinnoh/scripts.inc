@@ -20,7 +20,7 @@ Route214_EventScript_Carlos_Rematch::
 
 Route214_Text_CarlosDefeat::
 	.string "The coin came up tails, and like it, my\n"
-	.string "POKéMON is facedown...$"
+	.string "POKéMON is facedown…$"
 
 Route214_Text_CarlosIntro::
 	.string "When I toss this coin, you call it.\n"
@@ -63,7 +63,7 @@ Route214_Text_BradyPost::
 
 Route214_Text_BradyDefeat::
 	.string "Your POKéDEX fills me with such envy,\n"
-	.string "envy, envy...$"
+	.string "envy, envy…$"
 
 Route214_Text_BradyIntro::
 	.string "What's that?!\p"
@@ -81,7 +81,7 @@ Route214_Text_BryanPost::
 
 Route214_Text_BryanDefeat::
 	.string "It's a challenge trying to win with\n"
-	.string "POKéMON one isn't familiar with...$"
+	.string "POKéMON one isn't familiar with…$"
 
 Route214_Text_BryanIntro::
 	.string "Ah-ha! I found me a TRAINER!\p"
@@ -100,8 +100,8 @@ Route214_Text_RonaldPost::
 	.string "myself.$"
 
 Route214_Text_RonaldDefeat::
-	.string "Gasp... One more... Gasp... It's like I\n"
-	.string "went on a diet...$"
+	.string "Gasp… One more… Gasp… It's like I\n"
+	.string "went on a diet…$"
 
 Route214_Text_RonaldIntro::
 	.string "I travel all over the world in search\n"

@@ -57,13 +57,13 @@ Route210_House_EventScript_SNDracoMeteor_NotFriendly::
 	end
 
 Route210_House_EventScript_SNDracoMeteor_Friend::
-	.string "Hmm... The POKéMON at the head of your\n"
-	.string "party doesn’t trust you completely\l"
+	.string "Hmm… The POKéMON at the head of your\n"
+	.string "party doesn't trust you completely\l"
 	.string "yet. Come back when your bond is\l"
 	.string "perfect.$"
 
 Route210_House_EventScript_SNDracoMeteor_Hello::
-	.string "Ah, it is you... Would you like me to\n"
+	.string "Ah, it is you… Would you like me to\n"
 	.string "teach the best Dragon-type move I\l"
 	.string "know to one of your POKéMON? It must\l"
 	.string "be a Dragon type that trusts you\l"

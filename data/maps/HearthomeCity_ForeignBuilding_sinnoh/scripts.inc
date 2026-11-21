@@ -24,7 +24,7 @@ HearthomeCity_ForeignBuilding_EventScript_PtNpc2::
 
 HearthomeCity_ForeignBuilding_Text_PtNpc2_0::
 	.string "The art of crafting things fatigues\n"
-	.string "one’s spirit.\p"
+	.string "one's spirit.\p"
 	.string "When the spirit is healed, the desire to\n"
 	.string "make something returns.\p"
 	.string "It is such a wondrous cycle.$"
@@ -38,7 +38,7 @@ HearthomeCity_ForeignBuilding_EventScript_PtNpc3::
 
 HearthomeCity_ForeignBuilding_Text_PtNpc3_0::
 	.string "When people and POKéMON join hands,\n"
-	.string "everyone’s happy.\p"
+	.string "everyone's happy.\p"
 	.string "It makes everyone come together. It\n"
 	.string "could even make the world one!$"
 
@@ -52,11 +52,11 @@ HearthomeCity_ForeignBuilding_EventScript_PtNpc4::
 HearthomeCity_ForeignBuilding_Text_PtNpc4_0::
 	.string "That people are lonely is only natural.\n"
 	.string "It gives me compassion for others.\p"
-	.string "It’s what makes me look forward to a\n"
+	.string "It's what makes me look forward to a\n"
 	.string "better tomorrow.\p"
 	.string "But there are still moments of\n"
 	.string "fondness for the past.\p"
-	.string "Though, time can heal some sadness...$"
+	.string "Though, time can heal some sadness…$"
 
 HearthomeCity_ForeignBuilding_EventScript_PtNpc5::
 	lock
@@ -67,7 +67,7 @@ HearthomeCity_ForeignBuilding_EventScript_PtNpc5::
 
 HearthomeCity_ForeignBuilding_Text_PtNpc5_0::
 	.string "There are still words that not\n"
-	.string "everyone can describe...\p"
+	.string "everyone can describe…\p"
 	.string "The words are “love” and “joy.”$"
 
 HearthomeCity_ForeignBuilding_EventScript_PtNpc6::
@@ -78,12 +78,12 @@ HearthomeCity_ForeignBuilding_EventScript_PtNpc6::
 	end
 
 HearthomeCity_ForeignBuilding_Text_PtNpc6_0::
-	.string "POKéMON... People... It’s only natural\n"
+	.string "POKéMON… People… It's only natural\n"
 	.string "that we are all so very different.\p"
 	.string "Make sure that you never judge a\n"
-	.string "POKéMON on if it’s weak or strong.\p"
+	.string "POKéMON on if it's weak or strong.\p"
 	.string "You must always look for the good\n"
-	.string "inside of them. That’s what counts!$"
+	.string "inside of them. That's what counts!$"
 
 HearthomeCity_ForeignBuilding_EventScript_PtNpc7::
 	lock
@@ -94,9 +94,9 @@ HearthomeCity_ForeignBuilding_EventScript_PtNpc7::
 
 HearthomeCity_ForeignBuilding_Text_PtNpc7_0::
 	.string "Mind and matter.\p"
-	.string "It’s no good if one is stronger than\n"
+	.string "It's no good if one is stronger than\n"
 	.string "the other.\p"
-	.string "Balance is what’s needed. That’s the\n"
+	.string "Balance is what's needed. That's the\n"
 	.string "key.$"
 
 HearthomeCity_ForeignBuilding_EventScript_PtNpc8::

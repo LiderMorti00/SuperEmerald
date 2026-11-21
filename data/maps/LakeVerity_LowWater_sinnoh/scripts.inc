@@ -9,5 +9,5 @@ LakeVerity_LowWater_EventScript_PtNpc1::
 LakeVerity_LowWater_Text_PtNpc1::
 	.string "ROWAN: {PLAYER}, how was LAKE VALOR?\n"
 	.string "Anything to report?\p"
-	.string "What? You’re just going there now?\n"
-	.string "You’ve got to move faster than that!$"
+	.string "What? You're just going there now?\n"
+	.string "You've got to move faster than that!$"

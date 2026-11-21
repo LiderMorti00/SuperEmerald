@@ -9,11 +9,11 @@ Route216_EventScript_Blake::
 
 Route216_Text_BlakePost::
 	.string "I'd rather be asleep in the lodge's\n"
-	.string "bed...\p"
-	.string "I can't take this cold...$"
+	.string "bed…\p"
+	.string "I can't take this cold…$"
 
 Route216_Text_BlakeDefeat::
-	.string "But, how...? Am I weak at battling, too?$"
+	.string "But, how…? Am I weak at battling, too?$"
 
 Route216_Text_BlakeIntro::
 	.string "I'm an elite battler, but cold is my\n"
@@ -26,7 +26,7 @@ Route216_EventScript_Laura::
 
 Route216_Text_LauraPost::
 	.string "Perhaps I should maybe change into a\n"
-	.string "more comfy outfit...$"
+	.string "more comfy outfit…$"
 
 Route216_Text_LauraDefeat::
 	.string "Hunh?!$"
@@ -68,7 +68,7 @@ Route216_Text_BradleyPost::
 	.string "meet again. Slalom!$"
 
 Route216_Text_BradleyDefeat::
-	.string "...I've hit an ice patch!$"
+	.string "…I've hit an ice patch!$"
 
 Route216_Text_BradleyIntro::
 	.string "I'm skiing right now, but OK. As we\n"
@@ -116,10 +116,10 @@ Route216_EventScript_Kaitlyn::
 
 Route216_Text_KaitlynPost::
 	.string "If it was skiing, I wouldn't lose. I\n"
-	.string "should go ski with my POKéMON...$"
+	.string "should go ski with my POKéMON…$"
 
 Route216_Text_KaitlynDefeat::
-	.string "Snivel...$"
+	.string "Snivel…$"
 
 Route216_Text_KaitlynIntro::
 	.string "The fun things about winter! One,\n"
@@ -143,7 +143,7 @@ Route216_EventScript_Edward_Rematch::
 
 Route216_Text_EdwardDefeat::
 	.string "I never expected you to be an\n"
-	.string "expert...$"
+	.string "expert…$"
 
 Route216_Text_EdwardIntro::
 	.string "Are you a novice? Or around midlevel?$"
@@ -167,7 +167,7 @@ Route216_EventScript_Andrea_Rematch::
 	end
 
 Route216_Text_AndreaDefeat::
-	.string "The winds of victory shifted...$"
+	.string "The winds of victory shifted…$"
 
 Route216_Text_AndreaIntro::
 	.string "How do you expect to battle in this\n"

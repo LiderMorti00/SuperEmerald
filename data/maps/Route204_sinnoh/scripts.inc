@@ -12,10 +12,10 @@ Route204_Text_SarahPost::
 	.string "training POKéMON!$"
 
 Route204_Text_SarahDefeat::
-	.string "Aww... I should have said no.$"
+	.string "Aww… I should have said no.$"
 
 Route204_Text_SarahIntro::
-	.string "Oh, a weak-looking TRAINER... Do you\n"
+	.string "Oh, a weak-looking TRAINER… Do you\n"
 	.string "want to have a go?$"
 
 Route204_EventScript_Samantha::
@@ -27,7 +27,7 @@ Route204_EventScript_Samantha::
 
 Route204_Text_SamanthaPost::
 	.string "Maybe I could have won if my POKéMON\n"
-	.string "was holding a Berry...$"
+	.string "was holding a Berry…$"
 
 Route204_EventScript_Samantha_Rematch::
 	trainerbattle_rematch TRAINER_ALBERTO_SINNOH, Route204_Text_SamanthaIntro, Route204_Text_SamanthaDefeat
@@ -35,7 +35,7 @@ Route204_EventScript_Samantha_Rematch::
 	end
 
 Route204_Text_SamanthaDefeat::
-	.string "Oh... You're so strong...$"
+	.string "Oh… You're so strong…$"
 
 Route204_Text_SamanthaIntro::
 	.string "May I please trouble you for a battle?$"
@@ -52,7 +52,7 @@ Route204_Text_TylerPost::
 
 Route204_Text_TylerDefeat::
 	.string "But they're POKéMON I got from my\n"
-	.string "dad...$"
+	.string "dad…$"
 
 Route204_Text_TylerIntro::
 	.string "I'll beat you with the MAGIKARP my dad\n"
@@ -107,7 +107,7 @@ Route204_EventScript_Twins::
 	end
 
 Route204_Text_TwinsPost::
-	.string "Liv: This TRAINER...will brag about\n"
+	.string "Liv: This TRAINER…will brag about\n"
 	.string "beating us, LIZ.$"
 
 Route204_Text_TwinsNotEnough::
@@ -127,7 +127,7 @@ Route204_EventScript_PtNpc1::
 
 Route204_Text_PtNpc1::
 	.string "There are boulders blocking the way\n"
-	.string "inside the cavern...\p"
+	.string "inside the cavern…\p"
 	.string "I think a POKéMON's hidden move will be\n"
 	.string "able to smash those boulders, though.$"
 
@@ -182,7 +182,7 @@ Route204_Text_LivLizDefeat::
 	.string "I lost!$"
 
 Route204_Text_LivLizIntro::
-	.string "Let’s battle!$"
+	.string "Let's battle!$"
 
 Route204_EventScript_Sign3::
 	msgbox Route204_Text_Sign3, MSGBOX_SIGN

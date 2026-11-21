@@ -50,14 +50,14 @@ Route201_EventScript_Clerk::
 
 Route201_Text_PtPotion::
 	.string "Hi! I work at a POKéMON Mart.\p"
-	.string "Did you know that a POKéMON’s health is\n"
+	.string "Did you know that a POKéMON's health is\n"
 	.string "measured by Hit Points (HP)?\p"
 	.string "If a POKéMON runs out of HP, it faints\n"
-	.string "and can’t battle anymore.\p"
-	.string "If a POKéMON’s HP gets low, you should\n"
-	.string "heal it with a Potion.\p"
-	.string "Here, let me give you a Potion as a free\n"
-	.string "sample. First one’s free!\p"
+	.string "and can't battle anymore.\p"
+	.string "If a POKéMON's HP gets low, you should\n"
+	.string "heal it with a POTION.\p"
+	.string "Here, let me give you a POTION as a free\n"
+	.string "sample. First one's free!\p"
 	.string "It will automatically go in the Medicine\n"
 	.string "Pocket of your Bag.$"
 

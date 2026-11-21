@@ -135,7 +135,7 @@ Route26_Text_BethRematchDefeat::
     .string "POKéMON aren't tools of war.$"
 
 Route26_Text_BethRematchIntro::
-    .string "I lost to a trainer named {RIVAL}.\p"
+    .string "I lost to a TRAINER named {RIVAL}.\p"
     .string "But I won't lose to you!$"
 
 Route26_EventScript_RegisterBeth::
@@ -154,7 +154,7 @@ Route26_Text_CooltrainerfBethBeaten::
     .string "POKéMON aren't tools of war.$"
 
 Route26_Text_CooltrainerfBethSeen::
-    .string "I lost to a trainer named {RIVAL}.\p"
+    .string "I lost to a TRAINER named {RIVAL}.\p"
     .string "He was really strong, but…\p"
     .string "It was as if he absolutely had to\n"
     .string "win at any cost.\p"

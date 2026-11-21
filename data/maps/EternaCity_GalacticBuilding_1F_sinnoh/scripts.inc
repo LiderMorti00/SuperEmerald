@@ -35,7 +35,7 @@ EternaCity_GalacticBuilding_1F_Text_GruntPost::
 	.string "unveiling, then don't meddle with us!$"
 
 EternaCity_GalacticBuilding_1F_Text_GruntDefeat::
-	.string "I feel like I got meddled with...$"
+	.string "I feel like I got meddled with…$"
 
 EternaCity_GalacticBuilding_1F_Text_GruntIntro::
 	.string "We are acquiring POKéMON for a most\n"
@@ -63,7 +63,7 @@ EternaCity_GalacticBuilding_1F_EventScript_SNLooker::
 	end
 
 EternaCity_GalacticBuilding_1F_Text_SNFirstRate::
-	.string "...Incidentally, you are a first-rate\n"
+	.string "…Incidentally, you are a first-rate\n"
 	.string "TRAINER. Of that, I am very aware.\p"
 	.string "I therefore think you will be OK, but I\n"
 	.string "must warn you to be careful anyway.\p"

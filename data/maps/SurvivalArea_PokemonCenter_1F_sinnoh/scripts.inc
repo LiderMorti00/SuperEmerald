@@ -32,7 +32,7 @@ SurvivalArea_PokemonCenter_1F_EventScript_PtNpc1_ChallengeWithoutOwnPokemon::
 SurvivalArea_PokemonCenter_1F_Text_PtNpc1_1::
 	.string "The BATTLE FACTORY lets you make\n"
 	.string "challenges without your own POKéMON.\p"
-	.string "Maybe I should try...$"
+	.string "Maybe I should try…$"
 
 SurvivalArea_PokemonCenter_1F_EventScript_PtNpc2::
 	lock
@@ -59,7 +59,7 @@ SurvivalArea_PokemonCenter_1F_EventScript_PtNpc3::
 
 SurvivalArea_PokemonCenter_1F_Text_PtNpc3_0::
 	.string "Some say the universe was shaped by\n"
-	.string "something born from an Egg...\p"
+	.string "something born from an EGG…\p"
 	.string "A man I met long ago told me that.$"
 
 SE_SurvivalArea_PC_OnTransition::

@@ -14,7 +14,7 @@ CanalaveCity_Library_F2_Text_PtNpc1_0::
 	.string "The books on the third floor are easy\n"
 	.string "to read.\p"
 	.string "The ones down here are all too tough\n"
-	.string "for me to understand...$"
+	.string "for me to understand…$"
 
 CanalaveCity_Library_F2_EventScript_PtNpc1_TremorWasWicked::
 	msgbox CanalaveCity_Library_F2_Text_PtNpc1_1, MSGBOX_DEFAULT
@@ -22,7 +22,7 @@ CanalaveCity_Library_F2_EventScript_PtNpc1_TremorWasWicked::
 	end
 
 CanalaveCity_Library_F2_Text_PtNpc1_1::
-	.string "That tremor... It was wicked!\p"
+	.string "That tremor… It was wicked!\p"
 	.string "I scrambled to find the book “Disaster\n"
 	.string "Strikes Survival Guide!”$"
 
@@ -31,7 +31,7 @@ CanalaveCity_Library_F2_EventScript_PtSign1::
 	end
 
 CanalaveCity_Library_F2_Text_PtSign1::
-	.string "”SINNOH’s Beginning as Told on Plates.”\p"
+	.string "”SINNOH's Beginning as Told on Plates.”\p"
 	.string "This is a collection of engravings from\n"
 	.string "ancient Plates found in SINNOH.\p"
 	.string "“The Original One breathed alone\n"
@@ -58,7 +58,7 @@ CanalaveCity_Library_F2_EventScript_PtSign2::
 	end
 
 CanalaveCity_Library_F2_Text_PtSign2::
-	.string "”SINNOH’s Beginning as Told on Plates.”\p"
+	.string "”SINNOH's Beginning as Told on Plates.”\p"
 	.string "This is a collection of engravings from\n"
 	.string "ancient Plates found in SINNOH.\p"
 	.string "“The Original One breathed alone\n"
@@ -181,7 +181,7 @@ CanalaveCity_Library_F2_EventScript_PtSign15::
 	end
 
 CanalaveCity_Library_F2_Text_PtSign15::
-	.string "”SINNOH’s Beginning as Told on Plates.”\p"
+	.string "”SINNOH's Beginning as Told on Plates.”\p"
 	.string "This is a collection of engravings from\n"
 	.string "ancient Plates found in SINNOH.\p"
 	.string "“The Original One breathed alone\n"
@@ -208,7 +208,7 @@ CanalaveCity_Library_F2_EventScript_PtSign16::
 	end
 
 CanalaveCity_Library_F2_Text_PtSign16::
-	.string "”SINNOH’s Beginning as Told on Plates.”\p"
+	.string "”SINNOH's Beginning as Told on Plates.”\p"
 	.string "This is a collection of engravings from\n"
 	.string "ancient Plates found in SINNOH.\p"
 	.string "“The Original One breathed alone\n"
@@ -235,7 +235,7 @@ CanalaveCity_Library_F2_EventScript_PtSign17::
 	end
 
 CanalaveCity_Library_F2_Text_PtSign17::
-	.string "”SINNOH’s Beginning as Told on Plates.”\p"
+	.string "”SINNOH's Beginning as Told on Plates.”\p"
 	.string "This is a collection of engravings from\n"
 	.string "ancient Plates found in SINNOH.\p"
 	.string "“The Original One breathed alone\n"
@@ -262,7 +262,7 @@ CanalaveCity_Library_F2_EventScript_PtSign18::
 	end
 
 CanalaveCity_Library_F2_Text_PtSign18::
-	.string "”SINNOH’s Beginning as Told on Plates.”\p"
+	.string "”SINNOH's Beginning as Told on Plates.”\p"
 	.string "This is a collection of engravings from\n"
 	.string "ancient Plates found in SINNOH.\p"
 	.string "“The Original One breathed alone\n"
@@ -289,7 +289,7 @@ CanalaveCity_Library_F2_EventScript_PtSign19::
 	end
 
 CanalaveCity_Library_F2_Text_PtSign19::
-	.string "”SINNOH’s Beginning as Told on Plates.”\p"
+	.string "”SINNOH's Beginning as Told on Plates.”\p"
 	.string "This is a collection of engravings from\n"
 	.string "ancient Plates found in SINNOH.\p"
 	.string "“The Original One breathed alone\n"
@@ -316,7 +316,7 @@ CanalaveCity_Library_F2_EventScript_PtSign20::
 	end
 
 CanalaveCity_Library_F2_Text_PtSign20::
-	.string "”SINNOH’s Beginning as Told on Plates.”\p"
+	.string "”SINNOH's Beginning as Told on Plates.”\p"
 	.string "This is a collection of engravings from\n"
 	.string "ancient Plates found in SINNOH.\p"
 	.string "“The Original One breathed alone\n"

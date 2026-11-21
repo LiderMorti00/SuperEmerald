@@ -33,7 +33,7 @@ SnowpointCity_PokemonCenter_1F_EventScript_PtNpc2::
 
 SnowpointCity_PokemonCenter_1F_Text_PtNpc2_0::
 	.string "Sound gets swallowed up by the snow.\n"
-	.string "That’s why it’s very quiet here.$"
+	.string "That's why it's very quiet here.$"
 
 SnowpointCity_PokemonCenter_1F_EventScript_PtNpc3::
 	lock
@@ -52,18 +52,18 @@ SnowpointCity_PokemonCenter_1F_EventScript_PtNpc4::
 	end
 
 SnowpointCity_PokemonCenter_1F_Text_SNMayleneBefore::
-	.string "MAYLENE: Brrr...\p"
+	.string "MAYLENE: Brrr…\p"
 	.string "Oh, hi, {PLAYER}! Are you taking the GYM\n"
 	.string "challenge now?\p"
-	.string "I’m hoping to see CANDICE soon, but I’m\n"
+	.string "I'm hoping to see CANDICE soon, but I'm\n"
 	.string "staying put until I warm up again first.\p"
 	.string "Oh, you should know that CANDICE is a\n"
 	.string "user of Ice-type POKéMON.\p"
-	.string "I really admire CANDICE. She’s so\n"
+	.string "I really admire CANDICE. She's so\n"
 	.string "studious.\p"
 	.string "She wanted to practice against me to\n"
 	.string "learn about the Fighting type.\p"
-	.string "It’s because the Ice type matches up\n"
+	.string "It's because the Ice type matches up\n"
 	.string "badly against the Fighting type.$"
 
 SnowpointCity_PokemonCenter_1F_EventScript_SNMayleneAfter::
@@ -71,10 +71,10 @@ SnowpointCity_PokemonCenter_1F_EventScript_SNMayleneAfter::
 	end
 
 SnowpointCity_PokemonCenter_1F_Text_PtNpc4::
-	.string "MAYLENE: Oh! That’s the Icicle BADGE!\n"
+	.string "MAYLENE: Oh! That's the Icicle BADGE!\n"
 	.string "You must have beaten CANDICE.\p"
-	.string "With that BADGE, aren’t you allowed to\n"
-	.string "use the hidden move Rock Climb?\p"
+	.string "With that BADGE, aren't you allowed to\n"
+	.string "use the hidden move ROCK CLIMB?\p"
 	.string "Rock Climb can be learned by Rock-type\n"
 	.string "or Fighting-type POKéMON, I think.$"
 

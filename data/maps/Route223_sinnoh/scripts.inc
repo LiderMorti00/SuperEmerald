@@ -11,7 +11,7 @@ Route223_EventScript_Wesley::
 
 Route223_Text_WesleyPost::
 	.string "It's OK. Just let me float away like\n"
-	.string "driftwood...$"
+	.string "driftwood…$"
 
 Route223_EventScript_Wesley_Rematch::
 	trainerbattle_rematch TRAINER_CAROL_SINNOH, Route223_Text_WesleyIntro, Route223_Text_WesleyDefeat
@@ -19,7 +19,7 @@ Route223_EventScript_Wesley_Rematch::
 	end
 
 Route223_Text_WesleyDefeat::
-	.string "Blblblblugh...$"
+	.string "Blblblblugh…$"
 
 Route223_Text_WesleyIntro::
 	.string "I've decided! I'm off to the POKéMON\n"
@@ -52,7 +52,7 @@ Route223_EventScript_Francisco::
 
 Route223_Text_FranciscoPost::
 	.string "What? You've got that many GYM\n"
-	.string "BADGES? No wonder you're so tough...$"
+	.string "BADGES? No wonder you're so tough…$"
 
 Route223_EventScript_Francisco_Rematch::
 	trainerbattle_rematch TRAINER_MARTHA_SINNOH, Route223_Text_FranciscoIntro, Route223_Text_FranciscoDefeat
@@ -60,7 +60,7 @@ Route223_EventScript_Francisco_Rematch::
 	end
 
 Route223_Text_FranciscoDefeat::
-	.string "The world is so harsh...$"
+	.string "The world is so harsh…$"
 
 Route223_Text_FranciscoIntro::
 	.string "The sea around these parts is harsh.\n"
@@ -79,7 +79,7 @@ Route223_Text_ColtonDefeat::
 	.string "Boo! I'm not done with my dream!$"
 
 Route223_Text_ColtonIntro::
-	.string "To swim every sea there is... That's my\n"
+	.string "To swim every sea there is… That's my\n"
 	.string "dream!$"
 
 Route223_EventScript_Troy::
@@ -105,11 +105,11 @@ Route223_EventScript_Oscar::
 	end
 
 Route223_Text_OscarPost::
-	.string "What to do... Train at the GYM again, or\n"
-	.string "train by myself...$"
+	.string "What to do… Train at the GYM again, or\n"
+	.string "train by myself…$"
 
 Route223_Text_OscarDefeat::
-	.string "Master Wake... I mean, CRASHER WAKE,\n"
+	.string "Master Wake… I mean, CRASHER WAKE,\n"
 	.string "sorry!$"
 
 Route223_Text_OscarIntro::
@@ -135,7 +135,7 @@ Route223_EventScript_Miranda_Rematch::
 	end
 
 Route223_Text_MirandaDefeat::
-	.string "Th-this is so hard...$"
+	.string "Th-this is so hard…$"
 
 Route223_Text_MirandaIntro::
 	.string "I'm determined to go to the POKéMON\n"
@@ -164,15 +164,15 @@ Route223_EventScript_Paige::
 
 Route223_Text_PaigePost::
 	.string "Deep breathing after battle, too!\n"
-	.string "Breathe in...and out!$"
+	.string "Breathe in…and out!$"
 
 Route223_Text_PaigeDefeat::
-	.string "Breathe in...and out. Breathe in...and\n"
+	.string "Breathe in…and out. Breathe in…and\n"
 	.string "out!$"
 
 Route223_Text_PaigeIntro::
 	.string "Deep breathing before battle!\n"
-	.string "Breathe in...and out!$"
+	.string "Breathe in…and out!$"
 
 Route223_EventScript_Crystal::
 	trainerbattle_single TRAINER_DWAYNE_SINNOH, Route223_Text_CrystalIntro, Route223_Text_CrystalDefeat
@@ -185,7 +185,7 @@ Route223_Text_CrystalPost::
 	.string "While floating here, I think about\n"
 	.string "everything and nothing.\p"
 	.string "Like how I should battle next, and\n"
-	.string "what's for dinner tomorrow, and...$"
+	.string "what's for dinner tomorrow, and…$"
 
 Route223_EventScript_Crystal_Rematch::
 	trainerbattle_rematch TRAINER_DWAYNE_SINNOH, Route223_Text_CrystalIntro, Route223_Text_CrystalDefeat
@@ -193,7 +193,7 @@ Route223_EventScript_Crystal_Rematch::
 	end
 
 Route223_Text_CrystalDefeat::
-	.string "I can't take any more... I'm all tired\n"
+	.string "I can't take any more… I'm all tired\n"
 	.string "out!$"
 
 Route223_Text_CrystalIntro::
@@ -235,7 +235,7 @@ Route223_Text_GabriellePost::
 	.string "of guy looks great with POKéMON!$"
 
 Route223_Text_GabrielleDefeat::
-	.string "The tide is going out...$"
+	.string "The tide is going out…$"
 
 Route223_Text_GabrielleIntro::
 	.string "My favorite kind of guy is someone\n"
@@ -260,7 +260,7 @@ Route223_EventScript_Zachariah_Rematch::
 	end
 
 Route223_Text_ZachariahDefeat::
-	.string "I'm shocked... No, really, I am.$"
+	.string "I'm shocked… No, really, I am.$"
 
 Route223_Text_ZachariahIntro::
 	.string "I came out here because I wanted to\n"

@@ -120,7 +120,7 @@ RocketHideout_B3F_Text_ScientistRossSeen::
 
 RocketHideout_B3F_Text_PetrelIntro::
     .string "Muhahaha, we've been waiting\n"
-    .string "for you. So, you are {PLAYER}...\p"
+    .string "for you. So, you are {PLAYER}…\p"
     .string "Me? You don't know who I am?\n"
     .string "It is me, GIOVANNI.\p"
     .string "The majestic GIOVANNI himself!\n"

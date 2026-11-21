@@ -745,7 +745,7 @@ MauvilleCity_PokemonCenter_1F_Text_WonLotteryStory::
 	.string "to trade POKéMON with!$"
 
 MauvilleCity_PokemonCenter_1F_Text_UsedDaycareTitle::
-	.string "The DAY CARE-Using Trainer$"
+	.string "The DAY CARE-Using TRAINER$"
 
 MauvilleCity_PokemonCenter_1F_Text_UsedDaycareAction::
 	.string "Left POKéMON at the DAY CARE$"

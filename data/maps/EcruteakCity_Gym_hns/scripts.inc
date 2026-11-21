@@ -20,7 +20,7 @@ EcruteakCity_GymGuideText::
 	.string "expert, be wary of his mystic\l"
 	.string "deer.\p"
 	.string "It's said to cause strange\n"
-	.string "nightmares...$"
+	.string "nightmares…$"
 
 EcruteakCity_Gym_EventScript_GymGuy2::
 	msgbox EcruteakCity_GymGuideWinText, MSGBOX_DEFAULT
@@ -47,7 +47,7 @@ SageJeffreyBeatenText::
 SageJeffreySeenText::
 	.string "I spent the spring with my\n"
 	.string "POKéMON.\p"
-	.string "Then summer, fall, and winter...\p"
+	.string "Then summer, fall, and winter…\p"
 	.string "Then spring came again.\n"
 	.string "We've been together a long time.$"
 
@@ -61,7 +61,7 @@ MediumMarthaAfterBattleText::
 	.string "most is the one who will!$"
 
 MediumMarthaBeatenText::
-	.string "I... I... I lost!$"
+	.string "I… I… I lost!$"
 
 MediumMarthaSeenText::
 	.string "I shall win!$"
@@ -112,7 +112,7 @@ MortyIntroText::
 	.string "trained here in secret.\p"
 	.string "As a result, I can now see what\n"
 	.string "others cannot.\p"
-	.string "Just a bit more...\p"
+	.string "Just a bit more…\p"
 	.string "With a little more, I could see\n"
 	.string "a future where I meet the\l"
 	.string "rainbow-colored POKéMON.\p"

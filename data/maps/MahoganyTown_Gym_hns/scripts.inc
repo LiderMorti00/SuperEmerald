@@ -96,7 +96,7 @@ MahoganyTown_Gym_Text_PryceIntro::
     .string "I have been with POKéMON since\n"
     .string "before you were born.\p"
     .string "I do not lose easily.\p"
-    .string "I, PRYCE--the winter trainer--\n"
+    .string "I, PRYCE--the winter TRAINER--\n"
     .string "shall demonstrate my power!$"
 
 SE_J_MahoganyTown_Gym_hns_MahoganyTown_Gym_EventScript_Pryce::

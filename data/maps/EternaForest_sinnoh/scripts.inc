@@ -31,20 +31,20 @@ EternaForest_EventScript_CherylHeal::
 	end
 
 EternaForest_Text_CherylHeal::
-	.string "CHERYL: I’ll keep your POKéMON in\n"
+	.string "CHERYL: I'll keep your POKéMON in\n"
 	.string "perfect health.$"
 
 EternaForest_Text_CherylAsk::
-	.string "Hello, my name’s CHERYL. And you are...?\p"
-	.string "OK, so your name is {PLAYER}. I’m\n"
+	.string "Hello, my name's CHERYL. And you are…?\p"
+	.string "OK, so your name is {PLAYER}. I'm\n"
 	.string "sincerely glad to meet you.\p"
 	.string "{PLAYER}, may I ask a big favor of you?\p"
 	.string "I want to get through this forest, but\n"
-	.string "I’m afraid of doing it alone.\p"
-	.string "I’ve heard that there is a sinister\n"
+	.string "I'm afraid of doing it alone.\p"
+	.string "I've heard that there is a sinister\n"
 	.string "group of people called TEAM GALACTIC\p"
 	.string "about.\p"
-	.string "I think there’d be safety in numbers.\n"
+	.string "I think there'd be safety in numbers.\n"
 	.string "Please, may I go through with you?\p"
 	.string "{PLAYER} decided to go with CHERYL!$"
 
@@ -53,9 +53,9 @@ EternaForest_EventScript_SNCherylAgain::
 	goto EternaForest_EventScript_SNCherylGo
 
 EternaForest_Text_SNCherylAgain::
-	.string "CHERYL: Oh, hi, {PLAYER}! I’ve been\n"
+	.string "CHERYL: Oh, hi, {PLAYER}! I've been\n"
 	.string "waiting like I said.\p"
-	.string "Let’s get through this forest\n"
+	.string "Let's get through this forest\n"
 	.string "together.$"
 
 EternaForest_EventScript_Jack::
@@ -65,7 +65,7 @@ EternaForest_EventScript_Jack::
 
 EternaForest_Text_JackPost::
 	.string "It would seem that coolness alone\n"
-	.string "doesn't add up to any wins...$"
+	.string "doesn't add up to any wins…$"
 
 EternaForest_Text_JackDefeat::
 	.string "Don't ignore bug POKéMON! That really\n"
@@ -98,17 +98,17 @@ EternaForest_EventScript_Lindsey::
 	end
 
 EternaForest_Text_LindseyPost::
-	.string "The OLD CHATEAU... There should be\n"
-	.string "none alive in it...\p"
+	.string "The OLD CHATEAU… There should be\n"
+	.string "none alive in it…\p"
 	.string "And yet there is a pervasive sense of\n"
-	.string "a presence...$"
+	.string "a presence…$"
 
 EternaForest_Text_LindseyDefeat::
 	.string "It is I that has gone down in defeat.$"
 
 EternaForest_Text_LindseyIntro::
-	.string "I see it... I see it...\p"
-	.string "I see you going down in defeat...$"
+	.string "I see it… I see it…\p"
+	.string "I see you going down in defeat…$"
 
 EternaForest_EventScript_Elijah::
 	trainerbattle_single TRAINER_JENNIFER_SINNOH, EternaForest_Text_ElijahIntro, EternaForest_Text_ElijahDefeat
@@ -117,14 +117,14 @@ EternaForest_EventScript_Elijah::
 
 EternaForest_Text_ElijahPost::
 	.string "There still remain many mysteries yet\n"
-	.string "to be solved in this strange world...$"
+	.string "to be solved in this strange world…$"
 
 EternaForest_Text_ElijahDefeat::
-	.string "Urmmm... Urrrrmmmmm...$"
+	.string "Urmmm… Urrrrmmmmm…$"
 
 EternaForest_Text_ElijahIntro::
 	.string "When a TRAINER and a POKéMON bond as\n"
-	.string "one, a wondrous power is born...$"
+	.string "one, a wondrous power is born…$"
 
 EternaForest_EventScript_Phillip::
 	trainerbattle_single TRAINER_HOPE_SINNOH, EternaForest_Text_PhillipIntro, EternaForest_Text_PhillipDefeat
@@ -135,7 +135,7 @@ EternaForest_Text_PhillipPost::
 	.string "There's a POKéMON ability named Swarm.$"
 
 EternaForest_Text_PhillipDefeat::
-	.string "Whoooh...$"
+	.string "Whoooh…$"
 
 EternaForest_Text_PhillipIntro::
 	.string "Here comes the swarm!$"
@@ -150,10 +150,10 @@ EternaForest_Text_DonaldPost::
 	.string "it turned out to be just a TRAINER!$"
 
 EternaForest_Text_DonaldDefeat::
-	.string "Awawawawah...$"
+	.string "Awawawawah…$"
 
 EternaForest_Text_DonaldIntro::
-	.string "My senses tingle... I've spotted a rare\n"
+	.string "My senses tingle… I've spotted a rare\n"
 	.string "POKéMON!$"
 
 EternaForest_EventScript_Kody::
@@ -162,15 +162,15 @@ EternaForest_EventScript_Kody::
 	end
 
 EternaForest_Text_KodyPost::
-	.string "The OLD CHATEAU... I sense... a\n"
+	.string "The OLD CHATEAU… I sense… a\n"
 	.string "particularly strong presence there.$"
 
 EternaForest_Text_KodyDefeat::
 	.string "Oh, no! My MEDITITE!$"
 
 EternaForest_Text_KodyIntro::
-	.string "A strange presence has been felt... It\n"
-	.string "is emanating from...you!$"
+	.string "A strange presence has been felt… It\n"
+	.string "is emanating from…you!$"
 
 EternaForest_EventScript_Rachael::
 	trainerbattle_single TRAINER_CAROLINE_SINNOH, EternaForest_Text_RachaelIntro, EternaForest_Text_RachaelDefeat
@@ -178,16 +178,16 @@ EternaForest_EventScript_Rachael::
 	end
 
 EternaForest_Text_RachaelPost::
-	.string "Forests are mystifying... They seem to\n"
+	.string "Forests are mystifying… They seem to\n"
 	.string "gather such unexplainable energy.$"
 
 EternaForest_Text_RachaelDefeat::
-	.string "Your victory... There is nothing\n"
+	.string "Your victory… There is nothing\n"
 	.string "strange about it.$"
 
 EternaForest_Text_RachaelIntro::
-	.string "This forest is strange, you know... It\n"
-	.string "seems to fill me with energy...$"
+	.string "This forest is strange, you know… It\n"
+	.string "seems to fill me with energy…$"
 
 EternaForest_EventScript_PtNpc1::
 	msgbox EternaForest_Text_PtNpc1, MSGBOX_NPC
@@ -244,21 +244,21 @@ EternaForest_EventScript_SNGardenia::
 
 EternaForest_Text_SNGardenia2::
 	.string "GARDENIA: I should check it out myself,\n"
-	.string "but going in there is...\p"
-	.string "...Well, you know, being that I’m a GYM\n"
-	.string "LEADER, I’m always busy.\p"
-	.string "So, since I’m so busy, I can’t go in. It’s\n"
-	.string "not because I’m s-scared!\p"
+	.string "but going in there is…\p"
+	.string "…Well, you know, being that I'm a GYM\n"
+	.string "LEADER, I'm always busy.\p"
+	.string "So, since I'm so busy, I can't go in. It's\n"
+	.string "not because I'm s-scared!\p"
 	.string "S-so, good luck with your\n"
 	.string "investigation!$"
 
 EternaForest_Text_SNGardenia1::
 	.string "GARDENIA: Hiya! Were you intrigued by\n"
 	.string "the rumors going around, too?\p"
-	.string "GARDENIA: You know, people’ve been\n"
+	.string "GARDENIA: You know, people've been\n"
 	.string "talking about the ghost POKéMON of\l"
 	.string "the OLD CHATEAU.\p"
-	.string "I’ve been hearing rumors about\n"
+	.string "I've been hearing rumors about\n"
 	.string "sinister shadows, too.$"
 
 EternaForest_EventScript_SNMossRock::

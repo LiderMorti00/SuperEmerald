@@ -9,11 +9,11 @@ Route217_EventScript_Shawn::
 
 Route217_Text_ShawnPost::
 	.string "Maybe I should've studied at the\n"
-	.string "TRAINERS' school instead...$"
+	.string "TRAINERS' school instead…$"
 
 Route217_Text_ShawnDefeat::
-	.string "I don't believe it... My techniques\n"
-	.string "were rebuffed...$"
+	.string "I don't believe it… My techniques\n"
+	.string "were rebuffed…$"
 
 Route217_Text_ShawnIntro::
 	.string "I'll show you the techniques I had\n"
@@ -29,7 +29,7 @@ Route217_Text_LexiePost::
 	.string "around here. Don't go getting lost!$"
 
 Route217_Text_LexieDefeat::
-	.string "Hunh, what...? I repeat, hunh, what...?$"
+	.string "Hunh, what…? I repeat, hunh, what…?$"
 
 Route217_Text_LexieIntro::
 	.string "I've been skiing with POKéMON since I\n"
@@ -78,7 +78,7 @@ Route217_Text_MadisonDefeat::
 	.string "The conditions weren't very good.$"
 
 Route217_Text_MadisonIntro::
-	.string "Rainy days make me feel blue...\p"
+	.string "Rainy days make me feel blue…\p"
 	.string "But the instant it starts to snow, I'm\n"
 	.string "as happy as can be!$"
 
@@ -92,7 +92,7 @@ Route217_Text_MatthewPost::
 	.string "blizzard!$"
 
 Route217_Text_MatthewDefeat::
-	.string "You also saw through my weak spots...$"
+	.string "You also saw through my weak spots…$"
 
 Route217_Text_MatthewIntro::
 	.string "Poof!\p"
@@ -108,7 +108,7 @@ Route217_Text_EthanPost::
 	.string "ninja when they grow up?$"
 
 Route217_Text_EthanDefeat::
-	.string "I'm not much of a ninja either way...$"
+	.string "I'm not much of a ninja either way…$"
 
 Route217_Text_EthanIntro::
 	.string "There are several clans of ninjas. Are\n"
@@ -162,7 +162,7 @@ Route217_EventScript_Olivia::
 Route217_Text_OliviaPost::
 	.string "Around these parts, perhaps because\n"
 	.string "of all the snow, there are many\l"
-	.string "folktales of hauntings...$"
+	.string "folktales of hauntings…$"
 
 Route217_EventScript_Olivia_Rematch::
 	trainerbattle_rematch TRAINER_JANI_SINNOH, Route217_Text_OliviaIntro, Route217_Text_OliviaDefeat
@@ -170,7 +170,7 @@ Route217_EventScript_Olivia_Rematch::
 	end
 
 Route217_Text_OliviaDefeat::
-	.string "Whew... You are alive, aren't you?$"
+	.string "Whew… You are alive, aren't you?$"
 
 Route217_Text_OliviaIntro::
 	.string "Wh-what is it? P-POKéMON battle?!$"
@@ -183,9 +183,9 @@ Route217_EventScript_PtNpc1::
 	end
 
 Route217_Text_PtNpc1_0::
-	.string "I’m using the Dowsing Machine on my\n"
+	.string "I'm using the DOWSING MACHINE on my\n"
 	.string "POKéNAV.\p"
-	.string "I’m looking for things buried under the\n"
+	.string "I'm looking for things buried under the\n"
 	.string "snow.$"
 
 Route217_EventScript_SNMaylene::
@@ -205,16 +205,16 @@ Route217_EventScript_SNMaylene::
 Route217_EventScript_SNMaylene_T2::
 	.string "Um, are you maybe on your way to\n"
 	.string "SNOWPOINT CITY?\p"
-	.string "That’s where I’m going, too.\p"
-	.string "If I use Fly, I can get there instantly,\n"
-	.string "but I’m walking for my training.\p"
+	.string "That's where I'm going, too.\p"
+	.string "If I use FLY, I can get there instantly,\n"
+	.string "but I'm walking for my training.\p"
 	.string "I have no problem with this.\p"
-	.string "I’m used to the cold because I go\n"
+	.string "I'm used to the cold because I go\n"
 	.string "barefoot and lightly dressed.\p"
-	.string "...Achoo!\p"
-	.string "Oh, that was nothing. Really, I’m not\n"
+	.string "…Achoo!\p"
+	.string "Oh, that was nothing. Really, I'm not\n"
 	.string "cold at all.\p"
-	.string "I’ll be going now. Please take care!$"
+	.string "I'll be going now. Please take care!$"
 
 Route217_EventScript_SNMaylene_T1::
 	.string "MAYLENE: Oh, {PLAYER}!$"

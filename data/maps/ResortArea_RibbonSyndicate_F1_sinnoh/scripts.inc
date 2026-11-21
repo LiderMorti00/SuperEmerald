@@ -10,7 +10,7 @@ ResortArea_RibbonSyndicate_F1_EventScript_PtNpc1::
 	end
 
 ResortArea_RibbonSyndicate_F1_Text_PtNpc1_0::
-	.string "Welcome! We’ve looked forward to\n"
+	.string "Welcome! We've looked forward to\n"
 	.string "seeing you, {PLAYER}.\p"
 	.string "I do hope you will enjoy the luxurious\n"
 	.string "atmosphere and services that only\p"
@@ -33,7 +33,7 @@ ResortArea_RibbonSyndicate_F1_EventScript_PtNpc3::
 
 ResortArea_RibbonSyndicate_F1_Text_PtNpc3::
 	.string "I wish men would pay more attention to\n"
-	.string "the way they dress themselves...$"
+	.string "the way they dress themselves…$"
 
 ResortArea_RibbonSyndicate_F1_EventScript_PtNpc4::
 	lock

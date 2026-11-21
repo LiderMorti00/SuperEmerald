@@ -114,5 +114,5 @@ EternaCity_UndergroundManHouse_EventScript_SNFossilGift_Done::
 	end
 
 EternaCity_UndergroundManHouse_EventScript_SNFossilGift_T3::
-	.string "I already gave you today’s find. Come\n"
+	.string "I already gave you today's find. Come\n"
 	.string "back tomorrow!$"

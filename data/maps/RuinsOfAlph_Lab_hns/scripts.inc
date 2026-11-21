@@ -103,7 +103,7 @@ RuinsOfAlph_Lab_EventScript_Fossils::
 
 RuinsOfAlph_Lab_Text_Fossils::
 	.string "Fossils found within the RUINS.\n"
-	.string "Maybe there are more somewhere...$"
+	.string "Maybe there are more somewhere…$"
 
 SE_J_RuinsOfAlph_Lab_hns_EventScript_FakePC::
 	msgbox Text_BootUpPC, MSGBOX_SIGN

@@ -28,12 +28,12 @@ CanalaveCity_House3_EventScript_PtNpc1::
 	end
 
 CanalaveCity_House3_Text_SNNeverForget::
-	.string "Thank you! We’ll never forget you!$"
+	.string "Thank you! We'll never forget you!$"
 
 CanalaveCity_House3_Text_SNYoureAwake::
-	.string "Oh, my gosh! You’re awake!\p"
-	.string "Oh, my son... I... I don’t know what to\n"
-	.string "say...$"
+	.string "Oh, my gosh! You're awake!\p"
+	.string "Oh, my son… I… I don't know what to\n"
+	.string "say…$"
 
 CanalaveCity_House3_Text_SNWokeUp::
 	.string "The little boy woke up!$"
@@ -41,8 +41,8 @@ CanalaveCity_House3_Text_SNWokeUp::
 CanalaveCity_House3_Text_SNWingGlows::
 	.string "The little boy is thrashing about in his\n"
 	.string "sleep.\p"
-	.string "{PLAYER}’s Lunar Wing began to glow...\p"
-	.string "The boy’s sleeping face became\n"
+	.string "{PLAYER}'s LUNAR WING began to glow…\p"
+	.string "The boy's sleeping face became\n"
 	.string "untroubled and serene!$"
 
 CanalaveCity_House3_EventScript_SNBoyThrash::
@@ -53,9 +53,9 @@ CanalaveCity_House3_EventScript_SNBoyThrash::
 CanalaveCity_House3_Text_PtNpc1::
 	.string "The little boy is thrashing about in his\n"
 	.string "sleep.\p"
-	.string "He appears to be in torment... He is\n"
-	.string "muttering something...\p"
-	.string "“DAR... DARK...is watching...me...”$"
+	.string "He appears to be in torment… He is\n"
+	.string "muttering something…\p"
+	.string "“DAR… DARK…is watching…me…”$"
 
 CanalaveCity_House3_EventScript_SNBoyScary::
 	faceplayer
@@ -64,12 +64,12 @@ CanalaveCity_House3_EventScript_SNBoyScary::
 	end
 
 CanalaveCity_House3_Text_SNScary::
-	.string "I couldn’t wake up... I saw it...\p"
-	.string "It was a scary dream... It was a dark\n"
-	.string "place...\p"
-	.string "And there was a dark POKéMON...\p"
-	.string "But, Daddy, Mommy... I could always hear\n"
-	.string "your voices...$"
+	.string "I couldn't wake up… I saw it…\p"
+	.string "It was a scary dream… It was a dark\n"
+	.string "place…\p"
+	.string "And there was a dark POKéMON…\p"
+	.string "But, Daddy, Mommy… I could always hear\n"
+	.string "your voices…$"
 
 CanalaveCity_House3_EventScript_SNBoyAwake::
 	faceplayer
@@ -78,10 +78,10 @@ CanalaveCity_House3_EventScript_SNBoyAwake::
 	end
 
 CanalaveCity_House3_Text_SNSailor::
-	.string "I’m going to be a Sailor like my daddy!\p"
-	.string "He’s a real man among men! Even the sea\n"
-	.string "doesn’t scare him!\p"
-	.string "Oh, but a GYM LEADER’d be cool, too!\n"
+	.string "I'm going to be a Sailor like my daddy!\p"
+	.string "He's a real man among men! Even the sea\n"
+	.string "doesn't scare him!\p"
+	.string "Oh, but a GYM LEADER'd be cool, too!\n"
 	.string "BYRON is so awesome!$"
 
 CanalaveCity_House3_EventScript_PtNpc2::
@@ -94,7 +94,7 @@ CanalaveCity_House3_EventScript_PtNpc2::
 	end
 
 CanalaveCity_House3_Text_SNEnergy::
-	.string "Our boy has too much energy! ...That’s\n"
+	.string "Our boy has too much energy! …That's\n"
 	.string "the best way to be!$"
 
 CanalaveCity_House3_EventScript_SNMomWorried::
@@ -104,16 +104,16 @@ CanalaveCity_House3_EventScript_SNMomWorried::
 
 CanalaveCity_House3_Text_PtNpc2::
 	.string "I never thought our boy would fall into\n"
-	.string "this endless nightmare...\p"
-	.string "It’s happened in the past in CANALAVE...\p"
+	.string "this endless nightmare…\p"
+	.string "It's happened in the past in CANALAVE…\p"
 	.string "There were people who never woke up\n"
-	.string "from their nightmares...\p"
-	.string "...That is, until they were awoken using\n"
-	.string "something called the Lunar Wing.\p"
-	.string "My husband went to find a Lunar Wing\n"
-	.string "on FULLMOON ISLAND, but he failed...\p"
+	.string "from their nightmares…\p"
+	.string "…That is, until they were awoken using\n"
+	.string "something called the LUNAR WING.\p"
+	.string "My husband went to find a LUNAR WING\n"
+	.string "on FULLMOON ISLAND, but he failed…\p"
 	.string "Does it take a TRAINER to do that? We\n"
-	.string "feel so frustrated by this...$"
+	.string "feel so frustrated by this…$"
 
 CanalaveCity_House3_EventScript_SNMomThanks::
 	msgbox CanalaveCity_House3_Text_SNCantThank, MSGBOX_DEFAULT
@@ -121,5 +121,5 @@ CanalaveCity_House3_EventScript_SNMomThanks::
 	end
 
 CanalaveCity_House3_Text_SNCantThank::
-	.string "Thank you! We can’t thank you enough,\n"
+	.string "Thank you! We can't thank you enough,\n"
 	.string "but thank you!$"

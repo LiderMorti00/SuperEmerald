@@ -62,7 +62,7 @@ SurvivalArea_House1_EventScript_SNShardTutor_ByeT::
 	.string "share!$"
 
 SurvivalArea_House1_EventScript_SNShardTutor_Hello::
-	.string "If you’d share your colored Shards\n"
+	.string "If you'd share your colored Shards\n"
 	.string "with me, I can teach your POKéMON some\l"
 	.string "moves. Would you like me to teach a\l"
 	.string "move?$"
@@ -99,7 +99,7 @@ SurvivalArea_House1_EventScript_SNShardTutor_Poor::
 	goto SurvivalArea_House1_EventScript_SNShardTutor_Menu
 
 SurvivalArea_House1_EventScript_SNShardTutor_PoorT::
-	.string "You don’t have enough Shards for that\n"
+	.string "You don't have enough Shards for that\n"
 	.string "move.$"
 
 SurvivalArea_House1_EventScript_SNShardTutor_C16::
@@ -534,4 +534,4 @@ SurvivalArea_House1_Text_PtNpc2_0::
 	.string "But when I stopped seeing people, I\n"
 	.string "began looking forward to visitors.\p"
 	.string "Where one lives can change people and\n"
-	.string "POKéMON, that’s what I’m saying.$"
+	.string "POKéMON, that's what I'm saying.$"

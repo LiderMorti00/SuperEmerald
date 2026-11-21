@@ -89,7 +89,7 @@ BlackthornGym_Text_GuideText::
     .string "Dragons are supposed to be\n"
     .string "weak against ICE-type moves,\l"
     .string "but you'll need some DRAGON-type\l"
-	.string "or FAIRY-type moves of your own if\l"
+    .string "or FAIRY-type moves of your own if\l"
     .string "you want to win.$"
     .string "You got this!$"
 
@@ -101,10 +101,10 @@ BlackthornGym_EventScript_GymGuy2::
 
 BlackthornGym_Text_GuideGotoDragonsDen::
 	.string "You were great to beat CLAIR!\p"
-    .string "She can be a bit of a sore loser,\n"
+	.string "She can be a bit of a sore loser,\n"
 	.string "though\p"
-    .string "Sounds like you need to head to the\n"
-    .string "DRAGON'S DEN if you want that GYM BADGE!$"
+	.string "Sounds like you need to head to the\n"
+	.string "DRAGON'S DEN if you want that GYM BADGE!$"
 
 BlackthornGym_EventScript_GymGuy3::
 	msgbox BlackthornGym_Text_GuideWinText, MSGBOX_DEFAULT
@@ -130,7 +130,7 @@ BlackthornGym_Text_CooltrainerfFranBeatenText::
     .string "Awww… I lost…$"
 
 BlackthornGym_Text_CooltrainerfFranSeenText::
-    .string "I can't allow a nameless trainer\n"
+    .string "I can't allow a nameless TRAINER\n"
     .string "past me!\p"
     .string "CLAIR would be livid if I did!$"
 

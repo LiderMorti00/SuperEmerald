@@ -18,7 +18,7 @@ OreburghCity_Flat1_F2_EventScript_PtNpc2::
 
 OreburghCity_Flat1_F2_Text_PtNpc2::
 	.string "But he named our PSYDUCK “Yellow”\n"
-	.string "just because of its color...\p"
+	.string "just because of its color…\p"
 	.string "I don't understand the logic behind\n"
 	.string "that at all.$"
 
@@ -43,7 +43,7 @@ OreburghCity_Flat1_F2_EventScript_PtNpc3_Received::
 	end
 
 OreburghCity_Flat1_F2_Text_PtNpc3_Received::
-	.string "The Dusk Ball is a POKé BALL designed\n"
+	.string "The DUSK BALL is a POKé BALL designed\n"
 	.string "for use in darkness.\p"
 	.string "It works better if you use it at night\n"
 	.string "or in a cave.$"

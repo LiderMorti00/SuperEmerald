@@ -18,7 +18,7 @@ FloaromaMeadow_House_EventScript_PtNpc2::
 	end
 
 FloaromaMeadow_House_Text_PtNpc2::
-	.string "If you put Honey on a tree, check back\n"
+	.string "If you put HONEY on a tree, check back\n"
 	.string "later to see if it's rustling.\p"
 	.string "If it is, it's quite often a rare\n"
 	.string "POKéMON.\p"

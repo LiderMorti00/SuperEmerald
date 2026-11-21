@@ -22,17 +22,17 @@ OreburghMine_B2F_EventScript_Roark::
 
 OreburghMine_B2F_Text_SNRoark2::
 	.string "ROARK: Fallen boulders need to be\n"
-	.string "smashed so they’re out of the way.\p"
+	.string "smashed so they're out of the way.\p"
 	.string "If you could get the BADGE from the\n"
-	.string "GYM in town, you’d be able\p"
+	.string "GYM in town, you'd be able\p"
 	.string "to do this too.\p"
-	.string "Of course, you’d have to beat the GYM\n"
-	.string "LEADER first. That’d be me!$"
+	.string "Of course, you'd have to beat the GYM\n"
+	.string "LEADER first. That'd be me!$"
 
 OreburghMine_B2F_Text_Roark::
 	.string "ROARK: OK, stand back and watch this.\p"
-	.string "Using the hidden move Rock Smash, a\n"
-	.string "boulder blocking your way...$"
+	.string "Using the hidden move ROCK SMASH, a\n"
+	.string "boulder blocking your way…$"
 
 OreburghMine_B2F_EventScript_Mason::
 	trainerbattle_single TRAINER_MARY_SINNOH, OreburghMine_B2F_Text_MasonIntro, OreburghMine_B2F_Text_MasonDefeat
@@ -47,7 +47,7 @@ OreburghMine_B2F_Text_MasonDefeat::
 	.string "Well, now aren't you something!$"
 
 OreburghMine_B2F_Text_MasonIntro::
-	.string "I'm gonna let you in on a secret... I\n"
+	.string "I'm gonna let you in on a secret… I\n"
 	.string "snuck my POKéMON to work!$"
 
 OreburghMine_B2F_EventScript_Colin::
@@ -56,7 +56,7 @@ OreburghMine_B2F_EventScript_Colin::
 	end
 
 OreburghMine_B2F_Text_ColinPost::
-	.string "I'd better get on back to work...\p"
+	.string "I'd better get on back to work…\p"
 	.string "You know, I'd rather be traveling\n"
 	.string "around with POKéMON the way you do.$"
 
@@ -81,7 +81,7 @@ OreburghMine_B2F_EventScript_Machop1::
 	end
 
 OreburghMine_B2F_Text_Machop1::
-	.string "MACHOP: Machop! Machoo!$"
+	.string "MACHOP: MACHOP! Machoo!$"
 
 OreburghMine_B2F_EventScript_Machop2::
 	msgbox OreburghMine_B2F_Text_Machop2, MSGBOX_NPC
@@ -95,7 +95,7 @@ OreburghMine_B2F_EventScript_Machop3::
 	end
 
 OreburghMine_B2F_Text_Machop3::
-	.string "MACHOP: Mach! Machop!$"
+	.string "MACHOP: Mach! MACHOP!$"
 
 OreburghMine_B2F_EventScript_PtNpc1::
 	lock

@@ -55,7 +55,7 @@ OreburghCity_Mart_Text_PtNpc1::
 	.string "The BADGES that POKéMON GYMS give\n"
 	.string "you are a measure of a TRAINER's worth.\p"
 	.string "By getting more BADGES, you get to\n"
-	.string "buy more items in Poké Marts.$"
+	.string "buy more items in POKé MARTs.$"
 
 OreburghCity_Mart_EventScript_PtNpc2::
 	msgbox OreburghCity_Mart_Text_PtNpc2, MSGBOX_NPC

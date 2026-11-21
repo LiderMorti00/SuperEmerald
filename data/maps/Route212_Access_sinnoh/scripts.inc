@@ -18,7 +18,7 @@ Route212_Access_EventScript_PtNpc2::
 	end
 
 Route212_Access_Text_PtNpc2_0::
-	.string "I’ve given my POKéMON lots of\n"
+	.string "I've given my POKéMON lots of\n"
 	.string "POKéBLOCKS.\p"
-	.string "I’m confident that we’ll win our share\n"
+	.string "I'm confident that we'll win our share\n"
 	.string "of CONTESTS.$"

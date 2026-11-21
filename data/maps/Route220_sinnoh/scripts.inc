@@ -9,14 +9,14 @@ Route220_EventScript_Erik::
 
 Route220_Text_ErikPost::
 	.string "I forgot to do my stretching\n"
-	.string "exercises...$"
+	.string "exercises…$"
 
 Route220_Text_ErikDefeat::
 	.string "Yow-ow-ow-ow! My leg's cramped up!$"
 
 Route220_Text_ErikIntro::
 	.string "On your marks, get set, go!\p"
-	.string "...When I say that, let's start.$"
+	.string "…When I say that, let's start.$"
 
 Route220_EventScript_Vincent::
 	trainerbattle_single TRAINER_KYLA_SINNOH, Route220_Text_VincentIntro, Route220_Text_VincentDefeat
@@ -29,7 +29,7 @@ Route220_Text_VincentPost::
 	.string "Don't drown in your own talent.$"
 
 Route220_Text_VincentDefeat::
-	.string "I let my momentum falter...$"
+	.string "I let my momentum falter…$"
 
 Route220_Text_VincentIntro::
 	.string "OK! Get your breathing in order! OK!\n"
@@ -58,11 +58,11 @@ Route220_EventScript_Erica::
 	end
 
 Route220_Text_EricaPost::
-	.string "I've got that sinking feeling...$"
+	.string "I've got that sinking feeling…$"
 
 Route220_Text_EricaDefeat::
 	.string "The sea is salty, but all I taste is\n"
-	.string "bitterness...$"
+	.string "bitterness…$"
 
 Route220_Text_EricaIntro::
 	.string "The human body floats more easily in\n"
@@ -107,7 +107,7 @@ Route220_EventScript_Claire::
 
 Route220_Text_ClairePost::
 	.string "I bought the wrong size of bikini. It's\n"
-	.string "a little too snug...$"
+	.string "a little too snug…$"
 
 Route220_Text_ClaireDefeat::
 	.string "Psssssh!$"

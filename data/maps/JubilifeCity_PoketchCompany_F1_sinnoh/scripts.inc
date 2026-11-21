@@ -34,5 +34,5 @@ JubilifeCity_PoketchCompany_F1_EventScript_SNPtRECEPTIONIST::
 
 JubilifeCity_PoketchCompany_F1_EventScript_SNPtRECEPTIONIST_Text::
 	.string "Welcome to the PokéNav Company.\p"
-	.string "We’re actually a family-run business,\n"
-	.string "so we’re not very impressive.$"
+	.string "We're actually a family-run business,\n"
+	.string "so we're not very impressive.$"

@@ -11,8 +11,8 @@ CanalaveCity_EventScript_PtNpc1::
 
 CanalaveCity_Text_PtNpc1::
 	.string "What's up? Your clothes look damp.\p"
-	.string "Maybe you took the boat to Iron\n"
-	.string "Island to get a Hidden Machine, right?$"
+	.string "Maybe you took the boat to IRON\n"
+	.string "ISLAND to get a Hidden Machine, right?$"
 
 CanalaveCity_EventScript_PtNpc1_SNVar0::
 	msgbox CanalaveCity_EventScript_PtNpc1_Text_SNVar0, MSGBOX_DEFAULT
@@ -44,7 +44,7 @@ CanalaveCity_EventScript_PtNpc2::
 
 CanalaveCity_Text_PtNpc2::
 	.string "My PSYDUCK is very close to me. That\n"
-	.string "makes its Return move powerful!$"
+	.string "makes its RETURN move powerful!$"
 
 CanalaveCity_EventScript_PtNpc2_SNVar0::
 	msgbox CanalaveCity_EventScript_PtNpc2_Text_SNVar0, MSGBOX_DEFAULT
@@ -52,8 +52,8 @@ CanalaveCity_EventScript_PtNpc2_SNVar0::
 	end
 
 CanalaveCity_EventScript_PtNpc2_Text_SNVar0::
-	.string "E-even PS-PSYDUCK’s Future Sight\n"
-	.string "couldn’t foretell that tremor!$"
+	.string "E-even PS-PSYDUCK's FUTURE SIGHT\n"
+	.string "couldn't foretell that tremor!$"
 
 CanalaveCity_EventScript_PtNpc3_Base::
 	msgbox CanalaveCity_Text_PtNpc3, MSGBOX_DEFAULT
@@ -75,9 +75,9 @@ CanalaveCity_EventScript_PtNpc3_SNVar1::
 	end
 
 CanalaveCity_EventScript_PtNpc3_Text_SNVar1::
-	.string "There’s a really impatient-looking boy\n"
+	.string "There's a really impatient-looking boy\n"
 	.string "hanging out in front of the library.\p"
-	.string "He’s so jittery, just seeing him makes\n"
+	.string "He's so jittery, just seeing him makes\n"
 	.string "me feel twitchy.$"
 
 CanalaveCity_Text_PtNpc3::
@@ -117,9 +117,9 @@ CanalaveCity_EventScript_PtNpc4_SNVar0::
 CanalaveCity_EventScript_PtNpc4_Text_SNVar0::
 	.string "Hey, hey! Old dude and kids! Did you\n"
 	.string "hear?!\p"
-	.string "They’re saying there was a huge\n"
+	.string "They're saying there was a huge\n"
 	.string "explosion at LAKE VALOR!\p"
-	.string "But, I hear everything’s fine now. I\n"
+	.string "But, I hear everything's fine now. I\n"
 	.string "guess it was just a lot of noise.$"
 
 CanalaveCity_EventScript_PtNpc5::
@@ -143,7 +143,7 @@ CanalaveCity_EventScript_PtNpc5_SNVar0::
 	end
 
 CanalaveCity_EventScript_PtNpc5_Text_SNVar0::
-	.string "I’m flabbergasted! What could explode\n"
+	.string "I'm flabbergasted! What could explode\n"
 	.string "at LAKE VALOR?$"
 
 CanalaveCity_EventScript_SailorEldritch::
@@ -222,19 +222,19 @@ CanalaveCity_Text_DestIronIsland::
 	.string "IRON ISLAND$"
 
 CanalaveCity_Text_DoYouWannaSetSail::
-	.string "Ahoy! I’m ELDRITCH, a sailor. Do you\n"
+	.string "Ahoy! I'm ELDRITCH, a sailor. Do you\n"
 	.string "wanna set sail?$"
 
 CanalaveCity_Text_SNCountingOnYou::
-	.string "We’re both counting on you!\p"
+	.string "We're both counting on you!\p"
 	.string "Only you can awaken my son from his\n"
-	.string "awful nightmare...\p"
-	.string "Please, I need the Lunar Wing from\n"
+	.string "awful nightmare…\p"
+	.string "Please, I need the LUNAR WING from\n"
 	.string "FULLMOON ISLAND to awaken him!\p"
-	.string "I went, but I failed to find it...$"
+	.string "I went, but I failed to find it…$"
 
 CanalaveCity_Text_SNGoingToFullmoon::
-	.string "...You.... You’re going to FULLMOON ISLAND\n"
+	.string "…You…. You're going to FULLMOON ISLAND\n"
 	.string "for us?$"
 
 CanalaveCity_EventScript_SNEldritchTakeWing::
@@ -243,8 +243,8 @@ CanalaveCity_EventScript_SNEldritchTakeWing::
 	end
 
 CanalaveCity_Text_SNTakeLunarWing::
-	.string "That Lunar Wing... Please! Take it to my\n"
-	.string "son...$"
+	.string "That LUNAR WING… Please! Take it to my\n"
+	.string "son…$"
 
 CanalaveCity_EventScript_SNEldritchWoke::
 	goto_if_set FLAG_SN_ELDRITCH_THANKED, CanalaveCity_EventScript_SNEldritchMenu
@@ -255,7 +255,7 @@ CanalaveCity_EventScript_SNEldritchWoke::
 CanalaveCity_Text_SNComeSailWithMe::
 	.string "Seeing you back to normal makes me\n"
 	.string "feel great!\p"
-	.string "I’ve regained my spirit as a Sailor!\n"
+	.string "I've regained my spirit as a Sailor!\n"
 	.string "Come sail with me later!$"
 
 CanalaveCity_EventScript_PtNpc6::
@@ -312,16 +312,16 @@ CanalaveCity_EventScript_SNBarry_After::
 	end
 
 CanalaveCity_EventScript_SNBarry_Post::
-	.string "BARRY: Yeah, yeah, you’re just a bit\n"
+	.string "BARRY: Yeah, yeah, you're just a bit\n"
 	.string "better than me, as usual.\p"
 	.string "But listen up!\p"
-	.string "Let me tell you who’s going to take on\n"
+	.string "Let me tell you who's going to take on\n"
 	.string "the POKéMON LEAGUE and become the\p"
 	.string "CHAMPION.\p"
-	.string "You guessed right! It’s going to be me!\p"
+	.string "You guessed right! It's going to be me!\p"
 	.string "Anyway, you should go to IRON ISLAND\n"
 	.string "and toughen up some more.\p"
-	.string "Yeah, train at IRON ISLAND! That’s what\n"
+	.string "Yeah, train at IRON ISLAND! That's what\n"
 	.string "I did before going to the GYM!$"
 
 CanalaveCity_EventScript_SNBarry_Defeat::
@@ -333,9 +333,9 @@ CanalaveCity_EventScript_SNBarry_B1::
 
 CanalaveCity_EventScript_SNBarry_Intro::
 	.string "BARRY: Whoops! Hey, {PLAYER}!\p"
-	.string "You’re going to challenge the GYM\n"
+	.string "You're going to challenge the GYM\n"
 	.string "LEADER up past here, eh?\p"
-	.string "Someone should check to see if you’re\n"
+	.string "Someone should check to see if you're\n"
 	.string "ready for this challenge!\p"
 	.string "That someone is me! With my brand-new\n"
 	.string "GYM BADGE!$"
@@ -346,13 +346,13 @@ CanalaveCity_EventScript_SNBarry_NoHM::
 	end
 
 CanalaveCity_EventScript_SNBarry_NoHMT::
-	.string "BARRY: Hey, you’re here! Finally!\p"
-	.string "Oh, but what the...\p"
-	.string "Aww, you haven’t gone to IRON ISLAND,\n"
+	.string "BARRY: Hey, you're here! Finally!\p"
+	.string "Oh, but what the…\p"
+	.string "Aww, you haven't gone to IRON ISLAND,\n"
 	.string "have you?\p"
-	.string "You didn’t get the HM Strength, did\n"
+	.string "You didn't get the HM STRENGTH, did\n"
 	.string "you?\p"
-	.string "Aww, sheesh! I’ll wait here for you!\n"
+	.string "Aww, sheesh! I'll wait here for you!\n"
 	.string "Hurry up and go already!$"
 
 CanalaveCity_EventScript_SNExpRowan::
@@ -360,10 +360,10 @@ CanalaveCity_EventScript_SNExpRowan::
 	end
 
 CanalaveCity_Text_SNRowanTalk::
-	.string "ROWAN: Hmm...\p"
-	.string "What is taking place at LAKE VALOR...\n"
+	.string "ROWAN: Hmm…\p"
+	.string "What is taking place at LAKE VALOR…\n"
 	.string "You must find out!\p"
-	.string "But before you go, let me stress: don’t\n"
+	.string "But before you go, let me stress: don't\n"
 	.string "get in over your head.\p"
 	.string "We will try to join you as soon as we\n"
 	.string "inspect LAKE VERITY.$"
@@ -382,9 +382,9 @@ CanalaveCity_EventScript_SNLucasTalk::
 	return
 
 CanalaveCity_Text_SNLucasTalk::
-	.string "LUCAS: We’re going to investigate Lake\n"
+	.string "LUCAS: We're going to investigate Lake\n"
 	.string "VERITY before we join you.\p"
-	.string "Don’t try to be a hero if anything\n"
+	.string "Don't try to be a hero if anything\n"
 	.string "crazy happens.$"
 
 CanalaveCity_EventScript_SNDawnTalk::
@@ -392,9 +392,9 @@ CanalaveCity_EventScript_SNDawnTalk::
 	return
 
 CanalaveCity_Text_SNDawnTalk::
-	.string "DAWN: We’re going off to LAKE VERITY\n"
-	.string "first...\p"
-	.string "Don’t do anything rash if something\n"
+	.string "DAWN: We're going off to LAKE VERITY\n"
+	.string "first…\p"
+	.string "Don't do anything rash if something\n"
 	.string "does happen.$"
 
 CanalaveCity_EventScript_PtSign1::
@@ -438,6 +438,6 @@ CanalaveCity_EventScript_PtSign6::
 	end
 
 CanalaveCity_Text_PtSign6::
-	.string "Harbor Inn A Roost for Restless\n"
+	.string "Harbor Inn A ROOST for Restless\n"
 	.string "Sailors “Enjoy sweet dreams in our\l"
 	.string "sumptuous beds!”$"

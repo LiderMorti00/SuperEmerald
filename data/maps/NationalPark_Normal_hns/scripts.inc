@@ -53,7 +53,7 @@ NationalPark_Normal_Text_Teacher1::
 	.string "Pay attention, please!\p"
 	.string "…Oops, I have to quit thinking like\n"
 	.string "a teacher all the time.\p"
-	.string "You must be a POKéMON trainer.\p"
+	.string "You must be a POKéMON TRAINER.\p"
 	.string "Since you're working so hard, I\n"
 	.string "want you to have this.$"
 

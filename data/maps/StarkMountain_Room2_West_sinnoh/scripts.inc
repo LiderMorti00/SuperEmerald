@@ -13,10 +13,10 @@ StarkMountain_Room2_Text_KeenanPost::
 	.string "That is what makes me a TRAINER!$"
 
 StarkMountain_Room2_Text_KeenanDefeat::
-	.string "I grow less certain still...$"
+	.string "I grow less certain still…$"
 
 StarkMountain_Room2_Text_KeenanIntro::
-	.string "What it means to win battles... That is\n"
+	.string "What it means to win battles… That is\n"
 	.string "what I seek.\p"
 	.string "Teach me if you will!$"
 
@@ -35,7 +35,7 @@ StarkMountain_Room2_Text_KassandraDefeat::
 	.string "Your dedication won out.$"
 
 StarkMountain_Room2_Text_KassandraIntro::
-	.string "You’ve come all this way for POKéMON?\n"
+	.string "You've come all this way for POKéMON?\n"
 	.string "You must be dedicated.$"
 
 StarkMountain_Room2_EventScript_Stefan::
@@ -45,10 +45,10 @@ StarkMountain_Room2_EventScript_Stefan::
 
 StarkMountain_Room2_Text_StefanPost::
 	.string "For me, time is the fabric woven by\n"
-	.string "memories, one after another...$"
+	.string "memories, one after another…$"
 
 StarkMountain_Room2_Text_StefanDefeat::
-	.string "Another memory... In a chain of\n"
+	.string "Another memory… In a chain of\n"
 	.string "memories.$"
 
 StarkMountain_Room2_Text_StefanIntro::
@@ -62,10 +62,10 @@ StarkMountain_Room2_EventScript_Jasmin::
 
 StarkMountain_Room2_Text_JasminPost::
 	.string "For me, space is where memories are\n"
-	.string "made...$"
+	.string "made…$"
 
 StarkMountain_Room2_Text_JasminDefeat::
-	.string "And another... A new memory was born.$"
+	.string "And another… A new memory was born.$"
 
 StarkMountain_Room2_Text_JasminIntro::
 	.string "Can you answer this for me? What is\n"
@@ -80,10 +80,10 @@ StarkMountain_Room2_Text_DrakePost::
 	.string "My POKéMON seem to like it here a lot.$"
 
 StarkMountain_Room2_Text_DrakeDefeat::
-	.string "Losing isn’t a happy occasion...$"
+	.string "Losing isn't a happy occasion…$"
 
 StarkMountain_Room2_Text_DrakeIntro::
-	.string "Dragons and a fiery mountain... It’s a\n"
+	.string "Dragons and a fiery mountain… It's a\n"
 	.string "totally classic setup!$"
 
 StarkMountain_Room2_EventScript_Jarrett::
@@ -96,12 +96,12 @@ StarkMountain_Room2_Text_JarrettPost::
 	.string "more than anything!$"
 
 StarkMountain_Room2_Text_JarrettDefeat::
-	.string "Losing made it clear to me. You’re crazy\n"
+	.string "Losing made it clear to me. You're crazy\n"
 	.string "about POKéMON!$"
 
 StarkMountain_Room2_Text_JarrettIntro::
 	.string "Hear the howl of my iron fists! Howdy!\n"
-	.string "I’m crazy for karate!$"
+	.string "I'm crazy for karate!$"
 
 StarkMountain_Room2_EventScript_SNBuckTalk::
 	lock
@@ -111,8 +111,8 @@ StarkMountain_Room2_EventScript_SNBuckTalk::
 	end
 
 StarkMountain_Room2_EventScript_SNBuck_Together::
-	.string "BUCK: TEAM GALACTIC’s here, right?\n"
-	.string "Let’s go together!$"
+	.string "BUCK: TEAM GALACTIC's here, right?\n"
+	.string "Let's go together!$"
 
 StarkMountain_Room2_EventScript_Skylar::
 	trainerbattle_single TRAINER_DALTON_3_SINNOH, StarkMountain_Room2_Text_SkylarIntro, StarkMountain_Room2_Text_SkylarDefeat
@@ -121,18 +121,18 @@ StarkMountain_Room2_EventScript_Skylar::
 
 StarkMountain_Room2_Text_SkylarPost::
 	.string "You can level all you want, but that\n"
-	.string "won’t guarantee you any wins.\p"
+	.string "won't guarantee you any wins.\p"
 	.string "But we keep trying to get better.\n"
-	.string "That’s what makes us TRAINERS.$"
+	.string "That's what makes us TRAINERS.$"
 
 StarkMountain_Room2_Text_SkylarDefeat::
-	.string "We went down... We couldn’t stick it\n"
-	.string "out...$"
+	.string "We went down… We couldn't stick it\n"
+	.string "out…$"
 
 StarkMountain_Room2_Text_SkylarIntro::
-	.string "I was born in FLOAROMA TOWN. I’m sure\n"
+	.string "I was born in FLOAROMA TOWN. I'm sure\n"
 	.string "thrilled to be here.\p"
-	.string "It took a long time to get here. We’re\n"
+	.string "It took a long time to get here. We're\n"
 	.string "not going to lose again!$"
 
 StarkMountain_Room2_EventScript_Natasha::
@@ -141,11 +141,11 @@ StarkMountain_Room2_EventScript_Natasha::
 	end
 
 StarkMountain_Room2_Text_NatashaPost::
-	.string "Train more at the BATTLE TOWER... That’s\n"
-	.string "what I’ll do.$"
+	.string "Train more at the BATTLE TOWER… That's\n"
+	.string "what I'll do.$"
 
 StarkMountain_Room2_Text_NatashaDefeat::
-	.string "But... I had a win streak going...$"
+	.string "But… I had a win streak going…$"
 
 StarkMountain_Room2_Text_NatashaIntro::
 	.string "I came here after winning my way\n"
@@ -163,11 +163,11 @@ StarkMountain_Room2_Text_ChelseyPost::
 	.string "it would be a boring world.$"
 
 StarkMountain_Room2_Text_ChelseyDefeat::
-	.string "That’s what I get for making idle\n"
-	.string "claims...$"
+	.string "That's what I get for making idle\n"
+	.string "claims…$"
 
 StarkMountain_Room2_Text_ChelseyIntro::
-	.string "I’ll use my mystifying psychic power to\n"
+	.string "I'll use my mystifying psychic power to\n"
 	.string "pulverize you!$"
 
 StarkMountain_Room2_EventScript_Sterling::
@@ -180,7 +180,7 @@ StarkMountain_Room2_Text_SterlingPost::
 	.string "write home about?$"
 
 StarkMountain_Room2_Text_SterlingDefeat::
-	.string "There’s nothing wonderful about this!$"
+	.string "There's nothing wonderful about this!$"
 
 StarkMountain_Room2_Text_SterlingIntro::
 	.string "I had a revelation this morning.\p"
@@ -193,11 +193,11 @@ StarkMountain_Room2_EventScript_Krystal::
 	end
 
 StarkMountain_Room2_Text_KrystalPost::
-	.string "The HM Fly isn’t useful inside caves.\n"
-	.string "It’s such a shame.$"
+	.string "The HM FLY isn't useful inside caves.\n"
+	.string "It's such a shame.$"
 
 StarkMountain_Room2_Text_KrystalDefeat::
-	.string "We failed to get off the ground...$"
+	.string "We failed to get off the ground…$"
 
 StarkMountain_Room2_Text_KrystalIntro::
 	.string "With one mighty flap, my birds blow\n"
@@ -214,7 +214,7 @@ StarkMountain_Room2_Text_RayPost::
 	.string "failed to dent your spirits!$"
 
 StarkMountain_Room2_Text_RayDefeat::
-	.string "We weren’t up to the task!$"
+	.string "We weren't up to the task!$"
 
 StarkMountain_Room2_Text_RayIntro::
 	.string "My POKéMON can destroy anything. And\n"
@@ -226,16 +226,16 @@ StarkMountain_Room2_EventScript_Abel::
 	end
 
 StarkMountain_Room2_Text_AbelPost::
-	.string "The POKéMON you’ll meet here won’t\n"
+	.string "The POKéMON you'll meet here won't\n"
 	.string "make it easy for you to move onward.$"
 
 StarkMountain_Room2_Text_AbelDefeat::
-	.string "You’re not a TRAINER that can be taken\n"
+	.string "You're not a TRAINER that can be taken\n"
 	.string "lightly!$"
 
 StarkMountain_Room2_Text_AbelIntro::
 	.string "The TRAINERS and POKéMON that gather\n"
-	.string "here aren’t pushovers.\p"
+	.string "here aren't pushovers.\p"
 	.string "They all have tricks up their sleeves!$"
 
 StarkMountain_Room2_EventScript_Monique::
@@ -245,13 +245,13 @@ StarkMountain_Room2_EventScript_Monique::
 
 StarkMountain_Room2_Text_MoniquePost::
 	.string "We came completely unprepared for this\n"
-	.string "little adventure...$"
+	.string "little adventure…$"
 
 StarkMountain_Room2_Text_MoniqueDefeat::
-	.string "Aww... I’m out of useful items!$"
+	.string "Aww… I'm out of useful items!$"
 
 StarkMountain_Room2_Text_MoniqueIntro::
-	.string "We’re all good to go! We just have to\n"
+	.string "We're all good to go! We just have to\n"
 	.string "battle now!$"
 
 StarkMountain_Room2_EventScript_Harlan::
@@ -265,12 +265,12 @@ StarkMountain_Room2_Text_HarlanPost::
 	.string "is what draws me here.$"
 
 StarkMountain_Room2_Text_HarlanDefeat::
-	.string "You’ve earned the right to be here.\n"
+	.string "You've earned the right to be here.\n"
 	.string "Both you and your POKéMON.$"
 
 StarkMountain_Room2_Text_HarlanIntro::
 	.string "What do you expect to achieve here?\n"
-	.string "I’ll be the one to make that call!$"
+	.string "I'll be the one to make that call!$"
 
 StarkMountain_Room2_EventScript_Kenny::
 	trainerbattle_single TRAINER_JEFFREY_1_SINNOH, StarkMountain_Room2_Text_KennyIntro, StarkMountain_Room2_Text_KennyDefeat
@@ -279,12 +279,12 @@ StarkMountain_Room2_EventScript_Kenny::
 
 StarkMountain_Room2_Text_KennyPost::
 	.string "The mythical POKéMON that sleeps deep\n"
-	.string "in a volcano...\p"
+	.string "in a volcano…\p"
 	.string "Could it be a dragon POKéMON?$"
 
 StarkMountain_Room2_Text_KennyDefeat::
-	.string "There’s nothing left...$"
+	.string "There's nothing left…$"
 
 StarkMountain_Room2_Text_KennyIntro::
 	.string "Are you seeking the mythical POKéMON,\n"
-	.string "too? Let’s battle, then!$"
+	.string "too? Let's battle, then!$"

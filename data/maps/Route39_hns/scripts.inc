@@ -129,7 +129,7 @@ Route39_EventScript_Woman::
 	end
 
 Route39_Text_Woman::
-	.string "That shadow... Maybe it was a giant\n"
+	.string "That shadow… Maybe it was a giant\n"
 	.string "PIDGEY?$"
 
 Route39_EventScript_Sign3::

@@ -39,7 +39,7 @@ MountMortar2_Text_SupernerdMarkusAfter::
 	.string "I came to explore MT.MORTAR,\n"
 	.string "but I got separated from my\l"
 	.string "partner…\p"
-	.string "Did you run into a trainer\n"
+	.string "Did you run into a TRAINER\n"
 	.string "who uses a SEADRA that knows\l"
 	.string "WATERFALL?$"
 
@@ -65,7 +65,7 @@ MountMortar2_Text_PokemaniacMillerAfter::
 	.string "I wonder how he is?$"
 
 MountMortar2_Text_PokemaniacMillerBeaten::
-	.string "I lost to some kid...?$"
+	.string "I lost to some kid…?$"
 
 MountMortar2_Text_PokemaniacMillerSeen::
 	.string "I'm not losing this time!$"

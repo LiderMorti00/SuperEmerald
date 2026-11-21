@@ -18,14 +18,14 @@ SurvivalArea_House2_EventScript_PtNpc1_ExplainFacade::
 	end
 
 SurvivalArea_House2_Text_PtNpc1_1::
-	.string "Facade’s a good move for your POKéMON\n"
+	.string "Facade's a good move for your POKéMON\n"
 	.string "to have.\p"
 	.string "Your opponent will think twice about\n"
 	.string "poisoning or paralyzing your POKéMON.$"
 
 SurvivalArea_House2_Text_PtNpc1_0::
-	.string "There’s a move that doubles in power if\n"
+	.string "There's a move that doubles in power if\n"
 	.string "the POKéMON using it is poisoned,\p"
 	.string "paralyzed, or burned.\p"
-	.string "I’ve got the Technical Machine for it\n"
+	.string "I've got the Technical Machine for it\n"
 	.string "right here. You want it?$"

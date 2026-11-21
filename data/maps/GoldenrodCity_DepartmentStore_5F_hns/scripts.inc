@@ -20,7 +20,7 @@ GoldenrodDeptStore5_EventScript_Girl::
 
 GoldenrodDeptStore_Text_Girl::
 	.string "The lady gave me RETURN!\n"
-    .string "My POKéMON must really like me!$"
+	.string "My POKéMON must really like me!$"
 
 GoldenrodDeptStore5_EventScript_Lass::
 	lock
@@ -47,7 +47,7 @@ GoldenrodDeptStore_Text_5FPokefanM::
     .string "You can't rename a POKéMON you get\n"
     .string "in a trade.\p"
     .string "The name is a reflection of the\n"
-    .string "original trainer's feelings for it.$"
+    .string "original TRAINER's feelings for it.$"
 
 SE_J_GoldenrodCity_DepartmentStore_5F_hns_GoldenrodDeptStore5_EventScript_Clerk::
 	msgbox gText_HowMayIServeYou, MSGBOX_NPC

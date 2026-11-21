@@ -38,8 +38,8 @@ Route27_EventScript_Brian::
 	end
 
 Route27_Text_CooltrainermBrianAfter::
-    .string "A good trainer can recognize other\n"
-    .string "good trainers.$"
+    .string "A good TRAINER can recognize other\n"
+    .string "good TRAINERS.$"
 
 Route27_Text_CooltrainermBrianBeaten::
     .string "Just as I thought!$"

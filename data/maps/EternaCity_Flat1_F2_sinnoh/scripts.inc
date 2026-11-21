@@ -24,7 +24,7 @@ EternaCity_Flat1_F2_EventScript_PtNpc3::
 	end
 
 EternaCity_Flat1_F2_Text_PtNpc3::
-	.string "The move Recycle is to be used during\n"
+	.string "The move RECYCLE is to be used during\n"
 	.string "battle.\p"
-	.string "When you use Recycle, a POKéMON can\n"
+	.string "When you use RECYCLE, a POKéMON can\n"
 	.string "use its item once again.$"

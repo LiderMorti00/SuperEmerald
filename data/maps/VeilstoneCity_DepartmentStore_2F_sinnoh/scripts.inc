@@ -21,7 +21,7 @@ VeilstoneCity_DepartmentStore_2F_EventScript_PtNpc2::
 	end
 
 VeilstoneCity_DepartmentStore_2F_Text_PtNpc2_0::
-	.string "I’m going to give an HP Up to my\n"
+	.string "I'm going to give an HP UP to my\n"
 	.string "KRICKETOT.\p"
 	.string "This is going to raise its HP, huh?$"
 
@@ -30,7 +30,7 @@ VeilstoneCity_DepartmentStore_2F_EventScript_PtNpc3::
 	end
 
 VeilstoneCity_DepartmentStore_2F_Text_PtNpc3::
-	.string "I hope that Counter app I gave you is\n"
+	.string "I hope that COUNTER app I gave you is\n"
 	.string "useful.$"
 
 VeilstoneCity_DepartmentStore_2F_EventScript_PtNpc4::
@@ -63,9 +63,9 @@ VeilstoneCity_DepartmentStore_2F_EventScript_PtNpc7::
 	end
 
 VeilstoneCity_DepartmentStore_2F_Text_PtNpc7_0::
-	.string "I’m getting the Carbos! I should get a\n"
+	.string "I'm getting the CARBOS! I should get a\n"
 	.string "Protein instead, maybe.\p"
-	.string "But Iron’s not bad, either.$"
+	.string "But IRON's not bad, either.$"
 
 VeilstoneCity_DepartmentStore_2F_EventScript_PtSign1::
 	msgbox VeilstoneCity_DepartmentStore_2F_Text_PtSign1, MSGBOX_SIGN
@@ -73,7 +73,7 @@ VeilstoneCity_DepartmentStore_2F_EventScript_PtSign1::
 
 VeilstoneCity_DepartmentStore_2F_Text_PtSign1::
 	.string "B1F: Food & Produce\p"
-	.string "1F: TRAINERS’ Zone\p"
+	.string "1F: TRAINERS' Zone\p"
 	.string "2F: Battle Collection\p"
 	.string "3F: TM Corner\p"
 	.string "4F: Poké Dolls & Goods\p"

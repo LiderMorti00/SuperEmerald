@@ -22,7 +22,7 @@ HearthomeCity_EventScript_PtNpc1::
 	end
 
 HearthomeCity_Text_SNHappy::
-	.string "It makes me happy knowing I’ve helped\n"
+	.string "It makes me happy knowing I've helped\n"
 	.string "another person.$"
 
 HearthomeCity_Text_SNContestHall::
@@ -79,7 +79,7 @@ HearthomeCity_EventScript_PtNpc4::
 
 HearthomeCity_Text_PtNpc4::
 	.string "At the LOST TOWER, people unburden\n"
-	.string "themselves of unbearable sorrow...\p"
+	.string "themselves of unbearable sorrow…\p"
 	.string "You'll understand what I mean if you\n"
 	.string "visit the LOST TOWER on ROUTE 209.$"
 
@@ -107,7 +107,7 @@ HearthomeCity_EventScript_SNMrGoods::
 
 HearthomeCity_EventScript_SNMrGoods_Sent::
 	.string "A fine TRAINER like you deserves a fine\n"
-	.string "decoration! Decorate your SECRET BASE\l"
+	.string "decoration! DECORATE your SECRET BASE\l"
 	.string "in HOENN with it!$"
 
 HearthomeCity_EventScript_SNMrGoods_Full::
@@ -131,7 +131,7 @@ HearthomeCity_EventScript_SNMrGoods_LaterT::
 
 HearthomeCity_EventScript_SNMrGoods_Hello::
 	.string "They call me Mr. Goods. No one knows my\n"
-	.string "real name. No, not even I do...\p"
+	.string "real name. No, not even I do…\p"
 	.string "I dedicate myself to seeking rarities.$"
 
 HearthomeCity_EventScript_SNMrGoods_Done::
@@ -140,7 +140,7 @@ HearthomeCity_EventScript_SNMrGoods_Done::
 	end
 
 HearthomeCity_EventScript_SNMrGoods_DoneT::
-	.string "I’m still seeking rarities. One day I’ll\n"
+	.string "I'm still seeking rarities. One day I'll\n"
 	.string "find something even better.$"
 
 HearthomeCity_EventScript_PtNpc7::
@@ -157,7 +157,7 @@ HearthomeCity_EventScript_PtNpc8::
 	end
 
 HearthomeCity_Text_PtNpc8::
-	.string "I used a Fire Stone on my POKéMON, and\n"
+	.string "I used a FIRE STONE on my POKéMON, and\n"
 	.string "it evolved!$"
 
 HearthomeCity_EventScript_PtNpc9::
@@ -180,7 +180,7 @@ HearthomeCity_Text_PtNpc10::
 	.string "I'd like to live in HEARTHOME when I\n"
 	.string "get married.\p"
 	.string "But my boyfriend wants to live in\n"
-	.string "VEILSTONE 'cause of its Game Corner...$"
+	.string "VEILSTONE 'cause of its Game Corner…$"
 
 HearthomeCity_EventScript_PtNpc11::
 	msgbox HearthomeCity_Text_PtNpc11, MSGBOX_NPC
@@ -217,7 +217,7 @@ HearthomeCity_EventScript_PtNpc14::
 	end
 
 HearthomeCity_Text_PtNpc14::
-	.string "I put my Vs. Seeker through its paces\n"
+	.string "I put my VS. SEEKER through its paces\n"
 	.string "a lot.\p"
 	.string "I battled this one intriguing TRAINER\n"
 	.string "over and over using it.\p"
@@ -275,7 +275,7 @@ HearthomeCity_EventScript_SNKeira::
 	end
 
 HearthomeCity_EventScript_SNKeira_T3::
-	.string "I’m KEIRA! I’m a POKéMON CONTEST Judge.\p"
+	.string "I'm KEIRA! I'm a POKéMON CONTEST Judge.\p"
 	.string "Be sure to drop by the CONTEST Hall so\n"
 	.string "I can thank you properly!$"
 
@@ -286,24 +286,24 @@ HearthomeCity_EventScript_SNKeira_T2::
 HearthomeCity_EventScript_SNKeira_T1::
 	.string "Oh, thank goodness that you happened\n"
 	.string "to be there!\p"
-	.string "If it weren’t for you, who knows how\n"
-	.string "far away my BUNEARY could have run...$"
+	.string "If it weren't for you, who knows how\n"
+	.string "far away my BUNEARY could have run…$"
 
 HearthomeCity_EventScript_SNGymBlock::
 	msgbox HearthomeCity_EventScript_SNGymBlock_T, MSGBOX_NPC
 	end
 
 HearthomeCity_EventScript_SNGymBlock_T::
-	.string "Hey, there! How’s it going, TRAINER?\p"
-	.string "You being here tells me you’re going to\n"
+	.string "Hey, there! How's it going, TRAINER?\p"
+	.string "You being here tells me you're going to\n"
 	.string "challenge the GYM LEADER.\p"
-	.string "Well... I hate to break it to you, but\n"
-	.string "that’s impossible.\p"
-	.string "You’re questioning why, and the answer\n"
-	.string "is: she’s not here.\p"
-	.string "Not to worry, though. We know she’s at\n"
+	.string "Well… I hate to break it to you, but\n"
+	.string "that's impossible.\p"
+	.string "You're questioning why, and the answer\n"
+	.string "is: she's not here.\p"
+	.string "Not to worry, though. We know she's at\n"
 	.string "the CONTEST Hall.\p"
-	.string "Come back another time, OK? I’ll be\n"
+	.string "Come back another time, OK? I'll be\n"
 	.string "waiting right here.$"
 
 HearthomeCity_EventScript_PtSign1::

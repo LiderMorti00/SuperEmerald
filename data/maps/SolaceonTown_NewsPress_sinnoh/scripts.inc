@@ -34,7 +34,7 @@ SolaceonTown_NewsPress_EventScript_SNEditor_Great1::
 	goto SolaceonTown_NewsPress_EventScript_SNEditor_Scale
 
 SolaceonTown_NewsPress_EventScript_SNEditor_Great::
-	.string "Oh! That’s a fine {STR_VAR_1}! This will\n"
+	.string "Oh! That's a fine {STR_VAR_1}! This will\n"
 	.string "make a great front page! Here, a little\l"
 	.string "reward!$"
 
@@ -45,11 +45,11 @@ SolaceonTown_NewsPress_EventScript_SNEditor_Wait::
 
 SolaceonTown_NewsPress_EventScript_SNEditor_WaitT::
 	.string "Bring me a {STR_VAR_1} today, please!\n"
-	.string "I’ll make it worth your while!$"
+	.string "I'll make it worth your while!$"
 
 SolaceonTown_NewsPress_EventScript_SNEditor_Ask::
-	.string "I’m the editor of the SINNOH Now\n"
-	.string "newspaper! For today’s edition, I need\l"
+	.string "I'm the editor of the SINNOH Now\n"
+	.string "newspaper! For today's edition, I need\l"
 	.string "a photo of a {STR_VAR_1}.\p"
 	.string "If you have one with you, show it to me!$"
 
@@ -59,7 +59,7 @@ SolaceonTown_NewsPress_EventScript_SNEditor_Done::
 	end
 
 SolaceonTown_NewsPress_EventScript_SNEditor_DoneT::
-	.string "Today’s edition is already printed!\n"
+	.string "Today's edition is already printed!\n"
 	.string "Come back tomorrow!$"
 
 SolaceonTown_NewsPress_EventScript_PtNpc2::
@@ -70,6 +70,6 @@ SolaceonTown_NewsPress_EventScript_PtNpc2::
 	end
 
 SolaceonTown_NewsPress_Text_PtNpc2_0::
-	.string "The SINNOH region’s newspaper is tiny,\n"
+	.string "The SINNOH region's newspaper is tiny,\n"
 	.string "but it has many fans.\p"
 	.string "That newspaper is printed right here!$"

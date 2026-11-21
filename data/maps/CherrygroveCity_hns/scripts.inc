@@ -3,7 +3,7 @@ CherrygroveCity_hns_MapScripts::
 
 
 CherrygroveCity_Text_GuideGentIntro::
-	.string "You're a rookie trainer,\n"
+	.string "You're a rookie TRAINER,\n"
 	.string "aren't you? I can tell!\p"
 	.string "That's OK! Everyone is a\n"
 	.string "rookie at some point!\p"
@@ -63,7 +63,7 @@ CherryGroveCity_EventScript_Boy2::
 	end
 
 CherrygroveCity_Text_YoungsterHavePokedex::
-	.string "I battled the trainers on the\n"
+	.string "I battled the TRAINERS on the\n"
 	.string "road.\p"
 	.string "My POKéMON lost. They're a\n"
 	.string "mess! I must take them to a\l"
@@ -92,7 +92,7 @@ CherryGroveCity_EventScript_Corsola::
 	end
 
 CherryGroveCity_Text_Corsola::
-	.string "CORSOLA: Corsola! La!$"
+	.string "CORSOLA: CORSOLA! La!$"
 
 CherryGroveCity_EventScript_Staryu::
 	lock

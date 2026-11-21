@@ -68,7 +68,7 @@ Route212_House_EventScript_SNShardTutor_ByeT::
 	.string "share!$"
 
 Route212_House_EventScript_SNShardTutor_Hello::
-	.string "If you’d share your colored Shards\n"
+	.string "If you'd share your colored Shards\n"
 	.string "with me, I can teach your POKéMON some\l"
 	.string "moves. Would you like me to teach a\l"
 	.string "move?$"
@@ -102,7 +102,7 @@ Route212_House_EventScript_SNShardTutor_Poor::
 	goto Route212_House_EventScript_SNShardTutor_Menu
 
 Route212_House_EventScript_SNShardTutor_PoorT::
-	.string "You don’t have enough Shards for that\n"
+	.string "You don't have enough Shards for that\n"
 	.string "move.$"
 
 Route212_House_EventScript_SNShardTutor_C12::

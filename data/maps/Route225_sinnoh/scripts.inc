@@ -20,11 +20,11 @@ Route225_EventScript_Rodolfo_Rematch::
 	end
 
 Route225_Text_RodolfoDefeat::
-	.string "I see it now... I know what I lack.$"
+	.string "I see it now… I know what I lack.$"
 
 Route225_Text_RodolfoIntro::
 	.string "There is something missing in the way\n"
-	.string "I battle...\p"
+	.string "I battle…\p"
 	.string "I've come here to find it.$"
 
 Route225_EventScript_Ashlee::
@@ -46,7 +46,7 @@ Route225_EventScript_Ashlee_Rematch::
 
 Route225_Text_AshleeDefeat::
 	.string "Your POKéMON are so muscular. It\n"
-	.string "makes me sigh seeing them...$"
+	.string "makes me sigh seeing them…$"
 
 Route225_Text_AshleeIntro::
 	.string "In the embrace of Mother Nature,\n"
@@ -69,8 +69,8 @@ Route225_EventScript_Audrey_Rematch::
 	end
 
 Route225_Text_AudreyDefeat::
-	.string "Sheesh... I arrive in a new place, and it\n"
-	.string "turns out to be the BATTLE ZONE...$"
+	.string "Sheesh… I arrive in a new place, and it\n"
+	.string "turns out to be the BATTLE ZONE…$"
 
 Route225_Text_AudreyIntro::
 	.string "I let my bird POKéMON carry me to\n"
@@ -95,7 +95,7 @@ Route225_EventScript_Daisy_Rematch::
 
 Route225_Text_DaisyDefeat::
 	.string "After this, I will reluctantly hand\n"
-	.string "over the prize money to you...$"
+	.string "over the prize money to you…$"
 
 Route225_Text_DaisyIntro::
 	.string "Right after this, you will send out\n"
@@ -109,9 +109,9 @@ Route225_EventScript_Geoffrey::
 	end
 
 Route225_Text_GeoffreyPost::
-	.string "A Dragon Tamer CHAMPION...\p"
+	.string "A Dragon Tamer CHAMPION…\p"
 	.string "I'll need to train so much more to even\n"
-	.string "come close to coming close...$"
+	.string "come close to coming close…$"
 
 Route225_EventScript_Geoffrey_Rematch::
 	trainerbattle_rematch TRAINER_JANICE_SINNOH, Route225_Text_GeoffreyIntro, Route225_Text_GeoffreyDefeat
@@ -119,7 +119,7 @@ Route225_EventScript_Geoffrey_Rematch::
 	end
 
 Route225_Text_GeoffreyDefeat::
-	.string "Potential doesn't mean I can win...$"
+	.string "Potential doesn't mean I can win…$"
 
 Route225_Text_GeoffreyIntro::
 	.string "See the potential of dragon POKéMON!\n"
@@ -133,7 +133,7 @@ Route225_EventScript_Deanna::
 	end
 
 Route225_Text_DeannaPost::
-	.string "How much you believe in your POKéMON...\p"
+	.string "How much you believe in your POKéMON…\p"
 	.string "That's a critical factor in how a\n"
 	.string "battle will turn out.$"
 
@@ -144,10 +144,10 @@ Route225_EventScript_Deanna_Rematch::
 
 Route225_Text_DeannaDefeat::
 	.string "I've certainly found a tough\n"
-	.string "adversary in you...$"
+	.string "adversary in you…$"
 
 Route225_Text_DeannaIntro::
-	.string "Worthy opponents... The search for\n"
+	.string "Worthy opponents… The search for\n"
 	.string "them drives me to travel far.$"
 
 Route225_EventScript_Dwayne::
@@ -176,7 +176,7 @@ Route225_EventScript_Quinn::
 	end
 
 Route225_Text_QuinnPost::
-	.string "I fed my gang Protein, Carbos... You\n"
+	.string "I fed my gang PROTEIN, CARBOS… You\n"
 	.string "name it, I pumped 'em full of it.$"
 
 Route225_Text_QuinnDefeat::

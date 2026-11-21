@@ -8,8 +8,8 @@ SinnohVictoryRoad_1F_Room2_EventScript_Micah::
 	end
 
 SinnohVictoryRoad_1F_Room2_Text_MicahPost::
-	.string "Whether you’re talking to people or\n"
-	.string "POKéMON, it’s important to always look\p"
+	.string "Whether you're talking to people or\n"
+	.string "POKéMON, it's important to always look\p"
 	.string "them square in the eyes.$"
 
 SinnohVictoryRoad_1F_Room2_Text_MicahDefeat::
@@ -17,8 +17,8 @@ SinnohVictoryRoad_1F_Room2_Text_MicahDefeat::
 	.string "them!$"
 
 SinnohVictoryRoad_1F_Room2_Text_MicahIntro::
-	.string "When TRAINERS lock eyes...\p"
-	.string "That’s right! It’s time to let their\n"
+	.string "When TRAINERS lock eyes…\p"
+	.string "That's right! It's time to let their\n"
 	.string "POKéMON go wild!$"
 
 SinnohVictoryRoad_1F_Room2_EventScript_Brandi::
@@ -27,12 +27,12 @@ SinnohVictoryRoad_1F_Room2_EventScript_Brandi::
 	end
 
 SinnohVictoryRoad_1F_Room2_Text_BrandiPost::
-	.string "It’s not that you’ve won. It’s just\n"
+	.string "It's not that you've won. It's just\n"
 	.string "that I lost!\p"
-	.string "...It’s all the same. Go, me.$"
+	.string "…It's all the same. Go, me.$"
 
 SinnohVictoryRoad_1F_Room2_Text_BrandiDefeat::
-	.string "But... This isn’t possible!$"
+	.string "But… This isn't possible!$"
 
 SinnohVictoryRoad_1F_Room2_Text_BrandiIntro::
 	.string "I will win. I am sure of it. Therefore,\n"
@@ -45,15 +45,15 @@ SinnohVictoryRoad_1F_Room2_EventScript_Desiree::
 
 SinnohVictoryRoad_1F_Room2_Text_DesireePost::
 	.string "What can psychic power be used for?\p"
-	.string "Well, one mustn’t use it for committing\n"
+	.string "Well, one mustn't use it for committing\n"
 	.string "crimes.\p"
-	.string "But, I don’t use it for doing good,\n"
+	.string "But, I don't use it for doing good,\n"
 	.string "either.\p"
 	.string "Using psychic power leaves me too worn\n"
 	.string "out!$"
 
 SinnohVictoryRoad_1F_Room2_Text_DesireeDefeat::
-	.string "Did I get to show you anything...?\n"
+	.string "Did I get to show you anything…?\n"
 	.string "Anything at all?$"
 
 SinnohVictoryRoad_1F_Room2_Text_DesireeIntro::
@@ -67,15 +67,15 @@ SinnohVictoryRoad_1F_Room2_EventScript_Landon::
 
 SinnohVictoryRoad_1F_Room2_Text_LandonPost::
 	.string "I can use psychic powers, but battling\n"
-	.string "isn’t so simple...\p"
+	.string "isn't so simple…\p"
 	.string "It takes much more to win!$"
 
 SinnohVictoryRoad_1F_Room2_Text_LandonDefeat::
-	.string "...!$"
+	.string "…!$"
 
 SinnohVictoryRoad_1F_Room2_Text_LandonIntro::
 	.string "Now we shall battle, and from it will\n"
-	.string "emerge one loser...$"
+	.string "emerge one loser…$"
 
 SinnohVictoryRoad_1F_Room2_EventScript_Eddie::
 	trainerbattle_single TRAINER_TONY_1_SINNOH, SinnohVictoryRoad_1F_Room2_Text_EddieIntro, SinnohVictoryRoad_1F_Room2_Text_EddieDefeat
@@ -83,11 +83,11 @@ SinnohVictoryRoad_1F_Room2_EventScript_Eddie::
 	end
 
 SinnohVictoryRoad_1F_Room2_Text_EddiePost::
-	.string "We’re gonna go ahead and leave... You\n"
+	.string "We're gonna go ahead and leave… You\n"
 	.string "know, go train elsewhere.$"
 
 SinnohVictoryRoad_1F_Room2_Text_EddieDefeat::
-	.string "D n i o e n...$"
+	.string "D n i o e n…$"
 
 SinnohVictoryRoad_1F_Room2_Text_EddieIntro::
 	.string "I trained all of my gnarly POKéMON at\n"
@@ -99,16 +99,16 @@ SinnohVictoryRoad_1F_Room2_EventScript_Terrell::
 	end
 
 SinnohVictoryRoad_1F_Room2_Text_TerrellPost::
-	.string "You may be a child, but you’ve taught\n"
+	.string "You may be a child, but you've taught\n"
 	.string "me a whole lot. I thank you humbly.$"
 
 SinnohVictoryRoad_1F_Room2_Text_TerrellDefeat::
-	.string "My sorrow deepens...$"
+	.string "My sorrow deepens…$"
 
 SinnohVictoryRoad_1F_Room2_Text_TerrellIntro::
-	.string "What it means to battle... Its joys, its\n"
-	.string "sorrows...\p"
-	.string "I’ve experienced it all!$"
+	.string "What it means to battle… Its joys, its\n"
+	.string "sorrows…\p"
+	.string "I've experienced it all!$"
 
 SinnohVictoryRoad_1F_Room2_EventScript_Arthur::
 	trainerbattle_single TRAINER_TONY_3_SINNOH, SinnohVictoryRoad_1F_Room2_Text_ArthurIntro, SinnohVictoryRoad_1F_Room2_Text_ArthurDefeat
@@ -116,18 +116,18 @@ SinnohVictoryRoad_1F_Room2_EventScript_Arthur::
 	end
 
 SinnohVictoryRoad_1F_Room2_Text_ArthurPost::
-	.string "I’m sorry, my POKéMON team...\p"
-	.string "I promise, I’ll get better at this so\n"
+	.string "I'm sorry, my POKéMON team…\p"
+	.string "I promise, I'll get better at this so\n"
 	.string "you can get a taste of victory!$"
 
 SinnohVictoryRoad_1F_Room2_Text_ArthurDefeat::
 	.string "This defeat has the tang of my bitter\n"
-	.string "tears...$"
+	.string "tears…$"
 
 SinnohVictoryRoad_1F_Room2_Text_ArthurIntro::
 	.string "I want my POKéMON to get a taste of\n"
 	.string "the sweetness that is victory.\p"
-	.string "I can’t afford to lose this one!$"
+	.string "I can't afford to lose this one!$"
 
 SinnohVictoryRoad_1F_Room2_EventScript_Clarice::
 	trainerbattle_single TRAINER_TONY_4_SINNOH, SinnohVictoryRoad_1F_Room2_Text_ClariceIntro, SinnohVictoryRoad_1F_Room2_Text_ClariceDefeat
@@ -135,7 +135,7 @@ SinnohVictoryRoad_1F_Room2_EventScript_Clarice::
 	end
 
 SinnohVictoryRoad_1F_Room2_Text_ClaricePost::
-	.string "Well, I don’t have any advice for\n"
+	.string "Well, I don't have any advice for\n"
 	.string "someone as tough as you!$"
 
 SinnohVictoryRoad_1F_Room2_Text_ClariceDefeat::
@@ -151,14 +151,14 @@ SinnohVictoryRoad_1F_Room2_EventScript_Deandre::
 	end
 
 SinnohVictoryRoad_1F_Room2_Text_DeandrePost::
-	.string "Psychic power...\p"
-	.string "I know it isn’t easy to believe in\n"
-	.string "something that you can’t see.\p"
-	.string "But love, friendship... You can’t see\n"
+	.string "Psychic power…\p"
+	.string "I know it isn't easy to believe in\n"
+	.string "something that you can't see.\p"
+	.string "But love, friendship… You can't see\n"
 	.string "those, either.$"
 
 SinnohVictoryRoad_1F_Room2_Text_DeandreDefeat::
-	.string "But... I thought I could win!$"
+	.string "But… I thought I could win!$"
 
 SinnohVictoryRoad_1F_Room2_Text_DeandreIntro::
 	.string "A battle is a clash of willpower!\p"
@@ -175,7 +175,7 @@ SinnohVictoryRoad_1F_Room2_Text_KendraPost::
 	.string "path of the future!$"
 
 SinnohVictoryRoad_1F_Room2_Text_KendraDefeat::
-	.string "The future...is different! Why?!$"
+	.string "The future…is different! Why?!$"
 
 SinnohVictoryRoad_1F_Room2_Text_KendraIntro::
 	.string "I see it! I see a victory for me!$"
@@ -190,7 +190,7 @@ SinnohVictoryRoad_1F_Room2_Text_AutumnPost::
 	.string "with my favorite POKéMON.$"
 
 SinnohVictoryRoad_1F_Room2_Text_AutumnDefeat::
-	.string "Don’t you have an Achilles’ heel?$"
+	.string "Don't you have an Achilles' heel?$"
 
 SinnohVictoryRoad_1F_Room2_Text_AutumnIntro::
 	.string "The sharp vision of my bird POKéMON\n"
@@ -202,8 +202,8 @@ SinnohVictoryRoad_1F_Room2_EventScript_Joe::
 	end
 
 SinnohVictoryRoad_1F_Room2_Text_JoePost::
-	.string "Getting the best out of any POKéMON...\n"
-	.string "That’s what makes a good TRAINER...$"
+	.string "Getting the best out of any POKéMON…\n"
+	.string "That's what makes a good TRAINER…$"
 
 SinnohVictoryRoad_1F_Room2_Text_JoeDefeat::
 	.string "I lost? But how is that possible?!$"
@@ -218,9 +218,9 @@ SinnohVictoryRoad_1F_Room2_EventScript_Willie::
 	end
 
 SinnohVictoryRoad_1F_Room2_Text_WilliePost::
-	.string "I’ll forget that we lost!\p"
-	.string "...Wait, if I did that, we’d never learn\n"
-	.string "from our mistakes...$"
+	.string "I'll forget that we lost!\p"
+	.string "…Wait, if I did that, we'd never learn\n"
+	.string "from our mistakes…$"
 
 SinnohVictoryRoad_1F_Room2_Text_WillieDefeat::
 	.string "Wrroar! Judo chop defeated!$"
@@ -234,15 +234,15 @@ SinnohVictoryRoad_1F_Room2_EventScript_Brenden::
 	end
 
 SinnohVictoryRoad_1F_Room2_Text_BrendenPost::
-	.string "I don’t see what my age has to do with\n"
+	.string "I don't see what my age has to do with\n"
 	.string "playing with POKéMON, frankly.$"
 
 SinnohVictoryRoad_1F_Room2_Text_BrendenDefeat::
 	.string "All I can manage now is to wheeze out a\n"
-	.string "few meek sighs...$"
+	.string "few meek sighs…$"
 
 SinnohVictoryRoad_1F_Room2_Text_BrendenIntro::
-	.string "I’ll wheel out some wicked POKéMON and\n"
+	.string "I'll wheel out some wicked POKéMON and\n"
 	.string "even wickeder moves!$"
 
 SinnohVictoryRoad_1F_Room2_EventScript_SNMarleyTalk::
@@ -253,6 +253,6 @@ SinnohVictoryRoad_1F_Room2_EventScript_SNMarleyTalk::
 	end
 
 SinnohVictoryRoad_1F_Room2_EventScript_SNMarley_T2::
-	.string "MARLEY: ...You took so long... Please,\n"
-	.string "don’t make me wait...\p"
-	.string "I felt a little forlorn waiting...$"
+	.string "MARLEY: …You took so long… Please,\n"
+	.string "don't make me wait…\p"
+	.string "I felt a little forlorn waiting…$"

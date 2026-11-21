@@ -10,11 +10,11 @@ SnowpointCity_Mart_EventScript_PtNpc1::
 	end
 
 SnowpointCity_Mart_Text_PtNpc1_0::
-	.string "I’m using Technical Machines to teach\n"
+	.string "I'm using Technical Machines to teach\n"
 	.string "moves to my POKéMON.\p"
-	.string "I’m trying for different mixes of moves\n"
+	.string "I'm trying for different mixes of moves\n"
 	.string "in different types.\p"
-	.string "It’s for when I go up against the Elite\n"
+	.string "It's for when I go up against the Elite\n"
 	.string "Four of the POKéMON LEAGUE.\p"
 	.string "They say the ELITE FOUR are tougher\n"
 	.string "than any GYM LEADER by far.$"
@@ -29,5 +29,5 @@ SnowpointCity_Mart_EventScript_PtNpc2::
 SnowpointCity_Mart_Text_PtNpc2_0::
 	.string "If your POKéMON gets frozen, it will\n"
 	.string "thaw out after a while.\p"
-	.string "But if I were you, I’d keep some Ice\n"
+	.string "But if I were you, I'd keep some Ice\n"
 	.string "Heals around.$"

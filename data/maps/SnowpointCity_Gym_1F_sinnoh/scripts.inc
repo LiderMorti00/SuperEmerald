@@ -106,10 +106,10 @@ SnowpointCity_Gym_1F_EventScript_GiveTM::
 
 SnowpointCity_Gym_1F_Text_ExplainTM::
 	.string "TM72 contains the move AVALANCHE.\p"
-	.string "If the user takes damage, the move’s\n"
+	.string "If the user takes damage, the move's\n"
 	.string "power is doubled!\p"
 	.string "Can you imagine what sort of focus\n"
-	.string "you’d need to pull it off?$"
+	.string "you'd need to pull it off?$"
 
 SnowpointCity_Gym_1F_EventScript_LeaderDefeated::
 	setflag FLAG_SN_DEFEATED_SOOTOPOLIS_GYM
@@ -129,8 +129,8 @@ SnowpointCity_Gym_1F_EventScript_LeaderDefeated::
 SnowpointCity_Gym_1F_Text_ExplainBadge::
 	.string "That Icicle BADGE I just gave you?\p"
 	.string "Because you have it, you can use the\n"
-	.string "hidden move Rock Climb anytime, even\p"
-	.string "when you’re not in a battle.\p"
+	.string "hidden move ROCK CLIMB anytime, even\p"
+	.string "when you're not in a battle.\p"
 	.string "Oh, and take this, too.$"
 
 SnowpointCity_Gym_1F_Text_ReceivedBadge::
@@ -138,22 +138,22 @@ SnowpointCity_Gym_1F_Text_ReceivedBadge::
 	.string "from CANDICE.$"
 
 SnowpointCity_Gym_1F_Text_LeaderDefeat::
-	.string "Wow! You’re great! You’ve earned my\n"
+	.string "Wow! You're great! You've earned my\n"
 	.string "respect!\p"
 	.string "I think your focus and will bowled us\n"
 	.string "over totally.\p"
-	.string "Oh, that’s right! I’m supposed to give\n"
+	.string "Oh, that's right! I'm supposed to give\n"
 	.string "you this!$"
 
 SnowpointCity_Gym_1F_Text_LeaderIntro::
 	.string "You want to challenge CANDICE?\p"
 	.string "Sure thing! I was waiting for someone\n"
 	.string "tough!\p"
-	.string "But I should tell you, I’m tough\n"
+	.string "But I should tell you, I'm tough\n"
 	.string "because I know how to focus.\p"
-	.string "POKéMON, fashion, romance... It’s all\n"
+	.string "POKéMON, fashion, romance… It's all\n"
 	.string "about focus!\p"
-	.string "I’ll show you just what I mean. Get\n"
+	.string "I'll show you just what I mean. Get\n"
 	.string "ready to lose!$"
 
 SnowpointCity_Gym_1F_EventScript_SNRematch::
@@ -173,10 +173,10 @@ SnowpointCity_Gym_1F_EventScript_SNRematch_After::
 	.string "anytime for another match!$"
 
 SnowpointCity_Gym_1F_EventScript_SNRematch_Defeat::
-	.string "Amazing... You really are the CHAMPION!$"
+	.string "Amazing… You really are the CHAMPION!$"
 
 SnowpointCity_Gym_1F_EventScript_SNRematch_Go::
-	.string "Then I won’t hold back this time!$"
+	.string "Then I won't hold back this time!$"
 
 SnowpointCity_Gym_1F_EventScript_SNRematch_No::
 	msgbox SnowpointCity_Gym_1F_EventScript_SNRematch_NoT, MSGBOX_DEFAULT
@@ -184,12 +184,12 @@ SnowpointCity_Gym_1F_EventScript_SNRematch_No::
 	end
 
 SnowpointCity_Gym_1F_EventScript_SNRematch_NoT::
-	.string "Come back whenever you’re ready!$"
+	.string "Come back whenever you're ready!$"
 
 SnowpointCity_Gym_1F_EventScript_SNRematch_Ask::
 	.string "CANDICE: You became the CHAMPION!\n"
 	.string "Welcome back!\p"
-	.string "I’ve been training even harder since\n"
+	.string "I've been training even harder since\n"
 	.string "our last battle.\p"
 	.string "Will you battle me again?$"
 
@@ -219,9 +219,9 @@ SnowpointCity_Gym_1F_Text_SNGuideInfo::
 	.string "land in the basement with her TRAINERS.$"
 
 SnowpointCity_Gym_1F_Text_PtGymGuide::
-	.string "Hey, there! How’s it going,\n"
+	.string "Hey, there! How's it going,\n"
 	.string "CHAMP-to-be?\p"
-	.string "I’m the GYM guide! I help out TRAINERS\n"
+	.string "I'm the GYM guide! I help out TRAINERS\n"
 	.string "who come to challenge the GYM LEADER.$"
 
 SnowpointCity_Gym_1F_EventScript_PtGymGuideAfter::
@@ -230,7 +230,7 @@ SnowpointCity_Gym_1F_EventScript_PtGymGuideAfter::
 	end
 
 SnowpointCity_Gym_1F_Text_PtGymGuideAfter::
-	.string "Oh! {PLAYER}! You’ve beaten the GYM\n"
+	.string "Oh! {PLAYER}! You've beaten the GYM\n"
 	.string "LEADER!\p"
 	.string "You were more focused than her, and\n"
 	.string "your POKéMON picked up on it!$"

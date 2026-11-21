@@ -30,7 +30,7 @@ Route212_North_EventScript_Melissa::
 	end
 
 Route212_North_Text_MelissaPost::
-	.string "You... You must have one fantastic\n"
+	.string "You… You must have one fantastic\n"
 	.string "teacher to be so good.$"
 
 Route212_North_EventScript_Melissa_Rematch::
@@ -39,7 +39,7 @@ Route212_North_EventScript_Melissa_Rematch::
 	end
 
 Route212_North_Text_MelissaDefeat::
-	.string "Oh! How terrible of you...$"
+	.string "Oh! How terrible of you…$"
 
 Route212_North_Text_MelissaIntro::
 	.string "I'd like to begin now. Are you quite\n"
@@ -88,7 +88,7 @@ Route212_North_EventScript_Reina_Rematch::
 	end
 
 Route212_North_Text_ReinaDefeat::
-	.string "Oh, dear... That wasn't anything like\n"
+	.string "Oh, dear… That wasn't anything like\n"
 	.string "battling with my friends.$"
 
 Route212_North_Text_ReinaIntro::
@@ -137,7 +137,7 @@ Route212_North_EventScript_Dylan::
 
 Route212_North_Text_DylanPost::
 	.string "Oops, I'd better get back to my beat\n"
-	.string "before the boss radios me...$"
+	.string "before the boss radios me…$"
 
 Route212_North_Text_DylanDefeat::
 	.string "I need to explain, all right? It was\n"
@@ -182,7 +182,7 @@ Route212_North_EventScript_PtNpc2::
 
 Route212_North_Text_PtNpc2::
 	.string "There are good trees that you can\n"
-	.string "smear with Honey, and some you can't.\p"
+	.string "smear with HONEY, and some you can't.\p"
 	.string "If you want to lure rare POKéMON, you\n"
 	.string "have to find an attractive tree.$"
 

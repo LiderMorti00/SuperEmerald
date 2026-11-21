@@ -11,8 +11,8 @@ FloaromaTown_House1_Text_PtNpc1::
 	.string "hill long ago, avoided even by POKéMON.\p"
 	.string "People started planting flowers on it\n"
 	.string "because it was such a sad place.\p"
-	.string "But nothing would grow... People didn't\n"
-	.string "know what to do...\p"
+	.string "But nothing would grow… People didn't\n"
+	.string "know what to do…\p"
 	.string "And then one day, someone expressed\n"
 	.string "thanks for the blessings of nature.\p"
 	.string "Then, the whole hill burst into bloom.$"
@@ -28,7 +28,7 @@ FloaromaTown_House1_EventScript_PtNpc2::
 
 FloaromaTown_House1_Text_PtNpc2_Yes::
 	.string "Yes! You agreed! Here's the TM for the\n"
-	.string "move Pluck!$"
+	.string "move PLUCK!$"
 
 FloaromaTown_House1_EventScript_PtNpc2_No::
 	msgbox FloaromaTown_House1_Text_PtNpc2_No, MSGBOX_DEFAULT
@@ -36,7 +36,7 @@ FloaromaTown_House1_EventScript_PtNpc2_No::
 	end
 
 FloaromaTown_House1_Text_PtNpc2_No::
-	.string "Oh... I guess I just like weird things...$"
+	.string "Oh… I guess I just like weird things…$"
 
 FloaromaTown_House1_Text_PtNpc2::
 	.string "Do you think it's cute how POKéMON\n"
@@ -78,7 +78,7 @@ FloaromaTown_House1_EventScript_TMGirlNo::
 	end
 
 FloaromaTown_House1_Text_TMGirlNo::
-	.string "Aww... BERRIES are the best,\n"
+	.string "Aww… BERRIES are the best,\n"
 	.string "though!$"
 
 FloaromaTown_House1_Text_TMGirl::

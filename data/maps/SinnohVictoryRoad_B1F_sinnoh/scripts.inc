@@ -17,7 +17,7 @@ SinnohVictoryRoad_B1F_Text_JoPatDefeat::
 	.string "I lost!$"
 
 SinnohVictoryRoad_B1F_Text_JoPatIntro::
-	.string "Let’s battle!$"
+	.string "Let's battle!$"
 
 SinnohVictoryRoad_B1F_EventScript_Ondrej::
 	trainerbattle_single TRAINER_WINSTON_5_SINNOH, SinnohVictoryRoad_B1F_Text_OndrejIntro, SinnohVictoryRoad_B1F_Text_OndrejDefeat
@@ -26,10 +26,10 @@ SinnohVictoryRoad_B1F_EventScript_Ondrej::
 
 SinnohVictoryRoad_B1F_Text_OndrejPost::
 	.string "How should I teach the most powerful\n"
-	.string "of the Dragon-type moves...?$"
+	.string "of the Dragon-type moves…?$"
 
 SinnohVictoryRoad_B1F_Text_OndrejDefeat::
-	.string "There’s no way I could have won!$"
+	.string "There's no way I could have won!$"
 
 SinnohVictoryRoad_B1F_Text_OndrejIntro::
 	.string "I take POKéMON that are tough to begin\n"
@@ -46,10 +46,10 @@ SinnohVictoryRoad_B1F_Text_ValenciaPost::
 	.string "legendary POKéMON?$"
 
 SinnohVictoryRoad_B1F_Text_ValenciaDefeat::
-	.string "Your past... You’ve been through a lot...$"
+	.string "Your past… You've been through a lot…$"
 
 SinnohVictoryRoad_B1F_Text_ValenciaIntro::
-	.string "I am a Psychic! I can see your past!$"
+	.string "I am a PSYCHIC! I can see your past!$"
 
 SinnohVictoryRoad_B1F_EventScript_Henry::
 	trainerbattle_single TRAINER_THALIA_1_SINNOH, SinnohVictoryRoad_B1F_Text_HenryIntro, SinnohVictoryRoad_B1F_Text_HenryDefeat
@@ -57,17 +57,17 @@ SinnohVictoryRoad_B1F_EventScript_Henry::
 	end
 
 SinnohVictoryRoad_B1F_Text_HenryPost::
-	.string "If you don’t give up, you can reach\n"
+	.string "If you don't give up, you can reach\n"
 	.string "your goal.\p"
-	.string "That perseverance is what’s important\n"
-	.string "to TRAINERS. That’s in my book, too.$"
+	.string "That perseverance is what's important\n"
+	.string "to TRAINERS. That's in my book, too.$"
 
 SinnohVictoryRoad_B1F_Text_HenryDefeat::
-	.string "That wasn’t how I planned the final\n"
-	.string "chapter to go in my writing class...$"
+	.string "That wasn't how I planned the final\n"
+	.string "chapter to go in my writing class…$"
 
 SinnohVictoryRoad_B1F_Text_HenryIntro::
-	.string "VICTORY ROAD... Somehow, it feels as if\n"
+	.string "VICTORY ROAD… Somehow, it feels as if\n"
 	.string "my journey is now coming to an end.\p"
 	.string "But, before the final chapter is\n"
 	.string "written, I must pen your defeat!$"

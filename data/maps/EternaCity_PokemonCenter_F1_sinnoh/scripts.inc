@@ -15,7 +15,7 @@ EternaCity_PokemonCenter_F1_Text_PtNpc1::
 	.string "TEAM GALACTIC took my POKéMON away.\n"
 	.string "They took other people's, too.\p"
 	.string "Something should be done, but TEAM\n"
-	.string "GALACTIC creeps everyone out...\p"
+	.string "GALACTIC creeps everyone out…\p"
 	.string "What are they doing to my POKéMON?$"
 
 EternaCity_PokemonCenter_F1_EventScript_PtNpc2::

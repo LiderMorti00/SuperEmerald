@@ -7,7 +7,7 @@ Route218_East_EventScript_PtNpc1::
 	end
 
 Route218_East_Text_PtNpc1::
-	.string "Boy... I sure am thirsty...$"
+	.string "Boy… I sure am thirsty…$"
 
 Route218_East_EventScript_SNFisher_Done::
 	msgbox Route218_East_EventScript_SNFisher_After, MSGBOX_DEFAULT
@@ -25,7 +25,7 @@ Route218_East_EventScript_SNFisher::
 	goto Route218_East_EventScript_SNFisher_Done
 
 Route218_East_EventScript_SNFisher_Ask::
-	.string "Yes, sir! An Old Rod is a good thing!\p"
+	.string "Yes, sir! An OLD ROD is a good thing!\p"
 	.string "You think so too, am I right?$"
 
 Route218_East_EventScript_SNFisher_After::
@@ -33,4 +33,4 @@ Route218_East_EventScript_SNFisher_After::
 	.string "you use your fishing rod.\p"
 	.string "Next, you focus! If a POKéMON bites,\n"
 	.string "“!” appears.\p"
-	.string "That’s your cue to reel it in!$"
+	.string "That's your cue to reel it in!$"

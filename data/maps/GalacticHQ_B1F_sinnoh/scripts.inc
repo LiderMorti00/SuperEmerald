@@ -10,8 +10,8 @@ GalacticHQ_B1F_EventScript_PtNpc1::
 	end
 
 GalacticHQ_B1F_Text_PtNpc1_0::
-	.string "I’m a TEAM GALACTIC member. But I don’t\n"
+	.string "I'm a TEAM GALACTIC member. But I don't\n"
 	.string "even have a POKéMON!\p"
-	.string "I’m the gruntiest of the grunts!\p"
-	.string "It’s my fault, though. I still don’t\n"
+	.string "I'm the gruntiest of the grunts!\p"
+	.string "It's my fault, though. I still don't\n"
 	.string "know how the warp panels connect.$"

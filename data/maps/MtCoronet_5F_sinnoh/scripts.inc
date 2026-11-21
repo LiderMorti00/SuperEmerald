@@ -8,20 +8,20 @@ MtCoronet_5F_EventScript_Grunt::
 	end
 
 MtCoronet_5F_Text_GruntPost::
-	.string "All my excitement’s gone now...\p"
+	.string "All my excitement's gone now…\p"
 	.string "This whole MT. CORONET trip is too\n"
-	.string "rough, long, and draining...$"
+	.string "rough, long, and draining…$"
 
 MtCoronet_5F_Text_GruntDefeat::
-	.string "You’re not supposed to work me over\n"
+	.string "You're not supposed to work me over\n"
 	.string "like that.$"
 
 MtCoronet_5F_Text_GruntIntro::
-	.string "...Our boss is going to do something\n"
+	.string "…Our boss is going to do something\n"
 	.string "huge at the summit.\p"
 	.string "But here I am dealing with some pesky\n"
 	.string "intruder.\p"
-	.string "You’re spoiling the atmosphere. You\n"
+	.string "You're spoiling the atmosphere. You\n"
 	.string "can lose quickly, right?$"
 
 MtCoronet_5F_EventScript_Grunt2::
@@ -30,15 +30,15 @@ MtCoronet_5F_EventScript_Grunt2::
 	end
 
 MtCoronet_5F_Text_Grunt2Post::
-	.string "...Is our boss about to ditch us and\n"
+	.string "…Is our boss about to ditch us and\n"
 	.string "claim everything for himself?$"
 
 MtCoronet_5F_Text_Grunt2Defeat::
 	.string "All you gave me was the taste of\n"
-	.string "defeat...$"
+	.string "defeat…$"
 
 MtCoronet_5F_Text_Grunt2Intro::
 	.string "TEAM GALACTIC will take control of\n"
 	.string "everything!\p"
-	.string "You can try all you want, but you can’t\n"
+	.string "You can try all you want, but you can't\n"
 	.string "do anything alone!$"

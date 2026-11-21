@@ -26,7 +26,7 @@ VeilstoneCity_House4_EventScript_PtNpc1::
 
 VeilstoneCity_House4_Text_SNWin::
 	.string "Bravo! A winner is you!\p"
-	.string "For our winner, I have here... A Coin\n"
+	.string "For our winner, I have here… A Coin\n"
 	.string "Case!$"
 
 VeilstoneCity_House4_EventScript_SNClownLose::
@@ -49,7 +49,7 @@ VeilstoneCity_House4_Text_SNWhich::
 	.string "or right?$"
 
 VeilstoneCity_House4_Text_SNSpin::
-	.string "Spin, spin, spin, spin, spin...$"
+	.string "Spin, spin, spin, spin, spin…$"
 
 VeilstoneCity_House4_Text_SNWatch::
 	.string "You there. Watch this Coin.$"
@@ -73,5 +73,5 @@ VeilstoneCity_House4_EventScript_PtNpc2::
 VeilstoneCity_House4_Text_PtNpc2_0::
 	.string "There are many magicians in the world.\n"
 	.string "You know, the performance artists?\p"
-	.string "Don’t you think that maybe, say, five\n"
+	.string "Don't you think that maybe, say, five\n"
 	.string "percent are actually psychics?$"

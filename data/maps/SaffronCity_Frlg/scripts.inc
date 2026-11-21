@@ -34,7 +34,7 @@ SE_KH_SaffronCity_Frlg_Youngster2::
 
 SE_KH_SaffronCity_Frlg_Youngster2_Text:
 	.string "There's a place called the CONTEST\n"
-	.string "HALL in VIRIDIAN where trainers\l"
+	.string "HALL in VIRIDIAN where TRAINERS\l"
 	.string "gather from all over the place.$"
 
 SE_KH_SaffronCity_Frlg_PokefanM::
@@ -80,7 +80,7 @@ SE_KH_SaffronCity_Frlg_CooltrainerM::
 
 SE_KH_SaffronCity_Frlg_CooltrainerM_Text:
 	.string "I went to the GYM, raring for\n"
-	.string "battles against trainers…\p"
+	.string "battles against TRAINERS…\p"
 	.string "It turns out, I stumbled into the\n"
 	.string "unused GYM next door.\p"
 	.string "Boy, I was pretty embarrassed.$"

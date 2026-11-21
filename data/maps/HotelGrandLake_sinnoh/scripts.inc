@@ -10,7 +10,7 @@ HotelGrandLake_EventScript_PtNpc1::
 	end
 
 HotelGrandLake_Text_PtNpc1_0::
-	.string "This hotel is so romantic...\p"
+	.string "This hotel is so romantic…\p"
 	.string "I hope a knight on a POKéMON will sweep\n"
 	.string "me away for a honeymoon here!$"
 
@@ -20,8 +20,8 @@ HotelGrandLake_EventScript_PtNpc2::
 
 HotelGrandLake_Text_PtNpc2::
 	.string "Ah, hello. You wish to stay a night? Ah,\n"
-	.string "but you’ve no reservations.\p"
-	.string "I’m afraid we are totally booked. You\n"
+	.string "but you've no reservations.\p"
+	.string "I'm afraid we are totally booked. You\n"
 	.string "may rest a while, if you wish.$"
 
 HotelGrandLake_EventScript_SNGameDirector::
@@ -34,7 +34,7 @@ HotelGrandLake_EventScript_SNGameDirector::
 	end
 
 HotelGrandLake_Text_SNDirector::
-	.string "I’m the game director! I love POKéMON\n"
+	.string "I'm the game director! I love POKéMON\n"
 	.string "and I made a game about them.\p"
 	.string "If you complete the NATIONAL POKéDEX,\n"
 	.string "show it to me! I will give you something\l"

@@ -120,7 +120,7 @@ StarkMountain_Room3_EventScript_SNCharon::
 	goto StarkMountain_Room3_EventScript_SNCharon_NoBuck
 
 StarkMountain_Room3_EventScript_SNCharon_T2::
-	.string "BUCK: Hey, you! TEAM GALACTIC! What’s\n"
+	.string "BUCK: Hey, you! TEAM GALACTIC! What's\n"
 	.string "going on here?!$"
 
 StarkMountain_Room3_EventScript_SNCharon_T15::
@@ -145,19 +145,19 @@ StarkMountain_Room3_EventScript_SNCharon_T13::
 	.string "LOOKER: You can tell us all about it. We\n"
 	.string "have plenty of time.\p"
 	.string "Oh, no, no. No resisting arrest. You\n"
-	.string "can’t win three-on-one, no?\p"
+	.string "can't win three-on-one, no?\p"
 	.string "OK, Officers, over here, if you will.$"
 
 StarkMountain_Room3_EventScript_SNCharon_T12::
-	.string "CHARON: Gah... What a mess...\p"
-	.string "...Uh, International Police? What are\n"
+	.string "CHARON: Gah… What a mess…\p"
+	.string "…Uh, International Police? What are\n"
 	.string "you saying? I know nothing!\p"
 	.string "A new TEAM GALACTIC? Extorting with\n"
 	.string "HEATRAN?\p"
 	.string "Merely the blathering of this harmless\n"
 	.string "old man! All said in jest!\p"
-	.string "Besides, among TEAM GALACTIC’s\n"
-	.string "COMMANDERS, I was the most junior...$"
+	.string "Besides, among TEAM GALACTIC's\n"
+	.string "COMMANDERS, I was the most junior…$"
 
 StarkMountain_Room3_EventScript_SNCharon_GruntRun2::
 	walk_fast_down
@@ -179,12 +179,12 @@ StarkMountain_Room3_EventScript_SNCharon_T11::
 	.string "GRUNT 1: Run away! GRUNT 2: Run away!$"
 
 StarkMountain_Room3_EventScript_SNCharon_T10::
-	.string "GRUNT 2: Yeah! It’s the International\n"
+	.string "GRUNT 2: Yeah! It's the International\n"
 	.string "Police all right!\p"
-	.string "There’s only one thing to be done!$"
+	.string "There's only one thing to be done!$"
 
 StarkMountain_Room3_EventScript_SNCharon_T9::
-	.string "GRUNT 1: Hey! It’s the International\n"
+	.string "GRUNT 1: Hey! It's the International\n"
 	.string "Police!$"
 
 StarkMountain_Room3_EventScript_SNCharon_T8::
@@ -220,27 +220,27 @@ StarkMountain_Room3_EventScript_SNCharon_T4::
 	.string "???: Go, go, go!$"
 
 StarkMountain_Room3_EventScript_SNCharon_T3::
-	.string "CHARON: Eh? What’s this, then? Chased\n"
+	.string "CHARON: Eh? What's this, then? Chased\n"
 	.string "me here, have you?\p"
 	.string "I like seeing children try their best,\n"
-	.string "but too bad for you--you’re too late.\p"
+	.string "but too bad for you--you're too late.\p"
 	.string "With this Magma Stone I will let awaken\n"
 	.string "the legendary HEATRAN!\p"
-	.string "I will control the volcano’s eruptions\n"
+	.string "I will control the volcano's eruptions\n"
 	.string "to extort money by the millions!\p"
 	.string "Fear me! For I am CHARON! The boss of\n"
 	.string "the reborn TEAM GALACTIC!$"
 
 StarkMountain_Room3_EventScript_SNCharon_T1::
-	.string "CHARON: ...CYRUS disappeared. MARS and\n"
+	.string "CHARON: …CYRUS disappeared. MARS and\n"
 	.string "JUPITER quit.\p"
 	.string "SATURN said he would look after what\n"
 	.string "remains of TEAM GALACTIC.\p"
-	.string "But he won’t join me. So foolish of him!\p"
+	.string "But he won't join me. So foolish of him!\p"
 	.string "So very foolish of the rest of them!\n"
 	.string "Throwing away TEAM GALACTIC!\p"
 	.string "After all the effort we took as a team\n"
-	.string "to make it grow...\p"
+	.string "to make it grow…\p"
 	.string "That power could have made us rich\n"
 	.string "beyond imagination.\p"
 	.string "But, enough of that. The Magma Stone\n"

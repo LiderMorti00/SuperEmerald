@@ -60,7 +60,7 @@ JubilifeCity_JubilifeTV_F1_EventScript_PtNpc6::
 	end
 
 JubilifeCity_JubilifeTV_F1_Text_PtNpc6_0::
-	.string "Why don’t you try dressing up your\n"
+	.string "Why don't you try dressing up your\n"
 	.string "POKéMON now?\p"
 	.string "We have a Fitting Room on the second\n"
 	.string "floor.\p"
@@ -113,7 +113,7 @@ JubilifeCity_JubilifeTV_F1_EventScript_SNLotNoRoom::
 	end
 
 JubilifeCity_JubilifeTV_F1_Text_SNLotNoRoomT::
-	.string "...Oh? You seem to have no room for\n"
+	.string "…Oh? You seem to have no room for\n"
 	.string "this.\p"
 	.string "Please make room in your Bag and then\n"
 	.string "let me know.$"
@@ -125,9 +125,9 @@ JubilifeCity_JubilifeTV_F1_EventScript_SNLot5::
 JubilifeCity_JubilifeTV_F1_Text_SNLot5::
 	.string "Oh, my goodness, all five digits\n"
 	.string "matched!\p"
-	.string "You’ve won the jackpot prize! This is\n"
+	.string "You've won the jackpot prize! This is\n"
 	.string "just so incredible!\p"
-	.string "...Oh, I’m sorry! Your prize! I got\n"
+	.string "…Oh, I'm sorry! Your prize! I got\n"
 	.string "carried away there.\p"
 	.string "Here you go!$"
 
@@ -171,7 +171,7 @@ JubilifeCity_JubilifeTV_F1_EventScript_SNLotParty::
 
 JubilifeCity_JubilifeTV_F1_Text_SNLotParty::
 	.string "Congratulations!\p"
-	.string "The ID No. of your team’s {STR_VAR_1}\n"
+	.string "The ID No. of your team's {STR_VAR_1}\n"
 	.string "matches your Loto Ticket number!$"
 
 JubilifeCity_JubilifeTV_F1_EventScript_SNLotMiss::
@@ -181,17 +181,17 @@ JubilifeCity_JubilifeTV_F1_EventScript_SNLotMiss::
 	end
 
 JubilifeCity_JubilifeTV_F1_Text_SNLotMiss::
-	.string "I’m sorry. You didn’t get a match...$"
+	.string "I'm sorry. You didn't get a match…$"
 
 JubilifeCity_JubilifeTV_F1_Text_SNLotNumber::
 	.string "Your Loto Ticket number is {STR_VAR_1}.\p"
-	.string "Now, let’s see if it matches the ID No.\n"
+	.string "Now, let's see if it matches the ID No.\n"
 	.string "of any of your POKéMON.$"
 
 JubilifeCity_JubilifeTV_F1_Text_SNLotLookUp::
-	.string "First, I’ll look up today’s POKéMON\n"
+	.string "First, I'll look up today's POKéMON\n"
 	.string "Lottery Corner lucky number.\p"
-	.string "...$"
+	.string "…$"
 
 JubilifeCity_JubilifeTV_F1_EventScript_SNLotNo::
 	msgbox JubilifeCity_JubilifeTV_F1_Text_SNLotNoT, MSGBOX_DEFAULT
@@ -202,12 +202,12 @@ JubilifeCity_JubilifeTV_F1_Text_SNLotNoT::
 	.string "Oh. I see. Please do visit us again.$"
 
 JubilifeCity_JubilifeTV_F1_Text_SNLotIntro::
-	.string "This is the POKéMON Lottery Corner. I’m\n"
+	.string "This is the POKéMON Lottery Corner. I'm\n"
 	.string "FELICITY, your attendant today.\p"
 	.string "If your drawn number matches the ID\n"
 	.string "No. of any of your POKéMON,\p"
 	.string "you could win fabulous gifts.\p"
-	.string "Would you like to check today’s lucky\n"
+	.string "Would you like to check today's lucky\n"
 	.string "number?$"
 
 JubilifeCity_JubilifeTV_F1_EventScript_SNLotDone::
@@ -216,7 +216,7 @@ JubilifeCity_JubilifeTV_F1_EventScript_SNLotDone::
 	end
 
 JubilifeCity_JubilifeTV_F1_Text_SNLotDoneT::
-	.string "You’ve already drawn a Loto Ticket\n"
+	.string "You've already drawn a Loto Ticket\n"
 	.string "today. Please come back tomorrow.$"
 
 JubilifeCity_JubilifeTV_F1_EventScript_SNLotHeld::
@@ -237,6 +237,6 @@ JubilifeCity_JubilifeTV_F1_EventScript_SNLotNoRoomAgain::
 	end
 
 JubilifeCity_JubilifeTV_F1_Text_SNLotHeldT::
-	.string "{PLAYER}? Yes, I’ve been expecting you.\p"
-	.string "This is the prize we’ve been holding for\n"
+	.string "{PLAYER}? Yes, I've been expecting you.\p"
+	.string "This is the prize we've been holding for\n"
 	.string "you. Here you go!$"

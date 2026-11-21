@@ -59,64 +59,64 @@ ValorLakefront_EventScript_SNCynthia_T3::
 ValorLakefront_EventScript_SNCynthia_T2::
 	.string "Anyway, what you should do is use this\n"
 	.string "medicine on the PSYDUCK.\p"
-	.string "You’re working on a POKéDEX, so it\n"
+	.string "You're working on a POKéDEX, so it\n"
 	.string "would be worthwhile for you.$"
 
 ValorLakefront_Text_SNHaventSeen::
-	.string "CYNTHIA: You haven’t seen them? By the\n"
+	.string "CYNTHIA: You haven't seen them? By the\n"
 	.string "café on ROUTE 210.\p"
-	.string "There’s a group of PSYDUCK huddled\n"
+	.string "There's a group of PSYDUCK huddled\n"
 	.string "with their heads in their, uh,\p"
-	.string "hands...?$"
+	.string "hands…?$"
 
 ValorLakefront_EventScript_SNCynthia_Seen::
 	msgbox ValorLakefront_EventScript_SNCynthia_T1, MSGBOX_DEFAULT
 	goto ValorLakefront_EventScript_SNCynthia_Potion
 
 ValorLakefront_EventScript_SNCynthia_T1::
-	.string "CYNTHIA: Yes, that’s right. By the café\n"
+	.string "CYNTHIA: Yes, that's right. By the café\n"
 	.string "on ROUTE 210.\p"
-	.string "You’ve seen that group of PSYDUCK\n"
+	.string "You've seen that group of PSYDUCK\n"
 	.string "huddled with their heads in their,\p"
-	.string "uh, hands...?$"
+	.string "uh, hands…?$"
 
 ValorLakefront_Text_SNPsyduck::
 	.string "CYNTHIA: So, getting back to what I\n"
-	.string "started saying earlier...\p"
+	.string "started saying earlier…\p"
 	.string "Have you seen the group of PSYDUCK on\n"
 	.string "ROUTE 210?$"
 
 ValorLakefront_Text_SNHesYourFriend::
-	.string "CYNTHIA: He’s your friend?\p"
-	.string "He’s more impatient than he is\n"
-	.string "energetic, isn’t he?$"
+	.string "CYNTHIA: He's your friend?\p"
+	.string "He's more impatient than he is\n"
+	.string "energetic, isn't he?$"
 
 ValorLakefront_Text_SNBarry1::
-	.string "That explosion in the Great\n"
-	.string "Marsh? It wasn’t anything serious.\p"
+	.string "That explosion in the GREAT\n"
+	.string "MARSH? It wasn't anything serious.\p"
 	.string "Mr. Wake told me to tell you that.\p"
-	.string "But that TEAM GALACTIC... Wow! Are they\n"
+	.string "But that TEAM GALACTIC… Wow! Are they\n"
 	.string "out of control or what?\p"
-	.string "Next time I see them, I’ll teach them a\n"
-	.string "lesson they won’t forget!\p"
+	.string "Next time I see them, I'll teach them a\n"
+	.string "lesson they won't forget!\p"
 	.string "See you around!$"
 
 ValorLakefront_Text_SNSister::
 	.string "Huh?\n"
 	.string "Is this your older sister?\p"
-	.string "No? She isn’t?\n"
+	.string "No? She isn't?\n"
 	.string "Oh, OK.$"
 
 ValorLakefront_Text_SNBarry0::
 	.string "{RIVAL}: Hey, {PLAYER}!\n"
-	.string "Where’d that GALACTIC goon run off to?$"
+	.string "Where'd that GALACTIC goon run off to?$"
 
 ValorLakefront_Text_SNIHadToTalk::
 	.string "CYNTHIA: Oh, hello, long time no see! How\n"
 	.string "is your POKéDEX filling up?\p"
 	.string "I came to research the folklore about\n"
-	.string "the lake, but...\p"
-	.string "Well, it doesn’t appear as if the lake is\n"
+	.string "the lake, but…\p"
+	.string "Well, it doesn't appear as if the lake is\n"
 	.string "open to the public now.\p"
 	.string "Have you heard the folklore about it?\p"
 	.string "They say there is an island inside the\n"
@@ -124,9 +124,9 @@ ValorLakefront_Text_SNIHadToTalk::
 	.string "And inside that island is a mirage of a\n"
 	.string "POKéMON.\p"
 	.string "No one must enter the chamber of that\n"
-	.string "POKéMON...\p"
-	.string "Oh, that’s right! I had to talk to you\n"
-	.string "about something else...$"
+	.string "POKéMON…\p"
+	.string "Oh, that's right! I had to talk to you\n"
+	.string "about something else…$"
 
 ValorLakefront_EventScript_SNCynthia_NoBarry::
 	msgbox ValorLakefront_Text_SNIHadToTalk, MSGBOX_DEFAULT
@@ -155,20 +155,20 @@ ValorLakefront_EventScript_SNGrunt_Won::
 	goto ValorLakefront_EventScript_SNNoCyn
 
 ValorLakefront_EventScript_SNGrunt_Post::
-	.string "I can’t battle anymore... I’m running on\n"
-	.string "fumes...\p"
-	.string "I’ll have to give this to the\n"
-	.string "COMMANDER...\p"
-	.string "I wish... I got to use it at the lake...$"
+	.string "I can't battle anymore… I'm running on\n"
+	.string "fumes…\p"
+	.string "I'll have to give this to the\n"
+	.string "COMMANDER…\p"
+	.string "I wish… I got to use it at the lake…$"
 
 ValorLakefront_EventScript_SNGrunt_Defeat::
-	.string "Gweh! I’m running on fumes...$"
+	.string "Gweh! I'm running on fumes…$"
 
 ValorLakefront_EventScript_SNGrunt_Intro::
-	.string "Aww, no... You’re still on my tail...?\p"
-	.string "The lake’s within sight...\p"
-	.string "You leave me no choice... My POKéMON\n"
-	.string "will KO you...$"
+	.string "Aww, no… You're still on my tail…?\p"
+	.string "The lake's within sight…\p"
+	.string "You leave me no choice… My POKéMON\n"
+	.string "will KO you…$"
 
 ValorLakefront_EventScript_SNSuiteLady::
 	lock
@@ -181,8 +181,8 @@ ValorLakefront_EventScript_SNSuiteLady::
 	end
 
 ValorLakefront_EventScript_SNSuiteLady_T1::
-	.string "What am I to do...? I’ve gone and\n"
-	.string "dropped my Suite Key somewhere again...\l"
+	.string "What am I to do…? I've gone and\n"
+	.string "dropped my SUITE KEY somewhere again…\l"
 	.string "It must be somewhere around the\l"
 	.string "lakefront.$"
 
@@ -195,7 +195,7 @@ ValorLakefront_EventScript_SNSuiteLady_Key::
 	end
 
 ValorLakefront_EventScript_SNSuiteLady_T2::
-	.string "Oh! That’s my Suite Key! You found it\n"
+	.string "Oh! That's my SUITE KEY! You found it\n"
 	.string "for me! Thank you so much! Please,\l"
 	.string "accept this as thanks.$"
 
@@ -205,7 +205,7 @@ ValorLakefront_EventScript_SNSuiteLady_After::
 	end
 
 ValorLakefront_EventScript_SNSuiteLady_T3::
-	.string "Thank you again for finding my key. I’ll\n"
+	.string "Thank you again for finding my key. I'll\n"
 	.string "be more careful from now on.$"
 
 ValorLakefront_EventScript_SNHoneyTree::
@@ -252,7 +252,7 @@ ValorLakefront_Text_SNBlackout::
 	.string "SUNNYSHORE CITY, which is down this\n"
 	.string "road, had a major blackout!\p"
 	.string "Crews are working on restoring power,\n"
-	.string "but the road’s closed now.$"
+	.string "but the road's closed now.$"
 
 ValorLakefront_EventScript_PtSign1::
 	msgbox ValorLakefront_Text_PtSign1, MSGBOX_SIGN
@@ -260,7 +260,7 @@ ValorLakefront_EventScript_PtSign1::
 
 ValorLakefront_Text_PtSign1::
 	.string "Seven Stars Restaurant More Flavor\n"
-	.string "Than You Can Wish For$"
+	.string "Than You Can WISH For$"
 
 ValorLakefront_EventScript_SNSuiteKey::
 	goto_if_set FLAG_SN_SUITE_KEY_FOUND, ValorLakefront_EventScript_SNSuiteKey_End

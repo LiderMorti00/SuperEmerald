@@ -36,4 +36,4 @@ JubilifeCity_JubilifeTV_F4_EventScript_SNPtRECEPTIONIST::
 
 JubilifeCity_JubilifeTV_F4_EventScript_SNPtRECEPTIONIST_Text::
 	.string "“Participation for all” is our TV\n"
-	.string "network’s motto.$"
+	.string "network's motto.$"

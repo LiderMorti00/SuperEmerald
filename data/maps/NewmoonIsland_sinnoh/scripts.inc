@@ -20,7 +20,7 @@ NewmoonIsland_EventScript_SailNo::
 	end
 
 NewmoonIsland_Text_AllRightThen::
-	.string "All right, then. Tell me if you’d like to\n"
+	.string "All right, then. Tell me if you'd like to\n"
 	.string "return to CANALAVE.$"
 
 NewmoonIsland_Text_SailBack::

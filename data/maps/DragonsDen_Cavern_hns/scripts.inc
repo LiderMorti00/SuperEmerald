@@ -62,7 +62,7 @@ DragonsDen_Cavern_Text_CooltrainerfCaraAfter::
     .string "Soon I'm going to get permission\n"
     .string "from our MASTER to use dragons.\p"
     .string "When I do, I'm going to become an\n"
-    .string "admirable dragon trainer and gain\l"
+    .string "admirable dragon TRAINER and gain\l"
     .string "our MASTER's approval.$"
 
 DragonsDen_Cavern_Text_CooltrainerfCaraBeaten::
@@ -98,6 +98,6 @@ DragonsDen_EventScript_ClairRematch::
 
 DragonsDen_Text_Clair::
     .string "{PLAYER}… So you're here.\p"
-	.string "If you think you can keep up,\n"
-	.string "with me, come to the FIGHTING\l"
-	.string "DOJO in SAFFRON.$"
+    .string "If you think you can keep up,\n"
+    .string "with me, come to the FIGHTING\l"
+    .string "DOJO in SAFFRON.$"

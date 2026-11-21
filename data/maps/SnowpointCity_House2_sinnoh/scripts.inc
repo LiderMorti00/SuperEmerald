@@ -7,7 +7,7 @@ SnowpointCity_House2_EventScript_PtNpc1::
 	end
 
 SnowpointCity_House2_Text_PtNpc1::
-	.string "I hope you’ll use trendy sayings in a\n"
+	.string "I hope you'll use trendy sayings in a\n"
 	.string "trendy way.$"
 
 SnowpointCity_House2_EventScript_SNShardTutor_Bye::
@@ -52,7 +52,7 @@ SnowpointCity_House2_EventScript_SNShardTutor_ByeT::
 	.string "share!$"
 
 SnowpointCity_House2_EventScript_SNShardTutor_Hello::
-	.string "If you’d share your colored Shards\n"
+	.string "If you'd share your colored Shards\n"
 	.string "with me, I can teach your POKéMON some\l"
 	.string "moves. Would you like me to teach a\l"
 	.string "move?$"
@@ -86,7 +86,7 @@ SnowpointCity_House2_EventScript_SNShardTutor_Poor::
 	goto SnowpointCity_House2_EventScript_SNShardTutor_Menu
 
 SnowpointCity_House2_EventScript_SNShardTutor_PoorT::
-	.string "You don’t have enough Shards for that\n"
+	.string "You don't have enough Shards for that\n"
 	.string "move.$"
 
 SnowpointCity_House2_EventScript_SNShardTutor_C7::

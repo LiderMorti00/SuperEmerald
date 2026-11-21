@@ -61,7 +61,7 @@ GoldenrodCity_Gym_Text_BeautyVictoriaBeaten::
     .string "Let's see… Oops, it's over?$"
 
 GoldenrodCity_Gym_Text_BeautyVictoriaSeen::
-    .string "Oh, you are a cute little trainer!\p"
+    .string "Oh, you are a cute little TRAINER!\p"
     .string "I like you, but I won't hold back!$"
 
 GoldenrodCity_Gym_Text_WhitneyBefore::

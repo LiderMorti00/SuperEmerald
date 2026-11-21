@@ -70,7 +70,7 @@ Route205_South_EventScript_Siena::
 Route205_South_Text_SienaPost::
 	.string "I know all sorts of things about\n"
 	.string "POKéMON!\p"
-	.string "Let's see... There are males and\n"
+	.string "Let's see… There are males and\n"
 	.string "females, and some aren't either!$"
 
 Route205_South_Text_SienaDefeat::
@@ -87,14 +87,14 @@ Route205_South_EventScript_Nicholas::
 
 Route205_South_Text_NicholasPost::
 	.string "From being lost in the mountains so\n"
-	.string "long, I became a Hiker...$"
+	.string "long, I became a Hiker…$"
 
 Route205_South_Text_NicholasDefeat::
 	.string "Having lost his way, the TRAINER lost\n"
-	.string "the battle too...$"
+	.string "the battle too…$"
 
 Route205_South_Text_NicholasIntro::
-	.string "I've lost my way... Here of all places...$"
+	.string "I've lost my way… Here of all places…$"
 
 Route205_South_EventScript_Kelsey::
 	trainerbattle_single TRAINER_AUSTINA_SINNOH, Route205_South_Text_KelseyIntro, Route205_South_Text_KelseyDefeat
@@ -106,8 +106,8 @@ Route205_South_Text_KelseyPost::
 	.string "appreciate it!$"
 
 Route205_South_Text_KelseyDefeat::
-	.string "I... I concede! I think you're on a\n"
-	.string "different level...$"
+	.string "I… I concede! I think you're on a\n"
+	.string "different level…$"
 
 Route205_South_Text_KelseyIntro::
 	.string "Hiyah! There's no holding anything\n"
@@ -121,7 +121,7 @@ Route205_South_EventScript_Karina::
 	end
 
 Route205_South_Text_KarinaPost::
-	.string "Listen very closely... Can you hear the\n"
+	.string "Listen very closely… Can you hear the\n"
 	.string "cries of POKéMON?$"
 
 Route205_South_EventScript_Karina_Rematch::
@@ -179,11 +179,11 @@ Route205_South_EventScript_Girl::
 Route205_South_Text_Girl::
 	.string "Help, help, TRAINER! Please, I want to\n"
 	.string "see my papa.\p"
-	.string "My papa and I lived at the Valley\n"
-	.string "Windworks.\p"
+	.string "My papa and I lived at the VALLEY\n"
+	.string "WINDWORKS.\p"
 	.string "But then a whole bunch of people\n"
-	.string "dressed like spacemen came...\p"
-	.string "They kicked me out, and they’re making\n"
+	.string "dressed like spacemen came…\p"
+	.string "They kicked me out, and they're making\n"
 	.string "my papa do something.\p"
 	.string "Please, TRAINER! I miss my papa!$"
 

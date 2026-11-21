@@ -42,7 +42,7 @@ VeilstoneCity_DepartmentStore_1F_EventScript_PtNpc4::
 	end
 
 VeilstoneCity_DepartmentStore_1F_Text_PtNpc4::
-	.string "It’s a that.\p"
+	.string "It's a that.\p"
 	.string "It will give your POKéMON a different\n"
 	.string "look for CONTESTS.$"
 
@@ -74,7 +74,7 @@ VeilstoneCity_DepartmentStore_1F_EventScript_PtSign2::
 
 VeilstoneCity_DepartmentStore_1F_Text_PtSign2::
 	.string "B1F: Food & Produce\p"
-	.string "1F: TRAINERS’ Zone\p"
+	.string "1F: TRAINERS' Zone\p"
 	.string "2F: Battle Collection\p"
 	.string "3F: TM Corner\p"
 	.string "4F: Poké Dolls & Goods\p"

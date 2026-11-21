@@ -73,11 +73,11 @@ AmitySquare_EventScript_PtNpc7::
 	end
 
 AmitySquare_Text_PtNpc7_0::
-	.string "Ooh, I just can’t believe it! I’m so\n"
+	.string "Ooh, I just can't believe it! I'm so\n"
 	.string "overjoyed with my PIKACHU!\p"
 	.string "Wherever I go, my PIKACHU follows me\n"
 	.string "without hesitation!\p"
-	.string "Ahaha! It’s just the two of us! Woohoo!$"
+	.string "Ahaha! It's just the two of us! Woohoo!$"
 
 AmitySquare_EventScript_PtNpc8::
 	lock
@@ -110,8 +110,8 @@ AmitySquare_EventScript_PtNpc10::
 	end
 
 AmitySquare_Text_PtNpc10_0::
-	.string "There is something shiny in CLEFAIRY’s\n"
-	.string "hands...$"
+	.string "There is something shiny in CLEFAIRY's\n"
+	.string "hands…$"
 
 AmitySquare_EventScript_SNDailyGift::
 	lock
@@ -150,7 +150,7 @@ AmitySquare_EventScript_SNDailyGift_B0::
 
 AmitySquare_EventScript_SNDailyGift_Hello::
 	.string "My POKéMON keeps finding things on our\n"
-	.string "walks! Here, you can have today’s find!$"
+	.string "walks! Here, you can have today's find!$"
 
 AmitySquare_EventScript_SNDailyGift_Done::
 	msgbox AmitySquare_EventScript_SNDailyGift_DoneT, MSGBOX_DEFAULT

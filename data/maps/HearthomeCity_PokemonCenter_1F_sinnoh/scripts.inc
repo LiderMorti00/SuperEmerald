@@ -21,7 +21,7 @@ HearthomeCity_PokemonCenter_1F_EventScript_PtNpc1::
 HearthomeCity_PokemonCenter_1F_Text_PtNpc1_0::
 	.string "Have you checked out the Global\n"
 	.string "Terminal in JUBILIFE CITY?\p"
-	.string "They say it links trainers from\n"
+	.string "They say it links TRAINERS from\n"
 	.string "every region. It's wicked!$"
 
 HearthomeCity_PokemonCenter_1F_EventScript_PtNpc2::
@@ -33,7 +33,7 @@ HearthomeCity_PokemonCenter_1F_EventScript_PtNpc2::
 
 HearthomeCity_PokemonCenter_1F_Text_PtNpc2_0::
 	.string "Hello, do you have a POKéBLOCK CASE?\p"
-	.string "If you haven’t got one, you really must\n"
+	.string "If you haven't got one, you really must\n"
 	.string "visit the POKéMON Fan Club.$"
 
 HearthomeCity_PokemonCenter_1F_EventScript_PtNpc3::

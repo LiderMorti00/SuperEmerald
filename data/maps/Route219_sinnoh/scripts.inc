@@ -13,7 +13,7 @@ Route219_Text_TrentonPost::
 	.string "But that old guy looks kind of scary.$"
 
 Route219_Text_TrentonDefeat::
-	.string "I'm drifting away...$"
+	.string "I'm drifting away…$"
 
 Route219_Text_TrentonIntro::
 	.string "I love my inflatable tube. So I admire\n"
@@ -29,7 +29,7 @@ Route219_Text_MarielPost::
 	.string "really kindhearted.$"
 
 Route219_Text_MarielDefeat::
-	.string "They weren't tough, my POKéMON...$"
+	.string "They weren't tough, my POKéMON…$"
 
 Route219_Text_MarielIntro::
 	.string "I can't swim without my inflatable\n"

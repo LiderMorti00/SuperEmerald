@@ -453,7 +453,7 @@ SE_Text_RequestJohtoDone:
 	.string "CELADON CITY studies JOHTO POKéMON.$"
 
 SE_Text_RequestKantoIntro:
-	.string "You're the trainer who beat the\n"
+	.string "You're the TRAINER who beat the\n"
 	.string "JOHTO LEAGUE! What luck!\p"
 	.string "I'm researching POKéMON that live\n"
 	.string "in JOHTO but not in KANTO.\p"
@@ -479,7 +479,7 @@ SE_Text_RequestKantoDone:
 	.string "SINNOH, is studying KANTO POKéMON.$"
 
 SE_Text_RequestSinnohIntro:
-	.string "Wow, a trainer who's been to HOENN,\n"
+	.string "Wow, a TRAINER who's been to HOENN,\n"
 	.string "JOHTO and KANTO!\p"
 	.string "I'm writing a book about POKéMON\n"
 	.string "from KANTO. Could you help me?\p"
@@ -501,7 +501,7 @@ SE_Text_RequestSinnoh2:
 SE_Text_RequestSinnohDone:
 	.string "My book about KANTO POKéMON is\n"
 	.string "finished, all thanks to you!\p"
-	.string "You really are a trainer of the\n"
+	.string "You really are a TRAINER of the\n"
 	.string "whole WORLD.$"
 
 SE_Text_RequestNotYet:

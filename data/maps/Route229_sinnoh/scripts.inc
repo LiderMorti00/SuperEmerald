@@ -68,7 +68,7 @@ Route229_Text_SandraDefeat::
 	.string "You won't let me win?$"
 
 Route229_Text_SandraIntro::
-	.string "When eyes meet... That's when a battle\n"
+	.string "When eyes meet… That's when a battle\n"
 	.string "starts!$"
 
 Route229_EventScript_PtNpc1::

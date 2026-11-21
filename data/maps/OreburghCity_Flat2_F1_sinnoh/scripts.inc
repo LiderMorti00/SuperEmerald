@@ -22,7 +22,7 @@ OreburghCity_Flat2_F1_EventScript_SNTradeKazza_Wrong::
 	end
 
 OreburghCity_Flat2_F1_EventScript_SNTradeKazza_WrongT::
-	.string "That’s not a {STR_VAR_1}...$"
+	.string "That's not a {STR_VAR_1}…$"
 
 OreburghCity_Flat2_F1_EventScript_SNTradeKazza_No::
 	msgbox OreburghCity_Flat2_F1_EventScript_SNTradeKazza_NoT, MSGBOX_DEFAULT
@@ -30,7 +30,7 @@ OreburghCity_Flat2_F1_EventScript_SNTradeKazza_No::
 	end
 
 OreburghCity_Flat2_F1_EventScript_SNTradeKazza_NoT::
-	.string "Oh... That’s too bad.$"
+	.string "Oh… That's too bad.$"
 
 OreburghCity_Flat2_F1_EventScript_SNTradeKazza_Ask::
 	.string "Do you have a {STR_VAR_1}? Would you\n"
@@ -43,7 +43,7 @@ OreburghCity_Flat2_F1_EventScript_SNTradeKazza_Done::
 
 OreburghCity_Flat2_F1_EventScript_SNTradeKazza_DoneT::
 	.string "Our POKéMON are getting along great\n"
-	.string "with their new TRAINERS, don’t you\l"
+	.string "with their new TRAINERS, don't you\l"
 	.string "think?$"
 
 OreburghCity_Flat2_F1_EventScript_PtNpc2::
@@ -66,7 +66,7 @@ OreburghCity_Flat2_F1_EventScript_PtNpc2_No::
 	end
 
 OreburghCity_Flat2_F1_Text_PtNpc2_No::
-	.string "Oh, OK... Well, I can't make you trade\n"
+	.string "Oh, OK… Well, I can't make you trade\n"
 	.string "me.\p"
 	.string "But if you change your mind, I'll be\n"
 	.string "right here waiting!$"

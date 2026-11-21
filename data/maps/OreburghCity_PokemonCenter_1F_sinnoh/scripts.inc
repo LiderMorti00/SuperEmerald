@@ -16,7 +16,7 @@ OreburghCity_PokemonCenter_1F_EventScript_PtNpc1::
 	end
 
 OreburghCity_PokemonCenter_1F_Text_PtNpc1::
-	.string "I sense a strong TRAINER... Could\n"
+	.string "I sense a strong TRAINER… Could\n"
 	.string "it be you?$"
 
 OreburghCity_PokemonCenter_1F_EventScript_PtNpc2::
@@ -36,7 +36,7 @@ OreburghCity_PokemonCenter_1F_EventScript_PtNpc3::
 	end
 
 OreburghCity_PokemonCenter_1F_Text_PtNpc3::
-	.string "Yay! I traded with a trainer from\n"
+	.string "Yay! I traded with a TRAINER from\n"
 	.string "JOHTO in the Union Room upstairs!$"
 
 OreburghCity_PokemonCenter_1F_EventScript_PtNpc4::
@@ -51,7 +51,7 @@ OreburghCity_PokemonCenter_1F_Text_PtNpc4::
 	.string "Hmmm! What, or who, is this TEAM\n"
 	.string "GALACTIC?!\p"
 	.string "They make wonderful claims of a dream\n"
-	.string "energy source on one hand...\p"
+	.string "energy source on one hand…\p"
 	.string "But rumor has it, they steal POKéMON\n"
 	.string "from others by force.\p"
 	.string "It's a mystery! They're mysterious!\n"
@@ -65,9 +65,9 @@ OreburghCity_PokemonCenter_1F_EventScript_PtNpc4_SNVar0::
 OreburghCity_PokemonCenter_1F_Text_PtNpc4_SNVar0::
 	.string "Hmmm! What, or who, is this Team\n"
 	.string "GALACTIC?!\p"
-	.string "Lately, they’ve renounced such acts as\n"
+	.string "Lately, they've renounced such acts as\n"
 	.string "stealing POKéMON.\p"
-	.string "They’re still involved in developing\n"
+	.string "They're still involved in developing\n"
 	.string "dream energies, but ethically now.$"
 
 OreburghCity_PokemonCenter_1F_EventScript_PtNpc5::

@@ -24,5 +24,5 @@ PastoriaCity_House3_EventScript_PtNpc2::
 	end
 
 PastoriaCity_House3_Text_PtNpc2::
-	.string "You’re good! You’d make an awesome Bug\n"
+	.string "You're good! You'd make an awesome Bug\n"
 	.string "Maniac!$"

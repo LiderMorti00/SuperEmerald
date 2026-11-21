@@ -86,7 +86,7 @@ GoldenrodUnderground_EventScript_Donald::
 GoldenrodUnderground_Text_PokemaniacDonaldAfterBattle::
 	.string "When I was walking near the BIKE\n"
 	.string "SHOP last night, I felt like I was\l"
-	.string "being watched from the rooftops...$"
+	.string "being watched from the rooftops…$"
 
 GoldenrodUnderground_Text_PokemaniacDonaldBeaten::
     .string "Gaah! I lost! That makes me mad!$"

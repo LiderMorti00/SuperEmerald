@@ -12,10 +12,10 @@ EternaCity_Gym_Text_CarolinePost::
 	.string "more than anything.$"
 
 EternaCity_Gym_Text_CarolineDefeat::
-	.string "My petals fell...$"
+	.string "My petals fell…$"
 
 EternaCity_Gym_Text_CarolineIntro::
-	.string "Welcome! Without further ado, let’s go!$"
+	.string "Welcome! Without further ado, let's go!$"
 
 EternaCity_Gym_EventScript_Jenna::
 	trainerbattle_single TRAINER_OWEN_SINNOH, EternaCity_Gym_Text_JennaIntro, EternaCity_Gym_Text_JennaDefeat
@@ -27,12 +27,12 @@ EternaCity_Gym_Text_JennaPost::
 	.string "against GRASS POKéMON.$"
 
 EternaCity_Gym_Text_JennaDefeat::
-	.string "Wilted...$"
+	.string "Wilted…$"
 
 EternaCity_Gym_Text_JennaIntro::
 	.string "My Grass-type POKéMON can dole out\n"
-	.string "some serious special attacks...\p"
-	.string "I won’t let you win...easily!$"
+	.string "some serious special attacks…\p"
+	.string "I won't let you win…easily!$"
 
 EternaCity_Gym_EventScript_Angela::
 	trainerbattle_single TRAINER_WARREN_SINNOH, EternaCity_Gym_Text_AngelaIntro, EternaCity_Gym_Text_AngelaDefeat
@@ -47,7 +47,7 @@ EternaCity_Gym_Text_AngelaDefeat::
 	.string "You're really strong!$"
 
 EternaCity_Gym_Text_AngelaIntro::
-	.string "You can’t win when you’re distracted by\n"
+	.string "You can't win when you're distracted by\n"
 	.string "the lovely aromas of POKéMON!$"
 
 EternaCity_Gym_EventScript_Gardenia::
@@ -59,8 +59,8 @@ EternaCity_Gym_EventScript_Gardenia::
 	end
 
 EternaCity_Gym_Text_GardeniaPost::
-	.string "Yup! If there’s one thing I can tell\n"
-	.string "about you, it’s this!\p"
+	.string "Yup! If there's one thing I can tell\n"
+	.string "about you, it's this!\p"
 	.string "You and your POKéMON are gonna get\n"
 	.string "even tougher, and I mean seriously!$"
 
@@ -76,18 +76,18 @@ EternaCity_Gym_EventScript_GiveTM::
 EternaCity_Gym_Text_TMInfo::
 	.string "That TM86 contains the move GRASS\n"
 	.string "KNOT.\p"
-	.string "It’s one of my favorite moves.\p"
+	.string "It's one of my favorite moves.\p"
 	.string "The heavier the foe, the more damage\n"
 	.string "this move will cause.$"
 
 EternaCity_Gym_Text_GiveTM::
 	.string "With the Forest BADGE, your POKéMON\n"
-	.string "can use the hidden move Cut outside\p"
+	.string "can use the hidden move CUT outside\p"
 	.string "of battle.\p"
 	.string "Now that you have two GYM BADGES, all\n"
 	.string "POKéMON you received in trades\p"
 	.string "will obey you up to Lv. 30.\p"
-	.string "I’ve also got something else. It’s a\n"
+	.string "I've also got something else. It's a\n"
 	.string "gift from me!$"
 
 EternaCity_Gym_EventScript_GardeniaDefeated::
@@ -104,24 +104,24 @@ EternaCity_Gym_Text_ReceivedBadge::
 	.string "from GARDENIA!$"
 
 EternaCity_Gym_Text_GardeniaDefeat::
-	.string "I might’ve said it before, but you’re\n"
+	.string "I might've said it before, but you're\n"
 	.string "really tough!\p"
-	.string "Wasn’t it hard for you to raise your\n"
+	.string "Wasn't it hard for you to raise your\n"
 	.string "POKéMON to be so good?\p"
-	.string "I guess that’s a measure of how much\n"
+	.string "I guess that's a measure of how much\n"
 	.string "you love your POKéMON.\p"
 	.string "In recognition of that, I proudly grant\n"
 	.string "you this!$"
 
 EternaCity_Gym_Text_GardeniaIntro::
 	.string "You kept me waiting!\p"
-	.string "I’m ETERNA’s GYM LEADER, GARDENIA, the\n"
+	.string "I'm ETERNA's GYM LEADER, GARDENIA, the\n"
 	.string "Grass-type master!\p"
 	.string "When I first saw you, I was convinced\n"
-	.string "you’d find your way to me.\p"
+	.string "you'd find your way to me.\p"
 	.string "My hunch was right on the money. You\n"
 	.string "have a winning aura about you.\p"
-	.string "So, anyway, this will be fun. Let’s have\n"
+	.string "So, anyway, this will be fun. Let's have\n"
 	.string "our battle!$"
 
 EternaCity_Gym_EventScript_SNRematch::
@@ -141,10 +141,10 @@ EternaCity_Gym_EventScript_SNRematch_After::
 	.string "anytime for another match!$"
 
 EternaCity_Gym_EventScript_SNRematch_Defeat::
-	.string "Amazing... You really are the CHAMPION!$"
+	.string "Amazing… You really are the CHAMPION!$"
 
 EternaCity_Gym_EventScript_SNRematch_Go::
-	.string "Then I won’t hold back this time!$"
+	.string "Then I won't hold back this time!$"
 
 EternaCity_Gym_EventScript_SNRematch_No::
 	msgbox EternaCity_Gym_EventScript_SNRematch_NoT, MSGBOX_DEFAULT
@@ -152,12 +152,12 @@ EternaCity_Gym_EventScript_SNRematch_No::
 	end
 
 EternaCity_Gym_EventScript_SNRematch_NoT::
-	.string "Come back whenever you’re ready!$"
+	.string "Come back whenever you're ready!$"
 
 EternaCity_Gym_EventScript_SNRematch_Ask::
 	.string "GARDENIA: You became the CHAMPION!\n"
 	.string "Welcome back!\p"
-	.string "I’ve been training even harder since\n"
+	.string "I've been training even harder since\n"
 	.string "our last battle.\p"
 	.string "Will you battle me again?$"
 
@@ -184,9 +184,9 @@ EternaCity_Gym_Text_SNGuideInfo::
 	.string "GARDENIA!$"
 
 EternaCity_Gym_Text_Guide::
-	.string "Hey, there! How’s it going,\n"
+	.string "Hey, there! How's it going,\n"
 	.string "CHAMP-to-be?\p"
-	.string "I’m the GYM guide! I help out TRAINERS\n"
+	.string "I'm the GYM guide! I help out TRAINERS\n"
 	.string "who come to challenge the GYM LEADER.$"
 
 EternaCity_Gym_EventScript_GuideWon::
@@ -195,11 +195,11 @@ EternaCity_Gym_EventScript_GuideWon::
 	end
 
 EternaCity_Gym_Text_GuideWon::
-	.string "Oh! {PLAYER}! You’ve beaten the GYM\n"
+	.string "Oh! {PLAYER}! You've beaten the GYM\n"
 	.string "LEADER!\p"
 	.string "Your POKéMON look much tougher than\n"
 	.string "when they went in, too!\p"
-	.string "At least that’s how I see it!$"
+	.string "At least that's how I see it!$"
 
 EternaCity_Gym_EventScript_GymStatue::
 	lockall

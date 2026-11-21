@@ -8,15 +8,15 @@ WaywardCave_1F_EventScript_Diego::
 	end
 
 WaywardCave_1F_Text_DiegoPost::
-	.string "I’m not lost, I tell you! I’m camping!\n"
-	.string "That’s my story!$"
+	.string "I'm not lost, I tell you! I'm camping!\n"
+	.string "That's my story!$"
 
 WaywardCave_1F_Text_DiegoDefeat::
-	.string "You didn’t really have to win! I’m not\n"
+	.string "You didn't really have to win! I'm not\n"
 	.string "going to guide you now!$"
 
 WaywardCave_1F_Text_DiegoIntro::
-	.string "Humph! You’re lost, aren’t you? I’ll\n"
+	.string "Humph! You're lost, aren't you? I'll\n"
 	.string "guide you if you can beat me.$"
 
 WaywardCave_1F_EventScript_Tori::
@@ -27,11 +27,11 @@ WaywardCave_1F_EventScript_Tori::
 WaywardCave_1F_Text_ToriPost::
 	.string "I just wanted to have a picnic under\n"
 	.string "the Cycling Road.\p"
-	.string "I didn’t think I would get lost in a\n"
-	.string "place like this...$"
+	.string "I didn't think I would get lost in a\n"
+	.string "place like this…$"
 
 WaywardCave_1F_Text_ToriDefeat::
-	.string "OK, so we’re both TRAINERS. That’s a\n"
+	.string "OK, so we're both TRAINERS. That's a\n"
 	.string "start, right?$"
 
 WaywardCave_1F_Text_ToriIntro::
@@ -44,16 +44,16 @@ WaywardCave_1F_EventScript_Cassidy::
 	end
 
 WaywardCave_1F_Text_CassidyPost::
-	.string "Speaking of crying, I’m positive I\n"
+	.string "Speaking of crying, I'm positive I\n"
 	.string "heard crying from deeper in the cave.$"
 
 WaywardCave_1F_Text_CassidyDefeat::
-	.string "Sniffle... W-who’s crying now?$"
+	.string "Sniffle… W-who's crying now?$"
 
 WaywardCave_1F_Text_CassidyIntro::
-	.string "Hush now, lost little POKéMON, don’t\n"
+	.string "Hush now, lost little POKéMON, don't\n"
 	.string "you cry.\p"
-	.string "I’m here to take care of you!$"
+	.string "I'm here to take care of you!$"
 
 WaywardCave_1F_EventScript_Wayne::
 	trainerbattle_single TRAINER_WILTON_1_SINNOH, WaywardCave_1F_Text_WayneIntro, WaywardCave_1F_Text_WayneDefeat
@@ -61,7 +61,7 @@ WaywardCave_1F_EventScript_Wayne::
 	end
 
 WaywardCave_1F_Text_WaynePost::
-	.string "I’m playing hide-and-seek here. I like\n"
+	.string "I'm playing hide-and-seek here. I like\n"
 	.string "some underground tag, too.$"
 
 WaywardCave_1F_Text_WayneDefeat::
@@ -77,7 +77,7 @@ WaywardCave_1F_EventScript_Reginald::
 	end
 
 WaywardCave_1F_Text_ReginaldPost::
-	.string "Me? No, I’m not lost. I live here!$"
+	.string "Me? No, I'm not lost. I live here!$"
 
 WaywardCave_1F_Text_ReginaldDefeat::
 	.string "I strayed from the battle plan!$"
@@ -91,18 +91,18 @@ WaywardCave_1F_EventScript_Terry::
 	end
 
 WaywardCave_1F_Text_TerryPost::
-	.string "I’m very picky, so I want to collect\n"
-	.string "every POKéMON without anyone’s help.\p"
-	.string "...I do have friends, though. No,\n"
+	.string "I'm very picky, so I want to collect\n"
+	.string "every POKéMON without anyone's help.\p"
+	.string "…I do have friends, though. No,\n"
 	.string "seriously! I do!$"
 
 WaywardCave_1F_Text_TerryDefeat::
-	.string "You didn’t have a single POKéMON I\n"
-	.string "wanted... You’re no Collector!$"
+	.string "You didn't have a single POKéMON I\n"
+	.string "wanted… You're no Collector!$"
 
 WaywardCave_1F_Text_TerryIntro::
 	.string "You look like you might just have the\n"
-	.string "POKéMON I’ve been looking for!$"
+	.string "POKéMON I've been looking for!$"
 
 WaywardCave_1F_EventScript_Ana::
 	trainerbattle_single TRAINER_WILTON_4_SINNOH, WaywardCave_1F_Text_AnaIntro, WaywardCave_1F_Text_AnaDefeat
@@ -110,11 +110,11 @@ WaywardCave_1F_EventScript_Ana::
 	end
 
 WaywardCave_1F_Text_AnaPost::
-	.string "Why have a picnic here? I don’t know.\n"
-	.string "There’s no deep meaning to it.$"
+	.string "Why have a picnic here? I don't know.\n"
+	.string "There's no deep meaning to it.$"
 
 WaywardCave_1F_Text_AnaDefeat::
-	.string "That wasn’t any fun for me!$"
+	.string "That wasn't any fun for me!$"
 
 WaywardCave_1F_Text_AnaIntro::
 	.string "What every good picnic needs is a cute\n"
@@ -127,18 +127,18 @@ WaywardCave_1F_EventScript_Parker::
 	end
 
 WaywardCave_1F_Text_ParkerPost::
-	.string "I got separated from my friends...\p"
-	.string "I’ve got my POKéMON with me, so I’m OK,\n"
-	.string "but...$"
+	.string "I got separated from my friends…\p"
+	.string "I've got my POKéMON with me, so I'm OK,\n"
+	.string "but…$"
 
 WaywardCave_1F_Text_ParkerDefeat::
-	.string "Lost? There’s nothing lost about this\n"
+	.string "Lost? There's nothing lost about this\n"
 	.string "kid!$"
 
 WaywardCave_1F_Text_ParkerIntro::
-	.string "Huh? Are you lost too? No? It doesn’t\n"
+	.string "Huh? Are you lost too? No? It doesn't\n"
 	.string "matter.\p"
-	.string "Let’s have a quick POKéMON battle!$"
+	.string "Let's have a quick POKéMON battle!$"
 
 WaywardCave_1F_EventScript_Gerald::
 	trainerbattle_single TRAINER_BROOKE_1_SINNOH, WaywardCave_1F_Text_GeraldIntro, WaywardCave_1F_Text_GeraldDefeat
@@ -146,17 +146,17 @@ WaywardCave_1F_EventScript_Gerald::
 	end
 
 WaywardCave_1F_Text_GeraldPost::
-	.string "I’ve scoured every inch of this place...\n"
+	.string "I've scoured every inch of this place…\n"
 	.string "Most of it while I was lost.\p"
-	.string "Anyway, if there’s one thing I can say,\n"
-	.string "this place can’t be called ruins!$"
+	.string "Anyway, if there's one thing I can say,\n"
+	.string "this place can't be called ruins!$"
 
 WaywardCave_1F_Text_GeraldDefeat::
-	.string "Your awesome power... It’s mystifying.$"
+	.string "Your awesome power… It's mystifying.$"
 
 WaywardCave_1F_Text_GeraldIntro::
-	.string "In deep tunnels and caves, there’re a\n"
-	.string "couple things you’re sure to see.\p"
+	.string "In deep tunnels and caves, there're a\n"
+	.string "couple things you're sure to see.\p"
 	.string "ZUBAT and Ruin Maniacs!$"
 
 WaywardCave_1F_EventScript_Lorenzo::
@@ -165,19 +165,19 @@ WaywardCave_1F_EventScript_Lorenzo::
 	end
 
 WaywardCave_1F_Text_LorenzoPost::
-	.string "I hear there’s a POKéMON that has\n"
+	.string "I hear there's a POKéMON that has\n"
 	.string "mushrooms growing on its back.\p"
 	.string "Not around here, somewhere far away. I\n"
 	.string "wonder if they taste any good?$"
 
 WaywardCave_1F_Text_LorenzoDefeat::
-	.string "Bleff! Hurk! I think...I’m getting\n"
-	.string "better...$"
+	.string "Bleff! Hurk! I think…I'm getting\n"
+	.string "better…$"
 
 WaywardCave_1F_Text_LorenzoIntro::
 	.string "Wandering around, I got hungry, so I\n"
-	.string "ate some wild mushrooms...\p"
-	.string "They gave me gas, and now I can’t stop\n"
+	.string "ate some wild mushrooms…\p"
+	.string "They gave me gas, and now I can't stop\n"
 	.string "burping! Bluurrf!$"
 
 WaywardCave_1F_EventScript_SNMira::
@@ -202,7 +202,7 @@ WaywardCave_1F_EventScript_SNMira_Join::
 	end
 
 WaywardCave_1F_EventScript_SNMira_T4::
-	.string "MIRA: I’ll keep your POKéMON healthy all\n"
+	.string "MIRA: I'll keep your POKéMON healthy all\n"
 	.string "the time!$"
 
 WaywardCave_1F_EventScript_SNMira_T3::
@@ -224,7 +224,7 @@ WaywardCave_1F_EventScript_SNMiraTalkEnd::
 
 WaywardCave_1F_EventScript_SNMira_T7::
 	.string "MIRA: {PLAYER}, did you get to be so\n"
-	.string "good because you’re always with\p"
+	.string "good because you're always with\p"
 	.string "your POKéMON?\p"
 	.string "Yes! That has to be it! MIRA will try\n"
 	.string "like you!$"
@@ -234,7 +234,7 @@ WaywardCave_1F_EventScript_SNMiraTalk1::
 	goto WaywardCave_1F_EventScript_SNMiraTalkEnd
 
 WaywardCave_1F_EventScript_SNMira_T6::
-	.string "MIRA: This cave... It’s so easy to get\n"
+	.string "MIRA: This cave… It's so easy to get\n"
 	.string "confused.\p"
 	.string "Do you know where we are?$"
 
@@ -244,14 +244,14 @@ WaywardCave_1F_EventScript_SNMiraTalk0::
 
 WaywardCave_1F_EventScript_SNMira_T5::
 	.string "MIRA: I like helpful POKéMON moves like\n"
-	.string "Growl and Minimize.\p"
+	.string "Growl and MINIMIZE.\p"
 	.string "Those kinds of moves are my favorites.$"
 
 WaywardCave_1F_EventScript_SNMira_T1::
-	.string "I’m MIRA...\p"
+	.string "I'm MIRA…\p"
 	.string "I was catching POKéMON, and then I got\n"
-	.string "lost...\p"
-	.string "I’m so scared...\p"
+	.string "lost…\p"
+	.string "I'm so scared…\p"
 	.string "Please! Please take me to the exit!$"
 
 WaywardCave_1F_EventScript_SNMira_Again::

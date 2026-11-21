@@ -29,10 +29,10 @@ Route208_EventScript_Alexander::
 Route208_Text_AlexanderPost::
 	.string "Here's good advice from the Echo Man!\p"
 	.string "If you're at a loss as to where you\n"
-	.string "should be going, check the Town Map!$"
+	.string "should be going, check the TOWN MAP!$"
 
 Route208_Text_AlexanderDefeat::
-	.string "Ohh... Yo... Yodelay...$"
+	.string "Ohh… Yo… Yodelay…$"
 
 Route208_Text_AlexanderIntro::
 	.string "They call me the Echo Man! Battle with\n"
@@ -44,14 +44,14 @@ Route208_EventScript_Jonathan::
 	end
 
 Route208_Text_JonathanPost::
-	.string "Sigh... I feel even hungrier... Maybe\n"
-	.string "I'll chow down some Berries...\p"
+	.string "Sigh… I feel even hungrier… Maybe\n"
+	.string "I'll chow down some Berries…\p"
 	.string "But that's kind of gross. What am I, a\n"
 	.string "POKéMON?$"
 
 Route208_Text_JonathanDefeat::
 	.string "We were starved for food, and now\n"
-	.string "we're starved for a win...$"
+	.string "we're starved for a win…$"
 
 Route208_Text_JonathanIntro::
 	.string "If I beat you, will you share some food\n"
@@ -65,13 +65,13 @@ Route208_EventScript_Kyle::
 Route208_Text_KylePost::
 	.string "It's obvious I need to train myself\n"
 	.string "and my POKéMON harder.\p"
-	.string "Hey, if you've got a Vs. Seeker, you'd\n"
+	.string "Hey, if you've got a VS. SEEKER, you'd\n"
 	.string "better put it to good use.\p"
 	.string "Nothing beats some repeated battling\n"
 	.string "for toughening up your POKéMON.$"
 
 Route208_Text_KyleDefeat::
-	.string "We got pulverized...$"
+	.string "We got pulverized…$"
 
 Route208_Text_KyleIntro::
 	.string "This karate man's going to pulverize\n"
@@ -83,15 +83,15 @@ Route208_EventScript_Cody::
 	end
 
 Route208_Text_CodyPost::
-	.string "You need a Good Rod if you want to\n"
+	.string "You need a GOOD ROD if you want to\n"
 	.string "catch good POKéMON.$"
 
 Route208_Text_CodyDefeat::
 	.string "Restraint is my favorite word.\n"
-	.string "Like...from crushing my opponents.$"
+	.string "Like…from crushing my opponents.$"
 
 Route208_Text_CodyIntro::
-	.string "Muhihi... I'll haul you up and out!$"
+	.string "Muhihi… I'll haul you up and out!$"
 
 Route208_EventScript_Hannah::
 	trainerbattle_single TRAINER_NAOMI_SINNOH, Route208_Text_HannahIntro, Route208_Text_HannahDefeat
@@ -110,7 +110,7 @@ Route208_Text_HannahDefeat::
 Route208_Text_HannahIntro::
 	.string "Oh, you want to have a battle?\p"
 	.string "I was meaning to enter a CONTEST, but\n"
-	.string "beating you won't take long...$"
+	.string "beating you won't take long…$"
 
 Route208_EventScript_William::
 	trainerbattle_single TRAINER_MELISSA_SINNOH, Route208_Text_WilliamIntro, Route208_Text_WilliamDefeat
@@ -122,7 +122,7 @@ Route208_EventScript_William::
 Route208_Text_WilliamPost::
 	.string "That battle will surely become a\n"
 	.string "stupendous masterpiece painting!\p"
-	.string "I shall title it...\p"
+	.string "I shall title it…\p"
 	.string "“My POKéMON Is Fight”!$"
 
 Route208_EventScript_William_Rematch::
@@ -151,7 +151,7 @@ Route208_EventScript_PtNpc1::
 	end
 
 Route208_Text_PtNpc1::
-	.string "...Don't say a word. Just take it.$"
+	.string "…Don't say a word. Just take it.$"
 
 Route208_EventScript_PtNpc1_Received::
 	msgbox Route208_Text_PtNpc1_Received, MSGBOX_DEFAULT

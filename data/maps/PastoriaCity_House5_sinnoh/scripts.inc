@@ -22,4 +22,4 @@ PastoriaCity_House5_Text_PtNpc2_0::
 	.string "My sister gathers Berries every day!\n"
 	.string "Please come visit again!\p"
 	.string "We cook the Berries, too! We mix them\n"
-	.string "up! They’re yummy!$"
+	.string "up! They're yummy!$"

@@ -10,8 +10,8 @@ EternaCity_GalacticBuilding_3F_Text_GruntOrdinary::
 	.string "Ordinary people like you can't\n"
 	.string "understand TEAM GALACTIC's grand\l"
 	.string "designs!\p"
-	.string "Come to think of it... I don't even know\n"
-	.string "what's going on...$"
+	.string "Come to think of it… I don't even know\n"
+	.string "what's going on…$"
 
 EternaCity_GalacticBuilding_3F_EventScript_Grunt::
 	trainerbattle_single TRAINER_BRENDAN_RUSTBORO_TREECKO_SINNOH, EternaCity_GalacticBuilding_3F_Text_GruntIntro, EternaCity_GalacticBuilding_3F_Text_GruntDefeat
@@ -46,7 +46,7 @@ EternaCity_GalacticBuilding_3F_Text_TravonPost::
 	.string "humor, power, awe, and tragedy!$"
 
 EternaCity_GalacticBuilding_3F_Text_TravonDefeat::
-	.string "This won't go unpunished...$"
+	.string "This won't go unpunished…$"
 
 EternaCity_GalacticBuilding_3F_Text_TravonIntro::
 	.string "Our mission is to implement our\n"

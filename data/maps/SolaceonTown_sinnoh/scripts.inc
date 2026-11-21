@@ -20,7 +20,7 @@ SolaceonTown_EventScript_PtNpc1_SNVar0::
 	end
 
 SolaceonTown_Text_PtNpc1_SNVar0::
-	.string "Howdy, traveling TRAINER. There’s\n"
+	.string "Howdy, traveling TRAINER. There's\n"
 	.string "nothing here.\p"
 	.string "Well, nothing but plenty of time to\n"
 	.string "think, anyway.\p"
@@ -42,7 +42,7 @@ SolaceonTown_EventScript_PtNpc3::
 	end
 
 SolaceonTown_Text_PtNpc3::
-	.string "Breathing in this refreshing air... It\n"
+	.string "Breathing in this refreshing air… It\n"
 	.string "perks up POKéMON, don't you think?$"
 
 SolaceonTown_EventScript_PtNpc4::
@@ -50,7 +50,7 @@ SolaceonTown_EventScript_PtNpc4::
 	end
 
 SolaceonTown_Text_PtNpc4::
-	.string "Every Sunday, I visit the LOST TOWER...$"
+	.string "Every Sunday, I visit the LOST TOWER…$"
 
 SolaceonTown_EventScript_PtNpc5::
 	msgbox SolaceonTown_Text_PtNpc5, MSGBOX_NPC
@@ -85,7 +85,7 @@ SolaceonTown_EventScript_SNMon1Buneary::
 	end
 
 SolaceonTown_EventScript_SNMon1Buneary_Text::
-	.string "BUNEARY: Bun! Buneary!$"
+	.string "BUNEARY: Bun! BUNEARY!$"
 
 SolaceonTown_EventScript_SNMon2Buneary::
 	lock
@@ -98,7 +98,7 @@ SolaceonTown_EventScript_SNMon2Buneary::
 	end
 
 SolaceonTown_EventScript_SNMon2Buneary_Text::
-	.string "BUNEARY: Bun! Buneary!$"
+	.string "BUNEARY: Bun! BUNEARY!$"
 
 SolaceonTown_EventScript_SNMonPachirisu::
 	lock
@@ -127,23 +127,23 @@ SolaceonTown_EventScript_SNBarry::
 	end
 
 SolaceonTown_Text_SNBarry2::
-	.string "{RIVAL}: Huh? What the...\p"
-	.string "What’s this all about?\p"
-	.string "...I got some Seals, but I forgot to put\n"
+	.string "{RIVAL}: Huh? What the…\p"
+	.string "What's this all about?\p"
+	.string "…I got some Seals, but I forgot to put\n"
 	.string "them on.\p"
-	.string "Oh, right. It’s because I was at the\n"
+	.string "Oh, right. It's because I was at the\n"
 	.string "ruins.\p"
 	.string "The ruins here are cool. You have to\n"
 	.string "check it out.\p"
 	.string "I even found a Hidden Machine. It was\n"
 	.string "Defog!\p"
-	.string "Anyway, I’ll battle you another time.\n"
+	.string "Anyway, I'll battle you another time.\n"
 	.string "See ya!$"
 
 SolaceonTown_Text_SNBarry1::
 	.string "{RIVAL}: Yahoo!\p"
 	.string "{RIVAL}: Hey, {PLAYER}!\p"
-	.string "I got something cool. I’ll show you as a\n"
+	.string "I got something cool. I'll show you as a\n"
 	.string "special favor!$"
 
 SolaceonTown_EventScript_PtSign1::

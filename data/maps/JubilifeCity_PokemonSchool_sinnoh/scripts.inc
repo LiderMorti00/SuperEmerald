@@ -18,7 +18,7 @@ JubilifeCity_PokemonSchool_EventScript_PtNpc2::
 
 JubilifeCity_PokemonSchool_Text_PtNpc2::
 	.string "We learned about POKéMON types\n"
-	.string "today. Umm...\p"
+	.string "today. Umm…\p"
 	.string "Grass is weak to Fire, Fire is weak to\n"
 	.string "Water, and Water is weak to Grass!$"
 
@@ -108,7 +108,7 @@ JubilifeCity_PokemonSchool_Text_HarrisonPost::
 	.string "look!$"
 
 JubilifeCity_PokemonSchool_Text_HarrisonDefeat::
-	.string "I need to study more...$"
+	.string "I need to study more…$"
 
 JubilifeCity_PokemonSchool_Text_HarrisonIntro::
 	.string "Let's test what we learned in\n"
@@ -125,7 +125,7 @@ JubilifeCity_PokemonSchool_Text_ChristinePost::
 
 JubilifeCity_PokemonSchool_Text_ChristineDefeat::
 	.string "Maybe not the top student after\n"
-	.string "all...$"
+	.string "all…$"
 
 JubilifeCity_PokemonSchool_Text_ChristineIntro::
 	.string "I'm the top student here! Battle\n"

@@ -12,7 +12,7 @@ EternaCity_House1_Text_PtNpc1::
 	.string "Though many things have changed,\n"
 	.string "what is important has not.\p"
 	.string "I hope it remains that way forever\n"
-	.string "more...$"
+	.string "more…$"
 
 EternaCity_House1_EventScript_PtNpc2::
 	msgbox EternaCity_House1_Text_PtNpc2, MSGBOX_NPC
@@ -21,7 +21,7 @@ EternaCity_House1_EventScript_PtNpc2::
 EternaCity_House1_Text_PtNpc2::
 	.string "Have you seen the POKéMON statue?\p"
 	.string "When I was a wee child, it used to be\n"
-	.string "the centerpiece of many festivals...$"
+	.string "the centerpiece of many festivals…$"
 
 EternaCity_House1_EventScript_PtNpc3::
 	lock
@@ -35,11 +35,11 @@ EternaCity_House1_EventScript_PtNpc3::
 EternaCity_House1_Text_PtNpc3_Yes::
 	.string "The first inscription went like this,\n"
 	.string "sort of.\p"
-	.string "“...creation of DIA... ...giver of time...\p"
-	.string "“In laughter, there is tears... And,\n"
-	.string "likewise...\p"
-	.string "“The same time flows... ...the blessing\n"
-	.string "of DIA...” Yikes... I've forgotten big\l"
+	.string "“…creation of DIA… …giver of time…\p"
+	.string "“In laughter, there is tears… And,\n"
+	.string "likewise…\p"
+	.string "“The same time flows… …the blessing\n"
+	.string "of DIA…” Yikes… I've forgotten big\l"
 	.string "chunks of it.\p"
 	.string "Want to hear about the other\n"
 	.string "inscription?$"

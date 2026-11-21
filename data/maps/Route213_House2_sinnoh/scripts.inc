@@ -7,9 +7,9 @@ Route213_House2_EventScript_PtNpc1::
 	end
 
 Route213_House2_Text_PtNpc1::
-	.string "I’ve always relied on the old Coin Toss\n"
+	.string "I've always relied on the old Coin Toss\n"
 	.string "to make any decision.\p"
-	.string "It gives me courage because I’m not\n"
+	.string "It gives me courage because I'm not\n"
 	.string "accountable for my decisions.$"
 
 Route213_House2_EventScript_PtNpc2::

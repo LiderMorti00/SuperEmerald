@@ -47,8 +47,8 @@ ValleyWindoworks_Indoor_EventScript_Mars::
 ValleyWindoworks_Indoor_Text_SNPapa3::
 	.string "Papa: Oh, yes, a balloon POKéMON\n"
 	.string "appears in front of the windworks.\p"
-	.string "It’s always a certain day of the week,\n"
-	.string "but I’m not sure which day.\p"
+	.string "It's always a certain day of the week,\n"
+	.string "but I'm not sure which day.\p"
 	.string "Could its appearance have something\n"
 	.string "to do with this windworks using\p"
 	.string "wind-generated energy?$"
@@ -65,18 +65,18 @@ ValleyWindoworks_Indoor_Text_SNPapa2::
 
 ValleyWindoworks_Indoor_Text_SNGirl1::
 	.string "Little girl: Papa!\p"
-	.string "Yuck! Papa, you’re stinky! Go shower\n"
+	.string "Yuck! Papa, you're stinky! Go shower\n"
 	.string "now, stinky!$"
 
 ValleyWindoworks_Indoor_Text_SNPapa1::
-	.string "TEAM GALACTIC...\p"
+	.string "TEAM GALACTIC…\p"
 	.string "They were saying they had to gather\n"
 	.string "POKéMON and energy no matter what.\p"
 	.string "It was for creating a new universe, or\n"
 	.string "so they claimed.\p"
 	.string "Nothing they said made any sort of\n"
 	.string "sense to me.\p"
-	.string "I can’t tell you how grateful I am for\n"
+	.string "I can't tell you how grateful I am for\n"
 	.string "you saving me.\p"
 	.string "I can finally see my little daughter\n"
 	.string "again!$"
@@ -84,7 +84,7 @@ ValleyWindoworks_Indoor_Text_SNPapa1::
 ValleyWindoworks_Indoor_Text_Charon::
 	.string "CHARON: My, my. Lose to a child, will\n"
 	.string "you?\p"
-	.string "But, no matter. We’ve collected plenty\n"
+	.string "But, no matter. We've collected plenty\n"
 	.string "of electricity.\p"
 	.string "With the power we obtained, we can do\n"
 	.string "something quite spectacular.\p"
@@ -93,16 +93,16 @@ ValleyWindoworks_Indoor_Text_Charon::
 	.string "Now, MARS, we should be going.\p"
 	.string "MARS: Will you shut it!\p"
 	.string "The boss is the only person in the\n"
-	.string "world who’s allowed to order me around!\p"
+	.string "world who's allowed to order me around!\p"
 	.string "You can keep quiet around me! You only\n"
 	.string "joined us recently.\p"
-	.string "Don’t think you’re important!\p"
-	.string "MARS: I guess it’s time to say good-bye\n"
+	.string "Don't think you're important!\p"
+	.string "MARS: I guess it's time to say good-bye\n"
 	.string "and leave for the time being!$"
 
 ValleyWindoworks_Indoor_Text_MarsAfter::
 	.string "MARS: Oops! I messed that one up!\p"
-	.string "That’s all right, though. I quite\n"
+	.string "That's all right, though. I quite\n"
 	.string "enjoyed our battle.$"
 
 ValleyWindoworks_Indoor_Text_MarsDefeat::
@@ -110,18 +110,18 @@ ValleyWindoworks_Indoor_Text_MarsDefeat::
 	.string "expected.$"
 
 ValleyWindoworks_Indoor_Text_MarsIntro::
-	.string "MARS: I’m one of TEAM GALACTIC’s three\n"
+	.string "MARS: I'm one of TEAM GALACTIC's three\n"
 	.string "COMMANDERS.\p"
-	.string "...No, wait. That’s one of four\n"
+	.string "…No, wait. That's one of four\n"
 	.string "COMMANDERS.\p"
 	.string "My name is MARS!\p"
-	.string "We’ve been trying to create a new world\n"
-	.string "that’s better than this one...\p"
+	.string "We've been trying to create a new world\n"
+	.string "that's better than this one…\p"
 	.string "But people have shown little\n"
 	.string "understanding about what we do.\p"
-	.string "You don’t understand either, do you?\n"
-	.string "It’s a little saddening...\p"
-	.string "So, let’s have a battle to decide what\n"
+	.string "You don't understand either, do you?\n"
+	.string "It's a little saddening…\p"
+	.string "So, let's have a battle to decide what\n"
 	.string "we should do next.\p"
 	.string "If I win, you leave.\p"
 	.string "If you win, we, TEAM GALACTIC, will\n"
@@ -136,7 +136,7 @@ ValleyWindoworks_Indoor_EventScript_Worker::
 	end
 
 ValleyWindoworks_Indoor_Text_WorkerHelp::
-	.string "Please... stop them!$"
+	.string "Please… stop them!$"
 
 ValleyWindoworks_Indoor_EventScript_WorkerAfter::
 	msgbox ValleyWindoworks_Indoor_Text_WorkerAfter, MSGBOX_DEFAULT
@@ -146,8 +146,8 @@ ValleyWindoworks_Indoor_EventScript_WorkerAfter::
 ValleyWindoworks_Indoor_Text_WorkerAfter::
 	.string "Papa: Oh, yes, a balloon POKéMON\n"
 	.string "appears in front of the windworks.\p"
-	.string "It’s always a certain day of the week,\n"
-	.string "but I’m not sure which day.\p"
+	.string "It's always a certain day of the week,\n"
+	.string "but I'm not sure which day.\p"
 	.string "Could its appearance have something\n"
 	.string "to do with this windworks using\p"
 	.string "wind-generated energy?$"
@@ -162,7 +162,7 @@ ValleyWindoworks_Indoor_Text_G1Post::
 	.string "doing something big!$"
 
 ValleyWindoworks_Indoor_Text_G1Defeat::
-	.string "What...?! Some brat messed up my job...$"
+	.string "What…?! Some brat messed up my job…$"
 
 ValleyWindoworks_Indoor_Text_G1Intro::
 	.string "Oi! This is no fun and games! This is\n"
@@ -177,15 +177,15 @@ ValleyWindoworks_Indoor_Text_G2Post::
 	.string "You don't have an inkling of what TEAM\n"
 	.string "GALACTIC is trying to achieve!\p"
 	.string "Of course, they don't tell a grunt like\n"
-	.string "me anything, either... But still!$"
+	.string "me anything, either… But still!$"
 
 ValleyWindoworks_Indoor_Text_G2Defeat::
 	.string "I really don't like kids who also\n"
-	.string "happen to be tough TRAINERS...$"
+	.string "happen to be tough TRAINERS…$"
 
 ValleyWindoworks_Indoor_Text_G2Intro::
 	.string "Collecting electricity from the\n"
-	.string "VALLEY WINDWORKS... That's our\l"
+	.string "VALLEY WINDWORKS… That's our\l"
 	.string "mission.$"
 
 ValleyWindoworks_Indoor_EventScript_SNGirl::

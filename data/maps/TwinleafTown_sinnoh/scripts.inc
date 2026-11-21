@@ -8,7 +8,7 @@ TwinleafTown_EventScript_PtNpc1::
 
 TwinleafTown_Text_PtNpc1::
 	.string "It's true that wild POKéMON do attack\n"
-	.string "people sometimes...\p"
+	.string "people sometimes…\p"
 	.string "But, POKéMON also open their hearts\n"
 	.string "to you, so you can become friends.$"
 
@@ -44,11 +44,11 @@ TwinleafTown_EventScript_SNMailboxPlayer::
 	end
 
 TwinleafTown_Text_SNMailboxPlayer::
-	.string "{PLAYER}’s House$"
+	.string "{PLAYER}'s House$"
 
 TwinleafTown_EventScript_SNMailboxRival::
 	msgbox TwinleafTown_Text_SNMailboxRival, MSGBOX_SIGN
 	end
 
 TwinleafTown_Text_SNMailboxRival::
-	.string "{RIVAL}’s House$"
+	.string "{RIVAL}'s House$"

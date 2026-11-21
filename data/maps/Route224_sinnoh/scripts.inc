@@ -8,7 +8,7 @@ Route224_EventScript_Ruben::
 	end
 
 Route224_Text_RubenPost::
-	.string "You've won countless times... That has\n"
+	.string "You've won countless times… That has\n"
 	.string "made you very powerful.$"
 
 Route224_Text_RubenDefeat::
@@ -16,7 +16,7 @@ Route224_Text_RubenDefeat::
 	.string "expertise for sure!$"
 
 Route224_Text_RubenIntro::
-	.string "There's something about you... You're\n"
+	.string "There's something about you… You're\n"
 	.string "not just anybody.\p"
 	.string "I challenge you!$"
 
@@ -28,8 +28,8 @@ Route224_EventScript_Maxwell::
 	end
 
 Route224_Text_MaxwellPost::
-	.string "I feel... I feel some sort of a mystic\n"
-	.string "presence emanating from here...$"
+	.string "I feel… I feel some sort of a mystic\n"
+	.string "presence emanating from here…$"
 
 Route224_EventScript_Maxwell_Rematch::
 	trainerbattle_rematch TRAINER_KAYLEY_SINNOH, Route224_Text_MaxwellIntro, Route224_Text_MaxwellDefeat
@@ -37,12 +37,12 @@ Route224_EventScript_Maxwell_Rematch::
 	end
 
 Route224_Text_MaxwellDefeat::
-	.string "I see...\p"
-	.string "So that's what it means...$"
+	.string "I see…\p"
+	.string "So that's what it means…$"
 
 Route224_Text_MaxwellIntro::
 	.string "For some reason I was drawn here, and\n"
-	.string "it is here that I met you...\p"
+	.string "it is here that I met you…\p"
 	.string "I want to know what all this means!$"
 
 Route224_EventScript_Carl::
@@ -51,12 +51,12 @@ Route224_EventScript_Carl::
 	end
 
 Route224_Text_CarlPost::
-	.string "Hmm...\p"
+	.string "Hmm…\p"
 	.string "Gazing out over the sea doesn't do a\n"
 	.string "thing for toughening up my POKéMON!$"
 
 Route224_Text_CarlDefeat::
-	.string "The squad failed to hit its stride...$"
+	.string "The squad failed to hit its stride…$"
 
 Route224_Text_CarlIntro::
 	.string "All right, my POKéMON squad! Get out\n"
@@ -81,7 +81,7 @@ Route224_EventScript_Armando_Rematch::
 	end
 
 Route224_Text_ArmandoDefeat::
-	.string "I see... Simply outstanding.$"
+	.string "I see… Simply outstanding.$"
 
 Route224_Text_ArmandoIntro::
 	.string "I've seen countless TRAINERS and even\n"
@@ -96,7 +96,7 @@ Route224_EventScript_Brittney::
 	end
 
 Route224_Text_BrittneyPost::
-	.string "A place where nothing else exists...\p"
+	.string "A place where nothing else exists…\p"
 	.string "A place such as that is better suited\n"
 	.string "to awaken the power within.$"
 
@@ -106,12 +106,12 @@ Route224_EventScript_Brittney_Rematch::
 	end
 
 Route224_Text_BrittneyDefeat::
-	.string "The power that slumbers within you...\n"
-	.string "It is rather marvelous indeed...$"
+	.string "The power that slumbers within you…\n"
+	.string "It is rather marvelous indeed…$"
 
 Route224_Text_BrittneyIntro::
-	.string "There is nothing here... And yet there\n"
-	.string "is a power lurking...\p"
+	.string "There is nothing here… And yet there\n"
+	.string "is a power lurking…\p"
 	.string "Were you drawn by it, as well?$"
 
 Route224_EventScript_Jamie::
@@ -128,8 +128,8 @@ Route224_Text_JamiePost::
 	.string "additional data.$"
 
 Route224_Text_JamieDefeat::
-	.string "...Things don't always work out\n"
-	.string "according to my calculations...$"
+	.string "…Things don't always work out\n"
+	.string "according to my calculations…$"
 
 Route224_Text_JamieIntro::
 	.string "I constantly analyze POKéMON and\n"
@@ -170,7 +170,7 @@ Route224_EventScript_Hayden_Rematch::
 	end
 
 Route224_Text_HaydenDefeat::
-	.string "Your battle style... So savage...$"
+	.string "Your battle style… So savage…$"
 
 Route224_Text_HaydenIntro::
 	.string "My dragon POKéMON chose to become\n"
@@ -243,26 +243,26 @@ Route224_Text_SNOak4::
 	.string "OAK: ?! What was that POKéMON?\p"
 	.string "Is it somehow connected to the stone\n"
 	.string "tablet?\p"
-	.string "Hmm... Where did that POKéMON go? Its\n"
-	.string "destination is intriguing...$"
+	.string "Hmm… Where did that POKéMON go? Its\n"
+	.string "destination is intriguing…$"
 
 Route224_Text_SNOak3::
 	.string "{PLAYER} engraved a message of thanks\n"
-	.string "to everyone met on the journey...$"
+	.string "to everyone met on the journey…$"
 
 Route224_Text_SNMarley2::
-	.string "MARLEY: That stone tablet... It has a\n"
-	.string "strange feel to it...$"
+	.string "MARLEY: That stone tablet… It has a\n"
+	.string "strange feel to it…$"
 
 Route224_Text_SNMarley1::
-	.string "MARLEY: I... I don’t like to talk...\p"
+	.string "MARLEY: I… I don't like to talk…\p"
 	.string "I choose my words carefully, but they\n"
-	.string "may still hurt someone accidentally...\p"
-	.string "When I think of that, I clam up...\p"
-	.string "That’s why I think this certain\n"
+	.string "may still hurt someone accidentally…\p"
+	.string "When I think of that, I clam up…\p"
+	.string "That's why I think this certain\n"
 	.string "POKéMON is so wonderful.\p"
-	.string "It’s a POKéMON that conveys the\n"
-	.string "feelings of gratitude in a nice way...$"
+	.string "It's a POKéMON that conveys the\n"
+	.string "feelings of gratitude in a nice way…$"
 
 Route224_Text_SNOak2::
 	.string "OAK: I tried deciphering the\n"
@@ -272,9 +272,9 @@ Route224_Text_SNOak2::
 	.string "growing as a person on an adventure.\p"
 	.string "A TRAINER fitting that description\n"
 	.string "would be you.\p"
-	.string "That’s why I’m asking you for your help.\p"
-	.string "You’ve met many people and POKéMON;\n"
-	.string "you’ve experienced many things that\p"
+	.string "That's why I'm asking you for your help.\p"
+	.string "You've met many people and POKéMON;\n"
+	.string "you've experienced many things that\p"
 	.string "shaped you into the person you are.\p"
 	.string "I want you to sincerely tell me who\n"
 	.string "affected you the most.\p"
@@ -282,8 +282,8 @@ Route224_Text_SNOak2::
 	.string "say your thanks?$"
 
 Route224_Text_SNOak1::
-	.string "OAK: Ah, {PLAYER}! It’s good to see you!\p"
-	.string "Without any further ado, I’d like you\n"
+	.string "OAK: Ah, {PLAYER}! It's good to see you!\p"
+	.string "Without any further ado, I'd like you\n"
 	.string "to examine this stone tablet.\p"
 	.string "Something just like it was also\n"
 	.string "discovered in the KANTO region.\p"

@@ -13,7 +13,7 @@ Route207_Text_AnthonyPost::
 	.string "bring back the ancient POKéMON!$"
 
 Route207_Text_AnthonyDefeat::
-	.string "Oh... We lost...$"
+	.string "Oh… We lost…$"
 
 Route207_Text_AnthonyIntro::
 	.string "Go for it, my POKéMON! I'll do my best,\n"
@@ -31,7 +31,7 @@ Route207_Text_LaurenPost::
 	.string "Terminal?$"
 
 Route207_Text_LaurenDefeat::
-	.string "Oh... We lost...$"
+	.string "Oh… We lost…$"
 
 Route207_Text_LaurenIntro::
 	.string "Go do it, my POKéMON! I'll work hard,\n"
@@ -47,7 +47,7 @@ Route207_Text_AustinPost::
 	.string "about them getting cold.$"
 
 Route207_Text_AustinDefeat::
-	.string "I couldn't win with just energy...\n"
+	.string "I couldn't win with just energy…\n"
 	.string "Nothing's really that easy!$"
 
 Route207_Text_AustinIntro::
@@ -76,7 +76,7 @@ Route207_EventScript_Kevin::
 	end
 
 Route207_Text_KevinPost::
-	.string "Wahahahaha! ...Go ahead, laugh at\n"
+	.string "Wahahahaha! …Go ahead, laugh at\n"
 	.string "me--the loser!$"
 
 Route207_Text_KevinDefeat::
@@ -104,7 +104,7 @@ Route207_EventScript_Helen_Rematch::
 	end
 
 Route207_Text_HelenDefeat::
-	.string "Oh, yeah? Let's do this again! ...Oops.\n"
+	.string "Oh, yeah? Let's do this again! …Oops.\n"
 	.string "I'm out of POKéMON!$"
 
 Route207_Text_HelenIntro::
@@ -116,7 +116,7 @@ Route207_EventScript_PtNpc1::
 
 Route207_Text_PtNpc1::
 	.string "That slope's too slippery. You'll need\n"
-	.string "a Bike to get up.\p"
+	.string "a BIKE to get up.\p"
 	.string "You don't have a Bicycle? There's a\n"
 	.string "Cycle Shop in ETERNA CITY.$"
 
@@ -146,7 +146,7 @@ Route207_EventScript_SNCounterpart_End::
 	end
 
 Route207_EventScript_SNCounterpart_D2::
-	.string "{STR_VAR_1}: Using that Vs. Seeker, you\n"
+	.string "{STR_VAR_1}: Using that VS. SEEKER, you\n"
 	.string "can find TRAINERS who want a rematch\p"
 	.string "with you.\p"
 	.string "Oh, {PLAYER}, do you also have a\n"
@@ -155,27 +155,27 @@ Route207_EventScript_SNCounterpart_D2::
 	.string "then.\p"
 	.string "You deserve it for all your hard work,\n"
 	.string "{PLAYER}.\p"
-	.string "{STR_VAR_1}: The Dowsing Machine is\n"
+	.string "{STR_VAR_1}: The DOWSING MACHINE is\n"
 	.string "something you should touch often.\p"
 	.string "It will tell you if there is an item on\n"
-	.string "the ground that you can’t see.\p"
-	.string "I think there’s something here, even.\n"
+	.string "the ground that you can't see.\p"
+	.string "I think there's something here, even.\n"
 	.string "You should try it out.\p"
-	.string "OK, let’s keep working on our\n"
+	.string "OK, let's keep working on our\n"
 	.string "POKéDEXes.\p"
 	.string "PROFESSOR ROWAN is counting on us!$"
 
 Route207_EventScript_SNCounterpart_D1::
-	.string "{STR_VAR_1}: Hi, {PLAYER}! How’s your\n"
+	.string "{STR_VAR_1}: Hi, {PLAYER}! How's your\n"
 	.string "POKéDEX coming along?\p"
-	.string "Me? I’m somewhere between fantastic\n"
-	.string "and, uh, hopeless...\p"
-	.string "But this isn’t about me! I’ve got\n"
+	.string "Me? I'm somewhere between fantastic\n"
+	.string "and, uh, hopeless…\p"
+	.string "But this isn't about me! I've got\n"
 	.string "something nice for you.\p"
 	.string "{PLAYER}, choose which hand you want.\p"
-	.string "{STR_VAR_1}: I see... You want the Vs.\n"
+	.string "{STR_VAR_1}: I see… You want the Vs.\n"
 	.string "Seeker.\p"
-	.string "I’m impressed, {PLAYER}. You know what’s\n"
+	.string "I'm impressed, {PLAYER}. You know what's\n"
 	.string "important.$"
 
 Route207_EventScript_SNCounterpart_Lucas::
@@ -186,7 +186,7 @@ Route207_EventScript_SNCounterpart_Lucas::
 	goto Route207_EventScript_SNCounterpart_End
 
 Route207_EventScript_SNCounterpart_L2::
-	.string "{STR_VAR_1}: Using that Vs. Seeker, you\n"
+	.string "{STR_VAR_1}: Using that VS. SEEKER, you\n"
 	.string "can find TRAINERS who want to battle\l"
 	.string "with\p"
 	.string "you again.\p"
@@ -196,27 +196,27 @@ Route207_EventScript_SNCounterpart_L2::
 	.string "then.\p"
 	.string "You deserve it for all of your effort,\n"
 	.string "{PLAYER}.\p"
-	.string "{STR_VAR_1}: The Dowsing Machine is...\n"
+	.string "{STR_VAR_1}: The DOWSING MACHINE is…\n"
 	.string "Just try touching it.\p"
-	.string "It’ll alert you if there is an unseeable\n"
+	.string "It'll alert you if there is an unseeable\n"
 	.string "item on the ground.\p"
-	.string "Try it out now. I think there’s\n"
+	.string "Try it out now. I think there's\n"
 	.string "something here.\p"
 	.string "OK, keep working on your POKéDEX.\n"
 	.string "PROFESSOR ROWAN is counting on us!$"
 
 Route207_EventScript_SNCounterpart_L1::
-	.string "{STR_VAR_1}: Hey, {PLAYER}! How’s your\n"
+	.string "{STR_VAR_1}: Hey, {PLAYER}! How's your\n"
 	.string "POKéDEX coming along?\p"
-	.string "Me? I’m always doing great! ...I wish...\p"
-	.string "But that’s not important.\p"
-	.string "Lately, I’ve been experimenting with a\n"
+	.string "Me? I'm always doing great! …I wish…\p"
+	.string "But that's not important.\p"
+	.string "Lately, I've been experimenting with a\n"
 	.string "couple of neat tools.\p"
-	.string "{PLAYER}, I’ll share with you. Choose a\n"
+	.string "{PLAYER}, I'll share with you. Choose a\n"
 	.string "hand!\p"
 	.string "{STR_VAR_1}: Oh yeah. You want the Vs.\n"
 	.string "Seeker.\p"
-	.string "Yup, {PLAYER}, you know what’s\n"
+	.string "Yup, {PLAYER}, you know what's\n"
 	.string "important.$"
 
 Route207_EventScript_PtSign1::

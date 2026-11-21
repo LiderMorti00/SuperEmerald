@@ -21,7 +21,7 @@ HearthomeCity_EastGate_EventScript_PtNpc2::
 	end
 
 HearthomeCity_EastGate_Text_PtNpc2_0::
-	.string "I’m appalled! They refused entry to my\n"
+	.string "I'm appalled! They refused entry to my\n"
 	.string "POKéMON!\p"
 	.string "Oh, my poor GYARADOS and STEELIX! This\n"
 	.string "is discrimination!$"

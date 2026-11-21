@@ -22,7 +22,7 @@ EternaCity_Flat1_F1_EventScript_SNTradeCharap_Wrong::
 	end
 
 EternaCity_Flat1_F1_EventScript_SNTradeCharap_WrongT::
-	.string "That’s not a {STR_VAR_1}...$"
+	.string "That's not a {STR_VAR_1}…$"
 
 EternaCity_Flat1_F1_EventScript_SNTradeCharap_No::
 	msgbox EternaCity_Flat1_F1_EventScript_SNTradeCharap_NoT, MSGBOX_DEFAULT
@@ -30,7 +30,7 @@ EternaCity_Flat1_F1_EventScript_SNTradeCharap_No::
 	end
 
 EternaCity_Flat1_F1_EventScript_SNTradeCharap_NoT::
-	.string "Oh... That’s too bad.$"
+	.string "Oh… That's too bad.$"
 
 EternaCity_Flat1_F1_EventScript_SNTradeCharap_Ask::
 	.string "Do you have a {STR_VAR_1}? Would you\n"
@@ -43,7 +43,7 @@ EternaCity_Flat1_F1_EventScript_SNTradeCharap_Done::
 
 EternaCity_Flat1_F1_EventScript_SNTradeCharap_DoneT::
 	.string "Our POKéMON are getting along great\n"
-	.string "with their new TRAINERS, don’t you\l"
+	.string "with their new TRAINERS, don't you\l"
 	.string "think?$"
 
 EternaCity_Flat1_F1_EventScript_PtNpc2::

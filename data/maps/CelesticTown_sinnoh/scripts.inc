@@ -23,7 +23,7 @@ CelesticTown_EventScript_PtNpc3::
 	end
 
 CelesticTown_Text_PtNpc3::
-	.string "There's no POKéMON Mart in this town...\p"
+	.string "There's no POKéMON Mart in this town…\p"
 	.string "Instead, you can buy and sell items in\n"
 	.string "this house here.$"
 
@@ -50,17 +50,17 @@ CelesticTown_EventScript_SNCEL_GRUNT::
 	end
 
 CelesticTown_EventScript_SNCEL_GRUNT_Post::
-	.string "Too much to handle... I can’t do\n"
-	.string "anything here...\p"
-	.string "This place is nothing! I’ll be happily\n"
+	.string "Too much to handle… I can't do\n"
+	.string "anything here…\p"
+	.string "This place is nothing! I'll be happily\n"
 	.string "rid of this place!$"
 
 CelesticTown_EventScript_SNCEL_GRUNT_Defeat::
-	.string "Too much to handle...$"
+	.string "Too much to handle…$"
 
 CelesticTown_EventScript_SNCEL_GRUNT_Intro::
 	.string "You dare to oppose TEAM GALACTIC?\p"
-	.string "That means you’re taking on the world...\n"
+	.string "That means you're taking on the world…\n"
 	.string "No, the universe, even!$"
 
 CelesticTown_EventScript_SNCEL_GRUNT_No::
@@ -69,21 +69,21 @@ CelesticTown_EventScript_SNCEL_GRUNT_No::
 	end
 
 CelesticTown_Text_SNVerySmart::
-	.string "That’s right! Very smart! You know\n"
-	.string "what’s good for you!\p"
+	.string "That's right! Very smart! You know\n"
+	.string "what's good for you!\p"
 	.string "TEAM GALACTIC has come out to the\n"
-	.string "boonies like this for everyone’s sake.\p"
+	.string "boonies like this for everyone's sake.\p"
 	.string "Your cooperation is appreciated. Now,\n"
-	.string "where is my partner...?$"
+	.string "where is my partner…?$"
 
 CelesticTown_Text_SNWillYouMess::
-	.string "This town is insignificant! There’s\n"
+	.string "This town is insignificant! There's\n"
 	.string "nothing of value here.\p"
-	.string "It doesn’t need to exist, so I’ll blow it\n"
+	.string "It doesn't need to exist, so I'll blow it\n"
 	.string "up with a GALACTIC Bomb!\p"
-	.string "If you try to mess with me, I’ll shut\n"
+	.string "If you try to mess with me, I'll shut\n"
 	.string "you down with a POKéMON battle.\p"
-	.string "So, what’s it going to be? Are you going\n"
+	.string "So, what's it going to be? Are you going\n"
 	.string "to mess with me?$"
 
 CelesticTown_EventScript_SNCynthia::
@@ -103,9 +103,9 @@ CelesticTown_EventScript_SNCynthia::
 CelesticTown_EventScript_SNCynthia_T3::
 	.string "By the way, were the ruins fun to\n"
 	.string "explore?\p"
-	.string "If you’re interested, there is a library\n"
+	.string "If you're interested, there is a library\n"
 	.string "in CANALAVE CITY.\p"
-	.string "It’s stocked with ancient books. You\n"
+	.string "It's stocked with ancient books. You\n"
 	.string "can look up SINNOH history there.\p"
 	.string "It might help you complete your\n"
 	.string "POKéDEX, too.\p"
@@ -113,37 +113,37 @@ CelesticTown_EventScript_SNCynthia_T3::
 	.string "to go west from JUBILIFE CITY.$"
 
 CelesticTown_EventScript_SNCynthia_T2::
-	.string "But those TEAM GALACTIC people...! I\n"
+	.string "But those TEAM GALACTIC people…! I\n"
 	.string "thought they were harmless.\p"
 	.string "The bizarre ways they dress, and all\n"
 	.string "their wild claims about making a new\p"
-	.string "universe...\p"
+	.string "universe…\p"
 	.string "I thought it was just silly talk.\n"
 	.string "Nothing to take seriously.\p"
-	.string "But they’re surprisingly more trouble\n"
+	.string "But they're surprisingly more trouble\n"
 	.string "than expected.\p"
 	.string "Trying to monopolize POKéMON just\n"
-	.string "isn’t acceptable!$"
+	.string "isn't acceptable!$"
 
 CelesticTown_EventScript_SNCynthia_T1::
 	.string "CYNTHIA: Was everything all right here?\p"
 	.string "You saw those strange people with a\n"
-	.string "GALACTIC Bomb, didn’t you?$"
+	.string "GALACTIC Bomb, didn't you?$"
 
 CelesticTown_EventScript_SNElderOut::
 	msgbox CelesticTown_Text_SNOddSpaceman, MSGBOX_NPC
 	end
 
 CelesticTown_Text_SNOddSpaceman::
-	.string "There’s an odd spaceman in front of\n"
+	.string "There's an odd spaceman in front of\n"
 	.string "the ruins.\p"
-	.string "There isn’t anything there, but that\n"
+	.string "There isn't anything there, but that\n"
 	.string "only seemed to make him get angry.\p"
-	.string "He’s saying he will blow the town up\n"
-	.string "with a bomb...\p"
-	.string "The nerve of it all...\p"
-	.string "If only I were younger, I’d punish that\n"
-	.string "spaceman with my POKéMON...$"
+	.string "He's saying he will blow the town up\n"
+	.string "with a bomb…\p"
+	.string "The nerve of it all…\p"
+	.string "If only I were younger, I'd punish that\n"
+	.string "spaceman with my POKéMON…$"
 
 CelesticTown_EventScript_PtSign1::
 	msgbox CelesticTown_Text_PtSign1, MSGBOX_SIGN

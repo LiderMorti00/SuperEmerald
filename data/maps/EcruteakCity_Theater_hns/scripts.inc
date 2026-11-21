@@ -42,14 +42,14 @@ EcruteakCity_Theater_Text_SurfGuyAfter::
 	.string "But they battle only for good\n"
 	.string "reasons.\p"
 	.string "I don't know if you could beat\n"
-	.string "them if they showed their skill...$"
+	.string "them if they showed their skill…$"
 
 SE_J_EcruteakCity_Theater_hns_EcruteakCity_Theater_EventScript_SurfGuy::
 	msgbox EcruteakCity_Theater_Text_SurfGuyAfter, MSGBOX_NPC
 	end
 
 EcruteakCity_Theater_Text_Boy::
-	.string "I was supposed to be the hero...!\n"
+	.string "I was supposed to be the hero…!\n"
 	.string "So much for getting close to\l"
 	.string "a KIMONO GIRL!$"
 
@@ -72,7 +72,7 @@ EcruteakCity_Theater_Text_Psyduck::
 
 EcruteakCity_Theater_Text_Gramps::
 	.string "The KIMONO GIRLS are so\n"
-	.string "beautiful...\p"
+	.string "beautiful…\p"
 	.string "But they have to go through\n"
 	.string "rigorous training.\p"
 	.string "And they have to learn to follow\n"

@@ -8,16 +8,16 @@ SnowpointCity_Gym_B1F_EventScript_Anton::
 	end
 
 SnowpointCity_Gym_B1F_Text_AntonPost::
-	.string "You’ve battled all over, you say? That\n"
+	.string "You've battled all over, you say? That\n"
 	.string "makes you tough, perhaps.$"
 
 SnowpointCity_Gym_B1F_Text_AntonDefeat::
-	.string "What’s with your toughness?!$"
+	.string "What's with your toughness?!$"
 
 SnowpointCity_Gym_B1F_Text_AntonIntro::
 	.string "We spend all our time battling in the\n"
 	.string "blizzards of SNOWPOINT CITY.\p"
-	.string "We’ll show you how it’s toughened us\n"
+	.string "We'll show you how it's toughened us\n"
 	.string "up!$"
 
 SnowpointCity_Gym_B1F_EventScript_Savannah::
@@ -27,17 +27,17 @@ SnowpointCity_Gym_B1F_EventScript_Savannah::
 
 SnowpointCity_Gym_B1F_Text_SavannahPost::
 	.string "Your POKéMON look so hot in battle. So\n"
-	.string "hot, they’re cool! Hahah!$"
+	.string "hot, they're cool! Hahah!$"
 
 SnowpointCity_Gym_B1F_Text_SavannahDefeat::
-	.string "You were surprisingly cool... At least I\n"
+	.string "You were surprisingly cool… At least I\n"
 	.string "have my warm boots.$"
 
 SnowpointCity_Gym_B1F_Text_SavannahIntro::
-	.string "Is the GYM’s trick floor making you a\n"
+	.string "Is the GYM's trick floor making you a\n"
 	.string "little hot under the collar?\p"
-	.string "If you can’t maintain your cool in\n"
-	.string "battle, you’ll freeze up.$"
+	.string "If you can't maintain your cool in\n"
+	.string "battle, you'll freeze up.$"
 
 SnowpointCity_Gym_B1F_EventScript_Alicia::
 	trainerbattle_single TRAINER_ANNA_AND_MEG_3_SINNOH, SnowpointCity_Gym_B1F_Text_AliciaIntro, SnowpointCity_Gym_B1F_Text_AliciaDefeat
@@ -45,13 +45,13 @@ SnowpointCity_Gym_B1F_EventScript_Alicia::
 	end
 
 SnowpointCity_Gym_B1F_Text_AliciaPost::
-	.string "The TRAINER’s feelings... The POKéMON’s\n"
-	.string "feelings...\p"
+	.string "The TRAINER's feelings… The POKéMON's\n"
+	.string "feelings…\p"
 	.string "If they are one and the same, you will\n"
 	.string "never lose.$"
 
 SnowpointCity_Gym_B1F_Text_AliciaDefeat::
-	.string "That’s right. A good TRAINER will win, no\n"
+	.string "That's right. A good TRAINER will win, no\n"
 	.string "matter what the situation may be.$"
 
 SnowpointCity_Gym_B1F_Text_AliciaIntro::
@@ -65,18 +65,18 @@ SnowpointCity_Gym_B1F_EventScript_Isaiah::
 	end
 
 SnowpointCity_Gym_B1F_Text_IsaiahPost::
-	.string "I’ve battled countless TRAINERS and\n"
+	.string "I've battled countless TRAINERS and\n"
 	.string "many more POKéMON still.\p"
 	.string "My spirit has been hardened from all\n"
 	.string "the battles I have fought.$"
 
 SnowpointCity_Gym_B1F_Text_IsaiahDefeat::
-	.string "You weren’t even fazed...$"
+	.string "You weren't even fazed…$"
 
 SnowpointCity_Gym_B1F_Text_IsaiahIntro::
 	.string "My willpower was shaped and tempered\n"
 	.string "by howling blizzards.\p"
-	.string "I’ll bring it to bear on you!$"
+	.string "I'll bring it to bear on you!$"
 
 SnowpointCity_Gym_B1F_EventScript_Brenna::
 	trainerbattle_single TRAINER_ANNA_AND_MEG_5_SINNOH, SnowpointCity_Gym_B1F_Text_BrennaIntro, SnowpointCity_Gym_B1F_Text_BrennaDefeat
@@ -88,10 +88,10 @@ SnowpointCity_Gym_B1F_Text_BrennaPost::
 	.string "no limit to how far you can go.$"
 
 SnowpointCity_Gym_B1F_Text_BrennaDefeat::
-	.string "I can’t believe how tough you are!$"
+	.string "I can't believe how tough you are!$"
 
 SnowpointCity_Gym_B1F_Text_BrennaIntro::
-	.string "I’ve only been involved with POKéMON\n"
+	.string "I've only been involved with POKéMON\n"
 	.string "for a short time.\p"
 	.string "I managed to get this far because\n"
 	.string "skilled friends toughened me up!$"
@@ -104,12 +104,12 @@ SnowpointCity_Gym_B1F_EventScript_Sergio::
 SnowpointCity_Gym_B1F_Text_SergioPost::
 	.string "Up there, the ice cracks with every\n"
 	.string "step.\p"
-	.string "Cross each tile only once, or you’ll end\n"
+	.string "Cross each tile only once, or you'll end\n"
 	.string "up down here with us again!$"
 
 SnowpointCity_Gym_B1F_Text_SergioDefeat::
-	.string "This result... ...It’s cold. Bitter cold.$"
+	.string "This result… …It's cold. Bitter cold.$"
 
 SnowpointCity_Gym_B1F_Text_SergioIntro::
-	.string "...It’s t-too cold. I can’t even feel my\n"
+	.string "…It's t-too cold. I can't even feel my\n"
 	.string "t-tongue.$"

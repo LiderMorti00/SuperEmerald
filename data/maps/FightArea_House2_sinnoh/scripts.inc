@@ -14,7 +14,7 @@ FightArea_House2_Text_PtNpc1_0::
 	.string "the hardiest of the TRAINERS.\p"
 	.string "They were considered eccentric for\n"
 	.string "gathering at a place like this.\p"
-	.string "It’s hard to believe how much it’s\n"
+	.string "It's hard to believe how much it's\n"
 	.string "changed since then.\p"
 	.string "Places like the FIGHT AREA and the\n"
 	.string "SURVIVAL AREA just seemed to spring\p"
@@ -50,7 +50,7 @@ FightArea_House2_EventScript_PtNpc4::
 FightArea_House2_Text_PtNpc4::
 	.string "I am the Item Expert! I have mastery in\n"
 	.string "the way of items!\p"
-	.string "Your POKéMON... Do they hold items?\p"
+	.string "Your POKéMON… Do they hold items?\p"
 	.string "The better the item they hold, the\n"
 	.string "stronger they become.\p"
 	.string "There are items that are worthy of my\n"

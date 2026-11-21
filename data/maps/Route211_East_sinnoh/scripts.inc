@@ -29,7 +29,7 @@ Route211_East_Text_NickPost::
 	.string "TRAINER and then ambush them!$"
 
 Route211_East_Text_NickDefeat::
-	.string "I did a lot to conceal myself, too...$"
+	.string "I did a lot to conceal myself, too…$"
 
 Route211_East_Text_NickIntro::
 	.string "Speed is a ninja's best weapon! Can\n"
@@ -71,7 +71,7 @@ Route211_East_EventScript_Harry_Rematch::
 
 Route211_East_Text_HarryDefeat::
 	.string "My investigation has revealed the\n"
-	.string "TRAINER to be tough! Ouch...$"
+	.string "TRAINER to be tough! Ouch…$"
 
 Route211_East_Text_HarryIntro::
 	.string "Whilst exploring the ruins, I spotted\n"
@@ -84,9 +84,9 @@ Route211_East_EventScript_SNPtACETRAINERM::
 Route211_East_EventScript_SNPtACETRAINERM_Text::
 	.string "Let me explain how that move works\n"
 	.string "without getting too technical.\p"
-	.string "Let’s say your opponent raises its\n"
-	.string "Defense using Harden.\p"
-	.string "Your POKéMON can use Psych Up to get\n"
+	.string "Let's say your opponent raises its\n"
+	.string "Defense using HARDEN.\p"
+	.string "Your POKéMON can use PSYCH UP to get\n"
 	.string "the same Defense boost as its foe.\p"
 	.string "Basically, your POKéMON gets the same\n"
 	.string "status boosts as its target.$"

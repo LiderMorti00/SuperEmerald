@@ -15,7 +15,7 @@ Route222_Text_BrettDefeat::
 	.string "A bittersweet smile is on my lips.$"
 
 Route222_Text_BrettIntro::
-	.string "Well, I am fishing, but...\p"
+	.string "Well, I am fishing, but…\p"
 	.string "Very well! I accept your challenge!$"
 
 Route222_EventScript_Alec::
@@ -52,7 +52,7 @@ Route222_Text_GeorgePost::
 	.string "of pace for me.$"
 
 Route222_Text_GeorgeDefeat::
-	.string "I've been done in...$"
+	.string "I've been done in…$"
 
 Route222_Text_GeorgeIntro::
 	.string "I'm getting bored of fishing. Let's\n"
@@ -64,7 +64,7 @@ Route222_EventScript_Cole::
 	end
 
 Route222_Text_ColePost::
-	.string "Oh, right... I was fishing, wasn't I?$"
+	.string "Oh, right… I was fishing, wasn't I?$"
 
 Route222_Text_ColeDefeat::
 	.string "I don't know how, but I lost!$"
@@ -126,10 +126,10 @@ Route222_EventScript_Trey_Rematch::
 
 Route222_Text_TreyDefeat::
 	.string "That did liberate me from the\n"
-	.string "doldrums, but at what price...$"
+	.string "doldrums, but at what price…$"
 
 Route222_Text_TreyIntro::
-	.string "I need to escape these doldrums... You\n"
+	.string "I need to escape these doldrums… You\n"
 	.string "can keep me company.$"
 
 Route222_EventScript_Luther::
@@ -177,7 +177,7 @@ Route222_Text_HollyPost::
 	.string "bob around.$"
 
 Route222_Text_HollyDefeat::
-	.string "You're so tough. I'm stunned...$"
+	.string "You're so tough. I'm stunned…$"
 
 Route222_Text_HollyIntro::
 	.string "Listen, listen! Can you tell me what\n"
@@ -202,7 +202,7 @@ Route222_EventScript_Marc_Rematch::
 	end
 
 Route222_Text_MarcDefeat::
-	.string "Your POKéMON... They're looking good!$"
+	.string "Your POKéMON… They're looking good!$"
 
 Route222_Text_MarcIntro::
 	.string "Oh, we'll ride upon the sea, in a boat,\n"
@@ -217,9 +217,9 @@ Route222_EventScript_PtNpc1::
 Route222_Text_PtNpc1::
 	.string "When I first started fishing, catching\n"
 	.string "anything made me happy.\p"
-	.string "But those days are long gone now...\p"
+	.string "But those days are long gone now…\p"
 	.string "Now I get annoyed if I can't beat my\n"
-	.string "record by even an inch...$"
+	.string "record by even an inch…$"
 
 Route222_EventScript_SNHoneyTree::
 	lock

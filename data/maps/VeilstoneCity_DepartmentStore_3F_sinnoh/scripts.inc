@@ -32,8 +32,8 @@ VeilstoneCity_DepartmentStore_3F_EventScript_PtNpc3::
 
 VeilstoneCity_DepartmentStore_3F_Text_PtNpc3_0::
 	.string "I wrote some secrets in my Mail as a\n"
-	.string "reminder...\p"
-	.string "If someone reads it... I’m in deep\n"
+	.string "reminder…\p"
+	.string "If someone reads it… I'm in deep\n"
 	.string "trouble.$"
 
 VeilstoneCity_DepartmentStore_3F_EventScript_PtNpc4::
@@ -68,7 +68,7 @@ VeilstoneCity_DepartmentStore_3F_EventScript_PtSign1::
 
 VeilstoneCity_DepartmentStore_3F_Text_PtSign1::
 	.string "B1F: Food & Produce\p"
-	.string "1F: TRAINERS’ Zone\p"
+	.string "1F: TRAINERS' Zone\p"
 	.string "2F: Battle Collection\p"
 	.string "3F: TM Corner\p"
 	.string "4F: Poké Dolls & Goods\p"

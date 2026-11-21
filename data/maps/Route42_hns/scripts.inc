@@ -11,7 +11,7 @@ Route42_EventScript_Item_UltraBall::
 	end
 
 Route42_Text_FisherTullyAfter::
-	.string "I want to become the trainer\n"
+	.string "I want to become the TRAINER\n"
 	.string "CHAMP using the POKéMON I\l"
 	.string "caught myself.\p"
 	.string "That's the best part of fishing!$"

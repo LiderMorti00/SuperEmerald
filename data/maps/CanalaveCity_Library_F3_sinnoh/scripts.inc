@@ -11,11 +11,11 @@ CanalaveCity_Library_F3_EventScript_PtNpc1::
 	end
 
 CanalaveCity_Library_F3_Text_PtNpc1_0::
-	.string "Every book contains someone’s\n"
+	.string "Every book contains someone's\n"
 	.string "memories of various places and times.\p"
-	.string "Libraries aren’t just buildings where\n"
+	.string "Libraries aren't just buildings where\n"
 	.string "books are kept, you know.\p"
-	.string "They’re where different places and\n"
+	.string "They're where different places and\n"
 	.string "times are gathered together.$"
 
 CanalaveCity_Library_F3_EventScript_PtNpc1_WasThatAnEarthquake::
@@ -24,7 +24,7 @@ CanalaveCity_Library_F3_EventScript_PtNpc1_WasThatAnEarthquake::
 	end
 
 CanalaveCity_Library_F3_Text_PtNpc1_1::
-	.string "W-was that an earthquake? I didn’t\n"
+	.string "W-was that an earthquake? I didn't\n"
 	.string "imagine it?$"
 
 CanalaveCity_Library_F3_EventScript_PtNpc2::
@@ -36,8 +36,8 @@ CanalaveCity_Library_F3_EventScript_PtNpc2::
 	end
 
 CanalaveCity_Library_F3_Text_PtNpc2_0::
-	.string "Someone’s always checked out the book\n"
-	.string "I want to read...$"
+	.string "Someone's always checked out the book\n"
+	.string "I want to read…$"
 
 CanalaveCity_Library_F3_EventScript_PtNpc2_ImFeelingWobbly::
 	msgbox CanalaveCity_Library_F3_Text_PtNpc2_1, MSGBOX_DEFAULT
@@ -45,9 +45,9 @@ CanalaveCity_Library_F3_EventScript_PtNpc2_ImFeelingWobbly::
 	end
 
 CanalaveCity_Library_F3_Text_PtNpc2_1::
-	.string "I’m feeling wobbly...\p"
+	.string "I'm feeling wobbly…\p"
 	.string "Even though the tremor has ended, my\n"
-	.string "knees still feel like jelly...$"
+	.string "knees still feel like jelly…$"
 
 CanalaveCity_Library_F3_EventScript_SNRowan::
 	lockall
@@ -164,12 +164,12 @@ CanalaveCity_Library_F3_EventScript_SNL_DoN::
 CanalaveCity_Library_F3_Text_SNLLeave::
 	.string "ROWAN: {PLAYER}. You should leave now,\n"
 	.string "too.\p"
-	.string "...There may be aftershocks, however.\n"
+	.string "…There may be aftershocks, however.\n"
 	.string "Be alert always.$"
 
 CanalaveCity_Library_F3_Text_SNLOutside::
-	.string "ROWAN: Hmm... But why at LAKE VALOR...?\p"
-	.string "Let’s get outside. I’m concerned about\n"
+	.string "ROWAN: Hmm… But why at LAKE VALOR…?\p"
+	.string "Let's get outside. I'm concerned about\n"
 	.string "the town.\p"
 	.string "You kids, be careful going down the\n"
 	.string "stairs.$"
@@ -179,11 +179,11 @@ CanalaveCity_Library_F3_Text_SNLExplosion::
 	.string "explosion?!$"
 
 CanalaveCity_Library_F3_Text_SNLNews::
-	.string "Announcer: What you’ve just witnessed\n"
+	.string "Announcer: What you've just witnessed\n"
 	.string "is actual footage from the scene.\p"
 	.string "It was taken by a cameraman who\n"
 	.string "happened to be there.\p"
-	.string "Newscaster: It’s certainly impressive.\p"
+	.string "Newscaster: It's certainly impressive.\p"
 	.string "Who knows what the explosion could\n"
 	.string "expose at the lake?$"
 
@@ -193,29 +193,29 @@ CanalaveCity_Library_F3_Text_SNLWhat::
 	.string "Anything!$"
 
 CanalaveCity_Library_F3_Text_SNLUnharmed::
-	.string "ROWAN: ... ...Has it stopped?\p"
+	.string "ROWAN: … …Has it stopped?\p"
 	.string "Are all of you unharmed?$"
 
 CanalaveCity_Library_F3_Text_SNLBoom::
 	.string "DDDOOOMMM!!$"
 
 CanalaveCity_Library_F3_Text_SNLValor::
-	.string "ROWAN: Very well. I’m counting on you.\p"
+	.string "ROWAN: Very well. I'm counting on you.\p"
 	.string "And that leaves {PLAYER} with Lake\n"
 	.string "VALOR.\p"
 	.string "The lake is between VEILSTONE and\n"
-	.string "PASTORIA, if memory serves...$"
+	.string "PASTORIA, if memory serves…$"
 
 CanalaveCity_Library_F3_Text_SNLYeah::
-	.string "{RIVAL}: Uh... Yeah, of course!\n"
+	.string "{RIVAL}: Uh… Yeah, of course!\n"
 	.string "Gramps, you know how to call it!\p"
-	.string "You can tell I’m the hotness!\p"
+	.string "You can tell I'm the hotness!\p"
 	.string "And, you know what? I was going to\n"
 	.string "catch those legendary POKéMON for\l"
 	.string "you.\p"
 	.string "You know, as thanks for giving us our\n"
 	.string "POKéMON back on ROUTE 201.\p"
-	.string "...Even though I forgot completely\n"
+	.string "…Even though I forgot completely\n"
 	.string "about it until just now.$"
 
 CanalaveCity_Library_F3_Text_SNLAcuity::
@@ -248,7 +248,7 @@ CanalaveCity_Library_F3_Text_SNLVerityL::
 
 CanalaveCity_Library_F3_Text_SNLIndiv::
 	.string "ROWAN: Hm! I would have made all of you\n"
-	.string "go regardless... Anyway.\p"
+	.string "go regardless… Anyway.\p"
 	.string "Now, there are three lakes.\n"
 	.string "Fortuitously, there are three of you.\p"
 	.string "You should therefore split up and\n"
@@ -257,7 +257,7 @@ CanalaveCity_Library_F3_Text_SNLIndiv::
 CanalaveCity_Library_F3_Text_SNLCountD::
 	.string "DAWN: You can count on me! It will help\n"
 	.string "with my POKéDEX, too.\p"
-	.string "{PLAYER}, you’ll go, too, won’t you?$"
+	.string "{PLAYER}, you'll go, too, won't you?$"
 
 CanalaveCity_Library_F3_EventScript_SNL_CountL::
 	msgbox CanalaveCity_Library_F3_Text_SNLCountL, MSGBOX_DEFAULT
@@ -270,17 +270,17 @@ CanalaveCity_Library_F3_Text_SNLCountL::
 	.string "research.$"
 
 CanalaveCity_Library_F3_Text_SNLBolted::
-	.string "ROWAN: ...And who was it that bolted\n"
+	.string "ROWAN: …And who was it that bolted\n"
 	.string "from the lab before I had a chance\p"
 	.string "to give you a POKéDEX?\p"
-	.string "But that’s water under the bridge!\p"
+	.string "But that's water under the bridge!\p"
 	.string "Seeing POKéMON with your own eyes is\n"
 	.string "important for you in becoming a better\p"
 	.string "TRAINER, too.$"
 
 CanalaveCity_Library_F3_Text_SNLNoDex::
 	.string "{RIVAL}: What are you saying? I\n"
-	.string "didn’t get a POKéDEX!$"
+	.string "didn't get a POKéDEX!$"
 
 CanalaveCity_Library_F3_Text_SNLHelp::
 	.string "This is where you three come in.\p"
@@ -303,13 +303,13 @@ CanalaveCity_Library_F3_Text_SNLStudy::
 	.string "But the more I study, the more\n"
 	.string "mysteries appear and multiply.\p"
 	.string "POKéMON that evolve, and those that\n"
-	.string "don’t...\p"
+	.string "don't…\p"
 	.string "What makes them different from each\n"
 	.string "other?\p"
 	.string "Do those that are immature as living\n"
 	.string "beings evolve to ones more mature?\p"
 	.string "If so, what do we make of the legendary\n"
-	.string "POKéMON that don’t evolve?\p"
+	.string "POKéMON that don't evolve?\p"
 	.string "Are we to assume that the legendary\n"
 	.string "POKéMON are complete as creatures?$"
 
@@ -319,18 +319,18 @@ CanalaveCity_Library_F3_Movement_SNRowanPace::
 	step_end
 
 CanalaveCity_Library_F3_Text_SNLEveryone::
-	.string "ROWAN: Hm! Everyone’s here finally.\n"
+	.string "ROWAN: Hm! Everyone's here finally.\n"
 	.string "{PLAYER}, everyone, listen.\p"
 	.string "You may have forgotten already, but I\n"
 	.string "study the evolution of POKéMON.$"
 
 CanalaveCity_Library_F3_Text_SNLGetIt::
-	.string "{RIVAL}: ...OK... I get it...$"
+	.string "{RIVAL}: …OK… I get it…$"
 
 CanalaveCity_Library_F3_Text_SNLDots::
-	.string "ROWAN: ... ...\p"
-	.string "... ...\p"
-	.string "... ...$"
+	.string "ROWAN: … …\p"
+	.string "… …\p"
+	.string "… …$"
 
 CanalaveCity_Library_F3_Movement_SNRunUpTurn::
 	walk_fast_up
@@ -340,7 +340,7 @@ CanalaveCity_Library_F3_Movement_SNRunUpTurn::
 CanalaveCity_Library_F3_Text_SNLOutta::
 	.string "{RIVAL}: OK, gramps! I brought\n"
 	.string "{PLAYER} like I said!\p"
-	.string "All right, I’ll be outta here!$"
+	.string "All right, I'll be outta here!$"
 
 CanalaveCity_Library_F3_EventScript_PtSign1::
 	goto CanalaveCity_Library_F3_EventScript_SNBookSinnohMyth
@@ -396,7 +396,7 @@ CanalaveCity_Library_F3_EventScript_SNBookSinnohRegionsMythology::
 	end
 
 CanalaveCity_Library_F3_Text_SNSinnohRegionsMythology::
-	.string "“SINNOH Region’s Mythology”\p"
+	.string "“SINNOH Region's Mythology”\p"
 	.string "Long ago, when SINNOH had just been\n"
 	.string "made, POKéMON and humans led\p"
 	.string "separate lives.\p"
@@ -420,7 +420,7 @@ CanalaveCity_Library_F3_Text_SNPutSinnohRegionsMythologyBack::
 	.string "{PLAYER} put the book back.$"
 
 CanalaveCity_Library_F3_Text_SNAskReadSinnohRegionsMythology::
-	.string "This book is titled “SINNOH Region’s\n"
+	.string "This book is titled “SINNOH Region's\n"
 	.string "Mythology.” Want to read it?$"
 
 CanalaveCity_Library_F3_EventScript_PtSign4::
@@ -440,7 +440,7 @@ CanalaveCity_Library_F3_EventScript_SNBookSinnohsMyth::
 	end
 
 CanalaveCity_Library_F3_Text_SNSinnohsMyth::
-	.string "“SINNOH’s Myth”\p"
+	.string "“SINNOH's Myth”\p"
 	.string "Three POKéMON there were.\p"
 	.string "Into the lakes they dove. Deep, deep,\n"
 	.string "drawing no breath.\p"
@@ -460,7 +460,7 @@ CanalaveCity_Library_F3_Text_SNPutSinnohsMythBack::
 	.string "{PLAYER} put the book back.$"
 
 CanalaveCity_Library_F3_Text_SNAskReadSinnohsMyth::
-	.string "This book is titled “SINNOH’s Myth.”\n"
+	.string "This book is titled “SINNOH's Myth.”\n"
 	.string "Want to read it?$"
 
 CanalaveCity_Library_F3_EventScript_PtSign6::
@@ -497,7 +497,7 @@ CanalaveCity_Library_F3_Text_SNVeilstonesMyth3::
 	.string "So saying, the young man hurled the\n"
 	.string "sword to the ground, snapping it.\p"
 	.string "Seeing this, the POKéMON disappeared\n"
-	.string "to a place beyond seeing...$"
+	.string "to a place beyond seeing…$"
 
 CanalaveCity_Library_F3_EventScript_SNBookVeilstonesMyth_Back::
 	msgbox CanalaveCity_Library_F3_Text_SNPutVeilstonesMythBack, MSGBOX_DEFAULT
@@ -513,7 +513,7 @@ CanalaveCity_Library_F3_Text_SNVeilstonesMyth2::
 	.string "Long did he search. And far and wide,\n"
 	.string "too, until one he did find.\p"
 	.string "Asked he, “Why do you hide?” To which\n"
-	.string "the POKéMON replied...\p"
+	.string "the POKéMON replied…\p"
 	.string "“If you bear your sword to bring harm\n"
 	.string "upon us, with claws and\p"
 	.string "fangs, we will exact a toll.\p"
@@ -521,10 +521,10 @@ CanalaveCity_Library_F3_Text_SNVeilstonesMyth2::
 	.string "for it must be done.\p"
 	.string "“Done it must be to guard ourselves\n"
 	.string "and for it, I apologize.”\p"
-	.string "...Would you like to keep reading?$"
+	.string "…Would you like to keep reading?$"
 
 CanalaveCity_Library_F3_Text_SNVeilstonesMyth1::
-	.string "“VEILSTONE’s Myth”\p"
+	.string "“VEILSTONE's Myth”\p"
 	.string "A young man, callow and foolish in\n"
 	.string "innocence, came to own a sword.\p"
 	.string "With it, he smote POKéMON, which gave\n"
@@ -533,10 +533,10 @@ CanalaveCity_Library_F3_Text_SNVeilstonesMyth1::
 	.string "with no afterthought.\p"
 	.string "The following year, no POKéMON\n"
 	.string "appeared. Larders grew bare.\p"
-	.string "...Would you like to keep reading?$"
+	.string "…Would you like to keep reading?$"
 
 CanalaveCity_Library_F3_Text_SNAskReadVeilstonesMyth::
-	.string "This book is titled “VEILSTONE’s Myth.”\n"
+	.string "This book is titled “VEILSTONE's Myth.”\n"
 	.string "Want to read it?$"
 
 CanalaveCity_Library_F3_EventScript_PtSign8::
@@ -565,7 +565,7 @@ CanalaveCity_Library_F3_Text_SNTheOriginalStory3::
 	.string "The three living things wished, and\n"
 	.string "from them, spirit came to be.\p"
 	.string "The world created, the Original One\n"
-	.string "took to unyielding sleep...$"
+	.string "took to unyielding sleep…$"
 
 CanalaveCity_Library_F3_EventScript_SNBookTheOriginalStory_Back::
 	msgbox CanalaveCity_Library_F3_Text_SNPutTheOriginalStoryBack, MSGBOX_DEFAULT
@@ -582,16 +582,16 @@ CanalaveCity_Library_F3_Text_SNTheOriginalStory2::
 	.string "expand.\p"
 	.string "From itself again, three living things\n"
 	.string "the Original One did make.\p"
-	.string "...Would you like to keep reading?$"
+	.string "…Would you like to keep reading?$"
 
 CanalaveCity_Library_F3_Text_SNTheOriginalStory1::
 	.string "In the beginning, there was only a\n"
 	.string "churning turmoil of chaos.\p"
 	.string "At the heart of chaos, where all things\n"
-	.string "became one, appeared an Egg.\p"
+	.string "became one, appeared an EGG.\p"
 	.string "Having tumbled from the vortex, the\n"
 	.string "Egg gave rise to the Original One.\p"
-	.string "...Would you like to keep reading?$"
+	.string "…Would you like to keep reading?$"
 
 CanalaveCity_Library_F3_Text_SNAskReadTheOriginalStory::
 	.string "This ancient book is titled “The\n"
@@ -614,12 +614,12 @@ CanalaveCity_Library_F3_EventScript_SNBookHorrificMyth::
 	end
 
 CanalaveCity_Library_F3_Text_SNHorrificMyth::
-	.string "Look not into the POKéMON’s eyes.\p"
-	.string "In but an instant, you’ll have no\n"
+	.string "Look not into the POKéMON's eyes.\p"
+	.string "In but an instant, you'll have no\n"
 	.string "recollection of who you are.\p"
 	.string "Return home, but how? When there is\n"
 	.string "nothing to remember?\p"
-	.string "Dare not touch the POKéMON’s body.\p"
+	.string "Dare not touch the POKéMON's body.\p"
 	.string "In but three short days, all emotions\n"
 	.string "will drain away.\p"
 	.string "Above all, above all, harm not the\n"

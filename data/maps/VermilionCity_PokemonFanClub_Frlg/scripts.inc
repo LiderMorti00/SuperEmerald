@@ -139,7 +139,7 @@ VermilionCity_PokemonFanClub_Text_SeelFarMoreAttractive::
 	.string "By double, I would say.$"
 
 VermilionCity_PokemonFanClub_Text_Pikachu::
-	.string "PIKACHU: Chu! Pikachu!$"
+	.string "PIKACHU: Chu! PIKACHU!$"
 
 VermilionCity_PokemonFanClub_Text_Seel::
 	.string "SEEL: Kyuoo!$"

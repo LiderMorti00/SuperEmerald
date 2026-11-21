@@ -26,7 +26,7 @@ JubilifeCity_Flat1_F2_EventScript_PtNpc3::
 
 JubilifeCity_Flat1_F2_Text_PtNpc3::
 	.string "You can trade POKéMON with people\n"
-	.string "from other regions these days...\p"
+	.string "from other regions these days…\p"
 	.string "Just hearing that gets my heart\n"
 	.string "racing. Such exciting times!$"
 

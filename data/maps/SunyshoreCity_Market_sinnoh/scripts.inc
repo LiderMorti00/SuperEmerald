@@ -34,8 +34,8 @@ SunyshoreCity_Market_EventScript_PtNpc4::
 
 SunyshoreCity_Market_Text_PtNpc4::
 	.string "Ah, please, allow me a little of your\n"
-	.string "time, if you will. You won’t regret it.\p"
-	.string "...Oh, but, no, no, no! You have no Seal\n"
+	.string "time, if you will. You won't regret it.\p"
+	.string "…Oh, but, no, no, no! You have no Seal\n"
 	.string "Case?\p"
 	.string "You must return to the town with the\n"
 	.string "ruins and obtain a Seal Case!$"
@@ -50,5 +50,5 @@ SunyshoreCity_Market_EventScript_PtNpc5::
 SunyshoreCity_Market_Text_PtNpc5_0::
 	.string "I love Tap Toys! Plaza Games are great,\n"
 	.string "too!\p"
-	.string "I’m a huge fan of the GAME CORNER in\n"
-	.string "VEILSTONE, so I’m promoting it!$"
+	.string "I'm a huge fan of the GAME CORNER in\n"
+	.string "VEILSTONE, so I'm promoting it!$"

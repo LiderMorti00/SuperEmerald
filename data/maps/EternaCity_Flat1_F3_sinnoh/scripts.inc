@@ -7,7 +7,7 @@ EternaCity_Flat1_F3_EventScript_PtNpc1::
 	end
 
 EternaCity_Flat1_F3_Text_PtNpc1::
-	.string "BADGES from GYMS, or CONTEST wins...\n"
+	.string "BADGES from GYMS, or CONTEST wins…\n"
 	.string "There's more than just one way to be a\l"
 	.string "winner, it seems. Here's hoping you'll\l"
 	.string "find something in which you can be the\l"

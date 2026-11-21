@@ -8,7 +8,7 @@ LostTower_3F_EventScript_Leonard::
 	end
 
 LostTower_3F_Text_LeonardPost::
-	.string "The desire to do battle lingers on...\p"
+	.string "The desire to do battle lingers on…\p"
 	.string "Do such spirits of POKéMON still roam\n"
 	.string "within these walls?$"
 
@@ -16,7 +16,7 @@ LostTower_3F_Text_LeonardDefeat::
 	.string "Hunh?! What was I just doing?!$"
 
 LostTower_3F_Text_LeonardIntro::
-	.string "I can’t explain it... Being here compels\n"
+	.string "I can't explain it… Being here compels\n"
 	.string "me to battle!$"
 
 LostTower_3F_EventScript_Kirby::
@@ -25,16 +25,16 @@ LostTower_3F_EventScript_Kirby::
 	end
 
 LostTower_3F_Text_KirbyPost::
-	.string "I’m not doing my POKéMON any favors by\n"
-	.string "ruining its memory like this...\p"
-	.string "I can’t be wallowing around forever. I\n"
+	.string "I'm not doing my POKéMON any favors by\n"
+	.string "ruining its memory like this…\p"
+	.string "I can't be wallowing around forever. I\n"
 	.string "gotta move on and turn the page.$"
 
 LostTower_3F_Text_KirbyDefeat::
 	.string "Gwaaaaaah!$"
 
 LostTower_3F_Text_KirbyIntro::
-	.string "My POKéMON were taken from me... Team\n"
-	.string "GALACTIC did it...\p"
-	.string "Ever since, I’ve never forgiven their\n"
-	.string "faces...$"
+	.string "My POKéMON were taken from me… Team\n"
+	.string "GALACTIC did it…\p"
+	.string "Ever since, I've never forgiven their\n"
+	.string "faces…$"

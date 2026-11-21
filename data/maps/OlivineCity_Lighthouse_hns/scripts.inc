@@ -29,7 +29,7 @@ OlivineLighthouse_EventScript_1FSailor::
 OlivineLighthouse_Text_1FSailor::
 	.string "People train at this LIGHTHOUSE.\p"
 	.string "It's not easy to climb with all\n"
-	.string "the trainers waiting inside.$"
+	.string "the TRAINERS waiting inside.$"
 
 OlivineLighthouse_EventScript_Huey::
 	trainerbattle_single TRAINER_HUEY_HNS, OlivineLighthouse_Text_SailorHueySeen, OlivineLighthouse_Text_SailorHueyBeaten, OlivineLighthouse_EventScript_RegisterHuey
@@ -108,7 +108,7 @@ OlivineLighthouse_EventScript_SailorTerrell::
 OlivineLighthouse_Text_SailorTerrellAfter::
 	.string "Every time I return to OLIVINE,\n"
 	.string "I visit the GYM.\p"
-	.string "The GYM LEADER’s POKéMON type\n"
+	.string "The GYM LEADER's POKéMON type\n"
 	.string "changed without me noticing.$"
 
 OlivineLighthouse_Text_SailorTerrellBeaten::

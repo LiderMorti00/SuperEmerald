@@ -7,7 +7,7 @@ Route221_House_EventScript_PtNpc1::
 	end
 
 Route221_House_Text_PtNpc1::
-	.string "I’ll thank you for that visual treat\n"
+	.string "I'll thank you for that visual treat\n"
 	.string "with this item.$"
 
 Route221_House_EventScript_PtSign1::

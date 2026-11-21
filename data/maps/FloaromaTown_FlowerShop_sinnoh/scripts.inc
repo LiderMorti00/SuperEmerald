@@ -47,6 +47,6 @@ FloaromaTown_FlowerShop_Text_SNSpray1::
 
 FloaromaTown_FlowerShop_Text_SNSpray2::
 	.string "Use that Sprayduck to water the soil\n"
-	.string "where you’ve planted Berries.\p"
+	.string "where you've planted Berries.\p"
 	.string "You should also water Berry plants\n"
 	.string "while they are growing.$"

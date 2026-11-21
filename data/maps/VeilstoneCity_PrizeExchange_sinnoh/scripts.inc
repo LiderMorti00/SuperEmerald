@@ -16,7 +16,7 @@ VeilstoneCity_PrizeExchange_EventScript_PtNpc2::
 	end
 
 VeilstoneCity_PrizeExchange_Text_PtNpc2::
-	.string "I’ll tell you what type your POKéMON’s\n"
+	.string "I'll tell you what type your POKéMON's\n"
 	.string "Hidden Power will be.\p"
 	.string "My own hidden power lets me do that.$"
 

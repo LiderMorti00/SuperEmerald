@@ -85,8 +85,8 @@ Route228_House1_EventScript_SNUltimate_NotFriendly::
 	end
 
 Route228_House1_EventScript_SNUltimate_Friend::
-	.string "Hmm... The POKéMON at the head of your\n"
-	.string "party doesn’t trust you completely\l"
+	.string "Hmm… The POKéMON at the head of your\n"
+	.string "party doesn't trust you completely\l"
 	.string "yet. Come back when your bond is\l"
 	.string "perfect.$"
 

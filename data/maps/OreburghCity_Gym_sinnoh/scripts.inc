@@ -5,7 +5,7 @@ OreburghCity_Gym_sinnoh_MapScripts::
 OreburghCity_Gym_Text_RoarkPost::
 	.string "In this region of SINNOH, there are\n"
 	.string "seven other GYM LEADERS.\p"
-	.string "I should warn you--they’re a lot\n"
+	.string "I should warn you--they're a lot\n"
 	.string "tougher than I am!$"
 
 SE_S_OreburghCity_Gym_OreburghCity_Gym_EventScript_Roark::
@@ -39,7 +39,7 @@ OreburghCity_Gym_Text_DariusPost::
 	.string "TRAINER like you.$"
 
 OreburghCity_Gym_Text_DariusDefeat::
-	.string "Gggh... This is humiliating!$"
+	.string "Gggh… This is humiliating!$"
 
 OreburghCity_Gym_Text_DariusIntro::
 	.string "Only those who want to win can\n"
@@ -69,22 +69,22 @@ OreburghCity_Gym_Text_SNGuideInfo::
 	.string "ROARK. Go for it!$"
 
 OreburghCity_Gym_Text_Guide::
-	.string "Howdy! How’s it going, CHAMP-to-be?\p"
-	.string "That’s what I said to a really\n"
+	.string "Howdy! How's it going, CHAMP-to-be?\p"
+	.string "That's what I said to a really\n"
 	.string "impatient boy earlier, too.\p"
 	.string "The GYM LEADER is a user of Rock-type\n"
 	.string "POKéMON.\p"
 	.string "Well, listen. Rock-type POKéMON really\n"
 	.string "hate water, all right?\p"
-	.string "They’re also weak to Grass-type moves.\p"
+	.string "They're also weak to Grass-type moves.\p"
 	.string "Gee, they sure have weaknesses!\p"
-	.string "But don’t think it will be easy.\p"
-	.string "You don’t get to be a GYM LEADER\n"
+	.string "But don't think it will be easy.\p"
+	.string "You don't get to be a GYM LEADER\n"
 	.string "without covering for weaknesses.\p"
 	.string "Going after a Rock-type POKéMON with\n"
-	.string "a Fire-type POKéMON won’t be\p"
+	.string "a Fire-type POKéMON won't be\p"
 	.string "easy, either.\p"
-	.string "That’s all the advice I can give.\n"
+	.string "That's all the advice I can give.\n"
 	.string "Thanks for listening!$"
 
 OreburghCity_Gym_EventScript_GuideWon::
@@ -93,12 +93,12 @@ OreburghCity_Gym_EventScript_GuideWon::
 	end
 
 OreburghCity_Gym_Text_GuideWon::
-	.string "Oh! {PLAYER}! You’ve taken care of the\n"
+	.string "Oh! {PLAYER}! You've taken care of the\n"
 	.string "GYM LEADER!\p"
 	.string "So, did my advice come in handy or\n"
 	.string "what?\p"
-	.string "If my advice was useful, it’d be great\n"
-	.string "if you’d become my fan!$"
+	.string "If my advice was useful, it'd be great\n"
+	.string "if you'd become my fan!$"
 
 OreburghCity_Gym_EventScript_GymStatue::
 	lockall

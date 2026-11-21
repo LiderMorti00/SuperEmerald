@@ -93,7 +93,7 @@ Route34_Text_YoungsterIan_After::
 	.string "star in my class.$"
 
 Route34_Text_YoungsterIan_Beaten::
-	.string "No! There are better trainers…$"
+	.string "No! There are better TRAINERS…$"
 
 Route34_Text_YoungsterIan_Seen::
 	.string "I'm the best in my class at\n"
@@ -112,7 +112,7 @@ Route34_Text_CooltrainerJenn_Beaten::
 	.string "JENN: So sorry, IRENE! Dear Sis!$"
 
 Route34_Text_CooltrainerJenn_Seen::
-	.string "JENN: What the...?\n"
+	.string "JENN: What the…?\n"
 	.string "What are you doing?$"
 
 Route34_EventScript_Irene::

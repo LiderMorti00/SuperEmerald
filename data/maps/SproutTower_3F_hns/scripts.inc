@@ -25,8 +25,8 @@ SproutTower_3F_EventScript_SageJin::
 
 SproutTower_Text_SageJin_AfterBattle::
 	.string "As POKéMON grow stronger,\n"
-	.string "so does the trainer.\p"
-	.string "No, wait. As the trainer\n"
+	.string "so does the TRAINER.\p"
+	.string "No, wait. As the TRAINER\n"
 	.string "grows stronger, so do the\l"
 	.string "POKéMON.$"
 

@@ -8,7 +8,7 @@ MtSilver_PokemonCenter_hns_OnTransition:
 
 
 MtSilver_PokemonCenter_Text_Meara1::
-	.string "I'm a researcher from... Uhh...\n"
+	.string "I'm a researcher from… Uhh…\n"
 	.string "the PEWTER CITY museum!\p"
 	.string "An unusual amount of artifacts have\n"
 	.string "been discovered in this area, so\l"

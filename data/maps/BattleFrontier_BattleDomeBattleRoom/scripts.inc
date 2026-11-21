@@ -941,12 +941,12 @@ BattleFrontier_BattleDomeBattleRoom_Text_TrainerIsWinner:
 
 BattleFrontier_BattleDomeBattleRoom_Text_PlayerIsLv50Champ:
 	.string "{PLAYER} is the Level 50\n"
-	.string "Battle Tournament Champion!\p"
+	.string "Battle Tournament CHAMPION!\p"
 	.string "Congratulations!$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_PlayerIsLvOpenChamp:
 	.string "{PLAYER} is the Open Level\n"
-	.string "Battle Tournament Champion!\p"
+	.string "Battle Tournament CHAMPION!\p"
 	.string "Congratulations!$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_RefereeDecisionPleaseWait:
@@ -1152,13 +1152,13 @@ BattleFrontier_BattleDomeBattleRoom_Text_LookForwardToNextEncounter:
 @ Unused
 BattleFrontier_BattleDomeBattleRoom_Text_PlayerIsLv50Champ2:
 	.string "{PLAYER} is the Level 50\n"
-	.string "Battle Tournament Champion!\p"
+	.string "Battle Tournament CHAMPION!\p"
 	.string "Congratulations!$"
 
 @ Unused
 BattleFrontier_BattleDomeBattleRoom_Text_PlayerIsLvOpenChamp2:
 	.string "{PLAYER} is the Open Level\n"
-	.string "Battle Tournament Champion!\p"
+	.string "Battle Tournament CHAMPION!\p"
 	.string "Congratulations!$"
 
 BattleFrontier_BattleDomeBattleRoom_Text_PlayerVersusTucker:

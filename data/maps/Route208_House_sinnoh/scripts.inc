@@ -33,6 +33,6 @@ Route208_House_Mart_SNMulch::
 	pokemartlistend
 
 Route208_House_Text_SNMulch::
-	.string "Um... Would you like some Mulch? If\n"
-	.string "you’re going to grow Berries, Mulch is a\l"
+	.string "Um… Would you like some Mulch? If\n"
+	.string "you're going to grow Berries, Mulch is a\l"
 	.string "good fertilizer.$"

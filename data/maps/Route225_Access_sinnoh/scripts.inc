@@ -24,7 +24,7 @@ Route225_Access_EventScript_PtNpc2::
 
 Route225_Access_Text_PtNpc2_0::
 	.string "Are you stocked up on POKé BALLS?\p"
-	.string "In the tall grass past here, you’ll find\n"
+	.string "In the tall grass past here, you'll find\n"
 	.string "interesting POKéMON.\p"
 	.string "Like, POKéMON you never see anywhere\n"
 	.string "else in SINNOH!$"

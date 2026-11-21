@@ -32,7 +32,7 @@ VioletCity_PokemonCenter_EventScript_Man::
 
 VioletCity_PokeCenter_Text_Youngster::
 	.string "POKéMON are smart. They won't\n"
-	.string "obey a trainer they don't respect.\p"
+	.string "obey a TRAINER they don't respect.\p"
 	.string "Without the right GYM BADGES,\n"
 	.string "they will just do as they please.$"
 
@@ -53,7 +53,7 @@ VioletCity_PokeCenter_Text_ElmsAideNoRoom::
 	.string "PROF.ELM asked me to find you.\p"
 	.string "He has another favor to ask.\p"
 	.string "Would you take the POKéMON EGG?\p"
-	.string "Oh, wait... You need to make room\n"
+	.string "Oh, wait… You need to make room\n"
 	.string "in your party first.$"
 
 SE_J_VioletCity_PokemonCenter_hns_VioletCity_PokemonCenter_EventScript_Aide::

@@ -45,14 +45,14 @@ HearthomeCity_House1_EventScript_SNBebe_No::
 	end
 
 HearthomeCity_House1_EventScript_SNBebe_NoT::
-	.string "BEBE: Oh... If you change your mind,\n"
+	.string "BEBE: Oh… If you change your mind,\n"
 	.string "come back anytime.$"
 
 HearthomeCity_House1_EventScript_SNBebe_T1::
-	.string "BEBE: Hi! I’m BEBE. I’m the one who made\n"
+	.string "BEBE: Hi! I'm BEBE. I'm the one who made\n"
 	.string "the POKéMON Storage System!\p"
-	.string "There’s a POKéMON here I’d like you to\n"
-	.string "raise. It’s an EEVEE. Would you like it?$"
+	.string "There's a POKéMON here I'd like you to\n"
+	.string "raise. It's an EEVEE. Would you like it?$"
 
 HearthomeCity_House1_EventScript_SNBebe_After::
 	msgbox HearthomeCity_House1_EventScript_SNBebe_AfterT, MSGBOX_DEFAULT
@@ -61,4 +61,4 @@ HearthomeCity_House1_EventScript_SNBebe_After::
 
 HearthomeCity_House1_EventScript_SNBebe_AfterT::
 	.string "BEBE: How is that EEVEE doing? I hope\n"
-	.string "it’s happy with you!$"
+	.string "it's happy with you!$"

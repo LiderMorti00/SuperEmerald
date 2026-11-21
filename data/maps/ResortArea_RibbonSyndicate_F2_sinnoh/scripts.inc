@@ -27,8 +27,8 @@ ResortArea_RibbonSyndicate_F2_Text_SNSpa2::
 	.string "baby much more friendly to you.$"
 
 ResortArea_RibbonSyndicate_F2_Text_SNSpa1::
-	.string "Ah, yes. Right this way, please...\p"
-	.string "We’re ready to begin. Please, relax all\n"
+	.string "Ah, yes. Right this way, please…\p"
+	.string "We're ready to begin. Please, relax all\n"
 	.string "your muscles.\p"
 	.string "This oil contains dissolved diamonds\n"
 	.string "for enhanced effectiveness.\p"
@@ -89,6 +89,6 @@ ResortArea_RibbonSyndicate_F2_EventScript_PtNpc4::
 	end
 
 ResortArea_RibbonSyndicate_F2_Text_PtNpc4_0::
-	.string "We’ve developed a reputation for\n"
+	.string "We've developed a reputation for\n"
 	.string "bringing our members closer to\p"
 	.string "their POKéMON.$"

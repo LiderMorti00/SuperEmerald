@@ -43,7 +43,7 @@ Route202_Text_NatalieDefeat::
 	.string "Oh, boo! I can't win!$"
 
 Route202_Text_NatalieIntro::
-	.string "I spy, with my little eye... A TRAINER!\p"
+	.string "I spy, with my little eye… A TRAINER!\p"
 	.string "A battle, please!$"
 
 Route202_EventScript_Logan::
@@ -114,7 +114,7 @@ Route202_Text_SNRadarCD::
 	.string "Now, this is where it gets interesting.\p"
 	.string "If you see another patch of rustling\n"
 	.string "grass some distance away, go into it.\p"
-	.string "You’ll see the same kind of POKéMON as\n"
+	.string "You'll see the same kind of POKéMON as\n"
 	.string "before.\p"
 	.string "If you want to keep meeting the same\n"
 	.string "kind of POKéMON, you should maybe\p"
@@ -125,7 +125,7 @@ Route202_EventScript_SNRadar_CL::
 	goto Route202_EventScript_SNRadar_CN
 
 Route202_Text_SNRadarCL::
-	.string "Now, here’s the strange part.\p"
+	.string "Now, here's the strange part.\p"
 	.string "If you see another patch of rustling\n"
 	.string "grass far away, it means the same kind\p"
 	.string "of POKéMON is hiding there.\p"
@@ -146,7 +146,7 @@ Route202_Movement_SNLookAround::
 Route202_Text_SNRadarBD::
 	.string "DAWN: See? Did you notice the tall\n"
 	.string "grass rustling?\p"
-	.string "There’s a POKéMON in that patch of tall\n"
+	.string "There's a POKéMON in that patch of tall\n"
 	.string "grass.\p"
 	.string "If you go there, the POKéMON will come\n"
 	.string "bursting out.$"
@@ -158,7 +158,7 @@ Route202_EventScript_SNRadar_BL::
 Route202_Text_SNRadarBL::
 	.string "LUCAS: There! Did you see the tall\n"
 	.string "grass rustling?\p"
-	.string "There’s a POKéMON in that patch of tall\n"
+	.string "There's a POKéMON in that patch of tall\n"
 	.string "grass.\p"
 	.string "Go in there, and the POKéMON will come\n"
 	.string "leaping out.$"
@@ -166,10 +166,10 @@ Route202_Text_SNRadarBL::
 Route202_Text_SNRadarAD::
 	.string "DAWN: Hi, {PLAYER}! I was waiting for\n"
 	.string "you.\p"
-	.string "Let me show you how the Poké Radar\n"
+	.string "Let me show you how the POKé RADAR\n"
 	.string "works.\p"
-	.string "Let’s not waste any time. So, when you\n"
-	.string "use the Poké Radar...$"
+	.string "Let's not waste any time. So, when you\n"
+	.string "use the POKé RADAR…$"
 
 Route202_EventScript_SNRadar_AL::
 	msgbox Route202_Text_SNRadarAL, MSGBOX_DEFAULT
@@ -177,10 +177,10 @@ Route202_EventScript_SNRadar_AL::
 
 Route202_Text_SNRadarAL::
 	.string "LUCAS: {PLAYER}.\p"
-	.string "Let me explain how the Poké Radar\n"
+	.string "Let me explain how the POKé RADAR\n"
 	.string "works.\p"
-	.string "Let’s give it a go. When you use the\n"
-	.string "Poké Radar...$"
+	.string "Let's give it a go. When you use the\n"
+	.string "POKé RADAR…$"
 
 Route202_EventScript_Sign1::
 	msgbox Route202_Text_Sign1, MSGBOX_SIGN

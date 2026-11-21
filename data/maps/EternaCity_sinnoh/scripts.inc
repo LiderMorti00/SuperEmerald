@@ -23,7 +23,7 @@ EternaCity_EventScript_Barry::
 EternaCity_Text_Barry::
 	.string "{RIVAL}: Hey, {PLAYER}!\p"
 	.string "You came to see the POKéMON statue,\n"
-	.string "right? I’ll take you there!$"
+	.string "right? I'll take you there!$"
 
 EternaCity_EventScript_Statue::
 	lockall
@@ -58,27 +58,27 @@ EternaCity_EventScript_Statue::
 	end
 
 EternaCity_Text_Cynthia2::
-	.string "CYNTHIA: Remember, the hidden move Cut\n"
+	.string "CYNTHIA: Remember, the hidden move CUT\n"
 	.string "can be used in the field.\p"
 	.string "It will let you go places that were\n"
 	.string "previously inaccessible to you.\p"
-	.string "That’s important for filling up your\n"
+	.string "That's important for filling up your\n"
 	.string "POKéDEX, right?\p"
 	.string "Then luck be with you, young TRAINER!\p"
-	.string "Oh, there’s one last thing! Please give\n"
+	.string "Oh, there's one last thing! Please give\n"
 	.string "my regards to PROF. ROWAN.$"
 
 EternaCity_Text_Cynthia::
-	.string "???: Oh, that device you have...\p"
+	.string "???: Oh, that device you have…\p"
 	.string "It is a POKéDEX? Wow, it brings back\n"
 	.string "some memories.\p"
-	.string "Pardon me, but what’s your name?\p"
-	.string "...\p"
-	.string "OK, hello, {PLAYER}. I’ll be sure to\n"
+	.string "Pardon me, but what's your name?\p"
+	.string "…\p"
+	.string "OK, hello, {PLAYER}. I'll be sure to\n"
 	.string "remember that name!\p"
-	.string "My name is CYNTHIA. I’m a TRAINER just\n"
+	.string "My name is CYNTHIA. I'm a TRAINER just\n"
 	.string "like you.\p"
-	.string "I’ve been studying POKéMON mythology\n"
+	.string "I've been studying POKéMON mythology\n"
 	.string "lately, just out of curiosity.\p"
 	.string "CYNTHIA: Here in ETERNA CITY, there is a\n"
 	.string "statue of an ancient POKéMON.\p"
@@ -86,7 +86,7 @@ EternaCity_Text_Cynthia::
 	.string "According to myth, it was an extremely\n"
 	.string "powerful POKéMON.\p"
 	.string "Who knows? You may encounter\n"
-	.string "something like it while you’re traveling\l"
+	.string "something like it while you're traveling\l"
 	.string "with your\p"
 	.string "POKéDEX.\p"
 	.string "Oh, I know! Try using this. It should be\n"
@@ -98,30 +98,30 @@ EternaCity_Text_BarryBye::
 	.string "flash of inspiration came to me!\p"
 	.string "An easy way to become a great TRAINER!\n"
 	.string "Yeah, that!\p"
-	.string "All right. Listen close...\p"
+	.string "All right. Listen close…\p"
 	.string "Make certain all your attacks hit!\n"
 	.string "Avoid enemy attacks for sure!\p"
-	.string "You do that, you’d never lose! You’d be\n"
+	.string "You do that, you'd never lose! You'd be\n"
 	.string "the invincible TRAINER!\p"
 	.string "Anyway, go check out the POKéMON\n"
 	.string "statue. See you around!$"
 
 EternaCity_Text_Cyrus2::
-	.string "CYRUS: ...Pardon me. Stand aside.$"
+	.string "CYRUS: …Pardon me. Stand aside.$"
 
 EternaCity_Text_BarryStatue::
-	.string "{RIVAL}: Uh... who's this guy? Are\n"
+	.string "{RIVAL}: Uh… who's this guy? Are\n"
 	.string "you a researcher or something?$"
 
 EternaCity_Text_Cyrus::
-	.string "CYRUS: ...So, this is ETERNA’s POKéMON\n"
-	.string "statue...\p"
+	.string "CYRUS: …So, this is ETERNA's POKéMON\n"
+	.string "statue…\p"
 	.string "Shaping our world are time and space in\n"
 	.string "an intertwining spiral.\p"
 	.string "Revered in SINNOH are the POKéMON of\n"
-	.string "time and space...\p"
-	.string "SINNOH’s myth... Its truth needs\n"
-	.string "investigation...$"
+	.string "time and space…\p"
+	.string "SINNOH's myth… Its truth needs\n"
+	.string "investigation…$"
 
 EternaCity_EventScript_PtNpc1::
 	msgbox EternaCity_Text_PtNpc1, MSGBOX_NPC
@@ -157,7 +157,7 @@ EternaCity_Text_PtNpc4::
 	.string "went up, the city's atmosphere has\l"
 	.string "gotten all creepy and tense.\p"
 	.string "I don't know what those people are\n"
-	.string "doing up in that place...$"
+	.string "doing up in that place…$"
 
 EternaCity_EventScript_PtNpc5::
 	msgbox EternaCity_Text_PtNpc5, MSGBOX_NPC
@@ -185,7 +185,7 @@ EternaCity_EventScript_PtNpc7::
 
 EternaCity_Text_PtNpc7::
 	.string "The bike shop is closed. The owner\n"
-	.string "hasn't been seen for days...$"
+	.string "hasn't been seen for days…$"
 
 EternaCity_EventScript_PtNpc8::
 	msgbox EternaCity_Text_PtNpc8, MSGBOX_NPC
@@ -224,9 +224,9 @@ EternaCity_EventScript_GalacticGruntM2::
 
 EternaCity_Text_GalacticGruntM2::
 	.string "Hey, you! Yeah, you, TRAINER!\p"
-	.string "Errr... It's OK. Never mind. You look\n"
+	.string "Errr… It's OK. Never mind. You look\n"
 	.string "tough.\p"
-	.string "I won't take... Um, I'll just let you\n"
+	.string "I won't take… Um, I'll just let you\n"
 	.string "keep your POKéMON. Carry on!$"
 
 EternaCity_EventScript_GalacticGruntM3::
@@ -265,7 +265,7 @@ EternaCity_EventScript_SNCynthiaEgg::
 	goto EternaCity_EventScript_SNCynthiaEgg_Main
 
 EternaCity_EventScript_SNCynthiaEgg_T2::
-	.string "CYNTHIA: Keep that Egg with you in your\n"
+	.string "CYNTHIA: Keep that EGG with you in your\n"
 	.string "party of POKéMON.\p"
 	.string "A POKéMON will hatch from it while you\n"
 	.string "are traveling.\p"
@@ -274,12 +274,12 @@ EternaCity_EventScript_SNCynthiaEgg_T2::
 	.string "See you again!$"
 
 EternaCity_EventScript_SNCynthiaEgg_T15::
-	.string "CYNTHIA: That’s wonderful!\p"
-	.string "The POKéMON inside the Egg is happy,\n"
-	.string "too. I’m sure of it!$"
+	.string "CYNTHIA: That's wonderful!\p"
+	.string "The POKéMON inside the EGG is happy,\n"
+	.string "too. I'm sure of it!$"
 
 EternaCity_EventScript_SNCynthiaEgg_Got::
-	.string "{PLAYER} received an Egg from CYNTHIA!$"
+	.string "{PLAYER} received an EGG from CYNTHIA!$"
 
 EternaCity_EventScript_SNCynthiaEgg_Full::
 	msgbox EternaCity_EventScript_SNCynthiaEgg_FullT, MSGBOX_DEFAULT
@@ -289,12 +289,12 @@ EternaCity_EventScript_SNCynthiaEgg_Full::
 EternaCity_EventScript_SNCynthiaEgg_FullT::
 	.string "CYNTHIA: Oh? You have six POKéMON with\n"
 	.string "you already.\p"
-	.string "You don’t have room for this Egg.\p"
-	.string "You’ll have to store a POKéMON in a PC\n"
+	.string "You don't have room for this EGG.\p"
+	.string "You'll have to store a POKéMON in a PC\n"
 	.string "Box at the POKéMON Center first.\p"
-	.string "I’ll give you this Egg when you’ve made\n"
+	.string "I'll give you this EGG when you've made\n"
 	.string "room for it.\p"
-	.string "I’ll be waiting right here.$"
+	.string "I'll be waiting right here.$"
 
 EternaCity_EventScript_SNCynthiaEgg_No::
 	msgbox EternaCity_EventScript_SNCynthiaEgg_NoT, MSGBOX_DEFAULT
@@ -302,18 +302,18 @@ EternaCity_EventScript_SNCynthiaEgg_No::
 	end
 
 EternaCity_EventScript_SNCynthiaEgg_NoT::
-	.string "CYNTHIA: Oh...? You don’t need to feel\n"
+	.string "CYNTHIA: Oh…? You don't need to feel\n"
 	.string "obligated.\p"
-	.string "It’s hard filling the pages of the\n"
-	.string "POKéDEX, isn’t it?\p"
+	.string "It's hard filling the pages of the\n"
+	.string "POKéDEX, isn't it?\p"
 	.string "I only want to lend you a little hand,\n"
-	.string "that’s all.$"
+	.string "that's all.$"
 
 EternaCity_EventScript_SNCynthiaEgg_T1::
 	.string "CYNTHIA: Oh, there you are!\p"
-	.string "I was looking for you. I’ve got\n"
+	.string "I was looking for you. I've got\n"
 	.string "something nice.\p"
-	.string "I wanted you to have this POKéMON Egg.\n"
+	.string "I wanted you to have this POKéMON EGG.\n"
 	.string "Will you accept it?$"
 
 EternaCity_EventScript_Sign1::

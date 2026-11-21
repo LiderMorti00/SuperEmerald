@@ -9,7 +9,7 @@ Route226_House_EventScript_PtNpc1::
 Route226_House_Text_PtNpc1::
 	.string "Because there are POKéMON, I can make\n"
 	.string "friends anywhere in the world.\p"
-	.string "It so inspires me knowing that. It’s so\n"
+	.string "It so inspires me knowing that. It's so\n"
 	.string "wonderful in a wonderful way!$"
 
 Route226_House_EventScript_PtSign1::

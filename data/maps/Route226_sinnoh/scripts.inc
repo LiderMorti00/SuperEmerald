@@ -16,7 +16,7 @@ Route226_Text_LydiaPost::
 	.string "get all mellowed out.$"
 
 Route226_Text_LydiaDefeat::
-	.string "Glub glub... I'm sinking...$"
+	.string "Glub glub… I'm sinking…$"
 
 Route226_Text_LydiaIntro::
 	.string "I want to be with my water POKéMON!\n"
@@ -28,7 +28,7 @@ Route226_EventScript_Graham::
 	end
 
 Route226_Text_GrahamPost::
-	.string "My POKéMON...\p"
+	.string "My POKéMON…\p"
 	.string "They're the first friends I ever\n"
 	.string "caught. They mean everything to me!$"
 
@@ -73,7 +73,7 @@ Route226_Text_StanleyPost::
 	.string "that I need to work on first.$"
 
 Route226_Text_StanleyDefeat::
-	.string "Victory! That is, victory for you...$"
+	.string "Victory! That is, victory for you…$"
 
 Route226_Text_StanleyIntro::
 	.string "How do you do? I'm Stanley, and I'm a\n"
@@ -88,10 +88,10 @@ Route226_EventScript_Wade::
 
 Route226_Text_WadePost::
 	.string "Overwhelm with our dazzling\n"
-	.string "physiques! That was our game plan...$"
+	.string "physiques! That was our game plan…$"
 
 Route226_Text_WadeDefeat::
-	.string "Our muscles are deflating...$"
+	.string "Our muscles are deflating…$"
 
 Route226_Text_WadeIntro::
 	.string "Me and my POKéMON are pumped up and\n"

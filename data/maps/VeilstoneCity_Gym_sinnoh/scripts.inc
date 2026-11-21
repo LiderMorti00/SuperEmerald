@@ -157,7 +157,7 @@ VeilstoneCity_Gym_Text_ColbyDefeat::
 	.string "Argh! Crunched!$"
 
 VeilstoneCity_Gym_Text_ColbyIntro::
-	.string "We’re the Karate Quads!\p"
+	.string "We're the Karate Quads!\p"
 	.string "I will strike a blow for love with my\n"
 	.string "fist! Hiyah, looooooooove!$"
 
@@ -167,9 +167,9 @@ VeilstoneCity_Gym_EventScript_Darren::
 	end
 
 VeilstoneCity_Gym_Text_DarrenPost::
-	.string "To overwhelm by force... That is my\n"
+	.string "To overwhelm by force… That is my\n"
 	.string "ideal beat-down style.\p"
-	.string "It doesn’t seem to work that way with\n"
+	.string "It doesn't seem to work that way with\n"
 	.string "POKéMON, however.$"
 
 VeilstoneCity_Gym_EventScript_JocelynBrightenRoom::
@@ -178,10 +178,10 @@ VeilstoneCity_Gym_EventScript_JocelynBrightenRoom::
 	end
 
 VeilstoneCity_Gym_Text_DarrenDefeat::
-	.string "I couldn’t force my way to victory...$"
+	.string "I couldn't force my way to victory…$"
 
 VeilstoneCity_Gym_Text_DarrenIntro::
-	.string "We’re the Karate Quads!\p"
+	.string "We're the Karate Quads!\p"
 	.string "I will strike a blow for courage with my\n"
 	.string "fist! Hiyah, couraaaaaaaaaaage!$"
 
@@ -191,9 +191,9 @@ VeilstoneCity_Gym_EventScript_Jeffery::
 	end
 
 VeilstoneCity_Gym_Text_JefferyPost::
-	.string "I lost because I didn’t eat enough\n"
+	.string "I lost because I didn't eat enough\n"
 	.string "pizza.\p"
-	.string "...No. Anything I say will sound like I’m\n"
+	.string "…No. Anything I say will sound like I'm\n"
 	.string "making excuses.$"
 
 VeilstoneCity_Gym_EventScript_LauraBrightenRoom::
@@ -202,11 +202,11 @@ VeilstoneCity_Gym_EventScript_LauraBrightenRoom::
 	end
 
 VeilstoneCity_Gym_Text_JefferyDefeat::
-	.string "I’m so hungry, kid... I don’t have any\n"
-	.string "strength left...$"
+	.string "I'm so hungry, kid… I don't have any\n"
+	.string "strength left…$"
 
 VeilstoneCity_Gym_Text_JefferyIntro::
-	.string "We’re the Karate Quads!\p"
+	.string "We're the Karate Quads!\p"
 	.string "I will strike a blow for tears with my\n"
 	.string "fist! Hiyah, teeeeeeaaaaaaaaars!$"
 
@@ -216,8 +216,8 @@ VeilstoneCity_Gym_EventScript_Rafael::
 	end
 
 VeilstoneCity_Gym_Text_RafaelPost::
-	.string "I’ll have to redo my training, though.\n"
-	.string "MAYLENE’s gonna trample me again...$"
+	.string "I'll have to redo my training, though.\n"
+	.string "MAYLENE's gonna trample me again…$"
 
 VeilstoneCity_Gym_EventScript_CristianBrightenRoom::
 	call VeilstoneCity_Gym_EventScript_BrightenRoom
@@ -228,7 +228,7 @@ VeilstoneCity_Gym_Text_RafaelDefeat::
 	.string "We came up short, but not by much.$"
 
 VeilstoneCity_Gym_Text_RafaelIntro::
-	.string "We’re the Karate Quads!\p"
+	.string "We're the Karate Quads!\p"
 	.string "I will strike a blow for hope with my\n"
 	.string "fist! Hiyah, hoooooooooooooope!$"
 
@@ -241,15 +241,15 @@ VeilstoneCity_Gym_EventScript_Leader::
 	end
 
 VeilstoneCity_Gym_Text_LeaderPostBattle::
-	.string "Gee, I’m hungry...\p"
-	.string "Oh, sorry, it’s nothing. I didn’t say\n"
+	.string "Gee, I'm hungry…\p"
+	.string "Oh, sorry, it's nothing. I didn't say\n"
 	.string "anything.\p"
-	.string "{PLAYER}, I can’t explain what it means\n"
+	.string "{PLAYER}, I can't explain what it means\n"
 	.string "to be strong.\p"
-	.string "I don’t know how much effort goes into\n"
-	.string "being strong...\p"
+	.string "I don't know how much effort goes into\n"
+	.string "being strong…\p"
 	.string "But being with POKéMON lets us keep\n"
-	.string "making the effort, doesn’t it?$"
+	.string "making the effort, doesn't it?$"
 
 VeilstoneCity_Gym_EventScript_GiveTM::
 	giveitem ITEM_TM60
@@ -262,8 +262,8 @@ VeilstoneCity_Gym_EventScript_GiveTM::
 VeilstoneCity_Gym_Text_ExplainTM::
 	.string "That TM60 contains the move DRAIN\n"
 	.string "PUNCH.\p"
-	.string "Um... That move inflicts damage, and it\n"
-	.string "robs the target’s HP.$"
+	.string "Um… That move inflicts damage, and it\n"
+	.string "robs the target's HP.$"
 
 VeilstoneCity_Gym_EventScript_LeaderDefeated::
 	call VeilstoneCity_Gym_EventScript_AnimateFlashFullBrightness
@@ -280,7 +280,7 @@ VeilstoneCity_Gym_EventScript_LeaderDefeated::
 	goto VeilstoneCity_Gym_EventScript_GiveTM
 
 VeilstoneCity_Gym_Text_ExplainBadge::
-	.string "Um... I should explain about that\n"
+	.string "Um… I should explain about that\n"
 	.string "official POKéMON LEAGUE GYM BADGE.\p"
 	.string "With it, you can use the hidden move\n"
 	.string "Fly outside of battle.\p"
@@ -300,21 +300,21 @@ VeilstoneCity_Gym_EventScript_AnimateFlashFullBrightness::
 	return
 
 VeilstoneCity_Gym_Text_LeaderDefeat::
-	.string "...OK. You win.\p"
+	.string "…OK. You win.\p"
 	.string "That was a tough loss. I learned a lot\n"
 	.string "from it.\p"
 	.string "Please, accept this GYM BADGE.$"
 
 VeilstoneCity_Gym_Text_LeaderIntro::
-	.string "Hello. I’m pleased to meet you.\p"
-	.string "I’m MAYLENE, and I’m the GYM LEADER.\p"
-	.string "I don’t really know what it means to be\n"
+	.string "Hello. I'm pleased to meet you.\p"
+	.string "I'm MAYLENE, and I'm the GYM LEADER.\p"
+	.string "I don't really know what it means to be\n"
 	.string "strong, or how I got to be the\p"
 	.string "GYM LEADER.\p"
 	.string "But I will do the best I can as the GYM\n"
 	.string "LEADER.\p"
 	.string "I take battling very seriously.\n"
-	.string "Whenever you’re ready!$"
+	.string "Whenever you're ready!$"
 
 VeilstoneCity_Gym_EventScript_SNRematch::
 	lock
@@ -333,10 +333,10 @@ VeilstoneCity_Gym_EventScript_SNRematch_After::
 	.string "anytime for another match!$"
 
 VeilstoneCity_Gym_EventScript_SNRematch_Defeat::
-	.string "Amazing... You really are the CHAMPION!$"
+	.string "Amazing… You really are the CHAMPION!$"
 
 VeilstoneCity_Gym_EventScript_SNRematch_Go::
-	.string "Then I won’t hold back this time!$"
+	.string "Then I won't hold back this time!$"
 
 VeilstoneCity_Gym_EventScript_SNRematch_No::
 	msgbox VeilstoneCity_Gym_EventScript_SNRematch_NoT, MSGBOX_DEFAULT
@@ -344,12 +344,12 @@ VeilstoneCity_Gym_EventScript_SNRematch_No::
 	end
 
 VeilstoneCity_Gym_EventScript_SNRematch_NoT::
-	.string "Come back whenever you’re ready!$"
+	.string "Come back whenever you're ready!$"
 
 VeilstoneCity_Gym_EventScript_SNRematch_Ask::
 	.string "MAYLENE: You became the CHAMPION!\n"
 	.string "Welcome back!\p"
-	.string "I’ve been training even harder since\n"
+	.string "I've been training even harder since\n"
 	.string "our last battle.\p"
 	.string "Will you battle me again?$"
 
@@ -378,9 +378,9 @@ VeilstoneCity_Gym_Text_SNGuideInfo::
 	.string "MAYLENE!$"
 
 VeilstoneCity_Gym_Text_PtGymGuide::
-	.string "Hey, there! How’s it going,\n"
+	.string "Hey, there! How's it going,\n"
 	.string "CHAMP-to-be?\p"
-	.string "I’m the GYM guide! I help out TRAINERS\n"
+	.string "I'm the GYM guide! I help out TRAINERS\n"
 	.string "who come to challenge the GYM LEADER.$"
 
 VeilstoneCity_Gym_EventScript_PtGymGuideAfter::
@@ -389,9 +389,9 @@ VeilstoneCity_Gym_EventScript_PtGymGuideAfter::
 	end
 
 VeilstoneCity_Gym_Text_PtGymGuideAfter::
-	.string "Oh! {PLAYER}! You’ve beaten the GYM\n"
+	.string "Oh! {PLAYER}! You've beaten the GYM\n"
 	.string "LEADER!\p"
-	.string "Of course, I thought you’d win.$"
+	.string "Of course, I thought you'd win.$"
 
 VeilstoneCity_Gym_EventScript_PtGymStatue::
 	lockall

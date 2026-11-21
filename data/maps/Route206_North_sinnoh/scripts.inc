@@ -28,20 +28,20 @@ Route206_North_EventScript_SNDawnFather_G_N::
 	goto Route206_North_EventScript_SNDawnFather_End
 
 Route206_North_EventScript_SNDawnFather_T3::
-	.string "A POKéMON holding an Exp. Share will\n"
+	.string "A POKéMON holding an EXP. SHARE will\n"
 	.string "get some of the Exp. Points from\l"
 	.string "battle.\p"
-	.string "It will get Exp. Points even if it didn’t\n"
+	.string "It will get Exp. Points even if it didn't\n"
 	.string "actually battle.\p"
 	.string "Therefore, it should be held by a\n"
 	.string "POKéMON you want to raise quickly.\p"
 	.string "Also, a POKéMON you get in a trade may\n"
 	.string "disobey you if it is too high in level.\p"
-	.string "Don’t worry, though. It will obey if you\n"
+	.string "Don't worry, though. It will obey if you\n"
 	.string "have enough GYM BADGES.$"
 
 Route206_North_EventScript_SNDawnFather_T2::
-	.string "Oh, my! You’ve met {STR_VAR_1} POKéMON!\p"
+	.string "Oh, my! You've met {STR_VAR_1} POKéMON!\p"
 	.string "Wonderful! Yes, bravo! PROFESSOR ROWAN\n"
 	.string "should be delighted!\p"
 	.string "Here is something for you!$"
@@ -52,19 +52,19 @@ Route206_North_EventScript_SNDawnFather_NotYet::
 	end
 
 Route206_North_EventScript_SNDawnFather_NotYetT::
-	.string "You’ve met only {STR_VAR_1} POKéMON?\p"
-	.string "Hmm... You’ve got to find at least 35.\p"
-	.string "If you can’t, it will be tough to\n"
+	.string "You've met only {STR_VAR_1} POKéMON?\p"
+	.string "Hmm… You've got to find at least 35.\p"
+	.string "If you can't, it will be tough to\n"
 	.string "complete the SINNOH POKéDEX.$"
 
 Route206_North_EventScript_SNDawnFather_T1::
 	.string "{PLAYER}, long time, no see!\p"
-	.string "Oh? You look puzzled. You’re wondering\n"
+	.string "Oh? You look puzzled. You're wondering\n"
 	.string "who I am.\p"
-	.string "I’m PROFESSOR ROWAN’s assistant and\n"
-	.string "DAWN’s father.\p"
-	.string "I’ve come a long way to help you on\n"
-	.string "your adventure at the professor’s\p"
+	.string "I'm PROFESSOR ROWAN's assistant and\n"
+	.string "DAWN's father.\p"
+	.string "I've come a long way to help you on\n"
+	.string "your adventure at the professor's\p"
 	.string "behest.\p"
 	.string "{PLAYER}, let me ask you, how many\n"
 	.string "POKéMON have you met?$"
@@ -75,12 +75,12 @@ Route206_North_EventScript_SNDawnFather_G_L::
 
 Route206_North_EventScript_SNDawnFather_T1L::
 	.string "{PLAYER}, long time, no see!\p"
-	.string "Oh? You look puzzled. You’re wondering\n"
+	.string "Oh? You look puzzled. You're wondering\n"
 	.string "who I am.\p"
-	.string "I’m PROFESSOR ROWAN’s assistant and\n"
-	.string "LUCAS’s father.\p"
-	.string "I’ve come a long way to help you on\n"
-	.string "your adventure at the professor’s\p"
+	.string "I'm PROFESSOR ROWAN's assistant and\n"
+	.string "LUCAS's father.\p"
+	.string "I've come a long way to help you on\n"
+	.string "your adventure at the professor's\p"
 	.string "behest.\p"
 	.string "{PLAYER}, let me ask you, how many\n"
 	.string "POKéMON have you met?$"

@@ -12,11 +12,11 @@ Route203_EventScript_Sebastian::
 
 Route203_Text_SebastianPost::
 	.string "I guess if you don't have a single GYM\n"
-	.string "BADGE, you're a total nobody...$"
+	.string "BADGE, you're a total nobody…$"
 
 Route203_Text_SebastianDefeat::
 	.string "I guess it means I'm not ready for the\n"
-	.string "GYM challenge yet...$"
+	.string "GYM challenge yet…$"
 
 Route203_Text_SebastianIntro::
 	.string "Before I challenge the POKéMON GYM\n"
@@ -29,11 +29,11 @@ Route203_EventScript_Michael::
 
 Route203_Text_MichaelPost::
 	.string "Keep out of the grass or dodge the\n"
-	.string "eyes of TRAINERS...?\p"
+	.string "eyes of TRAINERS…?\p"
 	.string "I always have a tough time choosing.$"
 
 Route203_Text_MichaelDefeat::
-	.string "Ack! My POKéMON...$"
+	.string "Ack! My POKéMON…$"
 
 Route203_Text_MichaelIntro::
 	.string "I get my get-up-and-go from my\n"
@@ -73,7 +73,7 @@ Route203_EventScript_Dallas_Rematch::
 	end
 
 Route203_Text_DallasDefeat::
-	.string "So sad... And so crushed...$"
+	.string "So sad… And so crushed…$"
 
 Route203_Text_DallasIntro::
 	.string "I'm never apart from my SHINX. Our\n"

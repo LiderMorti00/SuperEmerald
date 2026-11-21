@@ -30,17 +30,17 @@ SpearPillar_EventScript_SNSPGrunts_After::
 	.string "pulverized by our bosses!$"
 
 SpearPillar_EventScript_SNSPGrunts_DB::
-	.string "GRUNT: We lost...?!$"
+	.string "GRUNT: We lost…?!$"
 
 SpearPillar_EventScript_SNSPGrunts_DA::
-	.string "GRUNT: No way...!$"
+	.string "GRUNT: No way…!$"
 
 SpearPillar_Text_SNGruntsIntro::
 	.string "Our boss is about to do something\n"
 	.string "spectacular!\p"
-	.string "Don’t get in the way! Of course you\n"
-	.string "will, won’t you?\p"
-	.string "That’s why the two of us will team up to\n"
+	.string "Don't get in the way! Of course you\n"
+	.string "will, won't you?\p"
+	.string "That's why the two of us will team up to\n"
 	.string "take you down in an epic duel!$"
 
 SpearPillar_EventScript_SNSPGruntsOnlyOne::
@@ -57,12 +57,12 @@ SpearPillar_EventScript_SNSPGruntsOnlyOne::
 SpearPillar_Text_SNGruntsOnlyOne::
 	.string "Our boss is about to do something\n"
 	.string "spectacular!\p"
-	.string "Don’t get in the way! Of course you\n"
-	.string "will, won’t you?\p"
-	.string "That’s why the two of us will team up to\n"
+	.string "Don't get in the way! Of course you\n"
+	.string "will, won't you?\p"
+	.string "That's why the two of us will team up to\n"
 	.string "take you down in an epic duel!\p"
 	.string "What? You only have one POKéMON? Bah,\n"
-	.string "come back when you’re ready!$"
+	.string "come back when you're ready!$"
 
 SpearPillar_EventScript_SNSPGrunts_End::
 	end
@@ -139,28 +139,28 @@ SpearPillar_EventScript_SNSPCommanders_Battle::
 	goto SpearPillar_EventScript_SNSPCommanders_Won
 
 SpearPillar_EventScript_SNSPCommanders_DB::
-	.string "JUPITER: Gah... you two are tough.$"
+	.string "JUPITER: Gah… you two are tough.$"
 
 SpearPillar_EventScript_SNSPCommanders_DA::
 	.string "MARS: Oh, come on! Not again!$"
 
 SpearPillar_EventScript_SNSPCommanders_T9::
-	.string "BARRY: Hey, {PLAYER}! This is it! It’s\n"
+	.string "BARRY: Hey, {PLAYER}! This is it! It's\n"
 	.string "your show now!$"
 
 SpearPillar_EventScript_SNSPCommanders_T8::
-	.string "BARRY fully healed {PLAYER}’s POKéMON!$"
+	.string "BARRY fully healed {PLAYER}'s POKéMON!$"
 
 SpearPillar_EventScript_SNSPCommanders_T7::
-	.string "BARRY: ...Heh. My POKéMON are tough,\n"
+	.string "BARRY: …Heh. My POKéMON are tough,\n"
 	.string "right?\p"
 	.string "I can get even tougher!\p"
-	.string "...But, you know, that’s it for us. We’ve\n"
-	.string "hit the wall...\p"
-	.string "{PLAYER}, I’ll help you with this!$"
+	.string "…But, you know, that's it for us. We've\n"
+	.string "hit the wall…\p"
+	.string "{PLAYER}, I'll help you with this!$"
 
 SpearPillar_EventScript_SNSPCommanders_After::
-	.string "JUPITER: Fine. Go on ahead... Our boss\n"
+	.string "JUPITER: Fine. Go on ahead… Our boss\n"
 	.string "will finish you off anyway!$"
 
 SpearPillar_EventScript_SNSPCommanders_P2::
@@ -172,16 +172,16 @@ SpearPillar_EventScript_SNSPCommanders_P1::
 	goto SpearPillar_EventScript_SNSPCommanders_Battle
 
 SpearPillar_EventScript_SNSPCommanders_T6::
-	.string "JUPITER: Ha! If it isn’t that little boy.\p"
+	.string "JUPITER: Ha! If it isn't that little boy.\p"
 	.string "The little crybaby from LAKE ACUITY.\p"
-	.string "Did you toughen up a bit? Sure, let’s\n"
+	.string "Did you toughen up a bit? Sure, let's\n"
 	.string "battle two-on-two!$"
 
 SpearPillar_EventScript_SNSPCommanders_T5::
 	.string "JUPITER: Huh?$"
 
 SpearPillar_EventScript_SNSPCommanders_T4::
-	.string "BARRY: Remember me? I’m here to get my\n"
+	.string "BARRY: Remember me? I'm here to get my\n"
 	.string "revenge!$"
 
 SpearPillar_EventScript_SNSPCommanders_FaceRight::
@@ -218,19 +218,19 @@ SpearPillar_EventScript_SNSPCommanders_MBarryBelow::
 
 SpearPillar_EventScript_SNSPCommanders_T3::
 	.string "BARRY: Hold on one second!\p"
-	.string "Don’t you start the party without me!$"
+	.string "Don't you start the party without me!$"
 
 SpearPillar_EventScript_SNSPCommanders_T2::
-	.string "JUPITER: And I’ll be next.\p"
+	.string "JUPITER: And I'll be next.\p"
 	.string "You might be tough, but this time, the\n"
 	.string "gloves are coming off!$"
 
 SpearPillar_EventScript_SNSPCommanders_T1::
-	.string "MARS: Where do you think you’re going?\n"
-	.string "I won’t let you disturb our boss.\p"
-	.string "If you’re not going to listen, you’ll\n"
+	.string "MARS: Where do you think you're going?\n"
+	.string "I won't let you disturb our boss.\p"
+	.string "If you're not going to listen, you'll\n"
 	.string "have to go through me first.\p"
-	.string "After all, you’ve made me look bad more\n"
+	.string "After all, you've made me look bad more\n"
 	.string "times than I care to remember!$"
 
 SpearPillar_EventScript_SNSPCommanders_End::
@@ -273,17 +273,17 @@ SpearPillar_EventScript_SNCyrus_T4::
 	.string "appear as a shadow.$"
 
 SpearPillar_EventScript_SNCyrus_T3::
-	.string "CYRUS: ...I should have expected as\n"
+	.string "CYRUS: …I should have expected as\n"
 	.string "much.\p"
 	.string "UXIE, “The Being of Knowledge.”\p"
 	.string "AZELF, “The Being of Willpower.”\p"
-	.string "And MESPRIT, “The Being of Emotion”...$"
+	.string "And MESPRIT, “The Being of Emotion”…$"
 
 SpearPillar_EventScript_SNCyrus_Defeat::
-	.string "CYRUS: ...How can this be?$"
+	.string "CYRUS: …How can this be?$"
 
 SpearPillar_EventScript_SNCyrus_T2::
-	.string "CYRUS: I’ve waited so long for this\n"
+	.string "CYRUS: I've waited so long for this\n"
 	.string "moment, DIALGA and PALKIA.\p"
 	.string "Shaping this world is a double spiral of\n"
 	.string "time and space.\p"
@@ -295,19 +295,19 @@ SpearPillar_EventScript_SNCyrus_T2::
 	.string "entirely new world!$"
 
 SpearPillar_EventScript_SNCyrus_T1::
-	.string "CYRUS: ... ...\p"
+	.string "CYRUS: … …\p"
 	.string "Everything is ready for the creation\n"
 	.string "of a new world.\p"
 	.string "Now, all will end. And everything will\n"
 	.string "begin.\p"
 	.string "With this, the Red Chain made from the\n"
-	.string "crystals of the three lake POKéMON...\p"
+	.string "crystals of the three lake POKéMON…\p"
 	.string "And this, the Red Chain I replicated\n"
-	.string "with technological means...\p"
+	.string "with technological means…\p"
 	.string "With these Red Chains I will pry open\n"
 	.string "the portal to another dimension.\p"
 	.string "I command that you unleash your power\n"
-	.string "for me...$"
+	.string "for me…$"
 
 SpearPillar_EventScript_SNDIALGA::
 	lock

@@ -92,7 +92,7 @@ Route212_South_EventScript_Allison_Rematch::
 	end
 
 Route212_South_Text_AllisonDefeat::
-	.string "We've got to get tougher than this...$"
+	.string "We've got to get tougher than this…$"
 
 Route212_South_Text_AllisonIntro::
 	.string "Protect the natural environment.\n"
@@ -132,7 +132,7 @@ Route212_South_EventScript_Danny_Rematch::
 	end
 
 Route212_South_Text_DannyDefeat::
-	.string "Defeated by sneakiness...$"
+	.string "Defeated by sneakiness…$"
 
 Route212_South_Text_DannyIntro::
 	.string "Your whole atmosphere is shady.\n"
@@ -145,14 +145,14 @@ Route212_South_EventScript_Stefano::
 
 Route212_South_Text_StefanoPost::
 	.string "It feels good to mope here after a\n"
-	.string "loss... Ufufufufu...$"
+	.string "loss… Ufufufufu…$"
 
 Route212_South_Text_StefanoDefeat::
-	.string "Ufufufufu... You had to beat me...$"
+	.string "Ufufufufu… You had to beat me…$"
 
 Route212_South_Text_StefanoIntro::
 	.string "I find it reassuring to be on this damp\n"
-	.string "soil...$"
+	.string "soil…$"
 
 Route212_South_EventScript_Dean::
 	trainerbattle_single TRAINER_KAYLA_SINNOH, Route212_South_Text_DeanIntro, Route212_South_Text_DeanDefeat
@@ -220,8 +220,8 @@ Route212_South_EventScript_Alexa_Rematch::
 	end
 
 Route212_South_Text_AlexaDefeat::
-	.string "Like rain, my tears flow from losing...\n"
-	.string "They call me the Rain Woman...$"
+	.string "Like rain, my tears flow from losing…\n"
+	.string "They call me the Rain Woman…$"
 
 Route212_South_Text_AlexaIntro::
 	.string "There are POKéMON that grow stronger\n"
@@ -249,14 +249,14 @@ Route212_South_EventScript_PtNpc1::
 
 Route212_South_Text_PtNpc1::
 	.string "You can zip across fallen logs like\n"
-	.string "bridges on your Bike.$"
+	.string "bridges on your BIKE.$"
 
 Route212_South_EventScript_PtNpc2::
 	msgbox Route212_South_Text_PtNpc2, MSGBOX_NPC
 	end
 
 Route212_South_Text_PtNpc2::
-	.string "...Am I stuck in the bog?\p"
+	.string "…Am I stuck in the bog?\p"
 	.string "Of course not. How silly! This is a\n"
 	.string "full-body mud pack.\p"
 	.string "If it weren't, I would be squirming and\n"

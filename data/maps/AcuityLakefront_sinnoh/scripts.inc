@@ -15,10 +15,10 @@ AcuityLakefront_Text_SNBarry::
 	.string "Slooow! Way too slow!\p"
 	.string "Listen, {PLAYER}.\n"
 	.string "See how the rocks are all lumpy here?\p"
-	.string "You can’t climb those rocks until you\n"
+	.string "You can't climb those rocks until you\n"
 	.string "get the SNOWPOINT GYM BADGE.\p"
-	.string "Anyway, I’m off.\n"
-	.string "TEAM GALACTIC! I’m coming for you!$"
+	.string "Anyway, I'm off.\n"
+	.string "TEAM GALACTIC! I'm coming for you!$"
 
 AcuityLakefront_EventScript_PtSign1::
 	msgbox AcuityLakefront_Text_PtSign1, MSGBOX_SIGN

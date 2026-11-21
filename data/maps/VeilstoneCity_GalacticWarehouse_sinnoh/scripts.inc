@@ -22,15 +22,15 @@ VeilstoneCity_GalacticWarehouse_EventScript_SNLooker::
 	goto VeilstoneCity_GalacticWarehouse_EventScript_SNLooker_After
 
 VeilstoneCity_GalacticWarehouse_EventScript_SNLooker_T1::
-	.string "LOOKER: Ah, this Hidden Machine... It is\n"
-	.string "of the hidden move Fly.\p"
+	.string "LOOKER: Ah, this Hidden Machine… It is\n"
+	.string "of the hidden move FLY.\p"
 	.string "{PLAYER}, this, you should be keeping.\p"
 	.string "It will not do to leave this item here\n"
 	.string "to be used by the TEAM GALACTIC.$"
 
 VeilstoneCity_GalacticWarehouse_EventScript_SNLooker_T2::
 	.string "LOOKER: So, we did not learn very much\n"
-	.string "from this exercise... No matter.\p"
+	.string "from this exercise… No matter.\p"
 	.string "What concerns me is what I have\n"
 	.string "overheard in the Game Corner.\p"
 	.string "The TEAM GALACTIC has transported\n"
@@ -50,9 +50,9 @@ VeilstoneCity_GalacticWarehouse_EventScript_SNLooker_K3::
 	.string "expose yourself to danger!$"
 
 VeilstoneCity_GalacticWarehouse_EventScript_SNLooker_K2::
-	.string "LOOKER: I will use this Storage Key I\n"
-	.string "have obtained from the TEAM GALACTIC...\p"
-	.string "...Ker-chunk!\p"
+	.string "LOOKER: I will use this STORAGE KEY I\n"
+	.string "have obtained from the TEAM GALACTIC…\p"
+	.string "…Ker-chunk!\p"
 	.string "Yes! It is opened!$"
 
 VeilstoneCity_GalacticWarehouse_EventScript_SNLooker_K1::

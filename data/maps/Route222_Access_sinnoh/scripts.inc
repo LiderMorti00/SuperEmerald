@@ -8,7 +8,7 @@ Route222_Access_EventScript_PtNpc1::
 
 Route222_Access_Text_PtNpc1::
 	.string "If I had to describe SUNNYSHORE GYM in\n"
-	.string "a word, it'd be...\p"
+	.string "a word, it'd be…\p"
 	.string "Shockingly electric!\p"
 	.string "Whoops, that's two words!$"
 

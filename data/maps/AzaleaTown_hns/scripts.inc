@@ -94,8 +94,8 @@ AzaleaTown_EventScript_Slowpoke::
 	end
 
 AzaleaTown_Text_Slowpoke1::
-	.string "SLOWPOKE:..........\p"
-	.string "...............YAWN?$"
+	.string "SLOWPOKE:……….\p"
+	.string "……………YAWN?$"
 
 AzaleaTown_EventScript_GymSign::
 	lock

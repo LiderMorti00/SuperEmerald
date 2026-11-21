@@ -48,7 +48,7 @@ BurnedTower_Text_NardAfter::
 	.string "The reason this tower's burned is\n"
 	.string "that it was hit by lightning.\p"
 	.string "The fire I'm breathing is tiny\n"
-	.string "in comparison...$"
+	.string "in comparison…$"
 
 BurnedTower_Text_NardBeaten::
 	.string "Thanks for such a heated battle!$"
@@ -65,7 +65,7 @@ BurnedTower_1F_EventScript_Richardo::
 
 BurnedTower_Text_RichardoAfter::
 	.string "Maybe a life of crime isn't for\n"
-	.string "me...$"
+	.string "me…$"
 
 BurnedTower_Text_RichardoBeaten::
 	.string "Pfffffffffffffff.$"

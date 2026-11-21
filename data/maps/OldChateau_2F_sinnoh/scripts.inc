@@ -16,7 +16,7 @@ OldChateau_2F_EventScript_GhostGirl::
 	end
 
 OldChateau_2F_Text_GhostGirl::
-	.string "...$"
+	.string "…$"
 
 OldChateau_2F_EventScript_TV::
 	goto_if_unset FLAG_SYS_GAME_CLEAR, OldChateau_2F_EventScript_TVOnly
@@ -53,5 +53,5 @@ OldChateau_2F_EventScript_TVOnly::
 	end
 
 OldChateau_2F_Text_TV::
-	.string "The TV has an oddly malevolent feel...\p"
-	.string "It's as if it is staring...$"
+	.string "The TV has an oddly malevolent feel…\p"
+	.string "It's as if it is staring…$"

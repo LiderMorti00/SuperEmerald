@@ -189,7 +189,7 @@ Route41_EventScript_Tentacruel1::
 	end
 
 Route41_Text_Tentacruel::
-	.string "TENTACRUEL: Cruooo...$"
+	.string "TENTACRUEL: Cruooo…$"
 
 Route41_EventScript_TentacruelAttack1::
 	msgbox Route41_Text_TentacruelAttack, MSGBOX_DEFAULT

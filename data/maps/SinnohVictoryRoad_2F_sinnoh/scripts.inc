@@ -9,14 +9,14 @@ SinnohVictoryRoad_2F_EventScript_Omar::
 
 SinnohVictoryRoad_2F_Text_OmarPost::
 	.string "One day, people will run to the other\n"
-	.string "side of the road when I walk by ’em.\p"
-	.string "It’s a goal of mine I’m working on.$"
+	.string "side of the road when I walk by 'em.\p"
+	.string "It's a goal of mine I'm working on.$"
 
 SinnohVictoryRoad_2F_Text_OmarDefeat::
-	.string "You’re as tough as you look.$"
+	.string "You're as tough as you look.$"
 
 SinnohVictoryRoad_2F_Text_OmarIntro::
-	.string "You... One look at you tells me you’re a\n"
+	.string "You… One look at you tells me you're a\n"
 	.string "real contender!$"
 
 SinnohVictoryRoad_2F_EventScript_Sydney::
@@ -25,7 +25,7 @@ SinnohVictoryRoad_2F_EventScript_Sydney::
 	end
 
 SinnohVictoryRoad_2F_Text_SydneyPost::
-	.string "It doesn’t appear as if anyone could\n"
+	.string "It doesn't appear as if anyone could\n"
 	.string "even try to stand against your might.\p"
 	.string "The ELITE FOUR should just surrender.$"
 
@@ -34,9 +34,9 @@ SinnohVictoryRoad_2F_Text_SydneyDefeat::
 	.string "tougher than everyone in the world.$"
 
 SinnohVictoryRoad_2F_Text_SydneyIntro::
-	.string "This total stranger’ll be a good way to\n"
+	.string "This total stranger'll be a good way to\n"
 	.string "see if I have what it takes to own\p"
-	.string "the POKéMON LEAGUE’s ELITE FOUR!$"
+	.string "the POKéMON LEAGUE's ELITE FOUR!$"
 
 SinnohVictoryRoad_2F_EventScript_Clayton::
 	trainerbattle_single TRAINER_WINSTON_2_SINNOH, SinnohVictoryRoad_2F_Text_ClaytonIntro, SinnohVictoryRoad_2F_Text_ClaytonDefeat
@@ -70,4 +70,4 @@ SinnohVictoryRoad_2F_Text_AlKayDefeat::
 	.string "I lost!$"
 
 SinnohVictoryRoad_2F_Text_AlKayIntro::
-	.string "Let’s battle!$"
+	.string "Let's battle!$"

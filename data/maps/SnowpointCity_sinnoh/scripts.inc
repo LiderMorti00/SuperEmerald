@@ -16,7 +16,7 @@ SnowpointCity_EventScript_FerrySailor::
 	end
 
 SnowpointCity_Text_LetsSetSail::
-	.string "Aye, aye, then! Let’s set sail!$"
+	.string "Aye, aye, then! Let's set sail!$"
 
 SnowpointCity_EventScript_FerryNo::
 	msgbox SnowpointCity_Text_PtNpc1, MSGBOX_DEFAULT
@@ -40,7 +40,7 @@ SnowpointCity_EventScript_FerryNotYet::
 
 SnowpointCity_Text_GreatTrainer::
 	.string "A great TRAINER recognized by the\n"
-	.string "POKéMON LEAGUE...\p"
+	.string "POKéMON LEAGUE…\p"
 	.string "I look forward to carrying someone like\n"
 	.string "that on this ship!$"
 
@@ -52,7 +52,7 @@ SnowpointCity_EventScript_PtNpc2::
 	end
 
 SnowpointCity_Text_PtNpc2_0::
-	.string "Brrr... This snowbound town is always\n"
+	.string "Brrr… This snowbound town is always\n"
 	.string "freezing cold.\p"
 	.string "But the spirits of the TRAINERS and\n"
 	.string "their POKéMON burn hot and bright.\p"
@@ -76,7 +76,7 @@ SnowpointCity_EventScript_PtNpc4::
 SnowpointCity_Text_PtNpc4::
 	.string "Only the chosen may enter the\n"
 	.string "SNOWPOINT TEMPLE.\p"
-	.string "I’m sorry, but you will have to leave.$"
+	.string "I'm sorry, but you will have to leave.$"
 
 SnowpointCity_EventScript_PtNpc5::
 	lock
@@ -116,13 +116,13 @@ SnowpointCity_Text_SNCyn2::
 	.string "I hope our paths cross again!$"
 
 SnowpointCity_Text_SNCyn1::
-	.string "CYNTHIA: I thought you would come. I’m\n"
+	.string "CYNTHIA: I thought you would come. I'm\n"
 	.string "glad I waited for you!\p"
-	.string "CYNTHIA: I think it’s good that our\n"
+	.string "CYNTHIA: I think it's good that our\n"
 	.string "world is constantly changing.\p"
-	.string "Of course, I don’t want it to become\n"
+	.string "Of course, I don't want it to become\n"
 	.string "what only one person wants.\p"
-	.string "A world like CYRUS envisions... No one\n"
+	.string "A world like CYRUS envisions… No one\n"
 	.string "would want that.\p"
 	.string "The kind of world I want to see is\n"
 	.string "where everyone can share their joy.\p"

@@ -12,11 +12,11 @@ IronIsland_B2F_Right_Text_NoelPost::
 	.string "before it shut down.\p"
 	.string "I worked at the ironworks near\n"
 	.string "FLOAROMA TOWN, too.\p"
-	.string "You might say I’m drawn by iron as if by\n"
+	.string "You might say I'm drawn by iron as if by\n"
 	.string "magnet!$"
 
 IronIsland_B2F_Right_Text_NoelDefeat::
-	.string "The working-class hero waves bye...$"
+	.string "The working-class hero waves bye…$"
 
 IronIsland_B2F_Right_Text_NoelIntro::
 	.string "The working-class hero says hi!$"
@@ -35,5 +35,5 @@ IronIsland_B2F_Right_Text_BradenDefeat::
 	.string "in sight!$"
 
 IronIsland_B2F_Right_Text_BradenIntro::
-	.string "While I’m making sure the lifts are\n"
-	.string "safe, I’ll focus on a battle with you!$"
+	.string "While I'm making sure the lifts are\n"
+	.string "safe, I'll focus on a battle with you!$"

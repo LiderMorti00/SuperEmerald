@@ -10,12 +10,12 @@ HearthomeCity_Flat1_F1_EventScript_PtNpc1::
 	end
 
 HearthomeCity_Flat1_F1_Text_PtNpc1_0::
-	.string "Well, now, you’re a TRAINER?\p"
+	.string "Well, now, you're a TRAINER?\p"
 	.string "That makes you both papa and mama to\n"
 	.string "your POKéMON.\p"
 	.string "You know how having POKéMON around\n"
 	.string "leads to new discoveries?\p"
-	.string "It’s the same for parents and kids. I’m\n"
+	.string "It's the same for parents and kids. I'm\n"
 	.string "always learning from my kids.$"
 
 HearthomeCity_Flat1_F1_EventScript_PtNpc2::
@@ -60,7 +60,7 @@ HearthomeCity_Flat1_F1_EventScript_PtNpc5::
 	end
 
 HearthomeCity_Flat1_F1_Text_PtNpc5_0::
-	.string "When I get bigger, I’m going to be a\n"
+	.string "When I get bigger, I'm going to be a\n"
 	.string "TRAINER, too!$"
 
 HearthomeCity_Flat1_F1_EventScript_PtNpc6::
@@ -82,7 +82,7 @@ HearthomeCity_Flat1_F1_EventScript_PtNpc7::
 	end
 
 HearthomeCity_Flat1_F1_Text_PtNpc7_0::
-	.string "Oh, wow, you’re a POKéMON TRAINER.\p"
+	.string "Oh, wow, you're a POKéMON TRAINER.\p"
 	.string "Having lots of POKéMON around is a lot\n"
 	.string "of responsibility.\p"
 	.string "But that also comes with a lot of fun!$"
@@ -95,5 +95,5 @@ HearthomeCity_Flat1_F1_EventScript_PtNpc8::
 	end
 
 HearthomeCity_Flat1_F1_Text_PtNpc8_0::
-	.string "...My sisters make so much noise, no one\n"
+	.string "…My sisters make so much noise, no one\n"
 	.string "even notices me.$"

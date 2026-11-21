@@ -19,9 +19,9 @@ PokemonLeague_LucianRoom_EventScript_Drake::
 	goto PokemonLeague_LucianRoom_EventScript_SNAfterBattle
 
 PokemonLeague_LucianRoom_Text_Defeat::
-	.string "Congratulations. You’ve now beaten\n"
+	.string "Congratulations. You've now beaten\n"
 	.string "the ELITE FOUR.\p"
-	.string "However, that doesn’t mean you’re done\n"
+	.string "However, that doesn't mean you're done\n"
 	.string "with the POKéMON LEAGUE.\p"
 	.string "There remains the CHAMPION.\p"
 	.string "I should warn you--the CHAMPION is far\n"
@@ -43,7 +43,7 @@ PokemonLeague_LucianRoom_EventScript_Defeated::
 	end
 
 PokemonLeague_LucianRoom_Text_PostBattleSpeech::
-	.string "I’ll be reading books until the next\n"
+	.string "I'll be reading books until the next\n"
 	.string "challenger arrives.\p"
 	.string "That will calm my nerves, so that I may\n"
 	.string "deal with all situations without\p"
@@ -51,17 +51,17 @@ PokemonLeague_LucianRoom_Text_PostBattleSpeech::
 
 PokemonLeague_LucianRoom_Text_IntroSpeech::
 	.string "Ah, you timed your arrival well.\p"
-	.string "I’ve just finished reading a book, you\n"
+	.string "I've just finished reading a book, you\n"
 	.string "see.\p"
 	.string "Allow me to introduce myself.\p"
-	.string "I am LUCIAN. I am a user of the Psychic\n"
+	.string "I am LUCIAN. I am a user of the PSYCHIC\n"
 	.string "type.\p"
-	.string "I must say, you’ve already proven\n"
+	.string "I must say, you've already proven\n"
 	.string "yourself to be outstanding by coming\p"
 	.string "this far.\p"
 	.string "They say I am the toughest of the\n"
 	.string "ELITE FOUR.\p"
-	.string "I’m afraid I will have to go all out\n"
+	.string "I'm afraid I will have to go all out\n"
 	.string "against you to live up to that\p"
 	.string "reputation.$"
 

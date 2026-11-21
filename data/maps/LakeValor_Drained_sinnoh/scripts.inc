@@ -13,12 +13,12 @@ LakeValor_Drained_Text_GruntPost::
 	.string "number.\p"
 	.string "Even as we speak, other members should\n"
 	.string "be near TWINLEAF TOWN.\p"
-	.string "That’s right, they’re on the way to\n"
+	.string "That's right, they're on the way to\n"
 	.string "LAKE VERITY!$"
 
 LakeValor_Drained_Text_GruntDefeat::
 	.string "Your POKéMON attack with phenomenal\n"
-	.string "power...$"
+	.string "power…$"
 
 LakeValor_Drained_Text_GruntIntro::
 	.string "We set off the GALACTIC Bomb! Its\n"
@@ -31,18 +31,18 @@ LakeValor_Drained_EventScript_Grunt2::
 
 LakeValor_Drained_Text_Grunt2Post::
 	.string "I played you for a child, and paid a\n"
-	.string "stiff price for my arrogance...\p"
-	.string "However, you’re much too late.\p"
+	.string "stiff price for my arrogance…\p"
+	.string "However, you're much too late.\p"
 	.string "TEAM GALACTIC has already found the\n"
 	.string "sunken island under the lake.\p"
 	.string "And the POKéMON that lay in it? Well,\n"
 	.string "what do you think?$"
 
 LakeValor_Drained_Text_Grunt2Defeat::
-	.string "...Overwhelming!$"
+	.string "…Overwhelming!$"
 
 LakeValor_Drained_Text_Grunt2Intro::
-	.string "...Would you like to join the MAGIKARP\n"
+	.string "…Would you like to join the MAGIKARP\n"
 	.string "and flop around in the mud?$"
 
 LakeValor_Drained_EventScript_Grunt3::
@@ -51,15 +51,15 @@ LakeValor_Drained_EventScript_Grunt3::
 	end
 
 LakeValor_Drained_Text_Grunt3Post::
-	.string "We’re TEAM GALACTIC! The no. 1\n"
+	.string "We're TEAM GALACTIC! The no. 1\n"
 	.string "syndicate in the world!\p"
 	.string "To defy us is to defy the universe!$"
 
 LakeValor_Drained_Text_Grunt3Defeat::
-	.string "Grr... I took the punishment...$"
+	.string "Grr… I took the punishment…$"
 
 LakeValor_Drained_Text_Grunt3Intro::
-	.string "I’ll punish you in place of our boss for\n"
+	.string "I'll punish you in place of our boss for\n"
 	.string "defying TEAM GALACTIC!$"
 
 LakeValor_Drained_EventScript_PtNpc1::
@@ -70,9 +70,9 @@ LakeValor_Drained_EventScript_PtNpc1::
 	end
 
 LakeValor_Drained_Text_PtNpc1_0::
-	.string "What do you want? You’re investigating\n"
+	.string "What do you want? You're investigating\n"
 	.string "the explosion?\p"
-	.string "Bah, it doesn’t matter who you are. It’s\n"
+	.string "Bah, it doesn't matter who you are. It's\n"
 	.string "too late to make any difference.\p"
 	.string "Things are going to get really\n"
 	.string "interesting now.\p"
@@ -113,7 +113,7 @@ LakeValor_Drained_EventScript_PtNpc4::
 	end
 
 LakeValor_Drained_Text_PtNpc4_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc5::
 	lock
@@ -124,7 +124,7 @@ LakeValor_Drained_EventScript_PtNpc5::
 	end
 
 LakeValor_Drained_Text_PtNpc5_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc6::
 	lock
@@ -135,7 +135,7 @@ LakeValor_Drained_EventScript_PtNpc6::
 	end
 
 LakeValor_Drained_Text_PtNpc6_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc7::
 	lock
@@ -146,7 +146,7 @@ LakeValor_Drained_EventScript_PtNpc7::
 	end
 
 LakeValor_Drained_Text_PtNpc7_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc8::
 	lock
@@ -157,7 +157,7 @@ LakeValor_Drained_EventScript_PtNpc8::
 	end
 
 LakeValor_Drained_Text_PtNpc8_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc9::
 	lock
@@ -168,7 +168,7 @@ LakeValor_Drained_EventScript_PtNpc9::
 	end
 
 LakeValor_Drained_Text_PtNpc9_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc10::
 	lock
@@ -179,7 +179,7 @@ LakeValor_Drained_EventScript_PtNpc10::
 	end
 
 LakeValor_Drained_Text_PtNpc10_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc11::
 	lock
@@ -190,7 +190,7 @@ LakeValor_Drained_EventScript_PtNpc11::
 	end
 
 LakeValor_Drained_Text_PtNpc11_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc12::
 	lock
@@ -201,7 +201,7 @@ LakeValor_Drained_EventScript_PtNpc12::
 	end
 
 LakeValor_Drained_Text_PtNpc12_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc13::
 	lock
@@ -212,7 +212,7 @@ LakeValor_Drained_EventScript_PtNpc13::
 	end
 
 LakeValor_Drained_Text_PtNpc13_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc14::
 	lock
@@ -223,7 +223,7 @@ LakeValor_Drained_EventScript_PtNpc14::
 	end
 
 LakeValor_Drained_Text_PtNpc14_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc15::
 	lock
@@ -234,7 +234,7 @@ LakeValor_Drained_EventScript_PtNpc15::
 	end
 
 LakeValor_Drained_Text_PtNpc15_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc16::
 	lock
@@ -245,7 +245,7 @@ LakeValor_Drained_EventScript_PtNpc16::
 	end
 
 LakeValor_Drained_Text_PtNpc16_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc17::
 	lock
@@ -256,7 +256,7 @@ LakeValor_Drained_EventScript_PtNpc17::
 	end
 
 LakeValor_Drained_Text_PtNpc17_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc18::
 	lock
@@ -267,7 +267,7 @@ LakeValor_Drained_EventScript_PtNpc18::
 	end
 
 LakeValor_Drained_Text_PtNpc18_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc19::
 	lock
@@ -278,7 +278,7 @@ LakeValor_Drained_EventScript_PtNpc19::
 	end
 
 LakeValor_Drained_Text_PtNpc19_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc20::
 	lock
@@ -289,7 +289,7 @@ LakeValor_Drained_EventScript_PtNpc20::
 	end
 
 LakeValor_Drained_Text_PtNpc20_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc21::
 	lock
@@ -300,7 +300,7 @@ LakeValor_Drained_EventScript_PtNpc21::
 	end
 
 LakeValor_Drained_Text_PtNpc21_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc22::
 	lock
@@ -311,7 +311,7 @@ LakeValor_Drained_EventScript_PtNpc22::
 	end
 
 LakeValor_Drained_Text_PtNpc22_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc23::
 	lock
@@ -322,7 +322,7 @@ LakeValor_Drained_EventScript_PtNpc23::
 	end
 
 LakeValor_Drained_Text_PtNpc23_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc24::
 	lock
@@ -333,7 +333,7 @@ LakeValor_Drained_EventScript_PtNpc24::
 	end
 
 LakeValor_Drained_Text_PtNpc24_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc25::
 	lock
@@ -344,7 +344,7 @@ LakeValor_Drained_EventScript_PtNpc25::
 	end
 
 LakeValor_Drained_Text_PtNpc25_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"
 
 LakeValor_Drained_EventScript_PtNpc26::
 	lock
@@ -355,4 +355,4 @@ LakeValor_Drained_EventScript_PtNpc26::
 	end
 
 LakeValor_Drained_Text_PtNpc26_0::
-	.string "A MAGIKARP is weakly flopping about...$"
+	.string "A MAGIKARP is weakly flopping about…$"

@@ -19,13 +19,13 @@ MtCoronet_1F_South_EventScript_SNCyrus::
 MtCoronet_1F_South_EventScript_SNCyrus_T2::
 	.string "But what became of that world?\p"
 	.string "Because the human spirit is weak and\n"
-	.string "incomplete, strife has spread...\p"
-	.string "This world is being ruined by it...\p"
+	.string "incomplete, strife has spread…\p"
+	.string "This world is being ruined by it…\p"
 	.string "I find this state of affairs to be\n"
-	.string "deplorable...$"
+	.string "deplorable…$"
 
 MtCoronet_1F_South_EventScript_SNCyrus_T1::
-	.string "...In a newly created world...\p"
+	.string "…In a newly created world…\p"
 	.string "A world where only time flowed and\n"
-	.string "space expanded...\p"
+	.string "space expanded…\p"
 	.string "There should have been no strife.$"

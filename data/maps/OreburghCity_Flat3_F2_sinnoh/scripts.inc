@@ -21,7 +21,7 @@ OreburghCity_Flat3_F2_Text_PtNpc1_After::
 	.string "best POKé BALLS for them.$"
 
 OreburghCity_Flat3_F2_Text_PtNpc1::
-	.string "Wow... Your POKéMON's eyes are\n"
+	.string "Wow… Your POKéMON's eyes are\n"
 	.string "twinkling brightly!\p"
 	.string "Seeing that makes me happy! Here, I\n"
 	.string "want you to have this!$"

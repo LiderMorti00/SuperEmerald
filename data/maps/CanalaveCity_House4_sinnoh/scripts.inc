@@ -10,7 +10,7 @@ CanalaveCity_House4_EventScript_PtNpc1::
 	end
 
 CanalaveCity_House4_Text_PtNpc1_0::
-	.string "Somewhere far beyond the vast sea...\p"
+	.string "Somewhere far beyond the vast sea…\p"
 	.string "There are other lands populated by\n"
 	.string "POKéMON and TRAINERS.$"
 
@@ -34,10 +34,10 @@ CanalaveCity_House4_EventScript_PtNpc2_ExplainSkillSwap::
 CanalaveCity_House4_Text_PtNpc2_1::
 	.string "You know how POKéMON have their own\n"
 	.string "abilities?\p"
-	.string "Well, the move Skill Swap exchanges the\n"
-	.string "user’s ability with that of its\p"
+	.string "Well, the move SKILL SWAP exchanges the\n"
+	.string "user's ability with that of its\p"
 	.string "target POKéMON.\p"
-	.string "How you use Skill Swap is a measure of\n"
+	.string "How you use SKILL SWAP is a measure of\n"
 	.string "your expertise as a TRAINER.$"
 
 CanalaveCity_House4_Text_PtNpc2_0::
@@ -45,5 +45,5 @@ CanalaveCity_House4_Text_PtNpc2_0::
 	.string "found.\p"
 	.string "It was mixed in with a load of cargo\n"
 	.string "from another country.\p"
-	.string "It’s not anything that I can use, so I\n"
+	.string "It's not anything that I can use, so I\n"
 	.string "think you should take it.$"

@@ -35,7 +35,7 @@ BlackthornCity_EventScript_CoolTrainerF2::
 
 BlackthornCooltrainerF2Text::
 	.string "Wow, you came through the ICE PATH?\p"
-	.string "You must be a real hotshot trainer!$"
+	.string "You must be a real hotshot TRAINER!$"
 
 BlackthornCity_EventScript_CoolTrainerF::
 	msgbox BlackthornCooltrainerF1Text, MSGBOX_NPC

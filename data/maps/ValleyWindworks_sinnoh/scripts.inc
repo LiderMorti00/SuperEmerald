@@ -24,18 +24,18 @@ ValleyWindworks_EventScript_DoorGruntFlees::
 	end
 
 ValleyWindworks_Text_Locked::
-	.string "It’s locked from inside!$"
+	.string "It's locked from inside!$"
 
 ValleyWindworks_Text_DoorFlee::
-	.string "Isn’t that just great. Getting owned\n"
+	.string "Isn't that just great. Getting owned\n"
 	.string "by some kid.\p"
-	.string "But you can’t do a thing if I lock\n"
+	.string "But you can't do a thing if I lock\n"
 	.string "myself in with my Works Key!\p"
-	.string "That’s right, the other Works Key’s not\n"
+	.string "That's right, the other Works Key's not\n"
 	.string "here!\p"
 	.string "My cohorts in the flower patch have\n"
 	.string "the only other one!\p"
-	.string "Hahaha! In that sense, I’m no longer\n"
+	.string "Hahaha! In that sense, I'm no longer\n"
 	.string "the loser!$"
 
 ValleyWindworks_Text_DoorIntro::
@@ -60,9 +60,9 @@ ValleyWindworks_Text_Looker::
 	.string "appeared at this power plant.\p"
 	.string "I have, therefore, come running. So,\n"
 	.string "the TEAM GALACTIC. Where are they?\p"
-	.string "...\p"
+	.string "…\p"
 	.string "You have run them off, you say? You\n"
-	.string "are a TRAINER, but...?\p"
+	.string "are a TRAINER, but…?\p"
 	.string "Very well! I shall go investigate\n"
 	.string "inside!\p"
 	.string "LOOKER: Magnificent! Yes, it is! What\n"

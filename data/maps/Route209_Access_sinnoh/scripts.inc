@@ -84,22 +84,22 @@ Route209_Access_EventScript_SNBarry_M4::
 Route209_Access_EventScript_SNBarry_Post::
 	.string "BARRY: Waaah!\p"
 	.string "It goes to show my surefire winning\n"
-	.string "strategy doesn’t work.\p"
+	.string "strategy doesn't work.\p"
 	.string "Say, hey, {PLAYER}. Remember what I told\n"
 	.string "you before?\p"
 	.string "Make sure all your attacks hit! Avoid\n"
 	.string "every enemy attack!\p"
 	.string "I thought that was a wicked strategy,\n"
-	.string "but it doesn’t work worth beans.\p"
+	.string "but it doesn't work worth beans.\p"
 	.string "I guess I have to grind it out and\n"
 	.string "toughen up the team a bit at a time.\p"
-	.string "Anyway! I’m off to SOLACEON TOWN! See\n"
+	.string "Anyway! I'm off to SOLACEON TOWN! See\n"
 	.string "ya, {PLAYER}!\p"
-	.string "You’ll be shocked by my growth the\n"
+	.string "You'll be shocked by my growth the\n"
 	.string "next time we meet!$"
 
 Route209_Access_EventScript_SNBarry_Defeat::
-	.string "BARRY: Waaah! What the...?!$"
+	.string "BARRY: Waaah! What the…?!$"
 
 Route209_Access_EventScript_SNBarry_B1::
 	trainerbattle_no_intro TRAINER_BIANCA_SINNOH, Route209_Access_EventScript_SNBarry_Defeat
@@ -108,9 +108,9 @@ Route209_Access_EventScript_SNBarry_B1::
 Route209_Access_EventScript_SNBarry_Intro::
 	.string "BARRY: Ta-daah! Kept me waiting again,\n"
 	.string "{PLAYER}!\p"
-	.string "Let’s see how much tougher you and I\n"
+	.string "Let's see how much tougher you and I\n"
 	.string "have gotten, right here and now!\p"
-	.string "Hey, you’re a TRAINER now. You’re\n"
+	.string "Hey, you're a TRAINER now. You're\n"
 	.string "expected to be ready for a battle.\p"
-	.string "No whining! No waiting! Let’s get the\n"
+	.string "No whining! No waiting! Let's get the\n"
 	.string "show started!$"

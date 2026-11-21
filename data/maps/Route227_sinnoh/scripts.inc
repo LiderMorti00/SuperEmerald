@@ -20,7 +20,7 @@ Route227_EventScript_Saul_Rematch::
 
 Route227_Text_SaulDefeat::
 	.string "I shouldn't have paid attention to my\n"
-	.string "urge...$"
+	.string "urge…$"
 
 Route227_Text_SaulIntro::
 	.string "I've got the urge to battle with you.\n"
@@ -52,11 +52,11 @@ Route227_EventScript_Griffin::
 	end
 
 Route227_Text_GriffinPost::
-	.string "All that time under the waterfall...\n"
+	.string "All that time under the waterfall…\n"
 	.string "Seems I've caught a cold.$"
 
 Route227_Text_GriffinDefeat::
-	.string "Ha-choo! Sniffle...$"
+	.string "Ha-choo! Sniffle…$"
 
 Route227_Text_GriffinIntro::
 	.string "I have meditated under a waterfall to\n"
@@ -105,29 +105,29 @@ Route227_EventScript_SNBuck::
 	goto Route227_EventScript_SNBuck_Ask
 
 Route227_EventScript_SNBuck_T2::
-	.string "BUCK: Up past here, there’s this\n"
-	.string "volcano. It’s STARK MOUNTAIN.\p"
+	.string "BUCK: Up past here, there's this\n"
+	.string "volcano. It's STARK MOUNTAIN.\p"
 	.string "Deep inside it is this special rock\n"
 	.string "called the Magma Stone.\p"
-	.string "I can’t explain it well, but it’s really\n"
+	.string "I can't explain it well, but it's really\n"
 	.string "important. It keeps a POKéMON asleep.\p"
-	.string "But lately, I’ve been hearing rumors\n"
+	.string "But lately, I've been hearing rumors\n"
 	.string "about vandals in STARK MOUNTAIN.\p"
 	.string "They say goons in space suits are\n"
 	.string "causing trouble there.$"
 
 Route227_EventScript_SNBuck_T1::
-	.string "BUCK: Yo, if it isn’t {PLAYER}! Out\n"
+	.string "BUCK: Yo, if it isn't {PLAYER}! Out\n"
 	.string "training right away, are you?\p"
-	.string "So, uh, since you’re training anyway,\n"
+	.string "So, uh, since you're training anyway,\n"
 	.string "can you do me a favor?\p"
-	.string "I’d like you to patrol STARK MOUNTAIN\n"
+	.string "I'd like you to patrol STARK MOUNTAIN\n"
 	.string "for me.$"
 
 Route227_EventScript_SNBuck_T5::
-	.string "BUCK: OK! You’re in charge! Patrol Stark\n"
-	.string "Mountain for me!\p"
-	.string "Don’t worry about me. Not even a little\n"
+	.string "BUCK: OK! You're in charge! Patrol STARK\n"
+	.string "MOUNTAIN for me!\p"
+	.string "Don't worry about me. Not even a little\n"
 	.string "bit, OK?$"
 
 Route227_EventScript_SNBuck_No::
@@ -135,15 +135,15 @@ Route227_EventScript_SNBuck_No::
 	goto Route227_EventScript_SNBuck_Ask
 
 Route227_EventScript_SNBuck_T4::
-	.string "I’ll keep asking the same thing over\n"
+	.string "I'll keep asking the same thing over\n"
 	.string "and over until you say “Yes!”$"
 
 Route227_EventScript_SNBuck_T3::
 	.string "Huh? What, me?\p"
 	.string "I was on my way to the POKéMON Center\n"
-	.string "because my POKéMON’s low on HP.\p"
-	.string "So, if you could get up to Stark\n"
-	.string "Mountain now, that’d be great. Thanks!$"
+	.string "because my POKéMON's low on HP.\p"
+	.string "So, if you could get up to STARK\n"
+	.string "MOUNTAIN now, that'd be great. Thanks!$"
 
 Route227_EventScript_SNWake::
 	lock
@@ -171,51 +171,51 @@ Route227_EventScript_SNWake_T7::
 Route227_EventScript_SNWake_T6::
 	.string "BARRY: You know, I think I got a little\n"
 	.string "tougher again.\p"
-	.string "That’s why I’m off to the Battle\n"
-	.string "Frontier so I can make some\l"
+	.string "That's why I'm off to the BATTLE\n"
+	.string "FRONTIER so I can make some\l"
 	.string "challenges!$"
 
 Route227_EventScript_SNWake_T5::
-	.string "WAKE: ...How’d I get involved in this...?\p"
-	.string "So, anyway, {PLAYER}. You’re going to\n"
+	.string "WAKE: …How'd I get involved in this…?\p"
+	.string "So, anyway, {PLAYER}. You're going to\n"
 	.string "STARK MOUNTAIN?\p"
 	.string "Even the wild POKéMON there are very,\n"
-	.string "very tough...\p"
-	.string "If your POKéMON aren’t well trained,\n"
-	.string "they’ll have a miserable time...\p"
+	.string "very tough…\p"
+	.string "If your POKéMON aren't well trained,\n"
+	.string "they'll have a miserable time…\p"
 	.string "Then again, that kind of challenge is\n"
-	.string "an exciting prospect...\p"
-	.string "But no matter what, you’d better be\n"
+	.string "an exciting prospect…\p"
+	.string "But no matter what, you'd better be\n"
 	.string "fully prepared!\p"
-	.string "I’ve got to get ready for another\n"
+	.string "I've got to get ready for another\n"
 	.string "tournament. Farewell!$"
 
 Route227_EventScript_SNWake_T4::
-	.string "BARRY: Awww, master, don’t be that way!\p"
-	.string "You’ve got to get me into that club in\n"
+	.string "BARRY: Awww, master, don't be that way!\p"
+	.string "You've got to get me into that club in\n"
 	.string "the SURVIVAL AREA!$"
 
 Route227_EventScript_SNWake_T3::
 	.string "WAKE: What? Are you still having\n"
 	.string "trouble understanding?\p"
-	.string "I don’t for a second ever recall\n"
+	.string "I don't for a second ever recall\n"
 	.string "accepting you as an apprentice!\p"
-	.string "I mean, if it’s wrestling moves, I can\n"
-	.string "show you all you like, but...$"
+	.string "I mean, if it's wrestling moves, I can\n"
+	.string "show you all you like, but…$"
 
 Route227_EventScript_SNWake_T2::
-	.string "BARRY: That’s my master! Those are\n"
+	.string "BARRY: That's my master! Those are\n"
 	.string "words of wisdom!$"
 
 Route227_EventScript_SNWake_T1::
-	.string "WAKE: Oh, if it isn’t {PLAYER}! It’s been\n"
+	.string "WAKE: Oh, if it isn't {PLAYER}! It's been\n"
 	.string "a while!\p"
-	.string "You’ve grown so tough that you’re\n"
-	.string "training out here now...\p"
+	.string "You've grown so tough that you're\n"
+	.string "training out here now…\p"
 	.string "Everyone keeps getting tougher and\n"
-	.string "tougher...\p"
+	.string "tougher…\p"
 	.string "And, in doing that, they develop closer\n"
-	.string "bonds with their POKéMON...$"
+	.string "bonds with their POKéMON…$"
 
 Route227_EventScript_PtSign1::
 	msgbox Route227_Text_PtSign1, MSGBOX_SIGN

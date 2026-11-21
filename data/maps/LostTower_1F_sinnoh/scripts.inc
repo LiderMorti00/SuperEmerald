@@ -24,6 +24,6 @@ LostTower_1F_Text_PtNpc2_0::
 	.string "This is the LOST TOWER.\p"
 	.string "There is a persistent fog that\n"
 	.string "thickens the higher you climb.\p"
-	.string "If you can’t use the hidden move Defog\n"
+	.string "If you can't use the hidden move DEFOG\n"
 	.string "and you have no business here, there\p"
 	.string "is no need to go up.$"

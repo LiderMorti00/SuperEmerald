@@ -16,8 +16,8 @@ JubilifeCity_EventScript_PtNpc2::
 
 JubilifeCity_Text_PtNpc2::
 	.string "Hiya, where'd you come from?\p"
-	.string "...\p"
-	.string "HOENN, huh... That's really far away!\n"
+	.string "…\p"
+	.string "HOENN, huh… That's really far away!\n"
 	.string "You came by ship?\p"
 	.string "JUBILIFE CITY is a big place, so it\n"
 	.string "might be a bit of a shock to you.$"
@@ -60,7 +60,7 @@ JubilifeCity_EventScript_PtNpc5_No::
 	end
 
 JubilifeCity_Text_PtNpc5_No::
-	.string "Oh, you're not knowledgeable... But not\n"
+	.string "Oh, you're not knowledgeable… But not\n"
 	.string "to worry!\p"
 	.string "There's the TRAINERS' School.\p"
 	.string "The school will teach you the basics\n"
@@ -75,7 +75,7 @@ JubilifeCity_EventScript_PtNpc6::
 	end
 
 JubilifeCity_Text_PtNpc6::
-	.string "OK, set six POKé BALLS in my belt...\p"
+	.string "OK, set six POKé BALLS in my belt…\p"
 	.string "Yeah, that'll do it. At most, you can\n"
 	.string "have six POKéMON with you.$"
 
@@ -102,9 +102,9 @@ JubilifeCity_EventScript_PtNpc7_SNVar0::
 JubilifeCity_Text_PtNpc7_SNVar0::
 	.string "Hello! Let me ask you, have you paid a\n"
 	.string "visit to the TV station?\p"
-	.string "If you’ve never been, you owe it to\n"
+	.string "If you've never been, you owe it to\n"
 	.string "yourself to make the trip.\p"
-	.string "And, if you’ve been there before, it\n"
+	.string "And, if you've been there before, it\n"
 	.string "never hurts to visit again.\p"
 	.string "After all, you can be a star! Or at\n"
 	.string "least dream of being one!$"
@@ -148,10 +148,10 @@ JubilifeCity_EventScript_Dawn::
 	end
 
 JubilifeCity_Text_SNJFollowD::
-	.string "Oh, I know! Don’t you think it’s better\n"
+	.string "Oh, I know! Don't you think it's better\n"
 	.string "to know more about POKéMON?\p"
 	.string "Sure it is! I know just the place.\p"
-	.string "Come on! Don’t be shy. Follow me!$"
+	.string "Come on! Don't be shy. Follow me!$"
 
 JubilifeCity_EventScript_Clown1::
 	lock
@@ -247,7 +247,7 @@ JubilifeCity_EventScript_Looker::
 
 JubilifeCity_Text_Looker::
 	.string "LOOKER: Hello, my friend. Have you\n"
-	.string "visited the TRAINERS’ School?\p"
+	.string "visited the TRAINERS' School?\p"
 	.string "Did your friend not guide you there\n"
 	.string "earlier?$"
 

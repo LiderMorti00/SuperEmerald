@@ -11,9 +11,9 @@ HearthomeCity_PokemonFanClub_Text_PtNpc1::
 	.string "but we are number one!\p"
 	.string "And why are we number one? Because I\n"
 	.string "brag more than anyone!\p"
-	.string "But now I can’t brag as much...\p"
-	.string "People started complaining, so I’ve had\n"
-	.string "to curtail my bragging...$"
+	.string "But now I can't brag as much…\p"
+	.string "People started complaining, so I've had\n"
+	.string "to curtail my bragging…$"
 
 HearthomeCity_PokemonFanClub_EventScript_PtNpc2::
 	msgbox HearthomeCity_PokemonFanClub_Text_PtNpc2, MSGBOX_NPC
@@ -21,7 +21,7 @@ HearthomeCity_PokemonFanClub_EventScript_PtNpc2::
 
 HearthomeCity_PokemonFanClub_Text_PtNpc2::
 	.string "Welcome to the POKéMON Fan Club! Oh,\n"
-	.string "your POKéMON...$"
+	.string "your POKéMON…$"
 
 HearthomeCity_PokemonFanClub_EventScript_PtNpc3::
 	lock

@@ -11,7 +11,7 @@ Route215_Text_DerekPost::
 	.string "Back to training for us!$"
 
 Route215_Text_DerekDefeat::
-	.string "You've dulled its sharpness...$"
+	.string "You've dulled its sharpness…$"
 
 Route215_Text_DerekIntro::
 	.string "Check the sharpness of my fighting\n"
@@ -29,7 +29,7 @@ Route215_Text_GregoryPost::
 	.string "wouldn't!$"
 
 Route215_Text_GregoryDefeat::
-	.string "Gurgle...$"
+	.string "Gurgle…$"
 
 Route215_Text_GregoryIntro::
 	.string "You come along with your heart\n"
@@ -130,11 +130,11 @@ Route215_EventScript_Maya_Rematch::
 	end
 
 Route215_Text_MayaDefeat::
-	.string "...My confidence is crushed.$"
+	.string "…My confidence is crushed.$"
 
 Route215_Text_MayaIntro::
 	.string "I'm taking the VEILSTONE GYM\n"
-	.string "challenge. But first...$"
+	.string "challenge. But first…$"
 
 Route215_EventScript_Craig::
 	trainerbattle_single TRAINER_CHASE_SINNOH, Route215_Text_CraigIntro, Route215_Text_CraigDefeat
@@ -155,7 +155,7 @@ Route215_EventScript_Craig_Rematch::
 	end
 
 Route215_Text_CraigDefeat::
-	.string "My pace is completely off...$"
+	.string "My pace is completely off…$"
 
 Route215_Text_CraigIntro::
 	.string "If I battle now, won't it mess up my\n"

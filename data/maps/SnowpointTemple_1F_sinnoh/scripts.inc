@@ -7,7 +7,7 @@ SnowpointTemple_1F_EventScript_PtSign1::
 	end
 
 SnowpointTemple_1F_Text_PtSign1::
-	.string "It’s a statue of a POKéMON. One can\n"
+	.string "It's a statue of a POKéMON. One can\n"
 	.string "sense its power.$"
 
 SnowpointTemple_1F_EventScript_PtSign2::
@@ -15,7 +15,7 @@ SnowpointTemple_1F_EventScript_PtSign2::
 	end
 
 SnowpointTemple_1F_Text_PtSign2::
-	.string "It’s a statue of a POKéMON. One can\n"
+	.string "It's a statue of a POKéMON. One can\n"
 	.string "sense its power.$"
 
 SnowpointTemple_1F_EventScript_PtSign3::
@@ -23,5 +23,5 @@ SnowpointTemple_1F_EventScript_PtSign3::
 	end
 
 SnowpointTemple_1F_Text_PtSign3::
-	.string "It’s a statue of a POKéMON. One can\n"
+	.string "It's a statue of a POKéMON. One can\n"
 	.string "sense its power.$"

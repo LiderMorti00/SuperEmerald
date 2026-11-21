@@ -13,10 +13,10 @@ Route205_North_Text_AndrewPost::
 	.string "appears. That's how you fish.$"
 
 Route205_North_Text_AndrewDefeat::
-	.string "Well, that didn't do anything for me...$"
+	.string "Well, that didn't do anything for me…$"
 
 Route205_North_Text_AndrewIntro::
-	.string "Nothing's biting... I could use a break,\n"
+	.string "Nothing's biting… I could use a break,\n"
 	.string "I suppose.$"
 
 Route205_North_EventScript_Joseph::
@@ -36,7 +36,7 @@ Route205_North_EventScript_Joseph_Rematch::
 	end
 
 Route205_North_Text_JosephDefeat::
-	.string "I let a big win slip away...$"
+	.string "I let a big win slip away…$"
 
 Route205_North_Text_JosephIntro::
 	.string "How about that! I've netted me a\n"
@@ -52,7 +52,7 @@ Route205_North_Text_ZacharyPost::
 
 Route205_North_Text_ZacharyDefeat::
 	.string "Losing to a kid has me gasping like a\n"
-	.string "MAGIKARP...$"
+	.string "MAGIKARP…$"
 
 Route205_North_Text_ZacharyIntro::
 	.string "I fished up some tough POKéMON! Let's\n"
@@ -63,7 +63,7 @@ Route205_North_EventScript_PtNpc1::
 	end
 
 Route205_North_Text_PtNpc1::
-	.string "To sit back and fish casually... It's a\n"
+	.string "To sit back and fish casually… It's a\n"
 	.string "grown-up's hobby.$"
 
 Route205_North_EventScript_SNHoneyTree::

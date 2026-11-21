@@ -22,7 +22,7 @@ SnowpointCity_House1_EventScript_SNTradeGaspar_Wrong::
 	end
 
 SnowpointCity_House1_EventScript_SNTradeGaspar_WrongT::
-	.string "That’s not a {STR_VAR_1}...$"
+	.string "That's not a {STR_VAR_1}…$"
 
 SnowpointCity_House1_EventScript_SNTradeGaspar_No::
 	msgbox SnowpointCity_House1_EventScript_SNTradeGaspar_NoT, MSGBOX_DEFAULT
@@ -30,7 +30,7 @@ SnowpointCity_House1_EventScript_SNTradeGaspar_No::
 	end
 
 SnowpointCity_House1_EventScript_SNTradeGaspar_NoT::
-	.string "Oh... That’s too bad.$"
+	.string "Oh… That's too bad.$"
 
 SnowpointCity_House1_EventScript_SNTradeGaspar_Ask::
 	.string "Do you have a {STR_VAR_1}? Would you\n"
@@ -43,7 +43,7 @@ SnowpointCity_House1_EventScript_SNTradeGaspar_Done::
 
 SnowpointCity_House1_EventScript_SNTradeGaspar_DoneT::
 	.string "Our POKéMON are getting along great\n"
-	.string "with their new TRAINERS, don’t you\l"
+	.string "with their new TRAINERS, don't you\l"
 	.string "think?$"
 
 SnowpointCity_House1_EventScript_PtNpc2::
@@ -52,4 +52,4 @@ SnowpointCity_House1_EventScript_PtNpc2::
 
 SnowpointCity_House1_Text_PtNpc2::
 	.string "Thanks to POKéMON, we got to be\n"
-	.string "friends, didn’t we?$"
+	.string "friends, didn't we?$"

@@ -43,7 +43,7 @@ LakeOfRage_Text_FisherAndreAfter::
 
 LakeOfRage_Text_FisherAndreBeaten::
     .string "I might be an expert angler, but\n"
-    .string "I stink as a POKéMON trainer…$"
+    .string "I stink as a POKéMON TRAINER…$"
 
 LakeOfRage_Text_FisherAndreSeen::
     .string "Let me battle with the POKéMON I\n"
@@ -86,7 +86,7 @@ LakeOfRage_Text_FisherRaymondSeen::
 LakeOfRage_Text_MeetWesley::
     .string "WESLEY: Well, how do you do?\p"
     .string "I'm a member of the WEEKDAY family!\n"
-	.string "Can you guess my favorite day?$"
+    .string "Can you guess my favorite day?$"
 
 SE_J_LakeOfRage_hns_LakeOfRage_EventScript_Wesley::
 	msgbox LakeOfRage_Text_MeetWesley, MSGBOX_NPC
@@ -125,14 +125,14 @@ LakeOfRage_EventScript_Aaron::
 	end
 
 LakeOfRage_Text_CooltrainermAaronAfter::
-    .string "POKéMON and their trainer become\n"
+    .string "POKéMON and their TRAINER become\n"
     .string "powerful through constant battling.$"
 
 LakeOfRage_Text_CooltrainermAaronBeaten::
     .string "Whew… Good battle.$"
 
 LakeOfRage_Text_CooltrainermAaronSeen::
-    .string "If a trainer spots another trainer,\n"
+    .string "If a TRAINER spots another TRAINER,\n"
     .string "he has to make a challenge.\p"
     .string "That is our destiny.$"
 
@@ -187,9 +187,9 @@ LakeOfRage_EventScript_Pryce::
 
 LakeOfRage_Text_Pryce::
     .string "{PLAYER}.\p"
-	.string "Even here, the cold keeps me sharp.\p"
-	.string "If you wish to battle again, come\n"
-	.string "to the FIGHTING DOJO.$"
+    .string "Even here, the cold keeps me sharp.\p"
+    .string "If you wish to battle again, come\n"
+    .string "to the FIGHTING DOJO.$"
 
 LakeOfRage_EventScript_Sign1::
 	msgbox LakeOfRage_Text_Sign, MSGBOX_SIGN

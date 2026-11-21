@@ -13,7 +13,7 @@ Route221_Text_DillonPost::
 	.string "I'm kicking furiously.$"
 
 Route221_Text_DillonDefeat::
-	.string "I'm finally feeling fatigued...$"
+	.string "I'm finally feeling fatigued…$"
 
 Route221_Text_DillonIntro::
 	.string "Well? Does it look like I'm swimming\n"
@@ -29,8 +29,8 @@ Route221_Text_VanessaPost::
 	.string "tougher with water POKéMON.$"
 
 Route221_Text_VanessaDefeat::
-	.string "I can't boast when I lose... I'm so\n"
-	.string "disappointed...$"
+	.string "I can't boast when I lose… I'm so\n"
+	.string "disappointed…$"
 
 Route221_Text_VanessaIntro::
 	.string "One thing about Water-type POKéMON:\n"
@@ -46,7 +46,7 @@ Route221_EventScript_Cory::
 Route221_Text_CoryPost::
 	.string "If you don't know how to fish, you're\n"
 	.string "missing half of life's enjoyment.\p"
-	.string "If you don't know POKéMON... You're\n"
+	.string "If you don't know POKéMON… You're\n"
 	.string "missing out on all of it!$"
 
 Route221_Text_CoryDefeat::
@@ -123,7 +123,7 @@ Route221_EventScript_Shannon_Rematch::
 	end
 
 Route221_Text_ShannonDefeat::
-	.string "I admit defeat...$"
+	.string "I admit defeat…$"
 
 Route221_Text_ShannonIntro::
 	.string "Really? So you think you can beat me?\n"

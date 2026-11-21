@@ -34,13 +34,13 @@ CelesticTown_House2_EventScript_PtNpc1_YouWouldnt::
 	end
 
 CelesticTown_House2_Text_PtNpc1_2::
-	.string "Hahaha! Well, of course you wouldn’t.\p"
-	.string "It’s a tale from so long ago. It’s no\n"
-	.string "wonder you weren’t interested.$"
+	.string "Hahaha! Well, of course you wouldn't.\p"
+	.string "It's a tale from so long ago. It's no\n"
+	.string "wonder you weren't interested.$"
 
 CelesticTown_House2_Text_PtNpc1_0::
 	.string "Where are you from?\p"
-	.string "...\p"
+	.string "…\p"
 	.string "Hm, HOENN, you say. You came a long\n"
 	.string "way to visit SINNOH!\p"
 	.string "LAKE VERITY, in the south, is said to\n"
@@ -59,12 +59,12 @@ CelesticTown_House2_Text_PtNpc2::
 	.string "Well, hello! You look good.\p"
 	.string "I did some research of my own since\n"
 	.string "that spot of trouble last time.\p"
-	.string "MT. CORONET’s acting up had me very\n"
+	.string "MT. CORONET's acting up had me very\n"
 	.string "concerned, too.\p"
 	.string "Well, this is what I found in the shrine.\p"
-	.string "It’s a book, and it’s quite old. Let me\n"
+	.string "It's a book, and it's quite old. Let me\n"
 	.string "read a bit for you.\p"
-	.string "“The bearer of the shining Adamant Orb\n"
+	.string "“The bearer of the shining ADAMANT ORB\n"
 	.string "summons DIALGA to the SPEAR PILLAR.\p"
 	.string "“The guardian POKéMON of time will\n"
 	.string "answer the call.\p"
@@ -91,5 +91,5 @@ CelesticTown_House2_Text_PtNpc3_0::
 	.string "myths.\p"
 	.string "Were things different back then? Or\n"
 	.string "were they the same as now?\p"
-	.string "She says that’s the focus of her\n"
+	.string "She says that's the focus of her\n"
 	.string "research.$"

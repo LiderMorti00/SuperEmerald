@@ -20,8 +20,8 @@ SurvivalArea_EventScript_PtNpc2::
 	end
 
 SurvivalArea_Text_PtNpc2::
-	.string "TRAINERS who lose at the Battle\n"
-	.string "Frontier come here to train.$"
+	.string "TRAINERS who lose at the BATTLE\n"
+	.string "FRONTIER come here to train.$"
 
 SurvivalArea_EventScript_PtNpc3::
 	msgbox SurvivalArea_Text_PtNpc3, MSGBOX_NPC
@@ -70,25 +70,25 @@ SurvivalArea_EventScript_SNBarry_After::
 	end
 
 SurvivalArea_EventScript_SNBarry_Post::
-	.string "BARRY: ...!\p"
-	.string "It’s all right, though. Keep getting\n"
+	.string "BARRY: …!\p"
+	.string "It's all right, though. Keep getting\n"
 	.string "tougher, {PLAYER}.\p"
 	.string "The more you do, the tougher my\n"
 	.string "POKéMON and I get, too.\p"
-	.string "There’s no end to POKéMON. That’s what\n"
-	.string "I’m saying, {PLAYER}!$"
+	.string "There's no end to POKéMON. That's what\n"
+	.string "I'm saying, {PLAYER}!$"
 
 SurvivalArea_EventScript_SNBarry_Defeat::
-	.string "BARRY: ...!$"
+	.string "BARRY: …!$"
 
 SurvivalArea_EventScript_SNBarry_B1::
 	trainerbattle_no_intro TRAINER_ISAIAH_2_SINNOH, SurvivalArea_EventScript_SNBarry_Defeat
 	goto SurvivalArea_EventScript_SNBarry_After
 
 SurvivalArea_EventScript_SNBarry_Intro::
-	.string "BARRY: Hey, {PLAYER}! You aren’t the\n"
+	.string "BARRY: Hey, {PLAYER}! You aren't the\n"
 	.string "only one getting tougher!\p"
-	.string "I’ll prove it to you! Let’s go!$"
+	.string "I'll prove it to you! Let's go!$"
 
 SurvivalArea_EventScript_SNBarry_Done::
 	special SinnohDayOfWeek
@@ -108,7 +108,7 @@ SurvivalArea_EventScript_SNBarry_DoneT::
 	.string "Me? You even need to ask? Piling up the\n"
 	.string "wins at the BATTLE TOWER!\p"
 	.string "Huh? My longest winning streak? What,\n"
-	.string "you’re going to grill me now?$"
+	.string "you're going to grill me now?$"
 
 SurvivalArea_EventScript_SNBarry_Done2::
 	msgbox SurvivalArea_Text_SNBarryTalk2, MSGBOX_DEFAULT
@@ -116,18 +116,18 @@ SurvivalArea_EventScript_SNBarry_Done2::
 	end
 
 SurvivalArea_Text_SNBarryTalk2::
-	.string "{RIVAL}: ...! Oh, it’s you, {PLAYER}.\p"
+	.string "{RIVAL}: …! Oh, it's you, {PLAYER}.\p"
 	.string "You know, the best TRAINERS must really\n"
 	.string "love POKéMON from their heart.\p"
-	.string "I’m talking about people like the GYM\n"
+	.string "I'm talking about people like the GYM\n"
 	.string "LEADERS, of course.\p"
 	.string "People like the Tower Tycoon and the\n"
 	.string "other Frontier Brains, too.\p"
 	.string "You can tell they love POKéMON when\n"
-	.string "you’re battling them.\p"
-	.string "But I’m not conceding anything to\n"
+	.string "you're battling them.\p"
+	.string "But I'm not conceding anything to\n"
 	.string "them, or to you!\p"
-	.string "Because I’m still going to be the\n"
+	.string "Because I'm still going to be the\n"
 	.string "greatest TRAINER ever!$"
 
 SurvivalArea_EventScript_SNBarry_Done1::
@@ -136,9 +136,9 @@ SurvivalArea_EventScript_SNBarry_Done1::
 	end
 
 SurvivalArea_Text_SNBarryTalk1::
-	.string "{RIVAL}: Oh, it’s you, {PLAYER}.\p"
+	.string "{RIVAL}: Oh, it's you, {PLAYER}.\p"
 	.string "Did you battle with everyone?\p"
-	.string "Don’t you think it’s kind of cool,\n"
+	.string "Don't you think it's kind of cool,\n"
 	.string "though?\p"
 	.string "When people talk about POKéMON, they\n"
 	.string "all start smiling!$"
@@ -157,8 +157,8 @@ SurvivalArea_EventScript_SNBuck::
 	end
 
 SurvivalArea_Text_SNBuck::
-	.string "BUCK: Yo, if it isn’t {PLAYER}!\p"
-	.string "This! It’s my place! Drop in, hey?$"
+	.string "BUCK: Yo, if it isn't {PLAYER}!\p"
+	.string "This! It's my place! Drop in, hey?$"
 
 SurvivalArea_EventScript_PtSign1::
 	msgbox SurvivalArea_Text_PtSign1, MSGBOX_SIGN

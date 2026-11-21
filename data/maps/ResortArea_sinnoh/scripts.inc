@@ -16,7 +16,7 @@ ResortArea_Text_SNSyndNo::
 	.string "TRAINERS whose POKéMON have earned at\l"
 	.string "least ten Ribbons may join.\p"
 	.string "Oh, how I long to become a member of\n"
-	.string "the Ribbon Syndicate...$"
+	.string "the Ribbon Syndicate…$"
 
 ResortArea_EventScript_SNSyndicate_Member::
 	msgbox ResortArea_Text_SNSyndYes, MSGBOX_DEFAULT
@@ -80,8 +80,8 @@ ResortArea_EventScript_SNVillaOwner::
 
 ResortArea_Text_SNVillaNo::
 	.string "What, I still strike you as shady? I\n"
-	.string "daresay I can’t blame you, though.\p"
-	.string "An offer to get a Villa for free... That\n"
+	.string "daresay I can't blame you, though.\p"
+	.string "An offer to get a Villa for free… That\n"
 	.string "does throw up red flags, I agree.$"
 
 ResortArea_EventScript_SNVillaOwner_Yes::
@@ -96,13 +96,13 @@ ResortArea_EventScript_SNVillaOwner_Yes::
 	end
 
 ResortArea_Text_SNVilla2::
-	.string "Whew, that’s a load off my mind.\p"
+	.string "Whew, that's a load off my mind.\p"
 	.string "The original owner was from HOENN, see?\p"
 	.string "The owner collected up all the rare\n"
 	.string "stones of SINNOH and went back home.\p"
 	.string "I somehow got saddled with this place\n"
 	.string "as if it were some gift.\p"
-	.string "There’s no figuring what rich folks will\n"
+	.string "There's no figuring what rich folks will\n"
 	.string "think of next.\p"
 	.string "Still, I thank you for helping me out.\n"
 	.string "Come with me, will you?\p"
@@ -112,13 +112,13 @@ ResortArea_Text_SNVilla2::
 ResortArea_Text_SNVilla1::
 	.string "Psst, hey, traveler! Yes, you! I want\n"
 	.string "you to have this Villa!\p"
-	.string "Oh, wait, no, no, no! It’s not what\n"
-	.string "you’re thinking!\p"
-	.string "This is no scam, see. In fact, you’ll be\n"
+	.string "Oh, wait, no, no, no! It's not what\n"
+	.string "you're thinking!\p"
+	.string "This is no scam, see. In fact, you'll be\n"
 	.string "doing me a favor!\p"
 	.string "See, I was given this Villa. But, to be\n"
-	.string "honest, I don’t need it, either.\p"
-	.string "So don’t say a word. Just nod and this\n"
+	.string "honest, I don't need it, either.\p"
+	.string "So don't say a word. Just nod and this\n"
 	.string "Villa is yours!$"
 
 ResortArea_EventScript_SNPtACETRAINERF::

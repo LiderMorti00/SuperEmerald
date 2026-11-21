@@ -22,7 +22,7 @@ CelesticTown_PokemonCenter_1F_Text_PtNpc1_0::
 	.string "What would compel a young person like\n"
 	.string "you to come somewhere so rustic?\p"
 	.string "Be sure to see the cave painting since\n"
-	.string "you’re already here.$"
+	.string "you're already here.$"
 
 CelesticTown_PokemonCenter_1F_EventScript_PtNpc2::
 	lock
@@ -40,7 +40,7 @@ CelesticTown_PokemonCenter_1F_EventScript_PtNpc3::
 	end
 
 CelesticTown_PokemonCenter_1F_Text_PtNpc3::
-	.string "It’s about trust between the TRAINER\n"
+	.string "It's about trust between the TRAINER\n"
 	.string "and the POKéMON.\p"
 	.string "Developing trust in each other is the\n"
 	.string "key to victory.$"

@@ -54,14 +54,14 @@ TwinleafTown_MainHouse_2F_Movement_LeaveRoom::
 	step_end
 
 TwinleafTown_MainHouse_2F_Text_SeeProfRowan::
-	.string "Oh, right, right! We’re going to go see\n"
+	.string "Oh, right, right! We're going to go see\n"
 	.string "PROF. ROWAN and get some POKéMON.\p"
-	.string "I’ll be waiting outside.\p"
-	.string "OK, {PLAYER}? If you’re late, I’m fining\n"
+	.string "I'll be waiting outside.\p"
+	.string "OK, {PLAYER}? If you're late, I'm fining\n"
 	.string "you $10 million!$"
 
 TwinleafTown_MainHouse_2F_Text_WhereWasI::
-	.string "{RIVAL}: Uh... Where was I?$"
+	.string "{RIVAL}: Uh… Where was I?$"
 
 TwinleafTown_MainHouse_2F_Text_NewPC::
 	.string "Oh, hey! Is this a new PC?!$"
@@ -69,11 +69,11 @@ TwinleafTown_MainHouse_2F_Text_NewPC::
 TwinleafTown_MainHouse_2F_Text_ProfRowan::
 	.string "Hey, {PLAYER}! Did you just see the TV?\n"
 	.string "Sure you did!\p"
-	.string "PROF. ROWAN’s that really important guy\n"
+	.string "PROF. ROWAN's that really important guy\n"
 	.string "who studies POKéMON, right?\p"
 	.string "That means he must have lots and lots\n"
 	.string "of POKéMON.\p"
-	.string "So, if we ask him, I bet he’d give us\n"
+	.string "So, if we ask him, I bet he'd give us\n"
 	.string "some POKéMON!$"
 
 TwinleafTown_MainHouse_2F_Text_ThereYouAre::

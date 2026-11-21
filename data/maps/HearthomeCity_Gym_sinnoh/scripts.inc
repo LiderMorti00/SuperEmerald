@@ -12,12 +12,12 @@ HearthomeCity_Gym_Text_DonnyPost::
 	.string "marks on the tiles.$"
 
 HearthomeCity_Gym_Text_DonnyDefeat::
-	.string "Argh! I should’ve sent you back to the\n"
+	.string "Argh! I should've sent you back to the\n"
 	.string "entrance with a warp panel!$"
 
 HearthomeCity_Gym_Text_DonnyIntro::
-	.string "Hey, now! You’re not even close to\n"
-	.string "FANTINA’s room yet.\p"
+	.string "Hey, now! You're not even close to\n"
+	.string "FANTINA's room yet.\p"
 	.string "You have to beat me before you can go,\n"
 	.string "you know?$"
 
@@ -27,11 +27,11 @@ HearthomeCity_Gym_EventScript_Molly::
 	end
 
 HearthomeCity_Gym_Text_MollyPost::
-	.string "Since you’re here, you might as well\n"
+	.string "Since you're here, you might as well\n"
 	.string "take on every TRAINER.$"
 
 HearthomeCity_Gym_Text_MollyDefeat::
-	.string "Uh, whoopsie! That didn’t end well!$"
+	.string "Uh, whoopsie! That didn't end well!$"
 
 HearthomeCity_Gym_Text_MollyIntro::
 	.string "Boo! Did I scare you? This battle will!$"
@@ -42,15 +42,15 @@ HearthomeCity_Gym_EventScript_Mackenzie::
 	end
 
 HearthomeCity_Gym_Text_MackenziePost::
-	.string "I’m going over the reasons why I lost.\n"
-	.string "That way, I’ll win next time.$"
+	.string "I'm going over the reasons why I lost.\n"
+	.string "That way, I'll win next time.$"
 
 HearthomeCity_Gym_Text_MackenzieDefeat::
 	.string "Your strength is dazzling! I have to\n"
 	.string "shield my eyes!$"
 
 HearthomeCity_Gym_Text_MackenzieIntro::
-	.string "Eek! That’s so bright!\p"
+	.string "Eek! That's so bright!\p"
 	.string "Surprise attack!$"
 
 HearthomeCity_Gym_EventScript_Allen::
@@ -59,18 +59,18 @@ HearthomeCity_Gym_EventScript_Allen::
 	end
 
 HearthomeCity_Gym_Text_AllenPost::
-	.string "I’ll remember you and your shifty\n"
-	.string "POKéMON, too. I’m watching you...$"
+	.string "I'll remember you and your shifty\n"
+	.string "POKéMON, too. I'm watching you…$"
 
 HearthomeCity_Gym_Text_AllenDefeat::
-	.string "I kinda deserved that, didn’t I? I\n"
-	.string "gotta stop mouthing off like that...$"
+	.string "I kinda deserved that, didn't I? I\n"
+	.string "gotta stop mouthing off like that…$"
 
 HearthomeCity_Gym_Text_AllenIntro::
 	.string "What, were you just dawdling around\n"
-	.string "hoping I’d notice you for a battle?\p"
-	.string "You know you’re going to get whupped\n"
-	.string "here, don’t you?$"
+	.string "hoping I'd notice you for a battle?\p"
+	.string "You know you're going to get whupped\n"
+	.string "here, don't you?$"
 
 HearthomeCity_Gym_EventScript_Chance::
 	trainerbattle_single TRAINER_CAMERON_3_SINNOH, HearthomeCity_Gym_Text_ChanceIntro, HearthomeCity_Gym_Text_ChanceDefeat
@@ -78,7 +78,7 @@ HearthomeCity_Gym_EventScript_Chance::
 	end
 
 HearthomeCity_Gym_Text_ChancePost::
-	.string "Whatever happens in life, it’s better\n"
+	.string "Whatever happens in life, it's better\n"
 	.string "to try to enjoy it the best one can.\p"
 	.string "Getting lost between these rooms\n"
 	.string "again and again, I came to realize that.$"
@@ -101,7 +101,7 @@ HearthomeCity_Gym_Text_CatherinePost::
 	.string "mistakes to learn what is right.$"
 
 HearthomeCity_Gym_Text_CatherineDefeat::
-	.string "You’re the kind of person who can keep\n"
+	.string "You're the kind of person who can keep\n"
 	.string "going forward even into the unknown.$"
 
 HearthomeCity_Gym_Text_CatherineIntro::
@@ -118,7 +118,7 @@ HearthomeCity_Gym_EventScript_Leader::
 	end
 
 HearthomeCity_Gym_Text_LeaderPostBattle::
-	.string "Three GYM BADGES...\p"
+	.string "Three GYM BADGES…\p"
 	.string "But you must not forget this. There\n"
 	.string "are many other TRAINERS.\p"
 	.string "Strong TRAINERS, too. There are many\n"
@@ -135,7 +135,7 @@ HearthomeCity_Gym_EventScript_GiveTM::
 	end
 
 HearthomeCity_Gym_Text_ExplainTM::
-	.string "That TM65... It contains SHADOW CLAW.\p"
+	.string "That TM65… It contains SHADOW CLAW.\p"
 	.string "A very startling move it is. Its hits\n"
 	.string "turn critical often!$"
 
@@ -155,7 +155,7 @@ HearthomeCity_Gym_EventScript_LeaderDefeated::
 
 HearthomeCity_Gym_Text_ExplainBadge::
 	.string "That BADGE will let you use the hidden\n"
-	.string "move Defog outside of battle.\p"
+	.string "move DEFOG outside of battle.\p"
 	.string "Also, you can make use of this\n"
 	.string "Technical Machine.\p"
 	.string "That is what I think.$"
@@ -178,7 +178,7 @@ HearthomeCity_Gym_Text_LeaderIntro::
 	.string "try to learn new things.\p"
 	.string "They hold CONTESTS in this city? I say\n"
 	.string "to myself, enfin, I will excel.\p"
-	.string "That is why I dress this way. C’est une\n"
+	.string "That is why I dress this way. C'est une\n"
 	.string "performance!\p"
 	.string "Also, I study POKéMON very much. I have\n"
 	.string "come to be GYM LEADER.\p"
@@ -204,10 +204,10 @@ HearthomeCity_Gym_EventScript_SNRematch_After::
 	.string "anytime for another match!$"
 
 HearthomeCity_Gym_EventScript_SNRematch_Defeat::
-	.string "Amazing... You really are the CHAMPION!$"
+	.string "Amazing… You really are the CHAMPION!$"
 
 HearthomeCity_Gym_EventScript_SNRematch_Go::
-	.string "Then I won’t hold back this time!$"
+	.string "Then I won't hold back this time!$"
 
 HearthomeCity_Gym_EventScript_SNRematch_No::
 	msgbox HearthomeCity_Gym_EventScript_SNRematch_NoT, MSGBOX_DEFAULT
@@ -215,12 +215,12 @@ HearthomeCity_Gym_EventScript_SNRematch_No::
 	end
 
 HearthomeCity_Gym_EventScript_SNRematch_NoT::
-	.string "Come back whenever you’re ready!$"
+	.string "Come back whenever you're ready!$"
 
 HearthomeCity_Gym_EventScript_SNRematch_Ask::
 	.string "FANTINA: You became the CHAMPION!\n"
 	.string "Welcome back!\p"
-	.string "I’ve been training even harder since\n"
+	.string "I've been training even harder since\n"
 	.string "our last battle.\p"
 	.string "Will you battle me again?$"
 
@@ -242,7 +242,7 @@ HearthomeCity_Gym_Text_SNGuideInfo::
 	.string "DUSKULL, HAUNTER and MISMAGIUS.\p"
 	.string "Ghost types are weak to Ghost and\n"
 	.string "Dark moves, and Normal and Fighting\l"
-	.string "moves can’t touch them!\p"
+	.string "moves can't touch them!\p"
 	.string "The GYM is split into nine rooms linked\n"
 	.string "by warp panels. Step on a panel to be\l"
 	.string "sent to another room.\p"
@@ -251,9 +251,9 @@ HearthomeCity_Gym_Text_SNGuideInfo::
 	.string "used! FANTINA waits in the middle room.$"
 
 HearthomeCity_Gym_Text_PtGymGuide::
-	.string "Hey, there! How’s it going,\n"
+	.string "Hey, there! How's it going,\n"
 	.string "CHAMP-to-be?\p"
-	.string "I’m the GYM guide! I help out TRAINERS\n"
+	.string "I'm the GYM guide! I help out TRAINERS\n"
 	.string "who come to challenge the GYM LEADER.$"
 
 HearthomeCity_Gym_EventScript_PtGymGuideAfter::
@@ -262,12 +262,12 @@ HearthomeCity_Gym_EventScript_PtGymGuideAfter::
 	end
 
 HearthomeCity_Gym_Text_PtGymGuideAfter::
-	.string "Oh! {PLAYER}! You’ve beaten the GYM\n"
+	.string "Oh! {PLAYER}! You've beaten the GYM\n"
 	.string "LEADER!\p"
 	.string "There seems to be no end to how tough\n"
 	.string "you are getting!\p"
-	.string "At least that’s how I see it!\p"
-	.string "...You do realize I say that to\n"
+	.string "At least that's how I see it!\p"
+	.string "…You do realize I say that to\n"
 	.string "everyone, right?$"
 
 HearthomeCity_Gym_EventScript_PtGymStatue::

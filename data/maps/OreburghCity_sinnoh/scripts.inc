@@ -27,7 +27,7 @@ OreburghCity_EventScript_PtNpc3::
 OreburghCity_Text_PtNpc3::
 	.string "Everyone's proud of the mine.\p"
 	.string "They're digging for coal under the sea\n"
-	.string "as we speak...\p"
+	.string "as we speak…\p"
 	.string "It's amazing how they do it!$"
 
 OreburghCity_EventScript_PtNpc4::
@@ -68,7 +68,7 @@ OreburghCity_Text_PtNpc6_After::
 OreburghCity_Text_PtNpc6::
 	.string "There's no question. This is hard, hard\n"
 	.string "work.\p"
-	.string "But working alongside POKéMON... It\n"
+	.string "But working alongside POKéMON… It\n"
 	.string "gives me a boost somehow.\p"
 	.string "Here, take one of these.$"
 
@@ -88,7 +88,7 @@ OreburghCity_EventScript_PtNpc7::
 OreburghCity_Text_PtNpc7::
 	.string "When I run around with my Running\n"
 	.string "Shoes on, I'm the center of attention!\p"
-	.string "...At least that's what it feels like.\n"
+	.string "…At least that's what it feels like.\n"
 	.string "There's always someone looking at me.$"
 
 OreburghCity_EventScript_PtNpc8::
@@ -171,7 +171,7 @@ OreburghCity_EventScript_PtNpc15::
 
 OreburghCity_Text_PtNpc15::
 	.string "Natural time capsules buried many,\n"
-	.string "many years ago...\p"
+	.string "many years ago…\p"
 	.string "That's what Fossils are.$"
 
 OreburghCity_EventScript_SNBarryTalk::
@@ -202,19 +202,19 @@ OreburghCity_EventScript_SNBarryPost::
 	end
 
 OreburghCity_Text_SNPost3::
-	.string "{RIVAL}: So, I’m going back to\n"
+	.string "{RIVAL}: So, I'm going back to\n"
 	.string "JUBILIFE CITY. Next stop, the ETERNA\l"
 	.string "GYM BADGE!\p"
 	.string "Ten seconds before I dash!\p"
-	.string "Nine...\p"
-	.string "Bah! Who’s got time to count?!$"
+	.string "Nine…\p"
+	.string "Bah! Who's got time to count?!$"
 
 OreburghCity_Text_SNPost2::
 	.string "{RIVAL}: So, yeah, I went to ROUTE\n"
-	.string "207, but you can’t go there without a\l"
+	.string "207, but you can't go there without a\l"
 	.string "Bicycle.\p"
 	.string "I made my team battle and toughened\n"
-	.string "them up, so it wasn’t a waste.$"
+	.string "them up, so it wasn't a waste.$"
 
 OreburghCity_Text_SNPost1::
 	.string "{RIVAL}: Whoops! {PLAYER}! You got\n"

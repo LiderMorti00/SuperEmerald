@@ -25,7 +25,7 @@ Route205_House_Text_PtNpc1_No::
 	.string "mean you should push yourself.$"
 
 Route205_House_Text_PtNpc1::
-	.string "You seem to be tired... Rest a while.$"
+	.string "You seem to be tired… Rest a while.$"
 
 Route205_House_EventScript_PtNpc2::
 	msgbox Route205_House_Text_PtNpc2, MSGBOX_NPC
@@ -33,7 +33,7 @@ Route205_House_EventScript_PtNpc2::
 
 Route205_House_Text_PtNpc2::
 	.string "Repels are useful, don't you think?\p"
-	.string "When you use a Repel, weak POKéMON\n"
+	.string "When you use a REPEL, weak POKéMON\n"
 	.string "won't come out.\p"
-	.string "...But that also means there won't be\n"
+	.string "…But that also means there won't be\n"
 	.string "any POKéMON to capture.$"

@@ -13,7 +13,7 @@ SunyshoreCity_House3_Text_PtNpc1_0::
 	.string "Have you gone underground lately?\p"
 	.string "Depending on where you go down, you\n"
 	.string "end up in different places.\p"
-	.string "That’s why I use my Explorer Kit in as\n"
+	.string "That's why I use my Explorer Kit in as\n"
 	.string "many places as I can.$"
 
 SunyshoreCity_House3_EventScript_PtNpc2::
@@ -51,7 +51,7 @@ SunyshoreCity_House3_EventScript_PtNpc4::
 SunyshoreCity_House3_Text_PtNpc4_0::
 	.string "The UNDERGROUND Man in ETERNA and\n"
 	.string "BYRON of CANALAVE are related.\p"
-	.string "Add BYRON’s son ROARK, and you have a\n"
+	.string "Add BYRON's son ROARK, and you have a\n"
 	.string "trio of dedicated diggers.$"
 
 SunyshoreCity_House3_EventScript_PtNpc5::
@@ -64,8 +64,8 @@ SunyshoreCity_House3_EventScript_PtNpc5::
 SunyshoreCity_House3_Text_PtNpc5_0::
 	.string "If you bury Spheres, they grow a little\n"
 	.string "every day.\p"
-	.string "They’re really weird that way.\p"
-	.string "Oh, right! I’d better dig mine up! I\n"
+	.string "They're really weird that way.\p"
+	.string "Oh, right! I'd better dig mine up! I\n"
 	.string "forgot I had some buried!$"
 
 SunyshoreCity_House3_EventScript_PtNpc6::

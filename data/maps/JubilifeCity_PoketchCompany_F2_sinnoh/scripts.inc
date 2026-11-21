@@ -17,7 +17,7 @@ JubilifeCity_PoketchCompany_F2_EventScript_PtNpc2::
 JubilifeCity_PoketchCompany_F2_Text_PtNpc2::
 	.string "POKéMON Watch! That's POKéNAV for\n"
 	.string "short.\p"
-	.string "Say it the long way and... What does\n"
+	.string "Say it the long way and… What does\n"
 	.string "POKéMON stand for again?\p"
 	.string "Anyway, I'm the father of the\n"
 	.string "president of the POKéNAV Company!$"

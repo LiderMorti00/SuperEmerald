@@ -8,7 +8,7 @@ VeilstoneCity_GameCorner_EventScript_Woman2::
 
 VeilstoneCity_GameCorner_Text_CoinsAreNeededToPlay::
 	.string "Hey, kid, if you want to play here, you\n"
-	.string "need a Coin Case.\p"
+	.string "need a COIN CASE.\p"
 	.string "I think the young man next door had\n"
 	.string "one.$"
 
@@ -41,10 +41,10 @@ VeilstoneCity_GameCorner_EventScript_Girl::
 	end
 
 VeilstoneCity_GameCorner_Text_SNNothingGoingMyWay::
-	.string "Sigh... Nothing’s going my way today...\p"
+	.string "Sigh… Nothing's going my way today…\p"
 	.string "Are you a TRAINER? Did you battle the\n"
 	.string "GYM LEADER?\p"
-	.string "She happens to be my daughter. She’s\n"
+	.string "She happens to be my daughter. She's\n"
 	.string "some kind of tough!$"
 
 VeilstoneCity_GameCorner_EventScript_PokefanM::
@@ -105,7 +105,7 @@ VeilstoneCity_GameCorner_EventScript_OldMan::
 VeilstoneCity_GameCorner_Text_RouletteTablesDifferentRates::
 	.string "A friend in my group scored a ton of\n"
 	.string "Coins here.\p"
-	.string "Why mess with a good thing? I’ll try the\n"
+	.string "Why mess with a good thing? I'll try the\n"
 	.string "same spot, too!$"
 
 VeilstoneCity_GameCorner_EventScript_Cook::
@@ -116,10 +116,10 @@ VeilstoneCity_GameCorner_EventScript_Cook::
 	end
 
 VeilstoneCity_GameCorner_Text_EasyToLoseTrackOfTime::
-	.string "When a POKé BALL appears, it’s a chance\n"
+	.string "When a POKé BALL appears, it's a chance\n"
 	.string "to line up slot marks.\p"
 	.string "Replays and PIKACHU line up even if\n"
-	.string "you don’t make an effort.\p"
+	.string "you don't make an effort.\p"
 	.string "But you need to aim for better marks,\n"
 	.string "like POKé BALLS and Moon Stones.$"
 
@@ -146,9 +146,9 @@ VeilstoneCity_GameCorner_EventScript_Maniac::
 	end
 
 VeilstoneCity_GameCorner_Text_DifficultToStopOn7::
-	.string "Listen, when CLEFAIRY appears, that’s\n"
+	.string "Listen, when CLEFAIRY appears, that's\n"
 	.string "your chance to line up sevens.\p"
-	.string "Line those babies up and you’re into\n"
+	.string "Line those babies up and you're into\n"
 	.string "the bonus round!$"
 
 VeilstoneCity_GameCorner_EventScript_Woman::
@@ -192,7 +192,7 @@ VeilstoneCity_GameCorner_Text_SNLooker::
 	.string "am just the man to do it.\p"
 	.string "Also, where the masses gather, so too\n"
 	.string "does information.\p"
-	.string "...Ack. My streak is broken.$"
+	.string "…Ack. My streak is broken.$"
 
 VeilstoneCity_GameCorner_EventScript_SNLookerPost::
 	msgbox VeilstoneCity_GameCorner_Text_SNLookerPost, MSGBOX_DEFAULT
@@ -206,7 +206,7 @@ VeilstoneCity_GameCorner_Text_SNLookerPost::
 	.string "to POKéMON that I have captured.\p"
 	.string "Also, if I have nothing to do, it means\n"
 	.string "the world, it is at peace.\p"
-	.string "...Ack. My streak is broken.$"
+	.string "…Ack. My streak is broken.$"
 
 VeilstoneCity_GameCorner_EventScript_SlotMachine0::
 	lockall

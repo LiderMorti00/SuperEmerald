@@ -47,7 +47,7 @@ Route206_Text_JamesPost::
 
 Route206_Text_JamesDefeat::
 	.string "Despite all the effort, I'm just\n"
-	.string "spinning my wheels...\p"
+	.string "spinning my wheels…\p"
 	.string "It's always that way with me!$"
 
 Route206_Text_JamesIntro::
@@ -64,7 +64,7 @@ Route206_Text_NicolePost::
 	.string "race, not a battle!$"
 
 Route206_Text_NicoleDefeat::
-	.string "Oh, geez... I seem to have fallen off my\n"
+	.string "Oh, geez… I seem to have fallen off my\n"
 	.string "Bike.$"
 
 Route206_Text_NicoleIntro::
@@ -90,10 +90,10 @@ Route206_EventScript_John_Rematch::
 	end
 
 Route206_Text_JohnDefeat::
-	.string "Crash! Tinkle...$"
+	.string "Crash! Tinkle…$"
 
 Route206_Text_JohnIntro::
-	.string "That Bike you've got there...it's the\n"
+	.string "That BIKE you've got there…it's the\n"
 	.string "type that can change gears!\p"
 	.string "You gotta love that! Sure, I'll give\n"
 	.string "you a battle!$"
@@ -129,10 +129,10 @@ Route206_EventScript_Ryan::
 
 Route206_Text_RyanPost::
 	.string "My POKéMON and I are plumb worn out.\n"
-	.string "We should be getting home to rest...$"
+	.string "We should be getting home to rest…$"
 
 Route206_Text_RyanDefeat::
-	.string "Gasp... Gasp... Gasp...$"
+	.string "Gasp… Gasp… Gasp…$"
 
 Route206_Text_RyanIntro::
 	.string "A bike will carry you a long way.\p"
@@ -185,7 +185,7 @@ Route206_EventScript_PtNpc1::
 	end
 
 Route206_Text_PtNpc1::
-	.string "This is odd... I heard there were two\n"
+	.string "This is odd… I heard there were two\n"
 	.string "caves on ROUTE 206.\p"
 	.string "But I can only find one entrance.$"
 

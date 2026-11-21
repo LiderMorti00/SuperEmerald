@@ -8,12 +8,12 @@ Route222_House2_EventScript_Janet::
 	end
 
 Route222_House2_Text_JanetPost::
-	.string "Pika...\p"
-	.string "I’ll need a lot more practice to become\n"
-	.string "a real PIKACHU...$"
+	.string "Pika…\p"
+	.string "I'll need a lot more practice to become\n"
+	.string "a real PIKACHU…$"
 
 Route222_House2_Text_JanetDefeat::
-	.string "Pikachu...$"
+	.string "PIKACHU…$"
 
 Route222_House2_Text_JanetIntro::
 	.string "Bika bikabika! Pigachu!$"
@@ -81,5 +81,5 @@ Route222_House2_EventScript_PtNpc6::
 	end
 
 Route222_House2_Text_PtNpc6_0::
-	.string "Eehehe! I’m going for the POKéMON\n"
+	.string "Eehehe! I'm going for the POKéMON\n"
 	.string "Championship with only PIKACHU!$"

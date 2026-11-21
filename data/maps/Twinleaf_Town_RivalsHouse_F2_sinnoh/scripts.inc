@@ -33,8 +33,8 @@ Twinleaf_Town_RivalsHouse_F2_Movement_SNPlayerMoveAside::
 
 Twinleaf_Town_RivalsHouse_F2_Text_Barry::
 	.string "{RIVAL}: Oh, hey, {PLAYER}!\p"
-	.string "I’ll be waiting on the road! It’s a $10\n"
-	.string "million fine if you’re late!$"
+	.string "I'll be waiting on the road! It's a $10\n"
+	.string "million fine if you're late!$"
 
 Twinleaf_Town_RivalsHouse_F2_Movement_SNNotice::
 	face_player
@@ -42,8 +42,8 @@ Twinleaf_Town_RivalsHouse_F2_Movement_SNNotice::
 	step_end
 
 Twinleaf_Town_RivalsHouse_F2_Text_SNTakeBag::
-	.string "{RIVAL}: ...I’d better take my Bag and\n"
-	.string "Journal, too...$"
+	.string "{RIVAL}: …I'd better take my Bag and\n"
+	.string "Journal, too…$"
 
 Twinleaf_Town_RivalsHouse_F2_EventScript_BarryTalk::
 	applymovement LOCALID_RIVAL_ROOM_BARRY, Common_Movement_FacePlayer

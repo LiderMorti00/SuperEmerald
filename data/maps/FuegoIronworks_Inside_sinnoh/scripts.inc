@@ -13,10 +13,10 @@ FuegoIronworks_Inside_Text_DillanPost::
 	.string "POKéMON have nothing on me!$"
 
 FuegoIronworks_Inside_Text_DillanDefeat::
-	.string "I burned out...$"
+	.string "I burned out…$"
 
 FuegoIronworks_Inside_Text_DillanIntro::
-	.string "I work in the fiery foundry. You bet I’m\n"
+	.string "I work in the fiery foundry. You bet I'm\n"
 	.string "hot and sweaty!$"
 
 FuegoIronworks_Inside_EventScript_Holden::
@@ -26,16 +26,16 @@ FuegoIronworks_Inside_EventScript_Holden::
 
 FuegoIronworks_Inside_Text_HoldenPost::
 	.string "The floor panels move automatically.\n"
-	.string "We’re pretty proud of them here!$"
+	.string "We're pretty proud of them here!$"
 
 FuegoIronworks_Inside_Text_HoldenDefeat::
 	.string "Fire! And once more, only because I\n"
 	.string "feel like it, fiyaaaah!$"
 
 FuegoIronworks_Inside_Text_HoldenIntro::
-	.string "Well! It’s not often we get a visitor\n"
+	.string "Well! It's not often we get a visitor\n"
 	.string "like you to the ironworks!\p"
-	.string "Let’s mark the occasion with a battle!$"
+	.string "Let's mark the occasion with a battle!$"
 
 FuegoIronworks_Inside_EventScript_Conrad::
 	trainerbattle_single TRAINER_RICKY_2_SINNOH, FuegoIronworks_Inside_Text_ConradIntro, FuegoIronworks_Inside_Text_ConradDefeat
@@ -44,12 +44,12 @@ FuegoIronworks_Inside_EventScript_Conrad::
 
 FuegoIronworks_Inside_Text_ConradPost::
 	.string "The sweat of a working man is beautiful\n"
-	.string "to behold...\p"
+	.string "to behold…\p"
 	.string "There is also beauty in the tears wept\n"
-	.string "from defeat...$"
+	.string "from defeat…$"
 
 FuegoIronworks_Inside_Text_ConradDefeat::
-	.string "I’m going down in flames!$"
+	.string "I'm going down in flames!$"
 
 FuegoIronworks_Inside_Text_ConradIntro::
 	.string "Are you maybe getting annoyed by\n"
@@ -135,8 +135,8 @@ FuegoIronworks_Inside_EventScript_SNFuego_None::
 	end
 
 FuegoIronworks_Inside_EventScript_SNFuego_NoneT::
-	.string "Come back when you find a Star Piece.\n"
-	.string "They’re buried on IRON ISLAND, you\l"
+	.string "Come back when you find a STAR PIECE.\n"
+	.string "They're buried on IRON ISLAND, you\l"
 	.string "know.$"
 
 FuegoIronworks_Inside_EventScript_SNFuego_Hello::

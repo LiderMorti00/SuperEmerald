@@ -81,17 +81,17 @@ GoldenrodRaidoTower4_EventScript_Proton::
 
 GoldenrodCity_RadioTower_4F4_Text_Proton_After::
 	.string "PROTON: You may have won this\n"
-	.string "time... But all you did was make\p"
+	.string "time… But all you did was make\p"
 	.string "TEAM ROCKET's wrath grow.$"
 
 GoldenrodCity_RadioTower_4F4_Text_Proton_Beaten::
-	.string "Phew...$"
+	.string "Phew…$"
 
 GoldenrodCity_RadioTower_4F4_Text_Proton_Seen::
 	.string "PROTON: Now wait just one second!\p"
 	.string "Aren't you the one who got in our\n"
 	.string "way at SLOWPOKE WELL?\p"
-	.string "I see... You're doing all this\n"
+	.string "I see… You're doing all this\n"
 	.string "because you want to make me angry.\l"
 	.string "Be careful!\p"
 	.string "But since you seem to wish it, I'll\n"
@@ -109,7 +109,7 @@ GoldenrodCity_RadioTower_4F4_EventScript_Meowth::
 	end
 
 GoldenrodCity_RadioTower_4F4_Text_Meowth::
-	.string "MEOWTH: Meowth…$"
+	.string "MEOWTH: MEOWTH…$"
 
 GoldenrodCity_RadioTower_4F4_EventScript_Sign2::
 	lock

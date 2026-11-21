@@ -8,7 +8,7 @@ Route228_EventScript_Jose::
 	end
 
 Route228_Text_JosePost::
-	.string "POKéMON and numbers... Who cares\n"
+	.string "POKéMON and numbers… Who cares\n"
 	.string "about that stuff?\p"
 	.string "Winning is what's important. Numbers\n"
 	.string "aren't everything.$"
@@ -39,7 +39,7 @@ Route228_EventScript_Moira_Rematch::
 	end
 
 Route228_Text_MoiraDefeat::
-	.string "Hmm...$"
+	.string "Hmm…$"
 
 Route228_Text_MoiraIntro::
 	.string "Please don't hold anything back.$"
@@ -100,7 +100,7 @@ Route228_Text_KeeganDefeat::
 	.string "strong enough!$"
 
 Route228_Text_KeeganIntro::
-	.string "Dragon POKéMON are sacred beings...\n"
+	.string "Dragon POKéMON are sacred beings…\n"
 	.string "That's what my master taught me.\p"
 	.string "And now I'll prove it to you!$"
 
@@ -113,7 +113,7 @@ Route228_EventScript_Corbin::
 
 Route228_Text_CorbinPost::
 	.string "I lost, but my vision of the future\n"
-	.string "came true...$"
+	.string "came true…$"
 
 Route228_EventScript_Corbin_Rematch::
 	trainerbattle_rematch TRAINER_MITCHELL_SINNOH, Route228_Text_CorbinIntro, Route228_Text_CorbinDefeat
@@ -122,7 +122,7 @@ Route228_EventScript_Corbin_Rematch::
 
 Route228_Text_CorbinDefeat::
 	.string "What I saw in the future turned out to\n"
-	.string "be true...$"
+	.string "be true…$"
 
 Route228_Text_CorbinIntro::
 	.string "You're going to win! That's the future\n"
@@ -153,10 +153,10 @@ Route228_EventScript_Davon::
 
 Route228_Text_DavonPost::
 	.string "I thought I couldn't win before it\n"
-	.string "became a fact...\p"
-	.string "I've let down my POKéMON...\p"
+	.string "became a fact…\p"
+	.string "I've let down my POKéMON…\p"
 	.string "They go to battle with faith in their\n"
-	.string "TRAINER...$"
+	.string "TRAINER…$"
 
 Route228_EventScript_Davon_Rematch::
 	trainerbattle_rematch TRAINER_GARRISON_SINNOH, Route228_Text_DavonIntro, Route228_Text_DavonDefeat
@@ -164,7 +164,7 @@ Route228_EventScript_Davon_Rematch::
 	end
 
 Route228_Text_DavonDefeat::
-	.string "My spirit is broken...$"
+	.string "My spirit is broken…$"
 
 Route228_Text_DavonIntro::
 	.string "My quest for power brought me here.\p"

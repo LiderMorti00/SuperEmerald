@@ -32,9 +32,9 @@ PastoriaCity_EventScript_PtNpc2_SNVar0::
 	end
 
 PastoriaCity_Text_PtNpc2_SNVar0::
-	.string "Wasn’t the PASTORIA GYM LEADER kind of\n"
+	.string "Wasn't the PASTORIA GYM LEADER kind of\n"
 	.string "awesome in all sorts of ways?\p"
-	.string "But don’t judge him by the way he looks\n"
+	.string "But don't judge him by the way he looks\n"
 	.string "and acts.\p"
 	.string "I hear he enters professional\n"
 	.string "wrestling matches for prize money.\p"
@@ -67,8 +67,8 @@ PastoriaCity_EventScript_PtNpc5::
 	end
 
 PastoriaCity_Text_PtNpc5::
-	.string "I'm visiting here to see the Great\n"
-	.string "Marsh.\p"
+	.string "I'm visiting here to see the GREAT\n"
+	.string "MARSH.\p"
 	.string "I'm staying at the lakeside hotel.$"
 
 PastoriaCity_EventScript_PtNpc6::
@@ -76,7 +76,7 @@ PastoriaCity_EventScript_PtNpc6::
 	end
 
 PastoriaCity_Text_PtNpc6::
-	.string "I can't use the hidden move Surf until\n"
+	.string "I can't use the hidden move SURF until\n"
 	.string "I beat the local GYM LEADER.$"
 
 PastoriaCity_EventScript_PtNpc7::
@@ -122,7 +122,7 @@ PastoriaCity_EventScript_SNBarry_Post::
 	.string "BARRY: Heh, yeah, maybe you did get a\n"
 	.string "bit tougher since last time.\p"
 	.string "That even shocked me a bit, so yeah, I\n"
-	.string "got beat ’cause I was careless.\p"
+	.string "got beat 'cause I was careless.\p"
 	.string "Oh, yeah, I joined Mr. Wake as an\n"
 	.string "apprentice!\p"
 	.string "Like, I want my own theme song!$"
@@ -136,11 +136,11 @@ PastoriaCity_EventScript_SNBarry_B1::
 
 PastoriaCity_EventScript_SNBarry_Intro::
 	.string "BARRY: Whoops!\p"
-	.string "Hehehe! I’m not always going to plow\n"
+	.string "Hehehe! I'm not always going to plow\n"
 	.string "into you every time we meet!\p"
-	.string "So how’s it going, {PLAYER}? Buffing up\n"
+	.string "So how's it going, {PLAYER}? Buffing up\n"
 	.string "your POKéMON, eh?\p"
-	.string "I’ll test you and your POKéMON out to\n"
+	.string "I'll test you and your POKéMON out to\n"
 	.string "see how buff and tough you are!$"
 
 PastoriaCity_EventScript_SNGrunt::
@@ -162,26 +162,26 @@ PastoriaCity_Text_SNGrunt3::
 	.string "ROUTE 213 and VALOR LAKEFRONT!$"
 
 PastoriaCity_Text_SNGrunt2::
-	.string "GRUNT: What’ve I done, you’re asking?\n"
-	.string "Well, technically speaking, it wasn’t\l"
+	.string "GRUNT: What've I done, you're asking?\n"
+	.string "Well, technically speaking, it wasn't\l"
 	.string "me.\p"
 	.string "The package that arrived, see, that\n"
 	.string "was a bomb, named the GALACTIC Bomb.\p"
 	.string "Me, I was told to push the button. So I\n"
 	.string "did. Like, “Poink!”\p"
-	.string "Oh, that’s right! Mustn’t forget! The\n"
+	.string "Oh, that's right! Mustn't forget! The\n"
 	.string "test results need reporting!\p"
 	.string "Cheerio, then! You daft codger, your\n"
-	.string "mask’s absurd!$"
+	.string "mask's absurd!$"
 
 PastoriaCity_Text_SNGrunt1::
-	.string "What’s with you? Stop chasing after\n"
+	.string "What's with you? Stop chasing after\n"
 	.string "me, you.\p"
-	.string "I’ve half a mind to pulverize you with\n"
+	.string "I've half a mind to pulverize you with\n"
 	.string "my POKéMON!\p"
 	.string "But I have to be on my way to the lake\n"
-	.string "ASAP! So, you’re lucky! I’m out!\p"
-	.string "All right, do I make myself clear? Don’t\n"
+	.string "ASAP! So, you're lucky! I'm out!\p"
+	.string "All right, do I make myself clear? Don't\n"
 	.string "you dare follow me!$"
 
 PastoriaCity_EventScript_SNWakeA::
@@ -211,8 +211,8 @@ PastoriaCity_EventScript_SNWakeA::
 	end
 
 PastoriaCity_Text_SNWA5::
-	.string "They rushed off toward the Great\n"
-	.string "Marsh!$"
+	.string "They rushed off toward the GREAT\n"
+	.string "MARSH!$"
 
 PastoriaCity_Text_SNWA4::
 	.string "WAKE: WHAAAAT?!\p"
@@ -221,25 +221,25 @@ PastoriaCity_Text_SNWA4::
 	.string "{RIVAL}: Hey! Master! Wait!$"
 
 PastoriaCity_Text_SNWA3::
-	.string "{RIVAL}: It doesn’t matter. I made\n"
+	.string "{RIVAL}: It doesn't matter. I made\n"
 	.string "you my master! I decided!\p"
-	.string "But forget that! There’s trouble\n"
+	.string "But forget that! There's trouble\n"
 	.string "brewing!\p"
-	.string "There’s a TEAM GALACTIC goon in front\n"
+	.string "There's a TEAM GALACTIC goon in front\n"
 	.string "of the Observatory Gate.\p"
 	.string "He said something about using a bomb!$"
 
 PastoriaCity_Text_SNWA2::
-	.string "WAKE: ...Listen, kid. I know your father.\n"
-	.string "I won’t deny that.\p"
-	.string "But I don’t recall ever taking you on\n"
+	.string "WAKE: …Listen, kid. I know your father.\n"
+	.string "I won't deny that.\p"
+	.string "But I don't recall ever taking you on\n"
 	.string "as an apprentice. Not in the least.\p"
-	.string "WAKE: Besides, you two don’t need me.\p"
+	.string "WAKE: Besides, you two don't need me.\p"
 	.string "You can become strong on your own\n"
 	.string "without being my apprentice.$"
 
 PastoriaCity_Text_SNWA1::
-	.string "WAKE: What’s this racket, then? Oh, it’s\n"
+	.string "WAKE: What's this racket, then? Oh, it's\n"
 	.string "you two.\p"
 	.string "{RIVAL}: Oh, Master!$"
 
@@ -297,31 +297,31 @@ PastoriaCity_EventScript_SNBomb::
 PastoriaCity_Text_SNWB4::
 	.string "{RIVAL}: Hey! {PLAYER}! You go after\n"
 	.string "that GALACTIC goon!\p"
-	.string "I’m staying here like Master said!\n"
+	.string "I'm staying here like Master said!\n"
 	.string "Gotta keep others from going in!\p"
-	.string "Don’t let that GALACTIC guy get away!$"
+	.string "Don't let that GALACTIC guy get away!$"
 
 PastoriaCity_Text_SNDoNotFollow::
-	.string "You two! Do NOT follow me! Don’t let\n"
+	.string "You two! Do NOT follow me! Don't let\n"
 	.string "anyone else in, either!\p"
-	.string "There’d be big trouble if there’s any of\n"
+	.string "There'd be big trouble if there's any of\n"
 	.string "that bomb left!$"
 
 PastoriaCity_Text_SNGreatMarsh::
-	.string "WAKE: The GREAT MARSH is invaluable...$"
+	.string "WAKE: The GREAT MARSH is invaluable…$"
 
 PastoriaCity_Text_SNWB3::
 	.string "GRUNT: Fweh! That was rough.\p"
-	.string "WAKE: YOU! What’ve you done?!$"
+	.string "WAKE: YOU! What've you done?!$"
 
 PastoriaCity_Text_SNWB2::
 	.string "DDDOOOMMM!!$"
 
 PastoriaCity_Text_SNWB1::
 	.string "{RIVAL}: Hey!\p"
-	.string "What am I, chopped liver? Don’t forget\n"
-	.string "I’m here, too!\p"
-	.string "WAKE: So, where’s this Galac...$"
+	.string "What am I, chopped liver? Don't forget\n"
+	.string "I'm here, too!\p"
+	.string "WAKE: So, where's this Galac…$"
 
 PastoriaCity_EventScript_SNPtSCIENTISTM::
 	msgbox PastoriaCity_EventScript_SNPtSCIENTISTM_Text, MSGBOX_NPC
@@ -352,8 +352,8 @@ PastoriaCity_EventScript_SNBarryGuard::
 	end
 
 PastoriaCity_Text_SNWhyArentYouGone::
-	.string "{RIVAL}: What’s the matter?! Why\n"
-	.string "aren’t you gone already?!\p"
+	.string "{RIVAL}: What's the matter?! Why\n"
+	.string "aren't you gone already?!\p"
 	.string "Go after that GALACTIC goon!$"
 
 PastoriaCity_EventScript_PtSign1::

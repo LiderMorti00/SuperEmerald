@@ -157,14 +157,14 @@ PastoriaCity_GreatMarshGate_EventScript_PtNpc1_CowgirlEnd::
 	end
 
 PastoriaCity_GreatMarshGate_Text_PtNpc1_0::
-	.string "Howdy. You’re playing the Safari Game?\p"
+	.string "Howdy. You're playing the Safari Game?\p"
 	.string "How would you like to try my game out\n"
 	.string "at the same time?\p"
-	.string "The rule--yep, there’s only one--is\n"
+	.string "The rule--yep, there's only one--is\n"
 	.string "real simple.\p"
 	.string "All you have to do is capture five or\n"
 	.string "more POKéMON in one Safari Game.\p"
-	.string "If you can do that, I’ll give you\n"
+	.string "If you can do that, I'll give you\n"
 	.string "something real rare!$"
 
 PastoriaCity_GreatMarshGate_EventScript_SNCowgirlPrize::
@@ -181,13 +181,13 @@ PastoriaCity_GreatMarshGate_EventScript_PtNpc1_ExplainMatchupChecker::
 PastoriaCity_GreatMarshGate_Text_PtNpc1_1::
 	.string "Rare Candies make a POKéMON grow\n"
 	.string "stronger in a snap.\p"
-	.string "Use ’em well, and come back to the\n"
-	.string "GREAT MARSH anytime, y’hear?$"
+	.string "Use 'em well, and come back to the\n"
+	.string "GREAT MARSH anytime, y'hear?$"
 
 PastoriaCity_GreatMarshGate_Text_SNCowgirlWin::
 	.string "So, how many POKéMON did you catch in\n"
 	.string "your Safari Game? At least five?\p"
-	.string "Ayup! You’ve done that all right! Isn’t\n"
+	.string "Ayup! You've done that all right! Isn't\n"
 	.string "that something!\p"
 	.string "Well, here you are, then.$"
 
@@ -203,10 +203,10 @@ PastoriaCity_GreatMarshGate_EventScript_SNAttendant::
 PastoriaCity_GreatMarshGate_Text_SNExplain::
 	.string "When you enter the GREAT MARSH, you\n"
 	.string "start with 30 Safari Balls.\p"
-	.string "That’s the only kind of Ball you’re\n"
+	.string "That's the only kind of Ball you're\n"
 	.string "allowed to use in the Safari Game.\p"
 	.string "The game is over when you run out of\n"
-	.string "Safari Balls, or when you’ve walked\p"
+	.string "Safari Balls, or when you've walked\p"
 	.string "500 steps.\p"
 	.string "Please do enjoy the untamed nature of\n"
 	.string "the GREAT MARSH!$"
@@ -233,7 +233,7 @@ PastoriaCity_GreatMarshGate_EventScript_SNBinoculars::
 
 PastoriaCity_GreatMarshGate_EventScript_SNBinoculars_T2::
 	.string "{PLAYER} looked through the\n"
-	.string "binoculars... A wild {STR_VAR_1} can be\l"
+	.string "binoculars… A wild {STR_VAR_1} can be\l"
 	.string "seen in the GREAT MARSH today!$"
 
 PastoriaCity_GreatMarshGate_EventScript_SNBinoculars_T1::

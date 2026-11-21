@@ -45,7 +45,7 @@ CianwoodCity_Text_ChucksWifeEasierToFly::
 	.string "You crossed the sea to get here?\p"
 	.string "That must have been hard.\p"
 	.string "It would be much easier if your\n"
-	.string "POKéMON knew how to FLY...$"
+	.string "POKéMON knew how to FLY…$"
 
 SE_J_CianwoodCity_hns_CianwoodCity_EventScript_ChucksWife::
 	msgbox CianwoodCity_Text_ChucksWifeEasierToFly, MSGBOX_NPC

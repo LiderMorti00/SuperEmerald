@@ -34,7 +34,7 @@ MtMortar_2F_EventScript_Nerd::
 MtMortar_2F_Text_SupernerdHughAfter::
 	.string "I'm investigating MT.MORTAR,\n"
 	.string "but my pal's gone AWOL.\p"
-	.string "Have you seen a trainer who\n"
+	.string "Have you seen a TRAINER who\n"
 	.string "has a SLOWPOKE that can use\l"
 	.string "STRENGTH?$"
 

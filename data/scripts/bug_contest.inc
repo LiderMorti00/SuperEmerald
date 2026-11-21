@@ -130,8 +130,8 @@ BugContest_Text_Judging0::
 BugContest_Text_Judging1::
 	.string "We will now judge the POKéMON\n"
 	.string "you've caught.\p"
-	.string "...................\n"
-	.string "...................\p"
+	.string "……………….\n"
+	.string "……………….\p"
 	.string "We have chosen the winners! Are\n"
 	.string "ready for this?$"
 
@@ -161,7 +161,7 @@ BugContest_Text_First2:
 	.string "PINSIR!$"
 BugContest_Text_First3:
 	.string "This Bug-Catching Contest Winner\n"
-	.string "is...\p"
+	.string "is…\p"
 	.string "{PLAYER}, who caught a whopping\n"
 	.string "{STR_VAR_1}!$"
 
@@ -174,7 +174,7 @@ BugContest_Text_Second2:
 	.string "caught a writhing {STR_VAR_1}!$"
 BugContest_Text_Second3:
 	.string "This Bug-Catching Contest Winner\n"
-	.string "is...\p"
+	.string "is…\p"
 	.string "BUGCATCHER SHAUN, who caught a\n"
 	.string "whopping PINSIR!$"
 
@@ -187,7 +187,7 @@ BugContest_Text_Third2:
 	.string "BUTTERFREE!$"
 BugContest_Text_Third3:
 	.string "This Bug-Catching Contest Winner\n"
-	.string "is...\p"
+	.string "is…\p"
 	.string "BUGCATCHER SHAUN, who caught a\n"
 	.string "whopping PINSIR!$"
 

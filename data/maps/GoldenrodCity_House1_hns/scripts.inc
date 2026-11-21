@@ -13,7 +13,7 @@ SE_J_GoldenrodCity_House1_hns_GoldenrodCity_NameRatersHouse_EventScript_NameRate
 	end
 
 GoldenrodCity_NameRatersHouse_Text_RenameRival::
-	.string "It's the news...\p"
+	.string "It's the news…\p"
 	.string "The POLICE are looking for this\n"
 	.string "REDHEADED BOY!\p"
 	.string "Do YOU know his name?$"

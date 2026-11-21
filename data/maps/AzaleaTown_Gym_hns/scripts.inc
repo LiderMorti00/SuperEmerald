@@ -32,7 +32,7 @@ AzaleaTown_Gym_EventScript_GymGuy2::
 
 AzaleaTown_Gym_Text_GymGuideWin::
 	.string "Well done! That was a great\n"
-	.string "clash of talented young trainers.\p"
+	.string "clash of talented young TRAINERS.\p"
 	.string "With people like you, the\n"
 	.string "future of POKéMON is bright!$"
 

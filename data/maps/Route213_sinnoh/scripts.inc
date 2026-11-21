@@ -25,16 +25,16 @@ Route213_EventScript_Evan::
 	end
 
 Route213_Text_EvanPost::
-	.string "Look at my lips... They're the color of\n"
+	.string "Look at my lips… They're the color of\n"
 	.string "prunes!$"
 
 Route213_Text_EvanDefeat::
 	.string "The chill of the sea, and the coldness\n"
-	.string "of defeat...\p"
+	.string "of defeat…\p"
 	.string "It's a double whammy.$"
 
 Route213_Text_EvanIntro::
-	.string "Brr... I'm starting to get chilly. I\n"
+	.string "Brr… I'm starting to get chilly. I\n"
 	.string "could use a win to get warmed up.$"
 
 Route213_EventScript_Mary::
@@ -49,7 +49,7 @@ Route213_Text_MaryPost::
 	.string "the HOENN region.$"
 
 Route213_Text_MaryDefeat::
-	.string "What's saltier? My tears or the sea...$"
+	.string "What's saltier? My tears or the sea…$"
 
 Route213_Text_MaryIntro::
 	.string "Hello, there! Aren't you going to swim?$"
@@ -61,7 +61,7 @@ Route213_EventScript_Haley::
 
 Route213_Text_HaleyPost::
 	.string "Maybe I should switch to surfing,\n"
-	.string "too...$"
+	.string "too…$"
 
 Route213_Text_HaleyDefeat::
 	.string "You sure schooled me there.$"
@@ -114,7 +114,7 @@ Route213_Text_ChelseaDefeat::
 	.string "Losing made me all hungry now.$"
 
 Route213_Text_ChelseaIntro::
-	.string "Ehehe... I can battle, too!$"
+	.string "Ehehe… I can battle, too!$"
 
 Route213_EventScript_Cyndy::
 	trainerbattle_single TRAINER_VANESSA_SINNOH, Route213_Text_CyndyIntro, Route213_Text_CyndyDefeat
@@ -148,12 +148,12 @@ Route213_EventScript_Kenneth::
 Route213_Text_KennethPost::
 	.string "Go on. Don't be shy about going up to\n"
 	.string "people to hear what they have to\l"
-	.string "say...\p"
+	.string "say…\p"
 	.string "Just don't you talk to me.$"
 
 Route213_Text_KennethDefeat::
 	.string "You need to have more respect for a\n"
-	.string "grown-up...$"
+	.string "grown-up…$"
 
 Route213_Text_KennethIntro::
 	.string "Waah! Now! Just now! I was just about\n"
@@ -195,7 +195,7 @@ Route213_EventScript_PtNpc2::
 Route213_Text_PtNpc2::
 	.string "I'd rather be in a pool than the sea.\p"
 	.string "The salty tang of the sea tastes like\n"
-	.string "my tears after a hard day at work...$"
+	.string "my tears after a hard day at work…$"
 
 Route213_EventScript_PtNpc3::
 	msgbox Route213_Text_PtNpc3, MSGBOX_NPC
@@ -219,22 +219,22 @@ Route213_EventScript_SNBomb::
 Route213_EventScript_SNBomb_T3::
 	.string "But, boy, this GALACTIC Bomb packs a\n"
 	.string "pretty big wallop.\p"
-	.string "With this baby here there’s not much we\n"
-	.string "can’t blow up.\p"
+	.string "With this baby here there's not much we\n"
+	.string "can't blow up.\p"
 	.string "I wonder what they have planned for\n"
 	.string "this?$"
 
 Route213_EventScript_SNBomb_T2::
 	.string "Graw! You were eavesdropping! I was\n"
 	.string "just thinking out loud!\p"
-	.string "But I’m not going to waste my energy\n"
-	.string "knocking you around...$"
+	.string "But I'm not going to waste my energy\n"
+	.string "knocking you around…$"
 
 Route213_EventScript_SNBomb_T1::
-	.string "We needed the energy from the Valley\n"
-	.string "Windworks to make this...\p"
+	.string "We needed the energy from the VALLEY\n"
+	.string "WINDWORKS to make this…\p"
 	.string "It would take a scientific genius to\n"
-	.string "make something like this...\p"
+	.string "make something like this…\p"
 	.string "Therefore, our boss, who made this, is a\n"
 	.string "scientific mechanical genius!$"
 
@@ -269,10 +269,10 @@ Route213_EventScript_SNBomb_L1::
 	.string "LOOKER: Hello, my friend!\p"
 	.string "The cargo that the TEAM GALACTIC\n"
 	.string "brought is worrisome, so I have come.\p"
-	.string "...You say the cargo, it was a bomb? And\n"
+	.string "…You say the cargo, it was a bomb? And\n"
 	.string "there was an explosion?\p"
 	.string "The explosion was at the GREAT MARSH?\p"
-	.string "Furthermore, you are pursuing a man... A\n"
+	.string "Furthermore, you are pursuing a man… A\n"
 	.string "man with funny bowl-cut hair.\p"
 	.string "In an outfit that is very strange?\p"
 	.string "In other words, that is the Team\n"

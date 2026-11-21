@@ -7,8 +7,8 @@ LakeAcuity_EventScript_SNBarry::
 	end
 
 LakeAcuity_EventScript_SNBarry_T2::
-	.string "That POKéMON called UXIE... It was\n"
-	.string "suffering...$"
+	.string "That POKéMON called UXIE… It was\n"
+	.string "suffering…$"
 
 LakeAcuity_EventScript_SNScene::
 	goto_if_set FLAG_SN_HIDE_ACUITY_JUPITER, LakeAcuity_EventScript_SNSceneEnd
@@ -58,48 +58,48 @@ LakeAcuity_EventScript_SNScene::
 	end
 
 LakeAcuity_Text_SNStronger::
-	.string "I’m going to get tougher...\p"
-	.string "It’s not about winning or losing...\n"
-	.string "That’s not good enough...\p"
-	.string "I have to be stronger...\p"
-	.string "It’s not enough to just want to be the\n"
-	.string "most powerful TRAINER ever...\p"
-	.string "It takes honest effort... And a\n"
+	.string "I'm going to get tougher…\p"
+	.string "It's not about winning or losing…\n"
+	.string "That's not good enough…\p"
+	.string "I have to be stronger…\p"
+	.string "It's not enough to just want to be the\n"
+	.string "most powerful TRAINER ever…\p"
+	.string "It takes honest effort… And a\n"
 	.string "determined heart.$"
 
 LakeAcuity_EventScript_SNBarry_T1::
-	.string "{RIVAL}: ... ...\p"
-	.string "Yeah, that’s right!\p"
-	.string "I couldn’t do anything against Team\n"
+	.string "{RIVAL}: … …\p"
+	.string "Yeah, that's right!\p"
+	.string "I couldn't do anything against Team\n"
 	.string "GALACTIC!$"
 
 LakeAcuity_Text_SNDontWaste::
-	.string "Oh? Don’t I know you? We met in ETERNA\n"
+	.string "Oh? Don't I know you? We met in ETERNA\n"
 	.string "City.\p"
 	.string "Listen. TEAM GALACTIC is going to do\n"
-	.string "something huge for everyone’s sake.\p"
-	.string "That’s why you should keep out of Team\n"
-	.string "GALACTIC’s way.\p"
-	.string "Don’t come whining about poor POKéMON\n"
+	.string "something huge for everyone's sake.\p"
+	.string "That's why you should keep out of Team\n"
+	.string "GALACTIC's way.\p"
+	.string "Don't come whining about poor POKéMON\n"
 	.string "and other trivial junk like that.\p"
-	.string "Don’t waste your time coming to our HQ\n"
+	.string "Don't waste your time coming to our HQ\n"
 	.string "in VEILSTONE.\p"
-	.string "Now, if you’ll excuse me.$"
+	.string "Now, if you'll excuse me.$"
 
 LakeAcuity_Text_SNJupiter::
 	.string "JUPITER: Oh? Are you finished already?\p"
-	.string "Your POKéMON aren’t bad, but you’re\n"
+	.string "Your POKéMON aren't bad, but you're\n"
 	.string "laughably weak.\p"
 	.string "You honestly thought you could save\n"
 	.string "the POKéMON of the lake?\p"
 	.string "And become the POKéMON CHAMPION?\n"
 	.string "Dream on, little kid.\p"
-	.string "But, eww, it’s so cold here. Let’s go\n"
+	.string "But, eww, it's so cold here. Let's go\n"
 	.string "back to the VEILSTONE HQ.$"
 
 LakeAcuity_Text_SNNotGettingAway::
 	.string "{RIVAL}: !\p"
-	.string "You’re not getting away with this, Team\n"
+	.string "You're not getting away with this, Team\n"
 	.string "GALACTIC!$"
 
 LakeAcuity_EventScript_SNSceneEnd::

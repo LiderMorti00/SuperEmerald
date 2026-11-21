@@ -28,7 +28,7 @@ SandgemTown_EventScript_PtNpc3::
 
 SandgemTown_Text_PtNpc3::
 	.string "So I don't forget what's happened, till\n"
-	.string "now, I'd better save this...\p"
+	.string "now, I'd better save this…\p"
 	.string "There! Now I can take a break.$"
 
 SandgemTown_EventScript_EscortEnd::
@@ -94,7 +94,7 @@ SandgemTown_Text_DawnGoIn_Lu::
 	.string "{STR_VAR_1}: What was that?!\p"
 	.string "Your friend always seems to be in such\n"
 	.string "a rush.\p"
-	.string "Anyway... Let’s go in.$"
+	.string "Anyway… Let's go in.$"
 
 SandgemTown_Text_DawnGoIn_ScrD::
 	checkplayergender
@@ -110,7 +110,7 @@ SandgemTown_Text_DawnGoIn::
 	.string "{STR_VAR_1}: Wow, what was that?\p"
 	.string "Your friend sure seems to be really\n"
 	.string "impatient.\p"
-	.string "Well, anyway... Let’s go inside.$"
+	.string "Well, anyway… Let's go inside.$"
 
 SandgemTown_Text_DawnGoIn_SNLucasCall::
 	msgbox SandgemTown_Text_DawnGoIn_SNLu, MSGBOX_DEFAULT
@@ -120,7 +120,7 @@ SandgemTown_Text_DawnGoIn_SNLu::
 	.string "{STR_VAR_1}: What was that?!\p"
 	.string "Your friend always seems to be in such\n"
 	.string "a rush.\p"
-	.string "Anyway... Let’s go in.$"
+	.string "Anyway… Let's go in.$"
 
 SandgemTown_Movement_BarryRuns::
 	walk_fast_right
@@ -148,11 +148,11 @@ SandgemTown_Movement_BarryRuns::
 	step_end
 
 SandgemTown_Text_Barry::
-	.string "{RIVAL}: What the...\p"
-	.string "Oh, it’s you, {PLAYER}!\p"
-	.string "That old guy... He’s not scary so much\n"
+	.string "{RIVAL}: What the…\p"
+	.string "Oh, it's you, {PLAYER}!\p"
+	.string "That old guy… He's not scary so much\n"
 	.string "as he is totally out there!\p"
-	.string "Aww, it doesn’t matter, {PLAYER}. I’m out\n"
+	.string "Aww, it doesn't matter, {PLAYER}. I'm out\n"
 	.string "of here. See you later!$"
 
 SandgemTown_EventScript_PlayerWalk13::
@@ -258,12 +258,12 @@ SandgemTown_Text_Dawn_ScrL::
 	return
 
 SandgemTown_Text_Dawn_Lu::
-	.string "{STR_VAR_1}: Hi! I’ve been waiting for\n"
+	.string "{STR_VAR_1}: Hi! I've been waiting for\n"
 	.string "you! Please, come with me.\p"
-	.string "The prof’s waiting to see you.\p"
+	.string "The prof's waiting to see you.\p"
 	.string "{STR_VAR_1}: See? This is our POKéMON\n"
 	.string "Research Lab.\p"
-	.string "We’ll just go ahead and...$"
+	.string "We'll just go ahead and…$"
 
 SandgemTown_Text_Dawn_ScrD::
 	checkplayergender
@@ -280,19 +280,19 @@ SandgemTown_Text_Dawn::
 	.string "come with me!\p"
 	.string "The professor is waiting!\p"
 	.string "This is it! Our POKéMON Research Lab!\p"
-	.string "Let’s go...$"
+	.string "Let's go…$"
 
 SandgemTown_Text_Dawn_SNLucasCall::
 	msgbox SandgemTown_Text_Dawn_SNLu, MSGBOX_DEFAULT
 	return
 
 SandgemTown_Text_Dawn_SNLu::
-	.string "{STR_VAR_1}: Hi! I’ve been waiting for\n"
+	.string "{STR_VAR_1}: Hi! I've been waiting for\n"
 	.string "you! Please, come with me.\p"
-	.string "The prof’s waiting to see you.\p"
+	.string "The prof's waiting to see you.\p"
 	.string "{STR_VAR_1}: See? This is our POKéMON\n"
 	.string "Research Lab.\p"
-	.string "We’ll just go ahead and...$"
+	.string "We'll just go ahead and…$"
 
 SandgemTown_EventScript_RowanEnd::
 	releaseall
@@ -366,27 +366,27 @@ SandgemTown_Text_Dawn2_ScrL::
 SandgemTown_Text_Dawn2_Lu::
 	.string "{STR_VAR_1}: This building with the red\n"
 	.string "roof is the POKéMON Center.\p"
-	.string "You can get your POKéMON healed if it’s\n"
+	.string "You can get your POKéMON healed if it's\n"
 	.string "been hurt in battle.\p"
-	.string "You’ll find a POKéMON Center in most\n"
+	.string "You'll find a POKéMON Center in most\n"
 	.string "towns.\p"
 	.string "{STR_VAR_1}: Over here, the building\n"
 	.string "with the blue roof is the POKé MART.\p"
-	.string "It’s a shop where you can buy and sell\n"
+	.string "It's a shop where you can buy and sell\n"
 	.string "all sorts of items.\p"
-	.string "{PLAYER}, since you’re a rookie TRAINER,\n"
-	.string "you won’t be able to buy\p"
+	.string "{PLAYER}, since you're a rookie TRAINER,\n"
+	.string "you won't be able to buy\p"
 	.string "very much stuff.\p"
-	.string "Don’t worry about it, OK?\p"
-	.string "Oh, yeah, right! {PLAYER}...\p"
-	.string "You should let your family know you’re\n"
+	.string "Don't worry about it, OK?\p"
+	.string "Oh, yeah, right! {PLAYER}…\p"
+	.string "You should let your family know you're\n"
 	.string "helping PROF. ROWAN put\p"
 	.string "together his POKéDEX.\p"
 	.string "Sometimes, you have to go far away, so\n"
 	.string "you should let someone know.\p"
 	.string "Oh, but first, go heal up your POKéMON\n"
 	.string "at the POKéMON Center.\p"
-	.string "You’ll be safe then. OK, be seeing you!$"
+	.string "You'll be safe then. OK, be seeing you!$"
 
 SandgemTown_Text_Dawn2_ScrD::
 	checkplayergender
@@ -401,22 +401,22 @@ SandgemTown_Text_Dawn2_SNDawnCall::
 SandgemTown_Text_Dawn2::
 	.string "{STR_VAR_1}: This building with the red\n"
 	.string "roof is the POKéMON Center.\p"
-	.string "It’s the place that heals POKéMON that\n"
+	.string "It's the place that heals POKéMON that\n"
 	.string "have been hurt in battle.\p"
 	.string "You can find a POKéMON Center in most\n"
 	.string "towns.\p"
 	.string "{STR_VAR_1}: The building with the blue\n"
 	.string "roof over here is the POKé MART.\p"
-	.string "It’s a shop where you can buy and sell\n"
+	.string "It's a shop where you can buy and sell\n"
 	.string "items and medicine.\p"
-	.string "{PLAYER}, since you’re a novice TRAINER,\n"
-	.string "you won’t be able to buy\p"
+	.string "{PLAYER}, since you're a novice TRAINER,\n"
+	.string "you won't be able to buy\p"
 	.string "many kinds of merchandise.\p"
-	.string "Don’t let it bother you!\p"
-	.string "{STR_VAR_1}: Oh, that’s right!\n"
-	.string "{PLAYER}...\p"
-	.string "Don’t you need to let your family know\n"
-	.string "that you’re going to be helping\p"
+	.string "Don't let it bother you!\p"
+	.string "{STR_VAR_1}: Oh, that's right!\n"
+	.string "{PLAYER}…\p"
+	.string "Don't you need to let your family know\n"
+	.string "that you're going to be helping\p"
 	.string "PROF. ROWAN with the POKéDEX?\p"
 	.string "You may need to go far away, so I think\n"
 	.string "you should let someone know.\p"
@@ -432,27 +432,27 @@ SandgemTown_Text_Dawn2_SNLucasCall::
 SandgemTown_Text_Dawn2_SNLu::
 	.string "{STR_VAR_1}: This building with the red\n"
 	.string "roof is the POKéMON Center.\p"
-	.string "You can get your POKéMON healed if it’s\n"
+	.string "You can get your POKéMON healed if it's\n"
 	.string "been hurt in battle.\p"
-	.string "You’ll find a POKéMON Center in most\n"
+	.string "You'll find a POKéMON Center in most\n"
 	.string "towns.\p"
 	.string "{STR_VAR_1}: Over here, the building\n"
 	.string "with the blue roof is the POKé MART.\p"
-	.string "It’s a shop where you can buy and sell\n"
+	.string "It's a shop where you can buy and sell\n"
 	.string "all sorts of items.\p"
-	.string "{PLAYER}, since you’re a rookie TRAINER,\n"
-	.string "you won’t be able to buy\p"
+	.string "{PLAYER}, since you're a rookie TRAINER,\n"
+	.string "you won't be able to buy\p"
 	.string "very much stuff.\p"
-	.string "Don’t worry about it, OK?\p"
-	.string "{STR_VAR_1}: Oh, yeah, right! {PLAYER}...\p"
-	.string "You should let your family know you’re\n"
+	.string "Don't worry about it, OK?\p"
+	.string "{STR_VAR_1}: Oh, yeah, right! {PLAYER}…\p"
+	.string "You should let your family know you're\n"
 	.string "helping PROF. ROWAN put\p"
 	.string "together his POKéDEX.\p"
 	.string "Sometimes, you have to go far away, so\n"
 	.string "you should let someone know.\p"
 	.string "Oh, but first, go heal up your POKéMON\n"
 	.string "at the POKéMON Center.\p"
-	.string "You’ll be safe then. OK, be seeing you!$"
+	.string "You'll be safe then. OK, be seeing you!$"
 
 SandgemTown_Movement_DawnTour::
 	walk_right
@@ -491,9 +491,9 @@ SandgemTown_Text_Rowan2_ScrL::
 	return
 
 SandgemTown_Text_Rowan2_Lu::
-	.string "{STR_VAR_1}: Well, I’ll be... The\n"
-	.string "professor had TMs...?\p"
-	.string "Next thing, he’ll tell me he battled\n"
+	.string "{STR_VAR_1}: Well, I'll be… The\n"
+	.string "professor had TMs…?\p"
+	.string "Next thing, he'll tell me he battled\n"
 	.string "when he was young.\p"
 	.string "{STR_VAR_1}: Hey, {PLAYER}! I want to\n"
 	.string "show you a few things.\p"
@@ -510,13 +510,13 @@ SandgemTown_Text_Rowan2_SNDawnCall::
 	return
 
 SandgemTown_Text_Rowan2::
-	.string "{STR_VAR_1}: Oh, wow. I didn’t know the\n"
+	.string "{STR_VAR_1}: Oh, wow. I didn't know the\n"
 	.string "professor had TMs.\p"
-	.string "Was he a TRAINER when he was young...?\p"
-	.string "{STR_VAR_1}: OK, {PLAYER}, I’ll act as\n"
+	.string "Was he a TRAINER when he was young…?\p"
+	.string "{STR_VAR_1}: OK, {PLAYER}, I'll act as\n"
 	.string "your mentor.\p"
-	.string "I’ve got a bit more experience than you\n"
-	.string "as a TRAINER and as the professor’s\p"
+	.string "I've got a bit more experience than you\n"
+	.string "as a TRAINER and as the professor's\p"
 	.string "assistant.\p"
 	.string "OK, follow me!$"
 
@@ -525,9 +525,9 @@ SandgemTown_Text_Rowan2_SNLucasCall::
 	return
 
 SandgemTown_Text_Rowan2_SNLu::
-	.string "{STR_VAR_1}: Well, I’ll be... The\n"
-	.string "professor had TMs...?\p"
-	.string "Next thing, he’ll tell me he battled\n"
+	.string "{STR_VAR_1}: Well, I'll be… The\n"
+	.string "professor had TMs…?\p"
+	.string "Next thing, he'll tell me he battled\n"
 	.string "when he was young.\p"
 	.string "{STR_VAR_1}: Hey, {PLAYER}! I want to\n"
 	.string "show you a few things.\p"
@@ -537,17 +537,17 @@ SandgemTown_Text_Rowan::
 	.string "ROWAN: I have something good here. You\n"
 	.string "should take this as well.\p"
 	.string "ROWAN: That is a Technical Machine.\n"
-	.string "That one contains the move Return.\p"
+	.string "That one contains the move RETURN.\p"
 	.string "Using a Technical Machine, or TM for\n"
 	.string "short, teaches a move instantly to\p"
 	.string "a POKéMON.\p"
 	.string "Bear in mind, however, that a TM is\n"
 	.string "single-use only.\p"
-	.string "The move Return gains power the more\n"
+	.string "The move RETURN gains power the more\n"
 	.string "friendly your POKéMON is with you.\p"
-	.string "It’s up to you, of course, if you want\n"
+	.string "It's up to you, of course, if you want\n"
 	.string "to use that TM or not.\p"
-	.string "I’ll send you off with the wish that\n"
+	.string "I'll send you off with the wish that\n"
 	.string "your journey will be fun.$"
 
 SandgemTown_Movement_RowanExits::

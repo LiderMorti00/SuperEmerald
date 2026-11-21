@@ -64,7 +64,7 @@ Route210_North_Text_NathanPost::
 	.string "POKé BALLS.$"
 
 Route210_North_Text_NathanDefeat::
-	.string "I didn't expect to lose...$"
+	.string "I didn't expect to lose…$"
 
 Route210_North_Text_NathanIntro::
 	.string "We ninjas appear where you least\n"
@@ -81,8 +81,8 @@ Route210_North_Text_DavidoPost::
 	.string "I should become a devotee of theirs.$"
 
 Route210_North_Text_DavidoDefeat::
-	.string "Hmm... My ninja techniques failed to\n"
-	.string "work...$"
+	.string "Hmm… My ninja techniques failed to\n"
+	.string "work…$"
 
 Route210_North_Text_DavidoIntro::
 	.string "A ninja can use all kinds of skills.\n"
@@ -105,7 +105,7 @@ Route210_North_EventScript_Patrick_Rematch::
 	end
 
 Route210_North_Text_PatrickDefeat::
-	.string "Oh, my... Good golly 'n' gosh...$"
+	.string "Oh, my… Good golly 'n' gosh…$"
 
 Route210_North_Text_PatrickIntro::
 	.string "Try not to be shocked when you lay\n"
@@ -119,7 +119,7 @@ Route210_North_EventScript_Brianna::
 	end
 
 Route210_North_Text_BriannaPost::
-	.string "The sight of you battling... It was\n"
+	.string "The sight of you battling… It was\n"
 	.string "simply a wonder to watch!$"
 
 Route210_North_EventScript_Brianna_Rematch::
@@ -141,7 +141,7 @@ Route210_North_EventScript_ZacJen::
 
 Route210_North_Text_ZacJenPost::
 	.string "ZAC: I don't care if I get to meet the\n"
-	.string "greatest TRAINER in the region...\p"
+	.string "greatest TRAINER in the region…\p"
 	.string "I'd still rather learn from JEN.$"
 
 Route210_North_Text_ZacJenNotEnough::
@@ -153,7 +153,7 @@ Route210_North_Text_ZacJenNotEnough::
 
 Route210_North_Text_ZacJenDefeat::
 	.string "ZAC: Wow. Someone that's even better\n"
-	.string "than JEN...$"
+	.string "than JEN…$"
 
 Route210_North_Text_ZacJenIntro::
 	.string "ZAC: JEN, watch this! I'm going to use\n"
@@ -178,7 +178,7 @@ Route210_North_EventScript_Brian_Rematch::
 	end
 
 Route210_North_Text_BrianDefeat::
-	.string "I've lost, but... What is this rush I\n"
+	.string "I've lost, but… What is this rush I\n"
 	.string "feel?!$"
 
 Route210_North_Text_BrianIntro::
@@ -207,9 +207,9 @@ Route210_North_EventScript_PtNpc1::
 	end
 
 Route210_North_Text_PtNpc1::
-	.string "If I could use the hidden move Defog,\n"
+	.string "If I could use the hidden move DEFOG,\n"
 	.string "I'd clear up the fog so I can see.\p"
-	.string "How does Defog work?\p"
+	.string "How does DEFOG work?\p"
 	.string "Don't bird and bug POKéMON flap their\n"
 	.string "wings to blow the fog away?$"
 

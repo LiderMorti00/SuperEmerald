@@ -13,7 +13,7 @@ GoldenrodUnderground_EventScript_Teacher::
 
 GoldenrodUnderground1_Text_Teacher::
 	.string "There are some shops downstairs…\n"
-	.string "But there are also trainers.\p"
+	.string "But there are also TRAINERS.\p"
 	.string "I'm scared to go down there.$"
 
 GoldenrodUnderground_EventScript_SuperNerd::

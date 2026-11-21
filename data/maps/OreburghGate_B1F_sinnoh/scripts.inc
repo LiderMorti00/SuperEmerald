@@ -8,14 +8,14 @@ OreburghGate_B1F_EventScript_Grant::
 	end
 
 OreburghGate_B1F_Text_GrantPost::
-	.string "I’ll always remain young at heart.\n"
-	.string "Never let them say you’re too old!$"
+	.string "I'll always remain young at heart.\n"
+	.string "Never let them say you're too old!$"
 
 OreburghGate_B1F_Text_GrantDefeat::
-	.string "Grrr... So young, and yet so talented!$"
+	.string "Grrr… So young, and yet so talented!$"
 
 OreburghGate_B1F_Text_GrantIntro::
-	.string "I’m a Veteran, yes, but don’t you dare\n"
+	.string "I'm a Veteran, yes, but don't you dare\n"
 	.string "treat me like a senior citizen!$"
 
 OreburghGate_B1F_EventScript_PtNpc1::

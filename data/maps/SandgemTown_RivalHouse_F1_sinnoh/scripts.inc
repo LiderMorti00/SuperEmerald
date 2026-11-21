@@ -24,21 +24,21 @@ SandgemTown_RivalHouse_F1_EventScript_SNNational::
 	end
 
 SandgemTown_RivalHouse_F1_Text_SNNational::
-	.string "Oh, my! You’ve got a National POKéDEX?\p"
+	.string "Oh, my! You've got a National POKéDEX?\p"
 	.string "How fantastic is that?!\p"
 	.string "ROWAN should be delighted. It will\n"
 	.string "greatly help his research.\p"
-	.string "But, young TRAINER... You should know\n"
+	.string "But, young TRAINER… You should know\n"
 	.string "this.\p"
-	.string "In this world, there are 300... No, 400...\p"
-	.string "No, no, no! There’re a lot more kinds of\n"
+	.string "In this world, there are 300… No, 400…\p"
+	.string "No, no, no! There're a lot more kinds of\n"
 	.string "POKéMON than that!$"
 
 SandgemTown_RivalHouse_F1_Text_SNSwarm1::
 	.string "Oh, hi, {PLAYER}!\p"
 	.string "There was news on TV saying there is a\n"
 	.string "massive outbreak of POKéMON!\p"
-	.string "That’d be great for filling up your\n"
+	.string "That'd be great for filling up your\n"
 	.string "POKéDEX!$"
 
 SE_S_SandgemTown_RivalHouse_F1_SandgemTown_RivalHouse_F1_EventScript_PtNpc2::

@@ -13,7 +13,7 @@ Route210_South_Text_FabianPost::
 	.string "HEARTHOME CITY. Maybe I'll do that.$"
 
 Route210_South_Text_FabianDefeat::
-	.string "I concede defeat...$"
+	.string "I concede defeat…$"
 
 Route210_South_Text_FabianIntro::
 	.string "I am one of the Ninja Trio! Being\n"
@@ -27,11 +27,11 @@ Route210_South_EventScript_Brennan::
 Route210_South_Text_BrennanPost::
 	.string "While I hid in the tall grass, I sensed\n"
 	.string "POKéMON all around me!\p"
-	.string "Furtive sounds of movement... Stifled\n"
-	.string "cries... I heard them!$"
+	.string "Furtive sounds of movement… Stifled\n"
+	.string "cries… I heard them!$"
 
 Route210_South_Text_BrennanDefeat::
-	.string "I concede defeat...$"
+	.string "I concede defeat…$"
 
 Route210_South_Text_BrennanIntro::
 	.string "I am one of the Ninja Trio! Being\n"
@@ -74,7 +74,7 @@ Route210_South_Text_BrucePost::
 	.string "stuff, I guess.$"
 
 Route210_South_Text_BruceDefeat::
-	.string "I concede defeat...$"
+	.string "I concede defeat…$"
 
 Route210_South_Text_BruceIntro::
 	.string "I am one of the Ninja Trio! Being\n"
@@ -88,11 +88,11 @@ Route210_South_EventScript_Wyatt::
 	end
 
 Route210_South_Text_WyattPost::
-	.string "I wish I could just run from all this...\n"
+	.string "I wish I could just run from all this…\n"
 	.string "Just joking.$"
 
 Route210_South_Text_WyattDefeat::
-	.string "...Oh, serious woe. I wasn't prepared\n"
+	.string "…Oh, serious woe. I wasn't prepared\n"
 	.string "emotionally for this.$"
 
 Route210_South_Text_WyattIntro::
@@ -123,7 +123,7 @@ Route210_South_EventScript_Amber::
 
 Route210_South_Text_AmberPost::
 	.string "The best way to raise POKéMON?\p"
-	.string "...Hmm, when it comes right down to it,\n"
+	.string "…Hmm, when it comes right down to it,\n"
 	.string "isn't it all about love?$"
 
 Route210_South_Text_AmberDefeat::
@@ -229,7 +229,7 @@ Route210_South_EventScript_SNCynthiaCharm::
 	end
 
 Route210_South_EventScript_SNCynthiaCharm_T2::
-	.string "I know I’m asking a big favor of you.\p"
+	.string "I know I'm asking a big favor of you.\p"
 	.string "But I really want you to do it. Will you\n"
 	.string "go to CELESTIC TOWN for me?$"
 
@@ -238,17 +238,17 @@ Route210_South_EventScript_SNCynthiaCharm_T1::
 	.string "SecretPotion I gave you.\p"
 	.string "PSYDUCK are known to suffer from\n"
 	.string "chronic headaches.\p"
-	.string "But no one’s been able to figure out\n"
+	.string "But no one's been able to figure out\n"
 	.string "what triggers the headaches.\p"
 	.string "Oh, yes! Can I ask you a big favor?\p"
-	.string "I want you to deliver this Old Charm to\n"
+	.string "I want you to deliver this Old CHARM to\n"
 	.string "my grandma in CELESTIC TOWN.\p"
 	.string "I know there are some rare POKéMON\n"
 	.string "between here and CELESTIC TOWN, so\p"
 	.string "it will be worth your while to go.$"
 
 Route210_South_EventScript_SNPsyduck_Used::
-	.string "{PLAYER} used the SecretPotion!\p"
+	.string "{PLAYER} used the SECRETPOTION!\p"
 	.string "The PSYDUCK appear to be cured of\n"
 	.string "their chronic headache!$"
 
@@ -258,7 +258,7 @@ Route210_South_EventScript_SNPsyduck_End::
 
 Route210_South_EventScript_SNPsyduck_Ask::
 	.string "The PSYDUCK are standing firm. They\n"
-	.string "aren’t inclined to move.\p"
+	.string "aren't inclined to move.\p"
 	.string "Would you like to use the\n"
 	.string "SecretPotion?$"
 
@@ -268,7 +268,7 @@ Route210_South_EventScript_SNPsyduck_Firm::
 
 Route210_South_EventScript_SNPsyduck_FirmT::
 	.string "The PSYDUCK are standing firm. They\n"
-	.string "aren’t inclined to move at all.$"
+	.string "aren't inclined to move at all.$"
 
 Route210_South_EventScript_SNPtACETRAINERF::
 	msgbox Route210_South_EventScript_SNPtACETRAINERF_Text, MSGBOX_NPC

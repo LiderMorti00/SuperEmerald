@@ -14,10 +14,10 @@ SinnohVictoryRoad_1F_Text_BrycePost::
 
 SinnohVictoryRoad_1F_Text_BryceDefeat::
 	.string "So be it! I will now divulge what I know\n"
-	.string "of your future... Hmm!$"
+	.string "of your future… Hmm!$"
 
 SinnohVictoryRoad_1F_Text_BryceIntro::
-	.string "I am a Psychic! I can see your future!$"
+	.string "I am a PSYCHIC! I can see your future!$"
 
 SinnohVictoryRoad_1F_EventScript_Miles::
 	trainerbattle_single TRAINER_CINDY_6_SINNOH, SinnohVictoryRoad_1F_Text_MilesIntro, SinnohVictoryRoad_1F_Text_MilesDefeat
@@ -25,15 +25,15 @@ SinnohVictoryRoad_1F_EventScript_Miles::
 	end
 
 SinnohVictoryRoad_1F_Text_MilesPost::
-	.string "I’ve made it this far in life using the\n"
+	.string "I've made it this far in life using the\n"
 	.string "karate I learned on the Internet!$"
 
 SinnohVictoryRoad_1F_Text_MilesDefeat::
-	.string "I’ve met my match in strength!$"
+	.string "I've met my match in strength!$"
 
 SinnohVictoryRoad_1F_Text_MilesIntro::
-	.string "My POKéMON knows karate! I’m warning\n"
-	.string "you, it’s a tough one!$"
+	.string "My POKéMON knows karate! I'm warning\n"
+	.string "you, it's a tough one!$"
 
 SinnohVictoryRoad_1F_EventScript_Hana::
 	trainerbattle_single TRAINER_JESSICA_1_SINNOH, SinnohVictoryRoad_1F_Text_HanaIntro, SinnohVictoryRoad_1F_Text_HanaDefeat
@@ -41,12 +41,12 @@ SinnohVictoryRoad_1F_EventScript_Hana::
 	end
 
 SinnohVictoryRoad_1F_Text_HanaPost::
-	.string "The wings of freedom...\p"
-	.string "I know I’ll find them if I can win my way\n"
-	.string "through the POKéMON LEAGUE...$"
+	.string "The wings of freedom…\p"
+	.string "I know I'll find them if I can win my way\n"
+	.string "through the POKéMON LEAGUE…$"
 
 SinnohVictoryRoad_1F_Text_HanaDefeat::
-	.string "It seems I’ve been grounded...$"
+	.string "It seems I've been grounded…$"
 
 SinnohVictoryRoad_1F_Text_HanaIntro::
 	.string "I keep battling so I can soar ever\n"
@@ -60,16 +60,16 @@ SinnohVictoryRoad_1F_EventScript_Mariah::
 SinnohVictoryRoad_1F_Text_MariahPost::
 	.string "Once you emerge from VICTORY ROAD, the\n"
 	.string "POKéMON LEAGUE lies directly\p"
-	.string "ahead...\p"
+	.string "ahead…\p"
 	.string "But many TRAINERS fail to ever find\n"
-	.string "their way on VICTORY ROAD...$"
+	.string "their way on VICTORY ROAD…$"
 
 SinnohVictoryRoad_1F_Text_MariahDefeat::
-	.string "So, that’s how you battled...?$"
+	.string "So, that's how you battled…?$"
 
 SinnohVictoryRoad_1F_Text_MariahIntro::
-	.string "Show me how you’ve battled to get\n"
-	.string "here! Let’s do this!$"
+	.string "Show me how you've battled to get\n"
+	.string "here! Let's do this!$"
 
 SinnohVictoryRoad_1F_EventScript_Edgar::
 	trainerbattle_single TRAINER_JESSICA_3_SINNOH, SinnohVictoryRoad_1F_Text_EdgarIntro, SinnohVictoryRoad_1F_Text_EdgarDefeat
@@ -88,7 +88,7 @@ SinnohVictoryRoad_1F_Text_EdgarDefeat::
 SinnohVictoryRoad_1F_Text_EdgarIntro::
 	.string "I can sense that your POKéMON have a\n"
 	.string "lot of trust in you.\p"
-	.string "You and your POKéMON... You seem to be\n"
+	.string "You and your POKéMON… You seem to be\n"
 	.string "aglow.$"
 
 SinnohVictoryRoad_1F_EventScript_Clinton::
@@ -98,24 +98,24 @@ SinnohVictoryRoad_1F_EventScript_Clinton::
 
 SinnohVictoryRoad_1F_Text_ClintonPost::
 	.string "When two roads diverge, you must\n"
-	.string "choose the path less traveled...$"
+	.string "choose the path less traveled…$"
 
 SinnohVictoryRoad_1F_Text_ClintonDefeat::
-	.string "That’s why I like it here; I get to\n"
+	.string "That's why I like it here; I get to\n"
 	.string "battle tough characters like you.$"
 
 SinnohVictoryRoad_1F_Text_ClintonIntro::
 	.string "This is a place where tough TRAINERS\n"
 	.string "naturally congregate.\p"
-	.string "It’s ideal for training!$"
+	.string "It's ideal for training!$"
 
 SinnohVictoryRoad_1F_EventScript_PtNpc1::
 	msgbox SinnohVictoryRoad_1F_Text_PtNpc1, MSGBOX_NPC
 	end
 
 SinnohVictoryRoad_1F_Text_PtNpc1::
-	.string "Let me size you up...\p"
-	.string "You’ll meet many, many POKéMON. That’s\n"
+	.string "Let me size you up…\p"
+	.string "You'll meet many, many POKéMON. That's\n"
 	.string "what you should be thinking.\p"
 	.string "Eventually, the world will appear\n"
 	.string "bigger to you!$"

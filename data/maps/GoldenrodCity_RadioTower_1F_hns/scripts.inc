@@ -71,7 +71,7 @@ RadioTower1F_Text_Whitney1::
 	.string "My name is WHITNEY!\p"
 	.string "I heard about the QUIZ to win a\n"
 	.string "RADIO CARD, so I came here to get\l"
-	.string "one...\p"
+	.string "one…\p"
 	.string "But this QUIZ is so hard!$"
 
 GoldenrodCity_RadioTower_1F_EventScript_Sign::

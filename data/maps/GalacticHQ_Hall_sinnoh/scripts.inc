@@ -30,12 +30,12 @@ GalacticHQ_Hall_EventScript_SNSpeech::
 	end
 
 GalacticHQ_Hall_EventScript_SNSpeech_T5::
-	.string "LOOKER: ...Whew.\p"
+	.string "LOOKER: …Whew.\p"
 	.string "So, that was CYRUS, the boss of the\n"
 	.string "TEAM GALACTIC.\p"
 	.string "Quite the performance, no? Mesmerizing\n"
 	.string "for one only 27 years old.\p"
-	.string "...But to make a world for TEAM GALACTIC\n"
+	.string "…But to make a world for TEAM GALACTIC\n"
 	.string "and none other?\p"
 	.string "It is preposterous. So much so that it\n"
 	.string "makes my head spin.\p"
@@ -56,7 +56,7 @@ GalacticHQ_Hall_EventScript_SNSpeech_T3::
 	.string "My long-held dreamworld is on the\n"
 	.string "verge of becoming reality.\p"
 	.string "All those headed to MT. CORONET, and\n"
-	.string "those who remain here...\p"
+	.string "those who remain here…\p"
 	.string "Though our missions may differ, our\n"
 	.string "hearts beat as one.\p"
 	.string "Let there be glory for TEAM GALACTIC!$"
@@ -86,7 +86,7 @@ GalacticHQ_Hall_EventScript_SNSpeech_T1::
 	.string "We humans and POKéMON are likewise\n"
 	.string "incomplete.\p"
 	.string "Because we are all so lacking, we fight,\n"
-	.string "we maim... It is ugly.\p"
+	.string "we maim… It is ugly.\p"
 	.string "I hate the incompleteness.\p"
 	.string "That we are all incomplete, I hate it\n"
 	.string "with my entire body and being.\p"
@@ -95,7 +95,7 @@ GalacticHQ_Hall_EventScript_SNSpeech_T1::
 
 GalacticHQ_Hall_EventScript_SNSpeech_T0::
 	.string "LOOKER: Psst! Here. Over here.\p"
-	.string "This gathering of the TEAM GALACTIC...\n"
+	.string "This gathering of the TEAM GALACTIC…\n"
 	.string "What is the meaning of it?$"
 
 GalacticHQ_Hall_EventScript_SNSpeech_Cyrus::

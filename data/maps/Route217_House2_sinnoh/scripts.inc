@@ -21,12 +21,12 @@ Route217_House2_EventScript_PtNpc1_IFoundIciclePlate::
 	end
 
 Route217_House2_Text_PtNpc1_1::
-	.string "That Icicle Plate, I found that under\n"
+	.string "That ICICLE PLATE, I found that under\n"
 	.string "the snow as well.\p"
-	.string "I’m no expert, but it looks to be of\n"
+	.string "I'm no expert, but it looks to be of\n"
 	.string "ancient origin.\p"
 	.string "Even as old as the time when SINNOH\n"
-	.string "came into being...$"
+	.string "came into being…$"
 
 Route217_House2_Text_PtNpc1_2::
 	.string "While I was fighting my way through the\n"

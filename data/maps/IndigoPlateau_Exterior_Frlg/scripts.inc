@@ -22,6 +22,6 @@ SE_KH_IndigoPlateau_Exterior_Frlg_IndigoPlateau_Sign::
 
 SE_KH_IndigoPlateau_Exterior_Frlg_IndigoPlateau_Sign_Text:
 	.string "INDIGO PLATEAU\p"
-	.string "The Ultimate Goal for Trainers!\p"
+	.string "The Ultimate Goal for TRAINERS!\p"
 	.string "POKéMON LEAGUE HQ$"
 

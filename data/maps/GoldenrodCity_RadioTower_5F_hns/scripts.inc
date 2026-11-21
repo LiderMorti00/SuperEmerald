@@ -11,13 +11,13 @@ SE_J_GoldenrodCity_RadioTower_5F_hns_GoldenrodCity_RadioTower_5F_EventScript_Pet
 
 GoldenrodCity_RadioTower_5F_Text_RocketBossSeen::
 	.string "Oh? You managed to get this far?\p"
-	.string "You must be quite the trainer.\p"
+	.string "You must be quite the TRAINER.\p"
 	.string "We intend to take over this RADIO\n"
 	.string "STATION and announce our comeback.\p"
 	.string "That should bring our boss GIOVANNI\n"
 	.string "back from his solitary training.\p"
 	.string "We are going to regain our former\n"
-	.string "glory...\p"
+	.string "glory…\p"
 	.string "I won't allow you to interfere with\n"
 	.string "our meticulous plans!$"
 

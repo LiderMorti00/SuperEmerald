@@ -615,4 +615,4 @@ SE_ThreeIsland_Text_PaxtonDefeat:
 
 SE_ThreeIsland_Text_PaxtonPostBattle:
 	.string "We'll keep it down on THREE ISLAND.\n"
-	.string "A trainer like you earns respect.$"
+	.string "A TRAINER like you earns respect.$"

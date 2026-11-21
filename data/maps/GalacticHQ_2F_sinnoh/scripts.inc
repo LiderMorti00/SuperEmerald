@@ -8,17 +8,17 @@ GalacticHQ_2F_EventScript_Grunt::
 	end
 
 GalacticHQ_2F_Text_GruntPost::
-	.string "Losing sets me back to square one...\p"
-	.string "I’ll probably get busted down to the\n"
-	.string "gruntiest of the grunts... Humph!$"
+	.string "Losing sets me back to square one…\p"
+	.string "I'll probably get busted down to the\n"
+	.string "gruntiest of the grunts… Humph!$"
 
 GalacticHQ_2F_Text_GruntDefeat::
-	.string "...I wish this never happened.$"
+	.string "…I wish this never happened.$"
 
 GalacticHQ_2F_Text_GruntIntro::
-	.string "I’m, like, this close to getting my\n"
+	.string "I'm, like, this close to getting my\n"
 	.string "promotion to COMMANDER.\p"
-	.string "I’ll impress our great boss by making\n"
+	.string "I'll impress our great boss by making\n"
 	.string "you my newest trophy!$"
 
 GalacticHQ_2F_EventScript_Grunt2::
@@ -27,8 +27,8 @@ GalacticHQ_2F_EventScript_Grunt2::
 	end
 
 GalacticHQ_2F_Text_Grunt2Post::
-	.string "So what, you have momentum... It’s too\n"
-	.string "late. The experiment’s done!$"
+	.string "So what, you have momentum… It's too\n"
+	.string "late. The experiment's done!$"
 
 GalacticHQ_2F_Text_Grunt2Defeat::
 	.string "Your trailblazing streak lives on!$"
@@ -49,11 +49,11 @@ GalacticHQ_2F_Text_Grunt3Post::
 	.string "that what this is all about?$"
 
 GalacticHQ_2F_Text_Grunt3Defeat::
-	.string "What? I don’t get it. What’s your rush?$"
+	.string "What? I don't get it. What's your rush?$"
 
 GalacticHQ_2F_Text_Grunt3Intro::
-	.string "You should be tired out by now. It’s\n"
-	.string "TEAM GALACTIC’s turn to shine!$"
+	.string "You should be tired out by now. It's\n"
+	.string "TEAM GALACTIC's turn to shine!$"
 
 GalacticHQ_2F_EventScript_Darrius::
 	trainerbattle_single TRAINER_GRUNT_MUSEUM_2_SINNOH, GalacticHQ_2F_Text_DarriusIntro, GalacticHQ_2F_Text_DarriusDefeat
@@ -66,10 +66,10 @@ GalacticHQ_2F_Text_DarriusPost::
 	.string "POKéMON his own!$"
 
 GalacticHQ_2F_Text_DarriusDefeat::
-	.string "I got whipped... I look pathetic...$"
+	.string "I got whipped… I look pathetic…$"
 
 GalacticHQ_2F_Text_DarriusIntro::
-	.string "I won’t let you disrupt our research!\n"
+	.string "I won't let you disrupt our research!\n"
 	.string "This is for TEAM GALACTIC!$"
 
 GalacticHQ_2F_EventScript_PtSign1::
@@ -77,7 +77,7 @@ GalacticHQ_2F_EventScript_PtSign1::
 	end
 
 GalacticHQ_2F_Text_PtSign1::
-	.string "It’s a bed... Want to take a rest?$"
+	.string "It's a bed… Want to take a rest?$"
 
 GalacticHQ_2F_EventScript_PtSign2::
 	msgbox GalacticHQ_2F_Text_PtSign2, MSGBOX_SIGN
@@ -107,7 +107,7 @@ GalacticHQ_2F_Text_PtSign4::
 	.string "The TEAM GALACTIC credo! Everything\n"
 	.string "belongs to TEAM GALACTIC!\p"
 	.string "Look beyond the world--space will\n"
-	.string "become TEAM GALACTIC’s!$"
+	.string "become TEAM GALACTIC's!$"
 
 GalacticHQ_2F_EventScript_PtSign5::
 	msgbox GalacticHQ_2F_Text_PtSign5, MSGBOX_SIGN
@@ -119,7 +119,7 @@ GalacticHQ_2F_Text_PtSign5::
 	.string "“Drink all you wish and gain the energy\n"
 	.string "to move us forward!”\p"
 	.string "The refrigerator is filled with murky,\n"
-	.string "sinister drinks and nothing else...$"
+	.string "sinister drinks and nothing else…$"
 
 GalacticHQ_2F_EventScript_PtSign6::
 	msgbox GalacticHQ_2F_Text_PtSign6, MSGBOX_SIGN
@@ -131,7 +131,7 @@ GalacticHQ_2F_Text_PtSign6::
 	.string "“Health and prosperity through the\n"
 	.string "partaking of favorite foods!”\p"
 	.string "Foul, unidentifiable substances are\n"
-	.string "caked around the sink...$"
+	.string "caked around the sink…$"
 
 GalacticHQ_2F_EventScript_PtSign7::
 	msgbox GalacticHQ_2F_Text_PtSign7, MSGBOX_SIGN
@@ -143,25 +143,25 @@ GalacticHQ_2F_Text_PtSign7::
 	.string "“Health and prosperity through the\n"
 	.string "partaking of favorite foods!”\p"
 	.string "Foul, unidentifiable substances are\n"
-	.string "caked around the sink...$"
+	.string "caked around the sink…$"
 
 GalacticHQ_2F_EventScript_PtSign8::
 	msgbox GalacticHQ_2F_Text_PtSign8, MSGBOX_SIGN
 	end
 
 GalacticHQ_2F_Text_PtSign8::
-	.string "It’s a bed... Want to take a rest?$"
+	.string "It's a bed… Want to take a rest?$"
 
 GalacticHQ_2F_EventScript_PtSign9::
 	msgbox GalacticHQ_2F_Text_PtSign9, MSGBOX_SIGN
 	end
 
 GalacticHQ_2F_Text_PtSign9::
-	.string "It’s a bed... Want to take a rest?$"
+	.string "It's a bed… Want to take a rest?$"
 
 GalacticHQ_2F_EventScript_PtSign10::
 	msgbox GalacticHQ_2F_Text_PtSign10, MSGBOX_SIGN
 	end
 
 GalacticHQ_2F_Text_PtSign10::
-	.string "It’s a bed... Want to take a rest?$"
+	.string "It's a bed… Want to take a rest?$"

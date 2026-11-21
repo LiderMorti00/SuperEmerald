@@ -25,7 +25,7 @@ SSAqua_RoomNNE_EventScript_Sean::
 	end
 
 SSAqua_RoomNNE_Text_CooltrainermSeanAfterBattle::
-    .string "Trainers from JOHTO\n"
+    .string "TRAINERS from JOHTO\n"
     .string "can battle with KANTO\l"
     .string "GYM LEADERS.$"
 

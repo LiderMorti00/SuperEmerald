@@ -115,7 +115,7 @@ PokemonMansion_EventScript_PtNpc3::
 
 PokemonMansion_Text_SNMExplain::
 	.string "Welcome.\p"
-	.string "Here, you may challenge the mansion’s\n"
+	.string "Here, you may challenge the mansion's\n"
 	.string "pride--the five TRAINER maids.\p"
 	.string "The challenge is to beat all five of us\n"
 	.string "in a row without a break.\p"
@@ -129,7 +129,7 @@ PokemonMansion_Text_SNMExplain::
 	.string "In this case, action refers to making a\n"
 	.string "POKéMON use a move, using an item, or\p"
 	.string "switching a POKéMON.\p"
-	.string "And now...$"
+	.string "And now…$"
 
 PokemonMansion_EventScript_SNMBoss::
 	closemessage
@@ -169,7 +169,7 @@ PokemonMansion_Text_SNMTomorrow::
 PokemonMansion_Text_SNMLiamWon::
 	.string "Your splendor is authentic!\p"
 	.string "Sweeping the floor with the five maids\n"
-	.string "wasn’t enough for you, oh no!\p"
+	.string "wasn't enough for you, oh no!\p"
 	.string "Why, to think you would triumph over\n"
 	.string "even our Master LIAM!$"
 
@@ -180,7 +180,7 @@ PokemonMansion_EventScript_SNMCelesteWon::
 PokemonMansion_Text_SNMCelesteWon::
 	.string "Your splendor is authentic!\p"
 	.string "Sweeping the floor with the five maids\n"
-	.string "wasn’t enough for you, oh no!\p"
+	.string "wasn't enough for you, oh no!\p"
 	.string "Why, to think you would triumph over\n"
 	.string "even our Lady Celeste!$"
 
@@ -195,17 +195,17 @@ PokemonMansion_Movement_SNMLeave::
 	step_end
 
 PokemonMansion_Text_SNMLiamDefeat::
-	.string "Wonderful! You’re a marvel of a TRAINER!\p"
-	.string "Oh, I’ll ask you not to pry into what I’m\n"
+	.string "Wonderful! You're a marvel of a TRAINER!\p"
+	.string "Oh, I'll ask you not to pry into what I'm\n"
 	.string "doing in the back of the mansion.\p"
-	.string "This knowing wink is all you’ll get out\n"
+	.string "This knowing wink is all you'll get out\n"
 	.string "of me.$"
 
 PokemonMansion_Text_SNMLiamIntro::
 	.string "A TRAINER would come here and pull me\n"
-	.string "into a battle...?\p"
+	.string "into a battle…?\p"
 	.string "I never expected this, but I may as\n"
-	.string "well enjoy it, don’t you think?$"
+	.string "well enjoy it, don't you think?$"
 
 PokemonMansion_EventScript_SNMCelesteBattle::
 	msgbox PokemonMansion_Text_SNMCelesteIntro, MSGBOX_DEFAULT
@@ -217,10 +217,10 @@ PokemonMansion_EventScript_SNMCelesteBattle::
 PokemonMansion_Text_SNMCelesteDefeat::
 	.string "Oh, my! My, my, my! Your technique was\n"
 	.string "most enchanting.\p"
-	.string "I will take my leave now. Giggle...$"
+	.string "I will take my leave now. Giggle…$"
 
 PokemonMansion_Text_SNMCelesteIntro::
-	.string "Oh, my... You must show me how good you\n"
+	.string "Oh, my… You must show me how good you\n"
 	.string "are for the ladies to call me out.$"
 
 PokemonMansion_Movement_SNMEnter::
@@ -259,9 +259,9 @@ PokemonMansion_EventScript_SNMFail::
 	goto PokemonMansion_EventScript_SNMTomorrow
 
 PokemonMansion_Text_SNMProud::
-	.string "Ooh... How disappointing for you.\p"
+	.string "Ooh… How disappointing for you.\p"
 	.string "That said, you swept the five maids.\n"
-	.string "That’s plenty to be proud of!$"
+	.string "That's plenty to be proud of!$"
 
 PokemonMansion_Text_SNMResult::
 	.string "Congratulations for your sweep. The\n"
@@ -288,8 +288,8 @@ PokemonMansion_Text_SNMM4Defeat::
 	.string "Th-the next maid up is really strong!$"
 
 PokemonMansion_Text_SNMM4Intro::
-	.string "Pink is the color I can’t do without!\n"
-	.string "I’m the fourth in line!$"
+	.string "Pink is the color I can't do without!\n"
+	.string "I'm the fourth in line!$"
 
 PokemonMansion_Text_SNMM3Defeat::
 	.string "The next maid is a wee bit stronger\n"
@@ -297,14 +297,14 @@ PokemonMansion_Text_SNMM3Defeat::
 
 PokemonMansion_Text_SNMM3Intro::
 	.string "My lucky color is yellow! The sunshine\n"
-	.string "girl! That’s me!$"
+	.string "girl! That's me!$"
 
 PokemonMansion_Text_SNMM2Defeat::
 	.string "I was no. 2, and a little bit tough! The\n"
 	.string "next maid is even tougher!$"
 
 PokemonMansion_Text_SNMM2Intro::
-	.string "I’m pleased to meet you in battle. My\n"
+	.string "I'm pleased to meet you in battle. My\n"
 	.string "best color is green!$"
 
 PokemonMansion_Text_SNMM1Defeat::
@@ -324,13 +324,13 @@ PokemonMansion_EventScript_SNMNo::
 	end
 
 PokemonMansion_Text_SNMNo::
-	.string "Oh, how disappointing... Please take\n"
+	.string "Oh, how disappointing… Please take\n"
 	.string "the challenge sometime.$"
 
 PokemonMansion_Text_SNMTarget::
 	.string "The 5-Maid Knockout Exact-Turn\n"
 	.string "Attack Challenge!\p"
-	.string "Today’s targeted number of turns is\n"
+	.string "Today's targeted number of turns is\n"
 	.string "{STR_VAR_1}! Would you like to try?$"
 
 PokemonMansion_EventScript_PtNpc4::
@@ -338,9 +338,9 @@ PokemonMansion_EventScript_PtNpc4::
 	end
 
 PokemonMansion_Text_PtNpc4::
-	.string "I’m so sorry. Everything beyond this\n"
+	.string "I'm so sorry. Everything beyond this\n"
 	.string "point is strictly off-limits.\p"
-	.string "Please, you really mustn’t. Mr. Backlot\n"
+	.string "Please, you really mustn't. Mr. Backlot\n"
 	.string "will be so cross with me!$"
 
 PokemonMansion_EventScript_PtNpc5::
@@ -352,4 +352,4 @@ PokemonMansion_EventScript_PtNpc5::
 
 PokemonMansion_Text_PtNpc5_0::
 	.string "The expensive-looking book Mr. Backlot\n"
-	.string "has... It tugs at my attention.$"
+	.string "has… It tugs at my attention.$"

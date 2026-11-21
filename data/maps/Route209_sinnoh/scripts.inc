@@ -43,7 +43,7 @@ Route209_EventScript_Jennifer_Rematch::
 	end
 
 Route209_Text_JenniferDefeat::
-	.string "Giggle... They're raised with a lot of\n"
+	.string "Giggle… They're raised with a lot of\n"
 	.string "care!$"
 
 Route209_Text_JenniferIntro::
@@ -118,7 +118,7 @@ Route209_EventScript_Danielle_Rematch::
 	end
 
 Route209_Text_DanielleDefeat::
-	.string "So sad... So bitter...$"
+	.string "So sad… So bitter…$"
 
 Route209_Text_DanielleIntro::
 	.string "Hi, hi! I'm a POKéMON!$"
@@ -151,11 +151,11 @@ Route209_EventScript_TySue::
 
 Route209_Text_TySuePost::
 	.string "Ty: Sue, even in defeat, you're so\n"
-	.string "beautiful...!$"
+	.string "beautiful…!$"
 
 Route209_Text_TySueNotEnough::
 	.string "Ty: I don't want to do anything\n"
-	.string "without Sue...\p"
+	.string "without Sue…\p"
 	.string "Bring two POKéMON at least, OK?$"
 
 Route209_Text_TySueDefeat::
@@ -171,7 +171,7 @@ Route209_EventScript_PtNpc1::
 	end
 
 Route209_Text_PtNpc1::
-	.string "Where departed POKéMON sleep... This\n"
+	.string "Where departed POKéMON sleep… This\n"
 	.string "is the LOST TOWER.$"
 
 Route209_EventScript_SNFisher_Done::
@@ -191,14 +191,14 @@ Route209_EventScript_SNFisher::
 
 Route209_EventScript_SNFisher_Ask::
 	.string "Hmm! GOOD ROD is really good!\p"
-	.string "Wouldn’t you agree?$"
+	.string "Wouldn't you agree?$"
 
 Route209_EventScript_SNFisher_After::
 	.string "First, you face any body of water, then\n"
 	.string "you use your fishing rod.\p"
 	.string "Next, you must focus! If a POKéMON\n"
 	.string "bites, “!” appears.\p"
-	.string "That’s your cue to reel it in!$"
+	.string "That's your cue to reel it in!$"
 
 Route209_EventScript_SNHoneyTree::
 	lock
@@ -301,7 +301,7 @@ Route209_EventScript_SNTowerEnd::
 	end
 
 Route209_Text_SNPutKeystone::
-	.string "It’s the Hallowed Tower.\p"
+	.string "It's the Hallowed Tower.\p"
 	.string "The ODD KEYSTONE seems to fit in the\n"
 	.string "gap.\p"
 	.string "Would you like to put it in?$"
@@ -311,6 +311,6 @@ Route209_EventScript_SNTowerText::
 	goto Route209_EventScript_SNTowerEnd
 
 Route209_Text_SNTower::
-	.string "It’s the Hallowed Tower.\p"
-	.string "...Is that crying coming from inside the\n"
+	.string "It's the Hallowed Tower.\p"
+	.string "…Is that crying coming from inside the\n"
 	.string "tower?$"

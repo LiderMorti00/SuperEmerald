@@ -49,6 +49,6 @@ HearthomeCity_Flat1_F2_EventScript_PtNpc4::
 
 HearthomeCity_Flat1_F2_Text_PtNpc4_0::
 	.string "Oh, no, there are no stairs in this\n"
-	.string "house. It’s easier that way.\p"
+	.string "house. It's easier that way.\p"
 	.string "The lack of stairs makes it easy for\n"
 	.string "the little POKéMON to get about.$"

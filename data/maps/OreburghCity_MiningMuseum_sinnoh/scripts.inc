@@ -277,9 +277,9 @@ OreburghCity_MiningMuseum_EventScript_PtNpc6::
 	end
 
 OreburghCity_MiningMuseum_Text_PtNpc6_0::
-	.string "It’s a little far from here, but there is\n"
+	.string "It's a little far from here, but there is\n"
 	.string "a city called ETERNA CITY.\p"
-	.string "I’ve heard a curious person named the\n"
+	.string "I've heard a curious person named the\n"
 	.string "UNDERGROUND Man lives there.\p"
 	.string "With a name like that, he must be an\n"
 	.string "authority on the UNDERGROUND.$"
@@ -294,7 +294,7 @@ OreburghCity_MiningMuseum_EventScript_PtNpc7::
 OreburghCity_MiningMuseum_Text_PtNpc7_0::
 	.string "Mining must take a strong mind, not\n"
 	.string "just a tough body.\p"
-	.string "Think about it. You’re in darkness,\n"
+	.string "Think about it. You're in darkness,\n"
 	.string "digging desperately through rock.$"
 
 OreburghCity_MiningMuseum_EventScript_PtSign7::
@@ -361,7 +361,7 @@ OreburghCity_MiningMuseum_EventScript_PtSign11::
 OreburghCity_MiningMuseum_Text_PtSign11::
 	.string "Different kinds of lamps are displayed.\p"
 	.string "They appear to have been worn on\n"
-	.string "someone’s head while underground.$"
+	.string "someone's head while underground.$"
 
 OreburghCity_MiningMuseum_EventScript_PtSign14::
 	msgbox OreburghCity_MiningMuseum_Text_PtSign14, MSGBOX_SIGN
@@ -390,7 +390,7 @@ OreburghCity_MiningMuseum_EventScript_PtNpc8::
 	end
 
 OreburghCity_MiningMuseum_Text_PtNpc8_0::
-	.string "The history of OREBURGH MINE...\p"
+	.string "The history of OREBURGH MINE…\p"
 	.string "You could call it a history of effort\n"
 	.string "and friendship between people and\l"
 	.string "POKéMON.$"

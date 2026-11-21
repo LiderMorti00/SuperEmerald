@@ -15,6 +15,6 @@ ValorLakefront_House2_Text_PtNpc1::
 	.string "friends?\p"
 	.string "Maybe you got some in trades from\n"
 	.string "around the world?\p"
-	.string "Though everyone’s POKéDEXes may look\n"
+	.string "Though everyone's POKéDEXes may look\n"
 	.string "the same, the stories they\p"
 	.string "contain are all unique.$"

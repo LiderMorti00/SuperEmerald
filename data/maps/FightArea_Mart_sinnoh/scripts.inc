@@ -10,9 +10,9 @@ FightArea_Mart_EventScript_PtNpc1::
 	end
 
 FightArea_Mart_Text_PtNpc1_0::
-	.string "An item that guarantees you won’t ever\n"
-	.string "lose a battle...\p"
-	.string "They don’t sell anything like that.$"
+	.string "An item that guarantees you won't ever\n"
+	.string "lose a battle…\p"
+	.string "They don't sell anything like that.$"
 
 FightArea_Mart_EventScript_PtNpc2::
 	lock
@@ -32,13 +32,13 @@ FightArea_Mart_EventScript_PtNpc2_DilemmaEveryTime::
 	end
 
 FightArea_Mart_Text_PtNpc2_1::
-	.string "Should one enhance a POKéMON’s strong\n"
+	.string "Should one enhance a POKéMON's strong\n"
 	.string "point?\p"
 	.string "Or cover for a weakness instead?\p"
-	.string "It’s a dilemma that comes up every time\n"
+	.string "It's a dilemma that comes up every time\n"
 	.string "I let a POKéMON hold an item.$"
 
 FightArea_Mart_Text_PtNpc2_0::
-	.string "What items should POKéMON hold? It’s\n"
+	.string "What items should POKéMON hold? It's\n"
 	.string "an important question.\p"
-	.string "Here’s something else to think about.$"
+	.string "Here's something else to think about.$"

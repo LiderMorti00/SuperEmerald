@@ -19,9 +19,9 @@ CanalaveCity_PokemonCenter_1F_EventScript_PtNpc1::
 	end
 
 CanalaveCity_PokemonCenter_1F_Text_PtNpc1_0::
-	.string "I was lucky enough to get a Strength\n"
+	.string "I was lucky enough to get a STRENGTH\n"
 	.string "HM from IRON ISLAND.\p"
-	.string "But I can’t use it for moving boulders\n"
+	.string "But I can't use it for moving boulders\n"
 	.string "until I beat BYRON, the GYM LEADER.\p"
 	.string "I should make a note of that on the\n"
 	.string "POKéNAV app Memo Pad.$"
@@ -34,7 +34,7 @@ CanalaveCity_PokemonCenter_1F_EventScript_PtNpc2::
 	end
 
 CanalaveCity_PokemonCenter_1F_Text_PtNpc2_0::
-	.string "It’s easy to get to IRON ISLAND. It’s\n"
+	.string "It's easy to get to IRON ISLAND. It's\n"
 	.string "one boat trip from here.$"
 
 CanalaveCity_PokemonCenter_1F_EventScript_PtNpc3::
@@ -59,9 +59,9 @@ CanalaveCity_PokemonCenter_1F_EventScript_PtNpc4::
 	end
 
 CanalaveCity_PokemonCenter_1F_Text_PtNpc4_0::
-	.string "It’s possible for one kind of POKéMON\n"
+	.string "It's possible for one kind of POKéMON\n"
 	.string "to have different abilities.\p"
-	.string "That’s news to me!$"
+	.string "That's news to me!$"
 
 SE_CanalaveCity_PC_OnTransition::
 	setrespawn HEAL_LOCATION_CANALAVE_CITY_SINNOH

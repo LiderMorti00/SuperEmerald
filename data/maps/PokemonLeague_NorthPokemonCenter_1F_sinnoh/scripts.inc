@@ -133,7 +133,7 @@ PokemonLeague_NorthPokemonCenter_1F_EventScript_PtNpc1::
 PokemonLeague_NorthPokemonCenter_1F_Text_PtNpc1::
 	.string "You will be facing the ELITE FOUR of the\n"
 	.string "POKéMON LEAGUE.\p"
-	.string "If you can’t beat all four of them in a\n"
+	.string "If you can't beat all four of them in a\n"
 	.string "row, you have to start from\p"
 	.string "the first one again.$"
 
@@ -167,31 +167,31 @@ PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_After::
 	end
 
 PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_Post::
-	.string "{RIVAL}: I guess I’m not ready for the\n"
-	.string "POKéMON LEAGUE if I’m losing\p"
+	.string "{RIVAL}: I guess I'm not ready for the\n"
+	.string "POKéMON LEAGUE if I'm losing\p"
 	.string "to you!\p"
 	.string "Darn it! You watch, though!\p"
-	.string "I’ll get tougher and win my way through\n"
+	.string "I'll get tougher and win my way through\n"
 	.string "the POKéMON LEAGUE!\p"
-	.string "Because I’m going to become the\n"
+	.string "Because I'm going to become the\n"
 	.string "CHAMPION, the toughest TRAINER!\p"
-	.string "{PLAYER}! You’d better not lose to\n"
+	.string "{PLAYER}! You'd better not lose to\n"
 	.string "anyone before me!$"
 
 PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_Defeat::
-	.string "BARRY: Aww... You’re just too tough!$"
+	.string "BARRY: Aww… You're just too tough!$"
 
 PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_B1::
 	trainerbattle_no_intro TRAINER_MARIA_2_SINNOH, PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_Defeat
 	goto PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_After
 
 PokemonLeague_NorthPokemonCenter_1F_EventScript_SNBarry_Intro::
-	.string "{RIVAL}: Hold it! Don’t go off without\n"
+	.string "{RIVAL}: Hold it! Don't go off without\n"
 	.string "me!\p"
-	.string "You’re challenging the POKéMON LEAGUE,\n"
-	.string "aren’t you?\p"
-	.string "That’s why I’m here, too.\p"
-	.string "Let’s see who’s more worthy of making\n"
+	.string "You're challenging the POKéMON LEAGUE,\n"
+	.string "aren't you?\p"
+	.string "That's why I'm here, too.\p"
+	.string "Let's see who's more worthy of making\n"
 	.string "the challenge with a battle!$"
 
 PokemonLeague_NorthPokemonCenter_1F_EventScript_SNPtLEAGUENORTHACETRAINERF::
@@ -199,10 +199,10 @@ PokemonLeague_NorthPokemonCenter_1F_EventScript_SNPtLEAGUENORTHACETRAINERF::
 	end
 
 PokemonLeague_NorthPokemonCenter_1F_EventScript_SNPtLEAGUENORTHACETRAINERF_Text::
-	.string "It doesn’t matter if the going is slow.\p"
+	.string "It doesn't matter if the going is slow.\p"
 	.string "Nor does it matter how many challenges\n"
 	.string "it takes.\p"
-	.string "I’m never giving up! Not until I beat\n"
+	.string "I'm never giving up! Not until I beat\n"
 	.string "the ELITE FOUR!$"
 
 PokemonLeague_NorthPokemonCenter_1F_EventScript_SNPtLEAGUENORTHGUITARIST::
@@ -210,7 +210,7 @@ PokemonLeague_NorthPokemonCenter_1F_EventScript_SNPtLEAGUENORTHGUITARIST::
 	end
 
 PokemonLeague_NorthPokemonCenter_1F_EventScript_SNPtLEAGUENORTHGUITARIST_Text::
-	.string "What is the POKéMON LEAGUE? Don’t\n"
+	.string "What is the POKéMON LEAGUE? Don't\n"
 	.string "take my word for it.\p"
 	.string "Take the challenge and experience it\n"
 	.string "for yourself!$"

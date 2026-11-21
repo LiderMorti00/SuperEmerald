@@ -13,7 +13,7 @@ OreburghGate_1F_Text_DianaPost::
 
 OreburghGate_1F_Text_DianaDefeat::
 	.string "Well, I guess losing is something to\n"
-	.string "commemorate, too...$"
+	.string "commemorate, too…$"
 
 OreburghGate_1F_Text_DianaIntro::
 	.string "To celebrate my getting through this\n"
@@ -30,7 +30,7 @@ OreburghGate_1F_Text_CurtisPost::
 	.string "roads.$"
 
 OreburghGate_1F_Text_CurtisDefeat::
-	.string "Hmm... Insufficiently raised?$"
+	.string "Hmm… Insufficiently raised?$"
 
 OreburghGate_1F_Text_CurtisIntro::
 	.string "We TRAINERS will accept challenges\n"
@@ -44,7 +44,7 @@ OreburghGate_1F_Text_PtNpc1::
 	.string "Oh! Good golly! That's OREBURGH CITY's\n"
 	.string "GYM BADGE!\p"
 	.string "All right! Now you can use the hidden\n"
-	.string "move Rock Smash on small boulders!$"
+	.string "move ROCK SMASH on small boulders!$"
 
 OreburghGate_1F_EventScript_HikerHM::
 	lock
@@ -59,21 +59,21 @@ OreburghGate_1F_EventScript_HikerHM::
 
 OreburghGate_1F_Text_HikerAfter::
 	.string "That Hidden Machine, or HM for short,\n"
-	.string "contains the hidden move Rock Smash.\p"
-	.string "A POKéMON learning Rock Smash can\n"
+	.string "contains the hidden move ROCK SMASH.\p"
+	.string "A POKéMON learning ROCK SMASH can\n"
 	.string "smash small boulders in the field.\p"
 	.string "But the TRAINER has to have the GYM\n"
 	.string "BADGE from OREBURGH CITY.\p"
-	.string "If you don’t have that BADGE, you can’t\n"
+	.string "If you don't have that BADGE, you can't\n"
 	.string "make a POKéMON use the hidden\p"
-	.string "move Rock Smash outside of battle.$"
+	.string "move ROCK SMASH outside of battle.$"
 
 OreburghGate_1F_Text_Hiker::
 	.string "That sparkling new POKéTCH! Your\n"
 	.string "awkwardness as a traveler!\p"
-	.string "Hmm... You’re still a pretty new TRAINER,\n"
-	.string "aren’t you?\p"
-	.string "But it’s all good! You’re a new fellow\n"
+	.string "Hmm… You're still a pretty new TRAINER,\n"
+	.string "aren't you?\p"
+	.string "But it's all good! You're a new fellow\n"
 	.string "friend of POKéMON!\p"
 	.string "So, let me make a gift of this Hidden\n"
 	.string "Machine to you!$"

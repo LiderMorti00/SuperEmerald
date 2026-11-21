@@ -9,13 +9,13 @@ CanalaveCity_Gym_EventScript_David::
 
 CanalaveCity_Gym_Text_DavidPost::
 	.string "I must rededicate myself to training.\n"
-	.string "The road extends into infinity...$"
+	.string "The road extends into infinity…$"
 
 CanalaveCity_Gym_Text_DavidDefeat::
-	.string "That was... A complete trashing!$"
+	.string "That was… A complete trashing!$"
 
 CanalaveCity_Gym_Text_DavidIntro::
-	.string "Aiyaah! We’re coming out swinging with\n"
+	.string "Aiyaah! We're coming out swinging with\n"
 	.string "super-heavy judo chops!$"
 
 CanalaveCity_Gym_EventScript_Jackson::
@@ -24,11 +24,11 @@ CanalaveCity_Gym_EventScript_Jackson::
 	end
 
 CanalaveCity_Gym_Text_JacksonPost::
-	.string "I can’t keep this up! I’ll go back to\n"
+	.string "I can't keep this up! I'll go back to\n"
 	.string "spinning on the panels.$"
 
 CanalaveCity_Gym_Text_JacksonDefeat::
-	.string "You’ve got me feeling down!$"
+	.string "You've got me feeling down!$"
 
 CanalaveCity_Gym_Text_JacksonIntro::
 	.string "Round and round you go on the arrow\n"
@@ -48,10 +48,10 @@ CanalaveCity_Gym_Text_GaryDefeat::
 	.string "That move was devastating!$"
 
 CanalaveCity_Gym_Text_GaryIntro::
-	.string "A POKéMON GYM isn’t only about seeing\n"
+	.string "A POKéMON GYM isn't only about seeing\n"
 	.string "how tough your POKéMON happen to be.\p"
-	.string "It’s so much deeper than just that.\n"
-	.string "It’s a test of you as a person.$"
+	.string "It's so much deeper than just that.\n"
+	.string "It's a test of you as a person.$"
 
 CanalaveCity_Gym_EventScript_Ricky::
 	trainerbattle_single TRAINER_KAREN_1_SINNOH, CanalaveCity_Gym_Text_RickyIntro, CanalaveCity_Gym_Text_RickyDefeat
@@ -59,12 +59,12 @@ CanalaveCity_Gym_EventScript_Ricky::
 	end
 
 CanalaveCity_Gym_Text_RickyPost::
-	.string "If you give up, well, that’s when\n"
+	.string "If you give up, well, that's when\n"
 	.string "everything ends for you!$"
 
 CanalaveCity_Gym_Text_RickyDefeat::
 	.string "I never gave up, but still I failed to\n"
-	.string "win...$"
+	.string "win…$"
 
 CanalaveCity_Gym_Text_RickyIntro::
 	.string "Steel represents an unbending spirit!\p"
@@ -77,18 +77,18 @@ CanalaveCity_Gym_EventScript_Cesar::
 	end
 
 CanalaveCity_Gym_Text_CesarPost::
-	.string "Your earnest enthusiasm... I guess\n"
+	.string "Your earnest enthusiasm… I guess\n"
 	.string "that kinda makes you an ace.\p"
-	.string "Maybe you’re a TRAINER who has the\n"
+	.string "Maybe you're a TRAINER who has the\n"
 	.string "potential to surpass aces!$"
 
 CanalaveCity_Gym_Text_CesarDefeat::
-	.string "Wow... I’m in the mood to sing a lullaby...$"
+	.string "Wow… I'm in the mood to sing a lullaby…$"
 
 CanalaveCity_Gym_Text_CesarIntro::
 	.string "An ace has the knowledge and\n"
 	.string "experience of battling at high levels.\p"
-	.string "I’ll demonstrate what that means to a\n"
+	.string "I'll demonstrate what that means to a\n"
 	.string "noob like you!$"
 
 CanalaveCity_Gym_EventScript_Gerardo::
@@ -97,11 +97,11 @@ CanalaveCity_Gym_EventScript_Gerardo::
 	end
 
 CanalaveCity_Gym_Text_GerardoPost::
-	.string "The way you helped each other... That\n"
+	.string "The way you helped each other… That\n"
 	.string "is what made you prevail!$"
 
 CanalaveCity_Gym_Text_GerardoDefeat::
-	.string "A spectacular loss! But it’s still a\n"
+	.string "A spectacular loss! But it's still a\n"
 	.string "loss!$"
 
 CanalaveCity_Gym_Text_GerardoIntro::
@@ -118,11 +118,11 @@ CanalaveCity_Gym_EventScript_Breanna::
 CanalaveCity_Gym_Text_BreannaPost::
 	.string "Start by becoming friendly with your\n"
 	.string "POKéMON. I mean really friendly.\p"
-	.string "If you do that, you’ll learn naturally\n"
+	.string "If you do that, you'll learn naturally\n"
 	.string "how you should battle with it.$"
 
 CanalaveCity_Gym_Text_BreannaDefeat::
-	.string "My focus was too narrow minded...$"
+	.string "My focus was too narrow minded…$"
 
 CanalaveCity_Gym_Text_BreannaIntro::
 	.string "By focusing on only one type, you can\n"
@@ -146,7 +146,7 @@ CanalaveCity_Gym_Text_LeaderPostBattle::
 	.string "With more young TRAINERS like my son\n"
 	.string "and you two taking charge, the\p"
 	.string "future of POKéMON is bright!\p"
-	.string "But I’m not stepping aside just yet!\p"
+	.string "But I'm not stepping aside just yet!\p"
 	.string "I merely need to rededicate myself to\n"
 	.string "training on IRON ISLAND.$"
 
@@ -162,7 +162,7 @@ CanalaveCity_Gym_Text_ExplainTM::
 	.string "That TM91 contains the move FLASH\n"
 	.string "CANNON.\p"
 	.string "If it hits, it may also lower the\n"
-	.string "target’s Special Defense.$"
+	.string "target's Special Defense.$"
 
 CanalaveCity_Gym_EventScript_LeaderDefeated::
 	message CanalaveCity_Gym_Text_ReceivedBadge
@@ -181,7 +181,7 @@ CanalaveCity_Gym_EventScript_LeaderDefeated::
 
 CanalaveCity_Gym_Text_ExplainBadge::
 	.string "Having the Mine BADGE enables you to\n"
-	.string "use the hidden move Strength anytime\p"
+	.string "use the hidden move STRENGTH anytime\p"
 	.string "outside of battle.\p"
 	.string "And you now have six GYM BADGES.\p"
 	.string "That means all POKéMON up to Lv. 70 will\n"
@@ -199,9 +199,9 @@ CanalaveCity_Gym_Text_LeaderDefeat::
 	.string "you this: the Mine BADGE!$"
 
 CanalaveCity_Gym_Text_LeaderIntro::
-	.string "Ah! That’s OREBURGH’s GYM BADGE!\p"
-	.string "I see, I see! You’ve defeated my son.\p"
-	.string "But that’s no surprise. He still has\n"
+	.string "Ah! That's OREBURGH's GYM BADGE!\p"
+	.string "I see, I see! You've defeated my son.\p"
+	.string "But that's no surprise. He still has\n"
 	.string "much to learn.\p"
 	.string "In place of my son ROARK, I, BYRON, will\n"
 	.string "take your challenge!$"
@@ -223,10 +223,10 @@ CanalaveCity_Gym_EventScript_SNRematch_After::
 	.string "anytime for another match!$"
 
 CanalaveCity_Gym_EventScript_SNRematch_Defeat::
-	.string "Amazing... You really are the CHAMPION!$"
+	.string "Amazing… You really are the CHAMPION!$"
 
 CanalaveCity_Gym_EventScript_SNRematch_Go::
-	.string "Then I won’t hold back this time!$"
+	.string "Then I won't hold back this time!$"
 
 CanalaveCity_Gym_EventScript_SNRematch_No::
 	msgbox CanalaveCity_Gym_EventScript_SNRematch_NoT, MSGBOX_DEFAULT
@@ -234,12 +234,12 @@ CanalaveCity_Gym_EventScript_SNRematch_No::
 	end
 
 CanalaveCity_Gym_EventScript_SNRematch_NoT::
-	.string "Come back whenever you’re ready!$"
+	.string "Come back whenever you're ready!$"
 
 CanalaveCity_Gym_EventScript_SNRematch_Ask::
 	.string "BYRON: You became the CHAMPION!\n"
 	.string "Welcome back!\p"
-	.string "I’ve been training even harder since\n"
+	.string "I've been training even harder since\n"
 	.string "our last battle.\p"
 	.string "Will you battle me again?$"
 
@@ -272,7 +272,7 @@ CanalaveCity_Gym_Text_PtGymGuide::
 	.string "The GYM LEADER here uses Steel-type\n"
 	.string "POKéMON.\p"
 	.string "Steel-type POKéMON have high Defense,\n"
-	.string "so you’d have to hit them hard!$"
+	.string "so you'd have to hit them hard!$"
 
 CanalaveCity_Gym_EventScript_PtGymGuideAfter::
 	msgbox CanalaveCity_Gym_Text_PtGymGuideAfter, MSGBOX_DEFAULT
@@ -280,15 +280,15 @@ CanalaveCity_Gym_EventScript_PtGymGuideAfter::
 	end
 
 CanalaveCity_Gym_Text_PtGymGuideAfter::
-	.string "Oh! {PLAYER}! You’ve beaten the GYM\n"
+	.string "Oh! {PLAYER}! You've beaten the GYM\n"
 	.string "LEADER!\p"
 	.string "Good going! That makes it six GYM\n"
 	.string "BADGES!\p"
-	.string "I tell you what, you’re really turning\n"
+	.string "I tell you what, you're really turning\n"
 	.string "into one fine TRAINER.\p"
-	.string "If you were to say you’re going to try\n"
-	.string "to become the POKéMON CHAMP...\p"
-	.string "No one’d laugh at you now! I’m in your\n"
+	.string "If you were to say you're going to try\n"
+	.string "to become the POKéMON CHAMP…\p"
+	.string "No one'd laugh at you now! I'm in your\n"
 	.string "corner, kiddo!$"
 
 CanalaveCity_Gym_EventScript_PtGymStatue::

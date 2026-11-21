@@ -75,6 +75,6 @@ JubilifeCity_Mart_Text_PtNpc3::
 	.string "Potions are important, but sometimes,\n"
 	.string "it's better to simply avoid battles.\p"
 	.string "If you want to avoid wild POKéMON for\n"
-	.string "a while, just use a Repel.\p"
+	.string "a while, just use a REPEL.\p"
 	.string "After all, if you don't battle, your\n"
 	.string "POKéMON can't lose HP.$"

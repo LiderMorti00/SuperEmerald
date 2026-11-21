@@ -27,7 +27,7 @@ GoldenrodCity_EventScript_Hiker::
 
 GoldenrodCity_Text_HikerDay::
 	.string "When I went into the GAME CORNER\n"
-	.string "it was night time... How long was I\l"
+	.string "it was night time… How long was I\l"
 	.string "in there?!$"
 
 GoldenrodCity_EventScript_Hiker2::
@@ -38,7 +38,7 @@ GoldenrodCity_EventScript_Hiker2::
 
 GoldenrodCity_Text_HikerNight::
 	.string "When I went into the GAME CORNER\n"
-	.string "it was day time... How long was I\l"
+	.string "it was day time… How long was I\l"
 	.string "in there?!$"
 
 GoldenrodCity_EventScript_Rocket6::
@@ -207,7 +207,7 @@ GoldenrodCity_EventScript_Mime::
 	end
 
 GoldenrodCity_Text_MrMime::
-	.string "............................$"
+	.string "……………………….$"
 
 GoldenrodCity_EventScript_Woman::
 	lock

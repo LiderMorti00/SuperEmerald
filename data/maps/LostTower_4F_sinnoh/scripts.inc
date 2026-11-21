@@ -8,14 +8,14 @@ LostTower_4F_EventScript_Rebekah::
 	end
 
 LostTower_4F_Text_RebekahPost::
-	.string "I won’t ever forget the POKéMON that\n"
-	.string "I’ve spent time with, however fleeting.$"
+	.string "I won't ever forget the POKéMON that\n"
+	.string "I've spent time with, however fleeting.$"
 
 LostTower_4F_Text_RebekahDefeat::
-	.string "My sorrow has deepened...$"
+	.string "My sorrow has deepened…$"
 
 LostTower_4F_Text_RebekahIntro::
-	.string "I need to shake off my sorrow... Please,\n"
+	.string "I need to shake off my sorrow… Please,\n"
 	.string "battle with me!$"
 
 LostTower_4F_EventScript_MikeNat::
@@ -33,7 +33,7 @@ LostTower_4F_Text_MikeNatDefeat::
 	.string "I lost!$"
 
 LostTower_4F_Text_MikeNatIntro::
-	.string "Let’s battle!$"
+	.string "Let's battle!$"
 
 LostTower_4F_EventScript_BethBob::
 	trainerbattle_double TRAINER_SHELBY_1_SINNOH, LostTower_4F_Text_BethBobIntro, LostTower_4F_Text_BethBobDefeat, LostTower_4F_Text_BethBobNotEnough
@@ -50,4 +50,4 @@ LostTower_4F_Text_BethBobDefeat::
 	.string "I lost!$"
 
 LostTower_4F_Text_BethBobIntro::
-	.string "Let’s battle!$"
+	.string "Let's battle!$"

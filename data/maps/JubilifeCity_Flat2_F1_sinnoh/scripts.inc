@@ -20,7 +20,7 @@ JubilifeCity_Flat2_F1_EventScript_PtNpc2::
 JubilifeCity_Flat2_F1_Text_PtNpc2::
 	.string "Hello there, TRAINER!\p"
 	.string "If you get stumped and don't know\n"
-	.string "what to do...\p"
+	.string "what to do…\p"
 	.string "Talk to people! Talk to everyone you\n"
 	.string "see!\p"
 	.string "Go places! Go wherever you can!\p"

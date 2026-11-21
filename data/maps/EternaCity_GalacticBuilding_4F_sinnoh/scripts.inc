@@ -31,7 +31,7 @@ EternaCity_GalacticBuilding_4F_EventScript_Jupiter::
 EternaCity_GalacticBuilding_4F_Text_OwnerThanks::
 	.string "I got my CLEFAIRY back, and it's all\n"
 	.string "thanks to you!\p"
-	.string "But that TEAM GALACTIC...\p"
+	.string "But that TEAM GALACTIC…\p"
 	.string "They said, “CLEFAIRY came from space.\n"
 	.string "Hand it over!” Their logic baffles me\l"
 	.string "still. It's like they are from space!\p"
@@ -41,7 +41,7 @@ EternaCity_GalacticBuilding_4F_Text_OwnerThanks::
 	.string "but cruise by my Cycle Shop, OK?$"
 
 EternaCity_GalacticBuilding_4F_Text_JupiterAfter::
-	.string "Well, aren't you tough...?\p"
+	.string "Well, aren't you tough…?\p"
 	.string "It's OK, though. Our official POKéMON-\n"
 	.string "statue investigation is finished.\p"
 	.string "MARS has collected energy from the\n"
@@ -51,13 +51,13 @@ EternaCity_GalacticBuilding_4F_Text_JupiterAfter::
 	.string "Our boss is researching the myths of\n"
 	.string "ancient POKéMON.\p"
 	.string "With the power of mythical POKéMON, he\n"
-	.string "will become the ruler of SINNOH...\p"
+	.string "will become the ruler of SINNOH…\p"
 	.string "I suggest you keep out of TEAM\n"
 	.string "GALACTIC's affairs from now on.\p"
 	.string "This is your last warning!$"
 
 EternaCity_GalacticBuilding_4F_Text_JupiterDefeat::
-	.string "Losing to some child... Being careless\n"
+	.string "Losing to some child… Being careless\n"
 	.string "cost me too much.$"
 
 EternaCity_GalacticBuilding_4F_Text_JupiterIntro::
@@ -77,7 +77,7 @@ EternaCity_GalacticBuilding_4F_EventScript_Clefairy::
 	end
 
 EternaCity_GalacticBuilding_4F_Text_ClefairyCry::
-	.string "CLEFAIRY: Pi...$"
+	.string "CLEFAIRY: Pi…$"
 
 EternaCity_GalacticBuilding_4F_EventScript_Buneary::
 	lock
@@ -90,7 +90,7 @@ EternaCity_GalacticBuilding_4F_EventScript_Buneary::
 	end
 
 EternaCity_GalacticBuilding_4F_Text_BunearyCry::
-	.string "BUNEARY: Myun...$"
+	.string "BUNEARY: Myun…$"
 
 EternaCity_GalacticBuilding_4F_EventScript_Owner::
 	msgbox EternaCity_GalacticBuilding_4F_Text_OwnerWorried, MSGBOX_NPC

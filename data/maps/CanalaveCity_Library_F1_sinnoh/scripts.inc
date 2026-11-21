@@ -12,7 +12,7 @@ CanalaveCity_Library_F1_EventScript_PtNpc1::
 
 CanalaveCity_Library_F1_Text_PtNpc1_0::
 	.string "Hello. This is the CANALAVE Library.\p"
-	.string "Please keep quiet while you’re on the\n"
+	.string "Please keep quiet while you're on the\n"
 	.string "premises.$"
 
 CanalaveCity_Library_F1_EventScript_PtNpc1_ThatWasntMeScreaming::
@@ -22,22 +22,22 @@ CanalaveCity_Library_F1_EventScript_PtNpc1_ThatWasntMeScreaming::
 
 CanalaveCity_Library_F1_Text_PtNpc1_1::
 	.string "H-hello! This is the CANALAVE Library.\p"
-	.string "Please keep quiet while you’re on the\n"
+	.string "Please keep quiet while you're on the\n"
 	.string "premises.\p"
-	.string "It certainly wasn’t me who screamed,\p"
+	.string "It certainly wasn't me who screamed,\p"
 	.string "“Gyaaah!!”\p"
 	.string "or shouted,\p"
 	.string "“Help meee!!”\p"
-	.string "No, really, that wasn’t me screaming!$"
+	.string "No, really, that wasn't me screaming!$"
 
 CanalaveCity_Library_F1_EventScript_PtNpc2::
 	msgbox CanalaveCity_Library_F1_Text_PtNpc2, MSGBOX_NPC
 	end
 
 CanalaveCity_Library_F1_Text_PtNpc2::
-	.string "I’ve been asking people not to disturb\n"
-	.string "me while I’m reading...\p"
-	.string "I shouldn’t even have bothered... I’m\n"
+	.string "I've been asking people not to disturb\n"
+	.string "me while I'm reading…\p"
+	.string "I shouldn't even have bothered… I'm\n"
 	.string "all agitated now!$"
 
 CanalaveCity_Library_F1_EventScript_PtNpc3::
@@ -65,21 +65,21 @@ CanalaveCity_Library_F1_EventScript_SNLucianLeave::
 	end
 
 CanalaveCity_Library_F1_Text_SNSeeAtLeague::
-	.string "I imagine we’ll see each other again at\n"
+	.string "I imagine we'll see each other again at\n"
 	.string "the POKéMON LEAGUE. Take care.$"
 
 CanalaveCity_Library_F1_Text_SNBook0::
 	.string "I was just reading a collection of\n"
 	.string "letters written by an artist long ago.\p"
 	.string "More precisely, they were written to\n"
-	.string "the artist’s younger brother.\p"
+	.string "the artist's younger brother.\p"
 	.string "“The stars above tantalize from\n"
 	.string "across infinite space.\p"
 	.string "“Feeling their gaze from so far away, I\n"
 	.string "am charmed again by life.”\p"
 	.string "The artist must have come to a\n"
-	.string "conclusion seeing the night sky...\p"
-	.string "It’s an affirmation of life. It’s very\n"
+	.string "conclusion seeing the night sky…\p"
+	.string "It's an affirmation of life. It's very\n"
 	.string "moving.$"
 
 CanalaveCity_Library_F1_EventScript_SNBook4::
@@ -93,7 +93,7 @@ CanalaveCity_Library_F1_Text_SNBook4::
 	.string "Their “universe” was a word that\n"
 	.string "described both space and time.\p"
 	.string "That people even back then understood\n"
-	.string "the basic tenets of the universe...\p"
+	.string "the basic tenets of the universe…\p"
 	.string "It fills me with a serene sense of\n"
 	.string "inspiration.$"
 
@@ -139,11 +139,11 @@ CanalaveCity_Library_F1_Text_SNBook1::
 	.string "This is a thought-provoking quote: “It\n"
 	.string "all began without humans.\p"
 	.string "The end will also be without humans.”\p"
-	.string "The world we share with POKéMON... Does\n"
+	.string "The world we share with POKéMON… Does\n"
 	.string "it exist for us?$"
 
 CanalaveCity_Library_F1_Text_PtNpc3::
-	.string "LUCIAN: ...Ah, hello. You’re here to read,\n"
+	.string "LUCIAN: …Ah, hello. You're here to read,\n"
 	.string "too?\p"
 	.string "Books are wonderful things.\p"
 	.string "The thoughts of people written in\n"

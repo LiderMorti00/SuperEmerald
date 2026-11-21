@@ -11,10 +11,10 @@ HearthomeCity_PoffinHouse_EventScript_PtNpc1::
 	end
 
 HearthomeCity_PoffinHouse_Text_PtNpc1_0::
-	.string "Hi! Let’s get cooking!\p"
-	.string "Here’s my advice on cooking tasty\n"
+	.string "Hi! Let's get cooking!\p"
+	.string "Here's my advice on cooking tasty\n"
 	.string "POKéBLOCKS for your POKéMON crew!\p"
-	.string "In the beginning, while it’s still a\n"
+	.string "In the beginning, while it's still a\n"
 	.string "batter, swirl it gently and avoid\p"
 	.string "spillage.\p"
 	.string "When it starts to harden, churn it fast\n"
@@ -47,12 +47,12 @@ HearthomeCity_PoffinHouse_Text_SNHasCase::
 HearthomeCity_PoffinHouse_Text_SNCase2::
 	.string "Put BERRIES in a BERRY BLENDER to\n"
 	.string "make POKéBLOCKS for your POKéMON.\p"
-	.string "You’ll find BERRY BLENDERS at the\n"
+	.string "You'll find BERRY BLENDERS at the\n"
 	.string "CONTEST HALL here in HEARTHOME!$"
 
 HearthomeCity_PoffinHouse_Text_SNCase::
 	.string "Welcome to the POKéBLOCK HOUSE!\p"
-	.string "If you want to make POKéBLOCKS, you’ll\n"
+	.string "If you want to make POKéBLOCKS, you'll\n"
 	.string "need something to keep them in.\p"
 	.string "Here, take this!$"
 
@@ -66,7 +66,7 @@ HearthomeCity_PoffinHouse_EventScript_PtNpc2::
 HearthomeCity_PoffinHouse_Text_PtNpc2_0::
 	.string "Eating good food makes people and\n"
 	.string "POKéMON more energetic and happy.\p"
-	.string "In that sense, we’re exactly alike.$"
+	.string "In that sense, we're exactly alike.$"
 
 HearthomeCity_PoffinHouse_EventScript_PtNpc3::
 	lock

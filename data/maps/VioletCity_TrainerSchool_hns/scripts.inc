@@ -96,7 +96,7 @@ VioletCity_TrainerSchool_Text_Teacher::
 	.string "but will eventually become a\l"
 	.string "mighty TYRANITAR, at the cost of\l"
 	.string "much EXP.\p"
-	.string "Only the most dedicated trainers\n"
+	.string "Only the most dedicated TRAINERS\n"
 	.string "should attempt to train such a\l"
 	.string "POKéMON.$"
 

@@ -28,7 +28,7 @@ OlivineCity_Gym_EventScript_Lass::
 	end
 
 OlivineCity_Gym_Text_Lass::
-	.string "Giggle...\n"
+	.string "Giggle…\n"
 	.string "I know how capable you are\l"
 	.string "from the LIGHTHOUSE.\p"
 	.string "It's time you showed that side of\n"
@@ -41,7 +41,7 @@ OlivineCity_Gym_EventScript_Lass2::
 	end
 
 OlivineCity_Gym_Text_Lass2::
-	.string "You are amazing...\n"
+	.string "You are amazing…\n"
 	.string "You should aim even higher, since\l"
 	.string "you have such potential.\p"
 	.string "Have you been to MAHOGANY TOWN?$"

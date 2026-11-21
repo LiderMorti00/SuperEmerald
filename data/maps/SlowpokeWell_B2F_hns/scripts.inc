@@ -3,7 +3,7 @@ SlowpokeWell_B2F_hns_MapScripts::
 
 
 SlowpokeWell_Text_Slowking::
-	.string "SLOWKING: ........................$"
+	.string "SLOWKING: ……………………$"
 
 SE_J_SlowpokeWell_B2F_hns_SlowpokeWell_EventScript_Slowking::
 	msgbox SlowpokeWell_Text_Slowking, MSGBOX_NPC

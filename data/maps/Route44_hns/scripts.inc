@@ -88,7 +88,7 @@ Route44_Text_CooltrainermAllenBeaten::
     .string "Tch! It's a total loss on my part.$"
 
 Route44_Text_CooltrainermAllenSeen::
-    .string "I can tell you're a good trainer\n"
+    .string "I can tell you're a good TRAINER\n"
     .string "by looking at you.\p"
     .string "I'm good at POKéMON, and I can\n"
     .string "see that you are too.$"
@@ -109,7 +109,7 @@ Route44_Text_CooltrainerfCybilBeaten::
 
 Route44_Text_CooltrainerfCybilSeen::
     .string "You look strong.\p"
-    .string "Good trainers seek tough\n"
+    .string "Good TRAINERS seek tough\n"
     .string "opponents instinctively.$"
 
 Route44_EventScript_Item_Elixir::

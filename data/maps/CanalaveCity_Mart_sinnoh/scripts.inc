@@ -11,8 +11,8 @@ CanalaveCity_Mart_EventScript_PtNpc1::
 
 CanalaveCity_Mart_Text_PtNpc1_0::
 	.string "A POKé BALL that makes it easy to\n"
-	.string "catch the same kinds of POKéMON...\p"
-	.string "Well, that’s the Repeat Ball!$"
+	.string "catch the same kinds of POKéMON…\p"
+	.string "Well, that's the REPEAT BALL!$"
 
 CanalaveCity_Mart_EventScript_PtNpc2::
 	lock
@@ -22,8 +22,8 @@ CanalaveCity_Mart_EventScript_PtNpc2::
 	end
 
 CanalaveCity_Mart_Text_PtNpc2_0::
-	.string "I should take a Revive out to everyone\n"
+	.string "I should take a REVIVE out to everyone\n"
 	.string "training on IRON ISLAND.\p"
-	.string "I’m sure they’d appreciate it.\p"
+	.string "I'm sure they'd appreciate it.\p"
 	.string "It can be rough out there, especially\n"
-	.string "since there’s no POKéMON Center.$"
+	.string "since there's no POKéMON Center.$"

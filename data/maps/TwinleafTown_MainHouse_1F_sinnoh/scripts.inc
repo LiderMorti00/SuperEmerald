@@ -31,9 +31,9 @@ TwinleafTown_MainHouse_1F_EventScript_BarrysMom::
 	end
 
 TwinleafTown_MainHouse_1F_Text_BarrysMom2::
-	.string "{PLAYER}’s mom: Let me think...\p"
+	.string "{PLAYER}'s mom: Let me think…\p"
 	.string "Knowing my boy, he would probably head\n"
-	.string "straight to JUBILIFE CITY...\p"
+	.string "straight to JUBILIFE CITY…\p"
 	.string "OK, please take that to my {PLAYER}.\p"
 	.string "MOM: Bye-bye, {PLAYER}! Enjoy your\n"
 	.string "adventure!$"

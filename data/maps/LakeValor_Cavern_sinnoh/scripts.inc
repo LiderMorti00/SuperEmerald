@@ -20,7 +20,7 @@ LakeValor_Cavern_EventScript_SNSaturn_Won::
 LakeValor_Cavern_EventScript_SNSaturn_Post::
 	.string "Gah! Even I, a COMMANDER, only managed\n"
 	.string "to buy us time?\p"
-	.string "But that’s fine.\p"
+	.string "But that's fine.\p"
 	.string "A child like you will never be able to\n"
 	.string "stem the flow of time!\p"
 	.string "TEAM GALACTIC will get the three\n"
@@ -28,14 +28,14 @@ LakeValor_Cavern_EventScript_SNSaturn_Post::
 	.string "With their power, we will create an\n"
 	.string "entirely new universe!\p"
 	.string "By now, MARS should have captured the\n"
-	.string "POKéMON of LAKE VERITY...$"
+	.string "POKéMON of LAKE VERITY…$"
 
 LakeValor_Cavern_EventScript_SNSaturn_Defeat::
-	.string "SATURN: ...Hmm. Fine.$"
+	.string "SATURN: …Hmm. Fine.$"
 
 LakeValor_Cavern_EventScript_SNSaturn_Intro::
 	.string "I recognize your face!\p"
-	.string "You’re the child who raided the Team\n"
+	.string "You're the child who raided the Team\n"
 	.string "GALACTIC building in ETERNA!\p"
 	.string "Humph! JUPITER should be ashamed of\n"
 	.string "herself, being beaten by a child.\p"

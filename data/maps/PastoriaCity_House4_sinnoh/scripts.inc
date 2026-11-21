@@ -15,8 +15,8 @@ PastoriaCity_House4_Text_SNIntro::
 	.string "Everyone calls me the POKéMON Move\n"
 	.string "Maniac. I prefer Move Tutor.\p"
 	.string "I know every move that POKéMON learn\n"
-	.string "while they’re leveling up.\p"
-	.string "Bring me a Heart Scale, and I’ll teach\n"
+	.string "while they're leveling up.\p"
+	.string "Bring me a HEART SCALE, and I'll teach\n"
 	.string "your POKéMON a move it has forgotten.$"
 
 PastoriaCity_House4_EventScript_PtNpc2::

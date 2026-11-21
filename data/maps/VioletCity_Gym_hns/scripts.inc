@@ -24,7 +24,7 @@ VioletCity_Gym_EventScript_Abe::
 
 VioletGym_Text_BirdKeeperAbe_After::
 	.string "This is pathetic, losing to some\n"
-	.string "rookie trainer…$"
+	.string "rookie TRAINER…$"
 
 VioletGym_Text_BirdKeeperAbe_Beaten::
 	.string "This can't be true!$"
@@ -62,7 +62,7 @@ VioletCity_Gym_EventScript_GymGuy::
 	end
 
 VioletGym_Text_GymGuide_Intro::
-	.string "Hey! What's up? I'm no trainer,\n"
+	.string "Hey! What's up? I'm no TRAINER,\n"
 	.string "but I can give some advice!\p"
 	.string "Believe me! If you believe, a\n"
 	.string "championship dream can come true.\p"

@@ -41,5 +41,5 @@ Route213_Access_Text_PtNpc2_No::
 	.string "different sets of rules.$"
 
 Route213_Access_Text_PtNpc2::
-	.string "Listen, do you know about the Battle\n"
-	.string "Frontier?$"
+	.string "Listen, do you know about the BATTLE\n"
+	.string "FRONTIER?$"

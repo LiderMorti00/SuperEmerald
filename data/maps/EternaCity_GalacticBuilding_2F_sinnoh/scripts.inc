@@ -47,7 +47,7 @@ EternaCity_GalacticBuilding_2F_EventScript_Grunt2::
 	end
 
 EternaCity_GalacticBuilding_2F_Text_Grunt2Post::
-	.string "Wimpy little POKéMON...\p"
+	.string "Wimpy little POKéMON…\p"
 	.string "When I get promoted, I'll demand\n"
 	.string "better stolen POKéMON.$"
 

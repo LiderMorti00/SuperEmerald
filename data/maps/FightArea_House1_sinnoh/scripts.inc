@@ -12,9 +12,9 @@ FightArea_House1_EventScript_PtNpc1::
 FightArea_House1_Text_PtNpc1_0::
 	.string "Even from here, we could see the peak\n"
 	.string "of MT. CORONET.\p"
-	.string "Most people didn’t notice what\n"
+	.string "Most people didn't notice what\n"
 	.string "happened up there, but I did.\p"
-	.string "But I don’t know what took place\n"
+	.string "But I don't know what took place\n"
 	.string "exactly, or anything like that.$"
 
 FightArea_House1_EventScript_PtNpc2::
@@ -25,7 +25,7 @@ FightArea_House1_EventScript_PtNpc2::
 	end
 
 FightArea_House1_Text_PtNpc2_0::
-	.string "Everyone’s fanatical about battling\n"
+	.string "Everyone's fanatical about battling\n"
 	.string "here.$"
 
 FightArea_House1_EventScript_PtNpc3::
@@ -36,10 +36,10 @@ FightArea_House1_EventScript_PtNpc3::
 	end
 
 FightArea_House1_Text_PtNpc3_0::
-	.string "People are people, and I’m me. I don’t\n"
+	.string "People are people, and I'm me. I don't\n"
 	.string "like to be compared.\p"
 	.string "But comparing with other people\n"
 	.string "reveals things about yourself\l"
 	.string "sometimes, too.\p"
-	.string "That’s why battling lots of different\n"
+	.string "That's why battling lots of different\n"
 	.string "TRAINERS is so much fun.$"
