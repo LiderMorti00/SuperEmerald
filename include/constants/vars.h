@@ -435,6 +435,7 @@
 #define VAR_SN_HONEY_DAY              0x5047
 #define VAR_SN_TROPHY_SPECIES         0x5048
 #define VAR_SN_SAFARI_START           0x5049 // Pokémon owned when the Great Marsh Safari Game started
+#define VAR_SE_SUNYSHORE_GYM_STATE    0x504A // Sunyshore Gym switch puzzle (was shared with VAR_MAUVILLE_GYM_STATE)
 
 #define SPECIAL_VARS_START            0x8000
 // special vars

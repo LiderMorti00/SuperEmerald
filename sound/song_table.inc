@@ -546,7 +546,7 @@ gSongTable::
 	song mus_rg_new_game_exit, MUSIC_PLAYER_BGM, 0
 	song mus_rg_poke_jump, MUSIC_PLAYER_BGM, 0
 	song mus_rg_union_room, MUSIC_PLAYER_BGM, 0
-	song mus_rg_net_center, MUSIC_PLAYER_BGM, 0
+	song mus_dummy, MUSIC_PLAYER_BGM, 0
 	song mus_rg_mystery_gift, MUSIC_PLAYER_BGM, 0
 	song mus_rg_berry_pick, MUSIC_PLAYER_BGM, 0
 	song mus_rg_sevii_cave, MUSIC_PLAYER_BGM, 0

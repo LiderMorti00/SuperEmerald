@@ -5,7 +5,7 @@ SunyshoreCity_Gym_sinnoh_MapScripts::
 @ Super Emerald: barrier puzzle from the Sinnoh repo
 SunyshoreCity_Gym_OnLoad::
 	goto_if_set FLAG_SINNOH_BADGE8_GET, SunyshoreCity_Gym_EventScript_DeactivatePuzzle
-	switch VAR_MAUVILLE_GYM_STATE
+	switch VAR_SE_SUNYSHORE_GYM_STATE
 	case 0, SunyshoreCity_Gym_EventScript_UpdateBarriers
 	case 1, SunyshoreCity_Gym_EventScript_Switch1Pressed
 	case 2, SunyshoreCity_Gym_EventScript_Switch2Pressed
@@ -14,7 +14,7 @@ SunyshoreCity_Gym_OnLoad::
 	end
 
 SunyshoreCity_Gym_EventScript_UpdateBarriers::
-	goto_if_set FLAG_MAUVILLE_GYM_BARRIERS_STATE, SunyshoreCity_Gym_EventScript_SetAltBarriers
+	goto_if_set FLAG_SE_SUNYSHORE_GYM_BARRIERS, SunyshoreCity_Gym_EventScript_SetAltBarriers
 	end
 
 SunyshoreCity_Gym_EventScript_SetAltBarriers::
@@ -77,8 +77,8 @@ SunyshoreCity_Gym_EventScript_DeactivatePuzzle::
 SunyshoreCity_Gym_EventScript_Switch1::
 	lockall
 	goto_if_set FLAG_SINNOH_BADGE8_GET, SunyshoreCity_Gym_EventScript_SwitchDoNothing
-	goto_if_eq VAR_MAUVILLE_GYM_STATE, 1, SunyshoreCity_Gym_EventScript_SwitchDoNothing
-	setvar VAR_MAUVILLE_GYM_STATE, 1
+	goto_if_eq VAR_SE_SUNYSHORE_GYM_STATE, 1, SunyshoreCity_Gym_EventScript_SwitchDoNothing
+	setvar VAR_SE_SUNYSHORE_GYM_STATE, 1
 	setvar VAR_0x8004, 0
 	goto SunyshoreCity_Gym_EventScript_PressFloorSwitch
 	end
@@ -86,8 +86,8 @@ SunyshoreCity_Gym_EventScript_Switch1::
 SunyshoreCity_Gym_EventScript_Switch2::
 	lockall
 	goto_if_set FLAG_SINNOH_BADGE8_GET, SunyshoreCity_Gym_EventScript_SwitchDoNothing
-	goto_if_eq VAR_MAUVILLE_GYM_STATE, 2, SunyshoreCity_Gym_EventScript_SwitchDoNothing
-	setvar VAR_MAUVILLE_GYM_STATE, 2
+	goto_if_eq VAR_SE_SUNYSHORE_GYM_STATE, 2, SunyshoreCity_Gym_EventScript_SwitchDoNothing
+	setvar VAR_SE_SUNYSHORE_GYM_STATE, 2
 	setvar VAR_0x8004, 1
 	goto SunyshoreCity_Gym_EventScript_PressFloorSwitch
 	end
@@ -95,8 +95,8 @@ SunyshoreCity_Gym_EventScript_Switch2::
 SunyshoreCity_Gym_EventScript_Switch3::
 	lockall
 	goto_if_set FLAG_SINNOH_BADGE8_GET, SunyshoreCity_Gym_EventScript_SwitchDoNothing
-	goto_if_eq VAR_MAUVILLE_GYM_STATE, 3, SunyshoreCity_Gym_EventScript_SwitchDoNothing
-	setvar VAR_MAUVILLE_GYM_STATE, 3
+	goto_if_eq VAR_SE_SUNYSHORE_GYM_STATE, 3, SunyshoreCity_Gym_EventScript_SwitchDoNothing
+	setvar VAR_SE_SUNYSHORE_GYM_STATE, 3
 	setvar VAR_0x8004, 2
 	goto SunyshoreCity_Gym_EventScript_PressFloorSwitch
 	end
@@ -104,8 +104,8 @@ SunyshoreCity_Gym_EventScript_Switch3::
 SunyshoreCity_Gym_EventScript_Switch4::
 	lockall
 	goto_if_set FLAG_SINNOH_BADGE8_GET, SunyshoreCity_Gym_EventScript_SwitchDoNothing
-	goto_if_eq VAR_MAUVILLE_GYM_STATE, 4, SunyshoreCity_Gym_EventScript_SwitchDoNothing
-	setvar VAR_MAUVILLE_GYM_STATE, 4
+	goto_if_eq VAR_SE_SUNYSHORE_GYM_STATE, 4, SunyshoreCity_Gym_EventScript_SwitchDoNothing
+	setvar VAR_SE_SUNYSHORE_GYM_STATE, 4
 	setvar VAR_0x8004, 3
 	goto SunyshoreCity_Gym_EventScript_PressFloorSwitch
 	end
@@ -115,8 +115,8 @@ SunyshoreCity_Gym_EventScript_PressFloorSwitch::
 	special MauvilleGymPressSwitch
 	special DrawWholeMapView
 	playse SE_UNLOCK
-	goto_if_set FLAG_MAUVILLE_GYM_BARRIERS_STATE, SunyshoreCity_Gym_EventScript_ClearBarriersAltState
-	goto_if_unset FLAG_MAUVILLE_GYM_BARRIERS_STATE, SunyshoreCity_Gym_EventScript_SetBarriersAltState
+	goto_if_set FLAG_SE_SUNYSHORE_GYM_BARRIERS, SunyshoreCity_Gym_EventScript_ClearBarriersAltState
+	goto_if_unset FLAG_SE_SUNYSHORE_GYM_BARRIERS, SunyshoreCity_Gym_EventScript_SetBarriersAltState
 	releaseall
 	end
 
@@ -125,12 +125,12 @@ SunyshoreCity_Gym_EventScript_SwitchDoNothing::
 	end
 
 SunyshoreCity_Gym_EventScript_SetBarriersAltState::
-	setflag FLAG_MAUVILLE_GYM_BARRIERS_STATE
+	setflag FLAG_SE_SUNYSHORE_GYM_BARRIERS
 	releaseall
 	end
 
 SunyshoreCity_Gym_EventScript_ClearBarriersAltState::
-	clearflag FLAG_MAUVILLE_GYM_BARRIERS_STATE
+	clearflag FLAG_SE_SUNYSHORE_GYM_BARRIERS
 	releaseall
 	end
 

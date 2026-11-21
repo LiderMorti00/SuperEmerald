@@ -477,6 +477,11 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .secretPowerEffect = MOVE_EFFECT_FREEZE_OR_FROSTBITE,
         .camouflageType = TYPE_ICE,
         .camouflageBlend = DEFAULT_CAMOUFLAGE_BLEND,
+        // Super Emerald: Sinnoh snow background, from the Sinnoh project
+        .entry = ENVIRONMENT_ENTRY(SinnohSnow),
+        .background = ENVIRONMENT_BACKGROUND(SinnohSnow),
+        .palette = gBattleEnvironmentPalette_SinnohSnow,
+        .battleIntroSlide = BattleIntroSlide2,
     },
 
     [BATTLE_ENVIRONMENT_ICE] =

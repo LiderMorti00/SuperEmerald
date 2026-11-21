@@ -17,8 +17,9 @@ static const u8 sTileBitAttributes[NUM_METATILE_BEHAVIORS] =
     [MB_WATER_NORTH_ARROW_WARP]             = TILE_FLAG_UNUSED | TILE_FLAG_SURFABLE,
     [MB_BRIDGE_OVER_ICE]                    = TILE_FLAG_UNUSED,
     [MB_LONG_GRASS]                         = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
-    [MB_UNUSED_05]                          = TILE_FLAG_HAS_ENCOUNTERS,
     [MB_DEEP_SAND]                          = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
+    [MB_DEEP_SNOW]                          = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
+    [MB_SNOW]                               = TILE_FLAG_UNUSED,
     [MB_SHORT_GRASS]                        = TILE_FLAG_UNUSED,
     [MB_CAVE]                               = TILE_FLAG_UNUSED | TILE_FLAG_HAS_ENCOUNTERS,
     [MB_LONG_GRASS_SOUTH_EDGE]              = TILE_FLAG_UNUSED,
@@ -200,7 +201,8 @@ bool8 MetatileBehavior_IsPokeGrass(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsSandOrDeepSand(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_SAND || metatileBehavior == MB_DEEP_SAND)
+    if (metatileBehavior == MB_SAND || metatileBehavior == MB_DEEP_SAND
+     || metatileBehavior == MB_SNOW || metatileBehavior == MB_DEEP_SNOW)
         return TRUE;
     else
         return FALSE;
@@ -208,10 +210,15 @@ bool8 MetatileBehavior_IsSandOrDeepSand(u8 metatileBehavior)
 
 bool8 MetatileBehavior_IsDeepSand(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_DEEP_SAND)
+    if (metatileBehavior == MB_DEEP_SAND || metatileBehavior == MB_DEEP_SNOW)
         return TRUE;
     else
         return FALSE;
+}
+
+bool8 MetatileBehavior_IsSnowOrDeepSnow(u8 metatileBehavior)
+{
+    return metatileBehavior == MB_SNOW || metatileBehavior == MB_DEEP_SNOW;
 }
 
 bool8 MetatileBehavior_IsReflective(u8 metatileBehavior)

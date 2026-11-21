@@ -86,3 +86,10 @@ const u32 gBattleEnvironmentAnimTilemap_Building[] = INCGFX_U32("graphics/battle
 
 const u32 gBattleEnvironmentAnimTiles_Rayquaza[] = INCGFX_U32("graphics/battle_environment/sky/anim_tiles.png", ".4bpp.smol");
 const u32 gBattleEnvironmentAnimTilemap_Rayquaza[] = INCGFX_U32("graphics/battle_environment/sky/anim_map.bin", ".smolTM");
+
+// Super Emerald: Sinnoh snow, from the Sinnoh project
+const u32 gBattleEnvironmentTiles_SinnohSnow[] = INCGFX_U32("graphics/battle_environment/sinnoh_snow/tiles.png", ".4bpp.smol");
+const u16 gBattleEnvironmentPalette_SinnohSnow[] = INCGFX_U16("graphics/battle_environment/sinnoh_snow/palette.pal", ".gbapal");
+const u32 gBattleEnvironmentTilemap_SinnohSnow[] = INCGFX_U32("graphics/battle_environment/sinnoh_snow/map.bin", ".smolTM");
+const u32 gBattleEnvironmentAnimTiles_SinnohSnow[] = INCGFX_U32("graphics/battle_environment/sinnoh_snow/anim_tiles.png", ".4bpp.smol");
+const u32 gBattleEnvironmentAnimTilemap_SinnohSnow[] = INCGFX_U32("graphics/battle_environment/sinnoh_snow/anim_map.bin", ".smolTM");

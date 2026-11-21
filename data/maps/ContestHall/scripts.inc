@@ -12,6 +12,7 @@ ContestHall_OnReturn:
 
 ContestHall_OnTransition:
 	call ContestHall_EventScript_ReadyContestMusic
+	special SE_SetContestHallStaffGfx
 	setvar VAR_TEMP_0, 1
 	call ContestHall_EventScript_AddRandomAudienceMembers
 	end
@@ -128,6 +129,7 @@ ContestHall_EventScript_SetRandomAudience7::
 	return
 
 ContestHall_EventScript_GetRandomAudienceGfxId::
+	goto_if_set FLAG_SE_HEARTHOME_CONTEST, SE_ContestHall_GetRandomSinnohAudienceGfxId
 	setvar VAR_RESULT, 32
 	special GenerateContestRand
 	addvar VAR_RESULT, 1
@@ -454,3 +456,8 @@ LilycoveCity_ContestLobby_EventScript_SetPlayerGfxMay::
 	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
 	return
 
+
+@ Super Emerald: Hearthome's audience is made of Sinnoh people
+SE_ContestHall_GetRandomSinnohAudienceGfxId::
+	special SE_GetSinnohContestAudienceGfx
+	return
