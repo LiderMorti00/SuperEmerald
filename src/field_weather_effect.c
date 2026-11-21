@@ -827,7 +827,7 @@ bool8 Snow_Finish(void)
 }
 
 // Super Emerald: Sinnoh snow, from the Sinnoh project. SnowLight (8 flakes), SnowHeavy (32)
-// and Blizzard (64 fast flakes, darker)
+// and Blizzard (40 fast flakes, darker)
 void SnowLight_InitVars(void) { Snow_InitVars(); gWeatherPtr->targetSnowflakeSpriteCount = 8; }
 void SnowLight_InitAll(void) { u16 i; SnowLight_InitVars(); while (!gWeatherPtr->weatherGfxLoaded) { SnowLight_Main(); for (i = 0; i < gWeatherPtr->snowflakeSpriteCount; i++) UpdateSnowflakeSprite(gWeatherPtr->sprites.s1.snowflakeSprites[i]); } }
 void SnowLight_Main(void) { Snow_Main(); }
@@ -838,7 +838,7 @@ void SnowHeavy_InitAll(void) { u16 i; SnowHeavy_InitVars(); while (!gWeatherPtr-
 void SnowHeavy_Main(void) { Snow_Main(); }
 bool8 SnowHeavy_Finish(void) { return Snow_Finish(); }
 
-void Blizzard_InitVars(void) { Snow_InitVars(); gWeatherPtr->targetColorMapIndex = 3; gWeatherPtr->targetSnowflakeSpriteCount = 64; }
+void Blizzard_InitVars(void) { Snow_InitVars(); gWeatherPtr->targetColorMapIndex = 3; gWeatherPtr->targetSnowflakeSpriteCount = 40; }
 void Blizzard_InitAll(void) { u16 i; Blizzard_InitVars(); while (!gWeatherPtr->weatherGfxLoaded) { Blizzard_Main(); for (i = 0; i < gWeatherPtr->snowflakeSpriteCount; i++) UpdateSnowflakeSprite(gWeatherPtr->sprites.s1.snowflakeSprites[i]); } }
 void Blizzard_Main(void) { Snow_Main(); }
 bool8 Blizzard_Finish(void) { return Snow_Finish(); }
@@ -856,7 +856,12 @@ static bool8 UpdateVisibleSnowflakeSprites(void)
     {
         gWeatherPtr->snowflakeVisibleCounter = 0;
         if (gWeatherPtr->snowflakeSpriteCount < gWeatherPtr->targetSnowflakeSpriteCount)
-            CreateSnowflakeSprite();
+        {
+            // Out of sprite slots (crowded map): settle for what we have instead of
+            // retrying forever, which froze the warp into Route 217 on a black screen
+            if (!CreateSnowflakeSprite())
+                gWeatherPtr->targetSnowflakeSpriteCount = gWeatherPtr->snowflakeSpriteCount;
+        }
         else
             DestroySnowflakeSprite();
     }
