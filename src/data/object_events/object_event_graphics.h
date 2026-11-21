@@ -318,6 +318,10 @@ const u32 gFieldEffectObjectPic_ShortGrass[] = INCGFX_U32("graphics/field_effect
 const u32 gFieldEffectObjectPic_SandFootprints[] = INCGFX_U32("graphics/field_effects/pics/sand_footprints.png", ".4bpp", "-mwidth 2 -mheight 2");
 const u32 gFieldEffectObjectPic_DeepSandFootprints[] = INCGFX_U32("graphics/field_effects/pics/deep_sand_footprints.png", ".4bpp", "-mwidth 2 -mheight 2");
 const u32 gFieldEffectObjectPic_BikeTireTracks[] = INCGFX_U32("graphics/field_effects/pics/bike_tire_tracks.png", ".4bpp", "-mwidth 2 -mheight 2");
+// Super Emerald: the same tracks in snow colors (MB_SNOW / MB_DEEP_SNOW)
+const u32 gFieldEffectObjectPic_SnowFootprints[] = INCGFX_U32("graphics/field_effects/pics/snow_footprints.png", ".4bpp", "-mwidth 2 -mheight 2");
+const u32 gFieldEffectObjectPic_DeepSnowFootprints[] = INCGFX_U32("graphics/field_effects/pics/deep_snow_footprints.png", ".4bpp", "-mwidth 2 -mheight 2");
+const u32 gFieldEffectObjectPic_SnowBikeTireTracks[] = INCGFX_U32("graphics/field_effects/pics/snow_bike_tire_tracks.png", ".4bpp", "-mwidth 2 -mheight 2");
 const u32 gFieldEffectObjectPic_SlitherTracks[] = INCGFX_U32("graphics/field_effects/pics/slither_tracks.png", ".4bpp", "-mwidth 2 -mheight 2");
 const u32 gFieldEffectObjectPic_SpotTracks[] = INCGFX_U32("graphics/field_effects/pics/spot_tracks.png", ".4bpp", "-mwidth 2 -mheight 2");
 const u32 gFieldEffectObjectPic_BugTracks[] = INCGFX_U32("graphics/field_effects/pics/bug_tracks.png", ".4bpp", "-mwidth 2 -mheight 2");

@@ -1326,3 +1326,41 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_ShinySparkle = {
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = UpdateBubblesFieldEffect,
 };
+
+// Super Emerald: footprints and bike tracks in the snow
+static const struct SpriteFrameImage sPicTable_SnowFootprints[] = {
+    overworld_ascending_frames(gFieldEffectObjectPic_SnowFootprints, 2, 2),
+};
+static const struct SpriteFrameImage sPicTable_DeepSnowFootprints[] = {
+    overworld_ascending_frames(gFieldEffectObjectPic_DeepSnowFootprints, 2, 2),
+};
+static const struct SpriteFrameImage sPicTable_SnowBikeTireTracks[] = {
+    overworld_ascending_frames(gFieldEffectObjectPic_SnowBikeTireTracks, 2, 2),
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_SnowFootprints = {
+    .tileTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_0,
+    .oam = &gObjectEventBaseOam_16x16,
+    .anims = sAnimTable_SandFootprints,
+    .images = sPicTable_SnowFootprints,
+    .callback = UpdateFootprintsTireTracksFieldEffect,
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_DeepSnowFootprints = {
+    .tileTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_0,
+    .oam = &gObjectEventBaseOam_16x16,
+    .anims = sAnimTable_DeepSandFootprints,
+    .images = sPicTable_DeepSnowFootprints,
+    .callback = UpdateFootprintsTireTracksFieldEffect,
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_SnowBikeTireTracks = {
+    .tileTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_0,
+    .oam = &gObjectEventBaseOam_16x16,
+    .anims = sAnimTable_BikeTireTracks,
+    .images = sPicTable_SnowBikeTireTracks,
+    .callback = UpdateFootprintsTireTracksFieldEffect,
+};

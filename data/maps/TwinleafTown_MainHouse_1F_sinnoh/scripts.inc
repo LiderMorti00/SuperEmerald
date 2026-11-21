@@ -16,8 +16,9 @@ TwinleafTown_MainHouse_1F_EventScript_Mom::
 TwinleafTown_MainHouse_1F_Text_SNMomRest::
 	.string "WOMAN: Oh! You must be the CHAMPION\n"
 	.string "from HOENN everyone is talking about!\p"
-	.string "My child is out traveling with\n"
-	.string "BARRY, so the house is so quiet…\p"
+	.string "My son is out traveling with his\n"
+	.string "friend BARRY, so the house is so\l"
+	.string "quiet…\p"
 	.string "Please, take a quick rest here.$"
 
 TwinleafTown_MainHouse_1F_Text_MomTalk::

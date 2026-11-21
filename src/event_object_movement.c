@@ -10460,6 +10460,7 @@ static void DoTracksGroundEffect_Footprints(struct ObjectEvent *objEvent, struct
     gFieldEffectArguments[2] = 149;
     gFieldEffectArguments[3] = 2;
     gFieldEffectArguments[4] = objEvent->facingDirection;
+    gFieldEffectArguments[5] = MetatileBehavior_IsSnowOrDeepSnow(objEvent->previousMetatileBehavior); // Super Emerald
     FieldEffectStart(sandFootprints_FieldEffectData[isDeepSand]);
 }
 
@@ -10521,6 +10522,7 @@ static void DoTracksGroundEffect_BikeTireTracks(struct ObjectEvent *objEvent, st
         gFieldEffectArguments[3] = 2;
         gFieldEffectArguments[4] =
         bikeTireTracks_Transitions[movementDir][objEvent->facingDirection - 5];
+        gFieldEffectArguments[5] = MetatileBehavior_IsSnowOrDeepSnow(objEvent->previousMetatileBehavior); // Super Emerald
         FieldEffectStart(FLDEFF_BIKE_TIRE_TRACKS);
     }
 }
