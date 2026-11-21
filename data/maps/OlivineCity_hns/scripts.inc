@@ -12,7 +12,7 @@ OlivineCity_EventScript_Youngster::
 
 OlivineCity_Text_YoungsterPokegear::
 	.string "That thing you have--\n"
-	.string "it's a POKéGEAR, right?\l"
+	.string "it's a POKéNAV, right?\l"
 	.string "Wow, that's cool.$"
 
 OlivineCity_EventScript_Sailor2::

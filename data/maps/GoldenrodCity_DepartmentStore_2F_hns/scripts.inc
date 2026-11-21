@@ -62,7 +62,7 @@ GoldenrodDeptStore2_EventScript_Youngster::
 	end
 
 GoldenrodDeptStore_Text_2FYoungster::
-    .string "POKéGEAR can store up to 100 phone\n"
+    .string "A POKéNAV can store lots of phone\n"
     .string "numbers.\p"
     .string "It's hard to decide which numbers\n"
     .string "to keep.$"

@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE226_ACCESS_SINNOH",
   "name": "Route226_Access_sinnoh",
   "layout": "LAYOUT_ROUTE226_ACCESS_SINNOH",
-  "music": "MUS_DUMMY",
+  "music": "MUS_DPP_ROUTE225",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

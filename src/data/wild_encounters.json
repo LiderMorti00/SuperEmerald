@@ -74584,6 +74584,144 @@
           }
         },
         {
+          "map": "MAP_ACUITY_LAKEFRONT_SINNOH",
+          "base_label": "gAcuityLakefront_Sinnoh",
+          "land_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 63,
+                "max_level": 63,
+                "species": "SPECIES_SNOVER"
+              },
+              {
+                "min_level": 63,
+                "max_level": 63,
+                "species": "SPECIES_SWINUB"
+              },
+              {
+                "min_level": 63,
+                "max_level": 63,
+                "species": "SPECIES_SNEASEL"
+              },
+              {
+                "min_level": 63,
+                "max_level": 63,
+                "species": "SPECIES_SNOVER"
+              },
+              {
+                "min_level": 64,
+                "max_level": 64,
+                "species": "SPECIES_SNEASEL"
+              },
+              {
+                "min_level": 64,
+                "max_level": 64,
+                "species": "SPECIES_SWINUB"
+              },
+              {
+                "min_level": 64,
+                "max_level": 64,
+                "species": "SPECIES_SNOVER"
+              },
+              {
+                "min_level": 63,
+                "max_level": 63,
+                "species": "SPECIES_SWINUB"
+              },
+              {
+                "min_level": 64,
+                "max_level": 64,
+                "species": "SPECIES_SNEASEL"
+              },
+              {
+                "min_level": 64,
+                "max_level": 64,
+                "species": "SPECIES_SNOVER"
+              },
+              {
+                "min_level": 64,
+                "max_level": 64,
+                "species": "SPECIES_SNEASEL"
+              },
+              {
+                "min_level": 64,
+                "max_level": 64,
+                "species": "SPECIES_SNOVER"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ACUITY_LAKEFRONT_SINNOH",
+          "base_label": "gAcuityLakefront_PostGame_Sinnoh",
+          "land_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 67,
+                "max_level": 70,
+                "species": "SPECIES_SNOVER"
+              },
+              {
+                "min_level": 67,
+                "max_level": 70,
+                "species": "SPECIES_DELIBIRD"
+              },
+              {
+                "min_level": 67,
+                "max_level": 70,
+                "species": "SPECIES_SNEASEL"
+              },
+              {
+                "min_level": 67,
+                "max_level": 70,
+                "species": "SPECIES_BAYLEEF"
+              },
+              {
+                "min_level": 67,
+                "max_level": 70,
+                "species": "SPECIES_MABOSSTIFF"
+              },
+              {
+                "min_level": 67,
+                "max_level": 70,
+                "species": "SPECIES_JYNX"
+              },
+              {
+                "min_level": 67,
+                "max_level": 70,
+                "species": "SPECIES_SNOVER"
+              },
+              {
+                "min_level": 67,
+                "max_level": 70,
+                "species": "SPECIES_SWINUB"
+              },
+              {
+                "min_level": 67,
+                "max_level": 70,
+                "species": "SPECIES_OBSTAGOON"
+              },
+              {
+                "min_level": 67,
+                "max_level": 70,
+                "species": "SPECIES_THWACKEY"
+              },
+              {
+                "min_level": 67,
+                "max_level": 70,
+                "species": "SPECIES_SNEASEL"
+              },
+              {
+                "min_level": 67,
+                "max_level": 70,
+                "species": "SPECIES_SNOVER"
+              }
+            ]
+          }
+        },
+        {
           "map": "MAP_ROUTE218_SINNOH",
           "base_label": "gRoute218_Sinnoh",
           "land_mons": {

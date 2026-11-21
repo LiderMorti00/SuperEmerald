@@ -10,7 +10,7 @@ Route27_Text_FisherMessage::
     .string "Do you know what you just did?\p"
     .string "You've taken your first step into\n"
     .string "KANTO.\p"
-    .string "Check your POKéGEAR MAP and see.$"
+    .string "Check your POKéNAV MAP and see.$"
 
 Route27_EventScript_Megan::
 	trainerbattle_single TRAINER_MEGAN_HNS, Route27_Text_CooltrainerfMeganSeen, Route27_Text_CooltrainerfMeganBeaten

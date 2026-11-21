@@ -69,10 +69,10 @@ OreburghGate_1F_Text_HikerAfter::
 	.string "move ROCK SMASH outside of battle.$"
 
 OreburghGate_1F_Text_Hiker::
-	.string "That sparkling new POKéTCH! Your\n"
-	.string "awkwardness as a traveler!\p"
-	.string "Hmm… You're still a pretty new TRAINER,\n"
-	.string "aren't you?\p"
+	.string "That POKéNAV! That look on your face!\n"
+	.string "You're new around here, aren't you?\p"
+	.string "Hmm… You're still pretty new to\n"
+	.string "SINNOH, aren't you?\p"
 	.string "But it's all good! You're a new fellow\n"
 	.string "friend of POKéMON!\p"
 	.string "So, let me make a gift of this Hidden\n"
