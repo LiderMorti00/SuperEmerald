@@ -2,7 +2,7 @@
   "id": "MAP_SANDGEM_TOWN_MART_SINNOH",
   "name": "SandgemTown_Mart_sinnoh",
   "layout": "LAYOUT_SANDGEM_TOWN_MART_SINNOH",
-  "music": "MUS_DPP_MART",
+  "music": "MUS_POKE_MART",
   "region_map_section": "MAPSEC_SANDGEM_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

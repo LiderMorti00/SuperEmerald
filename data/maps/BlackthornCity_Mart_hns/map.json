@@ -2,7 +2,7 @@
   "id": "MAP_BLACKTHORN_CITY_MART_HNS",
   "name": "BlackthornCity_Mart_hns",
   "layout": "LAYOUT_BLACKTHORN_CITY_MART_HNS",
-  "music": "MUS_HG_AZALEA",
+  "music": "MUS_POKE_MART",
   "region_map_section": "MAPSEC_BLACKTHORN_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

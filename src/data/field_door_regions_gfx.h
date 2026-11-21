@@ -71,7 +71,6 @@ static const u8 sDoorAnimPalettes_Sinnoh_0_0_0_0_12_12_12_12[] = {0, 0, 0, 0, 12
 static const u8 sDoorAnimTiles_SnHearthome668Sinnoh[] = INCGFX_U8("graphics/door_anims/sinnoh/hearthome_668.png", ".4bpp");
 static const u8 sDoorAnimPalettes_Sinnoh_11_11_11_11_9_9_9_9[] = {11, 11, 11, 11, 9, 9, 9, 9};
 static const u8 sDoorAnimTiles_SnValor555Sinnoh[] = INCGFX_U8("graphics/door_anims/sinnoh/valor_555.png", ".4bpp");
-static const u8 sDoorAnimPalettes_Sinnoh_11_11_11_11_5_5_5_5[] = {11, 11, 11, 11, 5, 5, 5, 5};
 static const u8 sDoorAnimTiles_SnPetalburg594Sinnoh[] = INCGFX_U8("graphics/door_anims/sinnoh/petalburg_594.png", ".4bpp");
 static const u8 sDoorAnimPalettes_Sinnoh_9_9_9_9_10_10_10_10[] = {9, 9, 9, 9, 10, 10, 10, 10};
 static const u8 sDoorAnimTiles_SnCelestic651Sinnoh[] = INCGFX_U8("graphics/door_anims/sinnoh/celestic_651.png", ".4bpp");

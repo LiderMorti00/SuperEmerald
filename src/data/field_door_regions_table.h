@@ -33,7 +33,7 @@
     {.metatileNum = 0x213, .tileset = &gTileset_Celestic_Sinnoh, .sound = DOOR_SOUND_NORMAL, .size = DOOR_SIZE_1x2, .tiles = sDoorAnimTiles_SnCelestic531Sinnoh, .palettes = sDoorAnimPalettes_Sinnoh_11_11_11_11_11_11_11_11},
     {.metatileNum = 0x2CF, .tileset = &gTileset_Jubilife_Sinnoh, .sound = DOOR_SOUND_NORMAL, .size = DOOR_SIZE_1x2, .tiles = sDoorAnimTiles_SnJubilife719Sinnoh, .palettes = sDoorAnimPalettes_Sinnoh_0_0_0_0_12_12_12_12},
     {.metatileNum = 0x29C, .tileset = &gTileset_Hearthome_Sinnoh, .sound = DOOR_SOUND_NORMAL, .size = DOOR_SIZE_1x2, .tiles = sDoorAnimTiles_SnHearthome668Sinnoh, .palettes = sDoorAnimPalettes_Sinnoh_11_11_11_11_9_9_9_9},
-    {.metatileNum = 0x22B, .tileset = &gTileset_Valor_Sinnoh, .sound = DOOR_SOUND_NORMAL, .size = DOOR_SIZE_1x2, .tiles = sDoorAnimTiles_SnValor555Sinnoh, .palettes = sDoorAnimPalettes_Sinnoh_11_11_11_11_5_5_5_5},
+    {.metatileNum = 0x22B, .tileset = &gTileset_Valor_Sinnoh, .sound = DOOR_SOUND_NORMAL, .size = DOOR_SIZE_1x1, .tiles = sDoorAnimTiles_SnValor555Sinnoh, .palettes = sDoorAnimPalettes_Sinnoh_5_5_5_5_5_5_5_5},
     {.metatileNum = 0x252, .tileset = &gTileset_Petalburg_Sinnoh, .sound = DOOR_SOUND_NORMAL, .size = DOOR_SIZE_1x2, .tiles = sDoorAnimTiles_SnPetalburg594Sinnoh, .palettes = sDoorAnimPalettes_Sinnoh_9_9_9_9_10_10_10_10},
     {.metatileNum = 0x28B, .tileset = &gTileset_Celestic_Sinnoh, .sound = DOOR_SOUND_NORMAL, .size = DOOR_SIZE_1x2, .tiles = sDoorAnimTiles_SnCelestic651Sinnoh, .palettes = sDoorAnimPalettes_Sinnoh_9_9_9_9_0_0_0_0},
     {.metatileNum = 0x293, .tileset = &gTileset_Celestic_Sinnoh, .sound = DOOR_SOUND_NORMAL, .size = DOOR_SIZE_1x2, .tiles = sDoorAnimTiles_SnCelestic659Sinnoh, .palettes = sDoorAnimPalettes_Sinnoh_0_0_0_0_0_0_0_0},

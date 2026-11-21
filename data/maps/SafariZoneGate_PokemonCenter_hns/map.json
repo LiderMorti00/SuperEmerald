@@ -2,7 +2,7 @@
   "id": "MAP_SAFARI_ZONE_GATE_POKEMON_CENTER_HNS",
   "name": "SafariZoneGate_PokemonCenter_hns",
   "layout": "LAYOUT_SAFARI_ZONE_GATE_POKEMON_CENTER_HNS",
-  "music": "MUS_DPP_PC",
+  "music": "MUS_POKE_CENTER",
   "region_map_section": "MAPSEC_SAFARI_ZONE_GATE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

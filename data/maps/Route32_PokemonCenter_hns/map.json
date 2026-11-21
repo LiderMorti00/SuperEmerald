@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE32_POKEMON_CENTER_HNS",
   "name": "Route32_PokemonCenter_hns",
   "layout": "LAYOUT_ROUTE32_POKEMON_CENTER_HNS",
-  "music": "MUS_DPP_PC",
+  "music": "MUS_POKE_CENTER",
   "region_map_section": "MAPSEC_ROUTE_32",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

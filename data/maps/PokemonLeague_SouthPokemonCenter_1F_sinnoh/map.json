@@ -2,7 +2,7 @@
   "id": "MAP_POKEMON_LEAGUE_SOUTH_POKEMON_CENTER_1F_SINNOH",
   "name": "PokemonLeague_SouthPokemonCenter_1F_sinnoh",
   "layout": "LAYOUT_POKEMON_LEAGUE_SOUTH_POKEMON_CENTER_1F_SINNOH",
-  "music": "MUS_DPP_PC",
+  "music": "MUS_POKE_CENTER",
   "region_map_section": "MAPSEC_POKEMON_LEAGUE_SINNOH",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

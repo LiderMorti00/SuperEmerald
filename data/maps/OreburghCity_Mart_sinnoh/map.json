@@ -2,7 +2,7 @@
   "id": "MAP_OREBURGH_CITY_MART_SINNOH",
   "name": "OreburghCity_Mart_sinnoh",
   "layout": "LAYOUT_OREBURGH_CITY_MART_SINNOH",
-  "music": "MUS_DPP_MART",
+  "music": "MUS_POKE_MART",
   "region_map_section": "MAPSEC_OREBURGH_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -629,8 +629,6 @@ const u16 gMetatileAttributes_IlexForest_Hns[] = INCBIN_U16("data/tilesets/secon
 const u16 gMetatiles_IndigoPlateau_Hns[] = INCBIN_U16("data/tilesets/secondary/indigo_plateau_hns/metatiles.bin");
 const u16 gMetatileAttributes_IndigoPlateau_Hns[] = INCBIN_U16("data/tilesets/secondary/indigo_plateau_hns/metatile_attributes.bin");
 
-const u16 gMetatiles_JohtoBikeShop_Hns[] = INCBIN_U16("data/tilesets/secondary/johto_bike_shop_hns/metatiles.bin");
-const u16 gMetatileAttributes_JohtoBikeShop_Hns[] = INCBIN_U16("data/tilesets/secondary/johto_bike_shop_hns/metatile_attributes.bin");
 
 const u16 gMetatiles_JohtoMart_Hns[] = INCBIN_U16("data/tilesets/secondary/johto_mart_hns/metatiles.bin");
 const u16 gMetatileAttributes_JohtoMart_Hns[] = INCBIN_U16("data/tilesets/secondary/johto_mart_hns/metatile_attributes.bin");
