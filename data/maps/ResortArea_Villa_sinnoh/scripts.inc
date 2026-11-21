@@ -7,9 +7,10 @@ ResortArea_Villa_EventScript_PtNpc1::
 	end
 
 ResortArea_Villa_Text_PtNpc1::
-	.string "{RIVAL}: Too slooooow!\p"
-	.string "You keep me waiting all the time! I’m\n"
-	.string "fining you...$1 billion!$"
+	.string "{RIVAL}: Whoa, a VILLA! You're the\n"
+	.string "real deal, CHAMPION!\p"
+	.string "Next time, I'm beating you! If I\n"
+	.string "don't, I'm fining myself $1 billion!$"
 
 ResortArea_Villa_EventScript_PtNpc2::
 	msgbox ResortArea_Villa_Text_PtNpc2, MSGBOX_NPC
@@ -30,11 +31,11 @@ ResortArea_Villa_EventScript_PtNpc3::
 	end
 
 ResortArea_Villa_Text_PtNpc3::
-	.string "MOM: Oh, {PLAYER}! I’d heard from\n"
-	.string "{PLAYER}, but...\p"
-	.string "This is quite grand for a Villa. This\n"
-	.string "makes me happy, dear!\p"
-	.string "I’ll have a fun place to visit!$"
+	.string "MOM: {PLAYER}! I came all the way\n"
+	.string "from LITTLEROOT to see this place!\p"
+	.string "A VILLA in SINNOH… I'm so proud\n"
+	.string "of you, dear!\p"
+	.string "I'll have a fun place to visit!$"
 
 ResortArea_Villa_EventScript_PtNpc4::
 	msgbox ResortArea_Villa_Text_PtNpc4, MSGBOX_NPC

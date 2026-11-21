@@ -48,7 +48,8 @@ Twinleaf_Town_RivalsHouse_F1_EventScript_PtNpc1_S0::
 	end
 
 Twinleaf_Town_RivalsHouse_F1_Text_SNLooking::
-	.string "{RIVAL}’s mom: Oh, hi, {PLAYER}.\p"
+	.string "{RIVAL}’s mom: Oh, hello! You're the\n"
+	.string "TRAINER from HOENN, aren't you?\p"
 	.string "Are you looking for {RIVAL}?\p"
 	.string "He was gone for a second, but then he\n"
 	.string "came running right back home.\p"

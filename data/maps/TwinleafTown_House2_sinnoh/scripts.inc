@@ -7,5 +7,5 @@ TwinleafTown_House2_EventScript_PtNpc1::
 	end
 
 TwinleafTown_House2_Text_PtNpc1::
-	.string "You're off to hang with {PLAYER} again,\n"
-	.string "right? You two sure are tight!$"
+	.string "Are you looking for BARRY? That boy\n"
+	.string "runs past here a hundred times a day!$"

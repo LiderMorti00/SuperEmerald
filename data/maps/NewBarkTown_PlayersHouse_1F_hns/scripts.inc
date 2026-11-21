@@ -3,8 +3,12 @@ NewBarkTown_PlayersHouse_1F_hns_MapScripts::
 
 
 NewBarkTown_PlayersHouse_1F_Text_MomHurryUpElmIsWaiting::
-	.string "MOM: PROF.ELM is waiting for you.\p"
-	.string "Hurry up, baby!$"
+	.string "WOMAN: Oh, hello! Are you a friend\n"
+	.string "of my son's?\p"
+	.string "He left to travel all over JOHTO\n"
+	.string "with the POKéMON PROF.ELM gave him.\p"
+	.string "If you see him, tell him his mom\n"
+	.string "says to eat properly!$"
 
 SE_J_NewBarkTown_PlayersHouse_1F_hns_NewBarkTown_PlayersHouse_1F_EventScript_Mom::
 	msgbox NewBarkTown_PlayersHouse_1F_Text_MomHurryUpElmIsWaiting, MSGBOX_NPC
@@ -24,8 +28,7 @@ NewBarkTown_PlayersHouse_1F_MovementFaceRight::
 	step_end
 
 NewBarkTown_PlayersHouse_1F_Text_MomsFriend::
-	.string "Hi, {PLAYER}!\p"
-	.string "I'm visiting!\p"
+	.string "Hi there! I'm visiting, too!\p"
 	.string "Have you heard?\p"
 	.string "My daughter is adamant about\n"
 	.string "becoming PROF.ELM's assistant.\p"

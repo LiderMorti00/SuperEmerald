@@ -13,8 +13,8 @@ SE_J_NewBarkTown_hns_NewBarkTown_EventScript_FatMan::
 	end
 
 NewBarkTown_Text_LassState5::
-	.string "Call your mom on your POKéGEAR\n"
-	.string "to let her know how you're doing.$"
+	.string "You came all the way from HOENN?\n"
+	.string "Your family must miss you!$"
 
 SE_J_NewBarkTown_hns_NewBarkTown_EventScript_Lass::
 	msgbox NewBarkTown_Text_LassState5, MSGBOX_NPC

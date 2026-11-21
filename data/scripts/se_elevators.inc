@@ -18,7 +18,6 @@ SE_EventScript_ElevatorMove::
 	waitmovement 0
 	waitse
 	special MoveElevator
-	waitstate
 	setflag FLAG_TEMP_2
 	return
 

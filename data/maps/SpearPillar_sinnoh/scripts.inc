@@ -319,7 +319,6 @@ SpearPillar_EventScript_SNDIALGA::
 	setwildbattle SPECIES_DIALGA, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SpearPillar_EventScript_SNDIALGA_Ran
@@ -344,7 +343,6 @@ SpearPillar_EventScript_SNPALKIA::
 	setwildbattle SPECIES_PALKIA, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SpearPillar_EventScript_SNPALKIA_Ran

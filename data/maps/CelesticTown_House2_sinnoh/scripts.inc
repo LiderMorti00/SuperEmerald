@@ -41,12 +41,13 @@ CelesticTown_House2_Text_PtNpc1_2::
 CelesticTown_House2_Text_PtNpc1_0::
 	.string "Where are you from?\p"
 	.string "...\p"
-	.string "Hm, TWINLEAF TOWN, you say. Isn’t that\n"
-	.string "close to LAKE VERITY?\p"
-	.string "That lake is said to be home to\n"
-	.string "MESPRIT, “The Being of Emotion.”\p"
+	.string "Hm, HOENN, you say. You came a long\n"
+	.string "way to visit SINNOH!\p"
+	.string "LAKE VERITY, in the south, is said to\n"
+	.string "be home to MESPRIT, “The Being of\l"
+	.string "Emotion.”\p"
 	.string "That POKéMON may well be watching over\n"
-	.string "you.\p"
+	.string "travelers like you.\p"
 	.string "Would you like to know more about\n"
 	.string "MESPRIT?$"
 

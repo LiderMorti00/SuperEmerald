@@ -17,8 +17,8 @@ JubilifeCity_EventScript_PtNpc2::
 JubilifeCity_Text_PtNpc2::
 	.string "Hiya, where'd you come from?\p"
 	.string "...\p"
-	.string "TWINLEAF TOWN, huh... It's a nice place.\n"
-	.string "Quiet and all.\p"
+	.string "HOENN, huh... That's really far away!\n"
+	.string "You came by ship?\p"
 	.string "JUBILIFE CITY is a big place, so it\n"
 	.string "might be a bit of a shock to you.$"
 

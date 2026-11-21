@@ -186,7 +186,6 @@ SE_EventScript_Leg_VICTINI::
 	setwildbattle SPECIES_VICTINI, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -205,7 +204,6 @@ SE_EventScript_Leg_KELDEO::
 	setwildbattle SPECIES_KELDEO, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -224,7 +222,6 @@ SE_EventScript_Leg_MELOETTA::
 	setwildbattle SPECIES_MELOETTA, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -243,7 +240,6 @@ SE_EventScript_Leg_COBALION::
 	setwildbattle SPECIES_COBALION, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -262,7 +258,6 @@ SE_EventScript_Leg_TERRAKION::
 	setwildbattle SPECIES_TERRAKION, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -281,7 +276,6 @@ SE_EventScript_Leg_VIRIZION::
 	setwildbattle SPECIES_VIRIZION, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -300,7 +294,6 @@ SE_EventScript_Leg_TORNADUS::
 	setwildbattle SPECIES_TORNADUS, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -319,7 +312,6 @@ SE_EventScript_Leg_THUNDURUS::
 	setwildbattle SPECIES_THUNDURUS, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -338,7 +330,6 @@ SE_EventScript_Leg_LANDORUS::
 	setwildbattle SPECIES_LANDORUS, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -357,7 +348,6 @@ SE_EventScript_Leg_RESHIRAM::
 	setwildbattle SPECIES_RESHIRAM, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -376,7 +366,6 @@ SE_EventScript_Leg_ZEKROM::
 	setwildbattle SPECIES_ZEKROM, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -395,7 +384,6 @@ SE_EventScript_Leg_KYUREM::
 	setwildbattle SPECIES_KYUREM, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -414,7 +402,6 @@ SE_EventScript_Leg_JIRACHI::
 	setwildbattle SPECIES_JIRACHI, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -433,7 +420,6 @@ SE_EventScript_Leg_XERNEAS::
 	setwildbattle SPECIES_XERNEAS, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -452,7 +438,6 @@ SE_EventScript_Leg_YVELTAL::
 	setwildbattle SPECIES_YVELTAL, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -471,7 +456,6 @@ SE_EventScript_Leg_ZYGARDE::
 	setwildbattle SPECIES_ZYGARDE, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -490,7 +474,6 @@ SE_EventScript_Leg_DIANCIE::
 	setwildbattle SPECIES_DIANCIE, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -509,7 +492,6 @@ SE_EventScript_Leg_HOOPA::
 	setwildbattle SPECIES_HOOPA, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -528,7 +510,6 @@ SE_EventScript_Leg_VOLCANION::
 	setwildbattle SPECIES_VOLCANION, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -547,7 +528,6 @@ SE_EventScript_Leg_KORAIDON::
 	setwildbattle SPECIES_KORAIDON, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -566,7 +546,6 @@ SE_EventScript_Leg_MIRAIDON::
 	setwildbattle SPECIES_MIRAIDON, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -585,7 +564,6 @@ SE_EventScript_Leg_TERAPAGOS::
 	setwildbattle SPECIES_TERAPAGOS, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -604,7 +582,6 @@ SE_EventScript_Leg_PECHARUNT::
 	setwildbattle SPECIES_PECHARUNT, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -623,7 +600,6 @@ SE_EventScript_Leg_TING_LU::
 	setwildbattle SPECIES_TING_LU, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -642,7 +618,6 @@ SE_EventScript_Leg_CHIEN_PAO::
 	setwildbattle SPECIES_CHIEN_PAO, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -661,7 +636,6 @@ SE_EventScript_Leg_WO_CHIEN::
 	setwildbattle SPECIES_WO_CHIEN, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -680,7 +654,6 @@ SE_EventScript_Leg_CHI_YU::
 	setwildbattle SPECIES_CHI_YU, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -699,7 +672,6 @@ SE_EventScript_Leg_OKIDOGI::
 	setwildbattle SPECIES_OKIDOGI, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -718,7 +690,6 @@ SE_EventScript_Leg_MUNKIDORI::
 	setwildbattle SPECIES_MUNKIDORI, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -737,7 +708,6 @@ SE_EventScript_Leg_FEZANDIPITI::
 	setwildbattle SPECIES_FEZANDIPITI, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -756,7 +726,6 @@ SE_EventScript_Leg_WALKING_WAKE::
 	setwildbattle SPECIES_WALKING_WAKE, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -775,7 +744,6 @@ SE_EventScript_Leg_IRON_LEAVES::
 	setwildbattle SPECIES_IRON_LEAVES, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -794,7 +762,6 @@ SE_EventScript_Leg_IRON_BOULDER::
 	setwildbattle SPECIES_IRON_BOULDER, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -813,7 +780,6 @@ SE_EventScript_Leg_IRON_CROWN::
 	setwildbattle SPECIES_IRON_CROWN, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -832,7 +798,6 @@ SE_EventScript_Leg_RAGING_BOLT::
 	setwildbattle SPECIES_RAGING_BOLT, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -851,7 +816,6 @@ SE_EventScript_Leg_GOUGING_FIRE::
 	setwildbattle SPECIES_GOUGING_FIRE, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -870,7 +834,6 @@ SE_EventScript_Leg_ZACIAN::
 	setwildbattle SPECIES_ZACIAN, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -889,7 +852,6 @@ SE_EventScript_Leg_ZAMAZENTA::
 	setwildbattle SPECIES_ZAMAZENTA, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -908,7 +870,6 @@ SE_EventScript_Leg_ETERNATUS::
 	setwildbattle SPECIES_ETERNATUS, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -927,7 +888,6 @@ SE_EventScript_Leg_KUBFU::
 	setwildbattle SPECIES_KUBFU, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -946,7 +906,6 @@ SE_EventScript_Leg_ZARUDE::
 	setwildbattle SPECIES_ZARUDE, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -965,7 +924,6 @@ SE_EventScript_Leg_GLASTRIER::
 	setwildbattle SPECIES_GLASTRIER, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -984,7 +942,6 @@ SE_EventScript_Leg_SPECTRIER::
 	setwildbattle SPECIES_SPECTRIER, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1003,7 +960,6 @@ SE_EventScript_Leg_CALYREX::
 	setwildbattle SPECIES_CALYREX, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1022,7 +978,6 @@ SE_EventScript_Leg_ENAMORUS::
 	setwildbattle SPECIES_ENAMORUS, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1041,7 +996,6 @@ SE_EventScript_Leg_MANAPHY::
 	setwildbattle SPECIES_MANAPHY, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1060,7 +1014,6 @@ SE_EventScript_Leg_BLACEPHALON::
 	setwildbattle SPECIES_BLACEPHALON, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1079,7 +1032,6 @@ SE_EventScript_Leg_MARSHADOW::
 	setwildbattle SPECIES_MARSHADOW, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1098,7 +1050,6 @@ SE_EventScript_Leg_TAPU_FINI::
 	setwildbattle SPECIES_TAPU_FINI, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1117,7 +1068,6 @@ SE_EventScript_Leg_NIHILEGO::
 	setwildbattle SPECIES_NIHILEGO, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1136,7 +1086,6 @@ SE_EventScript_Leg_POIPOLE::
 	setwildbattle SPECIES_POIPOLE, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1155,7 +1104,6 @@ SE_EventScript_Leg_TAPU_LELE::
 	setwildbattle SPECIES_TAPU_LELE, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1174,7 +1122,6 @@ SE_EventScript_Leg_TAPU_KOKO::
 	setwildbattle SPECIES_TAPU_KOKO, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1193,7 +1140,6 @@ SE_EventScript_Leg_TAPU_BULU::
 	setwildbattle SPECIES_TAPU_BULU, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1212,7 +1158,6 @@ SE_EventScript_Leg_KARTANA::
 	setwildbattle SPECIES_KARTANA, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1231,7 +1176,6 @@ SE_EventScript_Leg_BUZZWOLE::
 	setwildbattle SPECIES_BUZZWOLE, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1250,7 +1194,6 @@ SE_EventScript_Leg_PHEROMOSA::
 	setwildbattle SPECIES_PHEROMOSA, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1269,7 +1212,6 @@ SE_EventScript_Leg_ZERAORA::
 	setwildbattle SPECIES_ZERAORA, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1288,7 +1230,6 @@ SE_EventScript_Leg_MAGEARNA::
 	setwildbattle SPECIES_MAGEARNA, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1307,7 +1248,6 @@ SE_EventScript_Leg_CELESTEELA::
 	setwildbattle SPECIES_CELESTEELA, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1326,7 +1266,6 @@ SE_EventScript_Leg_XURKITREE::
 	setwildbattle SPECIES_XURKITREE, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1345,7 +1284,6 @@ SE_EventScript_Leg_COSMOG::
 	setwildbattle SPECIES_COSMOG, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1364,7 +1302,6 @@ SE_EventScript_Leg_NECROZMA::
 	setwildbattle SPECIES_NECROZMA, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1383,7 +1320,6 @@ SE_EventScript_Leg_STAKATAKA::
 	setwildbattle SPECIES_STAKATAKA, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1402,7 +1338,6 @@ SE_EventScript_Leg_GUZZLORD::
 	setwildbattle SPECIES_GUZZLORD, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1421,7 +1356,6 @@ SE_EventScript_Leg_MELTAN::
 	setwildbattle SPECIES_MELTAN, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1440,7 +1374,6 @@ SE_EventScript_Leg_TYPE_NULL::
 	setwildbattle SPECIES_TYPE_NULL, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled
@@ -1459,7 +1392,6 @@ SE_EventScript_Leg_MELMETAL::
 	setwildbattle SPECIES_MELMETAL, 70
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LegendFled

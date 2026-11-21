@@ -470,6 +470,11 @@ static const u8 *ExpandPlaceholder_KunChan(void)
 
 static const u8 *ExpandPlaceholder_RivalName(void)
 {
+    // Super Emerald: each region's own rival (SILVER in Johto, BARRY in Sinnoh)
+    if (IsInJohto())
+        return COMPOUND_STRING("SILVER");
+    if (IsInSinnoh())
+        return COMPOUND_STRING("BARRY");
     // Super Fire Red: Blue's name in Kanto; in Hoenn May/Brendan are named explicitly
     if (IsInKanto() && gSaveBlock1Ptr->rivalName[0] != EOS)
         return gSaveBlock1Ptr->rivalName;

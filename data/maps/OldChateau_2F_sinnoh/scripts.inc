@@ -34,7 +34,6 @@ OldChateau_2F_EventScript_SNRotom::
 	setwildbattle SPECIES_ROTOM, 50
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
-	waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, OldChateau_2F_EventScript_SNRotom_Ran
