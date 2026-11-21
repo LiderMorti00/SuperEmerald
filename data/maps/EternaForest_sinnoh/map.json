@@ -11,12 +11,13 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
-      "type": "object",
       "local_id": "LOCALID_FOREST_CHERYL",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_CHERYL",
       "x": 16,
       "y": 78,
@@ -324,8 +325,8 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_CHATEAU_GARDENIA",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GARDENIA",
       "x": 61,
       "y": 8,
@@ -354,6 +355,7 @@
     },
     {
       "local_id": "LOCALID_SE_LEG_ZACIAN",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(ZACIAN)",
       "x": 40,
       "y": 51,

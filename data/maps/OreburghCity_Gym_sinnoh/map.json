@@ -11,11 +11,13 @@
   "allow_escaping": false,
   "allow_running": false,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
       "local_id": "LOCALID_GYM_ROARK",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ROARK",
       "x": 6,
       "y": 5,
@@ -29,6 +31,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
       "x": 3,
       "y": 8,
@@ -42,6 +45,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
       "x": 9,
       "y": 8,
@@ -55,6 +59,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GYM_GUY",
       "x": 7,
       "y": 12,

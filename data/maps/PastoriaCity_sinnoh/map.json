@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -26,6 +27,7 @@
   ],
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER_FRLG",
       "x": 33,
       "y": 17,
@@ -39,6 +41,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_FRLG",
       "x": 25,
       "y": 27,
@@ -52,6 +55,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MON_CLEFAIRY",
       "x": 23,
       "y": 39,
@@ -65,6 +69,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_FAT_MAN",
       "x": 39,
       "y": 35,
@@ -78,6 +83,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BEAUTY",
       "x": 49,
       "y": 13,
@@ -91,6 +97,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_FAT_MAN",
       "x": 33,
       "y": 32,
@@ -104,6 +111,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_M",
       "x": 35,
       "y": 43,
@@ -117,6 +125,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 51,
       "y": 28,
@@ -130,6 +139,7 @@
       "flag": "FLAG_SN_ITEM_METEOR_FALLS_1F_1R_MOON_STONE"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 34,
       "y": 27,
@@ -143,6 +153,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 37,
       "y": 27,
@@ -156,6 +167,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 35,
       "y": 27,
@@ -169,6 +181,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 36,
       "y": 27,
@@ -183,6 +196,7 @@
     },
     {
       "local_id": "LOCALID_SN_PASTORIACITY_BARRY",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BARRY",
       "x": 15,
       "y": 27,
@@ -197,6 +211,7 @@
     },
     {
       "local_id": "LOCALID_SN_PAST_GRUNT",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GALAXY_GRUNT_M",
       "x": 36,
       "y": 9,
@@ -211,6 +226,7 @@
     },
     {
       "local_id": "LOCALID_SN_PAST_WAKE_A",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_WAKE",
       "x": 14,
       "y": 28,
@@ -225,6 +241,7 @@
     },
     {
       "local_id": "LOCALID_SN_PAST_BARRY_A",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BARRY",
       "x": 16,
       "y": 28,
@@ -239,6 +256,7 @@
     },
     {
       "local_id": "LOCALID_SN_PAST_WAKE_B",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_WAKE",
       "x": 35,
       "y": 10,
@@ -253,6 +271,7 @@
     },
     {
       "local_id": "LOCALID_SN_PAST_BARRY_B",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BARRY",
       "x": 37,
       "y": 10,
@@ -266,6 +285,7 @@
       "flag": "FLAG_SN_HIDE_PAST_BOMB"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_SCIENTIST_M",
       "x": 21,
       "y": 46,
@@ -279,6 +299,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_PARASOL_LADY",
       "x": 40,
       "y": 17,
@@ -293,6 +314,7 @@
     },
     {
       "local_id": "LOCALID_SN_PAST_BARRY_GUARD",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BARRY",
       "x": 36,
       "y": 9,
