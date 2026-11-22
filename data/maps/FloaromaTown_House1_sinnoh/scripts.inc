@@ -63,6 +63,7 @@ FloaromaTown_House1_EventScript_TMGirl::
 	goto_if_eq VAR_RESULT, NO, FloaromaTown_House1_EventScript_TMGirlNo
 	msgbox FloaromaTown_House1_Text_TMGirlYes, MSGBOX_DEFAULT
 	giveitem ITEM_TM_AERIAL_ACE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_FLOAROMA_TM
 	release
 	end

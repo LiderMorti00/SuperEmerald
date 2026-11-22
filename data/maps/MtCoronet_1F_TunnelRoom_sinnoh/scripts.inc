@@ -16,7 +16,7 @@ MtCoronet_1F_TunnelRoom_Text_GruntDefeat::
 	.string "Where do you get that power?!$"
 
 MtCoronet_1F_TunnelRoom_Text_GruntIntro::
-	.string "I can't believe you chased me here…\n"
+	.string "A TRAINER? All the way down here?\n"
 	.string "OK, let's see how tough you are.$"
 
 MtCoronet_1F_TunnelRoom_EventScript_Grunt2::
@@ -27,16 +27,16 @@ MtCoronet_1F_TunnelRoom_EventScript_Grunt2::
 MtCoronet_1F_TunnelRoom_Text_Grunt2Post::
 	.string "The closer you are to the peak, the\n"
 	.string "closer you are to space!\p"
-	.string "Soon, TEAM GALACTIC will… Uh… Team\n"
-	.string "GALACTIC will achieve greatness!$"
+	.string "I still come up here to think about\n"
+	.string "what TEAM GALACTIC left behind.$"
 
 MtCoronet_1F_TunnelRoom_Text_Grunt2Defeat::
 	.string "You turned the tables on me… I call\n"
 	.string "interference…$"
 
 MtCoronet_1F_TunnelRoom_Text_Grunt2Intro::
-	.string "This is our final operation. No one will\n"
-	.string "interfere!$"
+	.string "TEAM GALACTIC may be finished, but\n"
+	.string "I can still battle!$"
 
 MtCoronet_1F_TunnelRoom_EventScript_Grunt3::
 	trainerbattle_single TRAINER_BROOKE_5_SINNOH, MtCoronet_1F_TunnelRoom_Text_Grunt3Intro, MtCoronet_1F_TunnelRoom_Text_Grunt3Defeat
@@ -58,8 +58,8 @@ MtCoronet_1F_TunnelRoom_Text_Grunt3Defeat::
 MtCoronet_1F_TunnelRoom_Text_Grunt3Intro::
 	.string "Say, listen, do you realize you're\n"
 	.string "breaking hearts by being successful?\p"
-	.string "It's your fault that TEAM GALACTIC\n"
-	.string "members are in so much pain…$"
+	.string "Some of us still haven't moved on\n"
+	.string "since TEAM GALACTIC fell.$"
 
 MtCoronet_1F_TunnelRoom_EventScript_PtNpc1::
 	msgbox MtCoronet_1F_TunnelRoom_Text_PtNpc1, MSGBOX_NPC

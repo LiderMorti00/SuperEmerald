@@ -7,9 +7,9 @@ PokemonMansion_MaidsRoom_EventScript_PtNpc1::
 	faceplayer
 	goto_if_set FLAG_RECEIVED_SN_POKEMON_MANSION_MAIDS_ROOM_SOOTHE_BELL, PokemonMansion_MaidsRoom_EventScript_PtNpc1_TrainerThatPokemonLove
 	msgbox PokemonMansion_MaidsRoom_Text_PtNpc1_0, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_SN_POKEMON_MANSION_MAIDS_ROOM_SOOTHE_BELL
 	giveitem ITEM_SOOTHE_BELL, 1
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_SN_POKEMON_MANSION_MAIDS_ROOM_SOOTHE_BELL
 	release
 	end
 

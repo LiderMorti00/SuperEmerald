@@ -7,9 +7,9 @@ HearthomeCity_Flat2_F2_EventScript_PtNpc1::
 	faceplayer
 	goto_if_set FLAG_RECEIVED_SN_HEARTHOME_CITY_SOUTHEAST_HOUSE_2F_SHELL_BELL, HearthomeCity_Flat2_F2_EventScript_PtNpc1_ExplainShellBell
 	msgbox HearthomeCity_Flat2_F2_Text_PtNpc1_0, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_SN_HEARTHOME_CITY_SOUTHEAST_HOUSE_2F_SHELL_BELL
 	giveitem ITEM_SHELL_BELL, 1
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_SN_HEARTHOME_CITY_SOUTHEAST_HOUSE_2F_SHELL_BELL
 	release
 	end
 

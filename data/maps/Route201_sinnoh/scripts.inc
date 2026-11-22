@@ -44,6 +44,7 @@ Route201_EventScript_Clerk::
 	goto_if_set FLAG_RECEIVED_ROUTE201_POTION, Route201_EventScript_ClerkAfter
 	msgbox Route201_Text_PtPotion, MSGBOX_DEFAULT
 	giveitem ITEM_POTION
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_ROUTE201_POTION
 	release
 	end

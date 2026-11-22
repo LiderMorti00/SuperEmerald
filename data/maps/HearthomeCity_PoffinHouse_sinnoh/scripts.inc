@@ -27,6 +27,7 @@ HearthomeCity_PoffinHouse_EventScript_SNCase::
 	goto_if_eq VAR_RESULT, TRUE, HearthomeCity_PoffinHouse_EventScript_SNHasCase
 	msgbox HearthomeCity_PoffinHouse_Text_SNCase, MSGBOX_DEFAULT
 	giveitem ITEM_POKEBLOCK_CASE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_SN_RECEIVED_POKEBLOCK_CASE
 	msgbox HearthomeCity_PoffinHouse_Text_SNCase2, MSGBOX_DEFAULT
 	release
