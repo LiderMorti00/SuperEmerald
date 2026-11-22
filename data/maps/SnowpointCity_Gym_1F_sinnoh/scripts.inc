@@ -244,9 +244,7 @@ SnowpointCity_Gym_1F_EventScript_PtGymStatue::
 
 SnowpointCity_Gym_1F_Text_PtGymStatue::
 	.string "SNOWPOINT CITY POKéMON GYM\n"
-	.string "LEADER: CANDICE\p"
-	.string "Certified TRAINERS:\n"
-	.string "{RIVAL}$"
+	.string "LEADER: CANDICE$"
 
 SnowpointCity_Gym_1F_EventScript_PtGymStatueWon::
 	msgbox SnowpointCity_Gym_1F_Text_PtGymStatueWon, MSGBOX_DEFAULT
@@ -257,5 +255,4 @@ SnowpointCity_Gym_1F_Text_PtGymStatueWon::
 	.string "SNOWPOINT CITY POKéMON GYM\n"
 	.string "LEADER: CANDICE\p"
 	.string "Certified TRAINERS:\n"
-	.string "{RIVAL}\n"
 	.string "{PLAYER}$"

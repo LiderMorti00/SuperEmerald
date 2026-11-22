@@ -278,9 +278,7 @@ PastoriaCity_Gym_EventScript_PtGymStatue::
 
 PastoriaCity_Gym_Text_PtGymStatue::
 	.string "PASTORIA CITY POKéMON GYM\n"
-	.string "LEADER: CRASHER WAKE\p"
-	.string "Certified TRAINERS:\n"
-	.string "{RIVAL}$"
+	.string "LEADER: CRASHER WAKE$"
 
 PastoriaCity_Gym_EventScript_PtGymStatueWon::
 	msgbox PastoriaCity_Gym_Text_PtGymStatueWon, MSGBOX_DEFAULT
@@ -291,5 +289,4 @@ PastoriaCity_Gym_Text_PtGymStatueWon::
 	.string "PASTORIA CITY POKéMON GYM\n"
 	.string "LEADER: CRASHER WAKE\p"
 	.string "Certified TRAINERS:\n"
-	.string "{RIVAL}\n"
 	.string "{PLAYER}$"

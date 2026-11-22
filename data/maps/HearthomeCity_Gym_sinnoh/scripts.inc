@@ -279,9 +279,7 @@ HearthomeCity_Gym_EventScript_PtGymStatue::
 
 HearthomeCity_Gym_Text_PtGymStatue::
 	.string "HEARTHOME CITY POKéMON GYM\n"
-	.string "LEADER: FANTINA\p"
-	.string "Certified TRAINERS:\n"
-	.string "{RIVAL}$"
+	.string "LEADER: FANTINA$"
 
 HearthomeCity_Gym_EventScript_PtGymStatueWon::
 	msgbox HearthomeCity_Gym_Text_PtGymStatueWon, MSGBOX_DEFAULT
@@ -292,5 +290,4 @@ HearthomeCity_Gym_Text_PtGymStatueWon::
 	.string "HEARTHOME CITY POKéMON GYM\n"
 	.string "LEADER: FANTINA\p"
 	.string "Certified TRAINERS:\n"
-	.string "{RIVAL}\n"
 	.string "{PLAYER}$"

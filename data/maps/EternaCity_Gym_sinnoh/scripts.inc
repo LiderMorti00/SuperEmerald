@@ -210,9 +210,7 @@ EternaCity_Gym_EventScript_GymStatue::
 
 EternaCity_Gym_Text_GymStatue::
 	.string "ETERNA CITY POKéMON GYM\n"
-	.string "LEADER: GARDENIA\p"
-	.string "Certified TRAINERS:\n"
-	.string "{RIVAL}$"
+	.string "LEADER: GARDENIA$"
 
 EternaCity_Gym_EventScript_GymStatuePostVictory::
 	msgbox EternaCity_Gym_Text_GymStatuePlayerWon, MSGBOX_DEFAULT
@@ -223,5 +221,4 @@ EternaCity_Gym_Text_GymStatuePlayerWon::
 	.string "ETERNA CITY POKéMON GYM\n"
 	.string "LEADER: GARDENIA\p"
 	.string "Certified TRAINERS:\n"
-	.string "{RIVAL}\n"
 	.string "{PLAYER}$"

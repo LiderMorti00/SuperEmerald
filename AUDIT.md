@@ -236,3 +236,5 @@ Cross-checked all eight gym leader map bindings against the eight badge-award sc
 - Cianwood Pokémon Center: checked the nurse, guide, passengers, bookshelf, clock, respawn and return warp. The guide recognizes the Storm Badge and the fisher no longer promises an unavailable Pokémon.
 
 This pass covers badge and dialogue integration; it does not certify every movement in the gym puzzles. Playtesting before and after each victory remains pending.
+
+The Sinnoh comparison covered the two plaque states at all eight gyms. Seven displayed the rival placeholder as a certified challenger regardless of story progress. Plaques now show the gym and leader on arrival, then the player's name after the corresponding Sinnoh badge. Sunyshore's leader and certified trainer list are on separate lines. This is targeted source coverage of the plaques.

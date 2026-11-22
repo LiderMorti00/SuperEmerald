@@ -300,9 +300,7 @@ CanalaveCity_Gym_EventScript_PtGymStatue::
 
 CanalaveCity_Gym_Text_PtGymStatue::
 	.string "CANALAVE CITY POKéMON GYM\n"
-	.string "LEADER: BYRON\p"
-	.string "Certified TRAINERS:\n"
-	.string "{RIVAL}$"
+	.string "LEADER: BYRON$"
 
 CanalaveCity_Gym_EventScript_PtGymStatueWon::
 	msgbox CanalaveCity_Gym_Text_PtGymStatueWon, MSGBOX_DEFAULT
@@ -313,5 +311,4 @@ CanalaveCity_Gym_Text_PtGymStatueWon::
 	.string "CANALAVE CITY POKéMON GYM\n"
 	.string "LEADER: BYRON\p"
 	.string "Certified TRAINERS:\n"
-	.string "{RIVAL}\n"
 	.string "{PLAYER}$"

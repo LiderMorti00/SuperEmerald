@@ -109,9 +109,7 @@ OreburghCity_Gym_EventScript_GymStatue::
 
 OreburghCity_Gym_Text_GymStatue::
 	.string "OREBURGH CITY POKéMON GYM\n"
-	.string "LEADER: ROARK\p"
-	.string "Certified TRAINERS:\n"
-	.string "{RIVAL}$"
+	.string "LEADER: ROARK$"
 
 OreburghCity_Gym_EventScript_GymStatuePostVictory::
 	msgbox OreburghCity_Gym_Text_GymStatuePlayerWon, MSGBOX_DEFAULT
@@ -122,5 +120,4 @@ OreburghCity_Gym_Text_GymStatuePlayerWon::
 	.string "OREBURGH CITY POKéMON GYM\n"
 	.string "LEADER: ROARK\p"
 	.string "Certified TRAINERS:\n"
-	.string "{RIVAL}\n"
 	.string "{PLAYER}$"

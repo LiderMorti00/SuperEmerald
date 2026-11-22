@@ -402,9 +402,7 @@ VeilstoneCity_Gym_EventScript_PtGymStatue::
 
 VeilstoneCity_Gym_Text_PtGymStatue::
 	.string "VEILSTONE CITY POKéMON GYM\n"
-	.string "LEADER: MAYLENE\p"
-	.string "Certified TRAINERS:\n"
-	.string "{RIVAL}$"
+	.string "LEADER: MAYLENE$"
 
 VeilstoneCity_Gym_EventScript_PtGymStatueWon::
 	msgbox VeilstoneCity_Gym_Text_PtGymStatueWon, MSGBOX_DEFAULT
@@ -415,5 +413,4 @@ VeilstoneCity_Gym_Text_PtGymStatueWon::
 	.string "VEILSTONE CITY POKéMON GYM\n"
 	.string "LEADER: MAYLENE\p"
 	.string "Certified TRAINERS:\n"
-	.string "{RIVAL}\n"
 	.string "{PLAYER}$"
