@@ -9,6 +9,7 @@ Run from the repo root:  python3 tools/sfr/se/check_project.py
  - duplicated flag / var numbers among the Super Emerald constants
  - Hoenn-only things (secret bases...) outside Hoenn
  - silent Center/Mart music and lamppost halos on their entrances
+ - direct trainer battles without a corresponding party
 """
 import json, re, glob, os, sys
 from collections import defaultdict
@@ -137,6 +138,18 @@ for j in maps.values():
                 and (obj['x'], obj['y']) in doors):
             err('light', '%s has a lamp halo over the shop or center door at (%d,%d)'
                 % (j['name'], obj['x'], obj['y']))
+
+# Check direct trainer battles referenced by map and shared event scripts.
+trainer_parties = set()
+for f in glob.glob('src/data/trainers*.party'):
+    with open(f) as party_file:
+        trainer_parties.update(re.findall(r'^=== (TRAINER_\w+) ===$', party_file.read(), re.M))
+
+for f in glob.glob('data/maps/*/scripts.inc') + glob.glob('data/scripts/*.inc'):
+    with open(f) as scripts:
+        trainers = set(re.findall(r'^\s*trainerbattle_\w+\s+(TRAINER_\w+)\b', scripts.read(), re.M))
+    for trainer in sorted(trainers - trainer_parties):
+        err('trainer', '%s references %s without a party' % (f, trainer))
 
 for k, m in sorted(bad): print('[%s] %s' % (k, m))
 print('%d problems' % len(bad))

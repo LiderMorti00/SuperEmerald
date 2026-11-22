@@ -872,8 +872,8 @@ SE_Text_OroVictoryRoadAfter:
 	.string "You and your POKéMON trust each\n"
 	.string "other completely. I get it now.\p"
 	.string "Go beat the ELITE FOUR and LANCE.\n"
-	.string "Show them what a TRAINER from\l"
-	.string "OLIVINE can do!\p"
+	.string "Show them what HOENN's CHAMPION\l"
+	.string "can do!\p"
 	.string "I'll be cheering for you.$"
 
 @ ---------------------------------------------------------------------------
