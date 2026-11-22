@@ -40,6 +40,7 @@ GoldenrodCity_DepartmentStoreBasement_EventScript_Item_UltraBall::
 	end
 
 SE_J_GoldenrodCity_DepartmentStoreBasement_hns_GoldenrodCity_DepartmentStoreBasement_EventScript_Item_ExpShare::
+	finditem ITEM_EXP_SHARE
 	end
 
 GoldenrodCity_DepartmentStoreBasement_EventScript_Item_Ether::

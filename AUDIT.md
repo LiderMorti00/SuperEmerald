@@ -214,3 +214,10 @@ In `Route34_DayCare_hns`, reviewed the four NPC bindings and the four encycloped
 - `Route26_hns` and `Route26North_hns`: checked the trainer bindings, badges and League dialogue, Gaven and Beth's registration and rematches, pickups and exits. Jake and Joyce have playable copies on the northern map. Beth's opponent is no longer named using the Hoenn rival placeholder.
 - `Route26_House1_hns` and `Route26_House2_hns`: checked the healing conversation, both book prompts, the seven siblings' map bindings and the two house returns. The letter and four siblings' conversations no longer suggest an unimplemented reward. These four additional outdoor maps received a targeted dialogue check only.
 - `Route27_hns` and `Route27_House_hns`: checked the border conversation, trainer and rematch branches, pickups, falls sign and cave and house destinations. The border greeting also fits a return visit. The TM37 explanation now accounts for types immune to sand damage.
+
+## League gate, Route 28 and Tohjo Falls
+
+- `ReceptionGate_hns`: checked the physical badge checkpoint, its forced step back, the three guards and the four destinations. The east guard specifies the Johto League. The officer acknowledges the returning Johto Champion and the open road to Viridian.
+- `Route28_hns` and `Route28_House_hns`: checked the signs, wildlife, static encounter, pickup, house and exits. Restored the Flamethrower TM pickup and removed a promise of an unspecified gift from the celebrity's conversation.
+- `TohjoFalls_Cavern_hns` and `TohjoFalls_GiovanniRoom_hns`: checked the Heart Scale, entrances, radio, absent Giovanni and seven breakable rocks. Each rock now has its own temporary visibility flag.
+- A follow-up search located other item balls wired to empty scripts. Restored pickups with matching existing items on Route 32, at Lake of Rage, Union Cave B1F, Mt. Mortar 1F South, the Goldenrod store basement and underground storage, Ice Path 1F, Rocket Hideout B2F and Burned Tower B1F. These are targeted pickup checks. Imported move names without a corresponding TM in this build still need a design decision.

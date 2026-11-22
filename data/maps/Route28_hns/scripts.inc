@@ -3,6 +3,7 @@ Route28_hns_MapScripts::
 
 
 SE_J_Route28_hns_Route28_EventScript_Item_Flamethrower::
+	finditem ITEM_TM_FLAMETHROWER
 	end
 
 Route28_EventScript_Sign::

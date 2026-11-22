@@ -9,6 +9,7 @@ BurnedTower_B1F_EventScript_Item_UltraBall::
 	end
 
 SE_J_BurnedTower_B1F_hns_BurnedTower_B1F_EventScript_Item_Taunt::
+	finditem ITEM_TM_TAUNT
 	end
 
 SE_BurnedTowerB1F_OnFrame:

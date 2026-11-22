@@ -11,6 +11,7 @@ GoldenrodCity_UndergroundStorage_EventScript_Item_MaxEther::
     end
 
 SE_J_GoldenrodCity_UndergroundStorage_hns_GoldenrodCity_UndergroundStorage_EventScript_Item_TM_CALM_MIND::
+	finditem ITEM_TM_CALM_MIND
 	end
 
 GoldenrodCity_UndergroundStorage_EventScript_Grunt12::

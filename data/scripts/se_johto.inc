@@ -626,9 +626,20 @@ SE_EventScript_ReceptionGateOfficer::
 	end
 
 SE_EventScript_ReceptionGateOfficerOK::
+	goto_if_set FLAG_SE_JOHTO_LEAGUE_CLEARED, SE_EventScript_ReceptionGateChampion
 	msgbox SE_Text_ReceptionGateEightBadges, MSGBOX_DEFAULT
 	release
 	end
+
+SE_EventScript_ReceptionGateChampion::
+	msgbox SE_Text_ReceptionGateChampion, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_ReceptionGateChampion:
+	.string "Welcome back, CHAMPION.\p"
+	.string "Heading east? The road to VIRIDIAN\n"
+	.string "CITY is open to you.$"
 
 SE_EventScript_ReceptionGateSilverGuard::
 	msgbox SE_Text_ReceptionGateSilverGuard, MSGBOX_NPC
@@ -660,7 +671,7 @@ SE_Text_ReceptionGateKantoGuard:
 	.string "ROUTE 22 leads to VIRIDIAN CITY\n"
 	.string "in KANTO.\p"
 	.string "The way is only open to the\n"
-	.string "CHAMPION of the POKéMON LEAGUE.$"
+	.string "CHAMPION of the JOHTO LEAGUE.$"
 
 @ ---------------------------------------------------------------------------
 @ Hall of Fame (hall_of_fame_frlg.inc): the first time is the Johto League, the second

@@ -33,6 +33,7 @@ Route32_EventScript_GreatBall::
 	end
 
 SE_J_Route32_hns_Route32_EventScript_Item_Bullet_Seed::
+	finditem ITEM_TM_BULLET_SEED
 	end
 
 Route32_EventScript_YoungsterAlbert::

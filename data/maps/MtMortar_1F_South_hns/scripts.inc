@@ -7,4 +7,5 @@ MtMortar_1F_South_EventScript_Item_Elixir::
     end
 
 SE_J_MtMortar_1F_South_hns_MtMortar_1F_South_EventScript_Item_Aerial_Ace::
+	finditem ITEM_TM_AERIAL_ACE
 	end

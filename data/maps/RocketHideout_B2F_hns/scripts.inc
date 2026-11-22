@@ -62,6 +62,7 @@ RocketHideout_B2F_Text_GruntM19Seen::
     .string "You rotten little pest!$"
 
 SE_J_RocketHideout_B2F_hns_RocketHideout_EventScript_Item_Thief::
+	finditem ITEM_TM_THIEF
 	end
 
 RocketHideout_B2F_Text_LanceChooseMons::

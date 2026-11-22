@@ -141,6 +141,7 @@ LakeOfRage_EventScript_Item_Full_Restore::
 	end
 
 SE_J_LakeOfRage_hns_LakeOfRage_EventScript_Item_Secret_Power::
+	finditem ITEM_TM_SECRET_POWER
 	end
 
 LakeOfRage_EventScript_Item_Red_Flute::

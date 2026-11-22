@@ -37,6 +37,7 @@ UnionCave_B1F_Text_HikerLeonardSeen::
 	.string "What do you know! A visitor!$"
 
 SE_J_UnionCave_B1F_hns_UnionCave_B1F_EventScript_Item_RockTomb::
+	finditem ITEM_TM_ROCK_TOMB
 	end
 
 UnionCave_B1F_EventScript_Item_Xdefend::
