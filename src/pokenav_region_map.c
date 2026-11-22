@@ -232,7 +232,28 @@ static u32 HandleRegionMapInput(struct Pokenav_RegionMapMenu *state)
 
 static u32 HandleRegionMapInputZoomDisabled(struct Pokenav_RegionMapMenu *state)
 {
-    if (JOY_NEW(B_BUTTON))
+    struct RegionMap *regionMap = GetSubstructPtr(POKENAV_SUBSTRUCT_REGION_MAP);
+
+    // Kanto has a full region map but no city zoom artwork. Keep cursor
+    // navigation and Poke Rider flight available without enabling zoom.
+    if (IsInKanto())
+    {
+        switch (DoRegionMapInputCallback())
+        {
+        case MAP_INPUT_MOVE_END:
+            return POKENAV_MAP_FUNC_CURSOR_MOVED;
+        case MAP_INPUT_B_BUTTON:
+            state->callback = GetExitRegionMapMenuId;
+            return POKENAV_MAP_FUNC_EXIT;
+        case MAP_INPUT_R_BUTTON:
+            if (regionMap->mapSecType == MAPSECTYPE_CITY_CANFLY
+             && FlagGet(OW_FLAG_POKE_RIDER)
+             && Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType))
+                return POKENAV_MAP_FUNC_FLY;
+            break;
+        }
+    }
+    else if (JOY_NEW(B_BUTTON))
     {
         state->callback = GetExitRegionMapMenuId;
         return POKENAV_MAP_FUNC_EXIT;
@@ -332,7 +353,7 @@ static u32 LoopedTask_OpenRegionMap(s32 taskState)
         if (LoadRegionMapGfx())
             return LT_PAUSE;
 
-        if (!GetZoomDisabled())
+        if (!GetZoomDisabled() || IsInKanto())
         {
             CreateRegionMapPlayerIcon(4, 9);
             CreateRegionMapCursor(5, 10);
