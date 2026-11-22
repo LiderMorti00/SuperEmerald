@@ -238,3 +238,9 @@ Cross-checked all eight gym leader map bindings against the eight badge-award sc
 This pass covers badge and dialogue integration; it does not certify every movement in the gym puzzles. Playtesting before and after each victory remains pending.
 
 The Sinnoh comparison covered the two plaque states at all eight gyms. Seven displayed the rival placeholder as a certified challenger regardless of story progress. Plaques now show the gym and leader on arrival, then the player's name after the corresponding Sinnoh badge. Sunyshore's leader and certified trainer list are on separate lines. This is targeted source coverage of the plaques.
+
+## Moomoo Farm and multi-item rewards
+
+- `Route39_Barn_hns` and `Route39_FarmHouse_hns`: checked the actual shared scripts bound to the twins, Miltank and both farmers, berry refusal, recovery after seven berries, milk sales, both house exits and repeat dialogue. The farmer's wife now remembers whether Leftovers have already been delivered when six bottles of milk will not fit.
+- `Route39_hns`: checked the trainers, grazing Miltank, pickups, signs and the farm entrances. Headbutt advice now refers to eligible trees. The imported Drain Punch pickup still has no matching TM in this build.
+- Targeted Kanto follow-up: the Pewter Museum curator and the elder in Lavender's Volunteer Pokémon House now resume their reward bundles at the first undelivered item. Previously completed quest values are unchanged. Script-level retry tests covered every item, repeated failure, successful completion and subsequent interaction; ROM testing remains pending.

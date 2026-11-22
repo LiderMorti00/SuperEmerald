@@ -411,9 +411,9 @@
 #define VAR_SE_REQUEST_KANTO          0x500F // Celadon researcher requests done: 0-3
 #define VAR_SE_REQUEST_SINNOH         0x5010 // Hearthome researcher requests done: 0-3
 #define VAR_SE_ROCKET_QUEST           0x5011 // Rocket's return: 0 Proton, 1 Petrel, 2 Ariana, 3 Archer (Johto), 4 Mahogany hideout, 5 Five Island warehouse, 6 Giovanni (Celadon), 7 done
-#define VAR_SE_MOOMOO                 0x5012 // Sick Miltank (Route 39): berries fed 0-7, 8 = rewarded
-#define VAR_SE_THIEF_QUEST            0x5013 // Pewter Museum thief (Kanto): 0 unknown, 1 Mt. Moon, 2 Route 24, 3 caught, 4 rewarded
-#define VAR_SE_SPIRIT_QUEST           0x5014 // Restless spirits (Kanto): 0 unknown, 1-3 Pokemon Tower floors, 4 calmed, 5 rewarded
+#define VAR_SE_MOOMOO                 0x5012 // Sick Miltank (Route 39): berries fed 0-7, 8 = rewarded, 9 = milk pending
+#define VAR_SE_THIEF_QUEST            0x5013 // Pewter Museum thief (Kanto): 0 unknown, 1 Mt. Moon, 2 Route 24, 3 caught, 4 rewarded, 5 shard pending
+#define VAR_SE_SPIRIT_QUEST           0x5014 // Restless spirits (Kanto): 0 unknown, 1-3 Pokemon Tower floors, 4 calmed, 5 rewarded, 6 tag pending, 7 stone pending
 #define VAR_SE_GALACTIC_QUEST         0x5015 // Looker's last case (Sinnoh): 0 Looker, 1 Mars, 2 Jupiter, 3 Saturn, 4 Charon, 5 back to Looker, 6 Eterna building, 7 Cyrus, 8 done
 #define VAR_SE_TOWER_DATA_START       0x5016 // 0x5016-0x5026: the Battle Tower data that isn't loaded (Hoenn or Sinnoh), see SE_SwapTowerData
 #define VAR_SE_TOWER_DATA_END         0x5026

@@ -145,8 +145,8 @@ Route39_Text_TrainerTips::
 	.string "POKéMON out.\p"
 	.string "Different kinds of POKéMON\n"
 	.string "drop out of trees.\p"
-	.string "Use HEADBUTT on any tree\n"
-	.string "you see!$"
+	.string "Only some trees shake when\n"
+	.string "you hit them!$"
 
 Route39_EventScript_Sign1::
 	lock

@@ -174,6 +174,7 @@ SE_MoomooFarmer_Mart:
 SE_EventScript_MoomooFarmerWife::
 	lock
 	faceplayer
+	goto_if_eq VAR_SE_MOOMOO, 9, SE_EventScript_MoomooGiveMilk
 	goto_if_ge VAR_SE_MOOMOO, 8, SE_EventScript_MoomooFarmerWifeDone
 	goto_if_ge VAR_SE_MOOMOO, 7, SE_EventScript_MoomooFarmerWifeThanks
 	msgbox SE_Text_MoomooWifeSick, MSGBOX_DEFAULT
@@ -183,7 +184,10 @@ SE_EventScript_MoomooFarmerWifeThanks::
 	msgbox SE_Text_MoomooWifeThanks, MSGBOX_DEFAULT
 	giveitem ITEM_LEFTOVERS
 	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_QuestBagFull
+	setvar VAR_SE_MOOMOO, 9
+SE_EventScript_MoomooGiveMilk::
 	giveitem ITEM_MOOMOO_MILK, 6
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_QuestBagFull
 	setvar VAR_SE_MOOMOO, 8
 	msgbox SE_Text_MoomooWifeAfter, MSGBOX_DEFAULT
 	release
@@ -204,6 +208,7 @@ SE_EventScript_MuseumCurator::
 	case 1, SE_EventScript_MuseumCurator1
 	case 2, SE_EventScript_MuseumCurator2
 	case 3, SE_EventScript_MuseumCurator3
+	case 5, SE_EventScript_MuseumGiveShard
 	msgbox SE_Text_CuratorDone, MSGBOX_DEFAULT
 	release
 	end
@@ -224,7 +229,10 @@ SE_EventScript_MuseumCurator3::
 	msgbox SE_Text_Curator3, MSGBOX_DEFAULT
 	giveitem ITEM_OLD_AMBER
 	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_QuestBagFull
+	setvar VAR_SE_THIEF_QUEST, 5
+SE_EventScript_MuseumGiveShard::
 	giveitem ITEM_COMET_SHARD
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_QuestBagFull
 	setvar VAR_SE_THIEF_QUEST, 4
 	msgbox SE_Text_CuratorReward, MSGBOX_DEFAULT
 	release
@@ -260,6 +268,8 @@ SE_EventScript_SpiritElder::
 	case 0, SE_EventScript_SpiritElder0
 	case 4, SE_EventScript_SpiritElder4
 	case 5, SE_EventScript_SpiritElder5
+	case 6, SE_EventScript_SpiritGiveTag
+	case 7, SE_EventScript_SpiritGiveStone
 	msgbox SE_Text_SpiritElderWaiting, MSGBOX_DEFAULT
 	release
 	end
@@ -278,8 +288,14 @@ SE_EventScript_SpiritElder4::
 	msgbox SE_Text_SpiritElder4, MSGBOX_DEFAULT
 	giveitem ITEM_REAPER_CLOTH
 	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_QuestBagFull
+	setvar VAR_SE_SPIRIT_QUEST, 6
+SE_EventScript_SpiritGiveTag::
 	giveitem ITEM_SPELL_TAG
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_QuestBagFull
+	setvar VAR_SE_SPIRIT_QUEST, 7
+SE_EventScript_SpiritGiveStone::
 	giveitem ITEM_DUSK_STONE
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_QuestBagFull
 	setvar VAR_SE_SPIRIT_QUEST, 5
 	msgbox SE_Text_SpiritElderBye, MSGBOX_DEFAULT
 	release
