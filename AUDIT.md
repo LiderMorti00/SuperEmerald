@@ -87,3 +87,71 @@ of every dialogue branch.
   conversations in Canalave, Jubilife, Solaceon and the Resort Area.
 - ROM playtesting remains pending for movement trajectories, door transitions,
   time changes and the appearance of each exterior.
+
+## Transit maps with no local narrative events
+
+Reviewed the listed rooms individually for local dialogue and event bindings. Each has an empty map script, no NPCs, coordinate or background events, and no shared event or script map. Each listed warp leads to a destination warp that points back. This is source coverage only; collision and in-ROM traversal remain untested.
+
+- `BattlePark_Access`
+- `DragonsDen_Entrance_hns`
+- `EternaCity_GalacticBuilding_B1F_sinnoh`
+- `Gate_Route40_hns`
+- `IronIsland_1F_sinnoh`
+- `JubilifeCity_Flat1_F3_sinnoh`
+- `MagmaHideout_2F_3R`
+- `MeteorFalls_StevensCave`
+- `MtEmber_SummitPath_1F_Frlg`
+- `MtEmber_SummitPath_3F_Frlg`
+- `NavelRock_1F_Frlg`
+- `NavelRock_B1F`
+- `NavelRock_B1F_Frlg`
+- `NavelRock_BasePath_B10F_Frlg`
+- `NavelRock_BasePath_B11F_Frlg`
+- `NavelRock_BasePath_B1F_Frlg`
+- `NavelRock_BasePath_B2F_Frlg`
+- `NavelRock_BasePath_B3F_Frlg`
+- `NavelRock_BasePath_B4F_Frlg`
+- `NavelRock_BasePath_B5F_Frlg`
+- `NavelRock_BasePath_B6F_Frlg`
+- `NavelRock_BasePath_B7F_Frlg`
+- `NavelRock_BasePath_B8F_Frlg`
+- `NavelRock_BasePath_B9F_Frlg`
+- `NavelRock_Down01`
+- `NavelRock_Down02`
+- `NavelRock_Down03`
+- `NavelRock_Down04`
+- `NavelRock_Down05`
+- `NavelRock_Down06`
+- `NavelRock_Down07`
+- `NavelRock_Down08`
+- `NavelRock_Down09`
+- `NavelRock_Down10`
+- `NavelRock_Down11`
+- `NavelRock_Entrance`
+- `NavelRock_Fork`
+- `NavelRock_Fork_Frlg`
+- `NavelRock_SummitPath_2F_Frlg`
+- `NavelRock_SummitPath_3F_Frlg`
+- `NavelRock_SummitPath_4F_Frlg`
+- `NavelRock_SummitPath_5F_Frlg`
+- `NavelRock_Up1`
+- `NavelRock_Up2`
+- `NavelRock_Up3`
+- `NavelRock_Up4`
+- `Route226_Access_sinnoh`
+- `SandgemTown_RivalHouse_F2_sinnoh`
+- `SeafloorCavern_Room7`
+- `SinnohVictoryRoad_1F_Room1_sinnoh`
+- `SinnohVictoryRoad_1F_Room3_sinnoh`
+- `SolaceonRuins_Room1_Southeast_sinnoh`
+- `SolaceonRuins_Room2_Northeast_sinnoh`
+- `SolaceonRuins_Room2_Southeast_sinnoh`
+- `SolaceonRuins_Room3_Northwest_sinnoh`
+- `SolaceonRuins_Room4_sinnoh`
+- `SolaceonRuins_Room4_Southeast_sinnoh`
+- `SolaceonRuins_Room5_sinnoh`
+- `SolaceonRuins_Room5_Southwest_sinnoh`
+- `SolaceonRuins_Room6_Northwest_sinnoh`
+- `SolaceonRuins_Room6_sinnoh`
+- `SolaceonRuins_Room6_Southeast_sinnoh`
+- `VeilstoneCity_DepartmentStore_Roof_sinnoh`
