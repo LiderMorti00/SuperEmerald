@@ -17,7 +17,7 @@ SilphCo_5F_EventScript_WorkerM::
 	end
 
 SilphCo_5F_EventScript_WorkerMRocketsGone::
-	msgbox SilphCo_5F_Text_YoureOurHeroThankYou
+	msgbox SilphCo_5F_Text_SilphSecurity
 	release
 	end
 
@@ -62,9 +62,9 @@ SilphCo_5F_Text_RocketsInUproarAboutIntruder::
 	.string "some intruder.\p"
 	.string "That's you, right?$"
 
-SilphCo_5F_Text_YoureOurHeroThankYou::
-	.string "TEAM ROCKET took off!\n"
-	.string "You're our hero! Thank you!$"
+SilphCo_5F_Text_SilphSecurity::
+	.string "We tightened security after the\n"
+	.string "break-in. Staff use a CARD KEY.$"
 
 SilphCo_5F_Text_Grunt1Intro::
 	.string "I heard a kid was wandering\n"

@@ -21,7 +21,7 @@ SilphCo_9F_EventScript_HealWoman::
 	end
 
 SilphCo_9F_EventScript_HealWomanRocketsGone::
-	msgbox SilphCo_9F_Text_ThankYouSoMuch
+	msgbox SilphCo_9F_Text_StaffRestArea
 	release
 	end
 
@@ -51,8 +51,8 @@ SilphCo_9F_Text_YouShouldTakeQuickNap::
 SilphCo_9F_Text_DontGiveUp::
 	.string "Don't give up!$"
 
-SilphCo_9F_Text_ThankYouSoMuch::
-	.string "Thank you so much.$"
+SilphCo_9F_Text_StaffRestArea::
+	.string "This is the staff rest area.$"
 
 SilphCo_9F_Text_Grunt1Intro::
 	.string "Your POKéMON seem to adore you,\n"

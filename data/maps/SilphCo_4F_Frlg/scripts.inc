@@ -44,8 +44,8 @@ SilphCo_4F_Text_CantYouSeeImHiding::
 	.string "Can't you see I'm hiding?$"
 
 SilphCo_4F_Text_TeamRocketIsGone::
-	.string "Huh?\n"
-	.string "TEAM ROCKET is gone?$"
+	.string "After the trouble with TEAM ROCKET,\n"
+	.string "we reopened this floor to visitors.$"
 
 SilphCo_4F_Text_Grunt1Intro::
 	.string "TEAM ROCKET has taken control\n"

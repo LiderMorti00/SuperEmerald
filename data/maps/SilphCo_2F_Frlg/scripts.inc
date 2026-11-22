@@ -82,12 +82,11 @@ SilphCo_2F_Text_Grunt2PostBattle::
 	.string "TEAM ROCKET!$"
 
 Text_ThunderWaveTeach::
-	.string "Eeek!\n"
-	.string "No! Stop! Help!\p"
-	.string "Oh, you're not with TEAM ROCKET.\n"
-	.string "I'm sorry, I thought…\p"
-	.string "Will you forgive me if I teach\n"
-	.string "you the THUNDER WAVE technique?$"
+	.string "Welcome to SILPH!\p"
+	.string "We work with all sorts of POKéMON\n"
+	.string "here. I teach moves in my spare time.\p"
+	.string "Would you like me to teach one of\n"
+	.string "yours THUNDER WAVE?$"
 
 Text_ThunderWaveDeclined::
 	.string "Oh…\n"

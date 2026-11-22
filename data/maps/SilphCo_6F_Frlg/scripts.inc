@@ -67,7 +67,7 @@ SilphCo_6F_EventScript_WorkerF2::
 	end
 
 SilphCo_6F_EventScript_WorkerF2RocketsGone::
-	msgbox SilphCo_6F_Text_RocketsRanAwayBecauseOfYou
+	msgbox SilphCo_6F_Text_ResearchResumed
 	release
 	end
 
@@ -117,9 +117,10 @@ SilphCo_6F_Text_RocketsTryingToConquerWorld::
 	.string "TEAM ROCKET is trying to conquer\n"
 	.string "the world with POKéMON.$"
 
-SilphCo_6F_Text_RocketsRanAwayBecauseOfYou::
-	.string "TEAM ROCKET ran away, and it's all\n"
-	.string "because of you!$"
+SilphCo_6F_Text_ResearchResumed::
+	.string "We had to stop our research during\n"
+	.string "the occupation.\p"
+	.string "It feels good to be working again.$"
 
 SilphCo_6F_Text_TargetedSilphForOurMonProducts::
 	.string "They must have targeted SILPH for\n"

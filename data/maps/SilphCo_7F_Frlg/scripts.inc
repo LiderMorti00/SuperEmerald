@@ -261,8 +261,8 @@ SilphCo_7F_Text_RocketsAfterMasterBall::
 	.string "BALL, which catches any POKéMON.$"
 
 SilphCo_7F_Text_CanceledMasterBallProject::
-	.string "We canceled the MASTER BALL\n"
-	.string "project because of TEAM ROCKET.$"
+	.string "We kept the MASTER BALL project\n"
+	.string "under wraps after the break-in.$"
 
 SilphCo_7F_Text_BadIfTeamRocketTookOver::
 	.string "It would be bad if TEAM ROCKET\n"

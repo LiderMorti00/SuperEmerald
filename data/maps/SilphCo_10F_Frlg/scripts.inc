@@ -15,7 +15,7 @@ SilphCo_10F_EventScript_WorkerF::
 	end
 
 SilphCo_10F_EventScript_WorkerFRocketsGone::
-	msgbox SilphCo_10F_Text_KeepMeCryingASecret
+	msgbox SilphCo_10F_Text_NewStaff
 	release
 	end
 
@@ -58,9 +58,10 @@ SilphCo_10F_Text_WaaaImScared::
 	.string "Waaaaa!\n"
 	.string "I'm scared!$"
 
-SilphCo_10F_Text_KeepMeCryingASecret::
-	.string "About me crying…\n"
-	.string "Please keep it a secret.$"
+SilphCo_10F_Text_NewStaff::
+	.string "I started here after SILPH reopened.\p"
+	.string "The warp panels help when I get\n"
+	.string "sent from floor to floor.$"
 
 SilphCo_10F_Text_FloorSign::
 	.string "SILPH CO. HEAD OFFICE\n"
