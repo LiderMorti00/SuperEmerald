@@ -160,3 +160,14 @@ Reviewed the listed rooms individually for local dialogue and event bindings. Ea
 
 - `ResortArea_RibbonSyndicate_F1_sinnoh`: Read all five NPC scripts and checked the exterior and upstairs warp destinations. Corrected the six-tile offset in both axes for all five NPCs and three warps. Both exit tiles and the stair now coincide with the drawn doorway and stair.
 - `ResortArea_RibbonSyndicate_F2_sinnoh`: Read all four NPC scripts, including the spa acceptance, refusal and repeat branches. Checked the return warp to the corrected first-floor stair. Both floors still need a ROM playtest.
+
+## S.S. Aqua
+
+Read the dialogue and event bindings of all eleven Aqua interiors together with the Johto initialization and cruise scripts. ROM traversal and trainer sight lines remain untested.
+
+- `SSAqua_1F_hns`: boarding, crew, exit sailor, cabin destinations and departure announcement. The idle sailor now describes the route without announcing a departure.
+- `SSAqua_B1F_hns`: passenger battles, crew and both stairs. The on-duty sailor no longer sends the player looking for a hidden crewmate.
+- `SSAqua_CaptainsRoom_hns` and `SSAqua_RoomSSE_hns`: the captain and grandfather now have dialogue consistent with the skipped missing-child event.
+- `SSAqua_PlayersRoom_hns`: bed, healing, arrival while sailing and corridor return.
+- `SSAqua_RoomNW_hns`: restored Edward and Corey to walkable floor tiles inside the cabin. Checked their battles and the hidden sailor.
+- `SSAqua_RoomNE_hns`, `SSAqua_RoomNNE_hns`, `SSAqua_RoomSE_hns`, `SSAqua_RoomSSW_hns` and `SSAqua_RoomSW_hns`: passenger introductions, defeat and post-battle dialogue, the twins' double battle and cabin exits. Sean and Lyle now speak naturally on either leg of the voyage.

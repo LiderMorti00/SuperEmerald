@@ -23,10 +23,8 @@ SSAqua_1F_Text_Sailor2_FirstTime::
     .string "That will heal them.$"
 
 SSAqua_1F_Text_Sailor1_ToVermilion::
-    .string "FAST SHIP S.S.AQUA is en route to\n"
-    .string "VERMILION CITY.\p"
-    .string "We will make an announcement when\n"
-    .string "we arrive.$"
+	.string "The S.S. AQUA runs between OLIVINE\n"
+	.string "and VERMILION. Welcome aboard!$"
 
 SE_J_SSAqua_1F_hns_SSAqua_1F_EventScript_DoorSailor::
 	goto_if_ne VAR_SE_CRUISE_STATE, 0, SE_EventScript_CruiseExitSailor

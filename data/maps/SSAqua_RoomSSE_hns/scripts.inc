@@ -3,14 +3,9 @@ SSAqua_RoomSSE_hns_MapScripts::
 
 
 SSAqua_RoomSSE_Text_CantFindGranddaughter::
-    .string "Oh, hello…\p"
-    .string "I still can't find my\n"
-    .string "granddaughter.\p"
-    .string "If she's on the ship,\n"
-    .string "that's OK.\p"
-    .string "She's an energetic child,\n"
-    .string "so she may be bugging someone\l"
-    .string "I'm worried…$"
+	.string "My granddaughter loves this ship.\p"
+	.string "Last time we sailed together, she\n"
+	.string "talked the CAPTAIN into playing tag!$"
 
 SE_J_SSAqua_RoomSSE_hns_SSAqua_RoomSSE_EventScript_Grandpa::
 	msgbox SSAqua_RoomSSE_Text_CantFindGranddaughter, MSGBOX_NPC

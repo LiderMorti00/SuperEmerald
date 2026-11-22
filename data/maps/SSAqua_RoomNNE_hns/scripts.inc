@@ -33,5 +33,5 @@ SSAqua_RoomNNE_Text_CooltrainermSeanBeaten::
     .string "I wanted to win!$"
 
 SSAqua_RoomNNE_Text_CooltrainermSeanSeen::
-    .string "I'm going to KANTO\n"
-    .string "to test my skills.$"
+	.string "I test my skills on both sides of\n"
+	.string "the sea. How about a battle?$"

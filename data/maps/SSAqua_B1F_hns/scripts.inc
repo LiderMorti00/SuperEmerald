@@ -161,12 +161,9 @@ SSAqua_B1F_Text_JugglerFritzSeen::
 	.string "Urrf… I'm seasick!$"
 
 SSAqua_B1F_Text_FastShipOnDutySailor::
-	.string "Hey, kid. Could I get you to\n"
-	.string "look for my buddy?\p"
-	.string "He's goofing off somewhere,\n"
-	.string "that lazy bum!\p"
-	.string "I want to go find him, but I'm\n"
-	.string "on duty right now.$"
+	.string "I'm on duty until we reach port.\p"
+	.string "My buddy takes the next watch. I hope\n"
+	.string "he remembered to set his alarm!$"
 
 SE_J_SSAqua_B1F_hns_SSAqua_B1F_EventScript_SailorLookingForBuddy::
 	msgbox SSAqua_B1F_Text_FastShipOnDutySailor, MSGBOX_NPC

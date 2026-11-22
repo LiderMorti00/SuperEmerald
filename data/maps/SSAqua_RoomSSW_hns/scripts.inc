@@ -15,8 +15,8 @@ SSAqua_RoomSSW_Text_FirebreatherLyleBeaten::
     .string "Fizzle… The flame's tiny…$"
 
 SSAqua_RoomSSW_Text_FirebreatherLyleSeen::
-    .string "I'm going to KANTO to put\n"
-    .string "on fire-breathing shows!$"
+	.string "I put on fire-breathing shows in\n"
+	.string "KANTO. Care for a preview?$"
 
 SSAqua_RoomSSW_EventScript_Ken::
 	trainerbattle_single TRAINER_KEN_HNS, SSAqua_RoomSSW_Text_BugCatcherKenSeen, SSAqua_RoomSSW_Text_BugCatcherKenBeaten
