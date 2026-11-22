@@ -59,10 +59,10 @@ SolaceonTown_EventScript_PtNpc5::
 SolaceonTown_Text_PtNpc5::
 	.string "Your encounters with POKéMON can be\n"
 	.string "considered your shared history.\p"
-	.string "This here's a POKéNAV app called\n"
-	.string "POKéMON History.\p"
-	.string "Use it to see your history of POKéMON\n"
-	.string "catches.$"
+	.string "Your POKéDEX records the species\n"
+	.string "you've caught.\p"
+	.string "I like to keep a journal of where\n"
+	.string "I met each of my partners, too.$"
 
 SolaceonTown_EventScript_PtNpc6::
 	msgbox SolaceonTown_Text_PtNpc6, MSGBOX_NPC

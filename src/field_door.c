@@ -1035,7 +1035,8 @@ static void CopyDoorTilesToVram(const struct DoorGraphics *gfx, const struct Doo
     if (gfx->size == DOOR_SIZE_2x2_LEFT || gfx->size == DOOR_SIZE_2x2_RIGHT)
         CpuFastCopy(gfx->tiles + frame->offset, (void *)(VRAM + TILE_OFFSET_4BPP(DOOR_TILE_START_SIZE2)), 16 * TILE_SIZE_4BPP);
     else
-        CpuFastCopy(gfx->tiles + frame->offset, (void *)(VRAM + TILE_OFFSET_4BPP(DOOR_TILE_START_SIZE1)), 8 * TILE_SIZE_4BPP);
+        CpuFastCopy(gfx->tiles + frame->offset, (void *)(VRAM + TILE_OFFSET_4BPP(DOOR_TILE_START_SIZE1)),
+                    (gfx->size == DOOR_SIZE_1x1 ? 4 : 8) * TILE_SIZE_4BPP);
 }
 
 static void BuildDoorTiles(u16 *tiles, u16 tileNum, const u8 *paletteNums)

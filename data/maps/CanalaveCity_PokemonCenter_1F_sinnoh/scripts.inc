@@ -23,8 +23,8 @@ CanalaveCity_PokemonCenter_1F_Text_PtNpc1_0::
 	.string "HM from IRON ISLAND.\p"
 	.string "But I can't use it for moving boulders\n"
 	.string "until I beat BYRON, the GYM LEADER.\p"
-	.string "I should make a note of that on the\n"
-	.string "POKéNAV app Memo Pad.$"
+	.string "I'd better train a little more\n"
+	.string "before I challenge him.$"
 
 CanalaveCity_PokemonCenter_1F_EventScript_PtNpc2::
 	lock

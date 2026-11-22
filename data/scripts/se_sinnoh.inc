@@ -78,9 +78,8 @@ SE_EventScript_ShowCanalaveDawn::
 
 SE_EventScript_CanalaveDawnScene::
 	lockall
-	applymovement LOCALID_CANALAVE_SE_DAWN, Common_Movement_WalkInPlaceFasterUp
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
+	turnobject LOCALID_CANALAVE_SE_DAWN, DIR_NORTH
+	turnobject LOCALID_PLAYER, DIR_SOUTH
 	msgbox SE_Text_DawnWelcome, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_SE_SINNOH_ARRIVAL, 2

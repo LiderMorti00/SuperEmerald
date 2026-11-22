@@ -15,12 +15,12 @@ JubilifeCity_PoketchCompany_F2_EventScript_PtNpc2::
 	end
 
 JubilifeCity_PoketchCompany_F2_Text_PtNpc2::
-	.string "POKéMON Watch! That's POKéNAV for\n"
-	.string "short.\p"
-	.string "Say it the long way and… What does\n"
-	.string "POKéMON stand for again?\p"
-	.string "Anyway, I'm the father of the\n"
-	.string "president of the POKéNAV Company!$"
+	.string "My child runs the POKéNAV branch\n"
+	.string "here in JUBILIFE.\p"
+	.string "We get visitors from HOENN who\n"
+	.string "already know every menu.\p"
+	.string "I still ask for help finding the\n"
+	.string "map sometimes!$"
 
 JubilifeCity_PoketchCompany_F2_EventScript_PtNpc3::
 	lock

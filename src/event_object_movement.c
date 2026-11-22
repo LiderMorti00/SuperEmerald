@@ -2953,9 +2953,9 @@ void GetFollowerAction(struct ScriptContext *ctx) // Essentially a big switch fo
 void UpdateLightSprite(struct Sprite *sprite)
 {
     s16 left =   gSaveBlock1Ptr->pos.x - 2;
-    s16 right =  gSaveBlock1Ptr->pos.x + 17;
+    s16 right =  gSaveBlock1Ptr->pos.x + MAP_OFFSET_W + 2;
     s16 top =    gSaveBlock1Ptr->pos.y;
-    s16 bottom = gSaveBlock1Ptr->pos.y + 15;
+    s16 bottom = gSaveBlock1Ptr->pos.y + MAP_OFFSET_H + 2;
     s16 x = sprite->sLightXPos;
     s16 y = sprite->sLightYPos;
     if (!(x >= left && x <= right && y >= top && y <= bottom))

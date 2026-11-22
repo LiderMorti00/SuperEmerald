@@ -11,12 +11,12 @@ ResortArea_House_Text_PtNpc1::
 	.string "all I need.\p"
 	.string "I learn so much just sitting here. I\n"
 	.string "absorb knowledge!\p"
-	.string "I learned about the POKéNAV app\n"
-	.string "Marking Map, for instance.\p"
-	.string "They say the Marking Map can track\n"
-	.string "POKéMON that travel around.\p"
-	.string "…I've never met any traveling POKéMON,\n"
-	.string "but I've heard about them.$"
+	.string "I heard that some POKéMON never\n"
+	.string "stay on one route for long.\p"
+	.string "Everyone seems to spot them in\n"
+	.string "a different place.\p"
+	.string "I've never seen one myself.\n"
+	.string "Maybe I'll get lucky someday!$"
 
 ResortArea_House_EventScript_PtNpc2::
 	lock

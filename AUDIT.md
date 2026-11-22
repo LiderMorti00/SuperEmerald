@@ -69,3 +69,21 @@ of every dialogue branch.
   conversations no longer assume earlier meetings, gifts or a Kanto hometown.
 - Floaroma Meadow and Two Island: checked the original rescue dialogue against
   the imported storyline's flags. Their original scenes remain skipped.
+
+## Door, movement and exterior lighting pass
+
+- Veilstone Department Store: the exterior warp at (25, 30) uses metatile
+  0x25C. Its animation now covers the 16×16 glass tile below the façade.
+  The three sliding frames use the same palette as the closed door.
+- Canalave arrival: the passenger spawns one tile north of Dawn. Both face
+  each other directly before the welcome message.
+- The source sweep resolved the labels referenced by 3,172 movement calls.
+  This checks references, with manual follow-up on the Canalave arrival.
+- Reviewed the palette sources and lighting flags for all 279 map headers
+  classified as naturally lit exteriors and counted 40 light sprite events.
+  One remaining loose sidecar belongs to the Goldenrod store roof. The roof
+  shares the Department Store palettes and does not load that sidecar.
+- Rechecked inherited dialogue about Pokétch features, correcting visible
+  conversations in Canalave, Jubilife, Solaceon and the Resort Area.
+- ROM playtesting remains pending for movement trajectories, door transitions,
+  time changes and the appearance of each exterior.
