@@ -63,7 +63,7 @@ SunyshoreCity_PokemonCenter_1F_Text_PtNpc3_0::
 	.string "city built roads out of solar panels.\p"
 	.string "Those solar panels provide us with\n"
 	.string "clean energy, and they're good roads.\p"
-	.string "It's a symbol of SUNNYSHORE's will to\n"
+	.string "It's a symbol of SUNYSHORE's will to\n"
 	.string "survive, I think.$"
 
 SE_SunyshoreCity_PC_OnTransition::

@@ -249,7 +249,7 @@ ValorLakefront_EventScript_SNCollector::
 
 ValorLakefront_Text_SNBlackout::
 	.string "Stop, stop! Yes, you!\p"
-	.string "SUNNYSHORE CITY, which is down this\n"
+	.string "SUNYSHORE CITY, which is down this\n"
 	.string "road, had a major blackout!\p"
 	.string "Crews are working on restoring power,\n"
 	.string "but the road's closed now.$"

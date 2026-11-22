@@ -483,7 +483,7 @@ SunyshoreCity_Gym_EventScript_PtGymStatue::
 	end
 
 SunyshoreCity_Gym_Text_PtGymStatue::
-	.string "SUNNYSHORE CITY POKéMON GYM\p"
+	.string "SUNYSHORE CITY POKéMON GYM\p"
 	.string "LEADER: VOLKNER$"
 
 SunyshoreCity_Gym_EventScript_PtGymStatueWon::
@@ -492,6 +492,6 @@ SunyshoreCity_Gym_EventScript_PtGymStatueWon::
 	end
 
 SunyshoreCity_Gym_Text_PtGymStatueWon::
-	.string "SUNNYSHORE CITY POKéMON GYM\p"
+	.string "SUNYSHORE CITY POKéMON GYM\p"
 	.string "LEADER: VOLKNER Certified TRAINERS:\p"
 	.string "{PLAYER}$"

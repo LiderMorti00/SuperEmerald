@@ -336,8 +336,8 @@ SE_Text_WallySinnohWait:
 	.string "SINNOH LEAGUE, okay?$"
 
 SE_Text_WallySinnoh:
-	.string "WALLY: The CHAMPION of HOENN, JOHTO,\n"
-	.string "KANTO and now SINNOH…\p"
+	.string "WALLY: You won the SINNOH LEAGUE!\n"
+	.string "Remember our first trip together?\p"
 	.string "When we first met, I couldn't even\n"
 	.string "catch a POKéMON on my own.\p"
 	.string "Now my team and I are ready.\n"

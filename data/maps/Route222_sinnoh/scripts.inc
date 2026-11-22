@@ -261,7 +261,7 @@ Route222_EventScript_PtSign1::
 	end
 
 Route222_Text_PtSign1::
-	.string "Rt. 222 SUNNYSHORE CITY$"
+	.string "Rt. 222 SUNYSHORE CITY$"
 
 Route222_EventScript_PtSign2::
 	msgbox Route222_Text_PtSign2, MSGBOX_SIGN

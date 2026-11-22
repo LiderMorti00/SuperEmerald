@@ -18,9 +18,8 @@ MtCoronet_4F_Room1_Text_GruntDefeat::
 	.string "foolish, you say…$"
 
 MtCoronet_4F_Room1_Text_GruntIntro::
-	.string "TEAM GALACTIC is all powerful!\p"
-	.string "Only a fool would show defiance to the\n"
-	.string "mighty might of TEAM GALACTIC!$"
+	.string "I used to think this uniform made\n"
+	.string "me strong. Care to test that?$"
 
 MtCoronet_4F_Room1_EventScript_Grunt2::
 	trainerbattle_single TRAINER_VALERIE_4_SINNOH, MtCoronet_4F_Room1_Text_Grunt2Intro, MtCoronet_4F_Room1_Text_Grunt2Defeat
@@ -28,15 +27,12 @@ MtCoronet_4F_Room1_EventScript_Grunt2::
 	end
 
 MtCoronet_4F_Room1_Text_Grunt2Post::
-	.string "You can struggle all you want, but you\n"
-	.string "can't stop TEAM GALACTIC alone!\p"
-	.string "It doesn't matter how many POKéMON\n"
-	.string "you try to use as your tools!$"
+	.string "I beat my old time on the climb.\n"
+	.string "The battle needs work, though.$"
 
 MtCoronet_4F_Room1_Text_Grunt2Defeat::
 	.string "Gyah!$"
 
 MtCoronet_4F_Room1_Text_Grunt2Intro::
-	.string "Our time is coming! A time for us alone!\p"
-	.string "We'll send you back in time. A time\n"
-	.string "before you started training!$"
+	.string "I've been timing my climb.\n"
+	.string "One battle before I head back down?$"

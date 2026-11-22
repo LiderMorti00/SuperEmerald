@@ -669,7 +669,7 @@ SE_EventScript_VolknerGiveTM::
 	end
 
 SE_Text_VolknerIntro:
-	.string "I'm VOLKNER, SUNNYSHORE's GYM LEADER.\pI was bored of battles… Show me\nsomething that sparks!$"
+	.string "I'm VOLKNER, SUNYSHORE's GYM LEADER.\pI was bored of battles… Show me\nsomething that sparks!$"
 
 SE_Text_VolknerDefeat:
 	.string "…That was fun. You earned the\nBEACON BADGE.$"

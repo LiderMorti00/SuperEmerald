@@ -125,7 +125,7 @@ SE_Text_PalmerReady:
 SE_Text_PalmerGreeting:
 	.string "Hey! I'm PALMER, the TOWER TYCOON!\p"
 	.string "I keep hearing about a TRAINER who\n"
-	.string "became CHAMPION in four regions.\p"
+	.string "came all the way from HOENN.\p"
 	.string "Is that really you? Ha! Then I can't\n"
 	.string "wait any longer!\p"
 	.string "Trainers who've come this far always\n"

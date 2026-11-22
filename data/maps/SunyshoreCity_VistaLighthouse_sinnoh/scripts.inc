@@ -58,7 +58,7 @@ SunyshoreCity_VistaLighthouse_EventScript_SNVolkner_T2::
 SunyshoreCity_VistaLighthouse_EventScript_SNVolkner_T1::
 	.string "… …\p"
 	.string "…So, you're the latest challenger up\n"
-	.string "against the SUNNYSHORE GYM…$"
+	.string "against the SUNYSHORE GYM…$"
 
 SunyshoreCity_VistaLighthouse_EventScript_PtSign1::
 	msgbox SunyshoreCity_VistaLighthouse_Text_PtSign1, MSGBOX_SIGN

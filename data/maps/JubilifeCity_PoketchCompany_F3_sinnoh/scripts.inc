@@ -7,9 +7,9 @@ JubilifeCity_PoketchCompany_F3_EventScript_PtNpc1::
 	end
 
 JubilifeCity_PoketchCompany_F3_Text_PtNpc1::
-	.string "Do you have a POKéNAV?\p"
-	.string "There's a girl's model and a boy's\n"
-	.string "model, each in different colors.$"
+	.string "That POKéNAV is from HOENN!\p"
+	.string "Here we make the POKéTCH. See?\n"
+	.string "It fits right on your wrist.$"
 
 JubilifeCity_PoketchCompany_F3_EventScript_PtNpc2::
 	msgbox JubilifeCity_PoketchCompany_F3_Text_PtNpc2, MSGBOX_NPC
@@ -27,8 +27,7 @@ JubilifeCity_PoketchCompany_F3_EventScript_PtNpc3::
 	end
 
 JubilifeCity_PoketchCompany_F3_Text_PtNpc3::
-	.string "People everywhere make POKéNAV apps.\p"
-	.string "You'll be able to get new apps from\n"
-	.string "surprising sources.\p"
-	.string "The PCs here have guides on the\n"
-	.string "various POKéNAV apps.$"
+	.string "When someone brings us an idea for\n"
+	.string "a POKéTCH app, I draw the screen.\p"
+	.string "Try fitting a clock on your wrist\n"
+	.string "and leaving room for the numbers!$"

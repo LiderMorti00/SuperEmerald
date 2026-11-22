@@ -26,6 +26,6 @@ SunyshoreCity_Mart_EventScript_PtNpc2::
 
 SunyshoreCity_Mart_Text_PtNpc2_0::
 	.string "I shall buy Seals for decorating Poké\n"
-	.string "Balls at the SUNNYSHORE Market.\p"
+	.string "Balls at the SUNYSHORE Market.\p"
 	.string "Using those Seals in a cool way will be\n"
 	.string "sure to impress my POKéMON!$"

@@ -8,9 +8,8 @@ MtCoronet_6F_EventScript_Grunt::
 	end
 
 MtCoronet_6F_Text_GruntPost::
-	.string "We couldn't stop you… We'll be\n"
-	.string "discarded as useless…\p"
-	.string "Our boss is ruthless that way…$"
+	.string "I used to dread reporting a loss.\n"
+	.string "Feels good to just shake hands.$"
 
 MtCoronet_6F_Text_GruntDefeat::
 	.string "Wh-- How dare you! That's how you\n"

@@ -12,7 +12,7 @@ SunyshoreCity_House1_EventScript_PtNpc1::
 SunyshoreCity_House1_Text_PtNpc1_0::
 	.string "I'd heard that TEAM GALACTIC was up to\n"
 	.string "no good.\p"
-	.string "But here in SUNNYSHORE, we've never\n"
+	.string "But here in SUNYSHORE, we've never\n"
 	.string "even seen any of them around.\p"
 	.string "Of course, our GYM LEADER VOLKNER is\n"
 	.string "invincible in every way.$"

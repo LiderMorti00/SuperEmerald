@@ -19,7 +19,7 @@ SunyshoreCity_Text_PtNpc2::
 	.string "especially the lighthouse and the GYM.\p"
 	.string "They finally decided to turn all the\n"
 	.string "city's roads into giant solar panels.\p"
-	.string "SUNNYSHORE is the Sunshine City, so\n"
+	.string "SUNYSHORE is the Sunshine City, so\n"
 	.string "the system works perfectly.$"
 
 SunyshoreCity_EventScript_PtNpc3::
@@ -179,7 +179,7 @@ SunyshoreCity_EventScript_PtSign1::
 	end
 
 SunyshoreCity_Text_PtSign1::
-	.string "SUNNYSHORE Market A Selection of the\n"
+	.string "SUNYSHORE Market A Selection of the\n"
 	.string "World's Seals$"
 
 SunyshoreCity_EventScript_PtSign2::
@@ -187,7 +187,7 @@ SunyshoreCity_EventScript_PtSign2::
 	end
 
 SunyshoreCity_Text_PtSign2::
-	.string "SUNNYSHORE CITY POKéMON GYM LEADER:\n"
+	.string "SUNYSHORE CITY POKéMON GYM LEADER:\n"
 	.string "VOLKNER The Shining, Shocking Star$"
 
 SunyshoreCity_EventScript_PtSign3::

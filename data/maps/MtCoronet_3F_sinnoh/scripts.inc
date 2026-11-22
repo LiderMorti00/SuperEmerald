@@ -8,20 +8,16 @@ MtCoronet_3F_EventScript_Grunt::
 	end
 
 MtCoronet_3F_Text_GruntPost::
-	.string "Join TEAM GALACTIC and then abide by\n"
-	.string "our rules.\p"
-	.string "That would solve all our problems!$"
+	.string "I still turn around when I hear\n"
+	.string "boots on those stairs.$"
 
 MtCoronet_3F_Text_GruntDefeat::
 	.string "I don't accept this! I will not accept\n"
 	.string "this!$"
 
 MtCoronet_3F_Text_GruntIntro::
-	.string "We GRUNTS have two jobs.\p"
-	.string "One, ensure the success of our\n"
-	.string "operation at the summit.\p"
-	.string "Two, utterly destroy any intruders to\n"
-	.string "stop their meddling!$"
+	.string "I used to guard these stairs.\n"
+	.string "Now I just come up here to train.$"
 
 MtCoronet_3F_EventScript_Grunt2::
 	trainerbattle_single TRAINER_VALERIE_2_SINNOH, MtCoronet_3F_Text_Grunt2Intro, MtCoronet_3F_Text_Grunt2Defeat
@@ -29,13 +25,12 @@ MtCoronet_3F_EventScript_Grunt2::
 	end
 
 MtCoronet_3F_Text_Grunt2Post::
-	.string "It's too late!\p"
-	.string "No amount of desperation from a kid\n"
-	.string "like you will make a difference!$"
+	.string "We used to march up here in pairs.\n"
+	.string "It's a quieter climb these days.$"
 
 MtCoronet_3F_Text_Grunt2Defeat::
 	.string "When's it gonna be my turn…$"
 
 MtCoronet_3F_Text_Grunt2Intro::
-	.string "Our time has come! It's TEAM GALACTIC's\n"
-	.string "time now!$"
+	.string "My old uniform still fits.\n"
+	.string "Let's see if my team is rusty!$"
