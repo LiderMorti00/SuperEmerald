@@ -25,7 +25,7 @@ CianwoodCity_Text_PokecenterSuperNerd::
 CianwoodGym_EventScript_GymGuide::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_CIANWOOD_GYM, CianwoodGym_EventScript_GymGuideAfter
+	goto_if_set FLAG_JOHTO_BADGE5_GET, CianwoodGym_EventScript_GymGuideAfter
 	msgbox CianwoodCity_Text_GymGuide, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -72,9 +72,9 @@ CianwoodCity_Text_PokecenterLass::
 	.string "rare POKéMON.$"
 
 CianwoodPokemoncenter_Text_Fisher2::
-	.string "You seem like you need a water\n"
-	.string "POKéMON.\p"
-	.string "Here, take this one, I have plenty.$"
+	.string "My WATER POKéMON carried me here\n"
+	.string "from OLIVINE. Now it's their turn\l"
+	.string "to rest.$"
 
 SE_J_CianwoodPokecenter_hns_CianwoodPokemoncenter_EventScript_Fisher::
 	msgbox CianwoodPokemoncenter_Text_Fisher2, MSGBOX_NPC

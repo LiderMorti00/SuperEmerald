@@ -12,15 +12,11 @@ GoldenrodCity_Gym_EventScript_Gym_Guy::
 	end
 
 GoldenrodCity_Gym_Text_GymGuide::
-    .string "Yo! CHAMP in making!\p"
-    .string "This GYM is home to WHITNEY, the\n"
-    .string "master of NORMAL-type POKéMON.\p"
-    .string "Be cautious of her cute team.\p"
-    .string "Some of the POKéMON in this gym\n"
-    .string "have the newly discovered FAIRY\l"
-    .string "type as well.\p"
-    .string "Check ROUTE 34 if you need a\n"
-    .string "FIGHTING-type or POISON-type.$"
+	.string "WHITNEY switched to FAIRY types.\p"
+	.string "If you came ready for NORMAL types,\n"
+	.string "you might want to rethink your team.\p"
+	.string "Try POISON or STEEL moves against\n"
+	.string "her CLEFABLE!$"
 
 GoldenrodCity_Gym_EventScript_Gym_Guy_After::
 	msgbox GoldenrodCity_Gym_Text_GymGuideWin, MSGBOX_DEFAULT
@@ -113,7 +109,7 @@ GoldenrodCity_Gym_Text_LassBridgetSeen::
 
 GoldenrodCity_Gym_EventScript_Statue::
 	lock
-	goto_if_set FLAG_DEFEATED_GOLDENROD_CITY_GYM, GoldenrodCity_Gym_EventScript_Statue2
+	goto_if_set FLAG_JOHTO_BADGE3_GET, GoldenrodCity_Gym_EventScript_Statue2
 	msgbox GoldenrodCity_Gym_Text_GymStatue, MSGBOX_DEFAULT
 	closemessage
 	release

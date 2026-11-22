@@ -5,22 +5,16 @@ EcruteakCity_Gym_hns_MapScripts::
 EcruteakCity_Gym_EventScript_GymGuy::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_ECRUTEAK_CITY_GYM, EcruteakCity_Gym_EventScript_GymGuy2
+	goto_if_set FLAG_JOHTO_BADGE4_GET, EcruteakCity_Gym_EventScript_GymGuy2
 	msgbox EcruteakCity_GymGuideText, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
 
 EcruteakCity_GymGuideText::
-	.string "Hey CHAMP! You're almost\n"
-	.string "halfway there!\p"
-	.string "Trainers here use GHOST and\n"
-	.string "DARK-type POKéMON.\p"
-	.string "While MORTY is a GHOST-type\n"
-	.string "expert, be wary of his mystic\l"
-	.string "deer.\p"
-	.string "It's said to cause strange\n"
-	.string "nightmares…$"
+	.string "Watch your step in the dark.\p"
+	.string "MORTY's GENGAR is just as tricky\n"
+	.string "as the path through this GYM!$"
 
 EcruteakCity_Gym_EventScript_GymGuy2::
 	msgbox EcruteakCity_GymGuideWinText, MSGBOX_DEFAULT
@@ -125,7 +119,7 @@ SE_J_EcruteakCity_Gym_hns_EcruteakCity_Gym_EventScript_Morty::
 
 EcruteakCity_Gym_EventScript_Statue::
 	lock
-	goto_if_set FLAG_DEFEATED_ECRUTEAK_CITY_GYM, EcruteakCity_Gym_EventScript_Statue2
+	goto_if_set FLAG_JOHTO_BADGE4_GET, EcruteakCity_Gym_EventScript_Statue2
 	msgbox EcruteakCity_Gym_Text_GymStatue, MSGBOX_DEFAULT
 	closemessage
 	release

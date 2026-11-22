@@ -227,3 +227,12 @@ In `Route34_DayCare_hns`, reviewed the four NPC bindings and the four encycloped
 - `IcePath_1F_hns`: reviewed the three pickups, two hidden items, alternating wildlife, the skipped Kimono Girl event and both outside exits.
 - `IcePath_B1F_hns` and `IcePath_B2F_hns`: checked the puzzle signs, skip destination, pickups, Chien-Pao encounter and four pairs of boulder flags. Fixed Strength recognition for the Johto objects; landed boulders stay in place. The sign explains the holes and the puzzle shortcut waits for its warp.
 - `IcePath_B3F_hns` and `IcePath_B4F_hns`: checked the alternating Delibird and Swinub, ten breakable rocks, hidden items, Never-Melt Ice and ladders. The party menu now recognizes the regional breakable rocks. Checked reciprocal destinations for all five floors. Solving the puzzle and interacting with the rocks in a ROM remain untested.
+
+## Johto gym badges and guide dialogue
+
+Cross-checked all eight gym leader map bindings against the eight badge-award scripts, the local guide and statue branches, and the first-battle team data. Imported victory flags were never set by these leaders. The local branches now use the badges already stored in existing saves.
+
+- Violet, Azalea, Goldenrod, Ecruteak, Cianwood, Olivine, Mahogany and Blackthorn: checked guide advice and recognition after victory. Removed the obsolete Blackthorn guide branch sending players to the Dragon's Den to claim a badge already awarded in the gym.
+- Cianwood Pokémon Center: checked the nurse, guide, passengers, bookshelf, clock, respawn and return warp. The guide recognizes the Storm Badge and the fisher no longer promises an unavailable Pokémon.
+
+This pass covers badge and dialogue integration; it does not certify every movement in the gym puzzles. Playtesting before and after each victory remains pending.

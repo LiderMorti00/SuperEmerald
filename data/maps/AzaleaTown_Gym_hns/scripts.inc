@@ -13,16 +13,10 @@ AzaleaTown_Gym_EventScript_GymGuy::
 	end
 
 AzaleaTown_Gym_Text_GymGuide::
-	.string "Yo, challenger!\p"
-	.string "BUGSY's young, but his knowledge\n"
-	.string "of bug POKéMON is for real.\p"
-	.string "It's going to be tough\n"
-	.string "without my advice.\p"
-	.string "Let's see… BUGSY's bagworm POKéMON\n"
-	.string "knows a move that covers its\l"
-	.string "ROCK-type weakness.\p"
-	.string "Oh, and don't forget about those\n"
-	.string "nasty critical hits! Good luck!$"
+	.string "BUGSY can tell you all about bugs.\n"
+	.string "Ask him about SCIZOR sometime!\p"
+	.string "That metal shell is tough, but a\n"
+	.string "FIRE move can get through it.$"
 
 AzaleaTown_Gym_EventScript_GymGuy2::
 	msgbox AzaleaTown_Gym_Text_GymGuideWin, MSGBOX_DEFAULT
@@ -143,7 +137,7 @@ AzaleaTown_Gym_Text_BugCatcherAlSeen::
 
 AzaleaTown_Gym_EventScript_Statue::
 	lock
-	goto_if_set FLAG_DEFEATED_AZALEA_TOWN_GYM, AzaleaTown_Gym_EventScript_Statue2
+	goto_if_set FLAG_JOHTO_BADGE2_GET, AzaleaTown_Gym_EventScript_Statue2
 	msgbox AzaleaTown_Gym_Text_GymStatue, MSGBOX_DEFAULT
 	closemessage
 	release

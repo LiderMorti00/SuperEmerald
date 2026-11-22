@@ -79,7 +79,7 @@ CianwoodGym_Text_BlackbeltLungSeen::
 
 CianwoodGym_EventScript_Statue::
 	lock
-	goto_if_set FLAG_DEFEATED_CIANWOOD_GYM, CianwoodGym_EventScript_Statue2
+	goto_if_set FLAG_JOHTO_BADGE5_GET, CianwoodGym_EventScript_Statue2
 	msgbox CianwoodGym_Text_GymStatue, MSGBOX_DEFAULT
 	closemessage
 	release

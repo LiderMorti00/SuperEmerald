@@ -55,29 +55,16 @@ VioletGym_Text_BirdKeeperRod_Seen::
 VioletCity_Gym_EventScript_GymGuy::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_VIOLET_GYM, VioletCity_Gym_EventScript_GymGuy2
+	goto_if_set FLAG_JOHTO_BADGE1_GET, VioletCity_Gym_EventScript_GymGuy2
 	msgbox VioletGym_Text_GymGuide_Intro, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
 
 VioletGym_Text_GymGuide_Intro::
-	.string "Hey! What's up? I'm no TRAINER,\n"
-	.string "but I can give some advice!\p"
-	.string "Believe me! If you believe, a\n"
-	.string "championship dream can come true.\p"
-	.string "You believe? Then listen.\p"
-	.string "FALKNER's ace is a bulky owl\n"
-	.string "that loves to eat BERRIES.\p"
-	.string "While it's not the strongest,\n"
-	.string "it can take a lot of hits.\p"
-	.string "You can hurt it with ELECTRIC \n"
-	.string "and ROCK-type moves, but watch out\l"
-	.string "for MUD-SLAP!\p"
-	.string "If you want more help, go visit the\n"
-	.string "POKéMON ACADEMY.\p"
-	.string "The students there really know\n"
-	.string "their stuff!$"
+	.string "FALKNER's birds can swoop in fast.\p"
+	.string "Save an ELECTRIC or ROCK move for\n"
+	.string "his PIDGEOT. It's holding a BERRY!$"
 
 VioletCity_Gym_EventScript_GymGuy2::
 	msgbox VioletGym_Text_GymGuide_Win, MSGBOX_DEFAULT
@@ -85,13 +72,13 @@ VioletCity_Gym_EventScript_GymGuy2::
 	end	
 
 VioletGym_Text_GymGuide_Win::
-	.string "Nice battle! Keep it up,\n"
-	.string "and you'll be the CHAMP in no\l"
-	.string "time at all!$"
+	.string "You grounded FALKNER's team!\p"
+	.string "That ZEPHYRBADGE looks good on\n"
+	.string "you, {PLAYER}.$"
 
 VioletCity_Gym_EventScript_Statue::
 	lock
-	goto_if_set FLAG_DEFEATED_VIOLET_GYM, VioletCity_Gym_EventScript_Statue2
+	goto_if_set FLAG_JOHTO_BADGE1_GET, VioletCity_Gym_EventScript_Statue2
 	msgbox VioletCity_Gym_Text_GymStatue, MSGBOX_DEFAULT
 	closemessage
 	release

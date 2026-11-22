@@ -106,7 +106,7 @@ SE_J_MahoganyTown_Gym_hns_MahoganyTown_Gym_EventScript_Pryce::
 MahoganyTown_GymEventScript_GymGuy::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_MAHOGANY_TOWN_GYM, MahoganyTown_Gym_EventScript_GymGuy2
+	goto_if_set FLAG_JOHTO_BADGE7_GET, MahoganyTown_Gym_EventScript_GymGuy2
 	msgbox MahoganyTown_Gym_Text_Guide, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -118,8 +118,8 @@ MahoganyTown_Gym_Text_Guide::
     .string "He's got a solid lineup of\n"
     .string "POKéMON to cover whatever\l"
     .string "you bring his way.\p"
-    .string "Fire is a good place to start,\n"
-    .string "but watch out for the rain!$"
+    .string "Thinking of using FIRE? Watch out\n"
+    .string "for DEWGONG and WALREIN's SURF!$"
 
 MahoganyTown_Gym_EventScript_GymGuy2::
 	msgbox MahoganyTown_Gym_Text_GuideWin, MSGBOX_DEFAULT
@@ -134,7 +134,7 @@ MahoganyTown_Gym_Text_GuideWin::
 
 MahoganyTown_Gym_EventScript_Statue::
 	lock
-	goto_if_set FLAG_DEFEATED_MAHOGANY_TOWN_GYM,  MahoganyTown_Gym_EventScript_Statue2
+	goto_if_set FLAG_JOHTO_BADGE7_GET,  MahoganyTown_Gym_EventScript_Statue2
 	msgbox MahoganyTown_Gym_Text_GymStatue, MSGBOX_DEFAULT
 	closemessage
 	release
