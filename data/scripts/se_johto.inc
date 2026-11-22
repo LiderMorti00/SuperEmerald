@@ -443,15 +443,31 @@ SE_EventScript_JasminePostOrWing::
 	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_JasminePost
 	msgbox SE_Text_JasmineSilverWing, MSGBOX_DEFAULT
 	giveitem ITEM_SILVER_WING
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_SE_RECEIVED_SILVER_WING
 	msgbox SE_Text_JasmineSilverWingAfter, MSGBOX_DEFAULT
 	release
 	end
 
 SE_EventScript_JasminePost::
+	goto_if_set FLAG_SE_JOHTO_LEAGUE_CLEARED, SE_EventScript_JasmineAfterLeague
 	msgbox SE_Text_JasminePost, MSGBOX_DEFAULT
 	release
 	end
+
+SE_EventScript_JasmineAfterLeague::
+	msgbox SE_Text_JasmineAfterLeague, MSGBOX_DEFAULT
+	release
+	end
+
+SE_Text_JasmineAfterLeague:
+	.string "JASMINE: I heard you beat LANCE.\p"
+	.string "When we raced to the LIGHTHOUSE,\n"
+	.string "I always wanted to get there first.\p"
+	.string "Now I'm glad I got to see how far\n"
+	.string "we've both come.\p"
+	.string "Whatever port you sail to next,\n"
+	.string "I hope you'll visit OLIVINE again.$"
 
 SE_Text_JasmineIntro:
 	.string "{PLAYER}… You came.\pI've been waiting for this ever\nsince we were little.\pI use the… the clang! STEEL type!\pPlease, show me how strong you've\nbecome. I won't hold back.$"

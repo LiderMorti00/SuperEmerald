@@ -469,9 +469,13 @@ SE_Text_RocketOfficer4:
 	.string "hideout under the souvenir shop!$"
 
 SE_Text_RocketOfficer5:
-	.string "OFFICER: The KANTO police say TEAM\n"
-	.string "ROCKET has a warehouse on FIVE\l"
-	.string "ISLAND, with their last supplies!$"
+	.string "OFFICER: Look for ROCKET supplies\n"
+	.string "in the warehouse on FIVE ISLAND.\p"
+	.string "If you need a ferry pass, BILL can\n"
+	.string "help. His cottage is north of\l"
+	.string "CERULEAN CITY.\p"
+	.string "With his pass, take the ferry from\n"
+	.string "VERMILION CITY.$"
 
 SE_Text_RocketOfficer6:
 	.string "OFFICER: GIOVANNI himself is back?!\n"

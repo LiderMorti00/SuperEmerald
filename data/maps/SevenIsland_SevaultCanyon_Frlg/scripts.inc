@@ -55,9 +55,9 @@ SevenIsland_SevaultCanyon_Text_KatelynDefeat::
 	.string "cute looks.$"
 
 SevenIsland_SevaultCanyon_Text_KatelynPostBattle::
-	.string "Your mom bought those snazzy\n"
-	.string "RUNNING SHOES for you?\p"
-	.string "She must adore you.$"
+	.string "Those RUNNING SHOES must come in\n"
+	.string "handy on a trail like this.\p"
+	.string "I should get a pair of my own!$"
 
 SevenIsland_SevaultCanyon_Text_LeroyIntro::
 	.string "You look strong.\n"

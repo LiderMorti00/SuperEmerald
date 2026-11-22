@@ -49,3 +49,23 @@ The Route 116 Repeat Ball event was checked and already has a retry path.
 Two Island's rescue dialogue belongs to a cutscene skipped by Kanto's
 post-story initializer. Individual narrative review and ROM coverage are
 still open outside the maps and cases recorded above.
+
+## Dialogue continuity pass
+
+Searched the text in all 1,528 per-map script files for references to the
+visitor's identity, family and participation in earlier events. Checked the
+state and event bindings of the flagged candidates before altering them.
+This is a text sweep with targeted manual review, not individual certification
+of every dialogue branch.
+
+- Olivine Gym: Jasmine acknowledges the Johto League victory after her badge
+  and gift checks. The Silver Wing can still be claimed if the bag was full.
+- Mahogany hideout and the Rocket officer: the next lead is Proton's supplies
+  on Five Island, with directions to Bill and the Vermilion ferry.
+- Eterna Galactic Building: a grunt mentions the message from their old boss
+  before Travis confirms who sent it.
+- Mt. Coronet tunnel: the non-battling former grunt now appears as a hiker.
+- Celadon condominiums, Three Island tunnel and Sevault Canyon: reachable
+  conversations no longer assume earlier meetings, gifts or a Kanto hometown.
+- Floaroma Meadow and Two Island: checked the original rescue dialogue against
+  the imported storyline's flags. Their original scenes remain skipped.

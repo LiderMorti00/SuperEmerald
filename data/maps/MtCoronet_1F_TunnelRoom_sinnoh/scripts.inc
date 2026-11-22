@@ -66,7 +66,9 @@ MtCoronet_1F_TunnelRoom_EventScript_PtNpc1::
 	end
 
 MtCoronet_1F_TunnelRoom_Text_PtNpc1::
-	.string "Yeah, right! You're absolutely right!\n"
-	.string "I'm hopelessly lost!\p"
-	.string "Please don't pay attention to a lowly\n"
-	.string "grunt like me without any POKéMON!$"
+	.string "I used to wear a GALACTIC uniform.\p"
+	.string "I come here to hike now. I knew\n"
+	.string "these tunnels better than I knew\l"
+	.string "what our boss was planning.\p"
+	.string "Some of the others still train here.\n"
+	.string "I just like the quiet.$"

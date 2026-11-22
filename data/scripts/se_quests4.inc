@@ -264,11 +264,12 @@ SE_Text_RocketFinalAfter:
 	.string "ROCKET. Take it. It likes you better.$"
 
 SE_Text_RocketFinalBye:
-	.string "ARIANA: It doesn't matter anyway.\n"
-	.string "GIOVANNI has answered at last.\p"
-	.string "Our last supplies are in a warehouse\n"
-	.string "on FIVE ISLAND, in the SEVII ISLANDS.\p"
-	.string "ARCHER: Our boss is waiting in KANTO.\n"
+	.string "ARIANA: GIOVANNI answered at last.\n"
+	.string "PROTON has his supplies in a\l"
+	.string "warehouse on FIVE ISLAND.\p"
+	.string "ARCHER: Those crates are all he\n"
+	.string "needs to start over.\p"
+	.string "Our boss is waiting in KANTO.\n"
 	.string "You'll never find him!$"
 
 SE_Text_WarehouseGruntIntro:
@@ -379,8 +380,11 @@ SE_Text_EternaGruntAfter:
 	.string "We're just following orders…$"
 
 SE_Text_EternaGruntAfter2:
-	.string "The scientist is on the top floor.\n"
-	.string "He knows where the boss is…$"
+	.string "The scientist is on the top floor.\p"
+	.string "He got a message signed by our\n"
+	.string "old boss. It gave me chills.\p"
+	.string "No one had heard from him since\n"
+	.string "he vanished at SPEAR PILLAR.$"
 
 SE_Text_EternaScientistIntro:
 	.string "TRAVIS: CHARON's\n"
