@@ -90,8 +90,9 @@ Route204_EventScript_Taylor::
 	end
 
 Route204_Text_TaylorPost::
-	.string "By the way, have you collected new\n"
-	.string "apps from the POKéNAV Company?$"
+	.string "Have you seen the clowns in JUBILIFE?\n"
+	.string "They quiz TRAINERS for the POKéNAV\l"
+	.string "Company.$"
 
 Route204_Text_TaylorDefeat::
 	.string "It was a strong TRAINER who was drawn\n"

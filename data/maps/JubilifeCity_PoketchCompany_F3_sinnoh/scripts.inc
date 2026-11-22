@@ -8,8 +8,8 @@ JubilifeCity_PoketchCompany_F3_EventScript_PtNpc1::
 
 JubilifeCity_PoketchCompany_F3_Text_PtNpc1::
 	.string "That POKéNAV is from HOENN!\p"
-	.string "Here we make the POKéTCH. See?\n"
-	.string "It fits right on your wrist.$"
+	.string "Which do you open first, the map\n"
+	.string "or your list of TRAINERS?$"
 
 JubilifeCity_PoketchCompany_F3_EventScript_PtNpc2::
 	msgbox JubilifeCity_PoketchCompany_F3_Text_PtNpc2, MSGBOX_NPC
@@ -28,6 +28,6 @@ JubilifeCity_PoketchCompany_F3_EventScript_PtNpc3::
 
 JubilifeCity_PoketchCompany_F3_Text_PtNpc3::
 	.string "When someone brings us an idea for\n"
-	.string "a POKéTCH app, I draw the screen.\p"
-	.string "Try fitting a clock on your wrist\n"
-	.string "and leaving room for the numbers!$"
+	.string "the POKéNAV, I sketch it on paper.\p"
+	.string "Even the longest town name has to\n"
+	.string "fit on that little screen!$"

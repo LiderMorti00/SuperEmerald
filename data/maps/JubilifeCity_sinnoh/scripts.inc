@@ -158,11 +158,12 @@ JubilifeCity_EventScript_Clown1::
 	faceplayer
 	checkitem ITEM_COUPON_1
 	goto_if_eq VAR_RESULT, TRUE, JubilifeCity_EventScript_ClownDone
-	goto_if_set FLAG_SN_RECEIVED_POKENAV, JubilifeCity_EventScript_ClownDone
+	goto_if_set FLAG_SN_RECEIVED_POKENAV, JubilifeCity_EventScript_CampaignComplete
 	msgbox JubilifeCity_Text_ClownQuiz1, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, JubilifeCity_EventScript_ClownWrong
 	msgbox JubilifeCity_Text_ClownRight, MSGBOX_DEFAULT
 	giveitem ITEM_COUPON_1
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	goto JubilifeCity_EventScript_ClownRight
 
 JubilifeCity_EventScript_ClownRight::
@@ -207,11 +208,12 @@ JubilifeCity_EventScript_Clown2::
 	faceplayer
 	checkitem ITEM_COUPON_2
 	goto_if_eq VAR_RESULT, TRUE, JubilifeCity_EventScript_ClownDone
-	goto_if_set FLAG_SN_RECEIVED_POKENAV, JubilifeCity_EventScript_ClownDone
+	goto_if_set FLAG_SN_RECEIVED_POKENAV, JubilifeCity_EventScript_CampaignComplete
 	msgbox JubilifeCity_Text_ClownQuiz2, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, JubilifeCity_EventScript_ClownWrong
 	msgbox JubilifeCity_Text_ClownRight, MSGBOX_DEFAULT
 	giveitem ITEM_COUPON_2
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	goto JubilifeCity_EventScript_ClownRight
 
 JubilifeCity_Text_ClownQuiz2::
@@ -224,11 +226,12 @@ JubilifeCity_EventScript_Clown3::
 	faceplayer
 	checkitem ITEM_COUPON_3
 	goto_if_eq VAR_RESULT, TRUE, JubilifeCity_EventScript_ClownDone
-	goto_if_set FLAG_SN_RECEIVED_POKENAV, JubilifeCity_EventScript_ClownDone
+	goto_if_set FLAG_SN_RECEIVED_POKENAV, JubilifeCity_EventScript_CampaignComplete
 	msgbox JubilifeCity_Text_ClownQuiz3, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, JubilifeCity_EventScript_ClownWrong
 	msgbox JubilifeCity_Text_ClownRight, MSGBOX_DEFAULT
 	giveitem ITEM_COUPON_3
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	goto JubilifeCity_EventScript_ClownRight
 
 JubilifeCity_Text_ClownQuiz3::
@@ -236,6 +239,17 @@ JubilifeCity_Text_ClownQuiz3::
 	.string "Can a POKéMON hold an item?$"
 
 JubilifeCity_EventScript_Rowan::
+
+	goto JubilifeCity_EventScript_Looker
+
+JubilifeCity_EventScript_CampaignComplete::
+	msgbox JubilifeCity_Text_CampaignComplete, MSGBOX_DEFAULT
+	release
+	end
+
+JubilifeCity_Text_CampaignComplete::
+	.string "There's our quiz winner!\n"
+	.string "How's that CATCHING CHARM working?$"
 
 
 JubilifeCity_EventScript_Looker::
@@ -262,10 +276,11 @@ JubilifeCity_EventScript_President::
 	checkitem ITEM_COUPON_3
 	goto_if_eq VAR_RESULT, FALSE, JubilifeCity_EventScript_PresidentNoCoupons
 	msgbox JubilifeCity_Text_PresidentCoupons, MSGBOX_DEFAULT
+	giveitem ITEM_CATCHING_CHARM
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	removeitem ITEM_COUPON_1
 	removeitem ITEM_COUPON_2
 	removeitem ITEM_COUPON_3
-	giveitem ITEM_CATCHING_CHARM
 	setflag FLAG_SN_RECEIVED_POKENAV
 	call_if_eq VAR_SN_SINNOH_STORY, 15, JubilifeCity_EventScript_SetStory16
 	msgbox JubilifeCity_Text_PresidentPokenav, MSGBOX_DEFAULT
