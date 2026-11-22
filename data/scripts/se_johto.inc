@@ -3,14 +3,21 @@
 @ ---------------------------------------------------------------------------
 @ Petalburg Gym: Norman gives the Johto Ticket after the Hoenn League
 SE_EventScript_NormanTickets::
-	goto_if_unset FLAG_SE_RECEIVED_JOHTO_TICKET, SE_EventScript_NormanJohtoTicket
+	checkitem ITEM_JOHTO_TICKET
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_NormanJohtoTicket
 	return
 
 SE_EventScript_NormanJohtoTicket::
 	msgbox SE_Text_NormanJohtoTicket, MSGBOX_DEFAULT
 	giveitem ITEM_JOHTO_TICKET
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_NormanJohtoTicketBagFull
 	setflag FLAG_SE_RECEIVED_JOHTO_TICKET
 	msgbox SE_Text_NormanJohtoTicketExplain, MSGBOX_DEFAULT
+	release
+	end
+
+SE_EventScript_NormanJohtoTicketBagFull::
+	call Common_EventScript_BagIsFull
 	release
 	end
 

@@ -8,6 +8,7 @@ Run from the repo root:  python3 tools/sfr/se/check_project.py
  - objects with unknown graphics
  - duplicated flag / var numbers among the Super Emerald constants
  - Hoenn-only things (secret bases...) outside Hoenn
+ - silent Center/Mart music and lamppost halos on their entrances
 """
 import json, re, glob, os, sys
 from collections import defaultdict
@@ -112,6 +113,30 @@ for mid, j in maps.items():
     for ev in (j.get('object_events') or []) + (j.get('bg_events') or []):
         t = json.dumps(ev)
         if re.search(HOENN_ONLY, t): err('hoenn', '%s: %s' % (j['name'], ev.get('script', ev.get('type'))))
+
+# Music for Pokémon Centers and Marts, including the legacy IDs.
+indoor_tracks = {'MUS_POKE_CENTER', 'MUS_RG_POKE_CENTER', 'MUS_DPP_PC', 'MUS_POKE_MART', 'MUS_DPP_MART'}
+song_ids = {name: int(number) for name, number in re.findall(
+    r'^#define (MUS_\w+)\s+(\d+)\b', open('include/constants/songs.h').read(), re.M
+)}
+song_table = re.findall(r'^\s*song (\w+),', open('sound/song_table.inc').read(), re.M)
+for track in sorted(indoor_tracks):
+    index = song_ids[track]
+    if index >= len(song_table) or song_table[index] == 'mus_dummy':
+        err('music', '%s has no playable song in the table' % track)
+
+# A ball light belongs to a lamppost. Glass doors are illuminated by their palette.
+for j in maps.values():
+    doors = {
+        (w['x'], w['y']) for w in j.get('warp_events', []) or []
+        if '_POKEMON_CENTER_' in w['dest_map'] or w['dest_map'].endswith('_MART')
+    }
+    for obj in j.get('object_events', []) or []:
+        if (obj.get('graphics_id') == 'OBJ_EVENT_GFX_LIGHT_SPRITE'
+                and str(obj.get('trainer_sight_or_berry_tree_id')) in ('LIGHT_TYPE_BALL', '0')
+                and (obj['x'], obj['y']) in doors):
+            err('light', '%s has a lamp halo over the shop or center door at (%d,%d)'
+                % (j['name'], obj['x'], obj['y']))
 
 for k, m in sorted(bad): print('[%s] %s' % (k, m))
 print('%d problems' % len(bad))

@@ -11,9 +11,7 @@ SilphCo_11F_EventScript_President::
 	faceplayer
 	call SE_EventScript_SilphPresidentGift
 	goto_if_set FLAG_GOT_MASTER_BALL_FROM_SILPH, SilphCo_11F_EventScript_AlreadyGotMasterBall
-	checkplayergender
-	call_if_eq VAR_RESULT, MALE, SilphCo_11F_EventScript_PresidentThanksMale
-	call_if_eq VAR_RESULT, FEMALE, SilphCo_11F_EventScript_PresidentThanksFemale
+	msgbox SilphCo_11F_Text_GiftForVisitingChampion
 	checkitemspace ITEM_MASTER_BALL
 	goto_if_eq VAR_RESULT, FALSE, SilphCo_11F_EventScript_NoRoomForMasterBall
 	giveitem_msg SilphCo_11F_Text_ObtainedMasterBallFromPresident, ITEM_MASTER_BALL, 1, MUS_RG_OBTAIN_KEY_ITEM
@@ -21,14 +19,6 @@ SilphCo_11F_EventScript_President::
 	setflag FLAG_GOT_MASTER_BALL_FROM_SILPH
 	release
 	end
-
-SilphCo_11F_EventScript_PresidentThanksMale::
-	msgbox SilphCo_11F_Text_ThanksForSavingMeDearBoy
-	return
-
-SilphCo_11F_EventScript_PresidentThanksFemale::
-	msgbox SilphCo_11F_Text_ThanksForSavingMeDearGirl
-	return
 
 SilphCo_11F_EventScript_NoRoomForMasterBall::
 	msgbox SilphCo_11F_Text_YouHaveNoRoomForThis
@@ -41,7 +31,7 @@ SilphCo_11F_EventScript_AlreadyGotMasterBall::
 	end
 
 SilphCo_11F_EventScript_Secretary::
-	msgbox SilphCo_11F_Text_ThanksForRescuingUs, MSGBOX_NPC
+	msgbox SilphCo_11F_Text_SilphOpenToVisitors, MSGBOX_NPC
 	end
 
 SilphCo_11F_EventScript_GiovanniTriggerLeft::
@@ -133,25 +123,12 @@ SilphCo_11F_EventScript_Grunt2::
 	msgbox SilphCo_11F_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
 	end
 
-SilphCo_11F_Text_ThanksForSavingMeDearBoy::
-	.string "PRESIDENT: Oh, dear boy!\n"
-	.string "Thank you for saving SILPH.\p"
-	.string "I will never forget you saved us in\n"
-	.string "our moment of peril.\p"
-	.string "I have to thank you in some way.\p"
-	.string "Because I am rich, I can give you\n"
-	.string "anything.\p"
-	.string "Here, maybe this will do.$"
-
-SilphCo_11F_Text_ThanksForSavingMeDearGirl::
-	.string "PRESIDENT: Oh, dear girl!\n"
-	.string "Thank you for saving SILPH.\p"
-	.string "I will never forget you saved us in\n"
-	.string "our moment of peril.\p"
-	.string "I have to thank you in some way.\p"
-	.string "Because I am rich, I can give you\n"
-	.string "anything.\p"
-	.string "Here, maybe this will do.$"
+SilphCo_11F_Text_GiftForVisitingChampion::
+	.string "PRESIDENT: Welcome to SILPH!\p"
+	.string "Ever since TEAM ROCKET left,\n"
+	.string "we've been busy with our research.\p"
+	.string "I hear you're the CHAMPION of\n"
+	.string "HOENN. I'd like you to have this.$"
 
 SilphCo_11F_Text_ObtainedMasterBallFromPresident::
 	.string "{PLAYER} obtained a MASTER BALL\n"
@@ -170,11 +147,10 @@ SilphCo_11F_Text_ThatsOurSecretPrototype::
 SilphCo_11F_Text_YouHaveNoRoomForThis::
 	.string "You have no room for this.$"
 
-SilphCo_11F_Text_ThanksForRescuingUs::
-	.string "SECRETARY: Thank you for rescuing\n"
-	.string "all of us.\p"
-	.string "We, from the PRESIDENT down,\n"
-	.string "are indebted to you.$"
+SilphCo_11F_Text_SilphOpenToVisitors::
+	.string "SECRETARY: Welcome!\p"
+	.string "SILPH is open to visitors again.\n"
+	.string "It's good to see people back here.$"
 
 SilphCo_11F_Text_GiovanniIntro::
 	.string "Ah, {PLAYER}!\n"

@@ -77,8 +77,8 @@ SFR_EventScript_BrockRematch::
 	end
 
 SFR_Text_BrockRematch:
-	.string "BROCK: {PLAYER}! I heard you beat\n"
-	.string "RED at the POKéMON LEAGUE!\p"
+	.string "BROCK: {PLAYER}! I heard about your\n"
+	.string "win at the POKéMON LEAGUE!\p"
 	.string "My rock-hard POKéMON have trained\n"
 	.string "harder than ever.\p"
 	.string "Want to test them?$"
@@ -99,8 +99,8 @@ SFR_EventScript_MistyRematch::
 	end
 
 SFR_Text_MistyRematch:
-	.string "MISTY: Oh, it's you! The CHAMPION\n"
-	.string "who beat RED!\p"
+	.string "MISTY: Oh, it's you! I heard you\n"
+	.string "defeated LANCE!\p"
 	.string "I've been training WATER POKéMON\n"
 	.string "from all over the world.\p"
 	.string "Care for a splash?$"
@@ -120,8 +120,8 @@ SFR_EventScript_LtSurgeRematch::
 	end
 
 SFR_Text_LtSurgeRematch:
-	.string "LT. SURGE: Hey, kid! A CHAMPION of two\n"
-	.string "regions, huh?\p"
+	.string "LT. SURGE: Hey, CHAMPION! Ready\n"
+	.string "for another battle?\p"
 	.string "My ELECTRIC troops are charged up\n"
 	.string "like never before! Wanna rumble?$"
 
@@ -160,8 +160,8 @@ SFR_EventScript_KogaRematch::
 	end
 
 SFR_Text_KogaRematch:
-	.string "JANINE: Fufufu… The CHAMPION who\n"
-	.string "beat RED has come back!\p"
+	.string "JANINE: Fufufu… The CHAMPION has\n"
+	.string "come back!\p"
 	.string "My father trained me even harder\n"
 	.string "after our last battle.\p"
 	.string "Will you face my new techniques?$"
@@ -223,7 +223,7 @@ SFR_EventScript_BlueRematch::
 	end
 
 SE_Text_BlueRematch:
-	.string "BLUE: So you actually beat RED…\p"
+	.string "BLUE: So you beat LANCE again…\p"
 	.string "Heh. I knew you had it in you.\p"
 	.string "But I've been training too.\n"
 	.string "Let's see who's stronger now!$"
@@ -245,7 +245,7 @@ SFR_Text_KantoRematchAfter:
 	.string "Come challenge me again anytime.$"
 
 @ ---------------------------------------------------------------------------
-@ Prof. Oak after beating Red: a Sinnoh starter, then the Shiny Charm
+@ Prof. Oak after the Kanto League rematch: a Sinnoh starter, then the Shiny Charm
 @ ---------------------------------------------------------------------------
 @ Oak: Sinnoh starter and Shiny Charm
 SFR_EventScript_OakAfterHoenn::
@@ -339,9 +339,8 @@ SFR_Text_Piplup:
 	.string "PIPLUP$"
 
 SFR_Text_OakSinnohStarterIntro:
-	.string "OAK: {PLAYER}! You beat RED!\n"
+	.string "OAK: {PLAYER}! Well done!\n"
 	.string "You're the CHAMPION of KANTO, too!\p"
-	.string "Two regions… Remarkable!\p"
 	.string "To celebrate, I have a gift for you.\p"
 	.string "A friend of mine, PROF. ROWAN, sent\n"
 	.string "me three POKéMON from SINNOH.\p"
@@ -365,9 +364,8 @@ SFR_Text_OakAfterSinnohStarter:
 	.string "I'd like you to have.$"
 
 SFR_Text_OakShinyCharm:
-	.string "OAK: A TRAINER who has become the\n"
-	.string "CHAMPION of two regions deserves\l"
-	.string "something special.\p"
+	.string "OAK: You've come a long way since\n"
+	.string "we met at the docks.\p"
 	.string "Please, take this!$"
 
 SFR_Text_OakExplainShinyCharm:
@@ -951,7 +949,7 @@ SE_Text_SeaCottageBillAfterPass:
 
 @ ---------------------------------------------------------------------------
 @ Saffron City Dojo: four Gym Leaders of Kanto and Johto come to train each day
-@ (after beating Red). Each one can be battled once a day, with the rematch team.
+@ (after the Kanto League rematch). Each one can be battled once a day, with the rematch team.
 SE_SaffronDojo_OnTransition::
 	special SE_DojoSelectLeaders
 	end

@@ -96,6 +96,7 @@ SE_EventScript_WarehouseProton::
 	cleartrainerflag TRAINER_SE_WAREHOUSE_ADMIN
 	trainerbattle_no_intro TRAINER_SE_WAREHOUSE_ADMIN, SE_Text_WarehouseProtonDefeat
 	msgbox SE_Text_WarehouseProtonAfter, MSGBOX_DEFAULT
+	call_if_unset FLAG_CAN_USE_ROCKET_HIDEOUT_LIFT, SE_EventScript_WarehouseProtonCheckKeySpace
 	giveitem ITEM_CHOICE_SCARF
 	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_QuestBagFull
 	msgbox SE_Text_WarehouseProtonBye, MSGBOX_DEFAULT
@@ -109,6 +110,11 @@ SE_EventScript_WarehouseProton::
 SE_EventScript_WarehouseProtonDone::
 	setvar VAR_SE_ROCKET_QUEST, 6
 	goto SE_EventScript_QuestLeave
+
+SE_EventScript_WarehouseProtonCheckKeySpace::
+	checkitemspace ITEM_LIFT_KEY
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_QuestBagFull
+	return
 
 @ ===========================================================================
 @ Celadon hideout: Giovanni
