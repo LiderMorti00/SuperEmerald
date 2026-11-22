@@ -221,3 +221,9 @@ In `Route34_DayCare_hns`, reviewed the four NPC bindings and the four encycloped
 - `Route28_hns` and `Route28_House_hns`: checked the signs, wildlife, static encounter, pickup, house and exits. Restored the Flamethrower TM pickup and removed a promise of an unspecified gift from the celebrity's conversation.
 - `TohjoFalls_Cavern_hns` and `TohjoFalls_GiovanniRoom_hns`: checked the Heart Scale, entrances, radio, absent Giovanni and seven breakable rocks. Each rock now has its own temporary visibility flag.
 - A follow-up search located other item balls wired to empty scripts. Restored pickups with matching existing items on Route 32, at Lake of Rage, Union Cave B1F, Mt. Mortar 1F South, the Goldenrod store basement and underground storage, Ice Path 1F, Rocket Hideout B2F and Burned Tower B1F. These are targeted pickup checks. Imported move names without a corresponding TM in this build still need a design decision.
+
+## Ice Path
+
+- `IcePath_1F_hns`: reviewed the three pickups, two hidden items, alternating wildlife, the skipped Kimono Girl event and both outside exits.
+- `IcePath_B1F_hns` and `IcePath_B2F_hns`: checked the puzzle signs, skip destination, pickups, Chien-Pao encounter and four pairs of boulder flags. Fixed Strength recognition for the Johto objects; landed boulders stay in place. The sign explains the holes and the puzzle shortcut waits for its warp.
+- `IcePath_B3F_hns` and `IcePath_B4F_hns`: checked the alternating Delibird and Swinub, ten breakable rocks, hidden items, Never-Melt Ice and ladders. The party menu now recognizes the regional breakable rocks. Checked reciprocal destinations for all five floors. Solving the puzzle and interacting with the rocks in a ROM remain untested.

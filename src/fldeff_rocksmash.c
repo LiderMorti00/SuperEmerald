@@ -41,22 +41,21 @@ static void Task_DoFieldMove_RunFunc(u8 taskId);
 static void FieldCallback_RockSmash(void);
 static void FieldMove_RockSmash(void);
 
-bool8 CheckObjectGraphicsInFrontOfPlayer(u16 graphicsId)
+u8 GetFieldMoveTargetInFrontOfPlayer(void)
 {
-    u8 objEventId;
-
     GetXYCoordsOneStepInFrontOfPlayer(&gPlayerFacingPosition.x, &gPlayerFacingPosition.y);
     gPlayerFacingPosition.elevation = PlayerGetElevation();
-    objEventId = GetObjectEventIdByPosition(gPlayerFacingPosition.x, gPlayerFacingPosition.y, gPlayerFacingPosition.elevation);
-    if (gObjectEvents[objEventId].graphicsId != graphicsId)
-    {
+    return GetObjectEventIdByPosition(gPlayerFacingPosition.x, gPlayerFacingPosition.y, gPlayerFacingPosition.elevation);
+}
+
+bool8 CheckObjectGraphicsInFrontOfPlayer(u16 graphicsId)
+{
+    u8 objEventId = GetFieldMoveTargetInFrontOfPlayer();
+    if (objEventId >= OBJECT_EVENTS_COUNT || gObjectEvents[objEventId].graphicsId != graphicsId)
         return FALSE;
-    }
-    else
-    {
-        gSpecialVar_LastTalked = gObjectEvents[objEventId].localId;
-        return TRUE;
-    }
+
+    gSpecialVar_LastTalked = gObjectEvents[objEventId].localId;
+    return TRUE;
 }
 
 u8 CreateFieldMoveTask(void)
@@ -145,7 +144,9 @@ bool32 SetUpFieldMove_RockSmash(void)
         gPostMenuFieldCallback = SetUpPuzzleEffectRegirock;
         return TRUE;
     }
-    else if (CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_BREAKABLE_ROCK) == TRUE)
+    else if (CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_BREAKABLE_ROCK)
+          || CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_BREAKABLE_ROCK_FRLG)
+          || CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_BREAKABLE_ROCK_HNS))
     {
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
         gPostMenuFieldCallback = FieldCallback_RockSmash;

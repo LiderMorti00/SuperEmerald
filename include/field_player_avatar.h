@@ -32,6 +32,7 @@ bool8 IsPlayerCollidingWithFarawayIslandMew(enum Direction direction);
 void PlayerOnBikeCollideWithFarawayIslandMew(enum Direction direction);
 enum Collision CheckForObjectEventCollision(struct ObjectEvent *objectEvent, s16 x, s16 y, enum Direction direction, u8 metatileBehavior);
 u8 PlayerGetElevation(void);
+bool32 IsPushableBoulder(u8 objectEventId);
 void SetPlayerAvatarTransitionFlags(u16 transitionFlags);
 void CancelPlayerForcedMovement(void);
 void InitPlayerAvatar(s16 x, s16 y, enum Direction direction, enum Gender gender);

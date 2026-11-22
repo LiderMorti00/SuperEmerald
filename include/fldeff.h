@@ -46,6 +46,7 @@ bool32 SetUpFieldMove_Dig(void);
 bool8 FldEff_UseDig(void);
 
 // rock smash
+u8 GetFieldMoveTargetInFrontOfPlayer(void);
 bool8 CheckObjectGraphicsInFrontOfPlayer(u16 graphicsId);
 u8 CreateFieldMoveTask(void);
 bool32 SetUpFieldMove_RockSmash(void);

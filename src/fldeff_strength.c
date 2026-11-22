@@ -2,6 +2,7 @@
 #include "event_data.h"
 #include "event_scripts.h"
 #include "field_effect.h"
+#include "field_player_avatar.h"
 #include "fldeff.h"
 #include "party_menu.h"
 #include "script.h"
@@ -17,9 +18,10 @@ static void StartStrengthFieldEffect(void);
 // text
 bool32 SetUpFieldMove_Strength(void)
 {
-    if (CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_PUSHABLE_BOULDER) == TRUE
-     || CheckObjectGraphicsInFrontOfPlayer(OBJ_EVENT_GFX_PUSHABLE_BOULDER_FRLG) == TRUE)
+    u8 objectEventId = GetFieldMoveTargetInFrontOfPlayer();
+    if (IsPushableBoulder(objectEventId))
     {
+        gSpecialVar_LastTalked = gObjectEvents[objectEventId].localId;
         gSpecialVar_Result = GetCursorSelectionMonId();
         gFieldCallback2 = FieldCallback_PrepareFadeInFromMenu;
         gPostMenuFieldCallback = FieldCallback_Strength;

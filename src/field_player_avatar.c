@@ -2,6 +2,7 @@
 #include "main.h"
 #include "bike.h"
 #include "event_data.h"
+#include "event_scripts.h"
 #include "event_object_movement.h"
 #include "field_camera.h"
 #include "field_control_avatar.h"
@@ -1025,13 +1026,31 @@ static bool8 ShouldJumpLedge(s16 x, s16 y, enum Direction direction)
         return FALSE;
 }
 
+bool32 IsPushableBoulder(u8 objectEventId)
+{
+    if (objectEventId >= OBJECT_EVENTS_COUNT)
+        return FALSE;
+
+    switch (gObjectEvents[objectEventId].graphicsId)
+    {
+    case OBJ_EVENT_GFX_PUSHABLE_BOULDER:
+    case OBJ_EVENT_GFX_PUSHABLE_BOULDER_FRLG:
+        return TRUE;
+    case OBJ_EVENT_GFX_PUSHABLE_BOULDER_HNS:
+        // Landed boulders in Ice Path use the same sprite as the movable ones.
+        return GetObjectEventScriptPointerByObjectEventId(objectEventId) == EventScript_StrengthBoulder;
+    default:
+        return FALSE;
+    }
+}
+
 static bool8 TryPushBoulder(s16 x, s16 y, enum Direction direction)
 {
     if (FlagGet(FLAG_SYS_USE_STRENGTH))
     {
         u8 objectEventId = GetObjectEventIdByXY(x, y);
 
-        if (objectEventId != OBJECT_EVENTS_COUNT && (gObjectEvents[objectEventId].graphicsId == OBJ_EVENT_GFX_PUSHABLE_BOULDER || gObjectEvents[objectEventId].graphicsId == OBJ_EVENT_GFX_PUSHABLE_BOULDER_FRLG))
+        if (IsPushableBoulder(objectEventId))
         {
             x = gObjectEvents[objectEventId].currentCoords.x;
             y = gObjectEvents[objectEventId].currentCoords.y;

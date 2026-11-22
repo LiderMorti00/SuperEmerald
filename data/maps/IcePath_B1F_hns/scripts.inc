@@ -15,17 +15,16 @@ IcePath_B1F_EventScript_Sign::
 	end
 
 IcePath_B1F_Text_Sign::
-	.string "DANGER CRACKED ICE\n"
-	.string "GO FAST ON BICYCLE\l"
-	.string "SWITCH GEARS BY\l"
-	.string "PRESSING …\l"
-	.string "The sign is faded…$"
+	.string "Mind the holes in the ice!\p"
+	.string "Use STRENGTH to push the boulders\n"
+	.string "down to the floor below.$"
 
 IcePath_B1F_EventScript_PuzzleSkipButton::
 	lock
 	msgbox IcePath_B1F_Text_PuzzleSkipButton, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, FALSE, IcePath_B1F_EventScript_PuzzleSkipButtonNo
 	warp MAP_ICE_PATH_B1F_HNS, 15, 12
+	waitstate
 	release
 	end
 

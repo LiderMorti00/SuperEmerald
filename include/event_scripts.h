@@ -419,6 +419,7 @@ extern const u8 SecretBase_Text_Trainer8Defeated[];
 extern const u8 SecretBase_Text_Trainer9Defeated[];
 
 //field effects
+extern const u8 EventScript_StrengthBoulder[];
 extern const u8 EventScript_UseStrength[];
 extern const u8 EventScript_FailSweetScent[];
 extern const u8 EventScript_UseFlash[];
