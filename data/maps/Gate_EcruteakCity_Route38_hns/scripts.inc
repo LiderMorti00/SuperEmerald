@@ -11,8 +11,7 @@ Route38_EventScript_Officer::
 	end
 
 Route38_Text_EcruteakGateOfficer::
-	.string "Where did you say you're from?\p"
-	.string "HOENN?\p"
-	.string "That's a whole other region!\p"
-	.string "You've come a long way to get\n"
-	.string "here.$"
+	.string "The CHAMPION of HOENN, here on my\n"
+	.string "shift! Welcome to ECRUTEAK.\p"
+	.string "If you're heading west, ROUTE 38\n"
+	.string "takes you toward MOOMOO FARM.$"

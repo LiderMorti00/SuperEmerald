@@ -244,3 +244,9 @@ The Sinnoh comparison covered the two plaque states at all eight gyms. Seven dis
 - `Route39_Barn_hns` and `Route39_FarmHouse_hns`: checked the actual shared scripts bound to the twins, Miltank and both farmers, berry refusal, recovery after seven berries, milk sales, both house exits and repeat dialogue. The farmer's wife now remembers whether Leftovers have already been delivered when six bottles of milk will not fit.
 - `Route39_hns`: checked the trainers, grazing Miltank, pickups, signs and the farm entrances. Headbutt advice now refers to eligible trees. The imported Drain Punch pickup still has no matching TM in this build.
 - Targeted Kanto follow-up: the Pewter Museum curator and the elder in Lavender's Volunteer Pokémon House now resume their reward bundles at the first undelivered item. Previously completed quest values are unchanged. Script-level retry tests covered every item, repeated failure, successful completion and subsequent interaction; ROM testing remains pending.
+
+
+## Route 38 and the Ecruteak gate
+
+- `Route38_hns`: checked six trainers, Chad's registration and rematch branch, both twins' shared scripts, berries, visible and hidden items, signposts, connections and the gate warp. Olivia now reports the milk shortage before the seventh berry and the reopened shop afterwards.
+- `Gate_EcruteakCity_Route38_hns`: checked the officer and both return warps. The officer recognizes the Hoenn title without assuming the protagonist was born there.

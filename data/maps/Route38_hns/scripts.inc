@@ -42,14 +42,22 @@ SE_J_Route38_hns_Route38_EventScript_Dana::
 
 Route38_EventScript_Olivia::
 	trainerbattle_single TRAINER_OLIVIA_HNS, Route38_Text_BeautyOliviaSeen, Route38_Text_BeautyOliviaBeaten
+	goto_if_ge VAR_SE_MOOMOO, 7, Route38_EventScript_OliviaFarmOpen
 	msgbox Route38_Text_BeautyOliviaAfter, MSGBOX_AUTOCLOSE
 	end
 
 Route38_Text_BeautyOliviaAfter::
-	.string "MOOMOO MILK is good for\n"
-	.string "beauty and health,\p"
-	.string "but inconveniently, they\n"
-	.string "only sell one bottle at a time.$"
+	.string "I brought my empty bottles, but the\n"
+	.string "farmer says MOOMOO is sick.\p"
+	.string "I hope she's back on her feet soon.$"
+
+Route38_EventScript_OliviaFarmOpen::
+	msgbox Route38_Text_BeautyOliviaFarmOpen, MSGBOX_AUTOCLOSE
+	end
+
+Route38_Text_BeautyOliviaFarmOpen::
+	.string "MOOMOO's well again! I bought enough\n"
+	.string "milk to last me all the way home.$"
 
 Route38_Text_BeautyOliviaBeaten::
 	.string "We drink MOOMOO MILK every\n"
