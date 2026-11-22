@@ -171,3 +171,40 @@ Read the dialogue and event bindings of all eleven Aqua interiors together with 
 - `SSAqua_PlayersRoom_hns`: bed, healing, arrival while sailing and corridor return.
 - `SSAqua_RoomNW_hns`: restored Edward and Corey to walkable floor tiles inside the cabin. Checked their battles and the hidden sailor.
 - `SSAqua_RoomNE_hns`, `SSAqua_RoomNNE_hns`, `SSAqua_RoomSE_hns`, `SSAqua_RoomSSW_hns` and `SSAqua_RoomSW_hns`: passenger introductions, defeat and post-battle dialogue, the twins' double battle and cabin exits. Sean and Lyle now speak naturally on either leg of the voyage.
+
+## Shared events and Route 34 Day Care
+
+Checked the event bindings and warp destinations of these rooms against the shared attendant, Rock Smash and Strength scripts. The Rusturf story update checks the current map; rocks on distant routes cannot advance that event. Multiplayer sessions and boulder puzzles still require runtime tests.
+
+- `CanalaveCity_PokemonCenter_2F_sinnoh`
+- `CelesticTown_PokemonCenter_2F_sinnoh`
+- `FightArea_PokemonCenter_2F_sinnoh`
+- `FloaromaTwon_PokemonCenter_2F_sinnoh`
+- `HearthomeCity_PokemonCenter_2F_sinnoh`
+- `JubilifeCity_PokemonCenter_2F_sinnoh`
+- `MtEmber_RubyPath_1F_Frlg`
+- `MtEmber_RubyPath_B1F_Frlg`
+- `MtEmber_RubyPath_B1F_Stairs_Frlg`
+- `MtEmber_RubyPath_B2F_Frlg`
+- `MtEmber_RubyPath_B2F_Stairs_Frlg`
+- `MtEmber_SummitPath_2F_Frlg`
+- `OreburghCity_PokemonCenter_2F_sinnoh`
+- `PokemonLeague_NorthPokemonCenter_2F_sinnoh`
+- `PokemonLeague_SouthPokemonCenter_2F_sinnoh`
+- `ResortArea_PokemonCenter_2F_sinnoh`
+- `SeafloorCavern_Room2`
+- `SeafloorCavern_Room5`
+- `SeafloorCavern_Room8`
+- `SnowpointCity_PokemonCenter_2F_sinnoh`
+- `SnowpointTemple_B2F_sinnoh`
+- `SolaceonTown_PokemonCenter_2F_sinnoh`
+- `SunyshoreCity_PokemonCenter_2F_sinnoh`
+- `SurvivalArea_PokemonCenter_2F_sinnoh`
+- `TurnbackCave_Room1_sinnoh`
+- `TurnbackCave_Room2_sinnoh`
+- `TurnbackCave_Room3_sinnoh`
+- `VeilstoneCity_PokemonCenter_2F_sinnoh`
+
+Also read the local conversations and checked the gift attendant in `EternaCity_PokemonCenter_F2_sinnoh` and `SandgemTown_PokemonCenter_2F_sinnoh`. All five Sinnoh gift attendants now use the distribution visibility flag and refresh it on entry. A failed Eon Ticket delivery preserves eligibility.
+
+In `Route34_DayCare_hns`, reviewed the four NPC bindings and the four encyclopedia signs. Separated the overlapping walking Pokémon and replaced the clerk’s unsupported Odd Egg offer.

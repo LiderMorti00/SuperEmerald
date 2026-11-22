@@ -47,7 +47,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_EEVEE",
-      "x": 12,
+      "x": 8,
       "y": 4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_DOWN_LEFT_UP_RIGHT",

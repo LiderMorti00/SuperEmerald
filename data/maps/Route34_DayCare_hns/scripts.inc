@@ -33,11 +33,9 @@ Route34_DayCare_Text_Ditto::
 
 Route34_DayCare_Text_ClerkBefore::
 	.string "I'm the DAY-CARE couple's son.\p"
-	.string "An ODD EGG was found with a TRAINER's\n"
-	.string "POKéMON, but they didn't want it…\p"
-	.string "I'd offer it to you…\n"
-	.string "But how can I know you'll take good\l"
-	.string "care of it?$"
+	.string "I grew up watching DITTO play.\p"
+	.string "Some days I could swear we had two\n"
+	.string "EEVEE in here!$"
 
 SE_J_Route34_DayCare_hns_Route34_DayCare_EventScript_Clerk::
 	msgbox Route34_DayCare_Text_ClerkBefore, MSGBOX_NPC
