@@ -32,9 +32,7 @@ TwinleafTown_MainHouse_1F_EventScript_BarrysMom::
 	end
 
 TwinleafTown_MainHouse_1F_Text_BarrysMom2::
-	.string "WOMAN: My son is traveling with\\n"
-	.string "his friend BARRY.\\p"
-	.string "They're always rushing off to\\n"
-	.string "their next adventure!\\p"
-	.string "I hope they remember to rest\\n"
-	.string "their POKéMON now and then.$"
+	.string "BARRY's mom: Have you met my son?\p"
+	.string "He's always in a hurry. Even when\n"
+	.string "he comes home, he barely has time\l"
+	.string "to say hello!$"

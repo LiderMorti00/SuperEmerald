@@ -1221,9 +1221,9 @@ static const u16 sNightMusicTable[END_MUS - START_MUS] =
 
 static u16 GetNightMusicFromTrack(u16 track)
 {
-    if (GetTimeOfDay() != TIME_NIGHT)
+    if (track < START_MUS || track >= END_MUS || GetTimeOfDay() != TIME_NIGHT)
         return track;
-    if (sNightMusicTable[track - START_MUS] >= START_MUS && sNightMusicTable[track - START_MUS] <= END_MUS)
+    if (sNightMusicTable[track - START_MUS] >= START_MUS && sNightMusicTable[track - START_MUS] < END_MUS)
         return sNightMusicTable[track - START_MUS];
     return track;
 }

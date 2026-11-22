@@ -17,7 +17,7 @@ FourIsland_LoreleisHouse_EventScript_Lorelei::
 
 FourIsland_LoreleisHouse_EventScript_Lorelei2::
 	setflag FLAG_TALKED_TO_LORELEI_AFTER_WAREHOUSE
-	msgbox FourIsland_LoreleisHouse_Text_IllReturnToLeagueInShortWhile
+	msgbox FourIsland_LoreleisHouse_Text_RocketIsGone
 	release
 	end
 
@@ -42,15 +42,13 @@ FourIsland_LoreleisHouse_Text_IfAnythingWereToHappenToIsland::
 	.string "I wonder if that would make me\n"
 	.string "irresponsible to my home…$"
 
-FourIsland_LoreleisHouse_Text_IllReturnToLeagueInShortWhile::
-	.string "LORELEI: So, you managed to solve\n"
-	.string "all the problems here?\p"
-	.string "That's wonderful.\p"
-	.string "That means there isn't any reason\n"
-	.string "for me to be here all the time.\p"
-	.string "Thank you…\p"
-	.string "I'll return to the POKéMON LEAGUE\n"
-	.string "in a short while.$"
+FourIsland_LoreleisHouse_Text_RocketIsGone::
+	.string "LORELEI: Welcome to FOUR ISLAND.\p"
+	.string "TEAM ROCKET used to cause trouble\n"
+	.string "out here. The islands have been\l"
+	.string "quieter since they left.\p"
+	.string "I grew up here. Even now, I like to\n"
+	.string "stay close to home.$"
 
 FourIsland_LoreleisHouse_Text_WillDoWhatICanHereAndNow::
 	.string "I don't know what will happen in\n"

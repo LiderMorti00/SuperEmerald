@@ -406,11 +406,11 @@ gSongTable::
 	song mus_encounter_rich, MUSIC_PLAYER_BGM, 0
 	song mus_verdanturf, MUSIC_PLAYER_BGM, 0
 	song mus_rustboro, MUSIC_PLAYER_BGM, 0
-	song mus_dummy, MUSIC_PLAYER_BGM, 0 @ mus_poke_center (replaced by the DPP PC/Mart songs in Super Emerald)
+	song mus_dpp_pc, MUSIC_PLAYER_BGM, 0 @ mus_poke_center shares the Sinnoh arrangement
 	song mus_route104, MUSIC_PLAYER_BGM, 0
 	song mus_route119, MUSIC_PLAYER_BGM, 0
 	song mus_cycling, MUSIC_PLAYER_BGM, 0
-	song mus_dummy, MUSIC_PLAYER_BGM, 0 @ mus_poke_mart (replaced by the DPP PC/Mart songs in Super Emerald)
+	song mus_dpp_mart, MUSIC_PLAYER_BGM, 0 @ mus_poke_mart shares the Sinnoh arrangement
 	song mus_littleroot, MUSIC_PLAYER_BGM, 0
 	song mus_mt_chimney, MUSIC_PLAYER_BGM, 0
 	song mus_encounter_female, MUSIC_PLAYER_BGM, 0
@@ -521,7 +521,7 @@ gSongTable::
 	song mus_rg_pallet, MUSIC_PLAYER_BGM, 0
 	song mus_rg_oak_lab, MUSIC_PLAYER_BGM, 0
 	song mus_rg_oak, MUSIC_PLAYER_BGM, 0
-	song mus_dummy, MUSIC_PLAYER_BGM, 0 @ mus_rg_poke_center (replaced by the DPP PC/Mart songs in Super Emerald)
+	song mus_dpp_pc, MUSIC_PLAYER_BGM, 0 @ mus_rg_poke_center shares the Sinnoh arrangement
 	song mus_rg_ss_anne, MUSIC_PLAYER_BGM, 0
 	song mus_rg_surf, MUSIC_PLAYER_BGM, 0
 	song mus_rg_poke_tower, MUSIC_PLAYER_BGM, 0

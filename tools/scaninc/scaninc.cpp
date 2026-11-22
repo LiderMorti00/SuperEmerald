@@ -158,7 +158,14 @@ int main(int argc, char **argv)
             // ".smol" doesn't require any arguments.
             size_t dot_pos = incgfx.extensions.find_first_of('.', 1);
             auto firstTarget = gfx_root + incgfx.source + arguments_as_path + incgfx.extensions.substr(0, dot_pos);
-            dependencies_gfx_rules[firstTarget] = std::make_pair(incgfx.source, rule);
+            std::string prerequisites = incgfx.source;
+            if (incgfx.source.size() >= 4 && incgfx.source.compare(incgfx.source.size() - 4, 4, ".pal") == 0)
+            {
+                // gbagfx reads optional lighting flags from the palette's sidecar.
+                auto sidecar = incgfx.source.substr(0, incgfx.source.size() - 4) + ".pla";
+                prerequisites += " $(wildcard " + sidecar + ")";
+            }
+            dependencies_gfx_rules[firstTarget] = std::make_pair(prerequisites, rule);
         }
         for (auto include : file.GetIncludes())
         {

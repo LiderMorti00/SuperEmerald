@@ -2958,46 +2958,22 @@ void UpdateLightSprite(struct Sprite *sprite)
     s16 bottom = gSaveBlock1Ptr->pos.y + 15;
     s16 x = sprite->sLightXPos;
     s16 y = sprite->sLightYPos;
-    u16 sheetTileStart;
-    u32 paletteNum;
     if (!(x >= left && x <= right && y >= top && y <= bottom))
     {
-        sheetTileStart = sprite->sheetTileStart;
-        paletteNum = sprite->oam.paletteNum;
-        DestroySprite(sprite);
-        FieldEffectFreeTilesIfUnused(sheetTileStart);
-        FieldEffectFreePaletteIfUnused(paletteNum);
-        Weather_SetBlendCoeffs(7, BASE_SHADOW_INTENSITY); // TODO: Restore original blend coeffs at dawn
+        FieldEffectFreeGraphicsResources(sprite);
         return;
     }
 
-    if (gTimeOfDay != TIME_NIGHT)
-    {
-        sprite->invisible = TRUE;
+    sprite->invisible = gTimeOfDay != TIME_NIGHT;
+    if (sprite->invisible)
         return;
-    }
 
-    if (sprite->sLightType == LIGHT_TYPE_BALL)
-    {
-        if (gPaletteFade.active) // if palette fade is active, don't flicker since the timer won't be updated
-        {
-            sprite->invisible = FALSE;
-        }
-        else if (gPlayerAvatar.tileTransitionState)
-        {
-            sprite->invisible = FALSE;
-            if (GetSpritePaletteTagByPaletteNum(sprite->oam.paletteNum) == OBJ_EVENT_PAL_TAG_LIGHT_2)
-                LoadSpritePaletteInSlot(&sObjectEventSpritePalettes[FindObjectEventPaletteIndexByTag(OBJ_EVENT_PAL_TAG_LIGHT)], sprite->oam.paletteNum);
-        }
-        else if ((sprite->invisible = gTimeUpdateCounter & 1))
-        {
-            sprite->invisible = FALSE;
-            if (GetSpritePaletteTagByPaletteNum(sprite->oam.paletteNum) == OBJ_EVENT_PAL_TAG_LIGHT_2)
-                LoadSpritePaletteInSlot(&sObjectEventSpritePalettes[FindObjectEventPaletteIndexByTag(OBJ_EVENT_PAL_TAG_LIGHT)], sprite->oam.paletteNum);
-        }
-    } else {
-        sprite->invisible = FALSE;
-    }
+    if (sprite->sLightType == LIGHT_TYPE_BALL
+     && !gPaletteFade.active
+     && (gPlayerAvatar.tileTransitionState || (gTimeUpdateCounter & 1))
+     && GetSpritePaletteTagByPaletteNum(sprite->oam.paletteNum) == OBJ_EVENT_PAL_TAG_LIGHT_2)
+        LoadSpritePaletteInSlot(&sObjectEventSpritePalettes[FindObjectEventPaletteIndexByTag(OBJ_EVENT_PAL_TAG_LIGHT)], sprite->oam.paletteNum);
+
     // Note: Don't set window registers during hardware fade!
     Weather_SetBlendCoeffs(7, BASE_SHADOW_INTENSITY);
 }
@@ -3016,9 +2992,20 @@ static void SpawnLightSprite(s16 x, s16 y, s16 camX, s16 camY, u32 lightType)
     }
     lightType = min(lightType, ARRAY_COUNT(gFieldEffectLightTemplates) - 1); // bounds checking
     template = gFieldEffectLightTemplates[lightType];
-    LoadSpriteSheetByTemplate(template, 0, 0);
-    sprite = &gSprites[CreateSprite(template, 0, 0, 0)];
-    if (lightType == 0 && (i = IndexOfSpritePaletteTag(template->paletteTag + 1)) < 16)
+    u16 tileStart = LoadSpriteSheetByTemplate(template, 0, 0);
+    if (template->tileTag != TAG_NONE && tileStart == TAG_NONE)
+        return;
+
+    u8 spriteId = CreateSprite(template, 0, 0, 0);
+    if (spriteId == MAX_SPRITES)
+    {
+        if (tileStart != TAG_NONE)
+            FieldEffectFreeTilesIfUnused(tileStart);
+        return;
+    }
+
+    sprite = &gSprites[spriteId];
+    if (lightType == LIGHT_TYPE_BALL && (i = IndexOfSpritePaletteTag(template->paletteTag + 1)) < 16)
         sprite->oam.paletteNum = i;
     else
         UpdateSpritePaletteByTemplate(template, sprite);
@@ -3037,7 +3024,6 @@ static void SpawnLightSprite(s16 x, s16 y, s16 camX, s16 camY, u32 lightType)
         sprite->centerToCornerVecY = -(32 >> 1);
         sprite->oam.priority = 1;
         sprite->oam.objMode = ST_OAM_OBJ_BLEND;
-        sprite->oam.affineMode = ST_OAM_AFFINE_NORMAL;
         sprite->x += 8;
         sprite->y += 22 + sprite->centerToCornerVecY;
         break;
