@@ -15,7 +15,7 @@ SilphCo_8F_EventScript_WorkerM::
 	end
 
 SilphCo_8F_EventScript_WorkerMRocketsGone::
-	msgbox SilphCo_8F_Text_ThanksForSavingUs
+	msgbox SilphCo_8F_Text_BackToWork
 	release
 	end
 
@@ -41,8 +41,9 @@ SilphCo_8F_EventScript_Grunt2::
 SilphCo_8F_Text_WonderIfSilphIsFinished::
 	.string "I wonder if SILPH is finished…$"
 
-SilphCo_8F_Text_ThanksForSavingUs::
-	.string "Thanks for saving us!$"
+SilphCo_8F_Text_BackToWork::
+	.string "It took a while after the ROCKET\n"
+	.string "incident, but we're back to work.$"
 
 SilphCo_8F_Text_Grunt1Intro::
 	.string "That's as far as you'll go!$"

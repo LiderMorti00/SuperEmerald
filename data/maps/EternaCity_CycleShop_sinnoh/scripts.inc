@@ -23,6 +23,7 @@ EternaCity_CycleShop_Text_ClerkAfter::
 	.string "with other people's POKéMON?$"
 
 EternaCity_CycleShop_EventScript_PtNpc1::
+	goto_if_set FLAG_HIDE_ETERNA_GALACTIC, EternaCity_CycleShop_EventScript_PtNpc1After
 	msgbox EternaCity_CycleShop_Text_PtNpc1, MSGBOX_NPC
 	end
 
@@ -32,31 +33,43 @@ EternaCity_CycleShop_Text_PtNpc1::
 	.string "returned.\p"
 	.string "I wonder what's holding him up?$"
 
+EternaCity_CycleShop_EventScript_PtNpc1After::
+	msgbox EternaCity_CycleShop_Text_PtNpc1After, MSGBOX_NPC
+	end
+
+EternaCity_CycleShop_Text_PtNpc1After::
+	.string "The manager's back!\p"
+	.string "I was worried he wouldn't make it\n"
+	.string "out of the GALACTIC building.$"
+
 EternaCity_CycleShop_EventScript_Owner::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_BICYCLE, EternaCity_CycleShop_EventScript_OwnerManual
+	checkitem ITEM_BICYCLE
+	goto_if_eq VAR_RESULT, TRUE, EternaCity_CycleShop_EventScript_OwnerManual
 	msgbox EternaCity_CycleShop_Text_OwnerThanks, MSGBOX_DEFAULT
 	giveitem ITEM_BICYCLE
+	goto_if_eq VAR_RESULT, FALSE, EternaCity_CycleShop_EventScript_OwnerBagFull
 	setflag FLAG_RECEIVED_BICYCLE
 	msgbox EternaCity_CycleShop_Text_OwnerManual, MSGBOX_DEFAULT
 	release
 	end
 
+EternaCity_CycleShop_EventScript_OwnerBagFull::
+	call Common_EventScript_BagIsFull
+	release
+	end
+
 EternaCity_CycleShop_Text_OwnerManual::
-	.string "It's the latest model, so I'll read the\n"
-	.string "operating manual to you.\p"
-	.string "“Press the B Button to shift up or\n"
-	.string "down.” In third gear, you can't go all\l"
-	.string "that fast, but it's easier to control.\p"
-	.string "In fourth gear, it gets harder to\n"
-	.string "steer and stop, but it's fast! Really!$"
+	.string "You can ride this BIKE on roads\n"
+	.string "and paths.\p"
+	.string "Register it from your BAG to use\n"
+	.string "it without opening the menu.$"
 
 EternaCity_CycleShop_Text_OwnerThanks::
-	.string "Thanks for rescuing me! This is\n"
-	.string "something to show my thanks!\p"
-	.string "It's the latest model Bicycle! You\n"
-	.string "must take it. I insist!$"
+	.string "Welcome to the CYCLE SHOP!\p"
+	.string "A BIKE is a good way to see SINNOH.\n"
+	.string "Here, I'd like you to have one.$"
 
 EternaCity_CycleShop_EventScript_OwnerManual::
 	msgbox EternaCity_CycleShop_Text_OwnerManual, MSGBOX_DEFAULT
