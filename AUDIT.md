@@ -155,3 +155,8 @@ Reviewed the listed rooms individually for local dialogue and event bindings. Ea
 - `SolaceonRuins_Room6_sinnoh`
 - `SolaceonRuins_Room6_Southeast_sinnoh`
 - `VeilstoneCity_DepartmentStore_Roof_sinnoh`
+
+## Sinnoh Ribbon Syndicate
+
+- `ResortArea_RibbonSyndicate_F1_sinnoh`: Read all five NPC scripts and checked the exterior and upstairs warp destinations. Corrected the six-tile offset in both axes for all five NPCs and three warps. Both exit tiles and the stair now coincide with the drawn doorway and stair.
+- `ResortArea_RibbonSyndicate_F2_sinnoh`: Read all four NPC scripts, including the spa acceptance, refusal and repeat branches. Checked the return warp to the corrected first-floor stair. Both floors still need a ROM playtest.
