@@ -57,10 +57,10 @@ FightArea_EventScript_PtNpc6::
 	end
 
 FightArea_Text_PtNpc6::
-	.string "Your POKéMON are from SINNOH, aren't\n"
-	.string "they?\p"
-	.string "They're not what we're used to seeing\n"
-	.string "around here.$"
+	.string "I like watching TRAINERS step off\n"
+	.string "the ferry with their POKéMON.\p"
+	.string "Yesterday I saw a species I'd only\n"
+	.string "ever seen in a book!$"
 
 FightArea_EventScript_PtNpc7::
 	lock

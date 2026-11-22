@@ -6,6 +6,9 @@ Run from the repo root:  python3 tools/sfr/se/check_project.py
  - warps to missing maps or to warp ids the destination doesn't have
  - connections to missing maps / not mirrored
  - objects with unknown graphics
+ - duplicate named local object ids and event scripts that do not exist
+ - movement/object commands that name an unknown local id
+ - unknown visibility flags on map objects
  - duplicated flag / var numbers among the Super Emerald constants
  - Hoenn-only things (secret bases...) outside Hoenn
  - silent Center/Mart music and lamppost halos on their entrances
@@ -20,6 +23,68 @@ def err(kind, msg): bad.append((kind, msg))
 maps = {}
 for f in glob.glob('data/maps/*/map.json'):
     j = json.load(open(f)); maps[j['id']] = j
+
+# Symbols bound by the event assembler. Map JSON references these directly, so
+# a typo otherwise survives until a full ROM build (or, for some event kinds,
+# until the player enters the map).
+event_labels = set()
+for f in glob.glob('data/**/*.inc', recursive=True) + glob.glob('data/**/*.s', recursive=True):
+    with open(f) as event_file:
+        event_labels.update(re.findall(r'^([A-Za-z_]\w*)::?', event_file.read(), re.M))
+
+# Named local ids are generated from map JSON. Unnamed objects receive numeric
+# ids and are intentionally ignored here.
+all_local_ids = set()
+for j in maps.values():
+    named_ids = [str(o['local_id']) for o in (j.get('object_events') or []) if o.get('local_id')]
+    all_local_ids.update(named_ids)
+    counts = defaultdict(int)
+    for local_id in named_ids:
+        counts[local_id] += 1
+    for local_id, count in counts.items():
+        if count > 1:
+            err('object', '%s defines local id %s %d times' % (j['name'], local_id, count))
+
+# Object, coordinate and background events all carry assembler symbols in the
+# same `script` field. Numeric zero is the valid no-script value.
+NO_SCRIPT = {'0', '0x0', '0x00', 'NULL'}
+for j in maps.values():
+    for event_kind, key in (('object', 'object_events'), ('coordinate', 'coord_events'), ('background', 'bg_events')):
+        for index, event in enumerate(j.get(key) or []):
+            script = str(event.get('script', '0'))
+            if script in NO_SCRIPT or script.startswith(('0x', '(')):
+                continue
+            if script not in event_labels:
+                err('script', '%s %s event %d references missing %s' % (j['name'], event_kind, index, script))
+
+# Catch misspelled named ids in the common commands that address map objects.
+# A few ids are created at runtime rather than stored in map JSON.
+runtime_local_ids = {
+    'LOCALID_PLAYER', 'LOCALID_FOLLOWER', 'LOCALID_CAMERA',
+    'LOCALID_DAYCARE_MON_0', 'LOCALID_DAYCARE_MON_1',
+}
+object_commands = r'applymovement|turnobject|removeobject|addobject|setobjectxy|setobjectxyperm|copyobjectxytoperm|setobjectmovementtype'
+referenced_local_ids = set()
+for f in glob.glob('data/maps/*/scripts.inc') + glob.glob('data/scripts/*.inc'):
+    with open(f) as event_file:
+        referenced_local_ids.update(re.findall(
+            r'^\s*(?:%s)\s+(LOCALID_[A-Z0-9_]+)\b' % object_commands,
+            event_file.read(), re.M))
+for local_id in sorted(referenced_local_ids - all_local_ids - runtime_local_ids):
+    err('object', 'event scripts reference unknown local id %s' % local_id)
+
+# Visibility flags are data rather than assembler operands, so validate them
+# independently of the script-symbol pass.
+known_flags = set()
+for f in glob.glob('include/constants/*.h'):
+    with open(f) as constants_file:
+        known_flags.update(re.findall(r'^#define\s+(FLAG_\w+)', constants_file.read(), re.M))
+for j in maps.values():
+    for obj in j.get('object_events') or []:
+        flag = str(obj.get('flag', '0'))
+        if flag.startswith('FLAG_') and flag not in known_flags:
+            err('object', '%s uses unknown visibility flag %s' % (j['name'], flag))
+
 groups = json.load(open('data/maps/map_groups.json'))
 in_groups = {m for g in groups['group_order'] for m in groups[g]}
 names = {j['name']: j for j in maps.values()}

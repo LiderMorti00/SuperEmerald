@@ -105,7 +105,7 @@ NewBarkTown_EventScript_PlayersHouseMailbox::
 	end
 
 NewBarkTown_Text_PlayersHouse::
-	.string "{PLAYER}'S HOUSE$"
+	.string "ORO'S HOUSE$"
 
 NewBarkTown_EventScript_ElmsHouseMailbox::
 	msgbox NewBarkTown_Text_ElmsHouse, MSGBOX_SIGN

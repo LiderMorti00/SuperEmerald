@@ -26,10 +26,8 @@ TwinleafTown_EventScript_PtNpc3::
 	end
 
 TwinleafTown_Text_PtNpc3::
-	.string "Hiya, {PLAYER}. {RIVAL} was looking for\n"
-	.string "you.\p"
-	.string "I think he's home now. Why don't you go\n"
-	.string "check it out?$"
+	.string "When BARRY heads out on a trip,\n"
+	.string "you can hear his door slam from here!$"
 
 TwinleafTown_EventScript_Sign1::
 	msgbox TwinleafTown_Text_Sign1, MSGBOX_SIGN
@@ -44,7 +42,7 @@ TwinleafTown_EventScript_SNMailboxPlayer::
 	end
 
 TwinleafTown_Text_SNMailboxPlayer::
-	.string "{PLAYER}'s House$"
+	.string "LUCAS's House$"
 
 TwinleafTown_EventScript_SNMailboxRival::
 	msgbox TwinleafTown_Text_SNMailboxRival, MSGBOX_SIGN

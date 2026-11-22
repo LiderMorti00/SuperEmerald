@@ -400,7 +400,7 @@ SE_Text_StevenSinnohWait:
 	.string "CHAMPION.$"
 
 SE_Text_StevenSinnoh:
-	.string "STEVEN: CHAMPION of four regions…\n"
+	.string "STEVEN: So you've won in SINNOH!\n"
 	.string "You've come so far since HOENN.\p"
 	.string "My team has trained in every region\n"
 	.string "I've visited, just like you.\p"

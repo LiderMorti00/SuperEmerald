@@ -124,10 +124,9 @@ ViridianCity_Gym_Text_GiovanniPostBattle::
 	.string "because you beat me.\p"
 	.string "With all eight KANTO BADGES, you\n"
 	.string "can take on the POKéMON LEAGUE.\p"
-	.string "The CHAMPION there is RED.\n"
-	.string "He's the one guy I could never beat.\p"
-	.string "Go see for yourself how strong\n"
-	.string "he is!$"
+	.string "LANCE is waiting at the LEAGUE.\p"
+	.string "Think you can take his dragons?\n"
+	.string "Go find out!$"
 
 ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis::
 	.string "BLUE: The EARTHBADGE is proof that\n"

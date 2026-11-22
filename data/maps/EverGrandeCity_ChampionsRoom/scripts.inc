@@ -47,8 +47,11 @@ EverGrandeCity_ChampionsRoom_EventScript_Wallace::
 
 EverGrandeCity_ChampionsRoom_EventScript_StevenRematch::
 	msgbox EverGrandeCity_ChampionsRoom_Text_StevenRematchIntro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_STEVEN, EverGrandeCity_ChampionsRoom_Text_Defeat
-	goto EverGrandeCity_ChampionsRoom_EventScript_Defeated
+	trainerbattle_no_intro TRAINER_STEVEN, EverGrandeCity_ChampionsRoom_Text_RematchDefeat
+	msgbox EverGrandeCity_ChampionsRoom_Text_RecordRematch, MSGBOX_DEFAULT
+	closemessage
+	fadescreen FADE_TO_BLACK
+	goto EverGrandeCity_ChampionsRoom_EventScript_ToHall
 	end
 
 EverGrandeCity_ChampionsRoom_EventScript_Defeated::
@@ -138,6 +141,7 @@ EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF::
 	applymovement LOCALID_PLAYER, EverGrandeCity_ChampionsRoom_Movement_PlayerExit
 	waitmovement 0
 	setflag FLAG_HIDE_PETALBURG_GYM_GREETER
+EverGrandeCity_ChampionsRoom_EventScript_ToHall::
 	warp MAP_EVER_GRANDE_CITY_HALL_OF_FAME, 7, 16
 	waitstate
 	releaseall
@@ -337,3 +341,12 @@ EverGrandeCity_ChampionsRoom_Text_StevenRematchIntro:
 	.string "than ever.\p"
 	.string "This time, I won't hold anything\n"
 	.string "back. Let's begin!$"
+
+EverGrandeCity_ChampionsRoom_Text_RematchDefeat:
+	.string "You read my last move perfectly.\p"
+	.string "Well battled, CHAMPION!$"
+
+EverGrandeCity_ChampionsRoom_Text_RecordRematch:
+	.string "STEVEN: Come with me, {PLAYER}.\p"
+	.string "Let's record the team that earned\n"
+	.string "you this victory.$"

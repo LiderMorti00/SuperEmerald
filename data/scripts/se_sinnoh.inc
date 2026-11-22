@@ -155,31 +155,33 @@ SE_EventScript_RowanChoose::
 	end
 
 SE_EventScript_RowanTurtwig::
-	setvar VAR_SE_SINNOH_STARTER, 1
-	setvar VAR_SN_STARTER_MON, 0
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_TURTWIG
 	bufferspeciesname STR_VAR_1, SPECIES_TURTWIG
 	givemon SPECIES_TURTWIG, 45, ITEM_EVERSTONE
+	goto_if_eq VAR_RESULT, MON_CANT_GIVE, SE_EventScript_RowanNoRoom
+	setvar VAR_SE_SINNOH_STARTER, 1
+	setvar VAR_SN_STARTER_MON, 0
 	goto SE_EventScript_RowanGave
 
 SE_EventScript_RowanChimchar::
-	setvar VAR_SE_SINNOH_STARTER, 2
-	setvar VAR_SN_STARTER_MON, 1
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_CHIMCHAR
 	bufferspeciesname STR_VAR_1, SPECIES_CHIMCHAR
 	givemon SPECIES_CHIMCHAR, 45, ITEM_EVERSTONE
+	goto_if_eq VAR_RESULT, MON_CANT_GIVE, SE_EventScript_RowanNoRoom
+	setvar VAR_SE_SINNOH_STARTER, 2
+	setvar VAR_SN_STARTER_MON, 1
 	goto SE_EventScript_RowanGave
 
 SE_EventScript_RowanPiplup::
-	setvar VAR_SE_SINNOH_STARTER, 3
-	setvar VAR_SN_STARTER_MON, 2
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_PIPLUP
 	bufferspeciesname STR_VAR_1, SPECIES_PIPLUP
 	givemon SPECIES_PIPLUP, 45, ITEM_EVERSTONE
+	goto_if_eq VAR_RESULT, MON_CANT_GIVE, SE_EventScript_RowanNoRoom
+	setvar VAR_SE_SINNOH_STARTER, 3
+	setvar VAR_SN_STARTER_MON, 2
 	goto SE_EventScript_RowanGave
 
 SE_EventScript_RowanGave::
-	goto_if_eq VAR_RESULT, MON_CANT_GIVE, SE_EventScript_RowanNoRoom
 	playfanfare MUS_OBTAIN_ITEM
 	message SE_Text_ReceivedSinnohStarter
 	waitmessage
@@ -926,8 +928,8 @@ SE_EventScript_RileyEggNoRoom::
 	end
 
 SE_Text_RileyEgg:
-	.string "RILEY: So you're the TRAINER who\n"
-	.string "helped save SINNOH. I'm RILEY.\p"
+	.string "RILEY: So you're the CHAMPION from\n"
+	.string "HOENN challenging SINNOH. I'm RILEY.\p"
 	.string "I have a POKéMON EGG here.\n"
 	.string "Would you take it with you?$"
 
