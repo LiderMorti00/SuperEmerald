@@ -16,7 +16,7 @@ SilphCo_3F_EventScript_WorkerM::
 	end
 
 SilphCo_3F_EventScript_WorkerMRocketsGone::
-	msgbox SilphCo_3F_Text_YouAndYourMonsSavedUs
+	msgbox SilphCo_3F_Text_SilphBackInBusiness
 	release
 	end
 
@@ -38,9 +38,10 @@ SilphCo_3F_Text_WhatAmIToDo::
 	.string "I work for SILPH CO.\n"
 	.string "What am I to do?$"
 
-SilphCo_3F_Text_YouAndYourMonsSavedUs::
-	.string "{PLAYER}!\n"
-	.string "You and your POKéMON saved us!$"
+SilphCo_3F_Text_SilphBackInBusiness::
+	.string "SILPH is back in business.\p"
+	.string "These warp panels still confuse\n"
+	.string "me.$"
 
 SilphCo_3F_Text_GruntIntro::
 	.string "Quit messing with us, kid!$"

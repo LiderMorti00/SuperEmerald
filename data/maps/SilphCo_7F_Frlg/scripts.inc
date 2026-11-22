@@ -116,7 +116,7 @@ SilphCo_7F_EventScript_LaprasGuy::
 	lock
 	faceplayer
 	goto_if_set FLAG_GOT_LAPRAS_FROM_SILPH, SilphCo_7F_EventScript_AlreadyGotLapras
-	msgbox SilphCo_7F_Text_HaveMonForSavingUs
+	msgbox SilphCo_7F_Text_LaprasNeedsTrainer
 	setvar VAR_TEMP_1, SPECIES_LAPRAS
 	givemon SPECIES_LAPRAS, 25
 	goto_if_eq VAR_RESULT, 0, SilphCo_7F_EventScript_ReceiveLaprasParty
@@ -165,7 +165,7 @@ SilphCo_7F_EventScript_EndReceiveLapras::
 	end
 
 SilphCo_7F_EventScript_AlreadyGotLapras::
-	msgbox SilphCo_7F_Text_RocketBossWentToBoardroom
+	msgbox SilphCo_7F_Text_LaprasFarewell
 	release
 	end
 
@@ -191,7 +191,7 @@ SilphCo_7F_EventScript_WorkerM2::
 	end
 
 SilphCo_7F_EventScript_WorkerM2RocketsGone::
-	msgbox SilphCo_7F_Text_WowYouChasedOffTeamRocket
+	msgbox SilphCo_7F_Text_RocketsGone
 	release
 	end
 
@@ -204,7 +204,7 @@ SilphCo_7F_EventScript_WorkerF::
 	end
 
 SilphCo_7F_EventScript_WorkerFRocketsGone::
-	msgbox SilphCo_7F_Text_ThankYouSoMuch
+	msgbox SilphCo_7F_Text_VisitorsWelcome
 	release
 	end
 
@@ -232,12 +232,11 @@ SilphCo_7F_EventScript_Grunt3::
 	msgbox SilphCo_7F_Text_Grunt3PostBattle, MSGBOX_AUTOCLOSE
 	end
 
-SilphCo_7F_Text_HaveMonForSavingUs::
-	.string "Oh! Hi! You're not a ROCKET!\n"
-	.string "You came to save us?\l"
-	.string "Why, thank you!\p"
-	.string "I want you to have this POKéMON\n"
-	.string "for saving us.$"
+SilphCo_7F_Text_LaprasNeedsTrainer::
+	.string "We raised a LAPRAS here at SILPH.\p"
+	.string "I'd like it to see the world with\n"
+	.string "a TRAINER from HOENN. Will you\l"
+	.string "look after it?$"
 
 SilphCo_7F_Text_ObtainedLaprasFromEmployee::
 	.string "{PLAYER} obtained a LAPRAS from\n"
@@ -253,11 +252,9 @@ SilphCo_7F_Text_ExplainLapras::
 	.string "It's a good swimmer.\n"
 	.string "It'll give you a lift across water!$"
 
-SilphCo_7F_Text_RocketBossWentToBoardroom::
-	.string "TEAM ROCKET's BOSS went to the\n"
-	.string "boardroom!\p"
-	.string "Is our PRESIDENT okay?\n"
-	.string "I'm worried.$"
+SilphCo_7F_Text_LaprasFarewell::
+	.string "I hope LAPRAS gets to swim in the\n"
+	.string "waters around HOENN someday.$"
 
 SilphCo_7F_Text_RocketsAfterMasterBall::
 	.string "TEAM ROCKET was after the MASTER\n"
@@ -271,10 +268,9 @@ SilphCo_7F_Text_BadIfTeamRocketTookOver::
 	.string "It would be bad if TEAM ROCKET\n"
 	.string "took over SILPH or our POKéMON.$"
 
-SilphCo_7F_Text_WowYouChasedOffTeamRocket::
-	.string "Wow!\p"
-	.string "You chased off TEAM ROCKET all by\n"
-	.string "yourself?$"
+SilphCo_7F_Text_RocketsGone::
+	.string "TEAM ROCKET is gone from SILPH.\n"
+	.string "Now we can get back to work.$"
 
 SilphCo_7F_Text_ReallyDangerousHere::
 	.string "You!\n"
@@ -282,8 +278,9 @@ SilphCo_7F_Text_ReallyDangerousHere::
 	.string "You came to save me?\n"
 	.string "You can't!$"
 
-SilphCo_7F_Text_ThankYouSoMuch::
-	.string "Thank you so much!$"
+SilphCo_7F_Text_VisitorsWelcome::
+	.string "We've had visitors again since\n"
+	.string "SILPH reopened. Welcome!$"
 
 SilphCo_7F_Text_Grunt3Intro::
 	.string "Uh-oh!\n"

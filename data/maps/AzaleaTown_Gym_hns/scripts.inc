@@ -58,9 +58,8 @@ AzaleaTown_Gym_EventScript_Amy::
 
 AzaleaTown_Gym_Text_TwinsAmyMay1After::
 	.string "AMY: You're really strong!\p"
-	.string "But BUGSY's even stronger!\n"
-	.string "His SCYTHER's CUT almost\l"
-	.string "always makes critical hits!$"
+	.string "But BUGSY's SCIZOR can strike\n"
+	.string "before you even get to move!$"
 
 AzaleaTown_Gym_Text_TwinsAmyMay1Beaten::
 	.string "AMY & MAY: Oh, double\n"
@@ -78,11 +77,9 @@ AzaleaTown_Gym_EventScript_May::
 	end
 
 AzaleaTown_Gym_Text_TwinsAmyMay2After::
-	.string "MAY: Our bug POKéMON lost!\n"
-	.string "Oh, what a shame.\p"
-	.string "BUGSY's won't lose though!\p"
-	.string "His PINECO makes short work\n"
-	.string "of ROCK-type POKéMON!$"
+	.string "MAY: Our bug POKéMON lost!\p"
+	.string "Wait till you see BUGSY's PINSIR.\n"
+	.string "It can even take on ROCK types!$"
 
 AzaleaTown_Gym_Text_TwinsAmyMay2Beaten::
 	.string "AMY & MAY: Oh, double\n"
@@ -91,9 +88,7 @@ AzaleaTown_Gym_Text_TwinsAmyMay2Beaten::
 AzaleaTown_Gym_Text_TwinsAmyMay2Seen::
 	.string "MAY: You want to see the\n"
 	.string "LEADER? Good luck!\p"
-	.string "BUGSY is so strong!\n"
-	.string "His SCYTHER's CUT always\l"
-	.string "seems to crit!$"
+	.string "BUGSY's SCIZOR is really fast!$"
 
 AzaleaTown_Gym_EventScript_Benny::
 	trainerbattle_single TRAINER_BENNY_HNS, AzaleaTown_Gym_Text_BugCatcherBennySeen, AzaleaTown_Gym_Text_BugCatcherBennyBeaten
@@ -124,8 +119,8 @@ AzaleaTown_Gym_Text_BugCatcherJoshBeaten::
 	.string "Urrgggh!$"
 
 AzaleaTown_Gym_Text_BugCatcherJoshSeen::
-	.string "You saved all the SLOWPOKE?\n"
-	.string "Whew, you're mighty!\p"
+	.string "You came all the way from HOENN?\n"
+	.string "Then I want to see how you battle!\p"
 	.string "But my grown-up POKéMON are\n"
 	.string "pretty tough too!$"
 
