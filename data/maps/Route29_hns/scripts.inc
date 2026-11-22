@@ -94,11 +94,9 @@ Route29_Text_Boy_WaitingForNight::
 	.string "appear only at night.$"
 
 Route29_Text_MeetTuscany::
-	.string "TUSCANY: I do believe that this\n"
-	.string "is the first time we've met?\p"
-	.string "I'm TUSCANY of the WEEKDAY FAMILY.\p"
-	.string "If you can guess my favorite day,\n"
-	.string "I'll give you a reward.$"
+    .string "TUSCANY: Tuesday is my day!\p"
+    .string "On this route, I get to meet TRAINERS\n"
+    .string "just setting out from NEW BARK TOWN.$"
 
 SE_J_Route29_hns_Route29_EventScript_Tuscany::
 	msgbox Route29_Text_MeetTuscany, MSGBOX_NPC

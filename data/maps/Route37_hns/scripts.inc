@@ -58,10 +58,9 @@ Route37_Text_PsychicGreg_Seen::
 	.string "I'll show you how scary that is!$"
 
 Route37_Text_Sunny_Meet::
-	.string "SUNNY: Hi!\p"
-	.string "I'm SUNNY of the WEEKDAY family!\p"
-	.string "If you can guess my favorite day,\n"
-	.string "I'll give you a reward.$"
+    .string "SUNNY: Sunday is my favorite day!\p"
+    .string "From here it's just a short walk\n"
+    .string "to ECRUTEAK CITY.$"
 
 SE_J_Route37_hns_Route37_EventScript_Sunny::
 	msgbox Route37_Text_Sunny_Meet, MSGBOX_NPC

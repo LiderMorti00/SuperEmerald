@@ -119,7 +119,7 @@ Route26_EventScript_Beth::
 	end
 
 Route26_Text_CooltrainerfBethAfter::
-    .string "POKéMON are in-valuable, lifelong\n"
+    .string "POKéMON are invaluable, lifelong\n"
     .string "partners.$"
 
 Route26_EventScript_RematchBeth::
@@ -135,7 +135,7 @@ Route26_Text_BethRematchDefeat::
     .string "POKéMON aren't tools of war.$"
 
 Route26_Text_BethRematchIntro::
-    .string "I lost to a TRAINER named {RIVAL}.\p"
+    .string "I lost to a red-haired TRAINER.\p"
     .string "But I won't lose to you!$"
 
 Route26_EventScript_RegisterBeth::
@@ -154,7 +154,7 @@ Route26_Text_CooltrainerfBethBeaten::
     .string "POKéMON aren't tools of war.$"
 
 Route26_Text_CooltrainerfBethSeen::
-    .string "I lost to a TRAINER named {RIVAL}.\p"
+    .string "I lost to a red-haired TRAINER.\p"
     .string "He was really strong, but…\p"
     .string "It was as if he absolutely had to\n"
     .string "win at any cost.\p"

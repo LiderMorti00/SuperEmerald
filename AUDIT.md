@@ -208,3 +208,9 @@ Checked the event bindings and warp destinations of these rooms against the shar
 Also read the local conversations and checked the gift attendant in `EternaCity_PokemonCenter_F2_sinnoh` and `SandgemTown_PokemonCenter_2F_sinnoh`. All five Sinnoh gift attendants now use the distribution visibility flag and refresh it on entry. A failed Eon Ticket delivery preserves eligibility.
 
 In `Route34_DayCare_hns`, reviewed the four NPC bindings and the four encyclopedia signs. Separated the overlapping walking Pokémon and replaced the clerk’s unsupported Odd Egg offer.
+
+## Johto approach to the League
+
+- `Route26_hns` and `Route26North_hns`: checked the trainer bindings, badges and League dialogue, Gaven and Beth's registration and rematches, pickups and exits. Jake and Joyce have playable copies on the northern map. Beth's opponent is no longer named using the Hoenn rival placeholder.
+- `Route26_House1_hns` and `Route26_House2_hns`: checked the healing conversation, both book prompts, the seven siblings' map bindings and the two house returns. The letter and four siblings' conversations no longer suggest an unimplemented reward. These four additional outdoor maps received a targeted dialogue check only.
+- `Route27_hns` and `Route27_House_hns`: checked the border conversation, trainer and rematch branches, pickups, falls sign and cave and house destinations. The border greeting also fits a return visit. The TM37 explanation now accounts for types immune to sand damage.

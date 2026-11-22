@@ -268,11 +268,9 @@ Route32_Text_BirdKeeperPeter_Seen::
 	.string "You beat FALKNER?$"
 
 Route32_Text_MeetFrieda::
-	.string "FRIEDA: Yahoo!\p"
-	.string "I'm FRIEDA of the WEEKDAY FAMILY!\n"
-	.string "Nice to meet you!\p"
-	.string "If you can guess my favorite day,\n"
-	.string "I'll give you a reward.$"
+    .string "FRIEDA: Yahoo! Friday at last!\p"
+    .string "After a long week, I like to come\n"
+    .string "down here and watch the anglers.$"
 
 SE_J_Route32_hns_Route32_EventScript_Frieda::
 	msgbox Route32_Text_MeetFrieda, MSGBOX_NPC

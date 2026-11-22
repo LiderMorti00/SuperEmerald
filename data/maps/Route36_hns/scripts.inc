@@ -30,10 +30,9 @@ Route36_Text_Lass2_ClearedSudowoodo::
 	.string "POKéMON?$"
 
 Route36_Text_MeetArthur::
-	.string "ARTHUR: Who are you?\n"
-	.string "I'm ARTHUR of the WEEKDAY FAMILY.\p"
-	.string "If you can guess my favorite day,\n"
-	.string "I'll give you a reward.$"
+    .string "ARTHUR: Thursday belongs to me.\p"
+    .string "My brothers and sisters each have a\n"
+    .string "favorite spot. ROUTE 36 is mine.$"
 
 SE_J_Route36_hns_Route36_EventScript_Arthur::
 	msgbox Route36_Text_MeetArthur, MSGBOX_NPC
