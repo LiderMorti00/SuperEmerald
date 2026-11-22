@@ -85,9 +85,20 @@ SootopolisCity_Gym_1F_EventScript_Juan::
 	goto_if_eq VAR_RESULT, TRUE, SootopolisCity_Gym_1F_EventScript_JuanRematch
 	goto_if_unset FLAG_RECEIVED_TM_WATER_PULSE, SootopolisCity_Gym_1F_EventScript_GiveWaterPulse2
 	goto_if_unset FLAG_BADGE06_GET, SootopolisCity_Gym_1F_EventScript_GoGetFortreeBadge
+	goto_if_set FLAG_SYS_GAME_CLEAR, SootopolisCity_Gym_1F_EventScript_WelcomeChampion
 	msgbox SootopolisCity_Gym_1F_Text_JuanPostBattle, MSGBOX_DEFAULT
 	release
 	end
+
+SootopolisCity_Gym_1F_EventScript_WelcomeChampion::
+	msgbox SootopolisCity_Gym_1F_Text_WelcomeChampion, MSGBOX_DEFAULT
+	release
+	end
+
+SootopolisCity_Gym_1F_Text_WelcomeChampion:
+	.string "WALLACE: Welcome back, CHAMPION.\p"
+	.string "The younger TRAINERS still ask me\n"
+	.string "about the day you crossed that ice.$"
 
 SootopolisCity_Gym_1F_EventScript_JuanDefeated::
 	message SootopolisCity_Gym_1F_Text_ReceivedRainBadge

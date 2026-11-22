@@ -5,9 +5,21 @@ ViridianCity_Gym_EventScript_Giovanni::
 	famechecker FAMECHECKER_GIOVANNI, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	trainerbattle_single TRAINER_LEADER_GIOVANNI, ViridianCity_Gym_Text_GiovanniIntro, ViridianCity_Gym_Text_GiovanniDefeat, ViridianCity_Gym_EventScript_DefeatedGiovanni, NO_MUSIC
 	goto_if_unset FLAG_GOT_TM26_FROM_GIOVANNI, ViridianCity_Gym_EventScript_GiveTM26
+	goto_if_set FLAG_SE_KANTO_CHAMPION, ViridianCity_Gym_EventScript_BlueAfterLeague
 	msgbox ViridianCity_Gym_Text_GiovanniPostBattle
 	release
 	end
+
+ViridianCity_Gym_EventScript_BlueAfterLeague::
+	msgbox ViridianCity_Gym_Text_BlueAfterLeague
+	release
+	end
+
+ViridianCity_Gym_Text_BlueAfterLeague::
+	.string "BLUE: So you took my EARTHBADGE\n"
+	.string "all the way past LANCE, huh?\p"
+	.string "Heh. Next time we battle, bring\n"
+	.string "the team that beat his dragons!$"
 
 ViridianCity_Gym_EventScript_DefeatedGiovanni::
 	famechecker FAMECHECKER_GIOVANNI, 3

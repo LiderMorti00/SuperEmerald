@@ -25,9 +25,21 @@ SootopolisCity_PokemonCenter_1F_EventScript_Gentleman::
 	end
 
 SootopolisCity_PokemonCenter_1F_EventScript_GentlemanNoLegendaries::
+	goto_if_set FLAG_SYS_GAME_CLEAR, SootopolisCity_PokemonCenter_1F_EventScript_MetChampion
 	msgbox SootopolisCity_PokemonCenter_1F_Text_WallaceToughestInHoenn, MSGBOX_DEFAULT
 	release
 	end
+
+SootopolisCity_PokemonCenter_1F_EventScript_MetChampion::
+	msgbox SootopolisCity_PokemonCenter_1F_Text_MetChampion, MSGBOX_DEFAULT
+	release
+	end
+
+SootopolisCity_PokemonCenter_1F_Text_MetChampion:
+	.string "You beat WALLACE here in town,\n"
+	.string "then STEVEN at the LEAGUE?\p"
+	.string "Wait till I tell my grandson who\n"
+	.string "I met at the POKéMON CENTER!$"
 
 SootopolisCity_PokemonCenter_1F_EventScript_Woman::
 	lock
