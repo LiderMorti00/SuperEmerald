@@ -217,7 +217,7 @@ Route210_South_EventScript_SNCynthiaCharm::
 	lock
 	faceplayer
 	msgbox Route210_South_EventScript_SNCynthiaCharm_T1, MSGBOX_DEFAULT
-	giveitem ITEM_ULTRA_BALL
+	msgbox Route210_South_Text_ReceivedOldCharm, MSGBOX_DEFAULT
 	setflag FLAG_SN_RECEIVED_OLD_CHARM
 	msgbox Route210_South_EventScript_SNCynthiaCharm_T2, MSGBOX_DEFAULT
 	closemessage
@@ -227,6 +227,9 @@ Route210_South_EventScript_SNCynthiaCharm::
 	setflag FLAG_SN_HIDE_R210_CYNTHIA
 	release
 	end
+
+Route210_South_Text_ReceivedOldCharm::
+	.string "{PLAYER} received the Old CHARM!$"
 
 Route210_South_EventScript_SNCynthiaCharm_T2::
 	.string "I know I'm asking a big favor of you.\p"

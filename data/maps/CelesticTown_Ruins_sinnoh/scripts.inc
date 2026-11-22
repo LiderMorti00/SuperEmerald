@@ -61,12 +61,11 @@ CelesticTown_Ruins_EventScript_SNCharmEnd::
 	return
 
 CelesticTown_Ruins_EventScript_SNCharm::
-	checkitem ITEM_ULTRA_BALL
-	goto_if_eq VAR_RESULT, FALSE, CelesticTown_Ruins_EventScript_SNCharmEnd
+	goto_if_unset FLAG_SN_RECEIVED_OLD_CHARM, CelesticTown_Ruins_EventScript_SNCharmEnd
 	lock
 	faceplayer
 	msgbox CelesticTown_Ruins_Text_SNCharm, MSGBOX_DEFAULT
-	removeitem ITEM_ULTRA_BALL
+	clearflag FLAG_SN_RECEIVED_OLD_CHARM
 	playse SE_SUCCESS
 	msgbox CelesticTown_Ruins_Text_SNCharm2, MSGBOX_DEFAULT
 	msgbox CelesticTown_Ruins_Text_SNCharm3, MSGBOX_DEFAULT
