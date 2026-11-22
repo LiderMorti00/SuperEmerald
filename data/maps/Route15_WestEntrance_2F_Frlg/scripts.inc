@@ -51,9 +51,9 @@ Route15_WestEntrance_2F_EventScript_GetAideRequestInfo::
 	return
 
 Route15_WestEntrance_2F_Text_GiveItemIfCaughtEnough::
-	.string "Hi! Remember me?\n"
-	.string "I'm one of PROF. OAK's AIDES.\p"
-	.string "If your POKéDEX has complete data\n"
+	.string "Hello! I help PROF. OAK survey\n"
+	.string "the POKéMON of KANTO.\p"
+	.string "If your KANTO POKéDEX has data\n"
 	.string "on {STR_VAR_1} species, I'm supposed to\l"
 	.string "give you a reward.\p"
 	.string "PROF. OAK entrusted me with the\n"

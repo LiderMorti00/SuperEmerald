@@ -39,9 +39,9 @@ Route2_EastBuilding_EventScript_Rocker::
 	end
 
 Route2_EastBuilding_Text_GiveHM05IfSeen10Mons::
-	.string "Hi! Remember me?\n"
-	.string "I'm one of PROF. OAK's AIDES.\p"
-	.string "If your POKéDEX has complete data\n"
+	.string "Hello! I help PROF. OAK survey\n"
+	.string "the POKéMON of KANTO.\p"
+	.string "If your KANTO POKéDEX has data\n"
 	.string "on ten species, I'm supposed to\l"
 	.string "give you a reward.\p"
 	.string "PROF. OAK entrusted me with\n"

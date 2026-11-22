@@ -12,11 +12,14 @@ SolaceonTown_NewsPress_EventScript_SNEditor::
 	special SinnohPartyHasSpecies
 	goto_if_eq VAR_RESULT, FALSE, SolaceonTown_NewsPress_EventScript_SNEditor_Wait
 	msgbox SolaceonTown_NewsPress_EventScript_SNEditor_Great, MSGBOX_DEFAULT
+	checkitemspace ITEM_HEART_SCALE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	random 3
 	switch VAR_RESULT
 	case 0, SolaceonTown_NewsPress_EventScript_SNEditor_Great1
 	case 1, SolaceonTown_NewsPress_EventScript_SNEditor_Great2
 	giveitem ITEM_DUSK_BALL, 3
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	goto SolaceonTown_NewsPress_EventScript_SNEditor_Scale
 
 SolaceonTown_NewsPress_EventScript_SNEditor_Scale::
@@ -27,10 +30,12 @@ SolaceonTown_NewsPress_EventScript_SNEditor_Scale::
 
 SolaceonTown_NewsPress_EventScript_SNEditor_Great2::
 	giveitem ITEM_QUICK_BALL, 3
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	goto SolaceonTown_NewsPress_EventScript_SNEditor_Scale
 
 SolaceonTown_NewsPress_EventScript_SNEditor_Great1::
 	giveitem ITEM_NET_BALL, 3
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	goto SolaceonTown_NewsPress_EventScript_SNEditor_Scale
 
 SolaceonTown_NewsPress_EventScript_SNEditor_Great::

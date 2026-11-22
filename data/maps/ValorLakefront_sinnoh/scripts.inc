@@ -188,8 +188,9 @@ ValorLakefront_EventScript_SNSuiteLady_T1::
 
 ValorLakefront_EventScript_SNSuiteLady_Key::
 	msgbox ValorLakefront_EventScript_SNSuiteLady_T2, MSGBOX_DEFAULT
-	removeitem ITEM_SUITE_KEY
 	giveitem ITEM_WHITE_FLUTE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	removeitem ITEM_SUITE_KEY
 	setflag FLAG_SN_RETURNED_SUITE_KEY
 	release
 	end

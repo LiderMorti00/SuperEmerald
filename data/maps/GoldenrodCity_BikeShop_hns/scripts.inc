@@ -20,6 +20,7 @@ GoldenrodCity_BikeShop_Text_Refused::
 GoldenrodCity_BikeShop_EventScript_Clerk_BikeAgreed::
 	msgbox GoldenrodCity_BikeShop_Text_ClerkAgreed, MSGBOX_DEFAULT
 	giveitem ITEM_BICYCLE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_J_RECEIVED_BIKE
 	closemessage
 	release
@@ -43,14 +44,11 @@ GoldenrodCity_BikeShop_EventScript_Clerk_BikeReceived::
 	end
 
 GoldenrodCity_BikeShop_Text_Mainshop::
-	.string "Business has been hard to come\n"
-	.string "by since we moved from KANTO.\l"
-	.string "We appreciate your help!\p"
-	.string "Can you make sure to show off\n"
-	.string "our patented gear-changing tech?\p"
-	.string "It's as simple as pressing R when\n"
-	.string "you are stopped on your BIKE.\p"
-	.string "Beware! You will then go faster!$"
+	.string "When we moved here from KANTO,\n"
+	.string "hardly anyone knew our shop.\p"
+	.string "Then a kid started riding one of\n"
+	.string "our bikes all over JOHTO. Best\l"
+	.string "advertising we ever had!$"
 
 GoldenrodCity_BikeShop_EventScript_Clerk2::
 	lock
