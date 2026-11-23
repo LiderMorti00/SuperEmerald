@@ -82,7 +82,8 @@ JubilifeCity_Text_PtNpc6::
 JubilifeCity_EventScript_PtNpc7::
 	lock
 	faceplayer
-	goto_if_set FLAG_SINNOH_BADGE1_GET, JubilifeCity_EventScript_PtNpc7_SNVar0
+	specialvar VAR_RESULT, GetSinnohBadgeCount
+	goto_if_ge VAR_RESULT, 1, JubilifeCity_EventScript_PtNpc7_SNVar0
 	msgbox JubilifeCity_Text_PtNpc7, MSGBOX_DEFAULT
 	release
 	end

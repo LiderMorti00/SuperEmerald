@@ -7,7 +7,8 @@ OreburghCity_Mart_EventScript_Clerk::
 	faceplayer
 	message gText_HowMayIServeYou
 	waitmessage
-	goto_if_set FLAG_SINNOH_BADGE1_GET, OreburghCity_Mart_EventScript_ClerkBadge
+	specialvar VAR_RESULT, GetSinnohBadgeCount
+	goto_if_ge VAR_RESULT, 1, OreburghCity_Mart_EventScript_ClerkBadge
 	pokemart OreburghCity_Mart_Pokemart_Basic
 	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
 	release

@@ -118,7 +118,7 @@ HearthomeCity_Gym_EventScript_Leader::
 	end
 
 HearthomeCity_Gym_Text_LeaderPostBattle::
-	.string "Three GYM BADGES…\p"
+	.string "Another GYM BADGE…\p"
 	.string "But you must not forget this. There\n"
 	.string "are many other TRAINERS.\p"
 	.string "Strong TRAINERS, too. There are many\n"

@@ -339,13 +339,10 @@ SunyshoreCity_Gym_EventScript_LeaderDefeated::
 
 SunyshoreCity_Gym_Text_ExplainBadge::
 	.string "That Beacon BADGE lets you use the\n"
-	.string "hidden move WATERFALL even when\p"
+	.string "hidden move WATERFALL even when\l"
 	.string "you're not in a battle.\p"
 	.string "Waterfall happens to be key if you're\n"
 	.string "going to the POKéMON LEAGUE.\p"
-	.string "Also, because you've collected all\n"
-	.string "eight BADGES, any POKéMON at any\p"
-	.string "level will now obey you without fail.\p"
 	.string "I want you to take this, too.$"
 
 SunyshoreCity_Gym_Text_ReceivedBadge::
@@ -360,8 +357,8 @@ SunyshoreCity_Gym_Text_LeaderDefeat::
 	.string "It's also made me excited to know you\n"
 	.string "and your team will keep battling\p"
 	.string "to greater heights!\p"
-	.string "This is your eighth GYM BADGE. You've\n"
-	.string "earned this!$"
+	.string "This GYM BADGE is yours. You've\n"
+	.string "earned it!$"
 
 SunyshoreCity_Gym_Text_LeaderIntro::
 	.string "…All right, challenger.\p"
@@ -461,8 +458,8 @@ SunyshoreCity_Gym_Text_PtGymGuideAfter::
 	.string "Do you know why?\p"
 	.string "Because you and your POKéMON are\n"
 	.string "capable of achieving so much more!\p"
-	.string "But, I am proud of you! Eight SINNOH\n"
-	.string "BADGES!\p"
+	.string "But, I am proud of you! You beat\n"
+	.string "VOLKNER!\p"
 	.string "Way to go, kiddo!$"
 
 SunyshoreCity_Gym_EventScript_PtGymStatue::

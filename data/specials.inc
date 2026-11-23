@@ -347,6 +347,7 @@ gSpecials::
 	def_special CopyCurSecretBaseOwnerName_StrVar1
 	def_special ScriptCheckFreePokemonStorageSpace
 	def_special ScriptHasRoomForThreeMons
+	def_special GetSinnohBadgeCount
 	def_special DoSealedChamberShakingEffect_Long, waitstate=1
 	def_special ShowDeptStoreElevatorFloorSelect
 	def_special InteractWithShieldOrTVDecoration

@@ -84,9 +84,6 @@ EternaCity_Gym_Text_GiveTM::
 	.string "With the Forest BADGE, your POKéMON\n"
 	.string "can use the hidden move CUT outside\p"
 	.string "of battle.\p"
-	.string "Now that you have two GYM BADGES, all\n"
-	.string "POKéMON you received in trades\p"
-	.string "will obey you up to Lv. 30.\p"
 	.string "I've also got something else. It's a\n"
 	.string "gift from me!$"
 

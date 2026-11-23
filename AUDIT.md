@@ -383,6 +383,85 @@ problems and no changed text exceeds the 216-pixel message box.
 - Coverage figures above corrected (828 maps with output, not 849) and the limits of the pass
   written out.
 
+
+## Regression pass after dae2e36217
+
+ROM: built from dae2e36217 plus this commit's changes. Each test starts a new game with
+`/tmp/mktest.py`, which places the player on the map and sets the listed flags and variables
+in `NewGameInitData`. The regional world state then runs as it does on arrival. No older
+save was available, so updating an existing save is untested.
+
+### Accessibility classifications
+
+- Ice Path B4F: the "no warp leads here" note was wrong. The reference search missed the
+  warps in B2F and B3F. Fixed in the table and ROM-tested in both directions.
+- Mt. Silver Moltres room: the same search error. It is reached from the Waterfall Room by
+  SURF and has no visible event. Code only.
+- A fresh search of every warp, connection and script reference finds no other map marked
+  unreachable that has a way in. Lake Valor (drained) and Lake Verity (low water) are only
+  referenced by wild encounter data. TestMap1/2 are not in `map_groups.json`, so they are
+  never built.
+- Kanto and Sevii: the only maps marked unreachable are the 25 S.S. Anne maps. Each has a
+  single row in the review log, written as unreachable, and the log keeps no history, so it
+  cannot show which maps were counted as reviewed in the earlier "330 reviewed / 2
+  unreachable" report. The 23-map difference matches the S.S. Anne set. The cause is the
+  Kanto state (`VAR_MAP_SCENE_VERMILION_CITY` = 3, `FLAG_HIDE_SS_ANNE`) together with the
+  pier trigger described in the table. ROM: walking down the pier opens the SEAGALLOP menu.
+
+### Results
+
+| Test | Setup | Steps | Result |
+|---|---|---|---|
+| Ice Path B2F↔B4F | B2F (15,15) | Right onto the ladder, step off, back on | OK in both directions |
+| Ice Path B3F↔B4F | B3F (13,8) | Right onto the ladder, step off, back on | OK in both directions |
+| Vermilion pier | (23,31), Kanto state | Down onto the pier | Ticket check, then the SEAGALLOP menu; no S.S. Anne |
+| Rocket step 6, full bag | VAR_SE_ROCKET_QUEST 6, Giovanni beaten, POKé BALLS pocket full | Talk twice | "BAG is full" both times, quest stays at 6, Giovanni stays |
+| Rocket step 6 | same, bag not full | Talk | MASTER BALL received, farewell, Giovanni leaves |
+| Two Island shop | Kanto state, Hoenn CHAMPION | Talk, Buy | "Distant lands" greeting, full stock (ULTRA, REPEAT, TIMER BALL, drinks, LAVA COOKIE) |
+| Sinnoh League door | 0 SINNOH badges, before the fix | Walk north | **Bug**: walked straight into AARON's room |
+| Sinnoh League door | 7 badges (no ICICLE, BEACON owned), after the fix | Talk to the guards | "You haven't obtained all the BADGES." |
+| Sinnoh League door | 8 badges, after the fix | Talk to the guards | Guards step aside, "go forth" |
+| WILL, first visit | VAR_MAP_SCENE_POKEMON_LEAGUE 1 | Talk | "Allow me to introduce myself" |
+| WILL, rematch | + FLAG_SE_KANTO_COMPLETE | Talk | "So you've returned" |
+| AARON, first visit | none | Talk | First-visit greeting |
+| AARON, rematch | FLAG_SE_SINNOH_LEAGUE_CLEARED | Talk | "You're back!" |
+| Unova starter trio | party full + boxes with 0 / 1 / 2 / 3 free slots | Talk | 0, 1, 2: "need room for three", nothing given. 3: all three given |
+| Night, Seven Island | clock 23:00 | Enter and leave the Center, wait 65 s | Night tint outdoors, none indoors; Center windows and door stay lit (pixel count) |
+| Night, Veilstone Dept. Store | clock 23:00 | Enter and leave | Glass door stays lit before and after (pixel count) |
+| Vermilion → Canalave | JOHTO and CANALAVE tickets, Johto League | Sailor menu → CANALAVE | Boards the S.S. AQUA with the Canalave announcement |
+| S.S. AQUA arrival | cruise state 3, destination 4, first Sinnoh arrival | Talk to the door sailor | Disembarks at Canalave, DAWN's welcome scene plays |
+
+### Fixed in this pass
+
+- Sinnoh League: the door guards now stand in front of the door until they let the player
+  through, as in Ever Grande. Before, nothing blocked the door.
+- Sinnoh gyms can be beaten in any order, so the following now count badges
+  (`GetSinnohBadgeCount`) instead of testing one leader's badge:
+  - the League guards (all eight)
+  - the stock of the generic Sinnoh marts (1, 3 and 5 badges)
+  - the Sandgem, Jubilife, Oreburgh and Floaroma marts
+  - the Jubilife and Twinleaf NPCs
+  - the Sunyshore Center "eight badges" line
+- Gym text no longer states Platinum's badge counts, which were wrong both for this badge
+  order and for any free order. This covers Gardenia, Maylene, Fantina, Byron, Volkner and
+  the Canalave and Sunyshore guides. The texts also no longer promise obedience levels:
+  obedience and field moves follow the Hoenn badges.
+
+### Notes and pending
+
+- No map sets `night_music`, so the music is the same by day and night everywhere. This is
+  not a regression.
+- At night, the windows on the Veilstone Dept. Store's front do not light up; only the glass
+  door does (no `.pla` entry for those colors).
+- Pending, not run in ROM:
+  - loading an older save (none available)
+  - Hoenn League first visit and rematch (Emerald scripts, unchanged)
+  - walking a full 90-step crossing (the step counter is shared with the S.S. TIDAL code,
+    which was read)
+  - the Sinnoh mart tiers by badge count (code only)
+  - Giovanni's battle itself (the test team lost; the reward was tested with the battle
+    flag set)
+
 ## Map-by-map branch audit (Johto, Kanto, Sinnoh)
 
 Each map was traced from its objects, signs, trainers and transition/coord events through local and shared scripts. Every branch was checked for its condition, what sets it, and what the speaker knows at that point (first visit, return, rematch, quest in progress, save/load, regional travel order).
@@ -393,7 +472,7 @@ ROM tests run: Goldenrod Dept. Store clerk, Goldenrod Radio Tower lottery, Celes
 
 | Region | complete | no events | unreachable |
 |---|---|---|---|
-| Johto | 204 | 34 | 4 |
+| Johto | 205 | 35 | 2 |
 | Kanto | 307 | 78 | 25 |
 | Sinnoh | 328 | 71 | 2 |
 
@@ -493,7 +572,7 @@ ROM tests run: Goldenrod Dept. Store clerk, Goldenrod Radio Tower lottery, Celes
 | IcePath_B1F_hns | complete |  |
 | IcePath_B2F_hns | complete |  |
 | IcePath_B3F_hns | complete |  |
-| IcePath_B4F_hns | unreachable | no warp leads here |
+| IcePath_B4F_hns | complete | Reached from B2F (16,15) and B3F (14,8); both return warps lead back. NEVERMELTICE ball, PROTEIN and CARBOS hidden items, 10 smashable rocks (both warps connect without Rock Smash). ROM-tested: B2F→B4F→B2F and B3F→B4F→B3F. Earlier "unreachable" came from a reference search that missed these warps. |
 | IlexForest_hns | complete |  |
 | LakeOfRageLowTide_hns | no events |  |
 | LakeOfRage_House1_hns | complete | guru promised power but gave nothing -> now gives TM HIDDEN POWER once (flag 0x32F6, bag-full check) |
@@ -509,7 +588,7 @@ ROM tests run: Goldenrod Dept. Store clerk, Goldenrod Radio Tower lottery, Celes
 | MtMortar_2F_hns | complete |  |
 | MtMortar_B1F_hns | complete | Kiyo challenged to a battle that never happens -> text now postpones it |
 | MtSilver_1F_ItemRoom_hns | no events |  |
-| MtSilver_1F_MoltresRoom_hns | unreachable | no warp leads here |
+| MtSilver_1F_MoltresRoom_hns | no events | Reached from MtSilver_1F_WaterfallRoom (13,4), across water (needs SURF). MOLTRES is hidden by the Johto state (`FLAG_J_HIDE_MOLTRES`); Kanto keeps its MOLTRES on Mt. Ember. Code only, not ROM-tested. Earlier "unreachable" was the same search error. |
 | MtSilver_1F_WaterfallRoom_hns | no events |  |
 | MtSilver_2F_hns | no events |  |
 | MtSilver_3F_hns | complete |  |
@@ -898,32 +977,32 @@ ROM tests run: Goldenrod Dept. Store clerk, Goldenrod Radio Tower lottery, Celes
 | Route8_Frlg | complete | Megan: 'Saffron gatekeeper won't let us through' (gates open) -> fixed |
 | Route8_WestEntrance_Frlg | complete |  |
 | Route9_Frlg | complete |  |
-| SSAnne_1F_Corridor_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_1F_Room1_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_1F_Room2_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_1F_Room3_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_1F_Room4_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_1F_Room5_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_1F_Room6_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_1F_Room7_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_2F_Corridor_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_2F_Room1_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_2F_Room2_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_2F_Room3_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_2F_Room4_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_2F_Room5_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_2F_Room6_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_3F_Corridor_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_1F_Corridor_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_1F_Room1_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_1F_Room2_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_1F_Room3_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_1F_Room4_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_1F_Room5_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_1F_Room6_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_1F_Room7_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_2F_Corridor_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_2F_Room1_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_2F_Room2_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_2F_Room3_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_2F_Room4_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_2F_Room5_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_2F_Room6_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_3F_Corridor_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
 | SSAnne_B1F_Corridor_Frlg | no events |  |
-| SSAnne_B1F_Room1_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_B1F_Room2_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_B1F_Room3_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_B1F_Room4_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_B1F_Room5_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_CaptainsOffice_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_Deck_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_Exterior_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
-| SSAnne_Kitchen_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_B1F_Room1_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_B1F_Room2_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_B1F_Room3_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_B1F_Room4_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_B1F_Room5_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_CaptainsOffice_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_Deck_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_Exterior_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
+| SSAnne_Kitchen_Frlg | unreachable | S.S. ANNE has left: VERMILION scene 3 and FLAG_HIDE_SS_ANNE; the pier tiles (22,33)/(23,33) always run the ticket check, which in scene 3 offers the SEAGALLOP or walks the player back up; (24,33) is the sailor; the dock is elevation 3, so it cannot be reached by SURF. ROM: the pier trigger opens the SEAGALLOP ferry. |
 | SafariZone_Center_Frlg | complete |  |
 | SafariZone_Center_RestHouse_Frlg | complete |  |
 | SafariZone_East_Frlg | complete |  |

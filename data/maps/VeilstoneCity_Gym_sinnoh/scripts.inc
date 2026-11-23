@@ -284,9 +284,6 @@ VeilstoneCity_Gym_Text_ExplainBadge::
 	.string "official POKéMON LEAGUE GYM BADGE.\p"
 	.string "With it, you can use the hidden move\n"
 	.string "Fly outside of battle.\p"
-	.string "Oh, and since you now have four GYM\n"
-	.string "BADGES, POKéMON obtained in trades\p"
-	.string "will obey you up to Lv. 50.\p"
 	.string "Oh, and please take this as well.$"
 
 VeilstoneCity_Gym_Text_ReceivedBadge::

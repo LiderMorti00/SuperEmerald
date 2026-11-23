@@ -183,9 +183,6 @@ CanalaveCity_Gym_Text_ExplainBadge::
 	.string "Having the Mine BADGE enables you to\n"
 	.string "use the hidden move STRENGTH anytime\p"
 	.string "outside of battle.\p"
-	.string "And you now have six GYM BADGES.\p"
-	.string "That means all POKéMON up to Lv. 70 will\n"
-	.string "obey you without question.\p"
 	.string "Here! Take this, too!$"
 
 CanalaveCity_Gym_Text_ReceivedBadge::
@@ -282,8 +279,8 @@ CanalaveCity_Gym_EventScript_PtGymGuideAfter::
 CanalaveCity_Gym_Text_PtGymGuideAfter::
 	.string "Oh! {PLAYER}! You've beaten the GYM\n"
 	.string "LEADER!\p"
-	.string "Good going! That makes it six GYM\n"
-	.string "BADGES!\p"
+	.string "Good going! That's one more GYM\n"
+	.string "BADGE for your TRAINER Case!\p"
 	.string "I tell you what, you're really turning\n"
 	.string "into one fine TRAINER.\p"
 	.string "If you were to say you're going to try\n"

@@ -713,11 +713,18 @@ SE_SinnohLucianRoom_OnLoad::
 
 SE_SinnohNorthPC_OnTransition::
 	setrespawn HEAL_LOCATION_POKEMON_LEAGUE_NORTH_SINNOH
+	@ the guards stand in front of the door until they let the player through (as in EVER GRANDE)
+	call_if_unset FLAG_SN_ENTERED_ELITE_FOUR, SE_SinnohNorthPC_GuardsBlockDoor
 	clearflag FLAG_SN_DEFEATED_ELITE_4_SIDNEY
 	clearflag FLAG_SN_DEFEATED_ELITE_4_PHOEBE
 	clearflag FLAG_SN_DEFEATED_ELITE_4_GLACIA
 	clearflag FLAG_SN_DEFEATED_ELITE_4_DRAKE
 	end
+
+SE_SinnohNorthPC_GuardsBlockDoor:
+	setobjectxyperm LOCALID_POKEMON_LEAGUE_NORTH_POKEMON_CENTER_1F_LEAGUE_GUARD_1, 9, 2
+	setobjectxyperm LOCALID_POKEMON_LEAGUE_NORTH_POKEMON_CENTER_1F_LEAGUE_GUARD_2, 10, 2
+	return
 
 PokemonLeague_ChampionRoom_sinnoh_MapScripts::
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, SE_SinnohLeague_OnWarp

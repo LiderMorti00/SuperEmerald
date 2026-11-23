@@ -1575,6 +1575,19 @@ bool8 ScriptHasRoomForThreeMons(void)
     return free >= 3;
 }
 
+// Super Emerald: number of Sinnoh GYM BADGES; the gyms can be beaten in any order
+u16 GetSinnohBadgeCount(void)
+{
+    u32 i, count = 0;
+
+    for (i = FLAG_SINNOH_BADGE1_GET; i <= FLAG_SINNOH_BADGE8_GET; i++)
+    {
+        if (FlagGet(i))
+            count++;
+    }
+    return count;
+}
+
 // Task data for Task_ShakeCamera
 #define tHorizontalPan  data[0]
 #define tDelayCounter   data[1]
