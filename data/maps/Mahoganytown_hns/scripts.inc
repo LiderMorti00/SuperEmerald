@@ -38,8 +38,41 @@ MahoganyTown_Text_RageCandyBarMerchantTryOne::
 	.string "¥300! Want one?$"
 
 SE_J_Mahoganytown_hns_MahoganyTown_EventScript_Merchant::
-	msgbox MahoganyTown_Text_RageCandyBarMerchantTryOne, MSGBOX_NPC
+	lock
+	faceplayer
+	msgbox MahoganyTown_Text_RageCandyBarMerchantTryOne, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, MahoganyTown_EventScript_MerchantNo
+	checkmoney 300
+	goto_if_eq VAR_RESULT, FALSE, MahoganyTown_EventScript_MerchantNoMoney
+	checkitemspace ITEM_RAGE_CANDY_BAR
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	removemoney 300
+	giveitem ITEM_RAGE_CANDY_BAR
+	msgbox MahoganyTown_Text_MerchantThanks, MSGBOX_DEFAULT
+	release
 	end
+
+MahoganyTown_EventScript_MerchantNo::
+	msgbox MahoganyTown_Text_MerchantNo, MSGBOX_DEFAULT
+	release
+	end
+
+MahoganyTown_EventScript_MerchantNoMoney::
+	msgbox MahoganyTown_Text_MerchantNoMoney, MSGBOX_DEFAULT
+	release
+	end
+
+MahoganyTown_Text_MerchantThanks::
+	.string "Thanks, kid!\n"
+	.string "Enjoy that RAGECANDYBAR!$"
+
+MahoganyTown_Text_MerchantNo::
+	.string "Suit yourself. You don't know what\n"
+	.string "you're missing!$"
+
+MahoganyTown_Text_MerchantNoMoney::
+	.string "Hm? You don't have enough money.\n"
+	.string "Come back when you do!$"
 
 MahoganyTown_EventScript_Fisher::
 	lock

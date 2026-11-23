@@ -3,11 +3,10 @@ Gate_GoldenrodCity_Route35_hns_MapScripts::
 
 
 Route35GoldenrodGate_Text_RandyAskFavor::
-	.string "Excuse me, kid! Can you do a guy\n"
-	.string "a favor?\p"
-	.string "Can you take this POKéMON with MAIL\n"
-	.string "to my friend?\p"
-	.string "He's on ROUTE 31.$"
+	.string "My buddy on ROUTE 31 and I used to\n"
+	.string "send MAIL by POKéMON.\p"
+	.string "Now we just call each other on the\n"
+	.string "POKéGEAR. Times change, huh?$"
 
 SE_J_Gate_GoldenrodCity_Route35_hns_Gate_GoldenrodCity_Route35_EventScript_Randy::
 	msgbox Route35GoldenrodGate_Text_RandyAskFavor, MSGBOX_NPC

@@ -4,10 +4,12 @@ MtMortar_B1F_hns_MapScripts::
 
 MountMortar4_Text_KiyoIntro::
 	.string "Hey!\p"
-	.string "I am the KARATE KING!\n"
-	.string "I train alone here in the dark!\p"
-	.string "You! Battle with me!\n"
-	.string "Hwaaarggh!$"
+	.string "I am the KARATE KING! I train alone\n"
+	.string "here in the dark!\p"
+	.string "You're the CHAMPION, aren't you?\n"
+	.string "I'm not ready to face you yet.\p"
+	.string "Come back when my training is\n"
+	.string "finished. Hwaaarggh!$"
 
 SE_J_MtMortar_B1F_hns_MountMortar4_EventScript_Kiyo::
 	msgbox MountMortar4_Text_KiyoIntro, MSGBOX_NPC

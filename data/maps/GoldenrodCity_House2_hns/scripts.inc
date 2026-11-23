@@ -3,7 +3,13 @@ GoldenrodCity_House2_hns_MapScripts::
 
 
 SE_J_GoldenrodCity_House2_hns_BlackthornCity_MoveDeletersHouse_EventScript_MoveDeleter::
-	msgbox BlackthornCity_MoveDeletersHouse_Text_ICanMakeMonForgetMove, MSGBOX_NPC
+	lockall
+	faceplayer
+	msgbox BlackthornCity_MoveDeletersHouse_Text_ICanMakeMonForgetMove, MSGBOX_YESNO
+	switch VAR_RESULT
+	case YES, LilycoveCity_MoveDeletersHouse_EventScript_ChooseMonAndMoveToForget
+	case NO, LilycoveCity_MoveDeletersHouse_EventScript_ComeAgain
+	releaseall
 	end
 
 GoldenrodCity_House2_EventScript_Woman::

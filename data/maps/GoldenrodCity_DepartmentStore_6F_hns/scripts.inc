@@ -34,8 +34,9 @@ GoldenrodDeptStore_Text_6FLass::
 	.string "available as it once was.$"
 
 GoldenrodCity_DepartmentStore_6F_Text_ThisIsntAMon::
-	.string "Uh, no, I don't think so.\n"
-	.string "That isn't a {STR_VAR_1}.$"
+	.string "I'm looking for someone to trade\n"
+	.string "POKéMON with…\p"
+	.string "But nobody's interested today.$"
 
 SE_J_GoldenrodCity_DepartmentStore_6F_hns_GoldenrodCity_DepartmentStore_6F_EventScript_Jose::
 	msgbox GoldenrodCity_DepartmentStore_6F_Text_ThisIsntAMon, MSGBOX_NPC

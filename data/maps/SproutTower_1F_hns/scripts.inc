@@ -35,8 +35,8 @@ SproutTower_1F_EventScript_Sage1::
 	end
 
 SproutTower_Text_1F_Sage1::
-	.string "Only if you reach the top will\n"
-	.string "you obtain an HM.$"
+	.string "The ELDER at the top tests the bond\n"
+	.string "between TRAINERS and POKéMON.$"
 
 SproutTower_1F_EventScript_SageChow::
 	trainerbattle_single TRAINER_CHOW_HNS, SproutTower_Text_SageChow_Seen, SproutTower_Text_SageChow_Beaten

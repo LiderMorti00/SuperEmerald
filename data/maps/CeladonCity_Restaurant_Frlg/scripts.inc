@@ -12,7 +12,8 @@ CeladonCity_Restaurant_EventScript_Woman::
 CeladonCity_Restaurant_EventScript_CoinCaseMan::
 	lock
 	faceplayer
-	goto_if_set FLAG_GOT_COIN_CASE, CeladonCity_Restaurant_EventScript_AlreadyGotCoinCase
+	checkitem ITEM_COIN_CASE @ Super Emerald: a HOENN COIN CASE counts too
+	goto_if_eq VAR_RESULT, TRUE, CeladonCity_Restaurant_EventScript_AlreadyGotCoinCase
 	msgbox CeladonCity_Restaurant_Text_TakeThisImBusted
 	checkitemspace ITEM_COIN_CASE
 	goto_if_eq VAR_RESULT, FALSE, CeladonCity_Restaurant_EventScript_NoRoomForCoinCase

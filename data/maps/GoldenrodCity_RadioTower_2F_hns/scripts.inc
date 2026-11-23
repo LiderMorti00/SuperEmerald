@@ -105,10 +105,10 @@ GoldenrodCity_RadioTower_2F_Text_GruntM5Seen::
 	.string "We love being evil! Scared?$"
 
 GoldenrodCity_RadioTower_2F_Text_BuenaAskPassword::
-	.string "BUENA: Hi there!\p"
-	.string "So, do you know today's\n"
-	.string "password?\p"
-	.string "OK! Which one is it?$"
+	.string "BUENA: Hi there! I'm BUENA, the host\n"
+	.string "of BUENA'S PASSWORD!\p"
+	.string "The show is taking a little break\n"
+	.string "right now. Tune in again soon!$"
 
 SE_J_GoldenrodCity_RadioTower_2F_hns_GoldenrodCity_RadioTower_2F_EventScript_Buena::
 	msgbox GoldenrodCity_RadioTower_2F_Text_BuenaAskPassword, MSGBOX_NPC

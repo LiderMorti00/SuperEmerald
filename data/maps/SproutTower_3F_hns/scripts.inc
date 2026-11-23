@@ -15,7 +15,7 @@ SproutTower_Text_SageNeal_Beaten::
 	.string "It is my head that is bright!$"
 
 SproutTower_Text_SageNeal_Seen::
-	.string "The ELDER's HM lights even\n"
+	.string "The ELDER's wisdom lights even\n"
 	.string "pitch-black darkness.$"
 
 SproutTower_3F_EventScript_SageJin::
@@ -54,14 +54,14 @@ SproutTower_Text_SageTroy_Seen::
 
 SproutTower_Text_SageLi_Seen::
 	.string "So good of you to come here!\p"
-	.string "SPROUT TOWER is a place of\n"
-	.string "training.\p"
-	.string "People and POKéMON test their\n"
-	.string "bonds to build a bright future\l"
-	.string "together.\p"
-	.string "I am the final test.\p"
-	.string "Allow me to check the ties\n"
-	.string "between your POKéMON and you!$"
+	.string "SPROUT TOWER is a place of training.\p"
+	.string "People and POKéMON test their bonds\n"
+	.string "to build a bright future together.\p"
+	.string "But you are HOENN's CHAMPION.\n"
+	.string "The ties between you and your\l"
+	.string "POKéMON are plain to see.\p"
+	.string "There is nothing left for me to test.\n"
+	.string "May your journey stay bright!$"
 
 SE_J_SproutTower_3F_hns_SproutTower_3F_EventScript_SageLi::
 	msgbox SproutTower_Text_SageLi_Seen, MSGBOX_NPC

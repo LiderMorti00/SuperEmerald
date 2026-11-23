@@ -4,6 +4,7 @@ LakeOfRage_hns_MapScripts::
 
 @ Super Emerald: the lake has tides, like Shoal Cave (high from 9 to 15 and from 21 to 3)
 LakeOfRage_OnTransition::
+	setflag FLAG_HIDE_LAKE_OF_RAGE_GYARADOS @ Super Emerald: the red GYARADOS is long gone (Lois and the lass speak of it in the past)
 	special UpdateShoalTideFlag
 	goto_if_set FLAG_SYS_SHOAL_TIDE, LakeOfRage_EventScript_SetHighTide
 	setweather WEATHER_NONE

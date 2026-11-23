@@ -9,7 +9,7 @@ GoldenrodCity_NameRatersHouse_Text_PleasedToRateMonNickname::
 	.string "POKéMON's nickname.$"
 
 SE_J_GoldenrodCity_House1_hns_GoldenrodCity_NameRatersHouse_EventScript_NameRater::
-	msgbox GoldenrodCity_NameRatersHouse_Text_PleasedToRateMonNickname, MSGBOX_NPC
+	goto SlateportCity_NameRatersHouse_EventScript_NameRater
 	end
 
 GoldenrodCity_NameRatersHouse_Text_RenameRival::

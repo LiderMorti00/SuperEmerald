@@ -47,7 +47,13 @@ GoldenrodCity_RadioTower_1F_Text_LotteryCornerDrawTicket::
 	.string "LOTO TICKET?$"
 
 SE_J_GoldenrodCity_RadioTower_1F_hns_GoldenrodCity_RadioTower_1F_EventScript_LotteryClerk::
-	msgbox GoldenrodCity_RadioTower_1F_Text_LotteryCornerDrawTicket, MSGBOX_NPC
+	lock
+	faceplayer
+	dotimebasedevents
+	goto_if_ne VAR_POKELOT_PRIZE_ITEM, ITEM_NONE, LilycoveCity_DepartmentStore_1F_EventScript_GivePrizeFromEarlier
+	goto_if_set FLAG_DAILY_PICKED_LOTO_TICKET, LilycoveCity_DepartmentStore_1F_EventScript_ComeBackTomorrow
+	msgbox GoldenrodCity_RadioTower_1F_Text_LotteryCornerDrawTicket, MSGBOX_YESNO
+	goto LilycoveCity_DepartmentStore_1F_EventScript_DrawTicketAnswer
 	end
 
 RadioTower1F_Text_ReceptionistWelcome::

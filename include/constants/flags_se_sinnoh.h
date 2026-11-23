@@ -199,5 +199,8 @@
 #define FLAG_SE_QUEST_CYRUS          0x32F3 // stage 7: Cyrus in the Galactic HQ
 #define FLAG_SE_QUEST2_OBJ_END       0x32F3
 #define FLAG_SE_SILPH_GIFT           0x32F4 // Silph Co. president's Porygon2, after Giovanni
+#define FLAG_SE_GOLDENROD_TM_LADY    0x32F5 // Goldenrod Dept. Store 5F: TM for the lead POKEMON's friendship
+#define FLAG_SE_GOT_HIDDEN_POWER_TM  0x32F6 // Lake of Rage: the HIDDEN POWER guru's TM
+#define FLAG_SE_GOT_ROUTE32_ROAR     0x32F7 // Route 32: the ROAR man's TM
 
 #endif // GUARD_CONSTANTS_FLAGS_SE_SINNOH_H

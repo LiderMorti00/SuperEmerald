@@ -21,8 +21,22 @@ Route32_Text_RoarIntro::
 	.string "THAT PLEASES ME! NOW TAKE THIS!$"
 
 SE_J_Route32_hns_Route32_EventScript_Roar::
-	msgbox Route32_Text_RoarIntro, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_SE_GOT_ROUTE32_ROAR, Route32_EventScript_RoarAfter
+	msgbox Route32_Text_RoarIntro, MSGBOX_DEFAULT
+	giveitem ITEM_TM_ROAR
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SE_GOT_ROUTE32_ROAR
+Route32_EventScript_RoarAfter::
+	msgbox Route32_Text_RoarAfter, MSGBOX_DEFAULT
+	release
 	end
+
+Route32_Text_RoarAfter::
+	.string "WROOOAR! IT'S ROAR!\p"
+	.string "EVEN A POKéMON HAS TO ROAR TO\n"
+	.string "SCARE OFF ITS FOES!$"
 
 Route32_EventScript_SuperPotion::
 	finditem ITEM_SUPER_POTION
@@ -265,8 +279,9 @@ Route32_Text_BirdKeeperPeter_Beaten::
 	.string "I know what my weaknesses are.$"
 
 Route32_Text_BirdKeeperPeter_Seen::
-	.string "That BADGE! It's from VIOLET CITY!\n"
-	.string "You beat FALKNER?$"
+	.string "Look at all those BADGES!\n"
+	.string "Let's see how you handle my\l"
+	.string "bird POKéMON!$"
 
 Route32_Text_MeetFrieda::
     .string "FRIEDA: Yahoo! Friday at last!\p"

@@ -3,6 +3,8 @@ SE_EventScript_Starters_UNOVA::
 	lock
 	faceplayer
 	goto_if_set FLAG_SE_GIFT_STARTERS_UNOVA, SE_EventScript_StartersAfter
+	specialvar VAR_RESULT, ScriptHasRoomForThreeMons
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_StarterNoRoom
 	msgbox SE_Text_Starters_UNOVA, MSGBOX_DEFAULT
 	givemon SPECIES_SNIVY, 10
 	bufferspeciesname STR_VAR_1, SPECIES_SNIVY
@@ -29,6 +31,8 @@ SE_EventScript_Starters_KALOS::
 	lock
 	faceplayer
 	goto_if_set FLAG_SE_GIFT_STARTERS_KALOS, SE_EventScript_StartersAfter
+	specialvar VAR_RESULT, ScriptHasRoomForThreeMons
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_StarterNoRoom
 	msgbox SE_Text_Starters_KALOS, MSGBOX_DEFAULT
 	givemon SPECIES_CHESPIN, 10
 	bufferspeciesname STR_VAR_1, SPECIES_CHESPIN
@@ -55,6 +59,8 @@ SE_EventScript_Starters_PALDEA::
 	lock
 	faceplayer
 	goto_if_set FLAG_SE_GIFT_STARTERS_PALDEA, SE_EventScript_StartersAfter
+	specialvar VAR_RESULT, ScriptHasRoomForThreeMons
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_StarterNoRoom
 	msgbox SE_Text_Starters_PALDEA, MSGBOX_DEFAULT
 	givemon SPECIES_SPRIGATITO, 10
 	bufferspeciesname STR_VAR_1, SPECIES_SPRIGATITO
@@ -81,6 +87,8 @@ SE_EventScript_Starters_GALAR::
 	lock
 	faceplayer
 	goto_if_set FLAG_SE_GIFT_STARTERS_GALAR, SE_EventScript_StartersAfter
+	specialvar VAR_RESULT, ScriptHasRoomForThreeMons
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_StarterNoRoom
 	msgbox SE_Text_Starters_GALAR, MSGBOX_DEFAULT
 	givemon SPECIES_GROOKEY, 10
 	bufferspeciesname STR_VAR_1, SPECIES_GROOKEY
@@ -107,6 +115,8 @@ SE_EventScript_Starters_ALOLA::
 	lock
 	faceplayer
 	goto_if_set FLAG_SE_GIFT_STARTERS_ALOLA, SE_EventScript_StartersAfter
+	specialvar VAR_RESULT, ScriptHasRoomForThreeMons
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_StarterNoRoom
 	msgbox SE_Text_Starters_ALOLA, MSGBOX_DEFAULT
 	givemon SPECIES_ROWLET, 10
 	bufferspeciesname STR_VAR_1, SPECIES_ROWLET
@@ -151,8 +161,9 @@ SE_Text_StarterReceived:
 	.string "{PLAYER} received {STR_VAR_1}!$"
 
 SE_Text_StarterNoRoom:
-	.string "Oh, there's no room left in your\n"
-	.string "PC boxes. Come back later!$"
+	.string "Oh, you'll need room for three\n"
+	.string "POKéMON in your party or PC boxes.\p"
+	.string "Come back when you've made room!$"
 
 SE_Text_StartersGiven:
 	.string "They grow strong with a TRAINER\n"

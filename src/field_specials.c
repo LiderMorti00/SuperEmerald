@@ -1558,6 +1558,23 @@ bool8 ScriptCheckFreePokemonStorageSpace(void)
     return CheckFreePokemonStorageSpace();
 }
 
+// Super Emerald: TRUE if party + PC boxes can hold at least three more POKEMON (starter trio gifts)
+bool8 ScriptHasRoomForThreeMons(void)
+{
+    u32 free = PARTY_SIZE - CalculatePlayerPartyCount();
+    u32 box, pos;
+
+    for (box = 0; box < TOTAL_BOXES_COUNT && free < 3; box++)
+    {
+        for (pos = 0; pos < IN_BOX_COUNT && free < 3; pos++)
+        {
+            if (GetBoxMonDataAt(box, pos, MON_DATA_SPECIES) == SPECIES_NONE)
+                free++;
+        }
+    }
+    return free >= 3;
+}
+
 // Task data for Task_ShakeCamera
 #define tHorizontalPan  data[0]
 #define tDelayCounter   data[1]

@@ -19,25 +19,23 @@ GoldenrodUnderground_Text_PokemaniacIssacSeen::
     .string "I'll show you how strong it is!$"
 
 GoldenrodUnderground_Text_OlderBrotherOffer::
-    .string "Welcome!\p"
-    .string "I run the POKéMON SALON!\p"
-    .string "I'm the older and better of the two\n"
-    .string "HAIRCUT BROTHERS.\p"
-    .string "I can make your POKéMON beautiful\n"
-    .string "for just ¥500.\p"
-    .string "Would you like me to do that?$"
+	.string "Welcome!\p"
+	.string "I run the POKéMON SALON! I'm the\n"
+	.string "older and better of the two\l"
+	.string "HAIRCUT BROTHERS.\p"
+	.string "Sorry, but I'm fully booked today.\n"
+	.string "My little brother works nights!$"
 
 SE_J_GoldenrodCity_UndergroundTunnel_hns_GoldenrodUnderground_EventScript_Brother_Haircut1::
 	msgbox GoldenrodUnderground_Text_OlderBrotherOffer, MSGBOX_NPC
 	end
 
 GoldenrodUnderground_Text_YoungerBrotherOffer::
-    .string "Welcome to the POKéMON SALON!\p"
-    .string "I'm the younger and less expensive\n"
-    .string "of the two HAIRCUT BROTHERS.\p"
-    .string "I'll spiff up your POKéMON for just\n"
-    .string "¥300.\p"
-    .string "So? How about it?$"
+	.string "Welcome to the POKéMON SALON!\p"
+	.string "I'm the younger of the two\n"
+	.string "HAIRCUT BROTHERS.\p"
+	.string "Sorry, I'm all booked up tonight.\n"
+	.string "My big brother works days!$"
 
 SE_J_GoldenrodCity_UndergroundTunnel_hns_GoldenrodUnderground_EventScript_Brother_Haircut2::
 	msgbox GoldenrodUnderground_Text_YoungerBrotherOffer, MSGBOX_NPC

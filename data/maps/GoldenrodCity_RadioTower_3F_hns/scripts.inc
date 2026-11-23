@@ -39,10 +39,9 @@ GoldenrodCity_RadioTower_3F_EventScript_Nerd::
 	end
 
 GoldenrodCity_RadioTower_3F_Text_SuperNerd::
-	.string "We have recordings of the cries\n"
-	.string "of all POKéMON that have been\l"
-	.string "found.\p"
-	.string "We must have about 400 kinds.$"
+	.string "We have recordings of the cries of\n"
+	.string "all POKéMON that have been found.\p"
+	.string "We must have over a thousand kinds.$"
 
 GoldenrodRaidoTower3_EventScript_Grunt6::
 	trainerbattle_single TRAINER_GRUNT_6_HNS, GoldenrodCity_RadioTower_3F_Text_GruntM7Seen, GoldenrodCity_RadioTower_3F_Text_GruntM7Beaten

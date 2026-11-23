@@ -121,6 +121,7 @@ GoldenrodCity_Text_CooltrainerF1::
 	.string "How silly!$"
 
 GoldenrodCity_EventScript_CooltrainerFCleared::
+	goto_if_eq VAR_SE_ROCKET_QUEST, 0, SE_GoldenrodCooltrainer_Rumor_Script
 	msgbox GoldenrodCity_Text_CooltrainerF1_Cleared, MSGBOX_NPC
 	end
 
@@ -327,3 +328,12 @@ GoldenrodCity_EventScript_NameRaterSign::
 GoldenrodCity_Text_NameRaterSign::
 	.string "NAME RATER\p"
 	.string "Get Your POKéMON Nicknames Rated$"
+
+SE_GoldenrodCooltrainer_Rumor_Script::
+	msgbox SE_GoldenrodCooltrainer_Rumor_Text, MSGBOX_NPC
+	end
+
+SE_GoldenrodCooltrainer_Rumor_Text::
+	.string "Did you hear? Some of TEAM ROCKET's\n"
+	.string "old bosses were seen in JOHTO again!\p"
+	.string "I hope it's just a rumor…$"

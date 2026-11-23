@@ -10,6 +10,15 @@ BlackthornYoungsterText::
 	.string "Dragon masters all come from the city\n"
 	.string "of BLACKTHORN.$"
 
+BlackthornCity_EventScript_ClairNotBeaten::
+	msgbox BlackthornCity_Text_ClairUnbeaten, MSGBOX_NPC
+	end
+
+BlackthornCity_Text_ClairUnbeaten::
+	.string "CLAIR is the GYM LEADER here.\p"
+	.string "I've never heard of her losing to\n"
+	.string "anyone other than LANCE.$"
+
 BlackthornCity_Text_ClairIsBeaten::
 	.string "You defeated CLAIR?\p"
 	.string "That's amazing!\p"
@@ -17,6 +26,7 @@ BlackthornCity_Text_ClairIsBeaten::
 	.string "anyone other than LANCE.$"
 
 SE_J_BlackthornCity_hns_BlackthornCity_EventScript_GymBoy::
+	goto_if_unset FLAG_JOHTO_BADGE8_GET, BlackthornCity_EventScript_ClairNotBeaten
 	msgbox BlackthornCity_Text_ClairIsBeaten, MSGBOX_NPC
 	end
 

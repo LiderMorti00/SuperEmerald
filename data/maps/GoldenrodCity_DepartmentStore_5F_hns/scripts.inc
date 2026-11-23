@@ -7,8 +7,56 @@ GoldenrodDeptStore_Text_5FReceptionistOhYourMon::
     .string "Hello. Oh, your POKéMON…$"
 
 SE_J_GoldenrodCity_DepartmentStore_5F_hns_GoldenrodDeptStore5_EventScript_Receptionist::
-	msgbox GoldenrodDeptStore_Text_5FReceptionistOhYourMon, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_SE_GOLDENROD_TM_LADY, GoldenrodDeptStore5_EventScript_ReceptionistDone
+	msgbox GoldenrodDeptStore_Text_5FReceptionistOhYourMon, MSGBOX_DEFAULT
+	specialvar VAR_RESULT, GetLeadMonFriendship
+	goto_if_ge VAR_RESULT, 4, GoldenrodDeptStore5_EventScript_ReceptionistReturn
+	goto_if_le VAR_RESULT, 1, GoldenrodDeptStore5_EventScript_ReceptionistFrustration
+	msgbox GoldenrodDeptStore_Text_5FReceptionistNotYet, MSGBOX_DEFAULT
+	release
 	end
+
+GoldenrodDeptStore5_EventScript_ReceptionistReturn::
+	msgbox GoldenrodDeptStore_Text_5FReceptionistLovesYou, MSGBOX_DEFAULT
+	giveitem ITEM_TM_RETURN
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SE_GOLDENROD_TM_LADY
+	msgbox GoldenrodDeptStore_Text_5FReceptionistDone, MSGBOX_DEFAULT
+	release
+	end
+
+GoldenrodDeptStore5_EventScript_ReceptionistFrustration::
+	msgbox GoldenrodDeptStore_Text_5FReceptionistUnhappy, MSGBOX_DEFAULT
+	giveitem ITEM_TM_FRUSTRATION
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SE_GOLDENROD_TM_LADY
+	msgbox GoldenrodDeptStore_Text_5FReceptionistDone, MSGBOX_DEFAULT
+	release
+	end
+
+GoldenrodDeptStore5_EventScript_ReceptionistDone::
+	msgbox GoldenrodDeptStore_Text_5FReceptionistDone, MSGBOX_DEFAULT
+	release
+	end
+
+GoldenrodDeptStore_Text_5FReceptionistNotYet::
+	.string "It's still getting used to you.\p"
+	.string "Come back when you two are closer.\n"
+	.string "I may have something for you then.$"
+
+GoldenrodDeptStore_Text_5FReceptionistLovesYou::
+	.string "It loves you very much!\n"
+	.string "This TM is perfect for it.$"
+
+GoldenrodDeptStore_Text_5FReceptionistUnhappy::
+	.string "It looks rather unhappy…\n"
+	.string "Maybe this TM suits it better.$"
+
+GoldenrodDeptStore_Text_5FReceptionistDone::
+	.string "I hope you and your POKéMON\n"
+	.string "grow even closer.$"
 
 GoldenrodDeptStore5_EventScript_Girl::
 	lock

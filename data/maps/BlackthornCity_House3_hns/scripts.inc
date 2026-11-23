@@ -9,7 +9,13 @@ BlackthornCity_MoveDeletersHouse_Text_ICanMakeMonForgetMove::
 	.string "Would you like me to do that?$"
 
 SE_J_BlackthornCity_House3_hns_BlackthornCity_MoveDeletersHouse_EventScript_MoveDeleter::
-	msgbox BlackthornCity_MoveDeletersHouse_Text_ICanMakeMonForgetMove, MSGBOX_NPC
+	lockall
+	faceplayer
+	msgbox BlackthornCity_MoveDeletersHouse_Text_ICanMakeMonForgetMove, MSGBOX_YESNO
+	switch VAR_RESULT
+	case YES, LilycoveCity_MoveDeletersHouse_EventScript_ChooseMonAndMoveToForget
+	case NO, LilycoveCity_MoveDeletersHouse_EventScript_ComeAgain
+	releaseall
 	end
 
 BlackthornCity_MoveRelearnersHouse_Text_ImTheMoveTutor::
@@ -23,5 +29,10 @@ BlackthornCity_MoveRelearnersHouse_Text_ImTheMoveTutor::
 	.string "I'm collecting those now.$"
 
 SE_J_BlackthornCity_House3_hns_BlackthornCity_MoveRelearnersHouse_EventScript_MoveRelearner::
-	msgbox BlackthornCity_MoveRelearnersHouse_Text_ImTheMoveTutor, MSGBOX_NPC
+	lockall
+	faceplayer
+	goto_if_set FLAG_TEMP_1, FallarborTown_MoveRelearnersHouse_EventScript_AskTeachMove
+	msgbox BlackthornCity_MoveRelearnersHouse_Text_ImTheMoveTutor, MSGBOX_DEFAULT
+	setflag FLAG_TEMP_1
+	goto FallarborTown_MoveRelearnersHouse_EventScript_AskTeachMove
 	end

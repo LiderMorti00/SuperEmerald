@@ -10,15 +10,17 @@ EcruteakCity_PokemonCenter_hns_OnTransition:
 EcruteakCity_PokemonCenter_EventScript_Nerd::
 	lock
 	faceplayer
+	goto_if_ne VAR_SE_ROCKET_QUEST, 1, SE_EcruteakPC_RadioCalm_Script
 	msgbox EcruteakCity_PokemonCenter1F_Text_GymGuide, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
 
 EcruteakCity_PokemonCenter1F_Text_GymGuide::
-	.string "My radio used to pick up a strange\n"
+	.string "My radio keeps picking up a strange\n"
 	.string "signal near the LAKE OF RAGE.\p"
-	.string "These days all I hear is music.$"
+	.string "It sounds like someone giving\n"
+	.string "orders… Creepy!$"
 
 EcruteakCity_PokemonCenter_EventScript_Hiker::
 	lock
@@ -55,3 +57,14 @@ EcruteakCity_PokemonCenter1F_Text_Bill1::
 SE_J_EcruteakCity_PokemonCenter_hns_EcruteakCity_PokemonCenter_EventScript_Bill::
 	msgbox EcruteakCity_PokemonCenter1F_Text_Bill1, MSGBOX_NPC
 	end
+
+SE_EcruteakPC_RadioCalm_Script::
+	msgbox SE_EcruteakPC_RadioCalm_Text, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+SE_EcruteakPC_RadioCalm_Text::
+	.string "My radio used to pick up a strange\n"
+	.string "signal near the LAKE OF RAGE.\p"
+	.string "These days all I hear is music.$"
