@@ -18,7 +18,7 @@ OlivineCity_EventScript_Fisher::
 OlivineCity_Text_PokecenterFisher::
 	.string "The SAILOR in the OLIVINE CAFE\n"
 	.string "next door is really generous.\p"
-	.string "He taught my POKéMON STRENGTH.\p"
+	.string "He showed me how to use STRENGTH.\p"
 	.string "Now it can move big boulders\n"
 	.string "without breaking a sweat.$"
 

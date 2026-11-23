@@ -67,14 +67,13 @@ OlivineCity_Text_Machoke::
 	.string "MACHOKE: CHO!$"
 
 SE_J_OlivineCity_hns_OlivineCity_EventScript_Item_ChargeBeam::
+	finditem ITEM_TM_SHOCK_WAVE
 	end
 
 OlivineCity_EventScript_EonTicketWoman::
 	lock
 	faceplayer
-	checkitem ITEM_AURORA_TICKET
-	goto_if_eq VAR_RESULT, TRUE, OlivineCity_EventScript_EonTicketWomanAfter
-	goto_if_set FLAG_IS_KANTO_CHAMPION, OlivineCity_EventScript_EonTicketWomanChamp
+	goto_if_set FLAG_SE_KANTO_CHAMPION, OlivineCity_EventScript_EonTicketWomanChamp
 	msgbox OlivineCity_Text_EonTicketWoman1, MSGBOX_DEFAULT
 	closemessage
 	release
@@ -87,7 +86,6 @@ OlivineCity_Text_EonTicketWoman1::
 
 OlivineCity_EventScript_EonTicketWomanChamp::
 	msgbox OlivineCity_Text_EonTicketWoman2, MSGBOX_DEFAULT
-	giveitem ITEM_AURORA_TICKET
 	closemessage
 	release
 	end
@@ -95,19 +93,8 @@ OlivineCity_EventScript_EonTicketWomanChamp::
 OlivineCity_Text_EonTicketWoman2::
 	.string "You must be {PLAYER}!!!\p"
 	.string "Oh my goodness! The champion!\p"
-	.string "I heard about you on MARY's\n"
-	.string "radio show!\p"
-	.string "Here, take this!$"
-
-OlivineCity_EventScript_EonTicketWomanAfter::
-	msgbox OlivineCity_Text_EonTicketWoman3, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-OlivineCity_Text_EonTicketWoman3::
-	.string "I can't believe I met the\n"
-	.string "champion!!!$"
+	.string "I heard about your win in KANTO\n"
+	.string "on MARY's radio show!$"
 
 OlivineCity_EventScript_GymSign::
 	lock

@@ -294,3 +294,8 @@ The Sinnoh comparison covered the two plaque states at all eight gyms. Seven dis
 ## Olivine homes and café
 
 - Reviewed the three houses and the café, including both fishing-rod responses, the neighbor's shared dialogue, the siblings, the sailors and the hidden Jasmine scene. Tim no longer uses an unset species buffer, the sailor explains Strength without promising a gift, and the angler checks that the Good Rod was delivered before giving fishing advice.
+
+## Olivine exterior and Pokémon Center
+
+- Reviewed the exterior and Center events, signs, NPCs, building links, healing and respawn. The radio fan recognizes the actual Kanto League flag. Her greeting no longer offers an Aurora Ticket without enabling the ferry; Cozmo handles that ticket and its ferry unlock.
+- Replaced the inert Charge Beam pickup with Shock Wave, a supported Electric TM. The Center fisher now describes the café sailor's advice consistently.
