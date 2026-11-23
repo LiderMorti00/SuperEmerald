@@ -1060,7 +1060,9 @@ SE_EventScript_HoOh::
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SE_EventScript_HoOhDefeated
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SE_EventScript_HoOhRan
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SE_EventScript_HoOhRan
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_HoOhEnd
 	setflag FLAG_SE_HO_OH_DONE
+SE_EventScript_HoOhEnd:
 	release
 	end
 
@@ -1090,7 +1092,9 @@ SE_EventScript_Suicune::
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SE_EventScript_SuicuneDefeated
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SE_EventScript_SuicuneRan
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SE_EventScript_SuicuneRan
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_SuicuneEnd
 	setflag FLAG_SE_SUICUNE_DONE
+SE_EventScript_SuicuneEnd:
 	release
 	end
 

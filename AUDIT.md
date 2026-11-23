@@ -261,3 +261,9 @@ The Sinnoh comparison covered the two plaque states at all eight gyms. Seven dis
 
 - Reviewed both floors, including the hidden original-story NPCs, trainer dialogue, statue scripts, pickups, boulder, Chi-Yu and the stair and hole destinations.
 - Followed the basement scene into the Raikou and Entei roamer registration and Suicune's Tin Tower visibility check. The Ecruteak witness now uses the same release flag: the first visit no longer starts with a report of a scene the player has yet to trigger. The scene still runs only once.
+
+## Bellchime Trail and Tin Tower
+
+- Reviewed Bellchime Trail and the ten Tin Tower maps, from the ground floor to the roof, including Morty's hidden scene, the guardians' dialogue, item and statue events, stair and teleport destinations, and the two active legendary encounters.
+- Ho-Oh and Suicune now mark the encounter complete after a catch or victory. A loss does not consume either encounter. Visibility on return still follows the Rainbow Wing or Burned Tower requirements.
+- Removed a sage's suggestion of an Unown side quest. Kept the tower legend and the clue about Suicune. The old off-map roof warp and hidden original-story actors remain outside the active route. Runtime testing of the climb and battles remains pending.

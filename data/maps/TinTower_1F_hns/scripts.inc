@@ -34,10 +34,8 @@ SE_J_TinTower_1F_hns_TinTower_1F_EventScript_SageA::
 TinTower_1F_Sage6_Text2::
 	.string "Of the legendary POKéMON, SUICUNE\n"
 	.string "is said to be the closest to HO-OH.\p"
-	.string "I hear there may also be a link to\n"
-	.string "POKéMON known as UNOWN.\p"
-	.string "The POKéMON UNOWN must be sharing a\n"
-	.string "cooperative bond with SUICUNE.$"
+	.string "Keep an eye on the path to the tower.\n"
+	.string "SUICUNE moves like the north wind.$"
 
 SE_J_TinTower_1F_hns_TinTower_1F_EventScript_SageC::
 	msgbox TinTower_1F_Sage6_Text2, MSGBOX_NPC
