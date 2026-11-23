@@ -1030,7 +1030,9 @@ SE_EventScript_Lugia::
 	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SE_EventScript_LugiaDefeated
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SE_EventScript_LugiaRan
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SE_EventScript_LugiaRan
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, SE_EventScript_LugiaEnd
 	setflag FLAG_SE_LUGIA_DONE
+SE_EventScript_LugiaEnd:
 	release
 	end
 

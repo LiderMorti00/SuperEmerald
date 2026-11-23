@@ -267,3 +267,8 @@ The Sinnoh comparison covered the two plaque states at all eight gyms. Seven dis
 - Reviewed Bellchime Trail and the ten Tin Tower maps, from the ground floor to the roof, including Morty's hidden scene, the guardians' dialogue, item and statue events, stair and teleport destinations, and the two active legendary encounters.
 - Ho-Oh and Suicune now mark the encounter complete after a catch or victory. A loss does not consume either encounter. Visibility on return still follows the Rainbow Wing or Burned Tower requirements.
 - Removed a sage's suggestion of an Unown side quest. Kept the tower legend and the clue about Suicune. The old off-map roof warp and hidden original-story actors remain outside the active route. Runtime testing of the climb and battles remains pending.
+
+## Whirl Islands
+
+- Reviewed the seven Whirl Islands maps from the surface entrances to Lugia's chamber, including the pickups and hidden items, Strength boulder, Tentacruel binding, hidden theater actors, and reciprocal warp destinations.
+- Lugia still requires the Silver Wing. Defeat by Lugia keeps the encounter available on return, and victory or capture marks it complete. Battle and traversal remain pending in ROM.
