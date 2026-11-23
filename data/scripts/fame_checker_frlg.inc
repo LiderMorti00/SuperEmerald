@@ -39,9 +39,23 @@ Route4_EventScript_Boy::
 	lock
 	faceplayer
 	famechecker FAMECHECKER_BROCK, 3
+	goto_if_unset FLAG_BADGE09_GET, Route4_EventScript_BoyNoBoulderBadge
 	msgbox Route4_Text_PeopleLikeAndRespectBrock
 	release
 	end
+
+Route4_EventScript_BoyNoBoulderBadge::
+	msgbox Route4_Text_BrockIsCool
+	release
+	end
+
+Route4_Text_BrockIsCool::
+	.string "Have you met BROCK, the GYM LEADER\n"
+	.string "of PEWTER CITY?\p"
+	.string "BROCK is cool. He's not just tough.\n"
+	.string "People like and respect him.\p"
+	.string "I want to become a GYM LEADER\n"
+	.string "like him.$"
 
 MtMoon_1F_EventScript_BaldingMan::
 	lock

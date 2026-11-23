@@ -95,7 +95,7 @@ FuchsiaCity_Gym_Text_KogaIntro::
 	.string "I'm only joking!\p"
 	.string "I'm the real deal!\p"
 	.string "JANINE of FUCHSIA GYM, that's me!\n"
-	.string "My father, JANINE, taught me all\l"
+	.string "My father, KOGA, taught me all\l"
 	.string "the arts of the ninja.\p"
 	.string "Now he's one of the ELITE FOUR,\n"
 	.string "and I lead this GYM in his place!\p"

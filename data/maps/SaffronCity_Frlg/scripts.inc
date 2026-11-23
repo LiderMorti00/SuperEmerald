@@ -13,9 +13,9 @@ SE_KH_SaffronCity_Frlg_Lass1A::
 	end
 
 SE_KH_SaffronCity_Frlg_Lass1A_Text:
-	.string "The COPYCAT girl looked unhappy.\p"
-	.string "She said she lost her favorite\n"
-	.string "POKé DOLL--CLEFAIRY.$"
+	.string "The COPYCAT girl loves POKé DOLLS.\p"
+	.string "She says her favorite one is\n"
+	.string "CLEFAIRY.$"
 
 SE_KH_SaffronCity_Frlg_Lass2::
 	msgbox SE_KH_SaffronCity_Frlg_Lass2_Text, MSGBOX_NPC
@@ -43,8 +43,8 @@ SE_KH_SaffronCity_Frlg_PokefanM::
 	end
 
 SE_KH_SaffronCity_Frlg_PokefanM_Text:
-	.string "You came out from JOHTO?\p"
-	.string "You can zip back home by hopping\n"
+	.string "You came over from JOHTO?\p"
+	.string "You can zip back there by hopping\n"
 	.string "on the MAGNET TRAIN.$"
 
 SE_KH_SaffronCity_Frlg_CooltrainerF::
@@ -83,7 +83,7 @@ SE_KH_SaffronCity_Frlg_CooltrainerM_Text:
 	.string "I went to the GYM, raring for\n"
 	.string "battles against TRAINERS…\p"
 	.string "It turns out, I stumbled into the\n"
-	.string "unused GYM next door.\p"
+	.string "FIGHTING DOJO next door.\p"
 	.string "Boy, I was pretty embarrassed.$"
 
 SE_KH_SaffronCity_Frlg_Elli::

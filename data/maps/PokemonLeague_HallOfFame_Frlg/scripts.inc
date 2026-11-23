@@ -15,6 +15,22 @@ PokemonLeague_HallOfFame_OnFrame::
 	map_script_2 VAR_TEMP_1, 0, PokemonLeague_HallOfFame_EventScript_EnterRoom
 	.2byte 0
 
+PokemonLeague_HallOfFame_EventScript_LanceCongratulations::
+	msgbox PokemonLeague_HallOfFame_Text_OakCongratulations
+	return
+
+PokemonLeague_HallOfFame_EventScript_LanceCongratulationsAgain::
+	msgbox PokemonLeague_HallOfFame_Text_LanceCongratulationsAgain
+	return
+
+PokemonLeague_HallOfFame_Text_LanceCongratulationsAgain::
+	.string "LANCE: Once again, {PLAYER}, your name\n"
+	.string "joins the HALL OF FAME.\p"
+	.string "This time, you earned all sixteen\n"
+	.string "BADGES of JOHTO and KANTO first.\p"
+	.string "You and your POKéMON have truly\n"
+	.string "earned this honor. Congratulations!$"
+
 PokemonLeague_HallOfFame_EventScript_EnterRoom::
 	lockall
 	textcolor NPC_TEXT_COLOR_MALE
@@ -24,7 +40,8 @@ PokemonLeague_HallOfFame_EventScript_EnterRoom::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	delay 18
-	msgbox PokemonLeague_HallOfFame_Text_OakCongratulations
+	call_if_unset FLAG_SE_KANTO_COMPLETE, PokemonLeague_HallOfFame_EventScript_LanceCongratulations
+	call_if_set FLAG_SE_KANTO_COMPLETE, PokemonLeague_HallOfFame_EventScript_LanceCongratulationsAgain
 	closemessage
 	applymovement LOCALID_HALL_OF_FAME_PROF_OAK, Common_Movement_WalkInPlaceFasterUp
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp

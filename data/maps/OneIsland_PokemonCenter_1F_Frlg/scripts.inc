@@ -895,8 +895,7 @@ OneIsland_PokemonCenter_1F_Text_TradedWithFarAwayBoyfriend::
 	.string "I traded POKéMON with my boyfriend\n"
 	.string "far away!\p"
 	.string "Everyone's saying that we can\n"
-	.string "thank you and CELIO.\p"
-	.string "So, thank you!$"
+	.string "thank CELIO. He's a genius!$"
 
 OneIsland_PokemonCenter_1F_Text_MachineUnderAdjustment::
 	.string "Network Machine\n"

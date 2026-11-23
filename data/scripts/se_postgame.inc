@@ -711,6 +711,9 @@ SE_EventScript_KantoWorldState::
 	@ Two and Three Island: Lostelle is home, the bikers are gone
 	setvar VAR_MAP_SCENE_TWO_ISLAND_JOYFUL_GAME_CORNER, 4
 	setvar VAR_MAP_SCENE_TWO_ISLAND, 4
+	setflag FLAG_TWO_ISLAND_SHOP_INTRODUCED @ the shop has been open for years: full stock, no
+	setflag FLAG_TWO_ISLAND_SHOP_EXPANDED_1 @ thanks for a LOSTELLE rescue the player never did
+	setflag FLAG_TWO_ISLAND_SHOP_EXPANDED_2
 	setflag FLAG_RESCUED_LOSTELLE
 	setflag FLAG_GOT_MOON_STONE_FROM_JOYFUL_GAME_CORNER
 	setflag FLAG_HIDE_LOSTELLE_IN_BERRY_FOREST

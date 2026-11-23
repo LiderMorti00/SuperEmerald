@@ -85,7 +85,7 @@ FourIsland_House2_Text_ComeBackWithBetterStoryHoF::
 FourIsland_House2_Text_LivingLegendHoF::
 	.string "Oh, no, no can do.\p"
 	.string "You're practically a living legend.\n"
-	.string "I have no SITCKERS left to give.$"
+	.string "I have no STICKERS left to give.$"
 
 FourIsland_House2_Text_WowEggsLowest::
 	.string "Oh, wow, there are POKéMON EGGS?\n"
@@ -124,7 +124,7 @@ FourIsland_House2_Text_ComeBackWithBetterStoryEggs::
 FourIsland_House2_Text_LivingLegendEggs::
 	.string "Oh, no, no can do.\p"
 	.string "You're practically a living legend.\n"
-	.string "I have no SITCKERS left to give.$"
+	.string "I have no STICKERS left to give.$"
 
 FourIsland_House2_Text_WowLinkWinsLowest::
 	.string "Oh, wow, you've had success\n"
@@ -164,4 +164,4 @@ FourIsland_House2_Text_ComeBackWithBetterStoryLinkWins::
 FourIsland_House2_Text_LivingLegendLinkWins::
 	.string "Oh, no, no can do.\p"
 	.string "You're practically a living legend.\n"
-	.string "I have no SITCKERS left to give.$"
+	.string "I have no STICKERS left to give.$"

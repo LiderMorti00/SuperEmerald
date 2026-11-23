@@ -3,12 +3,24 @@ FiveIsland_House2_Frlg_MapScripts::
 
 FiveIsland_House2_EventScript_OldMan::
 	goto_if_ge VAR_SE_ROCKET_QUEST, 6, FiveIsland_House2_EventScript_OldManAfterQuest
+	goto_if_lt VAR_SE_ROCKET_QUEST, 5, FiveIsland_House2_EventScript_OldManBeforeQuest
 	msgbox FiveIsland_House2_Text_MeadowBelongedToFamily, MSGBOX_NPC
 	end
 
 FiveIsland_House2_EventScript_OldManAfterQuest::
 	msgbox FiveIsland_House2_Text_ThugsAreGone, MSGBOX_NPC
 	end
+
+FiveIsland_House2_EventScript_OldManBeforeQuest::
+	msgbox FiveIsland_House2_Text_EmptyWarehouse, MSGBOX_NPC
+	end
+
+FiveIsland_House2_Text_EmptyWarehouse::
+	.string "That MEADOW has belonged to our\n"
+	.string "family for generations.\p"
+	.string "Some shady company put a warehouse\n"
+	.string "on it years ago, then left it empty.\p"
+	.string "I'd like to see it torn down.$"
 
 FiveIsland_House2_Text_ThugsAreGone::
 	.string "That MEADOW has belonged to our\n"

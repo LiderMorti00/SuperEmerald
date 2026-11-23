@@ -140,14 +140,11 @@ CinnabarIsland_PokemonCenter_1F_Movement_PlayerExitWest::
 	step_end
 
 CinnabarIsland_PokemonCenter_1F_Text_CinnabarGymLocked::
-	.string "I came to visit the CINNABAR GYM,\n"
-	.string "but the door is locked tight.\p"
-	.string "There should be a key for it\n"
-	.string "somewhere.\p"
-	.string "Could it be in that burned-out\n"
-	.string "mansion?\p"
-	.string "The GYM LEADER's friend used to\n"
-	.string "live there, they say.$"
+	.string "I came to challenge the CINNABAR GYM.\n"
+	.string "BLAINE quizzes you before you can\l"
+	.string "reach him!\p"
+	.string "They say his old friend used to live\n"
+	.string "in that burned-out mansion.$"
 
 CinnabarIsland_PokemonCenter_1F_Text_VisitUnionRoom::
 	.string "Do you have lots of friends?\p"

@@ -168,7 +168,7 @@ FourIsland_Text_LoreleiHasReturned::
 	.string "stressful, I wonder?$"
 
 FourIsland_Text_LoreleiMetLaprasAsChild::
-	.string "LORELEI has gone back.\p"
+	.string "LORELEI has come home for good.\p"
 	.string "The LAPRAS she has, I imagine it\n"
 	.string "to be the one she met as a child.\p"
 	.string "I believe it was in ICEFALL CAVE\n"
@@ -202,8 +202,8 @@ FourIsland_Text_LoreleiHasLotsOfStuffedDolls::
 	.string "Please don't tell LORELEI.\p"
 	.string "Did you know that LORELEI has lots\n"
 	.string "and lots of stuffed dolls?\p"
-	.string "Every time she comes back to\n"
-	.string "FOUR ISLAND, her collection grows!$"
+	.string "Since she came home to FOUR ISLAND,\n"
+	.string "her collection just keeps growing!$"
 
 FourIsland_Text_MadeSlushieUsingIcefallCaveIce::
 	.string "Ooh, chilly!\p"

@@ -5,6 +5,10 @@ Route16_NorthEntrance_1F_Frlg_MapScripts::
 Route16_NorthEntrance_1F_OnTransition::
 	clearflag FLAG_SYS_ON_CYCLING_ROAD
 	call_if_set FLAG_GOT_BICYCLE, Route16_NorthEntrance_1F_EventScript_DisableNeedBikeTrigger
+	checkitem ITEM_MACH_BIKE @ Super Emerald: a HOENN bike also lets the player ride CYCLING ROAD
+	call_if_eq VAR_RESULT, TRUE, Route16_NorthEntrance_1F_EventScript_DisableNeedBikeTrigger
+	checkitem ITEM_ACRO_BIKE
+	call_if_eq VAR_RESULT, TRUE, Route16_NorthEntrance_1F_EventScript_DisableNeedBikeTrigger
 	end
 
 Route16_NorthEntrance_1F_EventScript_DisableNeedBikeTrigger::

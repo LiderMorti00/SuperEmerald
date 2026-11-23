@@ -106,8 +106,8 @@ MtMoon_1F_Text_IrisPostBattle::
 	.string "some very rare fossils here.$"
 
 MtMoon_1F_Text_KentIntro::
-	.string "Suspicious men are in the cave.\n"
-	.string "What about you?$"
+	.string "Are you here looking for fossils,\n"
+	.string "too? Then we're rivals!$"
 
 MtMoon_1F_Text_KentDefeat::
 	.string "You got me!$"

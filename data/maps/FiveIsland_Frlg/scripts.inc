@@ -12,6 +12,7 @@ FiveIsland_EventScript_IslandSign::
 
 FiveIsland_EventScript_BugCatcher::
 	goto_if_ge VAR_SE_ROCKET_QUEST, 6, FiveIsland_EventScript_BugCatcherAfterQuest
+	goto_if_lt VAR_SE_ROCKET_QUEST, 5, FiveIsland_EventScript_BugCatcherBeforeQuest
 	msgbox FiveIsland_Text_WeirdBuildingInMeadow, MSGBOX_NPC
 	end
 
@@ -19,18 +20,37 @@ FiveIsland_EventScript_BugCatcherAfterQuest::
 	msgbox FiveIsland_Text_MeadowIsQuietAgain, MSGBOX_NPC
 	end
 
+FiveIsland_EventScript_BugCatcherBeforeQuest::
+	msgbox FiveIsland_Text_EmptyWarehouseInMeadow, MSGBOX_NPC
+	end
+
+FiveIsland_Text_EmptyWarehouseInMeadow::
+	.string "There's a big empty warehouse in the\n"
+	.string "MEADOW. Nobody's used it in years.\p"
+	.string "It's kind of spooky, but I still go\n"
+	.string "and play there.$"
+
 FiveIsland_Text_MeadowIsQuietAgain::
 	.string "Those creepy guys left the MEADOW!\n"
 	.string "I can play there again. Yay!$"
 
 FiveIsland_EventScript_Fisher::
 	goto_if_ge VAR_SE_ROCKET_QUEST, 6, FiveIsland_EventScript_FisherAfterQuest
+	goto_if_lt VAR_SE_ROCKET_QUEST, 5, FiveIsland_EventScript_FisherBeforeQuest
 	msgbox FiveIsland_Text_BeenGettingBusierAroundHere, MSGBOX_NPC
 	end
 
 FiveIsland_EventScript_FisherAfterQuest::
 	msgbox FiveIsland_Text_FishAreBack, MSGBOX_NPC
 	end
+
+FiveIsland_EventScript_FisherBeforeQuest::
+	msgbox FiveIsland_Text_QuietDayForFishing, MSGBOX_NPC
+	end
+
+FiveIsland_Text_QuietDayForFishing::
+	.string "It's nice and quiet out here.\n"
+	.string "Perfect weather for fishing!$"
 
 FiveIsland_Text_FishAreBack::
 	.string "Things have calmed down around here\n"

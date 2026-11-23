@@ -7,8 +7,18 @@ PokemonTower_1F_OnTransition::
 	end
 
 PokemonTower_1F_EventScript_Channeler::
+	goto_if_ge VAR_SE_SPIRIT_QUEST, 4, PokemonTower_1F_EventScript_ChannelerCalm
 	msgbox PokemonTower_1F_Text_SenseSpiritsUpToMischief, MSGBOX_NPC
 	end
+
+PokemonTower_1F_EventScript_ChannelerCalm::
+	msgbox PokemonTower_1F_Text_SpiritsAtPeace, MSGBOX_NPC
+	end
+
+PokemonTower_1F_Text_SpiritsAtPeace::
+	.string "I am a CHANNELER.\p"
+	.string "The spirits high in the TOWER are\n"
+	.string "at peace now. I can feel it.$"
 
 PokemonTower_1F_EventScript_Woman1::
 	msgbox PokemonTower_1F_Text_GrowlitheWhyDidYouDie, MSGBOX_NPC

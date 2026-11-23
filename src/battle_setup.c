@@ -325,6 +325,10 @@ static void CreateBattleStartTask_Debug(u8 transition, u16 song)
 
 static bool8 CheckSilphScopeInPokemonTower(u16 mapGroup, u16 mapNum)
 {
+    // Super Emerald: Kanto is visited years after FRLG; the MAROWAK ghost is gone and the
+    // SILPH SCOPE is never obtained, so the tower's wild POKEMON are no longer disguised.
+    if (TRUE)
+        return FALSE;
     if (mapGroup == MAP_GROUP(MAP_POKEMON_TOWER_1F)
      && (mapNum == MAP_NUM(MAP_POKEMON_TOWER_1F)
       || mapNum == MAP_NUM(MAP_POKEMON_TOWER_2F)

@@ -51,7 +51,6 @@ SaffronCity_PokemonCenter_1F_Text_GreatIfEliteFourCameBeatRockets::
 	.string "stomped TEAM ROCKET?$"
 
 SaffronCity_PokemonCenter_1F_Text_TeamRocketTookOff::
-	.string "TEAM ROCKET took off!\n"
-	.string "We can go out safely again!\l"
-	.string "That's great!$"
+	.string "Ever since TEAM ROCKET left, we can\n"
+	.string "go out safely again. That's great!$"
 

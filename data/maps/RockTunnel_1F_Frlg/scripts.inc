@@ -68,8 +68,9 @@ RockTunnel_1F_Text_OliverDefeat::
 	.string "Which way is out?$"
 
 RockTunnel_1F_Text_OliverPostBattle::
-	.string "That sleeping POKéMON on ROUTE 12\n"
-	.string "forced me to take this detour.$"
+	.string "Everyone says ROCK TUNNEL is the\n"
+	.string "fastest way to LAVENDER. I'm not\l"
+	.string "so sure anymore…$"
 
 RockTunnel_1F_Text_LucasIntro::
 	.string "Outsiders like you need to show me\n"

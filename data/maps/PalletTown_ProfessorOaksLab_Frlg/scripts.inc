@@ -1582,10 +1582,10 @@ PalletTown_ProfessorOaksLab_Text_DaisyWillGroomMons::
 	.string "tell anyone.$"
 
 PalletTown_ProfessorOaksLab_Text_OakIsGoingToHaveRadioShow::
-	.string "PROF. OAK is going to have his own\n"
-	.string "radio show soon.\p"
-	.string "The program will be called PROF.\n"
-	.string "OAK's POKéMON SEMINAR.$"
+	.string "PROF. OAK has his own radio show\n"
+	.string "in JOHTO now.\p"
+	.string "It's called PROF. OAK's POKéMON\n"
+	.string "TALK. Have you heard it?$"
 
 PalletTown_ProfessorOaksLab_Text_OakIsAuthorityOnMons::
 	.string "PROF. OAK may not look like much,\n"

@@ -34,8 +34,8 @@ PokemonTower_4F_Text_LaurelDefeat::
 	.string "What!$"
 
 PokemonTower_4F_Text_LaurelPostBattle::
-	.string "We can't determine the identity of\n"
-	.string "the ghosts…$"
+	.string "The spirits here are so restless…\n"
+	.string "What could be keeping them here?$"
 
 PokemonTower_4F_Text_JodyIntro::
 	.string "Huhuhu…\n"

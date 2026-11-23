@@ -114,8 +114,8 @@ CeladonCity_Text_GymIsGreatFullOfWomen::
 CeladonCity_Text_GameCornerIsBadForCitysImage::
 	.string "CELADON takes pride in its efforts\n"
 	.string "to keep the city beautiful.\p"
-	.string "That's why the new GAME CORNER is\n"
-	.string "bad for our city's image.$"
+	.string "That's why I think the GAME CORNER\n"
+	.string "is bad for our city's image.$"
 
 CeladonCity_Text_BlewItAllAtSlots::
 	.string "Moan…\n"

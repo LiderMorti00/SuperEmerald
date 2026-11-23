@@ -82,10 +82,8 @@ Route8_Text_MeganDefeat::
 	.string "POKéMON!$"
 
 Route8_Text_MeganPostBattle::
-	.string "SAFFRON's gatekeeper won't let us\n"
-	.string "go through.\p"
-	.string "I know he's doing his job, but I\n"
-	.string "think he's mean.$"
+	.string "SAFFRON's gatekeepers used to be so\n"
+	.string "strict. Now they just say hello!$"
 
 Route8_Text_RichIntro::
 	.string "I'm a rambling, gaming dude!$"

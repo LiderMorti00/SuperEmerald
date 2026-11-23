@@ -235,22 +235,19 @@ TwoIsland_Text_WelcomeToShopMerchandiseLimited::
 	.string "hope we can serve your needs.$"
 
 TwoIsland_Text_AddedMerchandiseForLostelle::
-	.string "I can't tell you how grateful I am\n"
-	.string "for your rescue of LOSTELLE.\p"
-	.string "Thanks to your feat, the people of\n"
-	.string "THREE ISLAND have changed their\l"
-	.string "attitudes about KANTO people.\p"
+	.string "Ever since LOSTELLE came home safe,\n"
+	.string "the people of THREE ISLAND have\l"
+	.string "warmed up to KANTO people.\p"
 	.string "And, I'm from KANTO, you see.\p"
-	.string "The people of THREE ISLAND\n"
-	.string "helped me add to my merchandise.$"
+	.string "The people of THREE ISLAND helped\n"
+	.string "me add to my merchandise.$"
 
 TwoIsland_Text_HopeYouGiveItYourBest::
 	.string "Hi! I'm giving it my best here.\n"
 	.string "I hope you do too, {PLAYER}.$"
 
 TwoIsland_Text_BringingItemsFromDistantLands::
-	.string "Oh, hello, {PLAYER}!\n"
-	.string "Welcome!\p"
+	.string "Oh, hello! Welcome!\p"
 	.string "I've started bringing in items from\n"
 	.string "distant lands.\p"
 	.string "I've got some rare items in, too.\n"

@@ -125,8 +125,8 @@ PokemonTower_2F_Text_RivalPostBattle::
 	.string "Smell ya later!$"
 
 PokemonTower_2F_Text_SilphScopeCouldUnmaskGhosts::
-	.string "Even we could not identify the\n"
-	.string "wayward ghosts.\p"
-	.string "A SILPH SCOPE might be able to\n"
-	.string "unmask them.$"
+	.string "The spirits higher up in the TOWER\n"
+	.string "are restless.\p"
+	.string "Some of us went up to calm them,\n"
+	.string "but they never came back down…$"
 

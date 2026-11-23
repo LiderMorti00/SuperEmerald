@@ -275,9 +275,9 @@ VermilionCity_Text_DidYouSeeSSAnneInHarbor::
 	.string "in the harbor?$"
 
 VermilionCity_Text_SSAnneHasDepartedForYear::
-	.string "The S.S. ANNE is in port!\p"
+	.string "The S.S. ANNE has already set sail.\p"
 	.string "She only visits VERMILION about\n"
-	.string "this time every year.$"
+	.string "once every year.$"
 
 VermilionCity_Text_BuildingOnThisLand::
 	.string "I'm putting up a building on this\n"
