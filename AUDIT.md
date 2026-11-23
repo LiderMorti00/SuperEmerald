@@ -304,3 +304,8 @@ The Sinnoh comparison covered the two plaque states at all eight gyms. Seven dis
 
 - Reviewed the exterior, three houses and pharmacy. Checked the house returns, signs, smashable rocks, hidden construction NPC and links to the gym, Center and Safari Zone route.
 - The pharmacist acknowledges Amphy's recovery, Kirk talks about his Shuckle without offering a loan, and the island advice identifies the badge that gates whirlpool crossings.
+
+## Cianwood to the Safari Zone
+
+- Read and checked the gate, Cliff Edge Cave, Routes 47 and 48, and Embedded Tower. Traced the gate and cave exits, four paired trainers, Route 47 pickups, shared wildlife scripts and the hidden Rayquaza encounter.
+- The gate gives the route numbers and explains the Safari Balls. The cave visitor describes the ladders. The tower historian stays available independently of the imported Viridian Gym flag. Runtime traversal remains pending.

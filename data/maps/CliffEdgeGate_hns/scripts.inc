@@ -11,13 +11,10 @@ CliffEdgeGate_EventScript_Woman::
 	end
 
 CliffEdgeGate_Text_IntroOpen::
-	.string "Did you know? There's a SAFARI ZONE\n"
-	.string "just around the corner.\p"
-	.string "It's really fun!\n"
-	.string "You will see many different kinds of\l"
-	.string "POKéMON, and it's all you can catch!\p"
-	.string "There is no reason not to go, right?\n"
-	.string "Just around the corner.$"
+	.string "Follow ROUTES 47 and 48 to reach\n"
+	.string "the SAFARI ZONE.\p"
+	.string "They lend you SAFARI BALLS at the\n"
+	.string "entrance. Make every throw count!$"
 
 CliffEdgeGate_EventScript_Picnicker::
 	lock

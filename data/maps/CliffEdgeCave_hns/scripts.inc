@@ -11,8 +11,7 @@ CliffEdgeCave_EventScript_BaldMan::
 	end
 
 CliffEdgeCave_Text_Baldman::
-	.string "If you see a fork in the road\n"
-	.string "inside a cave, most likely one\l"
-	.string "way is right and the other leads\l"
-	.string "to a dead end.\p"
-	.string "But people can't help trying both.$"
+	.string "The ladders lead to different\n"
+	.string "parts of ROUTE 47.\p"
+	.string "Try the other ladder if you're\n"
+	.string "looking for a way down to the sea.$"
