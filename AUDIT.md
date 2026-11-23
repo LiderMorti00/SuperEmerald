@@ -277,3 +277,7 @@ The Sinnoh comparison covered the two plaque states at all eight gyms. Seven dis
 
 - Read the ten swimmers' battle dialogue, checked the four cave entrances and their returns, and followed the paired whirlpool objects into the shared badge check and four movement branches. Confirmed that the Johto initializer hides the optional Tentacruel battles.
 - Mathew now gives directions that match the cave entrances and their separate paths. George's challenge no longer suggests a Pokémon loan that his script cannot handle. Whirlpool movement still needs verification in ROM.
+
+## Route 40
+
+- Reviewed the swimmers, shore NPCs, rock and Krabby interactions, and links to Route 41, Olivine and the tournament gate. The youngster now points to the local World Tournament instead of Hoenn's Trainer Hill. Monica's dialogue matches the weekday family letter. The gate was already recorded in the transit-map pass.

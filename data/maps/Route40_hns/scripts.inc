@@ -28,12 +28,10 @@ Route40_EventScript_Youngster::
 	end
 
 Route40_Text_StandingYoungster::
-	.string "Have you gone to the TRAINER\n"
-	.string "HILL?\p"
-	.string "I think a lot of tough TRAINERS\n"
-	.string "have gathered there already.\p"
-	.string "But since you have so many BADGES\n"
-	.string "you shouldn't do badly at all.$"
+	.string "The gate here leads to the POKéMON\n"
+	.string "WORLD TOURNAMENT.\p"
+	.string "I like to watch TRAINERS from all\n"
+	.string "over the world battle there!$"
 
 Route40_EventScript_Woman1::
 	lock
@@ -101,8 +99,8 @@ Route40_Text_SwimmermRandallSeen::
 Route40_Text_Monica::
 	.string "MONICA: Glad to meet you.\n"
 	.string "I'm MONICA of the WEEKDAY FAMILY.\p"
-	.string "I bet you can't guess my favorite\n"
-	.string "day of the week!$"
+	.string "Monday is my favorite day. I like to\n"
+	.string "start the week here by the sea.$"
 
 SE_J_Route40_hns_Rotue40_EventScript_Monica::
 	msgbox Route40_Text_Monica, MSGBOX_NPC
