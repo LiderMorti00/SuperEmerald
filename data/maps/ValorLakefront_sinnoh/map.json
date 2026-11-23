@@ -31,7 +31,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 39,
       "y": 15,
@@ -45,7 +44,6 @@
       "flag": "FLAG_ITEM_VALORLAKEFRONT_ULTRA_BALL"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 35,
       "y": 47,
@@ -59,7 +57,6 @@
       "flag": "FLAG_ITEM_VALORLAKEFRONT_IRON"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 35,
       "y": 50,
@@ -73,7 +70,6 @@
       "flag": "FLAG_ITEM_VALORLAKEFRONT_TM_DREAM_EATER"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_VALOR_CYNTHIA",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_CYNTHIA",
       "x": 47,
@@ -88,7 +84,6 @@
       "flag": "FLAG_SN_HIDE_VALOR_CYNTHIA"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GALAXY_GRUNT_M",
       "x": 42,
       "y": 56,
@@ -102,7 +97,6 @@
       "flag": "FLAG_SN_HIDE_VL_GRUNT"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BEAUTY",
       "x": 38,
       "y": 49,
@@ -116,7 +110,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 45,
       "y": 33,
@@ -130,7 +123,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_VALOR_BARRY",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BARRY",
       "x": 46,
@@ -145,7 +137,6 @@
       "flag": "FLAG_SN_HIDE_VALOR_BARRY"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 35,
       "y": 49,
@@ -159,7 +150,6 @@
       "flag": "FLAG_ITEM_SN_VALORLAKEFRONT_TM85"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SN_VALOR_COLLECTOR",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_FAT_MAN",
       "x": 53,

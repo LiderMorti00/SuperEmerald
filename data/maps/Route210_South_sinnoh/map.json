@@ -11,7 +11,6 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -32,7 +31,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY_FRLG",
       "x": 26,
       "y": 25,
@@ -46,7 +44,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY_FRLG",
       "x": 14,
       "y": 26,
@@ -60,7 +57,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL_FRLG",
       "x": 22,
       "y": 64,
@@ -74,7 +70,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL_FRLG",
       "x": 21,
       "y": 64,
@@ -88,7 +83,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY_FRLG",
       "x": 36,
       "y": 16,
@@ -102,7 +96,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_RUNNING_TRIATHLETE_M",
       "x": 35,
       "y": 79,
@@ -116,7 +109,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BREEDER_M",
       "x": 18,
       "y": 58,
@@ -130,7 +122,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BREEDER_F",
       "x": 27,
       "y": 56,
@@ -144,7 +135,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER_FRLG",
       "x": 27,
       "y": 71,
@@ -158,7 +148,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_HIKER_FRLG",
       "x": 27,
       "y": 70,
@@ -172,7 +161,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_HIKER_FRLG",
       "x": 19,
       "y": 82,
@@ -186,7 +174,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 12,
       "y": 33,
@@ -200,7 +187,6 @@
       "flag": "FLAG_SN_ITEM_AQUA_HIDEOUT_B1F_MAX_ELIXIR"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 18,
       "y": 53,
@@ -214,7 +200,6 @@
       "flag": "FLAG_SN_ITEM_AQUA_HIDEOUT_B2F_NEST_BALL"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 37,
       "y": 0,
@@ -228,7 +213,6 @@
       "flag": "FLAG_SN_ITEM_MT_PYRE_EXTERIOR_MAX_POTION"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 26,
       "y": 20,
@@ -242,7 +226,6 @@
       "flag": "FLAG_SN_ITEM_MT_PYRE_EXTERIOR_TM_SKILL_SWAP"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 34,
       "y": 82,
@@ -256,7 +239,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 35,
       "y": 82,
@@ -270,7 +252,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 36,
       "y": 82,
@@ -284,7 +265,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 37,
       "y": 82,
@@ -299,7 +279,6 @@
     },
     {
       "local_id": "LOCALID_SN_PSYDUCK_1",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MON_PSYDUCK",
       "x": 25,
       "y": 42,
@@ -314,7 +293,6 @@
     },
     {
       "local_id": "LOCALID_SN_PSYDUCK_2",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MON_PSYDUCK",
       "x": 24,
       "y": 42,
@@ -329,7 +307,6 @@
     },
     {
       "local_id": "LOCALID_SN_PSYDUCK_3",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MON_PSYDUCK",
       "x": 25,
       "y": 40,
@@ -344,7 +321,6 @@
     },
     {
       "local_id": "LOCALID_SN_PSYDUCK_4",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MON_PSYDUCK",
       "x": 24,
       "y": 41,
@@ -359,7 +335,6 @@
     },
     {
       "local_id": "LOCALID_SN_R210_CYNTHIA",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_CYNTHIA",
       "x": 25,
       "y": 39,
@@ -373,7 +348,6 @@
       "flag": "FLAG_SN_HIDE_R210_CYNTHIA"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_F",
       "x": 30,
       "y": 67,
@@ -454,5 +428,6 @@
       "item": "ITEM_ULTRA_BALL",
       "flag": "FLAG_SN_HIDDEN_ITEM_GRANITE_CAVE_B2F_EVERSTONE_2"
     }
-  ]
+  ],
+  "floor_number": 0
 }

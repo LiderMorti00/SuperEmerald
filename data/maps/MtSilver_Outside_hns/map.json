@@ -11,7 +11,6 @@
   "allow_escaping": true,
   "allow_running": false,
   "show_map_name": true,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -22,7 +21,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_QUAGSIRE",
       "x": 5,
       "y": 26,
@@ -36,7 +34,6 @@
       "flag": "FLAG_NIGHT_POKEMON"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_VENUSAUR",
       "x": 34,
       "y": 8,
@@ -50,7 +47,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CHARIZARD",
       "x": 8,
       "y": 20,
@@ -64,7 +60,6 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_GOLEM",
       "x": 4,
       "y": 8,
@@ -78,7 +73,6 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_URSARING",
       "x": 16,
       "y": 4,
@@ -92,7 +86,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_DONPHAN",
       "x": 7,
       "y": 11,
@@ -106,7 +99,6 @@
       "flag": "FLAG_DAY_POKEMON"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_BLASTOISE",
       "x": 32,
       "y": 26,
@@ -120,7 +112,6 @@
       "flag": "FLAG_NIGHT_POKEMON"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_QUAGSIRE",
       "x": 4,
       "y": 27,
@@ -134,7 +125,6 @@
       "flag": "FLAG_NIGHT_POKEMON"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HOUNDOOM",
       "x": 8,
       "y": 18,
@@ -148,7 +138,6 @@
       "flag": "FLAG_NIGHT_POKEMON"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_HOUNDOOM",
       "x": 7,
       "y": 19,
@@ -162,7 +151,6 @@
       "flag": "FLAG_NIGHT_POKEMON"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CROBAT",
       "x": 4,
       "y": 11,
@@ -176,7 +164,6 @@
       "flag": "FLAG_NIGHT_POKEMON"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_CROBAT",
       "x": 7,
       "y": 8,
@@ -190,7 +177,6 @@
       "flag": "FLAG_NIGHT_POKEMON"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_SKARMORY",
       "x": 24,
       "y": 11,
@@ -250,5 +236,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "MtSilver_Outside_EventScript_Sign"
     }
-  ]
+  ],
+  "floor_number": 0
 }
