@@ -382,3 +382,1085 @@ problems and no changed text exceeds the 216-pixel message box.
   journey that started in HOENN.
 - Coverage figures above corrected (828 maps with output, not 849) and the limits of the pass
   written out.
+
+## Map-by-map branch audit (Johto, Kanto, Sinnoh)
+
+Each map was traced from its objects, signs, trainers and transition/coord events through local and shared scripts. Every branch was checked for its condition, what sets it, and what the speaker knows at that point (first visit, return, rematch, quest in progress, save/load, regional travel order).
+
+Status: **complete** = all reachable branches reviewed; **no events** = no visible event in any state; **unreachable** = no warp reaches it in this game. No map is left partial or pending.
+
+ROM tests run: Goldenrod Dept. Store clerk, Goldenrod Radio Tower lottery, Celestic Town Surf, Rocket Hideout B4F barrier, Route 213 footstep house.
+
+| Region | complete | no events | unreachable |
+|---|---|---|---|
+| Johto | 204 | 34 | 4 |
+| Kanto | 307 | 78 | 25 |
+| Sinnoh | 328 | 71 | 2 |
+
+### Johto
+
+| Map | Status | Notes |
+|---|---|---|
+| AzaleaTown_Gym_hns | complete |  |
+| AzaleaTown_House1_hns | complete |  |
+| AzaleaTown_KurtsHouse_hns | complete | wall clock sign shares Hoenn clock script (SET_WALL_CLOCK always set): only shows clock |
+| AzaleaTown_Mart_hns | complete |  |
+| AzaleaTown_PokemonCenter_hns | complete |  |
+| AzaleaTown_hns | complete |  |
+| BellchimeTrail_hns | complete |  |
+| BlackthornCity_Gym_hns | complete |  |
+| BlackthornCity_House1_hns | complete |  |
+| BlackthornCity_House2_hns | complete |  |
+| BlackthornCity_House3_hns | complete | MOVE DELETER and MOVE RELEARNER were text stubs -> wired to real services (HEART SCALE) |
+| BlackthornCity_Mart_hns | complete |  |
+| BlackthornCity_PokemonCenter_hns | complete |  |
+| BlackthornCity_hns | complete | gym boy congratulated you on beating CLAIR before the battle -> badge branch |
+| BurnedTower_1F_hns | complete |  |
+| BurnedTower_B1F_hns | complete | beasts-release scene on first visit |
+| CherrygroveCity_House1_hns | complete |  |
+| CherrygroveCity_House2_hns | no events | only object hidden by state flag (guide gent) |
+| CherrygroveCity_House3_hns | complete |  |
+| CherrygroveCity_Mart_hns | complete |  |
+| CherrygroveCity_PokemonCenter_hns | complete |  |
+| CherrygroveCity_hns | complete |  |
+| CianwoodCity_hns | complete |  |
+| CianwoodGym_hns | complete |  |
+| CianwoodHouse1_hns | complete |  |
+| CianwoodHouse2_hns | complete |  |
+| CianwoodHouse3_hns | complete |  |
+| CianwoodPokecenter_hns | complete |  |
+| CianwoodShop_hns | complete |  |
+| CliffEdgeCave_hns | complete |  |
+| CliffEdgeGate_hns | complete |  |
+| DarkCave_NorthSide_hns | complete |  |
+| DarkCave_SouthSide_hns | complete |  |
+| DragonsDen_Cavern_hns | complete |  |
+| DragonsDen_Entrance_hns | no events |  |
+| DragonsDen_Shrine_hns | complete |  |
+| EcruteakCity_Gym_hns | complete | Morty Rainbow Wing branch read |
+| EcruteakCity_House1_hns | complete |  |
+| EcruteakCity_House2_hns | complete |  |
+| EcruteakCity_Mart_hns | complete |  |
+| EcruteakCity_PokemonCenter_hns | complete | radio-signal line now depends on Rocket quest step 1 |
+| EcruteakCity_SageOffice1_hns | complete |  |
+| EcruteakCity_SageOffice2_hns | complete |  |
+| EcruteakCity_Theater_hns | complete |  |
+| EcruteakCity_hns | complete |  |
+| EmbeddedTower_hns | no events | RAYQUAZA object hidden (it lives in HOENN) |
+| Gate_AzaleaTown_IlexForest_hns | complete |  |
+| Gate_EcruteakCity_Route38_hns | complete |  |
+| Gate_EcruteakCity_Route42_hns | complete |  |
+| Gate_GoldenrodCity_Route35_hns | complete | Randy asked you to deliver a POKéMON (no follow-up in game) -> reworded |
+| Gate_IlexForest_Route34_hns | complete |  |
+| Gate_MahoganyTown_Route43_hns | complete |  |
+| Gate_NationalPark_hns | complete | bug contest flow read |
+| Gate_Route29_Route46_hns | complete |  |
+| Gate_Route31_VioletCity_hns | complete |  |
+| Gate_Route40_hns | no events |  |
+| Gate_Route43_hns | no events | Rocket toll gate objects hidden by state flags |
+| Gate_RuinsOfAlph_Route32_hns | complete |  |
+| Gate_RuinsOfAlph_Route36_hns | complete |  |
+| GoldenrodCity_BikeShop_hns | complete |  |
+| GoldenrodCity_BillsHouse_hns | complete |  |
+| GoldenrodCity_DepartmentStoreBasement_hns | complete |  |
+| GoldenrodCity_DepartmentStoreElevator_hns | complete | floor panel sign had no script (showed engine test message) -> panel text |
+| GoldenrodCity_DepartmentStore_1F_hns | complete |  |
+| GoldenrodCity_DepartmentStore_2F_hns | complete |  |
+| GoldenrodCity_DepartmentStore_3F_hns | complete |  |
+| GoldenrodCity_DepartmentStore_4F_hns | complete |  |
+| GoldenrodCity_DepartmentStore_5F_hns | complete | TM lady only said 'Oh, your POKéMON…' while others say she gives TMs -> gives RETURN/FRUSTRATION by friendship (new flag 0x32F5) |
+| GoldenrodCity_DepartmentStore_6F_hns | complete | trade NPC stub showed 'That isn't a [empty]' -> text |
+| GoldenrodCity_DepartmentStore_7F_hns | complete |  |
+| GoldenrodCity_FlowerShop_hns | complete |  |
+| GoldenrodCity_GameCorner_hns | complete | prize/coin checks used the KANTO coin-case flag; all Game Corner checks now accept the COIN CASE item |
+| GoldenrodCity_Gym_hns | complete | statue said GOLDENROD TOWN -> CITY |
+| GoldenrodCity_House1_hns | complete | NAME RATER was a text stub -> wired to the real name rater script |
+| GoldenrodCity_House2_hns | complete | MOVE DELETER asked yes/no with no service -> wired to the real move deleter |
+| GoldenrodCity_House3_hns | complete |  |
+| GoldenrodCity_PokemonCenter_hns | complete |  |
+| GoldenrodCity_RadioTower_1F_hns | complete | LOTTERY clerk was a stub -> real daily lottery (own intro text; clerk object moved to local id 2 so the animation targets him) |
+| GoldenrodCity_RadioTower_2F_hns | complete | BUENA asked for a password with no system -> text says the show is on a break |
+| GoldenrodCity_RadioTower_3F_hns | complete | 'about 400 kinds' -> over a thousand (matches Route 35 gate) |
+| GoldenrodCity_RadioTower_4F_hns | complete |  |
+| GoldenrodCity_RadioTower_5F_hns | complete | Archer step 3 battle/reward read |
+| GoldenrodCity_TrainStation_hns | complete |  |
+| GoldenrodCity_UndergroundEntrance_hns | complete |  |
+| GoldenrodCity_UndergroundStorage_hns | complete | Ariana step 2 |
+| GoldenrodCity_UndergroundSwitches_hns | complete |  |
+| GoldenrodCity_UndergroundTunnel_hns | complete | HAIRCUT BROTHERS offered a paid service with no script -> fully booked text |
+| GoldenrodCity_hns | complete | cooltrainer talked about 'that man in black' before any Rocket appeared -> rumor line at quest step 0 |
+| IcePath_1F_hns | complete |  |
+| IcePath_B1F_hns | complete |  |
+| IcePath_B2F_hns | complete |  |
+| IcePath_B3F_hns | complete |  |
+| IcePath_B4F_hns | unreachable | no warp leads here |
+| IlexForest_hns | complete |  |
+| LakeOfRageLowTide_hns | no events |  |
+| LakeOfRage_House1_hns | complete | guru promised power but gave nothing -> now gives TM HIDDEN POWER once (flag 0x32F6, bag-full check) |
+| LakeOfRage_House2_hns | complete |  |
+| LakeOfRage_hns | complete | red GYARADOS object visible while Lois says it is gone -> hidden on transition; Petrel step 1 read |
+| MahoganyTown_Gym_hns | complete |  |
+| MahoganyTown_House1_hns | complete |  |
+| MahoganyTown_PokemonCenter_hns | complete |  |
+| MahoganyTown_Shop_hns | complete |  |
+| Mahoganytown_hns | complete | RAGECANDYBAR merchant asked 'Want one?' with no sale -> real yes/no purchase (300, money and bag checks) |
+| MtMortar_1F_North_hns | complete |  |
+| MtMortar_1F_South_hns | no events |  |
+| MtMortar_2F_hns | complete |  |
+| MtMortar_B1F_hns | complete | Kiyo challenged to a battle that never happens -> text now postpones it |
+| MtSilver_1F_ItemRoom_hns | no events |  |
+| MtSilver_1F_MoltresRoom_hns | unreachable | no warp leads here |
+| MtSilver_1F_WaterfallRoom_hns | no events |  |
+| MtSilver_2F_hns | no events |  |
+| MtSilver_3F_hns | complete |  |
+| MtSilver_MountainSide_hns | no events |  |
+| MtSilver_Outside_hns | complete |  |
+| MtSilver_PokemonCenter_hns | complete |  |
+| MtSilver_Snow_hns | no events |  |
+| MtSilver_SummitDay_hns | complete |  |
+| NationalPark_BugContest_hns | complete | contest flow via data/scripts/bug_contest.inc |
+| NationalPark_Normal_hns | complete | Jack '92 kinds of TMs' -> 50 (game has 50) |
+| NewBarkTown_House1_hns | complete |  |
+| NewBarkTown_House2_hns | complete |  |
+| NewBarkTown_Lab_hns | complete |  |
+| NewBarkTown_PlayersHouse_1F_hns | complete | ORO's mom said he had left while he waits outside (state 0) -> branch |
+| NewBarkTown_PlayersHouse_2F_hns | complete |  |
+| NewBarkTown_hns | complete |  |
+| OlivineCity_Cafe_hns | complete |  |
+| OlivineCity_Gym_hns | complete | Jasmine badge/SILVER WING/after-league read |
+| OlivineCity_House1_hns | complete |  |
+| OlivineCity_House2_hns | complete |  |
+| OlivineCity_House3_hns | complete |  |
+| OlivineCity_Lighthouse_hns | complete |  |
+| OlivineCity_Mart_hns | complete |  |
+| OlivineCity_PokemonCenter_hns | complete |  |
+| OlivineCity_PortInside_hns | complete | arrival scene + ship menu |
+| OlivineCity_PortOutside_hns | complete |  |
+| OlivineCity_hns | complete |  |
+| ReceptionGate_hns | complete | edited by the user; read only |
+| RocketHideout_B1F_hns | complete |  |
+| RocketHideout_B2F_hns | complete |  |
+| RocketHideout_B3F_hns | complete | Archer+Ariana step 4 double battle, LARVITAR reward (party/PC full check) |
+| Route26North_hns | complete |  |
+| Route26_House1_hns | complete |  |
+| Route26_House2_hns | complete |  |
+| Route26_hns | complete |  |
+| Route27_House_hns | complete |  |
+| Route27_hns | complete |  |
+| Route28_House_hns | complete |  |
+| Route28_hns | complete |  |
+| Route29_hns | complete |  |
+| Route30_House_hns | complete |  |
+| Route30_MrPokemonsHouse_hns | complete |  |
+| Route30_hns | complete |  |
+| Route31_hns | complete |  |
+| Route32_PokemonCenter_hns | complete |  |
+| Route32_hns | complete | ROAR man said 'NOW TAKE THIS!' and gave nothing -> TM ROAR once (flag 0x32F7); Peter assumed the VIOLET badge -> generic intro |
+| Route33_hns | complete |  |
+| Route34_DayCare_hns | complete |  |
+| Route34_hns | complete | day-care man egg branches read |
+| Route35_hns | complete |  |
+| Route36_hns | complete |  |
+| Route37_hns | complete |  |
+| Route38_hns | complete | Olivia branches on MOOMOO quest |
+| Route39_Barn_hns | complete | MOOMOO feeding 0..7 |
+| Route39_FarmHouse_hns | complete | wife gives LEFTOVERS then MOOMOO MILK x6 (bag-full checks), states 7/9/8 |
+| Route39_hns | complete |  |
+| Route40_hns | complete |  |
+| Route41_hns | complete |  |
+| Route42_hns | complete |  |
+| Route43_hns | complete |  |
+| Route44_hns | complete |  |
+| Route45_hns | complete |  |
+| Route46_hns | complete |  |
+| Route47_hns | complete |  |
+| Route48_hns | no events | wild POKEMON objects only |
+| RuinsOfAlph_B1F_hns | complete |  |
+| RuinsOfAlph_Lab_hns | complete | fossil revival states 0/1/2 read |
+| RuinsOfAlph_Outside_hns | complete | STEVEN quest step 0->1 |
+| RuinsOfAlph_PuzzleAndRewardChambers_hns | complete |  |
+| RuinsOfAlph_WordsRoom1_hns | no events |  |
+| RuinsOfAlph_WordsRoom2_hns | no events |  |
+| RuinsOfAlph_WordsRoom3_hns | no events |  |
+| RuinsOfAlph_WordsRoom4_hns | no events |  |
+| SSAqua_1F_hns | complete | cruise states 0..3 and 4 destinations |
+| SSAqua_B1F_hns | complete |  |
+| SSAqua_CaptainsRoom_hns | complete |  |
+| SSAqua_PlayersRoom_hns | complete |  |
+| SSAqua_RoomNE_hns | complete |  |
+| SSAqua_RoomNNE_hns | complete |  |
+| SSAqua_RoomNW_hns | complete |  |
+| SSAqua_RoomSE_hns | complete |  |
+| SSAqua_RoomSSE_hns | complete |  |
+| SSAqua_RoomSSW_hns | complete |  |
+| SSAqua_RoomSW_hns | complete |  |
+| SafariZoneGate_PokemonCenter_hns | complete | starter-trio gifts could give 1-2 of 3 and later repeat -> room for 3 checked first (new special ScriptHasRoomForThreeMons; also fixes the 4 other trio maps) |
+| SafariZoneGate_SafariZoneEntrance_hns | complete | safari fee/ball/box-full and early exit read; blender signs |
+| SafariZoneGate_hns | complete | vitamin guru is a real mart |
+| SafariZone_Enterance_hns | no events |  |
+| SafariZone_Low_Left_hns | no events |  |
+| SafariZone_Low_Mid_hns | complete |  |
+| SafariZone_Low_Right_hns | no events |  |
+| SafariZone_Top_Left_hns | no events |  |
+| SafariZone_Top_Mid_hns | no events |  |
+| SafariZone_Top_Right_hns | complete |  |
+| SlowpokeWell_B1F_hns | complete | Proton step 0 battle/reward |
+| SlowpokeWell_B2F_hns | complete |  |
+| SproutTower_1F_hns | complete | sage promised an HM at the top -> elder's test |
+| SproutTower_2F_hns | complete |  |
+| SproutTower_3F_hns | complete | ELDER LI announced a battle that never happens -> he sees the CHAMPION's bond; Neal no longer mentions an HM |
+| TestMap1_hns | unreachable | debug map |
+| TestMap2_hns | unreachable | debug map |
+| TinTower_1F_hns | complete |  |
+| TinTower_2F_hns | complete |  |
+| TinTower_3F_hns | complete |  |
+| TinTower_4F_hns | complete |  |
+| TinTower_5F_hns | no events |  |
+| TinTower_6F_hns | no events |  |
+| TinTower_7F_hns | complete |  |
+| TinTower_8F_hns | complete |  |
+| TinTower_9F_hns | complete |  |
+| TinTower_RoofDay_hns | complete | HO-OH |
+| TohjoFalls_Cavern_hns | no events |  |
+| TohjoFalls_GiovanniRoom_hns | complete |  |
+| UnionCave_1F_hns | complete |  |
+| UnionCave_B1F_hns | complete |  |
+| UnionCave_B2F_hns | complete |  |
+| VictoryRoadKanto_1F_hns | no events |  |
+| VictoryRoadKanto_B1F_hns | no events |  |
+| VictoryRoadKanto_B2F_hns | no events |  |
+| VioletCity_Gym_hns | complete |  |
+| VioletCity_House1_hns | complete |  |
+| VioletCity_House2_hns | complete |  |
+| VioletCity_Mart_hns | complete |  |
+| VioletCity_PokemonCenter_hns | complete |  |
+| VioletCity_TrainerSchool_hns | complete |  |
+| VioletCity_hns | complete |  |
+| WhirlIslands_1F_hns | no events |  |
+| WhirlIslands_B1F_Inner_hns | no events |  |
+| WhirlIslands_B1F_hns | no events |  |
+| WhirlIslands_B2F_hns | no events |  |
+| WhirlIslands_B3F_hns | no events |  |
+| WhirlIslands_Descent_hns | no events |  |
+| WhirlIslands_LugiaChamber_hns | complete | LUGIA |
+
+### Kanto
+
+| Map | Status | Notes |
+|---|---|---|
+| BattleColosseum_2P_Frlg | complete |  |
+| BattleColosseum_4P_Frlg | complete |  |
+| BirthIsland_Exterior_Frlg | complete |  |
+| BirthIsland_Harbor_Frlg | complete |  |
+| CeladonCity_Condominiums_1F_Frlg | complete |  |
+| CeladonCity_Condominiums_2F_Frlg | complete |  |
+| CeladonCity_Condominiums_3F_Frlg | complete |  |
+| CeladonCity_Condominiums_RoofRoom_Frlg | complete |  |
+| CeladonCity_Condominiums_Roof_Frlg | complete |  |
+| CeladonCity_DepartmentStore_1F_Frlg | complete |  |
+| CeladonCity_DepartmentStore_2F_Frlg | complete |  |
+| CeladonCity_DepartmentStore_3F_Frlg | complete |  |
+| CeladonCity_DepartmentStore_4F_Frlg | complete |  |
+| CeladonCity_DepartmentStore_5F_Frlg | complete |  |
+| CeladonCity_DepartmentStore_Elevator_Frlg | complete |  |
+| CeladonCity_DepartmentStore_Roof_Frlg | complete |  |
+| CeladonCity_Frlg | complete | Woman: 'new GAME CORNER' -> fixed |
+| CeladonCity_GameCorner_Frlg | complete |  |
+| CeladonCity_GameCorner_PrizeRoom_Frlg | complete |  |
+| CeladonCity_Gym_Frlg | complete |  |
+| CeladonCity_Hotel_Frlg | complete |  |
+| CeladonCity_House1_Frlg | complete |  |
+| CeladonCity_PokemonCenter_1F_Frlg | complete |  |
+| CeladonCity_PokemonCenter_2F_Frlg | complete |  |
+| CeladonCity_Restaurant_Frlg | complete |  |
+| CeruleanCave_1F_Frlg | no events |  |
+| CeruleanCave_2F_Frlg | complete |  |
+| CeruleanCave_B1F_Frlg | complete |  |
+| CeruleanCity_BikeShop_Frlg | complete |  |
+| CeruleanCity_Frlg | complete |  |
+| CeruleanCity_Gym_Frlg | complete |  |
+| CeruleanCity_House1_Frlg | complete |  |
+| CeruleanCity_House2_Frlg | complete |  |
+| CeruleanCity_House3_Frlg | complete |  |
+| CeruleanCity_House4_Frlg | complete |  |
+| CeruleanCity_House5_Frlg | complete |  |
+| CeruleanCity_Mart_Frlg | complete |  |
+| CeruleanCity_PokemonCenter_1F_Frlg | complete |  |
+| CeruleanCity_PokemonCenter_2F_Frlg | no events |  |
+| CinnabarIsland_Frlg | complete | Bill Sevii scenes unreachable (VAR_MAP_SCENE_CINNABAR_ISLAND=4, setters to 1 none) |
+| CinnabarIsland_Gym_Frlg | complete |  |
+| CinnabarIsland_Mart_Frlg | complete |  |
+| CinnabarIsland_PokemonCenter_1F_Frlg | complete | cooltrainer 'gym locked, key in mansion' contradicted unlocked gym -> fixed; Bill hidden (flag only cleared in unreachable scene) |
+| CinnabarIsland_PokemonCenter_2F_Frlg | no events |  |
+| CinnabarIsland_PokemonLab_Entrance_Frlg | complete |  |
+| CinnabarIsland_PokemonLab_ExperimentRoom_Frlg | complete |  |
+| CinnabarIsland_PokemonLab_Lounge_Frlg | complete |  |
+| CinnabarIsland_PokemonLab_ResearchRoom_Frlg | complete | 'Eevee three kinds' -> fixed |
+| DiglettsCave_B1F_Frlg | complete |  |
+| DiglettsCave_NorthEntrance_Frlg | complete |  |
+| DiglettsCave_SouthEntrance_Frlg | complete |  |
+| FiveIsland_Frlg | complete | quest<5 showed thug texts while warehouse empty -> three-state branches |
+| FiveIsland_Harbor_Frlg | complete |  |
+| FiveIsland_House1_Frlg | complete |  |
+| FiveIsland_House2_Frlg | complete | quest<5 branch added |
+| FiveIsland_LostCave_Entrance_Frlg | no events |  |
+| FiveIsland_LostCave_Room10_Frlg | complete |  |
+| FiveIsland_LostCave_Room11_Frlg | no events |  |
+| FiveIsland_LostCave_Room12_Frlg | no events |  |
+| FiveIsland_LostCave_Room13_Frlg | no events |  |
+| FiveIsland_LostCave_Room14_Frlg | no events |  |
+| FiveIsland_LostCave_Room1_Frlg | complete |  |
+| FiveIsland_LostCave_Room2_Frlg | no events |  |
+| FiveIsland_LostCave_Room3_Frlg | no events |  |
+| FiveIsland_LostCave_Room4_Frlg | complete |  |
+| FiveIsland_LostCave_Room5_Frlg | no events |  |
+| FiveIsland_LostCave_Room6_Frlg | no events |  |
+| FiveIsland_LostCave_Room7_Frlg | no events |  |
+| FiveIsland_LostCave_Room8_Frlg | no events |  |
+| FiveIsland_LostCave_Room9_Frlg | no events |  |
+| FiveIsland_Meadow_Frlg | complete |  |
+| FiveIsland_MemorialPillar_Frlg | complete |  |
+| FiveIsland_PokemonCenter_1F_Frlg | complete |  |
+| FiveIsland_PokemonCenter_2F_Frlg | no events |  |
+| FiveIsland_ResortGorgeous_Frlg | complete |  |
+| FiveIsland_ResortGorgeous_House_Frlg | complete |  |
+| FiveIsland_RocketWarehouse_Frlg | complete | quest step 5 battles + reward branch read |
+| FiveIsland_WaterLabyrinth_Frlg | complete |  |
+| FourIsland_Frlg | complete | old woman 'LORELEI has gone back' (FRLG E4 return) and doll girl -> fixed |
+| FourIsland_Harbor_Frlg | complete |  |
+| FourIsland_House1_Frlg | complete |  |
+| FourIsland_House2_Frlg | complete | typo SITCKERS fixed |
+| FourIsland_IcefallCave_1F_Frlg | complete |  |
+| FourIsland_IcefallCave_B1F_Frlg | no events |  |
+| FourIsland_IcefallCave_Back_Frlg | complete |  |
+| FourIsland_IcefallCave_Entrance_Frlg | no events |  |
+| FourIsland_LoreleisHouse_Frlg | complete | quest-5 / first / repeat branches |
+| FourIsland_Mart_Frlg | complete |  |
+| FourIsland_PokemonCenter_1F_Frlg | complete |  |
+| FourIsland_PokemonCenter_2F_Frlg | no events |  |
+| FourIsland_PokemonDayCare_Frlg | complete |  |
+| FuchsiaCity_Frlg | complete |  |
+| FuchsiaCity_Gym_Frlg | complete | Janine intro said 'My father, JANINE' -> KOGA |
+| FuchsiaCity_House1_Frlg | complete |  |
+| FuchsiaCity_House2_Frlg | complete |  |
+| FuchsiaCity_House3_Frlg | complete |  |
+| FuchsiaCity_Mart_Frlg | complete |  |
+| FuchsiaCity_PokemonCenter_1F_Frlg | complete |  |
+| FuchsiaCity_PokemonCenter_2F_Frlg | no events |  |
+| FuchsiaCity_SafariZone_Entrance_Frlg | complete |  |
+| FuchsiaCity_SafariZone_Office_Frlg | complete |  |
+| FuchsiaCity_WardensHouse_Frlg | complete |  |
+| IndigoPlateau_Exterior_Frlg | complete |  |
+| IndigoPlateau_PokemonCenter_1F_Frlg | complete |  |
+| IndigoPlateau_PokemonCenter_2F_Frlg | no events |  |
+| LavenderTown_Frlg | complete |  |
+| LavenderTown_House1_Frlg | complete | 'ghost is gone' contradicted spirit quest -> branch on VAR_SE_SPIRIT_QUEST |
+| LavenderTown_House2_Frlg | complete |  |
+| LavenderTown_Mart_Frlg | complete |  |
+| LavenderTown_PokemonCenter_1F_Frlg | complete |  |
+| LavenderTown_PokemonCenter_2F_Frlg | no events |  |
+| LavenderTown_VolunteerPokemonHouse_Frlg | complete | spirit quest states 0/1-3/4/5 read |
+| MtEmber_Exterior_Frlg | complete | Rocket password scene needs scene var 1, only set inside unreachable Celio scene |
+| MtEmber_RubyPath_1F_Frlg | no events |  |
+| MtEmber_RubyPath_B1F_Frlg | no events |  |
+| MtEmber_RubyPath_B1F_Stairs_Frlg | no events |  |
+| MtEmber_RubyPath_B2F_Frlg | no events |  |
+| MtEmber_RubyPath_B2F_Stairs_Frlg | no events |  |
+| MtEmber_RubyPath_B3F_Frlg | no events |  |
+| MtEmber_RubyPath_B4F_Frlg | no events |  |
+| MtEmber_RubyPath_B5F_Frlg | complete |  |
+| MtEmber_SummitPath_1F_Frlg | no events |  |
+| MtEmber_SummitPath_2F_Frlg | no events |  |
+| MtEmber_SummitPath_3F_Frlg | no events |  |
+| MtEmber_Summit_Frlg | complete |  |
+| MtMoon_1F_Frlg | complete | Kent intro 'suspicious men are in the cave' -> fixed |
+| MtMoon_B1F_Frlg | no events |  |
+| MtMoon_B2F_Frlg | complete |  |
+| NavelRock_1F_Frlg | no events |  |
+| NavelRock_B1F_Frlg | no events |  |
+| NavelRock_BasePath_B10F_Frlg | no events |  |
+| NavelRock_BasePath_B11F_Frlg | no events |  |
+| NavelRock_BasePath_B1F_Frlg | no events |  |
+| NavelRock_BasePath_B2F_Frlg | no events |  |
+| NavelRock_BasePath_B3F_Frlg | no events |  |
+| NavelRock_BasePath_B4F_Frlg | no events |  |
+| NavelRock_BasePath_B5F_Frlg | no events |  |
+| NavelRock_BasePath_B6F_Frlg | no events |  |
+| NavelRock_BasePath_B7F_Frlg | no events |  |
+| NavelRock_BasePath_B8F_Frlg | no events |  |
+| NavelRock_BasePath_B9F_Frlg | no events |  |
+| NavelRock_Base_Frlg | complete |  |
+| NavelRock_Exterior_Frlg | complete |  |
+| NavelRock_Fork_Frlg | no events |  |
+| NavelRock_Harbor_Frlg | complete |  |
+| NavelRock_SummitPath_2F_Frlg | no events |  |
+| NavelRock_SummitPath_3F_Frlg | no events |  |
+| NavelRock_SummitPath_4F_Frlg | no events |  |
+| NavelRock_SummitPath_5F_Frlg | no events |  |
+| NavelRock_Summit_Frlg | complete |  |
+| OneIsland_Frlg | complete | first-arrival Bill scene unreachable (harbor var only set to 1 in unreachable Cinnabar scene) |
+| OneIsland_Harbor_Frlg | complete |  |
+| OneIsland_House1_Frlg | complete |  |
+| OneIsland_House2_Frlg | complete |  |
+| OneIsland_KindleRoad_EmberSpa_Frlg | complete |  |
+| OneIsland_KindleRoad_Frlg | complete |  |
+| OneIsland_PokemonCenter_1F_Frlg | complete | Celio state 7 branch reachable; Bill/Ruby/Sapphire branches unreachable; crush girl thanked player for Celio's network -> fixed |
+| OneIsland_PokemonCenter_2F_Frlg | no events |  |
+| OneIsland_TreasureBeach_Frlg | complete |  |
+| PalletTown_Frlg | complete | Oak rating scene (OAK var 2) reachable only after Kanto HoF if National Dex never enabled; functional fallback, noted |
+| PalletTown_PlayersHouse_1F_Frlg | complete |  |
+| PalletTown_PlayersHouse_2F_Frlg | complete | 'PLAYER played with the NES' in Red's room -> fixed |
+| PalletTown_ProfessorOaksLab_Frlg | complete | lab var 9 path; scene 7 only via fallback above; scientist 'radio show soon' -> fixed (HGSS era) |
+| PalletTown_RivalsHouse_Frlg | complete |  |
+| PewterCity_Frlg | complete | Running Shoes aide appeared after beating Brock (Gym cleared the hide flag) -> removed clearflag in gym |
+| PewterCity_Gym_Frlg | complete |  |
+| PewterCity_House1_Frlg | complete |  |
+| PewterCity_House2_Frlg | complete |  |
+| PewterCity_Mart_Frlg | complete |  |
+| PewterCity_Museum_1F_Frlg | complete | thief quest states 0-5 read |
+| PewterCity_Museum_2F_Frlg | complete |  |
+| PewterCity_PokemonCenter_1F_Frlg | complete |  |
+| PewterCity_PokemonCenter_2F_Frlg | no events |  |
+| PokemonLeague_AgathasRoom_Frlg | complete | first/rematch |
+| PokemonLeague_BrunosRoom_Frlg | complete | first/rematch (Koga rematch mentions Janine; rematch needs 16 badges) |
+| PokemonLeague_ChampionsRoom_Frlg | complete | first/rematch |
+| PokemonLeague_HallOfFame_Frlg | complete | Lance welcomed a 'new CHAMPION' on the rematch too -> rematch line added |
+| PokemonLeague_LancesRoom_Frlg | complete |  |
+| PokemonLeague_LoreleisRoom_Frlg | complete |  |
+| PokemonMansion_1F_Frlg | complete |  |
+| PokemonMansion_2F_Frlg | complete |  |
+| PokemonMansion_3F_Frlg | complete |  |
+| PokemonMansion_B1F_Frlg | complete |  |
+| PokemonTower_1F_Frlg | complete | channeler branch after spirit quest |
+| PokemonTower_2F_Frlg | complete | Silph Scope mechanic: wild GHOST disguise disabled in C (scope unobtainable); channeler text adapted |
+| PokemonTower_3F_Frlg | complete |  |
+| PokemonTower_4F_Frlg | complete |  |
+| PokemonTower_5F_Frlg | complete |  |
+| PokemonTower_6F_Frlg | complete |  |
+| PokemonTower_7F_Frlg | complete |  |
+| PowerPlant_Frlg | complete |  |
+| RockTunnel_1F_Frlg | complete | Oliver: Snorlax detour (Snorlax gone) -> fixed |
+| RockTunnel_B1F_Frlg | complete |  |
+| RocketHideout_B1F_Frlg | complete | BLOCKER: barrier stayed up forever (its grunt is hidden) -> skipped when misc rockets hidden |
+| RocketHideout_B2F_Frlg | complete |  |
+| RocketHideout_B3F_Frlg | complete |  |
+| RocketHideout_B4F_Frlg | complete | BLOCKER: Giovanni door barrier needs two hidden grunts -> skipped when misc rockets hidden; ROM-tested |
+| RocketHideout_Elevator_Frlg | complete |  |
+| Route10_Frlg | complete |  |
+| Route10_PokemonCenter_1F_Frlg | complete |  |
+| Route10_PokemonCenter_2F_Frlg | no events |  |
+| Route11_EastEntrance_1F_Frlg | complete |  |
+| Route11_EastEntrance_2F_Frlg | complete |  |
+| Route11_Frlg | complete |  |
+| Route12_FishingHouse_Frlg | complete |  |
+| Route12_Frlg | complete |  |
+| Route12_NorthEntrance_1F_Frlg | complete |  |
+| Route12_NorthEntrance_2F_Frlg | complete |  |
+| Route13_Frlg | complete |  |
+| Route14_Frlg | complete |  |
+| Route15_Frlg | complete |  |
+| Route15_WestEntrance_1F_Frlg | complete |  |
+| Route15_WestEntrance_2F_Frlg | complete |  |
+| Route16_Frlg | complete |  |
+| Route16_House_Frlg | complete |  |
+| Route16_NorthEntrance_1F_Frlg | complete | CYCLING ROAD gate only accepted the FRLG BICYCLE flag -> HOENN Mach/Acro bike also accepted |
+| Route16_NorthEntrance_2F_Frlg | complete |  |
+| Route17_Frlg | complete |  |
+| Route18_EastEntrance_1F_Frlg | complete | same bike gate fix |
+| Route18_EastEntrance_2F_Frlg | complete |  |
+| Route18_Frlg | complete |  |
+| Route19_Frlg | complete |  |
+| Route1_Frlg | complete |  |
+| Route20_Frlg | complete |  |
+| Route21_North_Frlg | complete |  |
+| Route21_South_Frlg | complete |  |
+| Route22_Frlg | complete |  |
+| Route23_Frlg | complete |  |
+| Route24_Frlg | complete | Nugget Bridge promised a prize given by the hidden Rocket grunt -> intro reworded |
+| Route25_Frlg | complete |  |
+| Route25_SeaCottage_Frlg | complete | Clefairy-Bill hidden (HELPED_BILL set by state); human Bill gives RAINBOW PASS |
+| Route2_EastBuilding_Frlg | complete |  |
+| Route2_Frlg | complete |  |
+| Route2_House_Frlg | complete |  |
+| Route2_ViridianForest_NorthEntrance_Frlg | complete |  |
+| Route2_ViridianForest_SouthEntrance_Frlg | complete |  |
+| Route3_Frlg | complete |  |
+| Route4_Frlg | complete | boy praised your BOULDERBADGE even without it -> badge branch |
+| Route4_PokemonCenter_1F_Frlg | complete |  |
+| Route4_PokemonCenter_2F_Frlg | no events |  |
+| Route5_Frlg | complete |  |
+| Route5_PokemonDayCare_Frlg | complete |  |
+| Route5_SouthEntrance_Frlg | complete |  |
+| Route6_Frlg | complete |  |
+| Route6_NorthEntrance_Frlg | complete |  |
+| Route7_EastEntrance_Frlg | complete |  |
+| Route7_Frlg | complete |  |
+| Route8_Frlg | complete | Megan: 'Saffron gatekeeper won't let us through' (gates open) -> fixed |
+| Route8_WestEntrance_Frlg | complete |  |
+| Route9_Frlg | complete |  |
+| SSAnne_1F_Corridor_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_1F_Room1_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_1F_Room2_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_1F_Room3_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_1F_Room4_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_1F_Room5_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_1F_Room6_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_1F_Room7_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_2F_Corridor_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_2F_Room1_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_2F_Room2_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_2F_Room3_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_2F_Room4_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_2F_Room5_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_2F_Room6_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_3F_Corridor_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_B1F_Corridor_Frlg | no events |  |
+| SSAnne_B1F_Room1_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_B1F_Room2_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_B1F_Room3_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_B1F_Room4_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_B1F_Room5_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_CaptainsOffice_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_Deck_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_Exterior_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SSAnne_Kitchen_Frlg | unreachable | unreachable: S.S. ANNE has left (VERMILION scene 3, HIDE_SS_ANNE) |
+| SafariZone_Center_Frlg | complete |  |
+| SafariZone_Center_RestHouse_Frlg | complete |  |
+| SafariZone_East_Frlg | complete |  |
+| SafariZone_East_RestHouse_Frlg | complete |  |
+| SafariZone_North_Frlg | complete |  |
+| SafariZone_North_RestHouse_Frlg | complete |  |
+| SafariZone_SecretHouse_Frlg | complete |  |
+| SafariZone_West_Frlg | complete |  |
+| SafariZone_West_RestHouse_Frlg | complete |  |
+| SaffronCity_CopycatsHouse_1F_Frlg | complete |  |
+| SaffronCity_CopycatsHouse_2F_Frlg | complete |  |
+| SaffronCity_Dojo_Frlg | complete |  |
+| SaffronCity_Frlg | complete | Johto lines: 'zip back home', lost Clefairy doll quest (not in game), 'unused GYM next door' (Dojo active) -> fixed |
+| SaffronCity_Gym_Frlg | complete |  |
+| SaffronCity_MagnetTrainStation_Frlg | complete |  |
+| SaffronCity_Mart_Frlg | complete |  |
+| SaffronCity_MrPsychicsHouse_Frlg | complete |  |
+| SaffronCity_PokemonCenter_1F_Frlg | complete | 'TEAM ROCKET took off!' -> past tense |
+| SaffronCity_PokemonCenter_2F_Frlg | no events |  |
+| SeafoamIslands_1F_Frlg | complete |  |
+| SeafoamIslands_B1F_Frlg | complete |  |
+| SeafoamIslands_B2F_Frlg | complete |  |
+| SeafoamIslands_B3F_Frlg | complete |  |
+| SeafoamIslands_B4F_Frlg | complete |  |
+| SevenIsland_Frlg | complete |  |
+| SevenIsland_Harbor_Frlg | complete |  |
+| SevenIsland_House_Room1_Frlg | complete |  |
+| SevenIsland_House_Room2_Frlg | complete |  |
+| SevenIsland_Mart_Frlg | complete |  |
+| SevenIsland_PokemonCenter_1F_Frlg | complete |  |
+| SevenIsland_PokemonCenter_2F_Frlg | no events |  |
+| SevenIsland_SevaultCanyon_Entrance_Frlg | complete |  |
+| SevenIsland_SevaultCanyon_Frlg | complete |  |
+| SevenIsland_SevaultCanyon_House_Frlg | complete |  |
+| SevenIsland_SevaultCanyon_TanobyKey_Frlg | complete |  |
+| SevenIsland_TanobyRuins_DilfordChamber_Frlg | no events |  |
+| SevenIsland_TanobyRuins_Frlg | complete |  |
+| SevenIsland_TanobyRuins_LiptooChamber_Frlg | no events |  |
+| SevenIsland_TanobyRuins_MoneanChamber_Frlg | no events |  |
+| SevenIsland_TanobyRuins_RixyChamber_Frlg | no events |  |
+| SevenIsland_TanobyRuins_ScufibChamber_Frlg | no events |  |
+| SevenIsland_TanobyRuins_ViapoisChamber_Frlg | no events |  |
+| SevenIsland_TanobyRuins_WeepthChamber_Frlg | no events |  |
+| SevenIsland_TrainerTower_Frlg | complete |  |
+| SilphCo_10F_Frlg | complete |  |
+| SilphCo_11F_Frlg | complete |  |
+| SilphCo_1F_Frlg | complete |  |
+| SilphCo_2F_Frlg | complete |  |
+| SilphCo_3F_Frlg | complete |  |
+| SilphCo_4F_Frlg | complete |  |
+| SilphCo_5F_Frlg | complete |  |
+| SilphCo_6F_Frlg | complete |  |
+| SilphCo_7F_Frlg | complete |  |
+| SilphCo_8F_Frlg | complete |  |
+| SilphCo_9F_Frlg | complete |  |
+| SilphCo_Elevator_Frlg | complete |  |
+| SixIsland_AlteringCave_Frlg | no events |  |
+| SixIsland_DottedHole_1F_Frlg | no events |  |
+| SixIsland_DottedHole_B1F_Frlg | no events |  |
+| SixIsland_DottedHole_B2F_Frlg | no events |  |
+| SixIsland_DottedHole_B3F_Frlg | no events |  |
+| SixIsland_DottedHole_B4F_Frlg | no events |  |
+| SixIsland_DottedHole_SapphireRoom_Frlg | complete |  |
+| SixIsland_Frlg | complete |  |
+| SixIsland_GreenPath_Frlg | complete |  |
+| SixIsland_Harbor_Frlg | complete |  |
+| SixIsland_House_Frlg | complete |  |
+| SixIsland_Mart_Frlg | complete |  |
+| SixIsland_OutcastIsland_Frlg | complete |  |
+| SixIsland_PatternBush_Frlg | complete |  |
+| SixIsland_PokemonCenter_1F_Frlg | complete |  |
+| SixIsland_PokemonCenter_2F_Frlg | no events |  |
+| SixIsland_RuinValley_Frlg | complete |  |
+| SixIsland_WaterPath_Frlg | complete |  |
+| SixIsland_WaterPath_House1_Frlg | complete |  |
+| SixIsland_WaterPath_House2_Frlg | complete |  |
+| ThreeIsland_BerryForest_Frlg | complete |  |
+| ThreeIsland_BondBridge_Frlg | complete |  |
+| ThreeIsland_DunsparceTunnel_Frlg | complete |  |
+| ThreeIsland_Frlg | complete | bikers are SE trainers on the island; woman said 'wouldn't want them here again' -> fixed; FRLG gang scene unreachable (scene var 4) |
+| ThreeIsland_Harbor_Frlg | complete |  |
+| ThreeIsland_House1_Frlg | complete |  |
+| ThreeIsland_House2_Frlg | complete |  |
+| ThreeIsland_House3_Frlg | complete |  |
+| ThreeIsland_House4_Frlg | complete |  |
+| ThreeIsland_House5_Frlg | complete |  |
+| ThreeIsland_Mart_Frlg | complete | 'glad bikers left' -> calmed down |
+| ThreeIsland_PokemonCenter_1F_Frlg | complete |  |
+| ThreeIsland_PokemonCenter_2F_Frlg | no events |  |
+| ThreeIsland_Port_Frlg | complete | 'BIKERS ran off' -> calmed down |
+| TradeCenter_Frlg | complete | engine-driven challenge; texts read |
+| TrainerTower_1F_Frlg | complete | engine-driven challenge; texts read |
+| TrainerTower_2F_Frlg | complete | engine-driven challenge; texts read |
+| TrainerTower_3F_Frlg | complete | engine-driven challenge; texts read |
+| TrainerTower_4F_Frlg | complete | engine-driven challenge; texts read |
+| TrainerTower_5F_Frlg | complete | engine-driven challenge; texts read |
+| TrainerTower_6F_Frlg | complete | engine-driven challenge; texts read |
+| TrainerTower_7F_Frlg | complete | engine-driven challenge; texts read |
+| TrainerTower_8F_Frlg | complete | engine-driven challenge; texts read |
+| TrainerTower_Elevator_Frlg | complete | engine-driven challenge; texts read |
+| TrainerTower_Lobby_Frlg | complete | engine-driven challenge; texts read |
+| TrainerTower_Roof_Frlg | complete | engine-driven challenge; texts read |
+| TwoIsland_CapeBrink_Frlg | complete |  |
+| TwoIsland_CapeBrink_House_Frlg | complete |  |
+| TwoIsland_Frlg | complete | BUG: shop state recomputed from flags -> opened as 'new' and thanked player for LOSTELLE; state now sets the shop flags (Kanto state v7) |
+| TwoIsland_Harbor_Frlg | complete |  |
+| TwoIsland_House_Frlg | complete |  |
+| TwoIsland_JoyfulGameCorner_Frlg | complete | Lostelle rescue scene unreachable (var 4) |
+| TwoIsland_PokemonCenter_1F_Frlg | complete |  |
+| TwoIsland_PokemonCenter_2F_Frlg | no events |  |
+| UndergroundPath_EastEntrance_Frlg | complete |  |
+| UndergroundPath_EastWestTunnel_Frlg | no events |  |
+| UndergroundPath_NorthEntrance_Frlg | complete |  |
+| UndergroundPath_NorthSouthTunnel_Frlg | no events |  |
+| UndergroundPath_SouthEntrance_Frlg | complete |  |
+| UndergroundPath_WestEntrance_Frlg | complete |  |
+| UnionRoom_Frlg | complete |  |
+| VermilionCity_Frlg | complete | old man said S.S. ANNE 'is in port' while ship is gone (my earlier edit was wrong) -> fixed |
+| VermilionCity_Gym_Frlg | complete |  |
+| VermilionCity_House1_Frlg | complete |  |
+| VermilionCity_House2_Frlg | complete |  |
+| VermilionCity_House3_Frlg | complete |  |
+| VermilionCity_Mart_Frlg | complete |  |
+| VermilionCity_PokemonCenter_1F_Frlg | complete |  |
+| VermilionCity_PokemonCenter_2F_Frlg | no events |  |
+| VermilionCity_PokemonFanClub_Frlg | complete |  |
+| ViridianCity_Frlg | complete | coffee man asked about a TEACHY TV the player never got -> asks only if owned |
+| ViridianCity_Gym_Frlg | complete |  |
+| ViridianCity_House_Frlg | complete |  |
+| ViridianCity_Mart_Frlg | complete |  |
+| ViridianCity_PokemonCenter_1F_Frlg | complete |  |
+| ViridianCity_PokemonCenter_2F_Frlg | no events |  |
+| ViridianCity_School_Frlg | complete |  |
+| ViridianForest_Frlg | complete |  |
+
+### Sinnoh
+
+| Map | Status | Notes |
+|---|---|---|
+| AcuityLakefront_sinnoh | complete |  |
+| AmitySquare_sinnoh | complete | daily berry gift (bag-full check added earlier) |
+| CanalaveCity_Gym_sinnoh | complete |  |
+| CanalaveCity_HarborInn_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| CanalaveCity_House1_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| CanalaveCity_House2_sinnoh | complete | move deleter is real |
+| CanalaveCity_House3_sinnoh | complete | LUNAR WING states |
+| CanalaveCity_House4_sinnoh | complete |  |
+| CanalaveCity_Library_F1_sinnoh | complete |  |
+| CanalaveCity_Library_F2_sinnoh | complete |  |
+| CanalaveCity_Library_F3_sinnoh | complete | Lake Valor explosion flags never set in SE (only base text reachable) |
+| CanalaveCity_Mart_sinnoh | complete |  |
+| CanalaveCity_PokemonCenter_1F_sinnoh | complete |  |
+| CanalaveCity_PokemonCenter_2F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| CanalaveCity_sinnoh | complete | DAWN arrival scene, ELDRITCH states, ship menu |
+| CelesticTown_House1_sinnoh | complete |  |
+| CelesticTown_House2_sinnoh | complete |  |
+| CelesticTown_House3_sinnoh | complete |  |
+| CelesticTown_House4_sinnoh | complete |  |
+| CelesticTown_PokemonCenter_1F_sinnoh | complete |  |
+| CelesticTown_PokemonCenter_2F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| CelesticTown_Ruins_sinnoh | complete | SURF gift (bag check, ROM-tested earlier); Old CHARM branch |
+| CelesticTown_sinnoh | complete |  |
+| EternaCity_CycleShop_sinnoh | complete |  |
+| EternaCity_Flat1_F1_sinnoh | complete | in-game trade; name rater is real |
+| EternaCity_Flat1_F2_sinnoh | complete |  |
+| EternaCity_Flat1_F3_sinnoh | complete |  |
+| EternaCity_GalacticBuilding_1F_sinnoh | complete |  |
+| EternaCity_GalacticBuilding_2F_sinnoh | complete |  |
+| EternaCity_GalacticBuilding_3F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| EternaCity_GalacticBuilding_4F_sinnoh | complete | Travis quest step, GIBLE reward |
+| EternaCity_GalacticBuilding_B1F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| EternaCity_Gym_sinnoh | complete |  |
+| EternaCity_HerbShop_sinnoh | complete |  |
+| EternaCity_House1_sinnoh | complete | inscription man asked about a second inscription and never told it -> text closes the thought |
+| EternaCity_House2_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| EternaCity_Mart_sinnoh | complete |  |
+| EternaCity_PokemonCenter_F1_sinnoh | complete |  |
+| EternaCity_PokemonCenter_F2_sinnoh | complete |  |
+| EternaCity_UndergroundManHouse_sinnoh | complete | daily fossil gift |
+| EternaCity_sinnoh | complete | CYRUS/CYNTHIA statue scene hidden (HIDE_ETERNA_STATUE set by state init) |
+| EternaForest_sinnoh | complete | honey tree, ZACIAN |
+| FightArea_House1_sinnoh | complete |  |
+| FightArea_House2_sinnoh | complete | Item Expert asked 'Care to know?' and stopped -> gives his recommendations |
+| FightArea_Mart_sinnoh | complete |  |
+| FightArea_PokemonCenter_1F_sinnoh | complete |  |
+| FightArea_PokemonCenter_2F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| FightArea_sinnoh | complete | BARRY multi/PALMER/BUCK scene hidden by state init; SUPER ROD gift; ferry |
+| FloaromaMeadow_House_sinnoh | complete |  |
+| FloaromaMeadow_sinnoh | complete |  |
+| FloaromaTown_FlowerShop_sinnoh | complete |  |
+| FloaromaTown_House1_sinnoh | complete | girl said 'Here's the TM for PLUCK!' and gave nothing (no such TM) -> text fixed |
+| FloaromaTown_House2_sinnoh | complete |  |
+| FloaromaTown_Mart_sinnoh | complete |  |
+| FloaromaTown_PokemonCenter_1F_sinnoh | complete |  |
+| FloaromaTown_sinnoh | complete | GRACIDEA needs SHAYMIN |
+| FloaromaTwon_PokemonCenter_2F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| FlowerParadise_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| FuegoIronworks_Inside_sinnoh | complete | STAR PIECE exchange |
+| FuegoIronworks_sinnoh | complete |  |
+| FullmoonIsland_Forest_sinnoh | complete |  |
+| FullmoonIsland_sinnoh | complete |  |
+| GalacticHQ_1F_sinnoh | complete |  |
+| GalacticHQ_2F_sinnoh | complete |  |
+| GalacticHQ_3F_sinnoh | complete |  |
+| GalacticHQ_4F_sinnoh | complete | CYRUS final step |
+| GalacticHQ_B1F_sinnoh | complete |  |
+| GalacticHQ_B2F_sinnoh | complete |  |
+| GalacticHQ_ControlRoom_sinnoh | complete |  |
+| GalacticHQ_Hall_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| GalacticHQ_Laboratory_sinnoh | complete |  |
+| GreatMarsh_sinnoh | complete |  |
+| HallOfOrigin_sinnoh | complete | ARCEUS |
+| HearthomeCity_EastGate_sinnoh | complete |  |
+| HearthomeCity_Flat1_F1_sinnoh | complete |  |
+| HearthomeCity_Flat1_F2_sinnoh | complete |  |
+| HearthomeCity_Flat2_F1_sinnoh | complete |  |
+| HearthomeCity_Flat2_F2_sinnoh | complete |  |
+| HearthomeCity_ForeignBuilding_sinnoh | complete |  |
+| HearthomeCity_Gym_sinnoh | complete | guide/statue checked BADGE3 (MAYLENE) but FANTINA gives BADGE5 -> fixed; same mix-up fixed in Pastoria (5->4) and Veilstone (4->3) gyms, Mr. Goods (Hearthome) and a Pastoria NPC |
+| HearthomeCity_House1_sinnoh | complete | BEBE EEVEE gift |
+| HearthomeCity_Mart_sinnoh | complete |  |
+| HearthomeCity_PoffinHouse_sinnoh | complete | advice described Poffin cooking -> BERRY BLENDER advice |
+| HearthomeCity_PokemonCenter_1F_sinnoh | complete | sent player to the Fan Club for the POKéBLOCK CASE (it is given at the POKéBLOCK HOUSE) -> fixed; KANTO request quest 0..3 |
+| HearthomeCity_PokemonCenter_2F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| HearthomeCity_PokemonFanClub_sinnoh | complete |  |
+| HearthomeCity_WestGate_sinnoh | complete |  |
+| HearthomeCity_sinnoh | complete | LUCAS rival 2 (3 starters), WALLY Sinnoh quest, Mr. Goods (badge fixed), CONTEST guide |
+| HotelGrandLake_sinnoh | complete |  |
+| IcebergRuins_sinnoh | complete |  |
+| IronIsland_1F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| IronIsland_B1F_Left_sinnoh | complete |  |
+| IronIsland_B1F_Right_sinnoh | complete |  |
+| IronIsland_B2F_Left_sinnoh | complete | Platinum RILEY B2F egg scene hidden; SE RILEY at the entrance |
+| IronIsland_B2F_Right_sinnoh | complete |  |
+| IronIsland_B3F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| IronIsland_House_sinnoh | complete | BYRON said 'Take this as my apology!' and gave nothing -> METAL COAT once (flag 0x32F8) |
+| IronIsland_sinnoh | complete | RILEY egg (party check) |
+| IronRuins_sinnoh | complete |  |
+| JubilifeCity_Flat1_F1_sinnoh | complete |  |
+| JubilifeCity_Flat1_F2_sinnoh | complete |  |
+| JubilifeCity_Flat1_F3_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| JubilifeCity_Flat2_F1_sinnoh | complete |  |
+| JubilifeCity_Flat2_F2_sinnoh | complete |  |
+| JubilifeCity_Flat2_F3_sinnoh | complete |  |
+| JubilifeCity_Flat3_F1_sinnoh | complete |  |
+| JubilifeCity_Flat3_F2_sinnoh | complete |  |
+| JubilifeCity_Flat3_F3_sinnoh | complete |  |
+| JubilifeCity_JubilifeTV_F1_sinnoh | complete | lottery read; fitting-room invitation -> closed for redecorating |
+| JubilifeCity_JubilifeTV_F2_sinnoh | complete | dress-up photo promise -> boudoir being redecorated |
+| JubilifeCity_JubilifeTV_F3_sinnoh | complete |  |
+| JubilifeCity_JubilifeTV_F4_sinnoh | complete |  |
+| JubilifeCity_Mart_sinnoh | complete |  |
+| JubilifeCity_PokemonCenter_1F_sinnoh | complete |  |
+| JubilifeCity_PokemonCenter_2F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| JubilifeCity_PokemonSchool_sinnoh | complete | two students accepted a battle that never started -> they now defer to the teacher |
+| JubilifeCity_PoketchCompany_F1_sinnoh | complete |  |
+| JubilifeCity_PoketchCompany_F2_sinnoh | complete |  |
+| JubilifeCity_PoketchCompany_F3_sinnoh | complete |  |
+| JubilifeCity_sinnoh | complete | clown quiz/CATCHING CHARM; LOOKER greeting assumed a guide friend -> fixed |
+| LakeAcuity_Cavern_sinnoh | complete |  |
+| LakeAcuity_sinnoh | complete | JUPITER step 2 |
+| LakeValor_Cavern_sinnoh | complete |  |
+| LakeValor_Drained_sinnoh | unreachable | no warp leads here (Platinum story map) |
+| LakeValor_sinnoh | complete | SATURN step 3 |
+| LakeVerity_Cavern_sinnoh | complete |  |
+| LakeVerity_LowWater_sinnoh | unreachable | no warp leads here (Platinum story map) |
+| LakeVerity_sinnoh | complete | MARS step 1 |
+| LostTower_1F_sinnoh | complete |  |
+| LostTower_2F_sinnoh | complete |  |
+| LostTower_3F_sinnoh | complete |  |
+| LostTower_4F_sinnoh | complete |  |
+| LostTower_5F_sinnoh | complete |  |
+| ManiacTunnel_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| MtCoronet_1F_North_Room1_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| MtCoronet_1F_North_Room2_sinnoh | complete | ICEBERG RUINS entrance after Sinnoh League |
+| MtCoronet_1F_South_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| MtCoronet_1F_TunnelRoom_sinnoh | complete |  |
+| MtCoronet_2F_sinnoh | complete |  |
+| MtCoronet_3F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| MtCoronet_4F_Room1_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| MtCoronet_4F_Room3_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| MtCoronet_5F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| MtCoronet_6F_sinnoh | complete |  |
+| MtCoronet_B1F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| MtCoronet_Outside_North_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| MtCoronet_Outside_South_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| NewmoonIsland_Forest_sinnoh | complete |  |
+| NewmoonIsland_sinnoh | complete |  |
+| OldChateau_2F_sinnoh | complete | ROTOM |
+| OldChateau_DiningRoom_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| OldChateau_Entrance_sinnoh | complete | ROTOM CATALOG |
+| OldChateau_SideRoom_1_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| OldChateau_SideRoom_2_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| OreburghCity_Flat1_F1_sinnoh | complete |  |
+| OreburghCity_Flat1_F2_sinnoh | complete |  |
+| OreburghCity_Flat2_F1_sinnoh | complete | girl accepted a MACHOP-for-ABRA trade that never happened -> she backs out |
+| OreburghCity_Flat2_F2_sinnoh | complete |  |
+| OreburghCity_Flat3_F1_sinnoh | complete |  |
+| OreburghCity_Flat3_F2_sinnoh | complete |  |
+| OreburghCity_Gym_sinnoh | complete |  |
+| OreburghCity_House1_sinnoh | complete |  |
+| OreburghCity_House2_sinnoh | complete |  |
+| OreburghCity_House3_sinnoh | complete |  |
+| OreburghCity_Mart_sinnoh | complete |  |
+| OreburghCity_MiningMuseum_2F_sinnoh | complete |  |
+| OreburghCity_MiningMuseum_sinnoh | complete | fossil revival |
+| OreburghCity_PokemonCenter_1F_sinnoh | complete | kid assumed the player has a Vs. Recorder -> fixed |
+| OreburghCity_PokemonCenter_2F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| OreburghCity_sinnoh | complete | STEVEN Sinnoh quest |
+| OreburghGate_1F_sinnoh | complete | hiker praised the COAL BADGE before it was won -> branch on BADGE1 |
+| OreburghGate_B1F_sinnoh | complete |  |
+| OreburghMine_B1F_sinnoh | complete |  |
+| OreburghMine_B2F_sinnoh | complete |  |
+| PastoriaCity_GreatMarshGate_sinnoh | complete | Galar trio (room check), safari fee, five-catch prize |
+| PastoriaCity_Gym_sinnoh | complete | guide/statue badge fixed (5->4) |
+| PastoriaCity_House1_sinnoh | complete |  |
+| PastoriaCity_House2_sinnoh | complete | scarf man shares the SLATEPORT fan club logic |
+| PastoriaCity_House3_sinnoh | complete |  |
+| PastoriaCity_House4_sinnoh | complete | move relearner is real |
+| PastoriaCity_House5_sinnoh | complete |  |
+| PastoriaCity_Mart_sinnoh | complete |  |
+| PastoriaCity_PokemonCenter_1F_sinnoh | complete |  |
+| PastoriaCity_PokemonCenter_2F_sinnoh | complete |  |
+| PastoriaCity_sinnoh | complete | GALACTIC bomb scene hidden by state init; NPC badge check fixed (5->4) |
+| PokemonLeague_AaronRoom_sinnoh | complete | rematch repeated the first-meeting intro -> own rematch greeting |
+| PokemonLeague_BerthaRoom_sinnoh | complete | rematch repeated the first-meeting intro -> own rematch greeting |
+| PokemonLeague_ChampionRoom_sinnoh | complete | CYNTHIA first/rematch (fixed earlier) |
+| PokemonLeague_FlintRoom_sinnoh | complete | intro is only '…', fine for rematch |
+| PokemonLeague_HallOfFameRoom_sinnoh | complete |  |
+| PokemonLeague_LucianRoom_sinnoh | complete | rematch repeated 'allow me to introduce myself' -> own rematch greeting |
+| PokemonLeague_NorthPokemonCenter_1F_sinnoh | complete | daily league lock |
+| PokemonLeague_NorthPokemonCenter_2F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| PokemonLeague_SouthPokemonCenter_1F_sinnoh | complete |  |
+| PokemonLeague_SouthPokemonCenter_2F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| PokemonMansion_MaidsRoom_sinnoh | complete |  |
+| PokemonMansion_Office_sinnoh | complete | Backlot daily trophy garden; 'Would you like to read it?' book had no answer -> text |
+| PokemonMansion_sinnoh | complete | maid knockout challenge |
+| PokmonLeague_sinnoh | complete |  |
+| RavagedPath_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| ResortArea_House_sinnoh | complete | boy claimed the player had seen every SINNOH POKéMON unconditionally -> question |
+| ResortArea_PokemonCenter_1F_sinnoh | complete |  |
+| ResortArea_PokemonCenter_2F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| ResortArea_RibbonSyndicate_F1_sinnoh | complete |  |
+| ResortArea_RibbonSyndicate_F2_sinnoh | complete | daily spa |
+| ResortArea_Villa_sinnoh | complete |  |
+| ResortArea_sinnoh | complete | villa gift |
+| RockPeakRuins_sinnoh | complete |  |
+| Route201_sinnoh | complete |  |
+| Route202_sinnoh | complete |  |
+| Route203_sinnoh | complete |  |
+| Route204_sinnoh | complete |  |
+| Route205_House_sinnoh | complete | 'Rest a while' said the team was refreshed without healing -> real party heal |
+| Route205_North_sinnoh | complete |  |
+| Route205_South_sinnoh | complete |  |
+| Route206_North_sinnoh | complete | EXP. SHARE gift (35 seen) |
+| Route206_South_sinnoh | complete |  |
+| Route206_sinnoh | complete |  |
+| Route207_sinnoh | complete |  |
+| Route208_Access_sinnoh | complete |  |
+| Route208_House_sinnoh | complete | berry master daily; mulch shop is a real mart |
+| Route208_sinnoh | complete | ODD KEYSTONE man told the player to talk to people underground (closed) -> points to the Route 209 pillar where SPIRITOMB is |
+| Route209_Access_sinnoh | complete |  |
+| Route209_sinnoh | complete | GOOD ROD gift; SPIRITOMB pillar |
+| Route210_Cafe_sinnoh | complete | waitress offered MOOMOO MILK with no sale -> real yes/no purchase (500) |
+| Route210_House_sinnoh | complete | DRACO METEOR tutor |
+| Route210_North_sinnoh | complete |  |
+| Route210_South_sinnoh | complete | Platinum CYNTHIA Old CHARM scene hidden by state init |
+| Route211_East_sinnoh | complete |  |
+| Route211_West_sinnoh | complete |  |
+| Route212_Access_sinnoh | complete |  |
+| Route212_House_sinnoh | complete | shard tutor (each option checks shards); girl pointed to the closed UNDERGROUND -> text |
+| Route212_North_sinnoh | complete |  |
+| Route212_South_sinnoh | complete |  |
+| Route213_Access_sinnoh | complete |  |
+| Route213_FootstepHouse_sinnoh | complete | Dr. Footstep offered a reading and never gave it -> real friendship reading (shared with the Verdanturf rater) |
+| Route213_House1_sinnoh | complete |  |
+| Route213_House2_sinnoh | complete |  |
+| Route213_House3_sinnoh | complete |  |
+| Route213_sinnoh | complete |  |
+| Route214_Access_sinnoh | complete |  |
+| Route214_sinnoh | complete |  |
+| Route215_Access_sinnoh | complete |  |
+| Route215_sinnoh | complete |  |
+| Route216_House_sinnoh | complete | bed heals |
+| Route216_sinnoh | complete |  |
+| Route217_House1_sinnoh | complete | woman said 'The SPELL TAG… may it serve you well' and gave nothing -> SPELL TAG once (flag 0x32F9) |
+| Route217_House2_sinnoh | complete |  |
+| Route217_sinnoh | complete |  |
+| Route218_East_sinnoh | complete | OLD ROD gift |
+| Route218_West_sinnoh | complete |  |
+| Route218_sinnoh | complete |  |
+| Route219_sinnoh | complete |  |
+| Route220_sinnoh | complete |  |
+| Route221_House_sinnoh | complete | 'I'll thank you with this item' gave nothing -> EXPERT BELT once (flag 0x32FA) |
+| Route221_sinnoh | complete |  |
+| Route222_Access_sinnoh | complete |  |
+| Route222_House1_sinnoh | complete |  |
+| Route222_House2_sinnoh | complete |  |
+| Route222_sinnoh | complete |  |
+| Route223_sinnoh | complete |  |
+| Route224_sinnoh | complete | SHAYMIN, ENAMORUS |
+| Route225_Access_sinnoh | complete |  |
+| Route225_House_sinnoh | complete |  |
+| Route225_sinnoh | complete |  |
+| Route226_Access_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| Route226_House_sinnoh | complete |  |
+| Route226_sinnoh | complete |  |
+| Route227_House_sinnoh | complete | 'Rest up here!' with no rest -> real party heal |
+| Route227_sinnoh | complete |  |
+| Route228_House1_sinnoh | complete | ultimate-move tutor (friendship 6) |
+| Route228_House2_sinnoh | complete | old man saw a SUNYSHORE badge the player may not have -> neutral opening |
+| Route228_sinnoh | complete | ROCK PEAK RUINS entrance after league |
+| Route229_sinnoh | complete |  |
+| Route230_sinnoh | complete |  |
+| SandgemTown_House1_sinnoh | complete |  |
+| SandgemTown_Mart_sinnoh | complete |  |
+| SandgemTown_PokemonCenter_1F_sinnoh | complete |  |
+| SandgemTown_PokemonCenter_2F_sinnoh | complete |  |
+| SandgemTown_RivalHouse_F1_sinnoh | complete |  |
+| SandgemTown_RivalHouse_F2_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SandgemTown_RowansLab_sinnoh | complete | starter choice (party/PC check) |
+| SandgemTown_sinnoh | complete | LUCAS rival 1; Platinum DAWN/BARRY scene hidden |
+| SeabreakPath_North_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SeabreakPath_South_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SendoffSpring_sinnoh | complete |  |
+| SinnohVictoryRoad_1F_Room1_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SinnohVictoryRoad_1F_Room2_sinnoh | complete |  |
+| SinnohVictoryRoad_1F_Room3_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SinnohVictoryRoad_1F_sinnoh | complete | LUCAS rival 3 |
+| SinnohVictoryRoad_2F_sinnoh | complete |  |
+| SinnohVictoryRoad_B1F_sinnoh | complete |  |
+| SnowpointCity_Gym_1F_sinnoh | complete | ice floor |
+| SnowpointCity_Gym_B1F_sinnoh | complete |  |
+| SnowpointCity_House1_sinnoh | complete | in-game trade |
+| SnowpointCity_House2_sinnoh | complete | shard tutor |
+| SnowpointCity_Mart_sinnoh | complete |  |
+| SnowpointCity_PokemonCenter_1F_sinnoh | complete | MAYLENE greeted the player by name before ever meeting -> fixed |
+| SnowpointCity_PokemonCenter_2F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SnowpointCity_sinnoh | complete | temple guard told the player to leave while the door is walkable -> lets the CHAMPION pass |
+| SnowpointTemple_1F_sinnoh | complete |  |
+| SnowpointTemple_B1F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SnowpointTemple_B2F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SnowpointTemple_B3F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SnowpointTemple_B4F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SnowpointTemple_B5F_sinnoh | complete | REGIGIGAS |
+| SolaceonRuins_ManiacTunnelRoom_sinnoh | complete |  |
+| SolaceonRuins_Room1_Northwest_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SolaceonRuins_Room1_Southeast_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SolaceonRuins_Room1_sinnoh | complete |  |
+| SolaceonRuins_Room2_Northeast_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SolaceonRuins_Room2_Southeast_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SolaceonRuins_Room2_sinnoh | complete |  |
+| SolaceonRuins_Room3_Northwest_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SolaceonRuins_Room3_Southwest_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SolaceonRuins_Room3_sinnoh | complete |  |
+| SolaceonRuins_Room4_Southeast_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SolaceonRuins_Room4_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SolaceonRuins_Room5_Southeast_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SolaceonRuins_Room5_Southwest_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SolaceonRuins_Room5_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SolaceonRuins_Room6_Northwest_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SolaceonRuins_Room6_Southeast_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SolaceonRuins_Room6_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SolaceonRuins_Room7_sinnoh | complete |  |
+| SolaceonTown_DayCare_sinnoh | complete | day-care lady (Hoenn script) |
+| SolaceonTown_House1_sinnoh | complete | boy/mom sent the player for a Seal Case and a PC menu that do not exist -> flavor text |
+| SolaceonTown_House2_sinnoh | complete |  |
+| SolaceonTown_House3_sinnoh | complete |  |
+| SolaceonTown_Mart_sinnoh | complete |  |
+| SolaceonTown_NewsPress_sinnoh | complete | daily photo request (bag check added earlier) |
+| SolaceonTown_PokemonCenter_1F_sinnoh | complete |  |
+| SolaceonTown_PokemonCenter_2F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SolaceonTown_sinnoh | complete | day-care man |
+| SpearPillar_sinnoh | complete | DIALGA/PALKIA, altar to HALL OF ORIGIN after league |
+| SpringPath_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| StarkMountain_Room1_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| StarkMountain_Room2_East_sinnoh | complete |  |
+| StarkMountain_Room2_West_sinnoh | complete |  |
+| StarkMountain_Room3_sinnoh | complete | HEATRAN |
+| StarkMountain_sinnoh | complete |  |
+| SunyshoreCity_Gym_sinnoh | complete | guide counted 'seven badges' unconditionally -> generic |
+| SunyshoreCity_House1_sinnoh | complete |  |
+| SunyshoreCity_House2_sinnoh | complete |  |
+| SunyshoreCity_House3_sinnoh | complete | UNDERGROUND chatter kept as flavor (UNDERGROUND MAN says it is closed to visitors) |
+| SunyshoreCity_House4_sinnoh | complete |  |
+| SunyshoreCity_Market_sinnoh | complete | Seal Case errand and 'Effort Ribbon' remark -> fixed |
+| SunyshoreCity_Mart_sinnoh | complete |  |
+| SunyshoreCity_PokemonCenter_1F_sinnoh | complete | kid assumed seven badges -> generic |
+| SunyshoreCity_PokemonCenter_2F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SunyshoreCity_VistaLighthouse_sinnoh | complete |  |
+| SunyshoreCity_sinnoh | complete |  |
+| SurvivalArea_Battleground_sinnoh | complete | welcome said the player was BUCK's friend before meeting him -> GYM LEADERS vouch; CHERYL/MIRA first greetings no longer assume they know the player; daily leader rematches read |
+| SurvivalArea_House1_sinnoh | complete | shard tutor |
+| SurvivalArea_House2_sinnoh | complete |  |
+| SurvivalArea_Mart_sinnoh | complete |  |
+| SurvivalArea_PokemonCenter_1F_sinnoh | complete |  |
+| SurvivalArea_PokemonCenter_2F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| SurvivalArea_sinnoh | complete | BARRY's first battle spoke as an old friend -> introduces himself |
+| TrophyGarden_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| TurnbackCave_Entrance_sinnoh | complete |  |
+| TurnbackCave_GiratinaRoom_sinnoh | complete | portal asked 'leap in?' as a sign with no answer -> portal is closed |
+| TurnbackCave_Pillar1_sinnoh | complete |  |
+| TurnbackCave_Pillar2_sinnoh | complete |  |
+| TurnbackCave_Pillar3_sinnoh | complete |  |
+| TurnbackCave_Room1_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| TurnbackCave_Room2_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| TurnbackCave_Room3_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| TwinleafTown_Haouse1_sinnoh | complete |  |
+| TwinleafTown_House2_sinnoh | complete |  |
+| TwinleafTown_MainHouse_1F_sinnoh | complete |  |
+| TwinleafTown_MainHouse_2F_sinnoh | complete | Platinum BARRY scene hidden |
+| TwinleafTown_sinnoh | complete |  |
+| Twinleaf_Town_RivalsHouse_F1_sinnoh | complete |  |
+| Twinleaf_Town_RivalsHouse_F2_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| ValleyWindoworks_Indoor_sinnoh | complete |  |
+| ValleyWindworks_sinnoh | complete | LOOKER scene hidden; DRIFLOON |
+| ValorLakefront_House1_sinnoh | complete |  |
+| ValorLakefront_House2_sinnoh | complete |  |
+| ValorLakefront_Restaurant_sinnoh | complete | double battles per table |
+| ValorLakefront_sinnoh | complete | Platinum CYNTHIA SecretPotion scene hidden; SUITE KEY lady |
+| VeilstoneCity_DepartmentStore_1F_sinnoh | complete |  |
+| VeilstoneCity_DepartmentStore_2F_sinnoh | complete | receptionist greeted the player by name -> generic |
+| VeilstoneCity_DepartmentStore_3F_sinnoh | complete | same |
+| VeilstoneCity_DepartmentStore_4F_sinnoh | complete | same |
+| VeilstoneCity_DepartmentStore_5F_sinnoh | complete | vending machine asked for a drink and did nothing -> real vending machine |
+| VeilstoneCity_DepartmentStore_Roof_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| VeilstoneCity_GalacticWarehouse_sinnoh | complete | CHARON step 4 |
+| VeilstoneCity_GameCorner_sinnoh | complete | two NPCs sent the player 'next door' for a COIN CASE nobody gives -> fixed |
+| VeilstoneCity_Gym_sinnoh | complete | badge check fixed (4->3) |
+| VeilstoneCity_House1_sinnoh | complete |  |
+| VeilstoneCity_House2_sinnoh | complete | PORYGON gift |
+| VeilstoneCity_House3_sinnoh | complete | massage girl promised a lesson 'tomorrow' forever -> no promise |
+| VeilstoneCity_House4_sinnoh | complete | clown COIN CASE game |
+| VeilstoneCity_PokemonCenter_1F_sinnoh | complete |  |
+| VeilstoneCity_PokemonCenter_2F_sinnoh | no events | no visible events (objects, if any, hidden by state flags) |
+| VeilstoneCity_PrizeExchange_sinnoh | complete | Hidden Power reader offered a reading he never gives -> text |
+| VeilstoneCity_sinnoh | complete | LOOKER quest 0..8 read; LOOKER called the player SINNOH CHAMPION before the league -> HOENN; Platinum warehouse scenes hidden |
+| VerityLakefront_sinnoh | complete |  |
+| WaywardCave_1F_sinnoh | complete |  |
+| WaywardCave_B1F_sinnoh | complete | ETERNATUS |
