@@ -54,42 +54,53 @@ SE_EventScript_RocketOfficer6::
 SE_EventScript_Proton::
 	lock
 	faceplayer
+	goto_if_defeated TRAINER_SE_PROTON_RETURN, SE_EventScript_Proton_Reward
 	msgbox SE_Text_ProtonIntro, MSGBOX_DEFAULT
 	cleartrainerflag TRAINER_SE_PROTON_RETURN
 	trainerbattle_no_intro TRAINER_SE_PROTON_RETURN, SE_Text_ProtonDefeat
+SE_EventScript_Proton_Reward::
 	msgbox SE_Text_ProtonAfter, MSGBOX_DEFAULT
 	giveitem ITEM_MAX_REVIVE, 2
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_QuestBagFull
 	setvar VAR_SE_ROCKET_QUEST, 1
 	goto SE_EventScript_QuestLeave
 
 SE_EventScript_Petrel::
 	lock
 	faceplayer
+	goto_if_defeated TRAINER_SE_PETREL_RETURN, SE_EventScript_Petrel_Reward
 	msgbox SE_Text_PetrelIntro, MSGBOX_DEFAULT
 	cleartrainerflag TRAINER_SE_PETREL_RETURN
 	trainerbattle_no_intro TRAINER_SE_PETREL_RETURN, SE_Text_PetrelDefeat
+SE_EventScript_Petrel_Reward::
 	msgbox SE_Text_PetrelAfter, MSGBOX_DEFAULT
 	giveitem ITEM_PP_UP, 2
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_QuestBagFull
 	setvar VAR_SE_ROCKET_QUEST, 2
 	goto SE_EventScript_QuestLeave
 
 SE_EventScript_Ariana::
 	lock
 	faceplayer
+	goto_if_defeated TRAINER_SE_ARIANA_RETURN, SE_EventScript_Ariana_Reward
 	msgbox SE_Text_ArianaIntro, MSGBOX_DEFAULT
 	cleartrainerflag TRAINER_SE_ARIANA_RETURN
 	trainerbattle_no_intro TRAINER_SE_ARIANA_RETURN, SE_Text_ArianaDefeat
+SE_EventScript_Ariana_Reward::
 	msgbox SE_Text_ArianaAfter, MSGBOX_DEFAULT
 	giveitem ITEM_RARE_CANDY, 3
+	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_QuestBagFull
 	setvar VAR_SE_ROCKET_QUEST, 3
 	goto SE_EventScript_QuestLeave
 
 SE_EventScript_Archer::
 	lock
 	faceplayer
+	goto_if_defeated TRAINER_SE_ARCHER_RETURN, SE_EventScript_Archer_Reward
 	msgbox SE_Text_ArcherIntro, MSGBOX_DEFAULT
 	cleartrainerflag TRAINER_SE_ARCHER_RETURN
 	trainerbattle_no_intro TRAINER_SE_ARCHER_RETURN, SE_Text_ArcherDefeat
+SE_EventScript_Archer_Reward::
 	msgbox SE_Text_ArcherAfter, MSGBOX_DEFAULT
 	giveitem ITEM_EXP_CHARM
 	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_QuestBagFull

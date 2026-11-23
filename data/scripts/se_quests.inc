@@ -31,10 +31,12 @@ SE_EventScript_WallyJohto::
 SE_EventScript_WallyKanto::
 	lock
 	faceplayer
+	goto_if_defeated TRAINER_SE_WALLY_KANTO, SE_EventScript_WallyKanto_Reward
 	msgbox SE_Text_WallyKanto, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SE_EventScript_WallyNotNow
 	cleartrainerflag TRAINER_SE_WALLY_KANTO
 	trainerbattle_no_intro TRAINER_SE_WALLY_KANTO, SE_Text_WallyKantoDefeat
+SE_EventScript_WallyKanto_Reward::
 	msgbox SE_Text_WallyKantoAfter, MSGBOX_DEFAULT
 	giveitem ITEM_PP_MAX, 3
 	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_QuestBagFull
@@ -45,11 +47,13 @@ SE_EventScript_WallyKanto::
 SE_EventScript_WallySinnoh::
 	lock
 	faceplayer
+	goto_if_defeated TRAINER_SE_WALLY_SINNOH, SE_EventScript_WallySinnoh_Reward
 	goto_if_unset FLAG_SE_SINNOH_LEAGUE_CLEARED, SE_EventScript_WallySinnohWait
 	msgbox SE_Text_WallySinnoh, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SE_EventScript_WallyNotNow
 	cleartrainerflag TRAINER_SE_WALLY_SINNOH
 	trainerbattle_no_intro TRAINER_SE_WALLY_SINNOH, SE_Text_WallySinnohDefeat
+SE_EventScript_WallySinnoh_Reward::
 	msgbox SE_Text_WallySinnohAfter, MSGBOX_DEFAULT
 	giveitem ITEM_ABILITY_PATCH
 	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_QuestBagFull
@@ -93,11 +97,13 @@ SE_EventScript_StevenKanto::
 SE_EventScript_StevenSinnoh::
 	lock
 	faceplayer
+	goto_if_defeated TRAINER_SE_STEVEN_SINNOH, SE_EventScript_StevenSinnoh_Reward
 	goto_if_unset FLAG_SE_SINNOH_LEAGUE_CLEARED, SE_EventScript_StevenSinnohWait
 	msgbox SE_Text_StevenSinnoh, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SE_EventScript_StevenNotNow
 	cleartrainerflag TRAINER_SE_STEVEN_SINNOH
 	trainerbattle_no_intro TRAINER_SE_STEVEN_SINNOH, SE_Text_StevenSinnohDefeat
+SE_EventScript_StevenSinnoh_Reward::
 	msgbox SE_Text_StevenSinnohAfter, MSGBOX_DEFAULT
 	giveitem ITEM_METAGROSSITE
 	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_QuestBagFull

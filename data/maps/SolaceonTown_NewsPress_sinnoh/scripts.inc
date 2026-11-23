@@ -24,6 +24,7 @@ SolaceonTown_NewsPress_EventScript_SNEditor::
 
 SolaceonTown_NewsPress_EventScript_SNEditor_Scale::
 	giveitem ITEM_HEART_SCALE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_DAILY_SN_NEWSPRESS
 	release
 	end

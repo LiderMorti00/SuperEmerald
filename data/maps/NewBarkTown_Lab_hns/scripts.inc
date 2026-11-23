@@ -30,6 +30,7 @@ SE_J_NewBarkTown_Lab_hns_NewBarkTown_Lab_EventScript_Elm::
 	goto_if_eq VAR_RESULT, TRUE, NewBarkTown_Lab_EventScript_ElmTalk
 	msgbox NewBarkTown_Lab_Text_ElmPass, MSGBOX_DEFAULT
 	giveitem ITEM_PASS
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	msgbox NewBarkTown_Lab_Text_ElmPassAfter, MSGBOX_DEFAULT
 	release
 	end

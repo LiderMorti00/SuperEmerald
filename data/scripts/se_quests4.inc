@@ -58,6 +58,7 @@ SE_EventScript_CeladonGrunt3::
 SE_EventScript_RocketFinal::
 	lock
 	faceplayer
+	goto_if_defeated TRAINER_SE_ARIANA_FINAL, SE_EventScript_RocketFinal_Reward
 	msgbox SE_Text_RocketFinalIntro, MSGBOX_DEFAULT
 	special HasEnoughMonsForDoubleBattle
 	goto_if_ne VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS, SE_EventScript_RocketFinalNeedTwo
@@ -65,6 +66,7 @@ SE_EventScript_RocketFinal::
 	cleartrainerflag TRAINER_SE_ARCHER_FINAL
 	cleartrainerflag TRAINER_SE_ARIANA_FINAL
 	trainerbattle_two_trainers_sn TRAINER_SE_ARCHER_FINAL, SE_Text_ArcherFinalDefeat, TRAINER_SE_ARIANA_FINAL, SE_Text_ArianaFinalDefeat
+SE_EventScript_RocketFinal_Reward::
 	msgbox SE_Text_RocketFinalAfter, MSGBOX_DEFAULT
 	givemon SPECIES_LARVITAR, 50
 	goto_if_eq VAR_RESULT, MON_CANT_GIVE, SE_EventScript_BaseRewardNoRoom
@@ -91,10 +93,12 @@ SE_EventScript_RocketFinalNeedTwo::
 SE_EventScript_WarehouseProton::
 	lock
 	faceplayer
+	goto_if_defeated TRAINER_SE_WAREHOUSE_ADMIN, SE_EventScript_WarehouseProton_Reward
 	msgbox SE_Text_WarehouseProtonIntro, MSGBOX_DEFAULT
 	closemessage
 	cleartrainerflag TRAINER_SE_WAREHOUSE_ADMIN
 	trainerbattle_no_intro TRAINER_SE_WAREHOUSE_ADMIN, SE_Text_WarehouseProtonDefeat
+SE_EventScript_WarehouseProton_Reward::
 	msgbox SE_Text_WarehouseProtonAfter, MSGBOX_DEFAULT
 	call_if_unset FLAG_CAN_USE_ROCKET_HIDEOUT_LIFT, SE_EventScript_WarehouseProtonCheckKeySpace
 	giveitem ITEM_CHOICE_SCARF
@@ -122,10 +126,12 @@ SE_EventScript_WarehouseProtonCheckKeySpace::
 SE_EventScript_GiovanniFinal::
 	lock
 	faceplayer
+	goto_if_defeated TRAINER_SE_GIOVANNI_FINAL, SE_EventScript_GiovanniFinal_Reward
 	msgbox SE_Text_GiovanniFinalIntro, MSGBOX_DEFAULT
 	closemessage
 	cleartrainerflag TRAINER_SE_GIOVANNI_FINAL
 	trainerbattle_no_intro TRAINER_SE_GIOVANNI_FINAL, SE_Text_GiovanniFinalDefeat
+SE_EventScript_GiovanniFinal_Reward::
 	msgbox SE_Text_GiovanniFinalAfter, MSGBOX_DEFAULT
 	giveitem ITEM_MASTER_BALL
 	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_QuestBagFull
@@ -164,10 +170,12 @@ SE_EventScript_EternaGrunt2::
 SE_EventScript_EternaScientist::
 	lock
 	faceplayer
+	goto_if_defeated TRAINER_SE_ETERNA_SCIENTIST, SE_EventScript_EternaScientist_Reward
 	msgbox SE_Text_EternaScientistIntro, MSGBOX_DEFAULT
 	closemessage
 	cleartrainerflag TRAINER_SE_ETERNA_SCIENTIST
 	trainerbattle_no_intro TRAINER_SE_ETERNA_SCIENTIST, SE_Text_EternaScientistDefeat
+SE_EventScript_EternaScientist_Reward::
 	msgbox SE_Text_EternaScientistAfter, MSGBOX_DEFAULT
 	givemon SPECIES_GIBLE, 50
 	goto_if_eq VAR_RESULT, MON_CANT_GIVE, SE_EventScript_BaseRewardNoRoom
@@ -180,10 +188,12 @@ SE_EventScript_EternaScientist::
 SE_EventScript_CyrusFinal::
 	lock
 	faceplayer
+	goto_if_defeated TRAINER_SE_CYRUS_FINAL, SE_EventScript_CyrusFinal_Reward
 	msgbox SE_Text_CyrusFinalIntro, MSGBOX_DEFAULT
 	closemessage
 	cleartrainerflag TRAINER_SE_CYRUS_FINAL
 	trainerbattle_no_intro TRAINER_SE_CYRUS_FINAL, SE_Text_CyrusFinalDefeat
+SE_EventScript_CyrusFinal_Reward::
 	msgbox SE_Text_CyrusFinalAfter, MSGBOX_DEFAULT
 	giveitem ITEM_GOLD_BOTTLE_CAP
 	goto_if_eq VAR_RESULT, FALSE, SE_EventScript_QuestBagFull

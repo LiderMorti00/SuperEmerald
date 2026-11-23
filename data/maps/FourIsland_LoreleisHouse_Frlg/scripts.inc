@@ -9,6 +9,7 @@ FourIsland_LoreleisHouse_OnTransition::
 FourIsland_LoreleisHouse_EventScript_Lorelei::
 	lock
 	faceplayer
+	goto_if_eq VAR_SE_ROCKET_QUEST, 5, FourIsland_LoreleisHouse_EventScript_LoreleiRocketsBack
 	goto_if_set FLAG_TALKED_TO_LORELEI_AFTER_WAREHOUSE, FourIsland_LoreleisHouse_EventScript_Lorelei3
 	goto_if_set FLAG_DEFEATED_ROCKETS_IN_WAREHOUSE, FourIsland_LoreleisHouse_EventScript_Lorelei2
 	msgbox FourIsland_LoreleisHouse_Text_IfAnythingWereToHappenToIsland
@@ -26,6 +27,11 @@ FourIsland_LoreleisHouse_EventScript_Lorelei3::
 	release
 	end
 
+FourIsland_LoreleisHouse_EventScript_LoreleiRocketsBack::
+	msgbox FourIsland_LoreleisHouse_Text_RocketsAtWarehouse
+	release
+	end
+
 FourIsland_LoreleisHouse_EventScript_Doll::
 	lock
 	msgbox FourIsland_LoreleisHouse_Text_StuffedMonDollsGalore
@@ -33,14 +39,11 @@ FourIsland_LoreleisHouse_EventScript_Doll::
 	end
 
 FourIsland_LoreleisHouse_Text_IfAnythingWereToHappenToIsland::
-	.string "LORELEI: There's something weighing\n"
-	.string "heavily on my mind.\p"
-	.string "If anything were to happen on\n"
-	.string "the island where I was born…\p"
-	.string "I wouldn't know about it if I were\n"
-	.string "in the POKéMON LEAGUE.\p"
-	.string "I wonder if that would make me\n"
-	.string "irresponsible to my home…$"
+	.string "LORELEI: Welcome to FOUR ISLAND.\p"
+	.string "I left the ELITE FOUR so I could\n"
+	.string "look after the island where I was\l"
+	.string "born.\p"
+	.string "It's quiet here. I like it that way.$"
 
 FourIsland_LoreleisHouse_Text_RocketIsGone::
 	.string "LORELEI: Welcome to FOUR ISLAND.\p"
@@ -51,10 +54,17 @@ FourIsland_LoreleisHouse_Text_RocketIsGone::
 	.string "stay close to home.$"
 
 FourIsland_LoreleisHouse_Text_WillDoWhatICanHereAndNow::
-	.string "I don't know what will happen in\n"
-	.string "the future, but…\p"
-	.string "I will do what I can here and now.\n"
-	.string "That's all I can do.$"
+	.string "LORELEI: Being home lets me keep an\n"
+	.string "eye on the islands.\p"
+	.string "I don't know what the future holds,\n"
+	.string "but I'll do what I can here and now.$"
+
+FourIsland_LoreleisHouse_Text_RocketsAtWarehouse::
+	.string "LORELEI: The fishermen say TEAM\n"
+	.string "ROCKET is back in the old warehouse\l"
+	.string "on FIVE ISLAND.\p"
+	.string "I thought we were rid of them…\p"
+	.string "If you're going there, be careful.$"
 
 FourIsland_LoreleisHouse_Text_StuffedMonDollsGalore::
 	.string "Stuffed POKéMON dolls galore!$"

@@ -128,6 +128,7 @@ AmitySquare_EventScript_SNDailyGift::
 	goto AmitySquare_EventScript_SNDailyGift_Set
 
 AmitySquare_EventScript_SNDailyGift_Set::
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_DAILY_SN_AMITY
 	release
 	end

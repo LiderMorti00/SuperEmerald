@@ -737,8 +737,8 @@ SE_SinnohChampion_EnterRoom::
 	waitmovement 0
 	setvar VAR_TEMP_1, 1
 	playbgm MUS_DPP_VS_CYNTHIA, FALSE
-	msgbox SE_Text_CynthiaIntro, MSGBOX_DEFAULT
 	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, SE_SinnohChampion_Rematch
+	msgbox SE_Text_CynthiaIntro, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_SE_CHAMPION_CYNTHIA, SE_Text_CynthiaDefeat
 SE_SinnohChampion_AfterBattle::
 	setflag FLAG_DAILY_SE_SINNOH_LEAGUE
@@ -761,7 +761,8 @@ SE_SinnohChampion_AfterBattle::
 	end
 
 SE_SinnohChampion_Rematch::
-	trainerbattle_no_intro TRAINER_SE_CHAMPION_CYNTHIA_REMATCH, SE_Text_CynthiaDefeat
+	msgbox SE_Text_CynthiaRematchIntro, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_SE_CHAMPION_CYNTHIA_REMATCH, SE_Text_CynthiaRematchDefeat
 	goto SE_SinnohChampion_AfterBattle
 
 SE_SinnohChampion_Movement_Approach:
@@ -799,6 +800,18 @@ SE_Text_CynthiaIntro:
 	.string "my strength.\p"
 	.string "As the CHAMPION, I accept your\n"
 	.string "challenge!$"
+
+SE_Text_CynthiaRematchIntro:
+	.string "CYNTHIA: {PLAYER}, welcome back.\p"
+	.string "I haven't forgotten our last battle.\n"
+	.string "I've been training ever since.\p"
+	.string "This time, I won't hold back\n"
+	.string "anything. Let's begin!$"
+
+SE_Text_CynthiaRematchDefeat:
+	.string "You won again…\p"
+	.string "You're still the most powerful\n"
+	.string "TRAINER I know.$"
 
 SE_Text_CynthiaDefeat:
 	.string "Just a moment ago, you were the\n"
