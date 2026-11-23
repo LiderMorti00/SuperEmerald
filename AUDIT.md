@@ -299,3 +299,8 @@ The Sinnoh comparison covered the two plaque states at all eight gyms. Seven dis
 
 - Reviewed the exterior and Center events, signs, NPCs, building links, healing and respawn. The radio fan recognizes the actual Kanto League flag. Her greeting no longer offers an Aurora Ticket without enabling the ferry; Cozmo handles that ticket and its ferry unlock.
 - Replaced the inert Charge Beam pickup with Shock Wave, a supported Electric TM. The Center fisher now describes the café sailor's advice consistently.
+
+## Cianwood exterior, houses and pharmacy
+
+- Reviewed the exterior, three houses and pharmacy. Checked the house returns, signs, smashable rocks, hidden construction NPC and links to the gym, Center and Safari Zone route.
+- The pharmacist acknowledges Amphy's recovery, Kirk talks about his Shuckle without offering a loan, and the island advice identifies the badge that gates whirlpool crossings.

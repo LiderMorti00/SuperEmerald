@@ -11,11 +11,10 @@ CianwoodHouse2_EventScript_Twin::
 	end
 
 CianwoodCity_Text_LugiaHouseTwin::
-	.string "I've heard that the whirlpools\n"
-	.string "around the islands are caused by\l"
-	.string "the sea creature.\p"
-	.string "You might need a special move\n"
-	.string "to get past them.$"
+	.string "The currents around those islands\n"
+	.string "are strong.\p"
+	.string "You'll need the GLACIERBADGE to\n"
+	.string "cross the whirlpools safely.$"
 
 CianwoodHouse2_EventScript_Teacher::
 	lock
