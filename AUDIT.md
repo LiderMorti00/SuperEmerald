@@ -281,3 +281,8 @@ The Sinnoh comparison covered the two plaque states at all eight gyms. Seven dis
 ## Route 40
 
 - Reviewed the swimmers, shore NPCs, rock and Krabby interactions, and links to Route 41, Olivine and the tournament gate. The youngster now points to the local World Tournament instead of Hoenn's Trainer Hill. Monica's dialogue matches the weekday family letter. The gate was already recorded in the transit-map pass.
+
+## Olivine Lighthouse
+
+- Read the lighthouse trainers' dialogue and checked Huey's rematch, the item bindings, Amphy, the hidden Jasmine scene and the active Iron Crown encounter. The lighthouse staff and visitors now agree that Amphy has recovered before the player arrives in Johto. Jasmine's current gym duties also match the revised dialogue.
+- Checked the port's active clerk binding and Jasmine arrival hook. The imported Swagger pickup still has no matching TM. Lighthouse traversal and the arrival scene remain pending in ROM.

@@ -85,10 +85,8 @@ OlivineLighthouse_EventScript_GentlemanAlfred::
     end
 
 OlivineLighthouse_Text_GentlemanAlfredAfter::
-	.string "Up top is a POKéMON that keeps\n"
-	.string "the LIGHTHOUSE lit.\p"
-	.string "But I hear that it's sick now,\n"
-	.string "and can't be cured normally.$"
+	.string "AMPHY is back on duty upstairs.\p"
+	.string "The ships can see the light again.$"
 
 @3rd floor==============================================================================================================================
 
@@ -124,13 +122,12 @@ OlivineLighthouse_EventScript_BirdKeeperTheo::
     end
 
 OlivineLighthouse_Text_BirdKeeperTheoAfter::
-	.string "How the heck do you go up?\p"
-	.string "I want to visit the sick POKéMON,\n"
-	.string "but I can't get up there…$"
+	.string "I came to see AMPHY's light.\p"
+	.string "Now I'm trying to find my way\n"
+	.string "up to the lantern room.$"
 
 OlivineLighthouse_Text_BirdKeeperTheoBeaten::
-	.string "You really are concerned about\n"
-	.string "the sick POKéMON…$"
+	.string "I'll let you get back to the climb…$"
 
 OlivineLighthouse_Text_BirdKeeperTheoSeen::
 	.string "Why are you here? Are you just\n"
@@ -160,16 +157,16 @@ OlivineLighthouse_EventScript_SailorKent::
     end
 
 OlivineLighthouse_Text_SailorKentAfter::
-	.string "Speaking of sick, I've heard there's\n"
-	.string "a good PHARMACY in CIANWOOD.$"
+	.string "The pharmacy in CIANWOOD helped\n"
+	.string "AMPHY get back on its feet.$"
 
 OlivineLighthouse_Text_SailorKentBeaten::
 	.string "I can't manage a smile either…$"
 
 OlivineLighthouse_Text_SailorKentSeen::
-	.string "JASMINE must be worried sick about\n"
-	.string "the POKéMON here.\p"
-	.string "She won't even smile these days.$"
+	.string "JASMINE used to spend whole nights\n"
+	.string "here looking after AMPHY.\p"
+	.string "I'd do the same for my POKéMON!$"
 
 OlivineLighthouse_EventScript_LassConnie::
     trainerbattle_single TRAINER_CONNIE_HNS, OlivineLighthouse_Text_LassConnieSeen, OlivineLighthouse_Text_LassConnieBeaten
@@ -177,10 +174,9 @@ OlivineLighthouse_EventScript_LassConnie::
     end
 
 OlivineLighthouse_Text_LassConnieAfter::
-	.string "Right. Anybody would be worried if\n"
-	.string "his or her own POKéMON were hurt.\p"
-	.string "I'll pray for the POKéMON here, so\n"
-	.string "JASMINE can come back to the GYM.$"
+	.string "I'm glad AMPHY is well enough to\n"
+	.string "light the sea again.\p"
+	.string "JASMINE can get back to her GYM.$"
 
 @5th floor==============================================================================================================================
 
@@ -188,9 +184,8 @@ OlivineLighthouse_Text_LassConnieBeaten::
 	.string "Aaack! My POKéMON!$"
 
 OlivineLighthouse_Text_LassConnieSeen::
-	.string "JASMINE is this city's GYM LEADER.\p"
-	.string "I mean to bring her back with me.\p"
-	.string "Nobody had better get in my way!$"
+	.string "I'm heading upstairs to see AMPHY.\p"
+	.string "How about a battle on the way?$"
 
 OlivineLighthouse_EventScript_BirdKeeperDenis::
     trainerbattle_single TRAINER_DENIS_HNS, OlivineLighthouse_Text_BirdKeeperDenisSeen, OlivineLighthouse_Text_BirdKeeperDenisBeaten
@@ -227,9 +222,9 @@ OlivineLighthouse_Text_SailorErnestBeaten::
 	.string "Whoa, whoa. You're overwhelming!$"
 
 OlivineLighthouse_Text_SailorErnestSeen::
-	.string "I wanted to battle JASMINE, but she's\n"
-	.string "not up to it now.\p"
-	.string "So, how about you?$"
+	.string "I was going to challenge JASMINE\n"
+	.string "at the GYM after my shift.\p"
+	.string "Care to help me warm up?$"
 
 OlivineLighthouse_Text_JasmineCianwoodPharmacy::
 	.string "JASMINE: …This POKéMON always kept\n"
