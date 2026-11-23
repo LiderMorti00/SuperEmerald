@@ -290,3 +290,7 @@ The Sinnoh comparison covered the two plaque states at all eight gyms. Seven dis
 ## Olivine harbor
 
 - Reviewed both port maps, including their shared doorway, sailor destination menu, hidden Oak and Sabrina scenes, fishing conversations and Jasmine's first-arrival hook. The dock fisherman now gives the Slateport destination before the Johto League and the Vermilion route after the same flag that unlocks the sailing option. Arrival movement and boarding remain pending in ROM.
+
+## Olivine homes and café
+
+- Reviewed the three houses and the café, including both fishing-rod responses, the neighbor's shared dialogue, the siblings, the sailors and the hidden Jasmine scene. Tim no longer uses an unset species buffer, the sailor explains Strength without promising a gift, and the angler checks that the Good Rod was delivered before giving fishing advice.

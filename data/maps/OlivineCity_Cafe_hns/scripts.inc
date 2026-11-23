@@ -16,12 +16,9 @@ OlivineCity_Text_CafeFishingGuru::
 	.string "SAILORS like me!$"
 
 OlivineCity_Text_CafeSailorStrength::
-	.string "Hah! Your POKéMON sure look like\n"
-	.string "lightweights!\p"
-	.string "They don't have the power to\n"
-	.string "move boulders aside.\p"
-	.string "Here, use this and teach them\n"
-	.string "STRENGTH!$"
+	.string "See a boulder blocking the way?\p"
+	.string "A POKéMON with STRENGTH can push\n"
+	.string "it aside.$"
 
 SE_J_OlivineCity_Cafe_hns_OlivineCity_EventScript_SailorA::
 	msgbox OlivineCity_Text_CafeSailorStrength, MSGBOX_NPC

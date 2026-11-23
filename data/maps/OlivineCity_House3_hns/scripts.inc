@@ -11,19 +11,16 @@ OlivineCityHouse3_EventScriptFishingGuru::
 	goto_if_eq VAR_RESULT, FALSE, OlivineCityHouse3_EventScriptFishingGuruRefused
 	msgbox OlivineCity_Text_GiveGoodRod, MSGBOX_DEFAULT
 	giveitem ITEM_GOOD_ROD
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	msgbox OlivineCity_Text_GaveGoodRod, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
 
 OlivineCity_Text_GaveGoodRod::
-	.string "Fish aren't only found in the\n"
-	.string "sea--they're wherever there's\l"
-	.string "water.\p"
-	.string "By the way, your POKéDEX shows\n"
-	.string "fishing groups for POKéMON.\p"
-	.string "Different spots may contain\n"
-	.string "similar fish types.$"
+	.string "Try fishing off the docks first.\p"
+	.string "Then try a pond or a river. You\n"
+	.string "might reel in something different!$"
 
 OlivineCity_Text_GiveGoodRod::
 	.string "Ah, hahah! We have ourselves\n"
