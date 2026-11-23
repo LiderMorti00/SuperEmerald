@@ -103,6 +103,8 @@ PetalburgCity_Gym_EventScript_Norman::
 	vsseeker_rematchid TRAINER_NORMAN_1
 	lock
 	faceplayer
+	@ Super Emerald: the JOHTO TICKET comes first, even when the rematch (state 8) is ready
+	call_if_set FLAG_SYS_GAME_CLEAR, SE_EventScript_NormanTickets
 	switch VAR_PETALBURG_GYM_STATE
 	case 2, PetalburgCity_Gym_EventScript_NormanNoBadges
 	case 3, PetalburgCity_Gym_EventScript_NormanOneBadge

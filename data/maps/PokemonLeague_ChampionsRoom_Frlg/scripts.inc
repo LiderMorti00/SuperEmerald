@@ -94,6 +94,7 @@ PokemonLeague_ChampionsRoom_EventScript_Intro::
 	return
 
 PokemonLeague_ChampionsRoom_EventScript_RematchIntro::
+	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, PokemonLeague_ChampionsRoom_EventScript_RematchIntroFour @ Super Emerald
 	msgbox PokemonLeague_ChampionsRoom_Text_RematchIntro
 	return
 
@@ -235,6 +236,18 @@ PokemonLeague_ChampionsRoom_Text_RematchIntro::
 	.string "while you were away.\p"
 	.string "Come! Show me the power of a\n"
 	.string "TRAINER who has seen three regions!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+
+PokemonLeague_ChampionsRoom_EventScript_RematchIntroFour::
+	msgbox PokemonLeague_ChampionsRoom_Text_RematchIntroFour
+	return
+
+PokemonLeague_ChampionsRoom_Text_RematchIntroFour::
+	.string "LANCE: {PLAYER}!\n"
+	.string "So you've conquered KANTO too.\p"
+	.string "My dragons have grown stronger\n"
+	.string "while you were away.\p"
+	.string "Come! Show me the power of a\n"
+	.string "TRAINER who has seen four regions!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 PokemonLeague_ChampionsRoom_Text_Defeat::
 	.string "…It's over.\p"

@@ -527,6 +527,74 @@ Also checked in code with no change needed:
 - Old saves.
 - ROUTE 210 NORTH and ROUTE 213 pockets: decide whether to add a path or ROCK CLIMB.
 
+## Regression pass 3 (after a37a636d36)
+
+### Map count reconciliation
+
+- AUDIT.md has 1580 unique rows: Hoenn 527, Johto 242, Kanto and Sevii 410, Sinnoh 401.
+  `data/maps` has 1580 folders but only 1578 `map.json` files, all listed in `map_groups.json`,
+  with no duplicate map id.
+- The two extra rows are TestMap1_hns and TestMap2_hns: leftover folders that are never built.
+  They are now marked "not built", so 1578 rows correspond to real maps.
+- Three levels, each a subset of the one before:
+  - Connected in the data: 1564 of 1578 maps, from the warp, connection and script-warp
+    graph described in pass 2.
+  - Reachable in a real game: 1537. That is the 1564 above minus the 25 S.S. Anne maps (closed
+    by the Kanto state) and the two pocketed Sinnoh houses waiting for the map edit. All other
+    gates open during normal play: tickets, badges, League flags, the RAINBOW PASS.
+  - Walked in a ROM test: 37 maps (list below). These are spot checks, not a full
+    playthrough.
+
+ROM-visited maps (this pass and passes 1 and 2): CanalaveCity_sinnoh, CeladonCity_Frlg, GoldenrodCity_hns, IcePath_B2F_hns, IcePath_B3F_hns, IcePath_B4F_hns, LilycoveCity, LittlerootTown_MaysHouse_1F, LittlerootTown_ProfessorBirchsLab, NewBarkTown_Lab_hns, OlivineCity_PortInside_hns, OneIsland_Harbor_Frlg, PalletTown_ProfessorOaksLab_Frlg, PetalburgCity_Gym, PokemonLeague_AaronRoom_sinnoh, PokemonLeague_ChampionRoom_sinnoh, PokemonLeague_ChampionsRoom_Frlg, PokemonLeague_HallOfFameRoom_sinnoh, PokemonLeague_LoreleisRoom_Frlg, PokemonLeague_NorthPokemonCenter_1F_sinnoh, RocketHideout_B4F_Frlg, Route210_North_sinnoh, Route213_FootstepHouse_sinnoh, Route213_sinnoh, Route216_sinnoh, SSAqua_1F_hns, SSTidalCorridor, SafariZone_Center_RestHouse_Frlg, SandgemTown_sinnoh, SevenIsland_Frlg, SevenIsland_PokemonCenter_1F_Frlg, SlateportCity_Harbor, TwoIsland_Frlg, VeilstoneCity_DepartmentStore_1F_sinnoh, VeilstoneCity_sinnoh, VermilionCity_Frlg, VermilionCity_PokemonCenter_1F_Frlg.
+
+### Fixed in this pass
+
+| Map | Before | Steps | Expected | Observed before | After the fix (ROM) |
+|---|---|---|---|---|---|
+| PetalburgCity_Gym | Game clear; Norman rematch ready (`VAR_PETALBURG_GYM_STATE` 8) | Talk to Norman twice | JOHTO TICKET first, then the rematch | State 8 sends every talk to the rematch, so a player who arrives after the rematch unlocks never gets the JOHTO TICKET | Talk 1: the full ticket speech and the JOHTO TICKET. Talk 2: the rematch greeting |
+| PokemonLeague_ChampionsRoom_Frlg | `FLAG_SE_KANTO_COMPLETE` and `FLAG_SE_SINNOH_LEAGUE_CLEARED` | Walk in | LANCE counts four regions | "has seen three regions" | "has seen four regions". Without Sinnoh, the original line is kept (code) |
+
+### ROM tests
+
+| Test | Prepared flags | Played with the normal controls | Result |
+|---|---|---|---|
+| Post-Hoenn-League home scene | `FLAG_SYS_GAME_CLEAR`, `FLAG_IS_CHAMPION`, Hoenn badges, intro state 7, houses state 3, Dad visible, gym state 7 | Start on the 1F stairs and advance the scene | DAD gives the S.S. TICKET and says "come and see me there, I have something for you, too" |
+| Petalburg Gym | Same flags, gym state 8 | Two talks | See the fixes table |
+| Birch's lab | Same flags + Johto League + JOHTO TICKET | Talk | CANALAVE TICKET speech and explanation |
+| Slateport harbor | Same flags + both tickets + Johto League | Talk → CANALAVE | Menu OLIVINE / VERMILION / CANALAVE; boards the S.S. TIDAL with the CANALAVE announcement |
+| ELM (pass 2) and the 90-step crossing to Olivine (pass 2) | See pass 2 | | Unchanged |
+| Sinnoh Hall of Fame | 8 Sinnoh badges, Johto League | Start where CYNTHIA's script warps the player | CYNTHIA's lines, save, HALL OF FAME record, respawn in SANDGEM |
+| CYNTHIA battle | Strong test Mewtwo | x pressed repeatedly | Not finished: the test Mewtwo kept falling asleep. First League wins stay pending |
+| LANCE Kanto rematch, four regions | See the fixes table | Walk in | OK |
+| Route 213 House 2 | — | Walk all directions from both sides | Isolated (see the table) |
+| Veilstone Dept. Store door, night | Egg in party (no follower), clock 23:00 | Up into the door, Down to exit, shots every ~0.05 s | Opening shows a dark doorway, fade, interior. On exit the door opens, the player steps out and the door closes; the glass is lit before and after, with no flicker |
+| Night in each region | Clock 23:00 | Stand by each Center | Lilycove, Goldenrod, Celadon (plus Seven Island and Veilstone from pass 2): night tint, lit Center windows and doors, lit house windows |
+| Mart music | — | Lilycove Dept. Store | Not done: the test did not get the player through the door. Pending |
+
+### Hoenn maps that lead into new content (code review)
+
+Each Hoenn hook into Super Emerald content was checked:
+- AncientTomb, DesertRuins and IslandCave (Regieleki, Regidrago and Regigigas setup).
+- The tickets given after the game is cleared:
+  - FallarborTown_CozmosHouse: AURORA TICKET;
+  - Route104_MrBrineysHouse: OLD SEA MAP;
+  - VictoryRoad_1F: MYSTIC TICKET from Wally;
+  - LittlerootTown_ProfessorBirchsLab: EON TICKET and CANALAVE TICKET;
+  - PetalburgCity_Gym: JOHTO TICKET.
+- The ship hooks in SSTidalCorridor and SlateportCity_Harbor.
+
+Every ticket gift uses `giveitem`, which prints its own "no room" message. The "received"
+flag is only set after the item is delivered, so a full bag leaves the gift available for
+later without duplicating it.
+
+### Still pending
+
+- A natural playthrough without prepared flags.
+- First League wins played through to the end (blind battles did not finish).
+- Mart music on entering and leaving.
+- Loading an old save: none available.
+- The Route 210 North and Route 213 pockets, until the owner's map edit.
+
 ## Map-by-map branch audit (Johto, Kanto, Sinnoh)
 
 Each map was traced from its objects, signs, trainers and transition/coord events through local and shared scripts. Every branch was checked for its condition, what sets it, and what the speaker knows at that point (first visit, return, rematch, quest in progress, save/load, regional travel order).
@@ -754,8 +822,8 @@ ROM tests run: Goldenrod Dept. Store clerk, Goldenrod Radio Tower lottery, Celes
 | SproutTower_1F_hns | complete | sage promised an HM at the top -> elder's test |
 | SproutTower_2F_hns | complete |  |
 | SproutTower_3F_hns | complete | ELDER LI announced a battle that never happens -> he sees the CHAMPION's bond; Neal no longer mentions an HM |
-| TestMap1_hns | unreachable | debug map |
-| TestMap2_hns | unreachable | debug map |
+| TestMap1_hns | not built | leftover folder with no map.json and not in map_groups.json; not a game map |
+| TestMap2_hns | not built | leftover folder with no map.json and not in map_groups.json; not a game map |
 | TinTower_1F_hns | complete |  |
 | TinTower_2F_hns | complete |  |
 | TinTower_3F_hns | complete |  |
@@ -1445,7 +1513,7 @@ ROM tests run: Goldenrod Dept. Store clerk, Goldenrod Radio Tower lottery, Celes
 | Route213_Access_sinnoh | complete |  |
 | Route213_FootstepHouse_sinnoh | complete | Dr. Footstep offered a reading and never gave it -> real friendship reading (shared with the Verdanturf rater) |
 | Route213_House1_sinnoh | complete |  |
-| Route213_House2_sinnoh | pending | Door on a cliff pocket of ROUTE 213 that the physical check cannot reach; not checked in ROM. Probably a former ROCK CLIMB area. |
+| Route213_House2_sinnoh | pending | Isolated, confirmed in ROM from both sides (a37a636d36 + pass 3 build). From (75,5) in front of the door: down and left are blocked, right reaches (79,y), up reaches row 3, no exit. From (71,4): a vertical cliff blocks the way to the house front. Left for the owner's map edit. |
 | Route213_House3_sinnoh | complete |  |
 | Route213_sinnoh | complete |  |
 | Route214_Access_sinnoh | complete |  |
