@@ -1158,6 +1158,7 @@ SE_EventScript_BurnedTowerBeasts::
 	msgbox SE_Text_BurnedTowerBeastsFled, MSGBOX_DEFAULT
 	special StartJohtoBeasts
 	setflag FLAG_SE_BEASTS_RELEASED
+	setflag FLAG_RELEASED_BEASTS
 	setflag FLAG_HIDE_BURNED_TOWER_BEASTS
 	setvar VAR_TEMP_1, 1
 	releaseall

@@ -256,3 +256,8 @@ The Sinnoh comparison covered the two plaque states at all eight gyms. Seven dis
 - Reviewed local dialogue and event bindings in Ecruteak's exterior, homes, theater, Pokémon Center, mart and tower offices. Updated the Lake of Rage reports, removed the theater reward rumor, and made the sage acknowledge the Fog Badge. Failed Dowsing Machine and Rainbow Wing deliveries can be retried.
 - Restored shopping in six Johto marts whose clerks had a greeting or an empty inventory. The shared stock starts with essentials and expands after earning the Hive and Mineral Badges. This was a targeted clerk check outside Ecruteak.
 - ROM verification remains pending for the shop menus and tower checkpoint.
+
+## Burned Tower
+
+- Reviewed both floors, including the hidden original-story NPCs, trainer dialogue, statue scripts, pickups, boulder, Chi-Yu and the stair and hole destinations.
+- Followed the basement scene into the Raikou and Entei roamer registration and Suicune's Tin Tower visibility check. The Ecruteak witness now uses the same release flag: the first visit no longer starts with a report of a scene the player has yet to trigger. The scene still runs only once.

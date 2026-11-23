@@ -103,7 +103,7 @@ EcruteakCity_Text_Fisher_JasmineReturned::
 EcruteakCity_EventScript_Girl::
 	lock
 	faceplayer
-	goto_if_set FLAG_RELEASED_BEASTS, EcruteakCity_EventScript_Girl2
+	goto_if_set FLAG_SE_BEASTS_RELEASED, EcruteakCity_EventScript_Girl2
 	msgbox EcruteakCity_Text_Lass2, MSGBOX_DEFAULT
 	closemessage
 	release
