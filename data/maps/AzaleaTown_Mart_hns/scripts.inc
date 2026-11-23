@@ -34,5 +34,4 @@ AzaleaMart_Text_CooltrainerM::
 	.string "of his custom BALLS.$"
 
 SE_J_AzaleaTown_Mart_hns_Cherrygrove_Pokemart_EventScript_Clerk::
-	msgbox gText_HowMayIServeYou, MSGBOX_NPC
-	end
+	goto SE_EventScript_JohtoMartClerk

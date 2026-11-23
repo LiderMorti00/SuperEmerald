@@ -23,5 +23,4 @@ BlackthornMart_Text_CooltrainerM::
 	.string "POWER POINTS needed for moves.$"
 
 SE_J_BlackthornCity_Mart_hns_Cherrygrove_Pokemart_EventScript_Clerk::
-	msgbox gText_HowMayIServeYou, MSGBOX_NPC
-	end
+	goto SE_EventScript_JohtoMartClerk

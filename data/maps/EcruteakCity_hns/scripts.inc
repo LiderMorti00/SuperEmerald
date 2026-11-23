@@ -36,11 +36,9 @@ EcruteakCity_EventScript_SageRight::
 	end
 
 EcruteakCity_Text_Gramps2::
-	.string "Ah, child. Have you learned to\n"
-	.string "dance like the KIMONO GIRLS?\p"
-	.string "If you go to their DANCE THEATER,\n"
-	.string "an odd old man will give you\l"
-	.string "something nice, I hear.$"
+	.string "Have you seen the KIMONO GIRLS dance?\p"
+	.string "Watch their feet when the music slows.\n"
+	.string "All five turn as one!$"
 
 EcruteakCity_EventScript_Gramps::
 	lock
@@ -166,8 +164,8 @@ EcruteakCity_EventScript_Youngster::
 	end
 
 EcruteakCity_Text_Youngster::
-	.string "I hear POKéMON are rampaging at the\n"
-	.string "LAKE OF RAGE. I'd like to see that.$"
+	.string "My grandpa saw a red GYARADOS at the\n"
+	.string "LAKE OF RAGE. Imagine seeing that!$"
 
 EcruteakCity_EventScript_GymSign::
 	lock

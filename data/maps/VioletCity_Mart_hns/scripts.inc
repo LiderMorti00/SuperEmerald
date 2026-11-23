@@ -33,11 +33,4 @@ VioletCity_Mart_Text_CooltrainerM::
 	.string "how to use man-made items.$"
 
 VioletCity_Mart_EventScript_Clerk::
-	lock
-	faceplayer
-	message gText_HowMayIServeYou
-	waitmessage
-	pokemart 0
-	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
-	release
-	end
+	goto SE_EventScript_JohtoMartClerk

@@ -49,9 +49,9 @@ SE_J_EcruteakCity_Theater_hns_EcruteakCity_Theater_EventScript_SurfGuy::
 	end
 
 EcruteakCity_Theater_Text_Boy::
-	.string "I was supposed to be the hero…!\n"
-	.string "So much for getting close to\l"
-	.string "a KIMONO GIRL!$"
+	.string "I tried to follow their steps once.\p"
+	.string "By the time I turned around, the\n"
+	.string "KIMONO GIRLS had finished the dance!$"
 
 SE_J_EcruteakCity_Theater_hns_EcruteakCity_Theater_EventScript_Boy::
 	msgbox EcruteakCity_Theater_Text_Boy, MSGBOX_NPC

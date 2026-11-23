@@ -32,5 +32,4 @@ OlivineCity_Text_MartLass::
 	.string "secret!$"
 
 SE_J_OlivineCity_Mart_hns_Cherrygrove_Pokemart_EventScript_Clerk::
-	msgbox gText_HowMayIServeYou, MSGBOX_NPC
-	end
+	goto SE_EventScript_JohtoMartClerk

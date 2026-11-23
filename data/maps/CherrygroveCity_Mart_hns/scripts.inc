@@ -3,8 +3,7 @@ CherrygroveCity_Mart_hns_MapScripts::
 
 
 SE_J_CherrygroveCity_Mart_hns_Cherrygrove_Pokemart_EventScript_Clerk::
-	msgbox gText_HowMayIServeYou, MSGBOX_NPC
-	end
+	goto SE_EventScript_JohtoMartClerk
 
 Cherrygrove_Pokemart_EventScript_Youngster::
 	lock
@@ -23,8 +22,8 @@ Cherrygrove_Pokemart_Text_Youngster::
 	.string "with you.$"
 
 Cherrygrove_Pokemart_Text_CooltrainerM::
-	.string "They're fresh out of POKé BALLS!\p"
-	.string "When will they get more of them?$"
+	.string "I used my last POKé BALL yesterday.\p"
+	.string "Good thing this shop sells them!$"
 
 SE_J_CherrygroveCity_Mart_hns_Cherrygrove_Pokemart_EventScript_Bugcatcher::
 	msgbox Cherrygrove_Pokemart_Text_CooltrainerM, MSGBOX_NPC

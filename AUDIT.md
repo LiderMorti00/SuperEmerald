@@ -250,3 +250,9 @@ The Sinnoh comparison covered the two plaque states at all eight gyms. Seven dis
 
 - `Route38_hns`: checked six trainers, Chad's registration and rematch branch, both twins' shared scripts, berries, visible and hidden items, signposts, connections and the gate warp. Olivia now reports the milk shortage before the seventh berry and the reopened shop afterwards.
 - `Gate_EcruteakCity_Route38_hns`: checked the officer and both return warps. The officer recognizes the Hoenn title without assuming the protagonist was born there.
+
+## Ecruteak dialogue and Johto stores
+
+- Reviewed local dialogue and event bindings in Ecruteak's exterior, homes, theater, Pokémon Center, mart and tower offices. Updated the Lake of Rage reports, removed the theater reward rumor, and made the sage acknowledge the Fog Badge. Failed Dowsing Machine and Rainbow Wing deliveries can be retried.
+- Restored shopping in six Johto marts whose clerks had a greeting or an empty inventory. The shared stock starts with essentials and expands after earning the Hive and Mineral Badges. This was a targeted clerk check outside Ecruteak.
+- ROM verification remains pending for the shop menus and tower checkpoint.

@@ -30,5 +30,4 @@ EcruteakMart_Text_SuperNerd::
 	.string "our EEVEE in the same way…$"
 
 SE_J_EcruteakCity_Mart_hns_Cherrygrove_Pokemart_EventScript_Clerk::
-	msgbox gText_HowMayIServeYou, MSGBOX_NPC
-	end
+	goto SE_EventScript_JohtoMartClerk

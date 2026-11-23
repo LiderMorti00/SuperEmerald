@@ -16,10 +16,9 @@ EcruteakCity_PokemonCenter_EventScript_Nerd::
 	end
 
 EcruteakCity_PokemonCenter1F_Text_GymGuide::
-	.string "LAKE OF RAGE…\p"
-	.string "The appearance of a GYARADOS\n"
-	.string "swarm…\p"
-	.string "I smell a conspiracy. I know it!$"
+	.string "My radio used to pick up a strange\n"
+	.string "signal near the LAKE OF RAGE.\p"
+	.string "These days all I hear is music.$"
 
 EcruteakCity_PokemonCenter_EventScript_Hiker::
 	lock

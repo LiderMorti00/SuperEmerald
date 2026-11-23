@@ -29,9 +29,9 @@ EcruteakCity_SageOffice2_EventScript_SageC::
 	end
 
 EcruteakTinTowerEntrance_Text_Gramps::
-	.string "Two towers… Two POKéMON…\p"
-	.string "But when one burned down, both\n"
-	.string "POKéMON flew away, never to return.$"
+	.string "When the tower burned, both POKéMON\n"
+	.string "flew away. For generations, we have\l"
+	.string "kept watch for their return.$"
 
 EcruteakTinTowerEntrance_Text_SageNoBadge::
 	.string "TIN TOWER is off limits to the\n"
@@ -39,6 +39,7 @@ EcruteakTinTowerEntrance_Text_SageNoBadge::
 	.string "to leave.$"
 
 SE_J_EcruteakCity_SageOffice1_hns_EcruteakCity_SageOffice2_EventScript_SageA::
+	goto_if_set FLAG_JOHTO_BADGE4_GET, EcruteakCity_SageOffice1_EventScript_Pass
 	msgbox EcruteakTinTowerEntrance_Text_SageNoBadge, MSGBOX_NPC
 	end
 
@@ -49,3 +50,12 @@ EcruteakCity_SageOffice1_EventScript_Sign::
 EcruteakCity_SageOffice1_Text_Sign::
 	.string "The bell of tin rings clearly for\n"
 	.string "those under the tower's wing.$"
+
+EcruteakCity_SageOffice1_EventScript_Pass::
+	msgbox EcruteakTinTowerEntrance_Text_FogBadge, MSGBOX_NPC
+	end
+
+EcruteakTinTowerEntrance_Text_FogBadge::
+	.string "That FOGBADGE bears MORTY's mark.\p"
+	.string "You may pass. Tread quietly as you\n"
+	.string "approach the tower.$"
