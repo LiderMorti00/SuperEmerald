@@ -27,6 +27,7 @@ IronIsland_EventScript_SNRiley::
 	faceplayer
 	msgbox IronIsland_EventScript_SNRiley_T1, MSGBOX_DEFAULT
 	giveitem ITEM_HM_STRENGTH
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_SN_RECEIVED_HM_STRENGTH
 	goto_if_set FLAG_SINNOH_BADGE6_GET, IronIsland_EventScript_SNRiley_HasBadge
 	msgbox IronIsland_EventScript_SNRiley_T2, MSGBOX_DEFAULT

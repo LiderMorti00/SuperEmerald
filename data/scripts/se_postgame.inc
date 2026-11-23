@@ -339,10 +339,12 @@ SFR_Text_Piplup:
 	.string "PIPLUP$"
 
 SFR_Text_OakSinnohStarterIntro:
-	.string "OAK: {PLAYER}! You beat the LEAGUE\n"
-	.string "with all sixteen BADGES!\p"
-	.string "HOENN, JOHTO and KANTO…\n"
-	.string "Three regions! Remarkable!\p"
+	.string "OAK: {PLAYER}! You earned all\n"
+	.string "sixteen BADGES of JOHTO and KANTO\l"
+	.string "and beat the LEAGUE again!\p"
+	.string "You've come a long way since\n"
+	.string "HOENN. Three regions conquered!\l"
+	.string "Remarkable!\p"
 	.string "To celebrate, I have a gift for you.\p"
 	.string "A friend of mine, PROF. ROWAN, sent\n"
 	.string "me three POKéMON from SINNOH.\p"

@@ -9,6 +9,7 @@ CelesticTown_Ruins_EventScript_SNElder::
 	goto_if_set FLAG_SN_RECEIVED_HM_SURF, CelesticTown_Ruins_EventScript_SNElderDone
 	msgbox CelesticTown_Ruins_Text_SNElder1, MSGBOX_DEFAULT
 	giveitem ITEM_HM_SURF
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_SN_RECEIVED_HM_SURF
 	msgbox CelesticTown_Ruins_Text_SNElder2, MSGBOX_DEFAULT
 	release

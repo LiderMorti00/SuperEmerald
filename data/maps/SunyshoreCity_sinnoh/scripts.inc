@@ -55,6 +55,7 @@ SunyshoreCity_EventScript_SNJasmine::
 	faceplayer
 	msgbox SunyshoreCity_EventScript_SNJasmine_T1, MSGBOX_DEFAULT
 	giveitem ITEM_HM_WATERFALL
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_SN_RECEIVED_HM_WATERFALL
 	msgbox SunyshoreCity_EventScript_SNJasmine_T2, MSGBOX_DEFAULT
 	closemessage

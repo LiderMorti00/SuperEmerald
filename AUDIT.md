@@ -312,15 +312,25 @@ The Sinnoh comparison covered the two plaque states at all eight gyms. Seven dis
 
 ## Full narrative pass: Kanto, Sevii Islands, Johto and Sinnoh
 
-Every map directory ending in `_Frlg` (410), `_hns` (240) and `_sinnoh` (401) was dumped with
+Every map directory ending in `_Frlg` (410), `_hns` (242) and `_sinnoh` (401) was dumped with
 `/tmp/se/dump.py`, which applies the regional world-state initializers
 (`se_postgame.inc`, `se_johto_state.inc`, `se_sinnoh_state.inc`), drops objects whose hide flag
 those initializers set, prunes script branches decided by known flags and variables, skips
 coordinate events whose trigger variable can no longer match, and prints every text that a
-visible NPC, sign or trigger can still show. All 849 maps with reachable content (306 Kanto and
-Sevii, 201 Johto, 321 Sinnoh) were read in full. Trainer battle text was filtered by story
-keywords. Hoenn maps were scanned for Super Emerald additions and for text that names another
-region's places, because the Hoenn story itself is played as in Emerald.
+visible NPC, sign or trigger can still show.
+
+Coverage, stated precisely:
+
+- 828 maps produced output (306 Kanto and Sevii, 201 Johto, 321 Sinnoh); 756 of them show at
+  least one text (272, 182 and 302). The other directories have no visible event in the
+  post-story state. An earlier version of this section said 849; that was an addition error.
+- Read in full: NPC, sign, item-ball and trigger text in the post-story state.
+- Not read in full: trainer battle text, which was filtered by story keywords; scenes hidden in
+  the post-story state (story cutscenes behind flags the initializers set); Hoenn, where only Super
+  Emerald additions and text naming another region's places were checked.
+- This pass does not replace the per-map tracking table above: maps still marked Pending there
+  stay pending for runtime checks (travel, NPC movement, music, lighting).
+- Runtime tested in a built ROM: Goldenrod GAME CORNER clerk and the Celestic elder's HM Surf.
 
 Fixed in this pass:
 
@@ -361,3 +371,14 @@ Fixed in this pass:
 
 Checked in ROM: Goldenrod coin clerk and Celestic elder gift. `make check-se` reports 0
 problems and no changed text exceeds the 216-pixel message box.
+
+### Follow-up review fixes
+
+- HM gifts added by Super Emerald in Sinnoh (Celestic elder's Surf, Jasmine's Waterfall in
+  Sunyshore, Riley's Strength on Iron Island) now check `VAR_RESULT` after `giveitem` and only set
+  the received flag when the item was actually given; otherwise the bag-full message shows and the
+  NPC offers it again.
+- Oak's Sinnoh-starter line now names the sixteen BADGES of JOHTO and KANTO separately from the
+  journey that started in HOENN.
+- Coverage figures above corrected (828 maps with output, not 849) and the limits of the pass
+  written out.
