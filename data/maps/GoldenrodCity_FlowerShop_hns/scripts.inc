@@ -3,18 +3,12 @@ GoldenrodCity_FlowerShop_hns_MapScripts::
 
 
 GoldenrodCity_FlowerShop_Text_Owner1::
-.string "Apparently, there is an odd tree\n"
-.string "on ROUTE 36.\p"
-.string "They say it dances when you water\n"
-.string "it…\p"
-.string "Oh, of course not!\p"
-.string "This is a flower shop, so we do\n"
-.string "have watering cans…\p"
-.string "But I cannot let you have one!\n"
-.string "It's too dangerous!\p"
-.string "Well, maybe if you manage to\n"
-.string "defeat gym leader WHITNEY, it\l"
-.string "might be okay.$"
+	.string "Have you heard? There was an odd\n"
+	.string "tree on ROUTE 36.\p"
+	.string "They say it danced when someone\n"
+	.string "watered it…\p"
+	.string "It turned out to be a POKéMON!\n"
+	.string "Can you believe it?$"
 
 SE_J_GoldenrodCity_FlowerShop_hns_GoldenrodCity_FlowerShop_EventScript_Owner::
 	msgbox GoldenrodCity_FlowerShop_Text_Owner1, MSGBOX_NPC

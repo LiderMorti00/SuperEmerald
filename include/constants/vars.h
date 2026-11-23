@@ -185,7 +185,7 @@
 #define VAR_MOSSDEEP_SPACE_CENTER_STATE                  0x409F
 #define VAR_SLATEPORT_HARBOR_STATE                       0x40A0
 #define VAR_SE_KANTO_STATE_VERSION                       0x40A1 // Super Emerald: version of the Kanto world state applied to this save
-#define SE_KANTO_STATE_VERSION                           5      // bump when SE_EventScript_KantoWorldState changes
+#define SE_KANTO_STATE_VERSION                           6      // bump when SE_EventScript_KantoWorldState changes
 #define VAR_SEAFLOOR_CAVERN_STATE                        0x40A2
 #define VAR_CABLE_CAR_STATION_STATE                      0x40A3
 #define VAR_SAFARI_WARP_STATE                            0x40A4 // see include/constants/safaris.h
@@ -423,7 +423,7 @@
 #define VAR_SE_PWT_CUP                0x5035 // Pokemon World Tournament: chosen cup (SE_PWT_CUP_*)
 
 #define VAR_SE_SINNOH_STATE_VERSION   0x5040 // Super Emerald: bump SE_SINNOH_STATE_VERSION when the Sinnoh state changes
-#define SE_SINNOH_STATE_VERSION       4
+#define SE_SINNOH_STATE_VERSION       5
 #define VAR_SE_SINNOH_STARTER         0x5041 // 1 Turtwig, 2 Chimchar, 3 Piplup (0 = none yet)
 #define VAR_SE_LUCAS_STATE            0x5042 // Lucas rival battles won: 0-3
 #define VAR_SE_SINNOH_ARRIVAL         0x5043 // 1 = just arrived at Canalave by ship, 2 = met Dawn

@@ -226,7 +226,7 @@ FuchsiaCity_Gym_Text_GymGuyAdvice::
 	.string "JANINE might appear close, but she's\n"
 	.string "blocked off.\p"
 	.string "You have to find gaps in the walls\n"
-	.string "to reach him.$"
+	.string "to reach her.$"
 
 FuchsiaCity_Gym_Text_GymGuyPostVictory::
 	.string "It's amazing how ninja can terrify,\n"

@@ -20,13 +20,13 @@ GoldenrodCity_RadioTower_3F_Text_ScientistMarcSeen::
 	.string "Who are you?$"
 
 GoldenrodCity_RadioTower_3F_Text_CooltrainerFPleaseSave::
-	.string "The TEAM ROCKET boss has locked\n"
-	.string "himself in.\p"
-	.string "But the DIRECTOR can open it.\p"
-	.string "He's up on the fifth floor.\p"
-	.string "Please save him!$"
+	.string "ARCHER of TEAM ROCKET went up to\n"
+	.string "the fifth floor!\p"
+	.string "He's taken over the broadcast\n"
+	.string "room. Please hurry!$"
 
 SE_J_GoldenrodCity_RadioTower_3F_hns_GoldenrodCity_RadioTower_3F_EventScript_Cooltrainer::
+	goto_if_ne VAR_SE_ROCKET_QUEST, 3, SE_RadioTower3F_Calm_Script
 	msgbox GoldenrodCity_RadioTower_3F_Text_CooltrainerFPleaseSave, MSGBOX_NPC
 	end
 
@@ -172,3 +172,12 @@ GoldenrodCity_RadioTower_3F_EventScript_GateOpened::
 
 GoldenrodCity_RadioTower_3F_Text_CardKeySlot::
 	.string "It's the CARD KEY slot.$"
+
+SE_RadioTower3F_Calm_Script::
+	msgbox SE_RadioTower3F_Calm_Text, MSGBOX_NPC
+	end
+
+SE_RadioTower3F_Calm_Text::
+	.string "TEAM ROCKET took over this tower\n"
+	.string "once. What a scare that was!\p"
+	.string "Now it's back to business as usual.$"

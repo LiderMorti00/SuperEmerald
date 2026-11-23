@@ -12,12 +12,12 @@ SE_J_GoldenrodCity_BillsHouse_hns_GoldenrodCity_BillsHouse_EventScript_Bill::
 	end
 
 BillHouse_Text_MomBeforeEcruteak::
-    .string "Oh, you collect POKéMON? My son\n"
-    .string "BILL is an expert.\p"
-    .string "He just got called to the POKéMON\n"
-    .string "CENTER in ECRUTEAK CITY.\p"
-    .string "My husband went off to the GAME\n"
-    .string "CORNER without being called…$"
+	.string "Oh, you collect POKéMON? My son\n"
+	.string "BILL is an expert.\p"
+	.string "He's working at his SEA COTTAGE\n"
+	.string "in KANTO these days.\p"
+	.string "My husband went off to the GAME\n"
+	.string "CORNER without being called…$"
 
 SE_J_GoldenrodCity_BillsHouse_hns_GoldenrodCity_BillsHouse_EventScript_Mom::
 	msgbox BillHouse_Text_MomBeforeEcruteak, MSGBOX_NPC

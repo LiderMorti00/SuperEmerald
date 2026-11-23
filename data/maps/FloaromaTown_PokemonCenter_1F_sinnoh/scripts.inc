@@ -16,10 +16,10 @@ FloaromaTown_PokemonCenter_1F_EventScript_PtNpc1::
 	end
 
 FloaromaTown_PokemonCenter_1F_Text_PtNpc1::
-	.string "There've been problems with the\n"
-	.string "electric power lately.\p"
-	.string "Is there some trouble at the VALLEY\n"
-	.string "WINDWORKS?$"
+	.string "The VALLEY WINDWORKS keeps the power\n"
+	.string "running smoothly these days.\p"
+	.string "There was some trouble there once,\n"
+	.string "but it's all fixed now.$"
 
 FloaromaTown_PokemonCenter_1F_EventScript_PtNpc2::
 	msgbox FloaromaTown_PokemonCenter_1F_Text_PtNpc2, MSGBOX_NPC

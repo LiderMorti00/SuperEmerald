@@ -4,9 +4,9 @@ NewBarkTown_hns_MapScripts::
 
 
 NewBarkTown_Text_FatManState3::
-	.string "Yo, {PLAYER}!\p"
-	.string "I hear PROF.ELM discovered\n"
-	.string "some new POKéMON.$"
+	.string "Yo! Welcome to NEW BARK TOWN!\p"
+	.string "I hear PROF.ELM discovered some\n"
+	.string "new POKéMON.$"
 
 SE_J_NewBarkTown_hns_NewBarkTown_EventScript_FatMan::
 	msgbox NewBarkTown_Text_FatManState3, MSGBOX_NPC

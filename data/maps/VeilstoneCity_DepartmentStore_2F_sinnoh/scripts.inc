@@ -30,8 +30,8 @@ VeilstoneCity_DepartmentStore_2F_EventScript_PtNpc3::
 	end
 
 VeilstoneCity_DepartmentStore_2F_Text_PtNpc3::
-	.string "I hope that COUNTER app I gave you is\n"
-	.string "useful.$"
+	.string "Our Battle Collection has everything\n"
+	.string "a TRAINER needs!$"
 
 VeilstoneCity_DepartmentStore_2F_EventScript_PtNpc4::
 	msgbox VeilstoneCity_DepartmentStore_2F_Text_PtNpc4, MSGBOX_NPC

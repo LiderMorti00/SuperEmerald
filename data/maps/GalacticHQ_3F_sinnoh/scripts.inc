@@ -87,9 +87,8 @@ GalacticHQ_3F_EventScript_PtNpc1::
 GalacticHQ_3F_Text_PtNpc1_0::
 	.string "The locked doors only open with a\n"
 	.string "special key.\p"
-	.string "Now, if I was a comedy relief sort of\n"
-	.string "bad guy, I'd tell you…\p"
-	.string "But I really don't know!$"
+	.string "…Not that there's anything left\n"
+	.string "behind them now.$"
 
 GalacticHQ_3F_EventScript_PtSign1::
 	msgbox GalacticHQ_3F_Text_PtSign1, MSGBOX_SIGN

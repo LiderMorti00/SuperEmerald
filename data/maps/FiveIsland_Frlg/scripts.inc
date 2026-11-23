@@ -11,12 +11,30 @@ FiveIsland_EventScript_IslandSign::
 	end
 
 FiveIsland_EventScript_BugCatcher::
+	goto_if_ge VAR_SE_ROCKET_QUEST, 6, FiveIsland_EventScript_BugCatcherAfterQuest
 	msgbox FiveIsland_Text_WeirdBuildingInMeadow, MSGBOX_NPC
 	end
 
+FiveIsland_EventScript_BugCatcherAfterQuest::
+	msgbox FiveIsland_Text_MeadowIsQuietAgain, MSGBOX_NPC
+	end
+
+FiveIsland_Text_MeadowIsQuietAgain::
+	.string "Those creepy guys left the MEADOW!\n"
+	.string "I can play there again. Yay!$"
+
 FiveIsland_EventScript_Fisher::
+	goto_if_ge VAR_SE_ROCKET_QUEST, 6, FiveIsland_EventScript_FisherAfterQuest
 	msgbox FiveIsland_Text_BeenGettingBusierAroundHere, MSGBOX_NPC
 	end
+
+FiveIsland_EventScript_FisherAfterQuest::
+	msgbox FiveIsland_Text_FishAreBack, MSGBOX_NPC
+	end
+
+FiveIsland_Text_FishAreBack::
+	.string "Things have calmed down around here\n"
+	.string "lately. The fish are biting again!$"
 
 FiveIsland_Text_IslandSign::
 	.string "FIVE ISLAND\n"

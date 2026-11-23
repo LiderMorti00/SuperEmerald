@@ -27,10 +27,11 @@ LavenderTown_PokemonCenter_1F_EventScript_Youngster::
 	end
 
 LavenderTown_PokemonCenter_1F_Text_RocketsDoAnythingForMoney::
-	.string "TEAM ROCKET will do anything for\n"
+	.string "TEAM ROCKET would do anything for\n"
 	.string "the sake of money!\p"
-	.string "There is no job too dirty, no deed\n"
-	.string "too heinous, no crime too wicked!$"
+	.string "No job was too dirty, no deed too\n"
+	.string "heinous, no crime too wicked!\p"
+	.string "I'm glad they're gone now.$"
 
 LavenderTown_PokemonCenter_1F_Text_CubonesMotherKilledByRockets::
 	.string "I saw CUBONE's mother trying to\n"

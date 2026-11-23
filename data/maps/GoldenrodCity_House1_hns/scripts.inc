@@ -14,9 +14,8 @@ SE_J_GoldenrodCity_House1_hns_GoldenrodCity_NameRatersHouse_EventScript_NameRate
 
 GoldenrodCity_NameRatersHouse_Text_RenameRival::
 	.string "It's the news…\p"
-	.string "The POLICE are looking for this\n"
-	.string "REDHEADED BOY!\p"
-	.string "Do YOU know his name?$"
+	.string "A TRAINER from HOENN has been\n"
+	.string "making waves all over JOHTO!$"
 
 SE_J_GoldenrodCity_House1_hns_GoldenrodCity_NameRatersHouse_EventScript_RenameRival::
 	msgbox GoldenrodCity_NameRatersHouse_Text_RenameRival, MSGBOX_SIGN

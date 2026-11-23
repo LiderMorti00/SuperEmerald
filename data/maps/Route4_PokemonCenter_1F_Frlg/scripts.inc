@@ -153,10 +153,10 @@ Route4_PokemonCenter_1F_Text_CanHaveSixMonsWithYou::
 	.string "can have six POKéMON with you.$"
 
 Route4_PokemonCenter_1F_Text_TeamRocketAttacksCerulean::
-	.string "TEAM ROCKET attacks CERULEAN\n"
-	.string "citizens…\p"
-	.string "Not a day goes by without TEAM\n"
-	.string "ROCKET being in the news.$"
+	.string "TEAM ROCKET used to attack CERULEAN\n"
+	.string "citizens all the time…\p"
+	.string "Thankfully, those days are over.\n"
+	.string "They're hardly in the news anymore.$"
 
 Route4_PokemonCenter_1F_Text_LaddieBuyMagikarpForJust500::
 	.string "MAN: Hello there, laddie!\n"

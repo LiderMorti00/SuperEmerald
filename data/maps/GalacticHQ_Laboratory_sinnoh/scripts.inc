@@ -10,10 +10,9 @@ GalacticHQ_Laboratory_EventScript_PtNpc1::
 	end
 
 GalacticHQ_Laboratory_Text_PtNpc1_0::
-	.string "I feel awful about what we did… This\n"
-	.string "experiment went too far…\p"
-	.string "I'm not sure if I can stomach what\n"
-	.string "Master CYRUS plans…$"
+	.string "I feel awful about what we did…\n"
+	.string "That experiment went too far…\p"
+	.string "I'm glad it's all over now.$"
 
 GalacticHQ_Laboratory_EventScript_PtNpc2::
 	lock
@@ -23,10 +22,10 @@ GalacticHQ_Laboratory_EventScript_PtNpc2::
 	end
 
 GalacticHQ_Laboratory_Text_PtNpc2_0::
-	.string "Urff… I feel too sickened to say\n"
-	.string "anything…\p"
-	.string "But that thing we made… What is it\n"
-	.string "going to be used for?$"
+	.string "Urff… I still feel sick thinking\n"
+	.string "about what we made…\p"
+	.string "I hope that machine is never used\n"
+	.string "again.$"
 
 GalacticHQ_Laboratory_EventScript_PtSign1::
 	msgbox GalacticHQ_Laboratory_Text_PtSign1, MSGBOX_SIGN

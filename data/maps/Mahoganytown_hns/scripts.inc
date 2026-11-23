@@ -10,8 +10,8 @@ Mahoganytown_OnLoad::
 
 
 MahoganyTown_Text_Gramps::
-    .string "Are you off to see the GYARADOS\n"
-    .string "rampage at the LAKE?$"
+	.string "Are you off to see the LAKE OF\n"
+	.string "RAGE? It's a fine place to fish.$"
 
 SE_J_Mahoganytown_hns_MahoganyTown_EventScript_Gramps::
 	msgbox MahoganyTown_Text_Gramps, MSGBOX_NPC

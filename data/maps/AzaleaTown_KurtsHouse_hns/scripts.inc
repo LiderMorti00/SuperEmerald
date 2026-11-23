@@ -26,8 +26,9 @@ SE_J_AzaleaTown_KurtsHouse_hns_AzaleaTown_KurtsHouse_EventScript_KurtBefore::
 	end
 
 KurtsHouse_Text_GranddaughterSlowpokeGone::
-	.string "The SLOWPOKE are gone… \n"
-	.string "Were they taken away by bad people?$"
+	.string "The SLOWPOKE came back to town!\p"
+	.string "Grandpa says they were just\n"
+	.string "foolin' around somewhere.$"
 
 SE_J_AzaleaTown_KurtsHouse_hns_AzaleaTown_KurtsHouse_EventScript_Girl::
 	msgbox KurtsHouse_Text_GranddaughterSlowpokeGone, MSGBOX_NPC

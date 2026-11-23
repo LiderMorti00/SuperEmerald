@@ -49,7 +49,7 @@ Gate_GoldenrodCity_Route35_EventScript_Fisher::
 Route35GoldenrodGate_Text_Fisher::
 	.string "I wonder how many kinds of POKéMON\n"
 	.string "there are in the world.\p"
-	.string "Three years ago, PROF.OAK said that\n"
+	.string "Three years ago, PROF. OAK said that\n"
 	.string "there were 150 different kinds.\p"
-	.string "But recently I heard there's\n"
-	.string "over 400!$"
+	.string "But now I hear there are over\n"
+	.string "a thousand!$"

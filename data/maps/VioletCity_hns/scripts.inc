@@ -65,9 +65,10 @@ VioletCity_EventScript_Youngster::
 	end
 
 VioletCity_Text_Youngster::
-	.string "I saw a wiggly tree up ahead!\p"
-	.string "If you touch it, it squirms\n"
-	.string "and dances! Cool!$"
+	.string "There used to be a wiggly tree on\n"
+	.string "ROUTE 36.\p"
+	.string "When someone watered it, it jumped\n"
+	.string "up! It was a POKéMON all along!$"
 
 VioletCity_EventScript_ItemPechaBerry::
 	finditem ITEM_PECHA_BERRY

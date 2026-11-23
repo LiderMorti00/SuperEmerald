@@ -3,12 +3,12 @@ AzaleaTown_House1_hns_MapScripts::
 
 
 CharcoalKiln_Text_Boss1::
-	.string "All the SLOWPOKE have disappeared\n"
-	.string "from the town.\p"
-	.string "The forest's protector may be\n"
-	.string "angry with us…\p"
-	.string "It may be a bad omen. We should\n"
-	.string "stay in.$"
+	.string "The SLOWPOKE are back, and the\n"
+	.string "rain came with them.\p"
+	.string "That's good for our CHARCOAL\n"
+	.string "business!\p"
+	.string "My apprentice took our FARFETCH'D\n"
+	.string "out to gather wood.$"
 
 SE_J_AzaleaTown_House1_hns_AzaleaTown_House1_EventScript_Boss::
 	msgbox CharcoalKiln_Text_Boss1, MSGBOX_NPC

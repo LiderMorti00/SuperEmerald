@@ -470,7 +470,7 @@ CeladonCity_GameCorner_Text_CanExchangeCoinsNextDoor::
 	.string "fabulous prizes next door.$"
 
 CeladonCity_GameCorner_Text_WelcomeBuySomeCoins::
-	.string "Welcome to ROCKET GAME CORNER!\p"
+	.string "Welcome to the GAME CORNER!\p"
 	.string "Do you need some game COINS?\n"
 	.string "Would you like to buy some?$"
 
@@ -495,8 +495,8 @@ CeladonCity_GameCorner_Text_HereAreYourCoins::
 
 CeladonCity_GameCorner_Text_RumoredTeamRocketRunsThisPlace::
 	.string "Keep this quiet.\p"
-	.string "It's rumored that this place is run\n"
-	.string "by TEAM ROCKET.$"
+	.string "They say this place used to be run\n"
+	.string "by TEAM ROCKET, a long time ago.$"
 
 CeladonCity_GameCorner_Text_ThinkMachinesHaveDifferentOdds::
 	.string "I think these machines have\n"

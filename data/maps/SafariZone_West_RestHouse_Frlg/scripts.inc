@@ -16,9 +16,9 @@ SafariZone_West_RestHouse_EventScript_CooltrainerF::
 SafariZone_West_Text_KogaPatrolsSafariEverySoOften::
 	.string "The SAFARI ZONE's huge, wouldn't\n"
 	.string "you say?\p"
-	.string "FUCHSIA's GYM LEADER, KOGA, \n"
+	.string "FUCHSIA's GYM LEADER, JANINE,\n"
 	.string "patrols the grounds every so often.\p"
-	.string "Thanks to him, we can play here\n"
+	.string "Thanks to her, we can play here\n"
 	.string "knowing that we're safe.$"
 
 SafariZone_West_Text_RocksMakeMonRunButEasierCatch::

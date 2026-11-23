@@ -1384,8 +1384,8 @@ PokemonJournal_Text_SpecialFeatureMisty::
 	.string "POKéMON JOURNAL\p"
 	.string "Special Feature: CERULEAN GYM\n"
 	.string "LEADER MISTY!\p"
-	.string "MISTY is said to worship LORELEI\n"
-	.string "of the ELITE FOUR.$"
+	.string "MISTY is said to worship LORELEI,\n"
+	.string "who used to be in the ELITE FOUR.$"
 
 PokemonJournal_Text_SpecialFeatureLtSurge::
 	.string "POKéMON JOURNAL\p"
@@ -1431,11 +1431,11 @@ PokemonJournal_Text_SpecialFeatureBlaine::
 
 PokemonJournal_Text_SpecialFeatureLorelei::
 	.string "POKéMON JOURNAL\p"
-	.string "Special Feature:\n"
-	.string "ELITE FOUR's LORELEI!\p"
+	.string "Special Feature: LORELEI, formerly\n"
+	.string "of the ELITE FOUR!\p"
 	.string "Known for her logical, calculated,\n"
-	.string "and cool battling style, LORELEI\l"
-	.string "has a surprising secret!$"
+	.string "and cool battling style, LORELEI has\l"
+	.string "a surprising secret!$"
 
 PokemonJournal_Text_SpecialFeatureBruno::
 	.string "POKéMON JOURNAL\p"
@@ -1447,16 +1447,15 @@ PokemonJournal_Text_SpecialFeatureBruno::
 
 PokemonJournal_Text_SpecialFeatureAgatha::
 	.string "POKéMON JOURNAL\p"
-	.string "Special Feature:\n"
-	.string "ELITE FOUR's AGATHA!\p"
-	.string "In her youth, AGATHA and PROF.\n"
-	.string "OAK were rivals who vied for\l"
-	.string "supremacy as TRAINERS.$"
+	.string "Special Feature: AGATHA, formerly\n"
+	.string "of the ELITE FOUR!\p"
+	.string "In her youth, AGATHA and PROF. OAK\n"
+	.string "were rivals who vied for supremacy\l"
+	.string "as TRAINERS.$"
 
 PokemonJournal_Text_SpecialFeatureLance::
 	.string "POKéMON JOURNAL\p"
-	.string "Special Feature:\n"
-	.string "ELITE FOUR's LANCE!\p"
+	.string "Special Feature: CHAMPION LANCE!\p"
 	.string "LANCE's grandfather is thought to\n"
 	.string "be the elder of a famous clan of\l"
 	.string "dragon masters.$"

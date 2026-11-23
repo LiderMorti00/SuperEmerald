@@ -153,11 +153,9 @@ EternaCity_EventScript_PtNpc4::
 	end
 
 EternaCity_Text_PtNpc4::
-	.string "Since that TEAM GALACTIC building\n"
-	.string "went up, the city's atmosphere has\l"
-	.string "gotten all creepy and tense.\p"
-	.string "I don't know what those people are\n"
-	.string "doing up in that place…$"
+	.string "That TEAM GALACTIC building still\n"
+	.string "gives me the creeps.\p"
+	.string "I hope there's nobody left inside…$"
 
 EternaCity_EventScript_PtNpc5::
 	msgbox EternaCity_Text_PtNpc5, MSGBOX_NPC
@@ -173,19 +171,18 @@ EternaCity_EventScript_PtNpc6::
 	end
 
 EternaCity_Text_PtNpc6::
-	.string "My friend said TEAM GALACTIC took his\n"
-	.string "favorite POKéMON away.\p"
-	.string "I don't think he's telling the truth.\n"
-	.string "TEAM GALACTIC looks so cool.\p"
-	.string "They don't look like common thugs.$"
+	.string "My friend said TEAM GALACTIC took\n"
+	.string "his favorite POKéMON away.\p"
+	.string "I didn't believe him, but he got it\n"
+	.string "back after they broke up!$"
 
 EternaCity_EventScript_PtNpc7::
 	msgbox EternaCity_Text_PtNpc7, MSGBOX_NPC
 	end
 
 EternaCity_Text_PtNpc7::
-	.string "The bike shop is closed. The owner\n"
-	.string "hasn't been seen for days…$"
+	.string "The bike shop owner is back!\n"
+	.string "He's been gone for days, you know.$"
 
 EternaCity_EventScript_PtNpc8::
 	msgbox EternaCity_Text_PtNpc8, MSGBOX_NPC

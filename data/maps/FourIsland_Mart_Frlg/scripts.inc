@@ -32,8 +32,8 @@ FourIsland_Mart_EventScript_Camper::
 FourIsland_Mart_Text_LoreleiGrewUpOnThisIsland::
 	.string "We've had a great and powerful\n"
 	.string "TRAINER grow up on this island.\p"
-	.string "I bet even you'd know her.\n"
-	.string "It's LORELEI of the ELITE FOUR!\p"
+	.string "I bet even you'd know her. It's\n"
+	.string "LORELEI, who was in the ELITE FOUR!\p"
 	.string "When LORELEI was just a tyke,\n"
 	.string "I taught her about POKéMON.$"
 

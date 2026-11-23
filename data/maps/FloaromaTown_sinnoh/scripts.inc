@@ -42,12 +42,11 @@ FloaromaTown_EventScript_PtNpc3::
 	end
 
 FloaromaTown_Text_PtNpc3::
-	.string "I wanted to get some flowers from the\n"
+	.string "Some TEAM GALACTIC guys in snazzy\n"
+	.string "outfits used to hang around the\l"
 	.string "FLOAROMA MEADOW…\p"
-	.string "But some TEAM GALACTIC guys in\n"
-	.string "snazzy outfits came along…\p"
-	.string "Those GALACTIC guys went to the\n"
-	.string "meadow past these flowers here…$"
+	.string "They're gone now, so I can go pick\n"
+	.string "flowers there again!$"
 
 FloaromaTown_EventScript_SNGracideaDone::
 	msgbox FloaromaTown_Text_SNGracideaLong, MSGBOX_DEFAULT

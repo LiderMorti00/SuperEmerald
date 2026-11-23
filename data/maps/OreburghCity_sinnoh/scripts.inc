@@ -17,8 +17,8 @@ OreburghCity_EventScript_PtNpc2::
 	end
 
 OreburghCity_Text_PtNpc2::
-	.string "The GYM LEADER went off to work in the\n"
-	.string "mine.$"
+	.string "ROARK, our GYM LEADER, works in the\n"
+	.string "mine whenever he isn't at the GYM.$"
 
 OreburghCity_EventScript_PtNpc3::
 	msgbox OreburghCity_Text_PtNpc3, MSGBOX_NPC
@@ -35,9 +35,9 @@ OreburghCity_EventScript_PtNpc4::
 	end
 
 OreburghCity_Text_PtNpc4::
-	.string "Is that guy in front of the GYM your\n"
-	.string "friend?\p"
-	.string "He's sort of twitchy and impatient.$"
+	.string "Have you met ROARK yet?\p"
+	.string "He may be young, but he's one tough\n"
+	.string "GYM LEADER!$"
 
 OreburghCity_EventScript_PtNpc5::
 	msgbox OreburghCity_Text_PtNpc5, MSGBOX_NPC

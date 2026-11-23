@@ -275,9 +275,9 @@ VermilionCity_Text_DidYouSeeSSAnneInHarbor::
 	.string "in the harbor?$"
 
 VermilionCity_Text_SSAnneHasDepartedForYear::
-	.string "So, the S.S. ANNE has departed?\p"
-	.string "She'll be back in VERMILION about\n"
-	.string "this time next year.$"
+	.string "The S.S. ANNE is in port!\p"
+	.string "She only visits VERMILION about\n"
+	.string "this time every year.$"
 
 VermilionCity_Text_BuildingOnThisLand::
 	.string "I'm putting up a building on this\n"
@@ -302,10 +302,10 @@ VermilionCity_Text_CitySign::
 
 VermilionCity_Text_SnorlaxBlockingRoute12::
 	.string "NOTICE!\p"
-	.string "ROUTE 12 may be blocked off by a\n"
-	.string "sleeping POKéMON.\p"
-	.string "Detour through ROCK TUNNEL to\n"
-	.string "LAVENDER TOWN.\p"
+	.string "Sleeping POKéMON have blocked roads\n"
+	.string "around VERMILION before.\p"
+	.string "If ROUTE 12 is blocked, detour\n"
+	.string "through ROCK TUNNEL to LAVENDER.\p"
 	.string "VERMILION POLICE$"
 
 VermilionCity_Text_PokemonFanClubSign::

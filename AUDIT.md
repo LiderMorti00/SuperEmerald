@@ -309,3 +309,55 @@ The Sinnoh comparison covered the two plaque states at all eight gyms. Seven dis
 
 - Read and checked the gate, Cliff Edge Cave, Routes 47 and 48, and Embedded Tower. Traced the gate and cave exits, four paired trainers, Route 47 pickups, shared wildlife scripts and the hidden Rayquaza encounter.
 - The gate gives the route numbers and explains the Safari Balls. The cave visitor describes the ladders. The tower historian stays available independently of the imported Viridian Gym flag. Runtime traversal remains pending.
+
+## Full narrative pass: Kanto, Sevii Islands, Johto and Sinnoh
+
+Every map directory ending in `_Frlg` (410), `_hns` (240) and `_sinnoh` (401) was dumped with
+`/tmp/se/dump.py`, which applies the regional world-state initializers
+(`se_postgame.inc`, `se_johto_state.inc`, `se_sinnoh_state.inc`), drops objects whose hide flag
+those initializers set, prunes script branches decided by known flags and variables, skips
+coordinate events whose trigger variable can no longer match, and prints every text that a
+visible NPC, sign or trigger can still show. All 849 maps with reachable content (306 Kanto and
+Sevii, 201 Johto, 321 Sinnoh) were read in full. Trainer battle text was filtered by story
+keywords. Hoenn maps were scanned for Super Emerald additions and for text that names another
+region's places, because the Hoenn story itself is played as in Emerald.
+
+Fixed in this pass:
+
+- Kanto: the Viridian GYM, Oak's Sinnoh-starter and Shiny Charm lines now match the HGSS
+  league (Lance is CHAMPION, Red waits on Mt. Silver, three regions conquered). Blue no longer
+  mentions a Cinnabar meeting that does not happen. Fuchsia's GYM guide, lass and Safari
+  warden refer to Janine. Lorelei and Agatha are described as former ELITE FOUR members, Lance
+  as CHAMPION. Present-tense Rocket references in Cerulean, Route 4, Lavender, Vermilion,
+  Saffron's letter, Pewter, Silph 5F/8F, Mt. Moon and the S.S. Anne now describe the past. The
+  Game Corner signs no longer call it the Rocket Game Corner.
+- Cerulean robbed house: the hiker now gives TM28 (the grunt who returned it is hidden).
+- Two Island: the shop starts with its full stock (`VAR_MAP_SCENE_TWO_ISLAND` = 4), and Lostelle
+  no longer greets the visitor as her rescuer. Kanto state version 6.
+- Five Island: the meadow boy, fisher and landowner thank the CHAMPION once the warehouse step
+  of the Rocket quest is done.
+- Vermilion: the S.S. Anne old man and the Snorlax notice match the docked ship and the clear
+  road. Saffron NPCs no longer mention a Viridian contest hall, the Power Plant machine part or
+  the Copycat house being replaced by the station.
+- Johto: Azalea (charcoal kiln, Kurt's granddaughter), Mahogany (Pokémon Center, shop, house,
+  gramps), Lake of Rage, Route 43 and the Radio Tower 3F now match the cleared Slowpoke Well,
+  Gyarados and Radio Tower events. Rocket lines stay while the matching quest step is active.
+  Bill's mother, the Goldenrod beauty, the name rater's TV news, the flower shop, Violet's
+  Sudowoodo rumor, Elm's wife, the New Bark neighbor, Blackthorn's cooltrainer and Meara on
+  Mt. Silver were rewritten. The Goldenrod coin clerk now says GOLDENROD GAME CORNER instead of
+  Mauville.
+- Sinnoh: Mt. Coronet and Galactic HQ grunt trainers are hidden after the story
+  (`FLAG_SN_HIDE_SP_GRUNT1`); the tunnel room keeps the reformed trainers written in the
+  earlier pass. Charon no longer stands in the HQ control room while he hides in the
+  warehouse. The Galactic speech hall is hidden and its flags set; `FLAG_SN_GALACTIC_LEFT_LAKE_VALOR`
+  is set so HQ staff use their post-story lines. Sinnoh state version 5.
+- Sinnoh: the Celestic elder gives HM SURF without the hidden Cyrus battle. The Mt. Coronet 2F
+  Looker double is now a hiker who gives the Black Flute. Eterna, Floaroma, Galactic HQ, Route
+  210 café, Route 215 gate, Route 206 (Dawn's father), Oreburgh, Twinleaf, Solaceon Ruins and
+  Spring Path NPCs were rewritten for the post-story state. Placeholder words from Platinum
+  ("a that") were replaced in Jubilife TV, Veilstone, Solaceon, Route 208 and Turnback Cave.
+  The Route 208 Berry Master points to Floaroma instead of Rustboro, and the coin seller shared
+  by Celadon and Veilstone no longer names Celadon.
+
+Checked in ROM: Goldenrod coin clerk and Celestic elder gift. `make check-se` reports 0
+problems and no changed text exceeds the 216-pixel message box.

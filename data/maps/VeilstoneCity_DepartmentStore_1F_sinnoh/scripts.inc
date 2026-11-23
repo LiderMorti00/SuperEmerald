@@ -42,9 +42,9 @@ VeilstoneCity_DepartmentStore_1F_EventScript_PtNpc4::
 	end
 
 VeilstoneCity_DepartmentStore_1F_Text_PtNpc4::
-	.string "It's a that.\p"
+	.string "Look at this Seal!\p"
 	.string "It will give your POKéMON a different\n"
-	.string "look for CONTESTS.$"
+	.string "look when it comes out of its BALL.$"
 
 VeilstoneCity_DepartmentStore_1F_EventScript_PtNpc5::
 	lock

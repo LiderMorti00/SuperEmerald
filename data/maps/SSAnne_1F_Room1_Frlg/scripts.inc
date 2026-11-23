@@ -8,6 +8,6 @@ SSAnne_1F_Room1_EventScript_Gentleman::
 SSAnne_1F_Room1_Text_ImAGlobalPoliceAgent::
 	.string "Ssh…!\n"
 	.string "I'm a GLOBAL POLICE agent.\p"
-	.string "I'm on the trail of TEAM ROCKET.\n"
-	.string "They're up to nothing good!$"
+	.string "I'm keeping an eye on what's left of\n"
+	.string "TEAM ROCKET. Don't tell anyone!$"
 

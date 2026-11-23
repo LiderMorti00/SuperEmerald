@@ -245,8 +245,8 @@ Text_SubstituteTaught::
 	.string "a KANGASKHAN belly pouch…$"
 
 FuchsiaCity_Text_MyFatherIsGymLeader::
-	.string "My father is the GYM LEADER of\n"
-	.string "this town.\p"
-	.string "I'm training to use POISON POKéMON\n"
-	.string "as well as my father.$"
+	.string "My big sister JANINE is the GYM\n"
+	.string "LEADER of this town now.\p"
+	.string "Her father KOGA joined the ELITE\n"
+	.string "FOUR, so she took over the GYM!$"
 

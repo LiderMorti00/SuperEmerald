@@ -6,6 +6,10 @@ CeruleanCity_House2_EventScript_Hiker::
 	faceplayer
 	goto_if_set FLAG_GOT_TM28_FROM_ROCKET, CeruleanCity_House2_EventScript_HikerGotTM28
 	msgbox CeruleanCity_House2_Text_RocketsStoleTMForDig
+	giveitem ITEM_TM28
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_GOT_TM28_FROM_ROCKET
+	msgbox CeruleanCity_House2_Text_TeachDiglettDigWithoutTM
 	release
 	end
 
@@ -23,24 +27,21 @@ CeruleanCity_House2_EventScript_WallHole::
 	end
 
 CeruleanCity_House2_Text_RocketsStoleTMForDig::
-	.string "Those miserable ROCKETS!\p"
-	.string "Look what they've done to my\n"
-	.string "house!\p"
-	.string "They stole a TM for teaching\n"
-	.string "POKéMON how to DIG holes!\p"
-	.string "I was going to use it on a\n"
-	.string "MANKEY or a SANDSHREW…\p"
-	.string "That cost me a bundle, it did!$"
+	.string "Years ago, TEAM ROCKET broke into\n"
+	.string "my house and stole a TM for DIG!\p"
+	.string "The POLICE got it back for me,\n"
+	.string "but I don't need it anymore.\p"
+	.string "You look like a strong TRAINER.\n"
+	.string "Here, you can have it!$"
 
 CeruleanCity_House2_Text_TeachDiglettDigWithoutTM::
-	.string "I figure what's lost is lost.\p"
-	.string "I decided to teach DIGLETT how to\n"
-	.string "DIG without a TM.$"
+	.string "My DIGLETT learned how to DIG\n"
+	.string "without a TM. It works just fine!$"
 
 CeruleanCity_House2_Text_TeamRocketTryingToDigIntoNoGood::
-	.string "TEAM ROCKET must be trying to DIG\n"
-	.string "their way into no good!$"
+	.string "TEAM ROCKET dug right through our\n"
+	.string "wall back then. We never fixed it.$"
 
 CeruleanCity_House2_Text_TeamRocketLeftWayOut::
-	.string "TEAM ROCKET left a way out!$"
+	.string "A hole TEAM ROCKET dug long ago.$"
 

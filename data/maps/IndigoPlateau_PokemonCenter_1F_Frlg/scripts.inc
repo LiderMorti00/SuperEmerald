@@ -101,9 +101,9 @@ IndigoPlateau_PokemonCenter_1F_Text_AgathaWhuppedUs::
 	.string "they couldn't do a thing!$"
 
 IndigoPlateau_PokemonCenter_1F_Text_LancesCousinGymLeaderFarAway::
-	.string "Maybe becoming an ELITE FOUR\n"
-	.string "member is in the blood.\p"
+	.string "Maybe being a DRAGON master is in\n"
+	.string "the blood.\p"
 	.string "From what I've heard, LANCE has\n"
-	.string "a cousin who's a GYM LEADER\l"
-	.string "somewhere far away.$"
+	.string "a cousin, CLAIR, who's the GYM\l"
+	.string "LEADER of BLACKTHORN CITY.$"
 

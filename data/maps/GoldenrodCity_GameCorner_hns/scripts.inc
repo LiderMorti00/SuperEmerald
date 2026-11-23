@@ -130,3 +130,18 @@ GoldenrodCity_GameCorner_EventScript_VF_NoCoinCase::
 
 GoldenrodCity_GameCorner_Text_VF_NeedCoinCase::
 	.string "Oh? You don't have a COIN CASE.$"
+
+GoldenrodCity_GameCorner_EventScript_CoinsClerk::
+	lock
+	faceplayer
+	msgbox GoldenrodCity_GameCorner_Text_ThisIsGoldenrodGameCorner, MSGBOX_DEFAULT
+	checkitem ITEM_COIN_CASE
+	goto_if_eq VAR_RESULT, FALSE, MauvilleCity_GameCorner_EventScript_NeedCoinCase
+	message MauvilleCity_GameCorner_Text_WereYouLookingForCoins
+	waitmessage
+	showmoneybox 0, 0
+	showcoinsbox 0, 5
+	goto MauvilleCity_GameCorner_EventScript_ChooseCoinsDefault50
+
+GoldenrodCity_GameCorner_Text_ThisIsGoldenrodGameCorner::
+	.string "This is the GOLDENROD GAME CORNER.$"

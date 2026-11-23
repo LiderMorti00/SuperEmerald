@@ -60,8 +60,9 @@ SE_J_LakeOfRage_hns_LakeOfRage_EventScript_Lance::
 	end
 
 LakeOfRage_Text_Gramps::
-    .string "The GYARADOS are angry!\p"
-    .string "It's a bad omen!$"
+	.string "The GYARADOS here went on a\n"
+	.string "rampage once. A bad omen, it was!\p"
+	.string "Thankfully, the LAKE is calm again.$"
 
 SE_J_LakeOfRage_hns_LakeOfRage_EventScript_Gramps::
 	msgbox LakeOfRage_Text_Gramps, MSGBOX_NPC
@@ -153,11 +154,9 @@ LakeOfRage_EventScript_Nerd::
 	end
 
 LakeOfRage_Text_SuperNerd::
-    .string "I heard this lake was made by\n"
-    .string "rampaging GYARADOS.\p"
-    .string "I wonder if there is any\n"
-    .string "connection to their mass outbreak\l"
-    .string "now?$"
+	.string "I heard this lake was made by\n"
+	.string "rampaging GYARADOS.\p"
+	.string "I wonder if that's really true?$"
 
 LakeOfRage_EventScript_Dragonite::
 	lock

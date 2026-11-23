@@ -12,11 +12,10 @@ EternaCity_PokemonCenter_F1_EventScript_PtNpc1::
 	end
 
 EternaCity_PokemonCenter_F1_Text_PtNpc1::
-	.string "TEAM GALACTIC took my POKéMON away.\n"
-	.string "They took other people's, too.\p"
-	.string "Something should be done, but TEAM\n"
-	.string "GALACTIC creeps everyone out…\p"
-	.string "What are they doing to my POKéMON?$"
+	.string "TEAM GALACTIC took my POKéMON away\n"
+	.string "once. They took other people's, too.\p"
+	.string "After they broke up, I finally got\n"
+	.string "it back. Thank goodness!$"
 
 EternaCity_PokemonCenter_F1_EventScript_PtNpc2::
 	msgbox EternaCity_PokemonCenter_F1_Text_PtNpc2, MSGBOX_NPC

@@ -7,18 +7,18 @@ TurnbackCave_Pillar1_EventScript_PtSign1::
 	end
 
 TurnbackCave_Pillar1_Text_PtSign1::
-	.string "that that$"
+	.string "The first pillar…$"
 
 TurnbackCave_Pillar1_EventScript_PtSign2::
 	msgbox TurnbackCave_Pillar1_Text_PtSign2, MSGBOX_SIGN
 	end
 
 TurnbackCave_Pillar1_Text_PtSign2::
-	.string "that that$"
+	.string "The first pillar…$"
 
 TurnbackCave_Pillar1_EventScript_PtSign3::
 	msgbox TurnbackCave_Pillar1_Text_PtSign3, MSGBOX_SIGN
 	end
 
 TurnbackCave_Pillar1_Text_PtSign3::
-	.string "that that$"
+	.string "The first pillar…$"

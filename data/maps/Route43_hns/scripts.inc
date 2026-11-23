@@ -8,8 +8,8 @@ Route43_EventScript_Spencer::
 	end
 
 Route43_Text_CamperSpencerAfter::
-    .string "What is going on at LAKE OF RAGE?\p"
-    .string "We were planning to camp there.$"
+	.string "The LAKE OF RAGE is calm again.\n"
+	.string "We're going to camp there tonight!$"
 
 Route43_Text_CamperSpencerBeaten::
     .string "Losing isn't fun at all…$"
@@ -121,10 +121,10 @@ Route43_Text_PokemaniacRonBeaten::
     .string "My NIDOKING did pretty right on!$"
 
 Route43_Text_PokemaniacRonSeen::
-    .string "Would you get this?\p"
-    .string "Some {RIVAL} guy made fun of my\n"
-    .string "POKéMON!\p"
-    .string "Darn it! My POKéMON's great!$"
+	.string "Would you get this?\p"
+	.string "Some rude TRAINER made fun of my\n"
+	.string "POKéMON!\p"
+	.string "Darn it! My POKéMON's great!$"
 
 Route43_EventScript_Brent::
 	trainerbattle_single TRAINER_BRENT_HNS, Route43_Text_PokemaniacBrentSeen, Route43_Text_PokemaniacBrentBeaten, Route43_EventScript_RegisterBrent

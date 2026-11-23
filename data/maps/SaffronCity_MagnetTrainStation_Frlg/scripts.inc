@@ -11,10 +11,9 @@ SE_KH_SaffronCity_MagnetTrainStation_Frlg_Teacher::
 	end
 
 SE_KH_SaffronCity_MagnetTrainStation_Frlg_Teacher_Text:
-	.string "Before the MAGNET TRAIN STATION\n"
-	.string "was built, there was a house there.\p"
-	.string "A little girl named COPYCAT used\n"
-	.string "to live there.$"
+	.string "Thanks to the MAGNET TRAIN, KANTO\n"
+	.string "and JOHTO are just a short ride\l"
+	.string "apart now.$"
 
 SE_KH_SaffronCity_MagnetTrainStation_Frlg_Lass::
 	msgbox SE_KH_SaffronCity_MagnetTrainStation_Frlg_Lass_Text, MSGBOX_NPC

@@ -232,9 +232,8 @@ GoldenrodCity_EventScript_Beauty::
 
 GoldenrodCity_Text_Beauty::
 	.string "This is the GOLDENROD GYM!\p"
-	.string "Our leader WHITNEY is not here\n"
-	.string "right now. She might be at the\l"
-	.string "RADIO TOWER.$"
+	.string "Our leader WHITNEY is the cutest\n"
+	.string "GYM LEADER in all of JOHTO!$"
 
 GoldenrodCity_EventScript_SignRadio::
 	lock

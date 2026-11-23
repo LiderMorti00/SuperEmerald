@@ -25,8 +25,9 @@ NewBarkTown_House2_EventScript_ElmsWife::
 	end
 
 NewBarkTown_House2_Text_ElmsWife::
-	.string "Hi, {PLAYER}! My husband's always\n"
-	.string "so busy--I hope he's OK.\p"
-	.string "When he's caught up in his\n"
-	.string "POKéMON research, he even\l"
-	.string "forgets to eat.$"
+	.string "Oh, hello! You're the TRAINER from\n"
+	.string "HOENN, aren't you?\p"
+	.string "My husband's always so busy--I hope\n"
+	.string "he's OK.\p"
+	.string "When he's caught up in his POKéMON\n"
+	.string "research, he even forgets to eat.$"

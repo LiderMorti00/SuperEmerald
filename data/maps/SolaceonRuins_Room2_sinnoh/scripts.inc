@@ -7,7 +7,6 @@ SolaceonRuins_Room2_EventScript_PtNpc1::
 	end
 
 SolaceonRuins_Room2_Text_PtNpc1::
-	.string "I've finally got DEFOG, and it's all\n"
-	.string "thanks to you.\p"
-	.string "I'll get to climbing the LOST TOWER now\n"
-	.string "that I've got it.$"
+	.string "I've finally got DEFOG!\p"
+	.string "I'll get to climbing the LOST TOWER\n"
+	.string "now that I've got it.$"

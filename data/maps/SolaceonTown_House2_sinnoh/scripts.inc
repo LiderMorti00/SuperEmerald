@@ -7,7 +7,7 @@ SolaceonTown_House2_EventScript_PtNpc1::
 	end
 
 SolaceonTown_House2_Text_PtNpc1::
-	.string "Your POKéMON has a that nature?\p"
+	.string "Do you know your POKéMON's nature?\p"
 	.string "Did you know that a POKéMON's nature\n"
 	.string "determines how it will grow?$"
 

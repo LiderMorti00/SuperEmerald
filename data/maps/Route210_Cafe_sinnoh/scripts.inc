@@ -91,12 +91,12 @@ Route210_Cafe_EventScript_PtNpc3::
 	end
 
 Route210_Cafe_Text_PtNpc3_0::
-	.string "Youngster, you've seen the PSYDUCK\n"
-	.string "huddled outside?\p"
-	.string "PSYDUCK are POKéMON that suffer from\n"
-	.string "chronic headaches…\p"
-	.string "I'm afraid we'll have to wait for them\n"
-	.string "to get better.$"
+	.string "Youngster, did you hear about the\n"
+	.string "PSYDUCK that used to huddle outside?\p"
+	.string "PSYDUCK suffer from chronic\n"
+	.string "headaches, you know…\p"
+	.string "Thankfully, those ones got better\n"
+	.string "and went on their way.$"
 
 Route210_Cafe_EventScript_PtNpc3_RelievedPsyduckOfHeadaches::
 	msgbox Route210_Cafe_Text_PtNpc3_1, MSGBOX_DEFAULT

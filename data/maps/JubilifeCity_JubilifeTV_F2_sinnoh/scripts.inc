@@ -34,7 +34,7 @@ JubilifeCity_JubilifeTV_F2_EventScript_PtNpc4::
 	end
 
 JubilifeCity_JubilifeTV_F2_Text_PtNpc4::
-	.string "That's a that!\p"
+	.string "That's a fine look!\p"
 	.string "I hope you get into collecting\n"
 	.string "Accessories for your POKéMON!$"
 

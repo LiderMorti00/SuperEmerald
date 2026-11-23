@@ -8,15 +8,11 @@ MtSilver_PokemonCenter_hns_OnTransition:
 
 
 MtSilver_PokemonCenter_Text_Meara1::
-	.string "I'm a researcher from… Uhh…\n"
-	.string "the PEWTER CITY museum!\p"
-	.string "An unusual amount of artifacts have\n"
-	.string "been discovered in this area, so\l"
-	.string "I've come here to investigate.\p"
-	.string "Have you found anything strange\n"
-	.string "in the mountain?\p"
-	.string "Maybe something like a FLUTE?\p"
-	.string "If you do, please show me.$"
+	.string "I'm a researcher from the PEWTER\n"
+	.string "MUSEUM.\p"
+	.string "An unusual number of artifacts have\n"
+	.string "been found around MT. SILVER.\p"
+	.string "So I've come here to investigate.$"
 
 SE_J_MtSilver_PokemonCenter_hns_MtSilver_PokemonCenter_EventScript_Meara::
 	msgbox MtSilver_PokemonCenter_Text_Meara1, MSGBOX_NPC

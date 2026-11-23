@@ -7,7 +7,7 @@ Route215_Access_EventScript_PtNpc1::
 	end
 
 Route215_Access_Text_PtNpc1::
-	.string "I wanted to go to CELESTIC TOWN, but\n"
-	.string "there were some POKéMON in the way.\p"
-	.string "Who knows why they're there, but\n"
-	.string "they're not budging.$"
+	.string "Some PSYDUCK used to block the way\n"
+	.string "to CELESTIC TOWN.\p"
+	.string "They've finally moved on, so I can\n"
+	.string "get going at last!$"

@@ -49,14 +49,10 @@ GalacticHQ_B2F_EventScript_PtNpc1::
 	end
 
 GalacticHQ_B2F_Text_PtNpc1_0::
-	.string "OK, to get into Master CYRUS's speech…\n"
-	.string "Uh, where was it now?\p"
-	.string "At the GALACTIC VEILSTONE Building,\n"
-	.string "that much I'm sure about.\p"
-	.string "Go in through the door beside the\n"
-	.string "reception counter, I think it was?\p"
-	.string "Uh? What'd I do with that key anyway?\n"
-	.string "Where's it gone?$"
+	.string "Master CYRUS's speech… That feels\n"
+	.string "like ages ago.\p"
+	.string "Now there's nobody left to give us\n"
+	.string "orders around here.$"
 
 GalacticHQ_B2F_EventScript_PtNpc2::
 	lock
@@ -66,7 +62,7 @@ GalacticHQ_B2F_EventScript_PtNpc2::
 	end
 
 GalacticHQ_B2F_Text_PtNpc2_0::
-	.string "TEAM GALACTIC will set free all POKéMON,\n"
-	.string "all of nature!\p"
-	.string "Uwahahaha! TEAM GALACTIC will then own\n"
-	.string "it all!$"
+	.string "TEAM GALACTIC was going to set free\n"
+	.string "all POKéMON, and then own it all!\p"
+	.string "Now look at us. We're just cleaning\n"
+	.string "up the labs.$"

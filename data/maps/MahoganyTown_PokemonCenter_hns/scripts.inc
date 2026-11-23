@@ -8,6 +8,7 @@ MahoganyTown_PokemonCenter_hns_OnTransition:
 
 
 MahoganyTown_PokemonCenter_EventScript_Hiker::
+	goto_if_ne VAR_SE_ROCKET_QUEST, 1, SE_MahoganyPC_HikerCalm_Script
 	msgbox MahoganyTown_PokemonCenter_Text_PokefanM, MSGBOX_NPC
 	end
 
@@ -36,3 +37,12 @@ MahoganyTown_PokemonCenter_Text_CooltrainerF::
     .string "evolve,\p"
     .string "but they also learn moves more\n"
     .string "slowly.$"
+
+SE_MahoganyPC_HikerCalm_Script::
+	msgbox SE_MahoganyPC_HikerCalm_Text, MSGBOX_NPC
+	end
+
+SE_MahoganyPC_HikerCalm_Text::
+	.string "TEAM ROCKET had a hideout right\n"
+	.string "here in MAHOGANY once.\p"
+	.string "Hard to believe, isn't it?$"

@@ -11,8 +11,8 @@ MtCoronet_2F_EventScript_PtNpc1::
 	end
 
 MtCoronet_2F_Text_PtNpc1_0::
-	.string "LOOKER: Please! You must stop Team\n"
-	.string "GALACTIC!$"
+	.string "MT. CORONET is full of surprises.\n"
+	.string "Who knows what else is buried here?$"
 
 MtCoronet_2F_EventScript_PtNpc1_TryAgainGiveBlackFlute::
 	msgbox MtCoronet_2F_Text_PtNpc1_1, MSGBOX_DEFAULT
@@ -28,15 +28,14 @@ MtCoronet_2F_EventScript_PtNpc1_YouMustStopTeamGalactic::
 	return
 
 MtCoronet_2F_Text_PtNpc1_2::
-	.string "LOOKER: Please! You must stop Team\n"
-	.string "GALACTIC!$"
+	.string "MT. CORONET is full of surprises.\n"
+	.string "Who knows what else is buried here?$"
 
 MtCoronet_2F_Text_PtNpc1_1::
-	.string "LOOKER: Please, stop TEAM GALACTIC! For\n"
-	.string "only you are able!\p"
-	.string "All I can do now is give you this.\p"
-	.string "It is a little something I obtained in\n"
-	.string "an investigation long ago.$"
+	.string "Phew… These tunnels go on forever.\p"
+	.string "I found this odd flute while I was\n"
+	.string "digging. I've no use for it, though.\p"
+	.string "Here, you can have it.$"
 
 MtCoronet_2F_EventScript_SNLooker::
 	lock

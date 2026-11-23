@@ -176,7 +176,7 @@ CeladonCity_Text_PrizeExchangeSign::
 	.string "PRIZE EXCHANGE$"
 
 CeladonCity_Text_GameCornerSign::
-	.string "ROCKET GAME CORNER\n"
+	.string "CELADON GAME CORNER\n"
 	.string "The playground for grown-ups!$"
 
 CeladonCity_Text_ScaldedTongueOnTea::

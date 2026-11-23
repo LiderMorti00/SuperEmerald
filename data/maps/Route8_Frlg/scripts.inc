@@ -57,10 +57,10 @@ Route8_Text_LeslieDefeat::
 	.string "I should stick with school.$"
 
 Route8_Text_LesliePostBattle::
-	.string "I was planning on getting some\n"
-	.string "fresh air for a change, but…\p"
-	.string "We're stuck here because of the\n"
-	.string "gates at SAFFRON.$"
+	.string "I was planning on getting some fresh\n"
+	.string "air for a change, but…\p"
+	.string "I keep getting lost in SAFFRON's\n"
+	.string "busy streets.$"
 
 Route8_Text_AndreaIntro::
 	.string "MEOWTH is so cute, meow, meow,\n"

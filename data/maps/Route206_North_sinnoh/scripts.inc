@@ -58,14 +58,12 @@ Route206_North_EventScript_SNDawnFather_NotYetT::
 	.string "complete the SINNOH POKéDEX.$"
 
 Route206_North_EventScript_SNDawnFather_T1::
-	.string "{PLAYER}, long time, no see!\p"
-	.string "Oh? You look puzzled. You're wondering\n"
-	.string "who I am.\p"
+	.string "Hello! You must be {PLAYER}, the\n"
+	.string "TRAINER from HOENN.\p"
 	.string "I'm PROFESSOR ROWAN's assistant and\n"
 	.string "DAWN's father.\p"
-	.string "I've come a long way to help you on\n"
-	.string "your adventure at the professor's\p"
-	.string "behest.\p"
+	.string "The professor asked me to help\n"
+	.string "TRAINERS on their adventures.\p"
 	.string "{PLAYER}, let me ask you, how many\n"
 	.string "POKéMON have you met?$"
 
@@ -74,14 +72,12 @@ Route206_North_EventScript_SNDawnFather_G_L::
 	goto Route206_North_EventScript_SNDawnFather_G_N
 
 Route206_North_EventScript_SNDawnFather_T1L::
-	.string "{PLAYER}, long time, no see!\p"
-	.string "Oh? You look puzzled. You're wondering\n"
-	.string "who I am.\p"
+	.string "Hello! You must be {PLAYER}, the\n"
+	.string "TRAINER from HOENN.\p"
 	.string "I'm PROFESSOR ROWAN's assistant and\n"
 	.string "LUCAS's father.\p"
-	.string "I've come a long way to help you on\n"
-	.string "your adventure at the professor's\p"
-	.string "behest.\p"
+	.string "The professor asked me to help\n"
+	.string "TRAINERS on their adventures.\p"
 	.string "{PLAYER}, let me ask you, how many\n"
 	.string "POKéMON have you met?$"
 

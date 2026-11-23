@@ -33,9 +33,10 @@ SE_KH_SaffronCity_Frlg_Youngster2::
 	end
 
 SE_KH_SaffronCity_Frlg_Youngster2_Text:
-	.string "There's a place called the CONTEST\n"
-	.string "HALL in VIRIDIAN where TRAINERS\l"
-	.string "gather from all over the place.$"
+	.string "There's a FIGHTING DOJO right next\n"
+	.string "to the GYM.\p"
+	.string "TRAINERS gather there from all\n"
+	.string "over the place.$"
 
 SE_KH_SaffronCity_Frlg_PokefanM::
 	msgbox SE_KH_SaffronCity_Frlg_PokefanM_Text, MSGBOX_NPC
@@ -70,8 +71,8 @@ SE_KH_SaffronCity_Frlg_Fisher::
 
 SE_KH_SaffronCity_Frlg_Fisher_Text:
 	.string "Chew… Chew…\p"
-	.string "I hear there was big trouble at the\n"
-	.string "POWER PLANT.\p"
+	.string "I hear a powerful ELECTRIC POKéMON\n"
+	.string "nests at the POWER PLANT.\p"
 	.string "Chew… Chew… Haaah, I'm full!$"
 
 SE_KH_SaffronCity_Frlg_CooltrainerM::

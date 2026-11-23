@@ -113,15 +113,13 @@ ViridianCity_Gym_EventScript_GymStatuePostVictory::
 
 ViridianCity_Gym_Text_GiovanniIntro::
 	.string "BLUE: Yo! Finally got here, huh?\p"
-	.string "I'm BLUE, the LEADER of this GYM.\n"
-	.string "I wasn't in the mood at CINNABAR,\l"
-	.string "but now I'm ready to battle you.\p"
+	.string "I'm BLUE, the LEADER of this GYM.\p"
 	.string "…You're telling me you conquered\n"
 	.string "all the GYMS in KANTO?\p"
 	.string "Heh! And the HOENN LEAGUE too?\n"
 	.string "Then don't hold back.\p"
-	.string "I'm going to show you why I was\n"
-	.string "once the CHAMPION!$"
+	.string "I'm going to show you why I was once\n"
+	.string "the CHAMPION!$"
 
 ViridianCity_Gym_Text_GiovanniDefeat::
 	.string "What?\n"
@@ -134,17 +132,18 @@ ViridianCity_Gym_Text_GiovanniPostBattle::
 	.string "BLUE: …Listen, you.\p"
 	.string "You'd better not get too cocky just\n"
 	.string "because you beat me.\p"
-	.string "With all eight KANTO BADGES, you\n"
-	.string "can take on the POKéMON LEAGUE.\p"
-	.string "LANCE is waiting at the LEAGUE.\p"
-	.string "Think you can take his dragons?\n"
-	.string "Go find out!$"
+	.string "With all eight KANTO BADGES, LANCE\n"
+	.string "will take you on at full power.\p"
+	.string "And there's someone on MT. SILVER…\n"
+	.string "RED. The one guy I could never beat.\p"
+	.string "Go see for yourself how strong\n"
+	.string "he is!$"
 
 ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis::
 	.string "BLUE: The EARTHBADGE is proof that\n"
 	.string "you beat every GYM in KANTO.\p"
-	.string "With it, you can challenge the\n"
-	.string "POKéMON LEAGUE.\p"
+	.string "With it, you can face the stronger\n"
+	.string "ELITE FOUR and enter MT. SILVER.\p"
 	.string "Here, take this TM too.$"
 
 ViridianCity_Gym_Text_ReceivedTM26FromGiovanni::

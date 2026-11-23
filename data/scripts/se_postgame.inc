@@ -339,8 +339,10 @@ SFR_Text_Piplup:
 	.string "PIPLUP$"
 
 SFR_Text_OakSinnohStarterIntro:
-	.string "OAK: {PLAYER}! Well done!\n"
-	.string "You're the CHAMPION of KANTO, too!\p"
+	.string "OAK: {PLAYER}! You beat the LEAGUE\n"
+	.string "with all sixteen BADGES!\p"
+	.string "HOENN, JOHTO and KANTO…\n"
+	.string "Three regions! Remarkable!\p"
 	.string "To celebrate, I have a gift for you.\p"
 	.string "A friend of mine, PROF. ROWAN, sent\n"
 	.string "me three POKéMON from SINNOH.\p"
@@ -364,8 +366,9 @@ SFR_Text_OakAfterSinnohStarter:
 	.string "I'd like you to have.$"
 
 SFR_Text_OakShinyCharm:
-	.string "OAK: You've come a long way since\n"
-	.string "we met at the docks.\p"
+	.string "OAK: A TRAINER who has conquered\n"
+	.string "three regions deserves something\l"
+	.string "special.\p"
 	.string "Please, take this!$"
 
 SFR_Text_OakExplainShinyCharm:
@@ -705,6 +708,7 @@ SE_EventScript_KantoWorldState::
 	setflag FLAG_HIDE_ONE_ISLAND_POKECENTER_BILL
 	@ Two and Three Island: Lostelle is home, the bikers are gone
 	setvar VAR_MAP_SCENE_TWO_ISLAND_JOYFUL_GAME_CORNER, 4
+	setvar VAR_MAP_SCENE_TWO_ISLAND, 4
 	setflag FLAG_RESCUED_LOSTELLE
 	setflag FLAG_GOT_MOON_STONE_FROM_JOYFUL_GAME_CORNER
 	setflag FLAG_HIDE_LOSTELLE_IN_BERRY_FOREST

@@ -7,7 +7,6 @@ CelesticTown_Ruins_EventScript_SNElder::
 	lock
 	faceplayer
 	goto_if_set FLAG_SN_RECEIVED_HM_SURF, CelesticTown_Ruins_EventScript_SNElderDone
-	goto_if_not_defeated TRAINER_ELLIOT_2_SINNOH, CelesticTown_Ruins_EventScript_SNElderDone
 	msgbox CelesticTown_Ruins_Text_SNElder1, MSGBOX_DEFAULT
 	giveitem ITEM_HM_SURF
 	setflag FLAG_SN_RECEIVED_HM_SURF
@@ -16,31 +15,26 @@ CelesticTown_Ruins_EventScript_SNElder::
 	end
 
 CelesticTown_Ruins_Text_SNElder2::
-	.string "Elder: If a POKéMON learns SURF, it can\n"
-	.string "carry you across water and the sea.\p"
-	.string "You've been a great help. That's my\n"
-	.string "thanks for it.$"
+	.string "Elder: If a POKéMON learns SURF, it\n"
+	.string "can carry you across water and the\l"
+	.string "sea. Please, use it well.$"
 
 CelesticTown_Ruins_Text_SNElder1::
 	.string "Elder: That cave painting isn't\n"
 	.string "protected simply because it's old.\p"
 	.string "We've preserved it because we value\n"
 	.string "the memories that it represents.\p"
-	.string "It is a legacy of people and POKéMON\n"
-	.string "beyond measure.\p"
-	.string "A man who fails to understand that…\n"
-	.string "What world could he dream of?\p"
-	.string "Such a strange, strange man. Spouting\n"
-	.string "such nonsense.\p"
-	.string "The time and space of SINNOH are filled\n"
-	.string "with the memories and thoughts\p"
-	.string "of countless people and POKéMON.\p"
-	.string "This is a wonderful world. What need is\n"
-	.string "there to change it?\p"
-	.string "Oh, yes. I found something useful. You\n"
-	.string "should take this.\p"
-	.string "It belonged to my granddaughter, but\n"
-	.string "she doesn't use it anymore.$"
+	.string "A strange man once came here who\n"
+	.string "failed to understand that.\p"
+	.string "He wanted to change the world…\n"
+	.string "What need is there to change it?\p"
+	.string "The time and space of SINNOH are\n"
+	.string "filled with the memories of\l"
+	.string "countless people and POKéMON.\p"
+	.string "Oh, yes. You came all the way from\n"
+	.string "HOENN, didn't you? Take this.\p"
+	.string "It belonged to my granddaughter,\n"
+	.string "but she doesn't use it anymore.$"
 
 CelesticTown_Ruins_EventScript_SNElderDone::
 	msgbox CelesticTown_Ruins_Text_PtNpc1_0, MSGBOX_DEFAULT

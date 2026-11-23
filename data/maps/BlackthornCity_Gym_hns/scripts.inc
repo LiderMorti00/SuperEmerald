@@ -25,9 +25,9 @@ BlackthornGym_EventScript_Paul::
 	end
 
 BlackthornGym_Text_CooltrainermPaulAfterBattleText::
-    .string "LANCE told you that he'd like to\n"
-    .string "see you again?\p"
-    .string "Not a chance!$"
+	.string "You know LANCE, CLAIR's cousin?\n"
+	.string "Don't think that gets you any\l"
+	.string "special treatment here!$"
 
 BlackthornGym_Text_CooltrainermPaulBeatenText::
     .string "My dragon POKéMON lost?$"

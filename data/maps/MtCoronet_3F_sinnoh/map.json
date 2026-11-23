@@ -26,7 +26,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "MtCoronet_3F_EventScript_Grunt",
-      "flag": "0"
+      "flag": "FLAG_SN_HIDE_SP_GRUNT1"
     },
     {
       "type": "object",
@@ -40,7 +40,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "MtCoronet_3F_EventScript_Grunt2",
-      "flag": "0"
+      "flag": "FLAG_SN_HIDE_SP_GRUNT1"
     }
   ],
   "warp_events": [

@@ -455,11 +455,10 @@ CeruleanCity_Text_PokemonEncyclopediaAmusing::
 	.string "POKéMON? That sounds amusing.$"
 
 CeruleanCity_Text_PeopleHereWereRobbed::
-	.string "The people here were robbed.\p"
-	.string "It's obvious that TEAM ROCKET is\n"
-	.string "behind this most heinous crime!\p"
-	.string "Even our POLICE FORCE has\n"
-	.string "trouble with the ROCKETS!$"
+	.string "A house here was robbed by TEAM\n"
+	.string "ROCKET a few years back.\p"
+	.string "Even our POLICE FORCE had trouble\n"
+	.string "with the ROCKETS back then!$"
 
 CeruleanCity_Text_SlowbroUseSonicboom::
 	.string "Okay! SLOWBRO!\n"

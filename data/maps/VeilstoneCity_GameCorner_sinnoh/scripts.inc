@@ -161,14 +161,11 @@ VeilstoneCity_GameCorner_EventScript_Woman::
 VeilstoneCity_GameCorner_Text_HeresSomeSlotsInfo::
 	.string "Shoot for 10! Line up those bonus\n"
 	.string "rounds!\p"
-	.string "If you accomplish the feat of\n"
-	.string "completing 10 uninterrupted bonus\l"
-	.string "rounds,\p"
-	.string "please go to the counter.\p"
-	.string "You will be presented with a fabulous\n"
-	.string "prize!\p"
-	.string "The current record sits at that\n"
-	.string "straight bonus rounds!$"
+	.string "If you complete 10 uninterrupted\n"
+	.string "bonus rounds, please go to the\l"
+	.string "counter.\p"
+	.string "You will be presented with a\n"
+	.string "fabulous prize!$"
 
 VeilstoneCity_GameCorner_EventScript_SNLooker::
 	lock
