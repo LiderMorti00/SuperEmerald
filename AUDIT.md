@@ -595,6 +595,91 @@ later without duplicating it.
 - Loading an old save: none available.
 - The Route 210 North and Route 213 pockets, until the owner's map edit.
 
+## Regression pass 4 (start: 82abda5a59)
+
+- Start: master 82abda5a59. It contains the owner's Route 210 North / Route 213 edit.
+  Porymap also dropped the redundant `"type": "object"` fields and moved `floor_number`;
+  `layouts.json` still has the same 1390 layouts with the same content.
+- Integrated branches (no commits outside master): audit/pulido-integral-2026-11 (PR #1),
+  cambios-oier, cambios-oier-tilesets, upcoming. Not integrated, upstream commits only:
+  all-contributors/add-Blackforest92 (2), upcoming-decap (30).
+
+### New accesses (owner's map design kept as is)
+
+| Map | Tiles changed | ROM walk |
+|---|---|---|
+| Route210_North_sinnoh | (84,7)–(85,7) and (66,15)–(67,15): wall → metatiles 0af/0cf, collision 0, elevation 0 | From (84,9) up to the house door, enter, leave, back down. From (66,17) up into the meadow, across it and up to PATRICK's line of sight; he challenges the player ("DRAGON TAMER PATRICK"). The ZINC ball at (81,9) is on the walkable path (code) |
+| Route213_sinnoh | (77,0)–(77,2): elevation 3, stairs, collision 0 | Up and down the stairs between (77,3) and (77,0); house 2 entered from (74,5) |
+
+### Duplicates
+
+Confirmed and fixed:
+- **Oreburgh Gate.** Two hikers stood side by side at (3,17) and (6,18), and both explained
+  ROCK SMASH and the COAL BADGE.
+  - The hiker at (6,18) keeps the HM gift. His follow-up line now says the HOENN BADGES
+    already allow the field move, which is how this game works.
+  - The hiker at (3,17) now points to the basement (treasure, ROCK SMASH, STRENGTH).
+  - The badge-dependent branch (SE_OreburghGateHiker_NoBadge) was removed; nothing else
+    used it.
+  - ROM: the new hint shows.
+- **Vermilion.** Two service sailors stand side by side and run different services:
+  - the SEAGALLOP to the SEVII ISLANDS, which needs BILL's RAINBOW PASS;
+  - the S.S. AQUA / S.S. TIDAL to OLIVINE, SLATEPORT and CANALAVE, by ticket and League flag.
+
+  The second one used to open straight on "Where would you like to sail?". He now introduces
+  himself as S.S. AQUA crew and sends the player to the SEAGALLOP crew for SEVII (ROM). The
+  third sailor at (31,30) is flavour only and was kept.
+- **BYRON** stood both at the Canalave Gym and in the Iron Island house (a leftover from a
+  story scene), and **MAYLENE** both at the Veilstone Gym and in the Snowpoint Center.
+  - Both are now hidden through FLAG_SE_HIDE_IRON_ISLAND_BYRON (0x32FB) and
+    FLAG_SE_HIDE_SNOWPOINT_MAYLENE (0x32FC), set in SE_EventScript_SinnohOnTransition.
+  - Flags were used instead of deleting the objects, so no local ids shift.
+  - ROM: no Maylene in the Snowpoint Center.
+- **WALLY** waited at Hoenn's Victory Road after the HoF and in Johto at the same time.
+  - VictoryRoad_1F now hides him once Johto has been visited (FLAG_SE_JOHTO_INITIALIZED).
+  - So that his MYSTIC TICKET is never lost, the Johto and Kanto WALLY scripts also give it
+    if it was not received. The flag prevents a duplicate (code).
+
+Similar characters kept because they have distinct roles:
+- New Bark "WOMAN": Ethan's mother, not the player's.
+- DAWN: shown in Canalave only for the arrival scene.
+- The leaders at the Battleground and the Villa: they appear by day, as in Platinum.
+- CYNTHIA at Sendoff Spring: postgame flavour; the Champion Room is the battle stage.
+- LANCE in the Champion Room and the HoF: same scene.
+- Quest characters: their stages do not overlap.
+
+### CI, save format and text width
+
+- `.github/workflows/build.yml`: build-firered and build-leafgreen removed (Emerald is the
+  only target). The `build` job now needs [build-emerald, release, test].
+- Save format, measured in the game build and the test build:
+  - SaveBlock1: 15192 bytes, including the Johto/Kanto/Sinnoh extFlags block
+    (EXT_FLAGS_START 0x2000, 0x1300 flags);
+  - SaveBlock2: 3884 bytes;
+  - SaveBlock3: 924 bytes;
+  - PokemonStorage: 34144 bytes.
+
+  `test/save.c` now pins these values, so any accidental layout change fails CI.
+  `make check TESTS=SaveBlock`: 3/3 PASS.
+- Item descriptions shortened: SILVER WING ("colored feather that" was 110 px), SECRET POTION
+  (108 px) and LUNAR WING (106 px). `make check TESTS="Item descriptions"`: PASS.
+- Save round trip in ROM: save at Vermilion, close mGBA, reopen with the same .sav,
+  CONTINUE: the game resumes at the same spot. No older .sav is available, so loading a save
+  from an earlier version stays pending.
+
+### ROM size
+
+Same build configuration, before and after this pass: 33,085,364 → 33,085,360 bytes used of
+33,554,432 (98.60%), leaving 469,072 bytes free.
+
+### Still pending
+
+- A full line-by-line reading of the 326 Hoenn maps that are unchanged from Emerald. Their
+  rows say "vanilla". Only their links to new content were checked (pass 3).
+- First League wins played in battle through to the end.
+- Mart music on entering and leaving.
+- A natural playthrough without prepared flags.
+
 ## Map-by-map branch audit (Johto, Kanto, Sinnoh)
 
 Each map was traced from its objects, signs, trainers and transition/coord events through local and shared scripts. Every branch was checked for its condition, what sets it, and what the speaker knows at that point (first visit, return, rematch, quest in progress, save/load, regional travel order).
@@ -1501,7 +1586,7 @@ ROM tests run: Goldenrod Dept. Store clerk, Goldenrod Radio Tower lottery, Celes
 | Route209_Access_sinnoh | complete |  |
 | Route209_sinnoh | complete | GOOD ROD gift; SPIRITOMB pillar |
 | Route210_Cafe_sinnoh | complete | waitress offered MOOMOO MILK with no sale -> real yes/no purchase (500) |
-| Route210_House_sinnoh | pending | DRACO METEOR tutor. Its door is in a pocket of ROUTE 210 NORTH (plateau, stairs and meadow) closed by cliffs; ROM screenshots inside the pocket show no way out. In Platinum this area needs ROCK CLIMB, and this port has no ROCK CLIMB tiles. Probably unreachable; map design decision pending. |
+| Route210_House_sinnoh | complete | DRACO METEOR tutor. Reached through the owner's new stairs at (84,7)–(85,7) from (84,9) in ROM, both ways (enter and leave). Tutor tested in ROM with a Dragonite at 255 friendship: YES/NO, then the DRACO METEOR menu, then the party screen. Greeting "Ah, it is you…" (they had never met) replaced with "Ah, a TRAINER made it all the way up here!" | |
 | Route210_North_sinnoh | complete |  |
 | Route210_South_sinnoh | complete | Platinum CYNTHIA Old CHARM scene hidden by state init |
 | Route211_East_sinnoh | complete |  |
@@ -1513,7 +1598,7 @@ ROM tests run: Goldenrod Dept. Store clerk, Goldenrod Radio Tower lottery, Celes
 | Route213_Access_sinnoh | complete |  |
 | Route213_FootstepHouse_sinnoh | complete | Dr. Footstep offered a reading and never gave it -> real friendship reading (shared with the Verdanturf rater) |
 | Route213_House1_sinnoh | complete |  |
-| Route213_House2_sinnoh | pending | Isolated, confirmed in ROM from both sides (a37a636d36 + pass 3 build). From (75,5) in front of the door: down and left are blocked, right reaches (79,y), up reaches row 3, no exit. From (71,4): a vertical cliff blocks the way to the house front. Left for the owner's map edit. |
+| Route213_House2_sinnoh | complete | Reached through the owner's new stairs at (77,1)–(77,2). ROM: from the pocket (77,3) up to (77,0) and back down. ROM: from (74,5), enter, see both NPCs, leave to Route 213. Note: placing the test player directly on the stairs tile (77,1) left it unable to move; walking onto the stairs works. | |
 | Route213_House3_sinnoh | complete |  |
 | Route213_sinnoh | complete |  |
 | Route214_Access_sinnoh | complete |  |

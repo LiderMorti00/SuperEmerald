@@ -16122,9 +16122,9 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("Silver Wing"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A strange, silver-\n"
-            "colored feather that\n"
-            "sparkles."),
+            "A strange, silver\n"
+            "feather that\n"
+            "sparkles in light."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,
@@ -16218,8 +16218,8 @@ const struct ItemInfo gItemsInfo[] =
         .name = ITEM_NAME("SecretPotion"),
         .price = 0,
         .description = COMPOUND_STRING(
-            "A fantastic medicine\n"
-            "dispensed by the\n"
+            "A rare medicine\n"
+            "made at the\n"
             "Pokémon CENTER."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
@@ -16236,7 +16236,7 @@ const struct ItemInfo gItemsInfo[] =
         .description = COMPOUND_STRING(
             "A feather that\n"
             "glows like the moon.\n"
-            "It wards off dreams."),
+            "Wards off dreams."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,

@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "IronIsland_House_EventScript_PtNpc1",
-      "flag": "0"
+      "flag": "FLAG_SE_HIDE_IRON_ISLAND_BYRON"
     }
   ],
   "warp_events": [

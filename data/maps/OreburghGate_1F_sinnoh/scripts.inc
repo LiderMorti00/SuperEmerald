@@ -36,16 +36,18 @@ OreburghGate_1F_Text_CurtisIntro::
 	.string "We TRAINERS will accept challenges\n"
 	.string "anywhere! It's what we do.$"
 
+@ Super Emerald: the two hikers had the same job (ROCK SMASH and the COAL BADGE). This one now
+@ points to the basement; the other one keeps the HM gift.
 OreburghGate_1F_EventScript_PtNpc1::
-	goto_if_unset FLAG_SINNOH_BADGE1_GET, SE_OreburghGateHiker_NoBadge_Script
 	msgbox OreburghGate_1F_Text_PtNpc1, MSGBOX_NPC
 	end
 
 OreburghGate_1F_Text_PtNpc1::
-	.string "Oh! Good golly! That's OREBURGH CITY's\n"
-	.string "GYM BADGE!\p"
-	.string "All right! Now you can use the hidden\n"
-	.string "move ROCK SMASH on small boulders!$"
+	.string "Those stairs up north lead down to\n"
+	.string "the gate's basement.\p"
+	.string "There's treasure down there, but\n"
+	.string "you'll need ROCK SMASH and STRENGTH\l"
+	.string "to reach all of it!$"
 
 OreburghGate_1F_EventScript_HikerHM::
 	lock
@@ -64,11 +66,8 @@ OreburghGate_1F_Text_HikerAfter::
 	.string "contains the hidden move ROCK SMASH.\p"
 	.string "A POKéMON learning ROCK SMASH can\n"
 	.string "smash small boulders in the field.\p"
-	.string "But the TRAINER has to have the GYM\n"
-	.string "BADGE from OREBURGH CITY.\p"
-	.string "If you don't have that BADGE, you can't\n"
-	.string "make a POKéMON use the hidden\p"
-	.string "move ROCK SMASH outside of battle.$"
+	.string "With your HOENN BADGES, your POKéMON\n"
+	.string "can already use it outside of battle!$"
 
 OreburghGate_1F_Text_Hiker::
 	.string "That POKéNAV! That look on your face!\n"
@@ -85,12 +84,3 @@ OreburghGate_1F_EventScript_HikerAfter::
 	release
 	end
 
-SE_OreburghGateHiker_NoBadge_Script::
-	msgbox SE_OreburghGateHiker_NoBadge_Text, MSGBOX_NPC
-	end
-
-SE_OreburghGateHiker_NoBadge_Text::
-	.string "Have you been to OREBURGH CITY's GYM?\p"
-	.string "With its GYM BADGE, you can use the\n"
-	.string "hidden move ROCK SMASH on small\l"
-	.string "boulders!$"

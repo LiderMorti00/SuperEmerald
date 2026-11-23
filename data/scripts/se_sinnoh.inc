@@ -911,6 +911,9 @@ SE_EventScript_SinnohOnTransition::
 	call SE_EventScript_LucasVictoryRoadOnTransition
 	call SE_EventScript_SinnohLegendaries
 	call SE_EventScript_RileyOnTransition
+	@ Super Emerald: BYRON and MAYLENE are at their GYMS after the story, not at Iron Island or Snowpoint
+	setflag FLAG_SE_HIDE_IRON_ISLAND_BYRON
+	setflag FLAG_SE_HIDE_SNOWPOINT_MAYLENE
 	end
 
 @ ---------------------------------------------------------------------------

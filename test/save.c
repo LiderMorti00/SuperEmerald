@@ -3,10 +3,13 @@
 #include "test/test.h"
 
 // If you would like to ensure save compatibility, update the values below with those for your hack. You can find these through the debug menu.
+// Super Emerald: SaveBlock1 carries the Johto/Kanto/Sinnoh flag block (extFlags) and SaveBlock3 the
+// Super Emerald extras. These are the sizes of the test build; a change here means the save layout
+// moved and old saves may break, so update them only on purpose (see AUDIT.md, "Save format").
 // Please note that this simple check is not 100% foolproof, but should be able to catch most unintended shifts.
-#define T_SAVEBLOCK1_SIZE 15568
+#define T_SAVEBLOCK1_SIZE 15192
 #define T_SAVEBLOCK2_SIZE 3884
-#define T_SAVEBLOCK3_SIZE 4
+#define T_SAVEBLOCK3_SIZE 924
 #define T_POKEMONSTORAGE_SIZE 34144
 
 TEST("SaveBlock1 is backwards compatible")

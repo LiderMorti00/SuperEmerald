@@ -25,12 +25,14 @@ SE_EventScript_WallyJohto::
 	lock
 	faceplayer
 	msgbox SE_Text_WallyJohto, MSGBOX_DEFAULT
+	call SE_EventScript_WallyMysticTicket @ in case the player left HOENN before meeting him at VICTORY ROAD
 	setvar VAR_SE_WALLY_QUEST, 1
 	goto SE_EventScript_QuestLeave
 
 SE_EventScript_WallyKanto::
 	lock
 	faceplayer
+	call SE_EventScript_WallyMysticTicket @ in case the player left HOENN before meeting him at VICTORY ROAD
 	goto_if_defeated TRAINER_SE_WALLY_KANTO, SE_EventScript_WallyKanto_Reward
 	msgbox SE_Text_WallyKanto, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, SE_EventScript_WallyNotNow

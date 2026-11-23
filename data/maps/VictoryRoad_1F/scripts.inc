@@ -3,9 +3,15 @@ VictoryRoad_1F_MapScripts::
 	.byte 0
 
 VictoryRoad_1F_OnTransition:
+	@ Super Emerald: WALLY leaves for JOHTO (SE_EventScript_WallyJohto) once the player has been there
+	call_if_set FLAG_SE_JOHTO_INITIALIZED, VictoryRoad_1F_EventScript_HideExitWally
 	call_if_eq VAR_VICTORY_ROAD_1F_STATE, 1, VictoryRoad_1F_EventScript_SetEntranceWallyPos1
 	call_if_eq VAR_VICTORY_ROAD_1F_STATE, 2, VictoryRoad_1F_EventScript_SetEntranceWallyPos2
 	end
+
+VictoryRoad_1F_EventScript_HideExitWally::
+	setflag FLAG_HIDE_VICTORY_ROAD_EXIT_WALLY
+	return
 
 VictoryRoad_1F_EventScript_SetEntranceWallyPos1::
 	setobjectxyperm LOCALID_VICTORY_ROAD_ENTRANCE_WALLY, 2, 24

@@ -6,9 +6,16 @@
 SFR_EventScript_VermilionHoennSailor::
 	lock
 	faceplayer
+	msgbox SE_Text_VermilionShipSailorIntro, MSGBOX_DEFAULT
 	setvar VAR_0x8008, 3
 	goto SE_EventScript_ShipSailor
 	end
+
+SE_Text_VermilionShipSailorIntro:
+	.string "I'm with the S.S. AQUA. We sail to\n"
+	.string "other regions from VERMILION.\p"
+	.string "For the SEVII ISLANDS, talk to the\n"
+	.string "SEAGALLOP crew down on the pier.$"
 
 SE_EventScript_VermilionToOlivine::
 	msgbox SFR_Text_VermilionSailorAllAboard, MSGBOX_DEFAULT

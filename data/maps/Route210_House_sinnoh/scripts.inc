@@ -63,7 +63,8 @@ Route210_House_EventScript_SNDracoMeteor_Friend::
 	.string "perfect.$"
 
 Route210_House_EventScript_SNDracoMeteor_Hello::
-	.string "Ah, it is you… Would you like me to\n"
+	.string "Ah, a TRAINER made it all the way\n"
+	.string "up here! Would you like me to\l"
 	.string "teach the best Dragon-type move I\l"
 	.string "know to one of your POKéMON? It must\l"
 	.string "be a Dragon type that trusts you\l"

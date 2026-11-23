@@ -205,5 +205,7 @@
 #define FLAG_SE_GOT_BYRON_APOLOGY    0x32F8 // Iron Island house: BYRON's apology gift
 #define FLAG_SE_GOT_ROUTE217_SPELL_TAG 0x32F9 // Route 217 house: SPELL TAG
 #define FLAG_SE_GOT_ROUTE221_BELT    0x32FA // Route 221 house: EXPERT BELT
+#define FLAG_SE_HIDE_IRON_ISLAND_BYRON 0x32FB // Iron Island house: BYRON is back at the CANALAVE GYM
+#define FLAG_SE_HIDE_SNOWPOINT_MAYLENE 0x32FC // Snowpoint Center: MAYLENE is back at the VEILSTONE GYM
 
 #endif // GUARD_CONSTANTS_FLAGS_SE_SINNOH_H
