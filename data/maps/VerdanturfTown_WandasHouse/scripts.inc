@@ -1,9 +1,20 @@
 VerdanturfTown_WandasHouse_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, VerdanturfTown_WandasHouse_OnTransition
 	.byte 0
+
+@ Super Emerald: WALLY comes home after his journey through JOHTO, KANTO and SINNOH
+VerdanturfTown_WandasHouse_OnTransition:
+	call_if_ge VAR_SE_WALLY_QUEST, 3, VerdanturfTown_WandasHouse_EventScript_WallyIsHome
+	end
+
+VerdanturfTown_WandasHouse_EventScript_WallyIsHome::
+	clearflag FLAG_HIDE_VERDANTURF_TOWN_WANDAS_HOUSE_WALLY
+	return
 
 VerdanturfTown_WandasHouse_EventScript_Wally::
 	lock
 	faceplayer
+	goto_if_ge VAR_SE_WALLY_QUEST, 3, VerdanturfTown_WandasHouse_EventScript_WallyBackHome
 	goto_if_set FLAG_WALLY_SPEECH, VerdanturfTown_WandasHouse_EventScript_WallyShortSpeech
 	msgbox VerdanturfTown_WandasHouse_Text_StrongerSpeech, MSGBOX_DEFAULT
 	setflag FLAG_WALLY_SPEECH
@@ -18,6 +29,8 @@ VerdanturfTown_WandasHouse_EventScript_WallyShortSpeech::
 VerdanturfTown_WandasHouse_EventScript_WallysUncle::
 	lock
 	faceplayer
+	goto_if_ge VAR_SE_WALLY_QUEST, 3, VerdanturfTown_WandasHouse_EventScript_WallysUncleHome
+	goto_if_ge VAR_SE_WALLY_QUEST, 1, VerdanturfTown_WandasHouse_EventScript_WallysUncleLetters
 	goto_if_set FLAG_DEFEATED_WALLY_VICTORY_ROAD, VerdanturfTown_WandasHouse_EventScript_WallysUncleEverGrande
 	goto_if_set FLAG_DEFEATED_LAVARIDGE_GYM, VerdanturfTown_WandasHouse_EventScript_WallysUncleSlippedOff
 	msgbox VerdanturfTown_WandasHouse_Text_WallysNextDoor, MSGBOX_DEFAULT
@@ -60,6 +73,8 @@ VerdanturfTown_WandasHouse_EventScript_WandaDontWorry::
 VerdanturfTown_WandasHouse_EventScript_WallysAunt::
 	lock
 	faceplayer
+	goto_if_ge VAR_SE_WALLY_QUEST, 3, VerdanturfTown_WandasHouse_EventScript_WallysAuntHome
+	goto_if_ge VAR_SE_WALLY_QUEST, 1, VerdanturfTown_WandasHouse_EventScript_WallysAuntLetters
 	goto_if_set FLAG_DEFEATED_WALLY_VICTORY_ROAD, VerdanturfTown_WandasHouse_EventScript_WallysAuntEverGrande
 	goto_if_set FLAG_DEFEATED_LAVARIDGE_GYM, VerdanturfTown_WandasHouse_EventScript_WallysAuntAnythingHappened
 	goto_if_set FLAG_RUSTURF_TUNNEL_OPENED, VerdanturfTown_WandasHouse_EventScript_WallysAuntTunnelOpen
@@ -81,6 +96,68 @@ VerdanturfTown_WandasHouse_EventScript_WallysAuntEverGrande::
 	msgbox VerdanturfTown_WandasHouse_Text_WallyWasInEverGrande, MSGBOX_DEFAULT
 	release
 	end
+
+@ Super Emerald: WALLY's journey (VAR_SE_WALLY_QUEST)
+VerdanturfTown_WandasHouse_EventScript_WallyBackHome::
+	msgbox VerdanturfTown_WandasHouse_Text_WallyBackHome, MSGBOX_DEFAULT
+	release
+	end
+
+VerdanturfTown_WandasHouse_EventScript_WallysUncleLetters::
+	msgbox VerdanturfTown_WandasHouse_Text_WallysUncleLetters, MSGBOX_DEFAULT
+	release
+	end
+
+VerdanturfTown_WandasHouse_EventScript_WallysUncleHome::
+	msgbox VerdanturfTown_WandasHouse_Text_WallysUncleHome, MSGBOX_DEFAULT
+	release
+	end
+
+VerdanturfTown_WandasHouse_EventScript_WallysAuntLetters::
+	msgbox VerdanturfTown_WandasHouse_Text_WallysAuntLetters, MSGBOX_DEFAULT
+	release
+	end
+
+VerdanturfTown_WandasHouse_EventScript_WallysAuntHome::
+	msgbox VerdanturfTown_WandasHouse_Text_WallysAuntHome, MSGBOX_DEFAULT
+	release
+	end
+
+VerdanturfTown_WandasHouse_Text_WallyBackHome:
+	.string "WALLY: {PLAYER}! Welcome!\p"
+	.string "JOHTO, KANTO, SINNOH…\n"
+	.string "I really saw the world, just like\l"
+	.string "you did.\p"
+	.string "My uncle says I've never looked so\n"
+	.string "healthy. GALLADE and I will keep\l"
+	.string "training here for now.\p"
+	.string "Thank you for taking me along on that\n"
+	.string "first trip, {PLAYER}.$"
+
+VerdanturfTown_WandasHouse_Text_WallysUncleLetters:
+	.string "UNCLE: WALLY sends us letters from\n"
+	.string "the other regions!\p"
+	.string "To think that frail boy would cross\n"
+	.string "the sea all by himself…\p"
+	.string "He wrote that he keeps meeting you\n"
+	.string "on the road. Look after him, okay?$"
+
+VerdanturfTown_WandasHouse_Text_WallysUncleHome:
+	.string "UNCLE: WALLY's back from his journey,\n"
+	.string "and he's bursting with stories.\p"
+	.string "He says every one of them has you\n"
+	.string "in it, {PLAYER}!$"
+
+VerdanturfTown_WandasHouse_Text_WallysAuntLetters:
+	.string "WALLY wrote to us from a faraway\n"
+	.string "region!\p"
+	.string "I sent the news to his parents in\n"
+	.string "PETALBURG right away.$"
+
+VerdanturfTown_WandasHouse_Text_WallysAuntHome:
+	.string "WALLY came home safe and sound.\n"
+	.string "His parents in PETALBURG were so\l"
+	.string "relieved.$"
 
 VerdanturfTown_WandasHouse_Text_StrongerSpeech:
 	.string "WALLY: I lost to you, {PLAYER}, but I'm\n"

@@ -29,6 +29,8 @@ PetalburgCity_WallysHouse_EventScript_GiveHMSurf::
 PetalburgCity_WallysHouse_EventScript_WallysDad::
 	lock
 	faceplayer
+	goto_if_ge VAR_SE_WALLY_QUEST, 3, PetalburgCity_WallysHouse_EventScript_DadWallyHome
+	goto_if_ge VAR_SE_WALLY_QUEST, 1, PetalburgCity_WallysHouse_EventScript_DadWallyAbroad
 	goto_if_set FLAG_DEFEATED_WALLY_VICTORY_ROAD, PetalburgCity_WallysHouse_EventScript_DefeatedWallyInVictoryRoad
 	goto_if_set FLAG_RECEIVED_HM_SURF, PetalburgCity_WallysHouse_EventScript_ReceievedHMSurf
 	goto_if_set FLAG_THANKED_FOR_PLAYING_WITH_WALLY, PetalburgCity_WallysHouse_EventScript_PlayedWithWally
@@ -55,6 +57,8 @@ PetalburgCity_WallysHouse_EventScript_PlayedWithWally::
 PetalburgCity_WallysHouse_EventScript_WallysMom::
 	lock
 	faceplayer
+	goto_if_ge VAR_SE_WALLY_QUEST, 3, PetalburgCity_WallysHouse_EventScript_MomWallyHome
+	goto_if_ge VAR_SE_WALLY_QUEST, 1, PetalburgCity_WallysHouse_EventScript_MomWallyAbroad
 	goto_if_set FLAG_RECEIVED_HM_SURF, PetalburgCity_WallysHouse_EventScript_ReceivedHMSurf
 	msgbox PetalburgCity_WallysHouse_Text_WallyWasReallyHappy, MSGBOX_DEFAULT
 	release
@@ -133,3 +137,47 @@ PetalburgCity_WallysHouse_Text_WallyLeftWithoutTelling:
 	.string "I'm sure that he'll come back safe\n"
 	.string "and sound one day!$"
 
+@ Super Emerald: WALLY's journey through JOHTO, KANTO and SINNOH (VAR_SE_WALLY_QUEST)
+PetalburgCity_WallysHouse_EventScript_DadWallyAbroad::
+	msgbox PetalburgCity_WallysHouse_Text_DadWallyAbroad, MSGBOX_DEFAULT
+	release
+	end
+
+PetalburgCity_WallysHouse_EventScript_DadWallyHome::
+	msgbox PetalburgCity_WallysHouse_Text_DadWallyHome, MSGBOX_DEFAULT
+	release
+	end
+
+PetalburgCity_WallysHouse_EventScript_MomWallyAbroad::
+	msgbox PetalburgCity_WallysHouse_Text_MomWallyAbroad, MSGBOX_DEFAULT
+	release
+	end
+
+PetalburgCity_WallysHouse_EventScript_MomWallyHome::
+	msgbox PetalburgCity_WallysHouse_Text_MomWallyHome, MSGBOX_DEFAULT
+	release
+	end
+
+PetalburgCity_WallysHouse_Text_DadWallyAbroad:
+	.string "A letter came from WALLY. He's\n"
+	.string "traveling in another region!\p"
+	.string "I told you he couldn't go far on his\n"
+	.string "own… I was wrong, wasn't I?\p"
+	.string "He wrote that you're out there too.\n"
+	.string "That puts my mind at ease.$"
+
+PetalburgCity_WallysHouse_Text_DadWallyHome:
+	.string "WALLY is back in VERDANTURF after his\n"
+	.string "long journey.\p"
+	.string "He came to see us, and he looked so\n"
+	.string "strong. Thank you, {PLAYER}{KUN}.$"
+
+PetalburgCity_WallysHouse_Text_MomWallyAbroad:
+	.string "WALLY's letters come from so far\n"
+	.string "away, from places I've never seen.\p"
+	.string "I read every one of them twice.$"
+
+PetalburgCity_WallysHouse_Text_MomWallyHome:
+	.string "WALLY came home! He told us all about\n"
+	.string "your battles in SINNOH.\p"
+	.string "That boy has grown up so much.$"

@@ -680,20 +680,89 @@ Same build configuration, before and after this pass: 33,085,364 → 33,085,360 
 - Mart music on entering and leaving.
 - A natural playthrough without prepared flags.
 
+## Regression pass 5 (start: a48a752305)
+
+### Sinnoh snow (commit a48a752305)
+
+- Battle background: on the maps built from the Snowpoint tileset (Routes 216/217, Acuity
+  Lakefront, Lake Acuity, Mt. Coronet outside) every land battle uses the snow background,
+  snowy tall grass included; water and Surf keep water/pond.
+- New snowy tall grass and jump-into-grass field effects, own palette (Snowpoint grass colours).
+- Blizzard back to 64 flakes as in the Sinnoh project (out-of-sprites guard kept); Snowpoint
+  City back to WEATHER_SNOW. All other Sinnoh map weathers already matched the project.
+
+### ROM tests
+
+| Test | Setup | Result |
+|---|---|---|
+| Route 213 stairs save | Walk from (77,5) up to (77,1), START > SAVE, close mGBA | Save file position (77,1) on ROUTE 213 |
+| Route 213 stairs load | Reopen with the same .sav, CONTINUE | Player moves down, then up into VALOR LAKEFRONT, then back down the stairs to (77,6). No block |
+| Route 213 accesses | Code: warps, connections, heal points | None places the player on (77,1); VALOR LAKEFRONT arrives on (77,0) |
+| Lake Acuity Surf battle | LAPRAS with SURF, Hoenn badge 5, face the lake at (34,13), SURF, move | Wild PSYDUCK, pond background (water pads) |
+| Route 217 house | Enter and leave HOUSE 1 four times with the blizzard | Weather and flakes come back every time; no black screen |
+| Route 217 ↔ Acuity Lakefront | Cross the north edge three times each way | Heavy snow ↔ darker blizzard, no freeze |
+| Route 217 ↔ Route 216 | Cross the south edge three times each way | Same; no freeze |
+| Snow battle | Grass on Route 217 (23,3) | Wild SNOVER, snow background |
+| Snowy grass | Route 216 (3,12) | Snowy grass sprite over the player, not green grass |
+| WALLY at home | VAR_SE_WALLY_QUEST 3, Verdanturf Wanda's house | WALLY present, new home line |
+| WALLY's father | VAR_SE_WALLY_QUEST 1, Petalburg | Letter line instead of "he can't go far" |
+| STEVEN at home | VAR_SE_STEVEN_QUEST 3, Mossdeep | STEVEN present, new line, old letter gone |
+
+### Hoenn: the 326 unchanged Emerald maps
+
+All 326 rows that said "vanilla" were read: every text together with the script that shows
+it, the object's hide flag and the flag/var conditions of each branch. 325 maps are
+byte-identical to pokeemerald-expansion 1.17.2 (scripts.inc and map.json);
+LittlerootTown_BrendansHouse_1F only has NORMAN's added line. Texts were checked for
+contradictions with the four-region story, missing hints, broken services and real
+duplicates.
+
+Fixed (continuity between regions):
+- **WALLY.** His quest ends in SINNOH with "I'm going home to VERDANTURF", but he never
+  appeared there, and his father in PETALBURG still said he "can't go somewhere far away
+  by himself". Now:
+  - his parents react to his letters (stages 1–2) and to his return (stage 3);
+  - his uncle and aunt in VERDANTURF do the same;
+  - WALLY himself is back in Wanda's house at stage 3.
+- **STEVEN.** His quest ends with "I'll go back to my home in MOSSDEEP. Come visit". The
+  house stayed empty with his old letter ("I don't plan to return home for some time").
+  At stage 3 he is home with a new line, and the letter and note are removed.
+
+Read and kept as they are: Frontier facilities, lounges and Scott (self-contained post-game);
+Magma/Aqua hideouts and story scenes; gyms, marts, Pokémon Centers and Union/Cable rooms;
+Trick House; Secret Base layouts; the Pokémon League 1F guard (it checks BADGE06 only, as in
+Emerald; the earlier badges cannot be skipped); Lanette's PC e-mail from BILL (fits the
+KANTO content). Hoenn row counts: 515 complete, 12 unreachable, 0 vanilla.
+
+### Branches
+
+origin/master is the only branch with work that is not elsewhere:
+- integrated (no commits outside master): audit/pulido-integral-2026-11, cambios-oier,
+  cambios-oier-tilesets, upcoming;
+- upstream only: all-contributors/add-Blackforest92 (2 bot commits),
+  upcoming-decap (30 pokeemerald-expansion commits).
+
+### Still pending
+
+- First League wins played in battle through to the end (blind battles did not finish).
+- Mart music on entering and leaving.
+- A natural playthrough without prepared flags.
+- Loading a save from an older version (none available).
+
 ## Map-by-map branch audit (Johto, Kanto, Sinnoh)
 
 Each map was traced from its objects, signs, trainers and transition/coord events through local and shared scripts. Every branch was checked for its condition, what sets it, and what the speaker knows at that point (first visit, return, rematch, quest in progress, save/load, regional travel order).
 
-Status: **complete** = all reachable branches reviewed; **no events** = no visible event in any state; **unreachable** = no warp reaches it in this game. Two Sinnoh maps are pending a design decision (see Regression pass 2).
+Status: **complete** = all reachable branches reviewed; **no events** = no visible event in any state; **unreachable** = no warp reaches it in this game. The two Sinnoh pockets (Route 210 North, Route 213) were opened by the owner's map edit and validated in ROM (passes 4 and 5); nothing is pending.
 
 ROM tests run: Goldenrod Dept. Store clerk, Goldenrod Radio Tower lottery, Celestic Town Surf, Rocket Hideout B4F barrier, Route 213 footstep house.
 
-| Region | complete | no events | unreachable | pending | vanilla (not re-read) |
+| Region | complete | no events | unreachable / not built | pending | vanilla (not re-read) |
 |---|---|---|---|---|---|
-| Hoenn | 189 | – | 12 | 0 | 326 |
-| Johto | 205 | 35 | 2 | 0 | – |
+| Hoenn | 515 | – | 12 | 0 | 0 |
+| Johto | 205 | 35 | 2 (not built) | 0 | – |
 | Kanto and Sevii | 307 | 78 | 25 | 0 | – |
-| Sinnoh | 326 | 71 | 2 | 2 | – |
+| Sinnoh | 328 | 71 | 2 | 0 | – |
 
 ### Johto
 
@@ -1598,7 +1667,7 @@ ROM tests run: Goldenrod Dept. Store clerk, Goldenrod Radio Tower lottery, Celes
 | Route213_Access_sinnoh | complete |  |
 | Route213_FootstepHouse_sinnoh | complete | Dr. Footstep offered a reading and never gave it -> real friendship reading (shared with the Verdanturf rater) |
 | Route213_House1_sinnoh | complete |  |
-| Route213_House2_sinnoh | complete | Reached through the owner's new stairs at (77,1)–(77,2). ROM: from the pocket (77,3) up to (77,0) and back down. ROM: from (74,5), enter, see both NPCs, leave to Route 213. Note: placing the test player directly on the stairs tile (77,1) left it unable to move; walking onto the stairs works. | |
+| Route213_House2_sinnoh | complete | Reached through the owner's new stairs at (77,1)–(77,2). ROM: from the pocket (77,3) up to (77,0) and back down. ROM: from (74,5), enter, see both NPCs, leave to Route 213. Pass 5: saving on the stairs (77,1), closing mGBA and CONTINUING works (save position 77,1); the player moves up into VALOR LAKEFRONT and back down. The earlier stuck test came from the harness placing the player at elevation 0; no warp, connection or heal point puts the player on that tile. | |
 | Route213_House3_sinnoh | complete |  |
 | Route213_sinnoh | complete |  |
 | Route214_Access_sinnoh | complete |  |
@@ -1765,54 +1834,54 @@ ROM tests run: Goldenrod Dept. Store clerk, Goldenrod Radio Tower lottery, Celes
 
 ### Hoenn
 
-Hoenn plays the Emerald story; Super Emerald changed 192 of its maps. Status: **complete** = the Super Emerald changes were reviewed; **vanilla** = unchanged Emerald map, not re-read; **unreachable** = unused map.
+Hoenn plays the Emerald story; Super Emerald changed 192 of its maps. Status: **complete** = the Super Emerald changes were reviewed, and (pass 5) every unchanged Emerald map was read text by text with its events and appearance conditions; **unreachable** = unused map.
 
 | Map | Status | Notes |
 |---|---|---|
-| AbandonedShip_CaptainsOffice | vanilla | unchanged Emerald map; not re-read line by line |
-| AbandonedShip_Corridors_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| AbandonedShip_Corridors_B1F | vanilla | unchanged Emerald map; not re-read line by line |
-| AbandonedShip_Deck | vanilla | unchanged Emerald map; not re-read line by line |
+| AbandonedShip_CaptainsOffice | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| AbandonedShip_Corridors_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| AbandonedShip_Corridors_B1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| AbandonedShip_Deck | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | AbandonedShip_HiddenFloorCorridors | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| AbandonedShip_HiddenFloorRooms | vanilla | unchanged Emerald map; not re-read line by line |
-| AbandonedShip_Room_B1F | vanilla | unchanged Emerald map; not re-read line by line |
-| AbandonedShip_Rooms2_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| AbandonedShip_Rooms2_B1F | vanilla | unchanged Emerald map; not re-read line by line |
-| AbandonedShip_Rooms_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| AbandonedShip_Rooms_B1F | vanilla | unchanged Emerald map; not re-read line by line |
-| AbandonedShip_Underwater1 | vanilla | unchanged Emerald map; not re-read line by line |
-| AbandonedShip_Underwater2 | vanilla | unchanged Emerald map; not re-read line by line |
-| AlteringCave | vanilla | unchanged Emerald map; not re-read line by line |
+| AbandonedShip_HiddenFloorRooms | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| AbandonedShip_Room_B1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| AbandonedShip_Rooms2_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| AbandonedShip_Rooms2_B1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| AbandonedShip_Rooms_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| AbandonedShip_Rooms_B1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| AbandonedShip_Underwater1 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| AbandonedShip_Underwater2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| AlteringCave | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | AncientTomb | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | AquaHideout_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | AquaHideout_B1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | AquaHideout_B2F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| ArtisanCave_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| ArtisanCave_B1F | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleColosseum_2P | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleColosseum_4P | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleFrontier_BattleArenaBattleRoom | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleFrontier_BattleArenaCorridor | vanilla | unchanged Emerald map; not re-read line by line |
+| ArtisanCave_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| ArtisanCave_B1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleColosseum_2P | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleColosseum_4P | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleFrontier_BattleArenaBattleRoom | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleFrontier_BattleArenaCorridor | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | BattleFrontier_BattleArenaLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | BattleFrontier_BattleDomeBattleRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | BattleFrontier_BattleDomeCorridor | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | BattleFrontier_BattleDomeLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | BattleFrontier_BattleDomePreBattleRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| BattleFrontier_BattleFactoryBattleRoom | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleFrontier_BattleFactoryLobby | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleFrontier_BattleFactoryPreBattleRoom | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleFrontier_BattlePalaceBattleRoom | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleFrontier_BattlePalaceCorridor | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_BattleFactoryBattleRoom | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleFrontier_BattleFactoryLobby | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleFrontier_BattleFactoryPreBattleRoom | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleFrontier_BattlePalaceBattleRoom | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleFrontier_BattlePalaceCorridor | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | BattleFrontier_BattlePalaceLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| BattleFrontier_BattlePikeCorridor | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_BattlePikeCorridor | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | BattleFrontier_BattlePikeLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| BattleFrontier_BattlePikeRoomFinal | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleFrontier_BattlePikeRoomNormal | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleFrontier_BattlePikeRoomWildMons | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleFrontier_BattlePikeThreePathRoom | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleFrontier_BattlePyramidFloor | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_BattlePikeRoomFinal | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleFrontier_BattlePikeRoomNormal | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleFrontier_BattlePikeRoomWildMons | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleFrontier_BattlePikeThreePathRoom | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleFrontier_BattlePyramidFloor | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | BattleFrontier_BattlePyramidLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| BattleFrontier_BattlePyramidTop | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_BattlePyramidTop | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | BattleFrontier_BattleTowerBattleRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | BattleFrontier_BattleTowerCorridor | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | BattleFrontier_BattleTowerElevator | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
@@ -1820,125 +1889,125 @@ Hoenn plays the Emerald story; Super Emerald changed 192 of its maps. Status: **
 | BattleFrontier_BattleTowerMultiBattleRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | BattleFrontier_BattleTowerMultiCorridor | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | BattleFrontier_BattleTowerMultiPartnerRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| BattleFrontier_ExchangeServiceCorner | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_ExchangeServiceCorner | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | BattleFrontier_Lounge1 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| BattleFrontier_Lounge2 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleFrontier_Lounge3 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleFrontier_Lounge4 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_Lounge2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleFrontier_Lounge3 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleFrontier_Lounge4 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | BattleFrontier_Lounge5 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| BattleFrontier_Lounge6 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleFrontier_Lounge7 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleFrontier_Lounge8 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleFrontier_Lounge9 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleFrontier_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_Lounge6 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleFrontier_Lounge7 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleFrontier_Lounge8 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleFrontier_Lounge9 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleFrontier_Mart | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | BattleFrontier_OutsideEast | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | BattleFrontier_OutsideWest | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| BattleFrontier_PokemonCenter_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleFrontier_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleFrontier_RankingHall | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleFrontier_ReceptionGate | vanilla | unchanged Emerald map; not re-read line by line |
-| BattleFrontier_ScottsHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_PokemonCenter_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleFrontier_PokemonCenter_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleFrontier_RankingHall | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleFrontier_ReceptionGate | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattleFrontier_ScottsHouse | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | BattlePark | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | BattlePark_Access | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| BattlePyramidSquare01 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattlePyramidSquare02 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattlePyramidSquare03 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattlePyramidSquare04 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattlePyramidSquare05 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattlePyramidSquare06 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattlePyramidSquare07 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattlePyramidSquare08 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattlePyramidSquare09 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattlePyramidSquare10 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattlePyramidSquare11 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattlePyramidSquare12 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattlePyramidSquare13 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattlePyramidSquare14 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattlePyramidSquare15 | vanilla | unchanged Emerald map; not re-read line by line |
-| BattlePyramidSquare16 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattlePyramidSquare01 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattlePyramidSquare02 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattlePyramidSquare03 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattlePyramidSquare04 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattlePyramidSquare05 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattlePyramidSquare06 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattlePyramidSquare07 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattlePyramidSquare08 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattlePyramidSquare09 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattlePyramidSquare10 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattlePyramidSquare11 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattlePyramidSquare12 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattlePyramidSquare13 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattlePyramidSquare14 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattlePyramidSquare15 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| BattlePyramidSquare16 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | BattleTowe_Elevator_Sinnoh | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | BattleTower_BattleRoom_Sinnoh | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | BattleTower_Corridor_Sinnoh | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | BattleTower_Sinnoh | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | BirthIsland_Exterior | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| BirthIsland_Harbor | vanilla | unchanged Emerald map; not re-read line by line |
-| CaveOfOrigin_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| BirthIsland_Harbor | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| CaveOfOrigin_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | CaveOfOrigin_B1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| CaveOfOrigin_Entrance | vanilla | unchanged Emerald map; not re-read line by line |
+| CaveOfOrigin_Entrance | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | CaveOfOrigin_UnusedRubySapphireMap1 | unreachable | unused Emerald map; no warp, connection or script leads here (code) |
 | CaveOfOrigin_UnusedRubySapphireMap2 | unreachable | unused Emerald map; no warp, connection or script leads here (code) |
 | CaveOfOrigin_UnusedRubySapphireMap3 | unreachable | unused Emerald map; no warp, connection or script leads here (code) |
 | ContestHall | unreachable | unused Emerald map; no warp, connection or script leads here (code) |
-| ContestHallBeauty | vanilla | unchanged Emerald map; not re-read line by line |
-| ContestHallCool | vanilla | unchanged Emerald map; not re-read line by line |
-| ContestHallCute | vanilla | unchanged Emerald map; not re-read line by line |
-| ContestHallSmart | vanilla | unchanged Emerald map; not re-read line by line |
-| ContestHallTough | vanilla | unchanged Emerald map; not re-read line by line |
+| ContestHallBeauty | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| ContestHallCool | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| ContestHallCute | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| ContestHallSmart | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| ContestHallTough | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | DesertRuins | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | DesertUnderpass | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | DewfordTown | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | DewfordTown_Gym | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| DewfordTown_Hall | vanilla | unchanged Emerald map; not re-read line by line |
-| DewfordTown_House1 | vanilla | unchanged Emerald map; not re-read line by line |
-| DewfordTown_House2 | vanilla | unchanged Emerald map; not re-read line by line |
-| DewfordTown_PokemonCenter_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| DewfordTown_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| DewfordTown_Hall | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| DewfordTown_House1 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| DewfordTown_House2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| DewfordTown_PokemonCenter_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| DewfordTown_PokemonCenter_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | EverGrandeCity | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | EverGrandeCity_ChampionsRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | EverGrandeCity_DrakesRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | EverGrandeCity_GlaciasRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | EverGrandeCity_Hall1 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| EverGrandeCity_Hall2 | vanilla | unchanged Emerald map; not re-read line by line |
-| EverGrandeCity_Hall3 | vanilla | unchanged Emerald map; not re-read line by line |
-| EverGrandeCity_Hall4 | vanilla | unchanged Emerald map; not re-read line by line |
-| EverGrandeCity_Hall5 | vanilla | unchanged Emerald map; not re-read line by line |
+| EverGrandeCity_Hall2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| EverGrandeCity_Hall3 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| EverGrandeCity_Hall4 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| EverGrandeCity_Hall5 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | EverGrandeCity_HallOfFame | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | EverGrandeCity_PhoebesRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | EverGrandeCity_PokemonCenter_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | EverGrandeCity_PokemonCenter_2F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| EverGrandeCity_PokemonLeague_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| EverGrandeCity_PokemonLeague_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | EverGrandeCity_PokemonLeague_2F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | EverGrandeCity_SidneysRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | FallarborTown | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| FallarborTown_BattleTentBattleRoom | vanilla | unchanged Emerald map; not re-read line by line |
-| FallarborTown_BattleTentCorridor | vanilla | unchanged Emerald map; not re-read line by line |
+| FallarborTown_BattleTentBattleRoom | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| FallarborTown_BattleTentCorridor | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | FallarborTown_BattleTentLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | FallarborTown_CozmosHouse | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| FallarborTown_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| FallarborTown_Mart | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | FallarborTown_MoveRelearnersHouse | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| FallarborTown_PokemonCenter_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| FallarborTown_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
-| FarawayIsland_Entrance | vanilla | unchanged Emerald map; not re-read line by line |
+| FallarborTown_PokemonCenter_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| FallarborTown_PokemonCenter_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| FarawayIsland_Entrance | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | FarawayIsland_Interior | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | FieryPath | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | FortreeCity | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| FortreeCity_DecorationShop | vanilla | unchanged Emerald map; not re-read line by line |
+| FortreeCity_DecorationShop | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | FortreeCity_Gym | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| FortreeCity_House1 | vanilla | unchanged Emerald map; not re-read line by line |
-| FortreeCity_House2 | vanilla | unchanged Emerald map; not re-read line by line |
-| FortreeCity_House3 | vanilla | unchanged Emerald map; not re-read line by line |
-| FortreeCity_House4 | vanilla | unchanged Emerald map; not re-read line by line |
-| FortreeCity_House5 | vanilla | unchanged Emerald map; not re-read line by line |
-| FortreeCity_Mart | vanilla | unchanged Emerald map; not re-read line by line |
-| FortreeCity_PokemonCenter_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| FortreeCity_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
-| GraniteCave_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| GraniteCave_B1F | vanilla | unchanged Emerald map; not re-read line by line |
+| FortreeCity_House1 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| FortreeCity_House2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| FortreeCity_House3 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| FortreeCity_House4 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| FortreeCity_House5 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| FortreeCity_Mart | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| FortreeCity_PokemonCenter_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| FortreeCity_PokemonCenter_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| GraniteCave_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| GraniteCave_B1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | GraniteCave_B2F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| GraniteCave_StevensRoom | vanilla | unchanged Emerald map; not re-read line by line |
+| GraniteCave_StevensRoom | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | HearthomeCity_ContestHall | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | HearthomeCity_ContestLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| InsideOfTruck | vanilla | unchanged Emerald map; not re-read line by line |
+| InsideOfTruck | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | IslandCave | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | JaggedPass | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | LavaridgeTown | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| LavaridgeTown_Gym_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| LavaridgeTown_Gym_B1F | vanilla | unchanged Emerald map; not re-read line by line |
-| LavaridgeTown_HerbShop | vanilla | unchanged Emerald map; not re-read line by line |
-| LavaridgeTown_House | vanilla | unchanged Emerald map; not re-read line by line |
-| LavaridgeTown_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| LavaridgeTown_Gym_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| LavaridgeTown_Gym_B1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| LavaridgeTown_HerbShop | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| LavaridgeTown_House | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| LavaridgeTown_Mart | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | LavaridgeTown_PokemonCenter_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| LavaridgeTown_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| LavaridgeTown_PokemonCenter_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | LilycoveCity | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | LilycoveCity_ContestHall | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | LilycoveCity_ContestLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
@@ -1947,71 +2016,71 @@ Hoenn plays the Emerald story; Super Emerald changed 192 of its maps. Status: **
 | LilycoveCity_DepartmentStoreElevator | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | LilycoveCity_DepartmentStoreRooftop | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | LilycoveCity_DepartmentStore_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| LilycoveCity_DepartmentStore_2F | vanilla | unchanged Emerald map; not re-read line by line |
-| LilycoveCity_DepartmentStore_3F | vanilla | unchanged Emerald map; not re-read line by line |
-| LilycoveCity_DepartmentStore_4F | vanilla | unchanged Emerald map; not re-read line by line |
+| LilycoveCity_DepartmentStore_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| LilycoveCity_DepartmentStore_3F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| LilycoveCity_DepartmentStore_4F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | LilycoveCity_DepartmentStore_5F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | LilycoveCity_Harbor | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| LilycoveCity_House1 | vanilla | unchanged Emerald map; not re-read line by line |
-| LilycoveCity_House2 | vanilla | unchanged Emerald map; not re-read line by line |
-| LilycoveCity_House3 | vanilla | unchanged Emerald map; not re-read line by line |
-| LilycoveCity_House4 | vanilla | unchanged Emerald map; not re-read line by line |
-| LilycoveCity_LilycoveMuseum_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| LilycoveCity_LilycoveMuseum_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| LilycoveCity_House1 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| LilycoveCity_House2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| LilycoveCity_House3 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| LilycoveCity_House4 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| LilycoveCity_LilycoveMuseum_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| LilycoveCity_LilycoveMuseum_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | LilycoveCity_MoveDeletersHouse | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| LilycoveCity_PokemonCenter_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| LilycoveCity_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
-| LilycoveCity_PokemonTrainerFanClub | vanilla | unchanged Emerald map; not re-read line by line |
+| LilycoveCity_PokemonCenter_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| LilycoveCity_PokemonCenter_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| LilycoveCity_PokemonTrainerFanClub | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | LittlerootTown | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| LittlerootTown_BrendansHouse_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| LittlerootTown_BrendansHouse_1F | complete | Only change from Emerald: NORMAN's line asking the player to come to PETALBURG GYM (pass 3). Every text read with its event and condition (pass 5) |
 | LittlerootTown_BrendansHouse_2F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| LittlerootTown_MaysHouse_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| LittlerootTown_MaysHouse_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| LittlerootTown_MaysHouse_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| LittlerootTown_MaysHouse_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | LittlerootTown_ProfessorBirchsLab | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| MagmaHideout_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| MagmaHideout_2F_1R | vanilla | unchanged Emerald map; not re-read line by line |
-| MagmaHideout_2F_2R | vanilla | unchanged Emerald map; not re-read line by line |
-| MagmaHideout_2F_3R | vanilla | unchanged Emerald map; not re-read line by line |
-| MagmaHideout_3F_1R | vanilla | unchanged Emerald map; not re-read line by line |
-| MagmaHideout_3F_2R | vanilla | unchanged Emerald map; not re-read line by line |
-| MagmaHideout_3F_3R | vanilla | unchanged Emerald map; not re-read line by line |
-| MagmaHideout_4F | vanilla | unchanged Emerald map; not re-read line by line |
+| MagmaHideout_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MagmaHideout_2F_1R | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MagmaHideout_2F_2R | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MagmaHideout_2F_3R | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MagmaHideout_3F_1R | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MagmaHideout_3F_2R | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MagmaHideout_3F_3R | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MagmaHideout_4F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | MarineCave_End | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| MarineCave_Entrance | vanilla | unchanged Emerald map; not re-read line by line |
+| MarineCave_Entrance | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | MauvilleCity | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| MauvilleCity_BikeShop | vanilla | unchanged Emerald map; not re-read line by line |
-| MauvilleCity_GameCorner | vanilla | unchanged Emerald map; not re-read line by line |
-| MauvilleCity_Gym | vanilla | unchanged Emerald map; not re-read line by line |
-| MauvilleCity_House1 | vanilla | unchanged Emerald map; not re-read line by line |
-| MauvilleCity_House2 | vanilla | unchanged Emerald map; not re-read line by line |
-| MauvilleCity_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| MauvilleCity_BikeShop | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MauvilleCity_GameCorner | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MauvilleCity_Gym | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MauvilleCity_House1 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MauvilleCity_House2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MauvilleCity_Mart | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | MauvilleCity_PokemonCenter_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| MauvilleCity_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| MauvilleCity_PokemonCenter_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | MeteorFalls_1F_1R | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | MeteorFalls_1F_2R | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | MeteorFalls_B1F_1R | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| MeteorFalls_B1F_2R | vanilla | unchanged Emerald map; not re-read line by line |
+| MeteorFalls_B1F_2R | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | MeteorFalls_StevensCave | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| MirageTower_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| MirageTower_2F | vanilla | unchanged Emerald map; not re-read line by line |
-| MirageTower_3F | vanilla | unchanged Emerald map; not re-read line by line |
-| MirageTower_4F | vanilla | unchanged Emerald map; not re-read line by line |
+| MirageTower_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MirageTower_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MirageTower_3F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MirageTower_4F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | MossdeepCity | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| MossdeepCity_GameCorner_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| MossdeepCity_GameCorner_B1F | vanilla | unchanged Emerald map; not re-read line by line |
+| MossdeepCity_GameCorner_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MossdeepCity_GameCorner_B1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | MossdeepCity_Gym | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| MossdeepCity_House1 | vanilla | unchanged Emerald map; not re-read line by line |
-| MossdeepCity_House2 | vanilla | unchanged Emerald map; not re-read line by line |
-| MossdeepCity_House3 | vanilla | unchanged Emerald map; not re-read line by line |
-| MossdeepCity_House4 | vanilla | unchanged Emerald map; not re-read line by line |
-| MossdeepCity_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| MossdeepCity_House1 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MossdeepCity_House2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MossdeepCity_House3 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MossdeepCity_House4 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MossdeepCity_Mart | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | MossdeepCity_PokemonCenter_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| MossdeepCity_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
-| MossdeepCity_SpaceCenter_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| MossdeepCity_PokemonCenter_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| MossdeepCity_SpaceCenter_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | MossdeepCity_SpaceCenter_2F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| MossdeepCity_StevensHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| MossdeepCity_StevensHouse | complete | Pass 5: STEVEN said in SINNOH he was going home to MOSSDEEP ("Come visit"). With VAR_SE_STEVEN_QUEST 3 he is home with a new line, and his old "I won't return for some time" letter and note are gone. ROM: STEVEN present and talking, table empty |
 | MtChimney | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| MtChimney_CableCarStation | vanilla | unchanged Emerald map; not re-read line by line |
+| MtChimney_CableCarStation | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | MtPyre_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | MtPyre_2F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | MtPyre_3F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
@@ -2020,114 +2089,114 @@ Hoenn plays the Emerald story; Super Emerald changed 192 of its maps. Status: **
 | MtPyre_6F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | MtPyre_Exterior | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | MtPyre_Summit | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| NavelRock_B1F | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_B1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | NavelRock_Bottom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| NavelRock_Down01 | vanilla | unchanged Emerald map; not re-read line by line |
-| NavelRock_Down02 | vanilla | unchanged Emerald map; not re-read line by line |
-| NavelRock_Down03 | vanilla | unchanged Emerald map; not re-read line by line |
-| NavelRock_Down04 | vanilla | unchanged Emerald map; not re-read line by line |
-| NavelRock_Down05 | vanilla | unchanged Emerald map; not re-read line by line |
-| NavelRock_Down06 | vanilla | unchanged Emerald map; not re-read line by line |
-| NavelRock_Down07 | vanilla | unchanged Emerald map; not re-read line by line |
-| NavelRock_Down08 | vanilla | unchanged Emerald map; not re-read line by line |
-| NavelRock_Down09 | vanilla | unchanged Emerald map; not re-read line by line |
-| NavelRock_Down10 | vanilla | unchanged Emerald map; not re-read line by line |
-| NavelRock_Down11 | vanilla | unchanged Emerald map; not re-read line by line |
-| NavelRock_Entrance | vanilla | unchanged Emerald map; not re-read line by line |
-| NavelRock_Exterior | vanilla | unchanged Emerald map; not re-read line by line |
-| NavelRock_Fork | vanilla | unchanged Emerald map; not re-read line by line |
-| NavelRock_Harbor | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Down01 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| NavelRock_Down02 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| NavelRock_Down03 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| NavelRock_Down04 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| NavelRock_Down05 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| NavelRock_Down06 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| NavelRock_Down07 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| NavelRock_Down08 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| NavelRock_Down09 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| NavelRock_Down10 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| NavelRock_Down11 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| NavelRock_Entrance | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| NavelRock_Exterior | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| NavelRock_Fork | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| NavelRock_Harbor | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | NavelRock_Top | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| NavelRock_Up1 | vanilla | unchanged Emerald map; not re-read line by line |
-| NavelRock_Up2 | vanilla | unchanged Emerald map; not re-read line by line |
-| NavelRock_Up3 | vanilla | unchanged Emerald map; not re-read line by line |
-| NavelRock_Up4 | vanilla | unchanged Emerald map; not re-read line by line |
-| NewMauville_Entrance | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Up1 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| NavelRock_Up2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| NavelRock_Up3 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| NavelRock_Up4 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| NewMauville_Entrance | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | NewMauville_Inside | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | OldaleTown | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| OldaleTown_House1 | vanilla | unchanged Emerald map; not re-read line by line |
-| OldaleTown_House2 | vanilla | unchanged Emerald map; not re-read line by line |
-| OldaleTown_Mart | vanilla | unchanged Emerald map; not re-read line by line |
-| OldaleTown_PokemonCenter_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| OldaleTown_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| OldaleTown_House1 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| OldaleTown_House2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| OldaleTown_Mart | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| OldaleTown_PokemonCenter_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| OldaleTown_PokemonCenter_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | PacifidlogTown | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| PacifidlogTown_House1 | vanilla | unchanged Emerald map; not re-read line by line |
-| PacifidlogTown_House2 | vanilla | unchanged Emerald map; not re-read line by line |
-| PacifidlogTown_House3 | vanilla | unchanged Emerald map; not re-read line by line |
+| PacifidlogTown_House1 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| PacifidlogTown_House2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| PacifidlogTown_House3 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | PacifidlogTown_House4 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| PacifidlogTown_House5 | vanilla | unchanged Emerald map; not re-read line by line |
-| PacifidlogTown_PokemonCenter_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| PacifidlogTown_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| PacifidlogTown_House5 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| PacifidlogTown_PokemonCenter_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| PacifidlogTown_PokemonCenter_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | PetalburgCity | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | PetalburgCity_Gym | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| PetalburgCity_House1 | vanilla | unchanged Emerald map; not re-read line by line |
-| PetalburgCity_House2 | vanilla | unchanged Emerald map; not re-read line by line |
-| PetalburgCity_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| PetalburgCity_House1 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| PetalburgCity_House2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| PetalburgCity_Mart | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | PetalburgCity_PokemonCenter_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| PetalburgCity_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
-| PetalburgCity_WallysHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| PetalburgCity_PokemonCenter_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| PetalburgCity_WallysHouse | complete | Pass 5: WALLY's parents now follow his journey (VAR_SE_WALLY_QUEST): letters from abroad (1–2) and his return to VERDANTURF (3). The Emerald line "he can't go far by himself" no longer contradicts meeting him in JOHTO. ROM: father's letter line at stage 1 |
 | PetalburgWoods | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | PokemonWorldTournamentCorridor | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | PokemonWorldTournamentLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | PokemonWorldTournamentPreBattleRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | PokemonWorldTournamentRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | PokemonWorldTournament_Johto | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| RecordCorner | vanilla | unchanged Emerald map; not re-read line by line |
+| RecordCorner | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | Route101 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | Route102 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | Route103 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | Route104 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | Route104_MrBrineysHouse | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| Route104_PrettyPetalFlowerShop | vanilla | unchanged Emerald map; not re-read line by line |
+| Route104_PrettyPetalFlowerShop | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | Route105 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | Route106 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | Route107 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | Route108 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | Route109 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| Route109_SeashoreHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| Route109_SeashoreHouse | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | Route110 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| Route110_SeasideCyclingRoadNorthEntrance | vanilla | unchanged Emerald map; not re-read line by line |
+| Route110_SeasideCyclingRoadNorthEntrance | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | Route110_SeasideCyclingRoadSouthEntrance | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| Route110_TrickHouseCorridor | vanilla | unchanged Emerald map; not re-read line by line |
+| Route110_TrickHouseCorridor | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | Route110_TrickHouseEnd | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | Route110_TrickHouseEntrance | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| Route110_TrickHousePuzzle1 | vanilla | unchanged Emerald map; not re-read line by line |
-| Route110_TrickHousePuzzle2 | vanilla | unchanged Emerald map; not re-read line by line |
-| Route110_TrickHousePuzzle3 | vanilla | unchanged Emerald map; not re-read line by line |
-| Route110_TrickHousePuzzle4 | vanilla | unchanged Emerald map; not re-read line by line |
-| Route110_TrickHousePuzzle5 | vanilla | unchanged Emerald map; not re-read line by line |
-| Route110_TrickHousePuzzle6 | vanilla | unchanged Emerald map; not re-read line by line |
-| Route110_TrickHousePuzzle7 | vanilla | unchanged Emerald map; not re-read line by line |
-| Route110_TrickHousePuzzle8 | vanilla | unchanged Emerald map; not re-read line by line |
+| Route110_TrickHousePuzzle1 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Route110_TrickHousePuzzle2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Route110_TrickHousePuzzle3 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Route110_TrickHousePuzzle4 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Route110_TrickHousePuzzle5 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Route110_TrickHousePuzzle6 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Route110_TrickHousePuzzle7 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Route110_TrickHousePuzzle8 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | Route111 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| Route111_OldLadysRestStop | vanilla | unchanged Emerald map; not re-read line by line |
-| Route111_WinstrateFamilysHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| Route111_OldLadysRestStop | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Route111_WinstrateFamilysHouse | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | Route112 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| Route112_CableCarStation | vanilla | unchanged Emerald map; not re-read line by line |
+| Route112_CableCarStation | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | Route113 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| Route113_GlassWorkshop | vanilla | unchanged Emerald map; not re-read line by line |
+| Route113_GlassWorkshop | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | Route114 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| Route114_FossilManiacsHouse | vanilla | unchanged Emerald map; not re-read line by line |
-| Route114_FossilManiacsTunnel | vanilla | unchanged Emerald map; not re-read line by line |
-| Route114_LanettesHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| Route114_FossilManiacsHouse | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Route114_FossilManiacsTunnel | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Route114_LanettesHouse | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | Route115 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | Route116 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| Route116_TunnelersRestHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| Route116_TunnelersRestHouse | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | Route117 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| Route117_PokemonDayCare | vanilla | unchanged Emerald map; not re-read line by line |
+| Route117_PokemonDayCare | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | Route118 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | Route119 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| Route119_House | vanilla | unchanged Emerald map; not re-read line by line |
-| Route119_WeatherInstitute_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| Route119_WeatherInstitute_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| Route119_House | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Route119_WeatherInstitute_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Route119_WeatherInstitute_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | Route120 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | Route121 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | Route121_SafariZoneEntrance | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | Route122 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | Route123 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| Route123_BerryMastersHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| Route123_BerryMastersHouse | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | Route124 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| Route124_DivingTreasureHuntersHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| Route124_DivingTreasureHuntersHouse | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | Route125 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | Route126 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | Route127 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
@@ -2139,71 +2208,71 @@ Hoenn plays the Emerald story; Super Emerald changed 192 of its maps. Status: **
 | Route133 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | Route134 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | RustboroCity | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| RustboroCity_CuttersHouse | vanilla | unchanged Emerald map; not re-read line by line |
-| RustboroCity_DevonCorp_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| RustboroCity_CuttersHouse | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| RustboroCity_DevonCorp_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | RustboroCity_DevonCorp_2F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | RustboroCity_DevonCorp_3F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| RustboroCity_Flat1_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| RustboroCity_Flat1_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| RustboroCity_Flat1_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| RustboroCity_Flat1_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | RustboroCity_Flat2_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| RustboroCity_Flat2_2F | vanilla | unchanged Emerald map; not re-read line by line |
-| RustboroCity_Flat2_3F | vanilla | unchanged Emerald map; not re-read line by line |
-| RustboroCity_Gym | vanilla | unchanged Emerald map; not re-read line by line |
-| RustboroCity_House1 | vanilla | unchanged Emerald map; not re-read line by line |
-| RustboroCity_House2 | vanilla | unchanged Emerald map; not re-read line by line |
-| RustboroCity_House3 | vanilla | unchanged Emerald map; not re-read line by line |
-| RustboroCity_Mart | vanilla | unchanged Emerald map; not re-read line by line |
-| RustboroCity_PokemonCenter_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| RustboroCity_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
-| RustboroCity_PokemonSchool | vanilla | unchanged Emerald map; not re-read line by line |
+| RustboroCity_Flat2_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| RustboroCity_Flat2_3F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| RustboroCity_Gym | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| RustboroCity_House1 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| RustboroCity_House2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| RustboroCity_House3 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| RustboroCity_Mart | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| RustboroCity_PokemonCenter_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| RustboroCity_PokemonCenter_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| RustboroCity_PokemonSchool | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | RusturfTunnel | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | SSTidalCorridor | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | SSTidalLowerDeck | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| SSTidalRooms | vanilla | unchanged Emerald map; not re-read line by line |
+| SSTidalRooms | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | SafariZone_North | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| SafariZone_Northeast | vanilla | unchanged Emerald map; not re-read line by line |
-| SafariZone_Northwest | vanilla | unchanged Emerald map; not re-read line by line |
+| SafariZone_Northeast | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SafariZone_Northwest | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | SafariZone_RestHouse | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | SafariZone_South | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | SafariZone_Southeast | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | SafariZone_Southwest | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| ScorchedSlab | vanilla | unchanged Emerald map; not re-read line by line |
-| SeafloorCavern_Entrance | vanilla | unchanged Emerald map; not re-read line by line |
-| SeafloorCavern_Room1 | vanilla | unchanged Emerald map; not re-read line by line |
-| SeafloorCavern_Room2 | vanilla | unchanged Emerald map; not re-read line by line |
-| SeafloorCavern_Room3 | vanilla | unchanged Emerald map; not re-read line by line |
-| SeafloorCavern_Room4 | vanilla | unchanged Emerald map; not re-read line by line |
-| SeafloorCavern_Room5 | vanilla | unchanged Emerald map; not re-read line by line |
-| SeafloorCavern_Room6 | vanilla | unchanged Emerald map; not re-read line by line |
-| SeafloorCavern_Room7 | vanilla | unchanged Emerald map; not re-read line by line |
-| SeafloorCavern_Room8 | vanilla | unchanged Emerald map; not re-read line by line |
-| SeafloorCavern_Room9 | vanilla | unchanged Emerald map; not re-read line by line |
-| SealedChamber_InnerRoom | vanilla | unchanged Emerald map; not re-read line by line |
-| SealedChamber_OuterRoom | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_BlueCave1 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_BlueCave2 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_BlueCave3 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_BlueCave4 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_BrownCave1 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_BrownCave2 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_BrownCave3 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_BrownCave4 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_RedCave1 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_RedCave2 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_RedCave3 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_RedCave4 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_Shrub1 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_Shrub2 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_Shrub3 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_Shrub4 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_Tree1 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_Tree2 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_Tree3 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_Tree4 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_YellowCave1 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_YellowCave2 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_YellowCave3 | vanilla | unchanged Emerald map; not re-read line by line |
-| SecretBase_YellowCave4 | vanilla | unchanged Emerald map; not re-read line by line |
+| ScorchedSlab | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SeafloorCavern_Entrance | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SeafloorCavern_Room1 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SeafloorCavern_Room2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SeafloorCavern_Room3 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SeafloorCavern_Room4 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SeafloorCavern_Room5 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SeafloorCavern_Room6 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SeafloorCavern_Room7 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SeafloorCavern_Room8 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SeafloorCavern_Room9 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SealedChamber_InnerRoom | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SealedChamber_OuterRoom | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_BlueCave1 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_BlueCave2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_BlueCave3 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_BlueCave4 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_BrownCave1 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_BrownCave2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_BrownCave3 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_BrownCave4 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_RedCave1 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_RedCave2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_RedCave3 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_RedCave4 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_Shrub1 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_Shrub2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_Shrub3 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_Shrub4 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_Tree1 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_Tree2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_Tree3 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_Tree4 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_YellowCave1 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_YellowCave2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_YellowCave3 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SecretBase_YellowCave4 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | ShoalCave_HighTideEntranceRoom | unreachable | loaded only as a layout swap via `setmaplayoutindex` from the low-tide room (code) |
 | ShoalCave_HighTideInnerRoom | unreachable | loaded only as a layout swap via `setmaplayoutindex` from the low-tide room (code) |
 | ShoalCave_LowTideEntranceRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
@@ -2211,71 +2280,71 @@ Hoenn plays the Emerald story; Super Emerald changed 192 of its maps. Status: **
 | ShoalCave_LowTideInnerRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | ShoalCave_LowTideLowerRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | ShoalCave_LowTideStairsRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| SkyPillar_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| SkyPillar_2F | vanilla | unchanged Emerald map; not re-read line by line |
-| SkyPillar_3F | vanilla | unchanged Emerald map; not re-read line by line |
-| SkyPillar_4F | vanilla | unchanged Emerald map; not re-read line by line |
-| SkyPillar_5F | vanilla | unchanged Emerald map; not re-read line by line |
+| SkyPillar_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SkyPillar_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SkyPillar_3F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SkyPillar_4F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SkyPillar_5F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | SkyPillar_Entrance | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | SkyPillar_Outside | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| SkyPillar_Top | vanilla | unchanged Emerald map; not re-read line by line |
+| SkyPillar_Top | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | SlateportCity | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| SlateportCity_BattleTentBattleRoom | vanilla | unchanged Emerald map; not re-read line by line |
-| SlateportCity_BattleTentCorridor | vanilla | unchanged Emerald map; not re-read line by line |
-| SlateportCity_BattleTentLobby | vanilla | unchanged Emerald map; not re-read line by line |
+| SlateportCity_BattleTentBattleRoom | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SlateportCity_BattleTentCorridor | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SlateportCity_BattleTentLobby | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | SlateportCity_Harbor | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| SlateportCity_House | vanilla | unchanged Emerald map; not re-read line by line |
-| SlateportCity_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| SlateportCity_House | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SlateportCity_Mart | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | SlateportCity_NameRatersHouse | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| SlateportCity_OceanicMuseum_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| SlateportCity_OceanicMuseum_2F | vanilla | unchanged Emerald map; not re-read line by line |
-| SlateportCity_PokemonCenter_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| SlateportCity_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
-| SlateportCity_PokemonFanClub | vanilla | unchanged Emerald map; not re-read line by line |
-| SlateportCity_SternsShipyard_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| SlateportCity_SternsShipyard_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| SlateportCity_OceanicMuseum_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SlateportCity_OceanicMuseum_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SlateportCity_PokemonCenter_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SlateportCity_PokemonCenter_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SlateportCity_PokemonFanClub | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SlateportCity_SternsShipyard_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SlateportCity_SternsShipyard_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | SootopolisCity | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | SootopolisCity_Gym_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | SootopolisCity_Gym_B1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| SootopolisCity_House1 | vanilla | unchanged Emerald map; not re-read line by line |
-| SootopolisCity_House2 | vanilla | unchanged Emerald map; not re-read line by line |
+| SootopolisCity_House1 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SootopolisCity_House2 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | SootopolisCity_House3 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| SootopolisCity_House4 | vanilla | unchanged Emerald map; not re-read line by line |
-| SootopolisCity_House5 | vanilla | unchanged Emerald map; not re-read line by line |
-| SootopolisCity_House6 | vanilla | unchanged Emerald map; not re-read line by line |
+| SootopolisCity_House4 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SootopolisCity_House5 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SootopolisCity_House6 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | SootopolisCity_House7 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | SootopolisCity_LotadAndSeedotHouse | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| SootopolisCity_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| SootopolisCity_Mart | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | SootopolisCity_MysteryEventsHouse_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| SootopolisCity_MysteryEventsHouse_B1F | vanilla | unchanged Emerald map; not re-read line by line |
+| SootopolisCity_MysteryEventsHouse_B1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | SootopolisCity_PokemonCenter_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| SootopolisCity_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
-| SouthernIsland_Exterior | vanilla | unchanged Emerald map; not re-read line by line |
+| SootopolisCity_PokemonCenter_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| SouthernIsland_Exterior | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | SouthernIsland_Interior | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | SunyshoreCity_LightHouse_Elevator | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | TerraCave_End | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| TerraCave_Entrance | vanilla | unchanged Emerald map; not re-read line by line |
-| TradeCenter | vanilla | unchanged Emerald map; not re-read line by line |
-| TrainerHill_1F | vanilla | unchanged Emerald map; not re-read line by line |
-| TrainerHill_2F | vanilla | unchanged Emerald map; not re-read line by line |
-| TrainerHill_3F | vanilla | unchanged Emerald map; not re-read line by line |
-| TrainerHill_4F | vanilla | unchanged Emerald map; not re-read line by line |
-| TrainerHill_Elevator | vanilla | unchanged Emerald map; not re-read line by line |
-| TrainerHill_Entrance | vanilla | unchanged Emerald map; not re-read line by line |
-| TrainerHill_Roof | vanilla | unchanged Emerald map; not re-read line by line |
-| Underwater_MarineCave | vanilla | unchanged Emerald map; not re-read line by line |
-| Underwater_Route105 | vanilla | unchanged Emerald map; not re-read line by line |
-| Underwater_Route124 | vanilla | unchanged Emerald map; not re-read line by line |
-| Underwater_Route125 | vanilla | unchanged Emerald map; not re-read line by line |
-| Underwater_Route126 | vanilla | unchanged Emerald map; not re-read line by line |
-| Underwater_Route127 | vanilla | unchanged Emerald map; not re-read line by line |
-| Underwater_Route128 | vanilla | unchanged Emerald map; not re-read line by line |
-| Underwater_Route129 | vanilla | unchanged Emerald map; not re-read line by line |
-| Underwater_Route134 | vanilla | unchanged Emerald map; not re-read line by line |
-| Underwater_SeafloorCavern | vanilla | unchanged Emerald map; not re-read line by line |
-| Underwater_SealedChamber | vanilla | unchanged Emerald map; not re-read line by line |
-| Underwater_SootopolisCity | vanilla | unchanged Emerald map; not re-read line by line |
-| UnionRoom | vanilla | unchanged Emerald map; not re-read line by line |
+| TerraCave_Entrance | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| TradeCenter | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| TrainerHill_1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| TrainerHill_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| TrainerHill_3F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| TrainerHill_4F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| TrainerHill_Elevator | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| TrainerHill_Entrance | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| TrainerHill_Roof | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Underwater_MarineCave | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Underwater_Route105 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Underwater_Route124 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Underwater_Route125 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Underwater_Route126 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Underwater_Route127 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Underwater_Route128 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Underwater_Route129 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Underwater_Route134 | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Underwater_SeafloorCavern | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Underwater_SealedChamber | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| Underwater_SootopolisCity | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| UnionRoom | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | UnusedContestHall1 | unreachable | unused Emerald map; no warp, connection or script leads here (code) |
 | UnusedContestHall2 | unreachable | unused Emerald map; no warp, connection or script leads here (code) |
 | UnusedContestHall3 | unreachable | unused Emerald map; no warp, connection or script leads here (code) |
@@ -2284,15 +2353,15 @@ Hoenn plays the Emerald story; Super Emerald changed 192 of its maps. Status: **
 | UnusedContestHall6 | unreachable | unused Emerald map; no warp, connection or script leads here (code) |
 | VeilstoneCity_Departament_Store_Elevator | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | VerdanturfTown | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| VerdanturfTown_BattleTentBattleRoom | vanilla | unchanged Emerald map; not re-read line by line |
-| VerdanturfTown_BattleTentCorridor | vanilla | unchanged Emerald map; not re-read line by line |
+| VerdanturfTown_BattleTentBattleRoom | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| VerdanturfTown_BattleTentCorridor | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | VerdanturfTown_BattleTentLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
 | VerdanturfTown_FriendshipRatersHouse | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| VerdanturfTown_House | vanilla | unchanged Emerald map; not re-read line by line |
-| VerdanturfTown_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| VerdanturfTown_House | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| VerdanturfTown_Mart | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
 | VerdanturfTown_PokemonCenter_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| VerdanturfTown_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
-| VerdanturfTown_WandasHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| VerdanturfTown_PokemonCenter_2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| VerdanturfTown_WandasHouse | complete | Pass 5: WALLY said in SINNOH he was going home to VERDANTURF, but never appeared. With VAR_SE_WALLY_QUEST 3 he is back (OnTransition clears his hide flag) with a home line; uncle and aunt get letter/home lines. ROM: WALLY present and talking at stage 3 |
 | VictoryRoad_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
-| VictoryRoad_B1F | vanilla | unchanged Emerald map; not re-read line by line |
-| VictoryRoad_B2F | vanilla | unchanged Emerald map; not re-read line by line |
+| VictoryRoad_B1F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |
+| VictoryRoad_B2F | complete | Emerald map, unchanged in Super Emerald. Every text read with its event and appearance condition (pass 5); no contradiction with the four-region story, no missing hint, services work |

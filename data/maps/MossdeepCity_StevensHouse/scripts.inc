@@ -6,6 +6,7 @@ MossdeepCity_StevensHouse_MapScripts::
 
 MossdeepCity_StevensHouse_OnLoad:
 	call_if_unset FLAG_SYS_GAME_CLEAR, MossdeepCity_StevensHouse_EventScript_HideStevensNote
+	call_if_ge VAR_SE_STEVEN_QUEST, 3, MossdeepCity_StevensHouse_EventScript_HideStevensNote @ Super Emerald: STEVEN is home
 	end
 
 MossdeepCity_StevensHouse_EventScript_HideStevensNote::
@@ -14,7 +15,15 @@ MossdeepCity_StevensHouse_EventScript_HideStevensNote::
 
 MossdeepCity_StevensHouse_OnTransition:
 	call_if_eq VAR_STEVENS_HOUSE_STATE, 2, MossdeepCity_StevensHouse_EventScript_SetStevenPos
+	call_if_ge VAR_SE_STEVEN_QUEST, 3, MossdeepCity_StevensHouse_EventScript_StevenIsHome
 	end
+
+@ Super Emerald: after his journey through JOHTO, KANTO and SINNOH, STEVEN keeps his promise
+@ and goes back home; his old letter is gone from the table.
+MossdeepCity_StevensHouse_EventScript_StevenIsHome::
+	clearflag FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_STEVEN
+	setflag FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY
+	return
 
 MossdeepCity_StevensHouse_EventScript_SetStevenPos::
 	setobjectxyperm LOCALID_STEVENS_HOUSE_STEVEN, 6, 5
@@ -132,8 +141,21 @@ MossdeepCity_StevensHouse_EventScript_RockDisplay::
 	end
 
 MossdeepCity_StevensHouse_EventScript_Steven::
+	goto_if_ge VAR_SE_STEVEN_QUEST, 3, MossdeepCity_StevensHouse_EventScript_StevenBackHome
 	msgbox MossdeepCity_StevensHouse_Text_UnderwateCavernBetweenMossdeepSootopolis, MSGBOX_NPC
 	end
+
+MossdeepCity_StevensHouse_EventScript_StevenBackHome::
+	msgbox MossdeepCity_StevensHouse_Text_StevenBackHome, MSGBOX_NPC
+	end
+
+MossdeepCity_StevensHouse_Text_StevenBackHome:
+	.string "STEVEN: Welcome, {PLAYER}{KUN}.\n"
+	.string "I told you I'd be back in MOSSDEEP.\p"
+	.string "The stones I found in JOHTO, KANTO\n"
+	.string "and SINNOH are all here now.\p"
+	.string "Each one reminds me of a battle with\n"
+	.string "you. Come by anytime.$"
 
 MossdeepCity_StevensHouse_EventScript_Letter::
 	lockall
