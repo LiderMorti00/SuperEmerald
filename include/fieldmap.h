@@ -68,4 +68,7 @@ bool32 AreCoordsInsidePlayerMap(s16 x, s16 y);
 // field_region_map.c
 void FieldInitRegionMap(MainCallback callback);
 
+// Super Emerald: TRUE on maps built from the Snowpoint (snow) tileset
+bool32 IsCurrentMapSnowy(void);
+
 #endif //GUARD_FIELDMAP_H

@@ -431,13 +431,29 @@ void UpdateShadowFieldEffect(struct Sprite *sprite)
 #define sCurrentMap  data[5]
 #define sObjectMoved data[7]
 
+// Super Emerald: the Sinnoh snow maps get their own snowy grass sprites
+extern const struct SpriteTemplate gFieldEffectObjectTemplate_SnowTallGrass;
+extern const struct SpriteTemplate gFieldEffectObjectTemplate_SnowJumpTallGrass;
+extern const struct SpritePalette gSpritePalette_SnowGrassFieldEffect;
+
+static const struct SpriteTemplate *GetTallGrassTemplate(bool32 jump)
+{
+    if (IsCurrentMapSnowy())
+    {
+        if (IndexOfSpritePaletteTag(FLDEFF_PAL_TAG_SNOW_GRASS) == 0xFF)
+            FieldEffect_LoadFadedPalette((struct SpritePalette *)&gSpritePalette_SnowGrassFieldEffect, COLOR_MAP_DARK_CONTRAST);
+        return jump ? &gFieldEffectObjectTemplate_SnowJumpTallGrass : &gFieldEffectObjectTemplate_SnowTallGrass;
+    }
+    return gFieldEffectObjectTemplatePointers[jump ? FLDEFFOBJ_JUMP_TALL_GRASS : FLDEFFOBJ_TALL_GRASS];
+}
+
 u32 FldEff_TallGrass(void)
 {
     u8 spriteId;
     s16 x = gFieldEffectArguments[0];
     s16 y = gFieldEffectArguments[1];
     SetSpritePosToOffsetMapCoords(&x, &y, 8, 8);
-    spriteId = CreateSpriteAtEndUnchecked(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_TALL_GRASS], x, y, 0);
+    spriteId = CreateSpriteAtEndUnchecked(GetTallGrassTemplate(FALSE), x, y, 0);
     if (spriteId != MAX_SPRITES)
     {
         struct Sprite *sprite = &gSprites[spriteId];
@@ -504,7 +520,7 @@ u32 FldEff_JumpTallGrass(void)
     u8 spriteId;
 
     SetSpritePosToOffsetMapCoords((s16 *)&gFieldEffectArguments[0], (s16 *)&gFieldEffectArguments[1], 8, 12);
-    spriteId = CreateSpriteAtEndUnchecked(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_JUMP_TALL_GRASS], gFieldEffectArguments[0], gFieldEffectArguments[1], 0);
+    spriteId = CreateSpriteAtEndUnchecked(GetTallGrassTemplate(TRUE), gFieldEffectArguments[0], gFieldEffectArguments[1], 0);
     if (spriteId != MAX_SPRITES)
     {
         struct Sprite *sprite = &gSprites[spriteId];

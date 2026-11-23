@@ -5,7 +5,7 @@
   "music": "MUS_DPP_SNOWPOINT",
   "region_map_section": "MAPSEC_SNOWPOINT_CITY",
   "requires_flash": false,
-  "weather": "WEATHER_SNOW_LIGHT",
+  "weather": "WEATHER_SNOW",
   "map_type": "MAP_TYPE_CITY",
   "allow_cycling": true,
   "allow_escaping": false,

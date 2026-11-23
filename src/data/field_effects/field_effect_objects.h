@@ -342,6 +342,37 @@ const struct SpriteTemplate gFieldEffectObjectTemplate_JumpTallGrass = {
     .callback = UpdateJumpImpactEffect,
 };
 
+// Super Emerald: snowy tall grass for the Sinnoh snow maps. Same frames and
+// timing as the normal grass, redrawn in the Snowpoint grass colours with snow
+// on the blades; jumping into it throws up snow instead of leaves.
+const struct SpritePalette gSpritePalette_SnowGrassFieldEffect = {gFieldEffectPal_SnowGrass, FLDEFF_PAL_TAG_SNOW_GRASS};
+
+static const struct SpriteFrameImage sPicTable_SnowTallGrass[] = {
+    overworld_ascending_frames(gFieldEffectObjectPic_SnowTallGrass, 2, 2),
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_SnowTallGrass = {
+    .tileTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_SNOW_GRASS,
+    .oam = &gObjectEventBaseOam_16x16,
+    .anims = sAnimTable_TallGrass,
+    .images = sPicTable_SnowTallGrass,
+    .callback = UpdateTallGrassFieldEffect,
+};
+
+static const struct SpriteFrameImage sPicTable_SnowJumpTallGrass[] = {
+    overworld_ascending_frames(gFieldEffectObjectPic_SnowJumpTallGrass, 2, 1),
+};
+
+const struct SpriteTemplate gFieldEffectObjectTemplate_SnowJumpTallGrass = {
+    .tileTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_SNOW_GRASS,
+    .oam = &gObjectEventBaseOam_16x8,
+    .anims = sAnimTable_JumpTallGrass,
+    .images = sPicTable_SnowJumpTallGrass,
+    .callback = UpdateJumpImpactEffect,
+};
+
 static const struct SpriteFrameImage sPicTable_SandFootprints[] = {
     overworld_ascending_frames(gFieldEffectObjectPic_SandFootprints, 2, 2),
 };

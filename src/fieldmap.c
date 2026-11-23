@@ -1071,3 +1071,14 @@ bool32 AreCoordsInsidePlayerMap(s16 x, s16 y)
 {
     return AreCoordsInsideMap(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum, x, y);
 }
+
+// Super Emerald: the Sinnoh snow maps (Routes 216/217, Acuity Lakefront,
+// Lake Acuity, Mt. Coronet's outside paths) all use this secondary tileset,
+// and every tall-grass metatile in it is snowy grass.
+extern const struct Tileset gTileset_Snowpoint_Sinnoh;
+
+bool32 IsCurrentMapSnowy(void)
+{
+    return gMapHeader.mapLayout != NULL
+        && gMapHeader.mapLayout->secondaryTileset == &gTileset_Snowpoint_Sinnoh;
+}

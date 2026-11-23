@@ -811,6 +811,13 @@ enum BattleEnvironments BattleSetup_GetEnvironmentId(void)
 
     tileBehavior = MapGridGetMetatileBehaviorAt(x, y);
 
+    // Super Emerald: on the Sinnoh snow maps every land battle (snowy tall
+    // grass included) uses the snow background; water keeps its own.
+    if (IsCurrentMapSnowy()
+     && !MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehavior)
+     && !TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
+        return BATTLE_ENVIRONMENT_SNOW;
+
     if (MetatileBehavior_IsTallGrass(tileBehavior))
         return BATTLE_ENVIRONMENT_GRASS;
     if (MetatileBehavior_IsLongGrass(tileBehavior))
