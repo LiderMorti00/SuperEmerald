@@ -286,3 +286,7 @@ The Sinnoh comparison covered the two plaque states at all eight gyms. Seven dis
 
 - Read the lighthouse trainers' dialogue and checked Huey's rematch, the item bindings, Amphy, the hidden Jasmine scene and the active Iron Crown encounter. The lighthouse staff and visitors now agree that Amphy has recovered before the player arrives in Johto. Jasmine's current gym duties also match the revised dialogue.
 - Checked the port's active clerk binding and Jasmine arrival hook. The imported Swagger pickup still has no matching TM. Lighthouse traversal and the arrival scene remain pending in ROM.
+
+## Olivine harbor
+
+- Reviewed both port maps, including their shared doorway, sailor destination menu, hidden Oak and Sabrina scenes, fishing conversations and Jasmine's first-arrival hook. The dock fisherman now gives the Slateport destination before the Johto League and the Vermilion route after the same flag that unlocks the sailing option. Arrival movement and boarding remain pending in ROM.
