@@ -107,8 +107,8 @@ Route41_Text_SwimmermGeorgeBeaten::
 	.string "Pant, pant…$"
 
 Route41_Text_SwimmermGeorgeSeen::
-	.string "I'm a bit tired.\n"
-	.string "If I win, lend me your POKéMON.$"
+	.string "I was about to take a breather.\p"
+	.string "First, how about a battle?$"
 
 Route41_EventScript_Kirk::
 	trainerbattle_single TRAINER_KIRK_HNS, Route41_Text_SwimmermKirkSeen, Route41_Text_SwimmermKirkBeaten
@@ -149,8 +149,10 @@ Route41_EventScript_Mathew::
 	end
 
 Route41_Text_SwimmermMathewAfter::
-	.string "A secret about WHIRL ISLANDS…\p"
-	.string "It's pitch-black inside!$"
+	.string "Each cave entrance takes you down\n"
+	.string "a different path.\p"
+	.string "Try another island if you reach\n"
+	.string "a dead end.$"
 
 Route41_Text_SwimmermMathewBeaten::
 	.string "Ooh, you've got great endurance!$"

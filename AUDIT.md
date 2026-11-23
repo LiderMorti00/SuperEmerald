@@ -272,3 +272,8 @@ The Sinnoh comparison covered the two plaque states at all eight gyms. Seven dis
 
 - Reviewed the seven Whirl Islands maps from the surface entrances to Lugia's chamber, including the pickups and hidden items, Strength boulder, Tentacruel binding, hidden theater actors, and reciprocal warp destinations.
 - Lugia still requires the Silver Wing. Defeat by Lugia keeps the encounter available on return, and victory or capture marks it complete. Battle and traversal remain pending in ROM.
+
+## Route 41
+
+- Read the ten swimmers' battle dialogue, checked the four cave entrances and their returns, and followed the paired whirlpool objects into the shared badge check and four movement branches. Confirmed that the Johto initializer hides the optional Tentacruel battles.
+- Mathew now gives directions that match the cave entrances and their separate paths. George's challenge no longer suggests a Pokémon loan that his script cannot handle. Whirlpool movement still needs verification in ROM.
