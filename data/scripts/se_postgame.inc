@@ -251,7 +251,8 @@ SFR_Text_KantoRematchAfter:
 SFR_EventScript_OakAfterHoenn::
 	goto_if_unset FLAG_SFR_RECEIVED_SINNOH_STARTER, SFR_EventScript_OakSinnohStarter
 	goto_if_set FLAG_SFR_RECEIVED_SHINY_CHARM, SFR_EventScript_OakAfterHoennDone
-	msgbox SFR_Text_OakShinyCharm, MSGBOX_DEFAULT
+	call_if_unset FLAG_SE_SINNOH_LEAGUE_CLEARED, SFR_EventScript_OakShinyCharmThree
+	call_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, SFR_EventScript_OakShinyCharmFour
 	giveitem ITEM_SHINY_CHARM
 	goto_if_eq VAR_RESULT, FALSE, SFR_EventScript_OakAfterHoennDone
 	setflag FLAG_SFR_RECEIVED_SHINY_CHARM
@@ -259,8 +260,24 @@ SFR_EventScript_OakAfterHoenn::
 SFR_EventScript_OakAfterHoennDone::
 	return
 
+@ Super Emerald: SINNOH can be won before or after the KANTO rematch
+SFR_EventScript_OakShinyCharmThree::
+	msgbox SFR_Text_OakShinyCharm, MSGBOX_DEFAULT
+	return
+SFR_EventScript_OakShinyCharmFour::
+	msgbox SFR_Text_OakShinyCharmFour, MSGBOX_DEFAULT
+	return
+
 SFR_EventScript_OakSinnohStarter::
+	call_if_unset FLAG_SE_SINNOH_LEAGUE_CLEARED, SFR_EventScript_OakSinnohIntroThree
+	call_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, SFR_EventScript_OakSinnohIntroFour
+	goto SFR_EventScript_OakSinnohStarterChoose
+SFR_EventScript_OakSinnohIntroThree::
 	msgbox SFR_Text_OakSinnohStarterIntro, MSGBOX_DEFAULT
+	return
+SFR_EventScript_OakSinnohIntroFour::
+	msgbox SFR_Text_OakSinnohStarterIntroFour, MSGBOX_DEFAULT
+	return
 SFR_EventScript_OakSinnohStarterChoose::
 	message SFR_Text_OakWhichSinnohStarter
 	waitmessage
@@ -351,6 +368,18 @@ SFR_Text_OakSinnohStarterIntro:
 	.string "Like the others, they hold an\n"
 	.string "EVERSTONE.$"
 
+SFR_Text_OakSinnohStarterIntroFour:
+	.string "OAK: {PLAYER}! You earned all\n"
+	.string "sixteen BADGES of JOHTO and KANTO\l"
+	.string "and beat the LEAGUE again!\p"
+	.string "HOENN, JOHTO, KANTO and SINNOH…\n"
+	.string "Four regions conquered! Remarkable!\p"
+	.string "To celebrate, I have a gift for you.\p"
+	.string "PROF. ROWAN, whom you've met in\n"
+	.string "SINNOH, sent me three POKéMON.\p"
+	.string "Like the others, they hold an\n"
+	.string "EVERSTONE.$"
+
 SFR_Text_OakWhichSinnohStarter:
 	.string "Which one will you choose?$"
 
@@ -366,6 +395,12 @@ SFR_Text_OakAfterSinnohStarter:
 	.string "there, from every corner of the world.\p"
 	.string "Oh, and there's one more thing\n"
 	.string "I'd like you to have.$"
+
+SFR_Text_OakShinyCharmFour:
+	.string "OAK: A TRAINER who has conquered\n"
+	.string "four regions deserves something\l"
+	.string "special.\p"
+	.string "Please, take this!$"
 
 SFR_Text_OakShinyCharm:
 	.string "OAK: A TRAINER who has conquered\n"

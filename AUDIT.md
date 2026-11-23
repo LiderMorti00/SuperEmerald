@@ -451,8 +451,8 @@ save was available, so updating an existing save is untested.
 
 - No map sets `night_music`, so the music is the same by day and night everywhere. This is
   not a regression.
-- At night, the windows on the Veilstone Dept. Store's front do not light up; only the glass
-  door does (no `.pla` entry for those colors).
+- Corrected in the next pass: the Veilstone Dept. Store's front windows do light up at night,
+  in the same lit color as the glass door.
 - Pending, not run in ROM:
   - loading an older save (none available)
   - Hoenn League first visit and rematch (Emerald scripts, unchanged)
@@ -462,19 +462,85 @@ save was available, so updating an existing save is untested.
   - Giovanni's battle itself (the test team lost; the reward was tested with the battle
     flag set)
 
+## Regression pass 2 (after e63d81f2f5)
+
+ROM: built from e63d81f2f5 plus this commit's changes, using the same new-game test harness.
+No older save was available, so compatibility with old saves is still untested.
+
+### Accessibility method
+
+- Warp graph from INSIDE_OF_TRUCK. It follows:
+  - map warps and connections, including dive and emerge;
+  - every `warp*`/`setwarp` reachable from a map's own scripts, including shared labels
+    they call (followed transitively);
+  - travel done in C: the SEAGALLOP, the Battle Pyramid, secret bases and the Trainer Tower.
+
+  1564 of 1578 maps are reached. The 14 that are not are all unused:
+  - Emerald: three CaveOfOrigin_UnusedRubySapphireMap, ContestHall, six UnusedContestHall,
+    and the two Shoal Cave high-tide rooms (loaded only through `setmaplayoutindex`);
+  - Platinum: Lake Valor (drained) and Lake Verity (low water).
+- Physical check: a walk over collision and elevation from each map's real entrances, allowing
+  SURF, ledges and waterfalls, and treating doors as entered from an adjacent tile. It is only
+  a heuristic. It reads Sinnoh stairs as walls (ROM: Route 216's snowfield is reached by a
+  ladder) and does not model puzzle metatiles that scripts change (League doors, New Mauville
+  barriers), SURF on dive maps, or FRLG ledges. Its results are used only to choose ROM checks.
+- Found through it and confirmed by ROM screenshots: the ROUTE 210 NORTH pocket with the DRACO
+  METEOR house, the trainer Patrick and its items is closed by cliffs. See the table.
+  Decision pending: add a path or ROCK CLIMB.
+
+### Continuity between regions (fixed)
+
+| Map | Before | Steps | Expected | Observed before the fix | After the fix (ROM) |
+|---|---|---|---|---|---|
+| Vermilion pier / ferry sailor | Kanto state, no RAINBOW PASS | Walk onto the pier | You need BILL's pass | "Ah, you have a RAINBOW PASS", then the SEAGALLOP | Explains the pass and BILL, walks the player back; repeats each time. With the pass: SEAGALLOP menu |
+| New Bark lab (ELM) | JOHTO LEAGUE cleared, no CANALAVE TICKET | Talk twice | A pointer to BIRCH's CANALAVE TICKET | Nothing pointed back to HOENN | First talk: MAGNET TRAIN PASS, then BIRCH's message. Second talk: the reminder |
+| Oak's lab | KANTO rematch won and SINNOH already won | Talk | Four regions | "Three regions conquered", ROWAN as a stranger | "Four regions conquered", ROWAN "whom you've met in SINNOH". The other order keeps the original text (code) |
+| Littleroot house (Norman after the HoF) | First HoF | TICKET scene | A hint that Norman has more at the GYM | He only went back to the GYM | He asks the player to come and see him at PETALBURG GYM (text, code only) |
+
+Also checked in code with no change needed:
+- the HOENN → JOHTO → KANTO → SEVII → SINNOH chain: the JOHTO TICKET from Norman, the
+  JOHTO LEAGUE gates, Oak sending the player to BILL, and BILL's pass;
+- the Rocket trail: OFFICER → MAHOGANY → FIVE ISLAND (with the pass hint) → CELADON;
+- the Hearthome contest lobby, which reuses the Lilycove scripts: the local ids match object
+  for object and no text names Hoenn;
+- the Sinnoh lines that call the player "CHAMPION of HOENN and JOHTO", which stay true in
+  either order.
+
+### ROM tests
+
+| Test | Setup (prepared or natural) | Result |
+|---|---|---|
+| S.S. TIDAL crossing | Prepared: boarding state toward Olivine, first Johto arrival. Natural: SCOTT's scene, five walks along the corridor, talking to the exit sailor | Arrival announced after the steps; disembarks at Olivine; JASMINE's first-arrival scene |
+| Pokémon Center music | Seven Island, night, enter and leave | Recorded audio: the inside and outside spectra differ (distance 0.43–0.48). The first outdoor seconds are silent because the harness starts directly on the map |
+| Center and mart music (code) | All maps | 64 Centers use MUS_POKE_CENTER; Hearthome used MUS_RG_POKE_CENTER and is now aligned. Non-mart shops in Mahogany, Cianwood and Goldenrod use the town theme, as in HGSS |
+| Veilstone Dept. Store at night | Clock 23:00, player 3 tiles to the side, egg in the party so no follower | Glass door and front windows lit before and after. The door animation was not captured (a wandering NPC and the test alignment) |
+| ROUTE 210 NORTH pocket | Placed inside | Closed by cliffs, see above |
+| ROUTE 216 snowfield | Placed in the snow | Ladder and stairs connect it: the physical check was wrong here |
+
+### Pending
+
+- A natural playthrough from Hoenn without prepared flags is not feasible with this harness;
+  each test starts a new emulator and is driven blind. Every test above starts from a
+  prepared state, and only the steps listed as natural were played.
+- A full route through each region, and the first win of each League.
+- The Veilstone door animation.
+- Old saves.
+- ROUTE 210 NORTH and ROUTE 213 pockets: decide whether to add a path or ROCK CLIMB.
+
 ## Map-by-map branch audit (Johto, Kanto, Sinnoh)
 
 Each map was traced from its objects, signs, trainers and transition/coord events through local and shared scripts. Every branch was checked for its condition, what sets it, and what the speaker knows at that point (first visit, return, rematch, quest in progress, save/load, regional travel order).
 
-Status: **complete** = all reachable branches reviewed; **no events** = no visible event in any state; **unreachable** = no warp reaches it in this game. No map is left partial or pending.
+Status: **complete** = all reachable branches reviewed; **no events** = no visible event in any state; **unreachable** = no warp reaches it in this game. Two Sinnoh maps are pending a design decision (see Regression pass 2).
 
 ROM tests run: Goldenrod Dept. Store clerk, Goldenrod Radio Tower lottery, Celestic Town Surf, Rocket Hideout B4F barrier, Route 213 footstep house.
 
-| Region | complete | no events | unreachable |
-|---|---|---|---|
-| Johto | 205 | 35 | 2 |
-| Kanto | 307 | 78 | 25 |
-| Sinnoh | 328 | 71 | 2 |
+| Region | complete | no events | unreachable | pending | vanilla (not re-read) |
+|---|---|---|---|---|---|
+| Hoenn | 189 | – | 12 | 0 | 326 |
+| Johto | 205 | 35 | 2 | 0 | – |
+| Kanto and Sevii | 307 | 78 | 25 | 0 | – |
+| Sinnoh | 326 | 71 | 2 | 2 | – |
 
 ### Johto
 
@@ -1367,7 +1433,7 @@ ROM tests run: Goldenrod Dept. Store clerk, Goldenrod Radio Tower lottery, Celes
 | Route209_Access_sinnoh | complete |  |
 | Route209_sinnoh | complete | GOOD ROD gift; SPIRITOMB pillar |
 | Route210_Cafe_sinnoh | complete | waitress offered MOOMOO MILK with no sale -> real yes/no purchase (500) |
-| Route210_House_sinnoh | complete | DRACO METEOR tutor |
+| Route210_House_sinnoh | pending | DRACO METEOR tutor. Its door is in a pocket of ROUTE 210 NORTH (plateau, stairs and meadow) closed by cliffs; ROM screenshots inside the pocket show no way out. In Platinum this area needs ROCK CLIMB, and this port has no ROCK CLIMB tiles. Probably unreachable; map design decision pending. |
 | Route210_North_sinnoh | complete |  |
 | Route210_South_sinnoh | complete | Platinum CYNTHIA Old CHARM scene hidden by state init |
 | Route211_East_sinnoh | complete |  |
@@ -1379,7 +1445,7 @@ ROM tests run: Goldenrod Dept. Store clerk, Goldenrod Radio Tower lottery, Celes
 | Route213_Access_sinnoh | complete |  |
 | Route213_FootstepHouse_sinnoh | complete | Dr. Footstep offered a reading and never gave it -> real friendship reading (shared with the Verdanturf rater) |
 | Route213_House1_sinnoh | complete |  |
-| Route213_House2_sinnoh | complete |  |
+| Route213_House2_sinnoh | pending | Door on a cliff pocket of ROUTE 213 that the physical check cannot reach; not checked in ROM. Probably a former ROCK CLIMB area. |
 | Route213_House3_sinnoh | complete |  |
 | Route213_sinnoh | complete |  |
 | Route214_Access_sinnoh | complete |  |
@@ -1543,3 +1609,537 @@ ROM tests run: Goldenrod Dept. Store clerk, Goldenrod Radio Tower lottery, Celes
 | VerityLakefront_sinnoh | complete |  |
 | WaywardCave_1F_sinnoh | complete |  |
 | WaywardCave_B1F_sinnoh | complete | ETERNATUS |
+
+### Hoenn
+
+Hoenn plays the Emerald story; Super Emerald changed 192 of its maps. Status: **complete** = the Super Emerald changes were reviewed; **vanilla** = unchanged Emerald map, not re-read; **unreachable** = unused map.
+
+| Map | Status | Notes |
+|---|---|---|
+| AbandonedShip_CaptainsOffice | vanilla | unchanged Emerald map; not re-read line by line |
+| AbandonedShip_Corridors_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| AbandonedShip_Corridors_B1F | vanilla | unchanged Emerald map; not re-read line by line |
+| AbandonedShip_Deck | vanilla | unchanged Emerald map; not re-read line by line |
+| AbandonedShip_HiddenFloorCorridors | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| AbandonedShip_HiddenFloorRooms | vanilla | unchanged Emerald map; not re-read line by line |
+| AbandonedShip_Room_B1F | vanilla | unchanged Emerald map; not re-read line by line |
+| AbandonedShip_Rooms2_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| AbandonedShip_Rooms2_B1F | vanilla | unchanged Emerald map; not re-read line by line |
+| AbandonedShip_Rooms_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| AbandonedShip_Rooms_B1F | vanilla | unchanged Emerald map; not re-read line by line |
+| AbandonedShip_Underwater1 | vanilla | unchanged Emerald map; not re-read line by line |
+| AbandonedShip_Underwater2 | vanilla | unchanged Emerald map; not re-read line by line |
+| AlteringCave | vanilla | unchanged Emerald map; not re-read line by line |
+| AncientTomb | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| AquaHideout_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| AquaHideout_B1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| AquaHideout_B2F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| ArtisanCave_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| ArtisanCave_B1F | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleColosseum_2P | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleColosseum_4P | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_BattleArenaBattleRoom | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_BattleArenaCorridor | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_BattleArenaLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleFrontier_BattleDomeBattleRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleFrontier_BattleDomeCorridor | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleFrontier_BattleDomeLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleFrontier_BattleDomePreBattleRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleFrontier_BattleFactoryBattleRoom | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_BattleFactoryLobby | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_BattleFactoryPreBattleRoom | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_BattlePalaceBattleRoom | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_BattlePalaceCorridor | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_BattlePalaceLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleFrontier_BattlePikeCorridor | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_BattlePikeLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleFrontier_BattlePikeRoomFinal | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_BattlePikeRoomNormal | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_BattlePikeRoomWildMons | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_BattlePikeThreePathRoom | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_BattlePyramidFloor | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_BattlePyramidLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleFrontier_BattlePyramidTop | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_BattleTowerBattleRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleFrontier_BattleTowerCorridor | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleFrontier_BattleTowerElevator | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleFrontier_BattleTowerLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleFrontier_BattleTowerMultiBattleRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleFrontier_BattleTowerMultiCorridor | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleFrontier_BattleTowerMultiPartnerRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleFrontier_ExchangeServiceCorner | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_Lounge1 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleFrontier_Lounge2 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_Lounge3 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_Lounge4 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_Lounge5 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleFrontier_Lounge6 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_Lounge7 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_Lounge8 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_Lounge9 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_OutsideEast | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleFrontier_OutsideWest | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleFrontier_PokemonCenter_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_RankingHall | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_ReceptionGate | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleFrontier_ScottsHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| BattlePark | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattlePark_Access | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattlePyramidSquare01 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattlePyramidSquare02 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattlePyramidSquare03 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattlePyramidSquare04 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattlePyramidSquare05 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattlePyramidSquare06 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattlePyramidSquare07 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattlePyramidSquare08 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattlePyramidSquare09 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattlePyramidSquare10 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattlePyramidSquare11 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattlePyramidSquare12 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattlePyramidSquare13 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattlePyramidSquare14 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattlePyramidSquare15 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattlePyramidSquare16 | vanilla | unchanged Emerald map; not re-read line by line |
+| BattleTowe_Elevator_Sinnoh | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleTower_BattleRoom_Sinnoh | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleTower_Corridor_Sinnoh | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BattleTower_Sinnoh | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BirthIsland_Exterior | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| BirthIsland_Harbor | vanilla | unchanged Emerald map; not re-read line by line |
+| CaveOfOrigin_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| CaveOfOrigin_B1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| CaveOfOrigin_Entrance | vanilla | unchanged Emerald map; not re-read line by line |
+| CaveOfOrigin_UnusedRubySapphireMap1 | unreachable | unused Emerald map; no warp, connection or script leads here (code) |
+| CaveOfOrigin_UnusedRubySapphireMap2 | unreachable | unused Emerald map; no warp, connection or script leads here (code) |
+| CaveOfOrigin_UnusedRubySapphireMap3 | unreachable | unused Emerald map; no warp, connection or script leads here (code) |
+| ContestHall | unreachable | unused Emerald map; no warp, connection or script leads here (code) |
+| ContestHallBeauty | vanilla | unchanged Emerald map; not re-read line by line |
+| ContestHallCool | vanilla | unchanged Emerald map; not re-read line by line |
+| ContestHallCute | vanilla | unchanged Emerald map; not re-read line by line |
+| ContestHallSmart | vanilla | unchanged Emerald map; not re-read line by line |
+| ContestHallTough | vanilla | unchanged Emerald map; not re-read line by line |
+| DesertRuins | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| DesertUnderpass | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| DewfordTown | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| DewfordTown_Gym | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| DewfordTown_Hall | vanilla | unchanged Emerald map; not re-read line by line |
+| DewfordTown_House1 | vanilla | unchanged Emerald map; not re-read line by line |
+| DewfordTown_House2 | vanilla | unchanged Emerald map; not re-read line by line |
+| DewfordTown_PokemonCenter_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| DewfordTown_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| EverGrandeCity | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| EverGrandeCity_ChampionsRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| EverGrandeCity_DrakesRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| EverGrandeCity_GlaciasRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| EverGrandeCity_Hall1 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| EverGrandeCity_Hall2 | vanilla | unchanged Emerald map; not re-read line by line |
+| EverGrandeCity_Hall3 | vanilla | unchanged Emerald map; not re-read line by line |
+| EverGrandeCity_Hall4 | vanilla | unchanged Emerald map; not re-read line by line |
+| EverGrandeCity_Hall5 | vanilla | unchanged Emerald map; not re-read line by line |
+| EverGrandeCity_HallOfFame | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| EverGrandeCity_PhoebesRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| EverGrandeCity_PokemonCenter_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| EverGrandeCity_PokemonCenter_2F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| EverGrandeCity_PokemonLeague_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| EverGrandeCity_PokemonLeague_2F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| EverGrandeCity_SidneysRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| FallarborTown | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| FallarborTown_BattleTentBattleRoom | vanilla | unchanged Emerald map; not re-read line by line |
+| FallarborTown_BattleTentCorridor | vanilla | unchanged Emerald map; not re-read line by line |
+| FallarborTown_BattleTentLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| FallarborTown_CozmosHouse | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| FallarborTown_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| FallarborTown_MoveRelearnersHouse | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| FallarborTown_PokemonCenter_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| FallarborTown_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| FarawayIsland_Entrance | vanilla | unchanged Emerald map; not re-read line by line |
+| FarawayIsland_Interior | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| FieryPath | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| FortreeCity | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| FortreeCity_DecorationShop | vanilla | unchanged Emerald map; not re-read line by line |
+| FortreeCity_Gym | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| FortreeCity_House1 | vanilla | unchanged Emerald map; not re-read line by line |
+| FortreeCity_House2 | vanilla | unchanged Emerald map; not re-read line by line |
+| FortreeCity_House3 | vanilla | unchanged Emerald map; not re-read line by line |
+| FortreeCity_House4 | vanilla | unchanged Emerald map; not re-read line by line |
+| FortreeCity_House5 | vanilla | unchanged Emerald map; not re-read line by line |
+| FortreeCity_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| FortreeCity_PokemonCenter_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| FortreeCity_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| GraniteCave_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| GraniteCave_B1F | vanilla | unchanged Emerald map; not re-read line by line |
+| GraniteCave_B2F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| GraniteCave_StevensRoom | vanilla | unchanged Emerald map; not re-read line by line |
+| HearthomeCity_ContestHall | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| HearthomeCity_ContestLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| InsideOfTruck | vanilla | unchanged Emerald map; not re-read line by line |
+| IslandCave | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| JaggedPass | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| LavaridgeTown | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| LavaridgeTown_Gym_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| LavaridgeTown_Gym_B1F | vanilla | unchanged Emerald map; not re-read line by line |
+| LavaridgeTown_HerbShop | vanilla | unchanged Emerald map; not re-read line by line |
+| LavaridgeTown_House | vanilla | unchanged Emerald map; not re-read line by line |
+| LavaridgeTown_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| LavaridgeTown_PokemonCenter_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| LavaridgeTown_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| LilycoveCity | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| LilycoveCity_ContestHall | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| LilycoveCity_ContestLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| LilycoveCity_CoveLilyMotel_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| LilycoveCity_CoveLilyMotel_2F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| LilycoveCity_DepartmentStoreElevator | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| LilycoveCity_DepartmentStoreRooftop | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| LilycoveCity_DepartmentStore_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| LilycoveCity_DepartmentStore_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| LilycoveCity_DepartmentStore_3F | vanilla | unchanged Emerald map; not re-read line by line |
+| LilycoveCity_DepartmentStore_4F | vanilla | unchanged Emerald map; not re-read line by line |
+| LilycoveCity_DepartmentStore_5F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| LilycoveCity_Harbor | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| LilycoveCity_House1 | vanilla | unchanged Emerald map; not re-read line by line |
+| LilycoveCity_House2 | vanilla | unchanged Emerald map; not re-read line by line |
+| LilycoveCity_House3 | vanilla | unchanged Emerald map; not re-read line by line |
+| LilycoveCity_House4 | vanilla | unchanged Emerald map; not re-read line by line |
+| LilycoveCity_LilycoveMuseum_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| LilycoveCity_LilycoveMuseum_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| LilycoveCity_MoveDeletersHouse | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| LilycoveCity_PokemonCenter_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| LilycoveCity_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| LilycoveCity_PokemonTrainerFanClub | vanilla | unchanged Emerald map; not re-read line by line |
+| LittlerootTown | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| LittlerootTown_BrendansHouse_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| LittlerootTown_BrendansHouse_2F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| LittlerootTown_MaysHouse_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| LittlerootTown_MaysHouse_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| LittlerootTown_ProfessorBirchsLab | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| MagmaHideout_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| MagmaHideout_2F_1R | vanilla | unchanged Emerald map; not re-read line by line |
+| MagmaHideout_2F_2R | vanilla | unchanged Emerald map; not re-read line by line |
+| MagmaHideout_2F_3R | vanilla | unchanged Emerald map; not re-read line by line |
+| MagmaHideout_3F_1R | vanilla | unchanged Emerald map; not re-read line by line |
+| MagmaHideout_3F_2R | vanilla | unchanged Emerald map; not re-read line by line |
+| MagmaHideout_3F_3R | vanilla | unchanged Emerald map; not re-read line by line |
+| MagmaHideout_4F | vanilla | unchanged Emerald map; not re-read line by line |
+| MarineCave_End | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| MarineCave_Entrance | vanilla | unchanged Emerald map; not re-read line by line |
+| MauvilleCity | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| MauvilleCity_BikeShop | vanilla | unchanged Emerald map; not re-read line by line |
+| MauvilleCity_GameCorner | vanilla | unchanged Emerald map; not re-read line by line |
+| MauvilleCity_Gym | vanilla | unchanged Emerald map; not re-read line by line |
+| MauvilleCity_House1 | vanilla | unchanged Emerald map; not re-read line by line |
+| MauvilleCity_House2 | vanilla | unchanged Emerald map; not re-read line by line |
+| MauvilleCity_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| MauvilleCity_PokemonCenter_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| MauvilleCity_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| MeteorFalls_1F_1R | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| MeteorFalls_1F_2R | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| MeteorFalls_B1F_1R | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| MeteorFalls_B1F_2R | vanilla | unchanged Emerald map; not re-read line by line |
+| MeteorFalls_StevensCave | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| MirageTower_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| MirageTower_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| MirageTower_3F | vanilla | unchanged Emerald map; not re-read line by line |
+| MirageTower_4F | vanilla | unchanged Emerald map; not re-read line by line |
+| MossdeepCity | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| MossdeepCity_GameCorner_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| MossdeepCity_GameCorner_B1F | vanilla | unchanged Emerald map; not re-read line by line |
+| MossdeepCity_Gym | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| MossdeepCity_House1 | vanilla | unchanged Emerald map; not re-read line by line |
+| MossdeepCity_House2 | vanilla | unchanged Emerald map; not re-read line by line |
+| MossdeepCity_House3 | vanilla | unchanged Emerald map; not re-read line by line |
+| MossdeepCity_House4 | vanilla | unchanged Emerald map; not re-read line by line |
+| MossdeepCity_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| MossdeepCity_PokemonCenter_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| MossdeepCity_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| MossdeepCity_SpaceCenter_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| MossdeepCity_SpaceCenter_2F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| MossdeepCity_StevensHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| MtChimney | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| MtChimney_CableCarStation | vanilla | unchanged Emerald map; not re-read line by line |
+| MtPyre_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| MtPyre_2F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| MtPyre_3F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| MtPyre_4F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| MtPyre_5F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| MtPyre_6F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| MtPyre_Exterior | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| MtPyre_Summit | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| NavelRock_B1F | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Bottom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| NavelRock_Down01 | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Down02 | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Down03 | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Down04 | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Down05 | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Down06 | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Down07 | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Down08 | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Down09 | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Down10 | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Down11 | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Entrance | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Exterior | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Fork | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Harbor | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Top | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| NavelRock_Up1 | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Up2 | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Up3 | vanilla | unchanged Emerald map; not re-read line by line |
+| NavelRock_Up4 | vanilla | unchanged Emerald map; not re-read line by line |
+| NewMauville_Entrance | vanilla | unchanged Emerald map; not re-read line by line |
+| NewMauville_Inside | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| OldaleTown | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| OldaleTown_House1 | vanilla | unchanged Emerald map; not re-read line by line |
+| OldaleTown_House2 | vanilla | unchanged Emerald map; not re-read line by line |
+| OldaleTown_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| OldaleTown_PokemonCenter_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| OldaleTown_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| PacifidlogTown | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| PacifidlogTown_House1 | vanilla | unchanged Emerald map; not re-read line by line |
+| PacifidlogTown_House2 | vanilla | unchanged Emerald map; not re-read line by line |
+| PacifidlogTown_House3 | vanilla | unchanged Emerald map; not re-read line by line |
+| PacifidlogTown_House4 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| PacifidlogTown_House5 | vanilla | unchanged Emerald map; not re-read line by line |
+| PacifidlogTown_PokemonCenter_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| PacifidlogTown_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| PetalburgCity | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| PetalburgCity_Gym | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| PetalburgCity_House1 | vanilla | unchanged Emerald map; not re-read line by line |
+| PetalburgCity_House2 | vanilla | unchanged Emerald map; not re-read line by line |
+| PetalburgCity_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| PetalburgCity_PokemonCenter_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| PetalburgCity_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| PetalburgCity_WallysHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| PetalburgWoods | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| PokemonWorldTournamentCorridor | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| PokemonWorldTournamentLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| PokemonWorldTournamentPreBattleRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| PokemonWorldTournamentRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| PokemonWorldTournament_Johto | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| RecordCorner | vanilla | unchanged Emerald map; not re-read line by line |
+| Route101 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route102 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route103 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route104 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route104_MrBrineysHouse | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route104_PrettyPetalFlowerShop | vanilla | unchanged Emerald map; not re-read line by line |
+| Route105 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route106 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route107 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route108 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route109 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route109_SeashoreHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| Route110 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route110_SeasideCyclingRoadNorthEntrance | vanilla | unchanged Emerald map; not re-read line by line |
+| Route110_SeasideCyclingRoadSouthEntrance | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route110_TrickHouseCorridor | vanilla | unchanged Emerald map; not re-read line by line |
+| Route110_TrickHouseEnd | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route110_TrickHouseEntrance | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route110_TrickHousePuzzle1 | vanilla | unchanged Emerald map; not re-read line by line |
+| Route110_TrickHousePuzzle2 | vanilla | unchanged Emerald map; not re-read line by line |
+| Route110_TrickHousePuzzle3 | vanilla | unchanged Emerald map; not re-read line by line |
+| Route110_TrickHousePuzzle4 | vanilla | unchanged Emerald map; not re-read line by line |
+| Route110_TrickHousePuzzle5 | vanilla | unchanged Emerald map; not re-read line by line |
+| Route110_TrickHousePuzzle6 | vanilla | unchanged Emerald map; not re-read line by line |
+| Route110_TrickHousePuzzle7 | vanilla | unchanged Emerald map; not re-read line by line |
+| Route110_TrickHousePuzzle8 | vanilla | unchanged Emerald map; not re-read line by line |
+| Route111 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route111_OldLadysRestStop | vanilla | unchanged Emerald map; not re-read line by line |
+| Route111_WinstrateFamilysHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| Route112 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route112_CableCarStation | vanilla | unchanged Emerald map; not re-read line by line |
+| Route113 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route113_GlassWorkshop | vanilla | unchanged Emerald map; not re-read line by line |
+| Route114 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route114_FossilManiacsHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| Route114_FossilManiacsTunnel | vanilla | unchanged Emerald map; not re-read line by line |
+| Route114_LanettesHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| Route115 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route116 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route116_TunnelersRestHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| Route117 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route117_PokemonDayCare | vanilla | unchanged Emerald map; not re-read line by line |
+| Route118 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route119 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route119_House | vanilla | unchanged Emerald map; not re-read line by line |
+| Route119_WeatherInstitute_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| Route119_WeatherInstitute_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| Route120 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route121 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route121_SafariZoneEntrance | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route122 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route123 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route123_BerryMastersHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| Route124 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route124_DivingTreasureHuntersHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| Route125 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route126 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route127 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route128 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route129 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route130 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route131 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route132 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route133 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| Route134 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| RustboroCity | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| RustboroCity_CuttersHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| RustboroCity_DevonCorp_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| RustboroCity_DevonCorp_2F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| RustboroCity_DevonCorp_3F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| RustboroCity_Flat1_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| RustboroCity_Flat1_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| RustboroCity_Flat2_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| RustboroCity_Flat2_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| RustboroCity_Flat2_3F | vanilla | unchanged Emerald map; not re-read line by line |
+| RustboroCity_Gym | vanilla | unchanged Emerald map; not re-read line by line |
+| RustboroCity_House1 | vanilla | unchanged Emerald map; not re-read line by line |
+| RustboroCity_House2 | vanilla | unchanged Emerald map; not re-read line by line |
+| RustboroCity_House3 | vanilla | unchanged Emerald map; not re-read line by line |
+| RustboroCity_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| RustboroCity_PokemonCenter_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| RustboroCity_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| RustboroCity_PokemonSchool | vanilla | unchanged Emerald map; not re-read line by line |
+| RusturfTunnel | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SSTidalCorridor | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SSTidalLowerDeck | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SSTidalRooms | vanilla | unchanged Emerald map; not re-read line by line |
+| SafariZone_North | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SafariZone_Northeast | vanilla | unchanged Emerald map; not re-read line by line |
+| SafariZone_Northwest | vanilla | unchanged Emerald map; not re-read line by line |
+| SafariZone_RestHouse | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SafariZone_South | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SafariZone_Southeast | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SafariZone_Southwest | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| ScorchedSlab | vanilla | unchanged Emerald map; not re-read line by line |
+| SeafloorCavern_Entrance | vanilla | unchanged Emerald map; not re-read line by line |
+| SeafloorCavern_Room1 | vanilla | unchanged Emerald map; not re-read line by line |
+| SeafloorCavern_Room2 | vanilla | unchanged Emerald map; not re-read line by line |
+| SeafloorCavern_Room3 | vanilla | unchanged Emerald map; not re-read line by line |
+| SeafloorCavern_Room4 | vanilla | unchanged Emerald map; not re-read line by line |
+| SeafloorCavern_Room5 | vanilla | unchanged Emerald map; not re-read line by line |
+| SeafloorCavern_Room6 | vanilla | unchanged Emerald map; not re-read line by line |
+| SeafloorCavern_Room7 | vanilla | unchanged Emerald map; not re-read line by line |
+| SeafloorCavern_Room8 | vanilla | unchanged Emerald map; not re-read line by line |
+| SeafloorCavern_Room9 | vanilla | unchanged Emerald map; not re-read line by line |
+| SealedChamber_InnerRoom | vanilla | unchanged Emerald map; not re-read line by line |
+| SealedChamber_OuterRoom | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_BlueCave1 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_BlueCave2 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_BlueCave3 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_BlueCave4 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_BrownCave1 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_BrownCave2 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_BrownCave3 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_BrownCave4 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_RedCave1 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_RedCave2 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_RedCave3 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_RedCave4 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_Shrub1 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_Shrub2 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_Shrub3 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_Shrub4 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_Tree1 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_Tree2 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_Tree3 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_Tree4 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_YellowCave1 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_YellowCave2 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_YellowCave3 | vanilla | unchanged Emerald map; not re-read line by line |
+| SecretBase_YellowCave4 | vanilla | unchanged Emerald map; not re-read line by line |
+| ShoalCave_HighTideEntranceRoom | unreachable | loaded only as a layout swap via `setmaplayoutindex` from the low-tide room (code) |
+| ShoalCave_HighTideInnerRoom | unreachable | loaded only as a layout swap via `setmaplayoutindex` from the low-tide room (code) |
+| ShoalCave_LowTideEntranceRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| ShoalCave_LowTideIceRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| ShoalCave_LowTideInnerRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| ShoalCave_LowTideLowerRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| ShoalCave_LowTideStairsRoom | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SkyPillar_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| SkyPillar_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| SkyPillar_3F | vanilla | unchanged Emerald map; not re-read line by line |
+| SkyPillar_4F | vanilla | unchanged Emerald map; not re-read line by line |
+| SkyPillar_5F | vanilla | unchanged Emerald map; not re-read line by line |
+| SkyPillar_Entrance | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SkyPillar_Outside | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SkyPillar_Top | vanilla | unchanged Emerald map; not re-read line by line |
+| SlateportCity | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SlateportCity_BattleTentBattleRoom | vanilla | unchanged Emerald map; not re-read line by line |
+| SlateportCity_BattleTentCorridor | vanilla | unchanged Emerald map; not re-read line by line |
+| SlateportCity_BattleTentLobby | vanilla | unchanged Emerald map; not re-read line by line |
+| SlateportCity_Harbor | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SlateportCity_House | vanilla | unchanged Emerald map; not re-read line by line |
+| SlateportCity_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| SlateportCity_NameRatersHouse | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SlateportCity_OceanicMuseum_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| SlateportCity_OceanicMuseum_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| SlateportCity_PokemonCenter_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| SlateportCity_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| SlateportCity_PokemonFanClub | vanilla | unchanged Emerald map; not re-read line by line |
+| SlateportCity_SternsShipyard_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| SlateportCity_SternsShipyard_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| SootopolisCity | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SootopolisCity_Gym_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SootopolisCity_Gym_B1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SootopolisCity_House1 | vanilla | unchanged Emerald map; not re-read line by line |
+| SootopolisCity_House2 | vanilla | unchanged Emerald map; not re-read line by line |
+| SootopolisCity_House3 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SootopolisCity_House4 | vanilla | unchanged Emerald map; not re-read line by line |
+| SootopolisCity_House5 | vanilla | unchanged Emerald map; not re-read line by line |
+| SootopolisCity_House6 | vanilla | unchanged Emerald map; not re-read line by line |
+| SootopolisCity_House7 | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SootopolisCity_LotadAndSeedotHouse | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SootopolisCity_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| SootopolisCity_MysteryEventsHouse_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SootopolisCity_MysteryEventsHouse_B1F | vanilla | unchanged Emerald map; not re-read line by line |
+| SootopolisCity_PokemonCenter_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SootopolisCity_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| SouthernIsland_Exterior | vanilla | unchanged Emerald map; not re-read line by line |
+| SouthernIsland_Interior | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| SunyshoreCity_LightHouse_Elevator | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| TerraCave_End | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| TerraCave_Entrance | vanilla | unchanged Emerald map; not re-read line by line |
+| TradeCenter | vanilla | unchanged Emerald map; not re-read line by line |
+| TrainerHill_1F | vanilla | unchanged Emerald map; not re-read line by line |
+| TrainerHill_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| TrainerHill_3F | vanilla | unchanged Emerald map; not re-read line by line |
+| TrainerHill_4F | vanilla | unchanged Emerald map; not re-read line by line |
+| TrainerHill_Elevator | vanilla | unchanged Emerald map; not re-read line by line |
+| TrainerHill_Entrance | vanilla | unchanged Emerald map; not re-read line by line |
+| TrainerHill_Roof | vanilla | unchanged Emerald map; not re-read line by line |
+| Underwater_MarineCave | vanilla | unchanged Emerald map; not re-read line by line |
+| Underwater_Route105 | vanilla | unchanged Emerald map; not re-read line by line |
+| Underwater_Route124 | vanilla | unchanged Emerald map; not re-read line by line |
+| Underwater_Route125 | vanilla | unchanged Emerald map; not re-read line by line |
+| Underwater_Route126 | vanilla | unchanged Emerald map; not re-read line by line |
+| Underwater_Route127 | vanilla | unchanged Emerald map; not re-read line by line |
+| Underwater_Route128 | vanilla | unchanged Emerald map; not re-read line by line |
+| Underwater_Route129 | vanilla | unchanged Emerald map; not re-read line by line |
+| Underwater_Route134 | vanilla | unchanged Emerald map; not re-read line by line |
+| Underwater_SeafloorCavern | vanilla | unchanged Emerald map; not re-read line by line |
+| Underwater_SealedChamber | vanilla | unchanged Emerald map; not re-read line by line |
+| Underwater_SootopolisCity | vanilla | unchanged Emerald map; not re-read line by line |
+| UnionRoom | vanilla | unchanged Emerald map; not re-read line by line |
+| UnusedContestHall1 | unreachable | unused Emerald map; no warp, connection or script leads here (code) |
+| UnusedContestHall2 | unreachable | unused Emerald map; no warp, connection or script leads here (code) |
+| UnusedContestHall3 | unreachable | unused Emerald map; no warp, connection or script leads here (code) |
+| UnusedContestHall4 | unreachable | unused Emerald map; no warp, connection or script leads here (code) |
+| UnusedContestHall5 | unreachable | unused Emerald map; no warp, connection or script leads here (code) |
+| UnusedContestHall6 | unreachable | unused Emerald map; no warp, connection or script leads here (code) |
+| VeilstoneCity_Departament_Store_Elevator | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| VerdanturfTown | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| VerdanturfTown_BattleTentBattleRoom | vanilla | unchanged Emerald map; not re-read line by line |
+| VerdanturfTown_BattleTentCorridor | vanilla | unchanged Emerald map; not re-read line by line |
+| VerdanturfTown_BattleTentLobby | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| VerdanturfTown_FriendshipRatersHouse | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| VerdanturfTown_House | vanilla | unchanged Emerald map; not re-read line by line |
+| VerdanturfTown_Mart | vanilla | unchanged Emerald map; not re-read line by line |
+| VerdanturfTown_PokemonCenter_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| VerdanturfTown_PokemonCenter_2F | vanilla | unchanged Emerald map; not re-read line by line |
+| VerdanturfTown_WandasHouse | vanilla | unchanged Emerald map; not re-read line by line |
+| VictoryRoad_1F | complete | Super Emerald changes reviewed (objects, scripts, texts naming other regions) |
+| VictoryRoad_B1F | vanilla | unchanged Emerald map; not re-read line by line |
+| VictoryRoad_B2F | vanilla | unchanged Emerald map; not re-read line by line |

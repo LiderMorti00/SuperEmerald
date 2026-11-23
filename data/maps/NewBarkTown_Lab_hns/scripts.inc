@@ -27,13 +27,26 @@ SE_J_NewBarkTown_Lab_hns_NewBarkTown_Lab_EventScript_Elm::
 	faceplayer
 	goto_if_unset FLAG_SE_JOHTO_LEAGUE_CLEARED, NewBarkTown_Lab_EventScript_ElmTalk
 	checkitem ITEM_PASS
-	goto_if_eq VAR_RESULT, TRUE, NewBarkTown_Lab_EventScript_ElmTalk
+	goto_if_eq VAR_RESULT, TRUE, NewBarkTown_Lab_EventScript_ElmBirch
 	msgbox NewBarkTown_Lab_Text_ElmPass, MSGBOX_DEFAULT
 	giveitem ITEM_PASS
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	msgbox NewBarkTown_Lab_Text_ElmPassAfter, MSGBOX_DEFAULT
 	release
 	end
+
+@ Super Emerald: after the JOHTO LEAGUE, ELM passes on PROF. BIRCH's message (CANALAVE TICKET)
+NewBarkTown_Lab_EventScript_ElmBirch::
+	goto_if_set FLAG_SE_RECEIVED_CANALAVE_TICKET, NewBarkTown_Lab_EventScript_ElmTalk
+	msgbox NewBarkTown_Lab_Text_ElmBirch, MSGBOX_DEFAULT
+	release
+	end
+
+NewBarkTown_Lab_Text_ElmBirch:
+	.string "ELM: PROF. BIRCH called from HOENN.\n"
+	.string "He has something for you, CHAMPION.\p"
+	.string "Drop by his lab in LITTLEROOT TOWN\n"
+	.string "when you're back in HOENN!$"
 
 NewBarkTown_Lab_EventScript_ElmTalk::
 	msgbox NewBarkTown_Lab_Text_ShowTogepi1, MSGBOX_DEFAULT
@@ -50,7 +63,11 @@ NewBarkTown_Lab_Text_ElmPassAfter:
 	.string "ELM: The MAGNET TRAIN leaves from\n"
 	.string "GOLDENROD CITY and goes all the way\l"
 	.string "to SAFFRON CITY in KANTO.\p"
-	.string "Go and see what POKéMON live there!$"
+	.string "Go and see what POKéMON live there!\p"
+	.string "Oh, and PROF. BIRCH called from\n"
+	.string "HOENN. He has something for you.\p"
+	.string "Drop by his lab in LITTLEROOT TOWN\n"
+	.string "when you're back in HOENN!$"
 
 NewBarkTown_Lab_Text_AideSave::
 	.string "Don't forget to save your game\n"

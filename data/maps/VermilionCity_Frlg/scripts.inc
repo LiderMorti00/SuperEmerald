@@ -72,6 +72,8 @@ VermilionCity_EventScript_CheckHasAuroraTicket::
 
 VermilionCity_EventScript_CheckSeagallopPresent::
 	setvar VAR_0x8004, SEAGALLOP_VERMILION_CITY
+	checkitem ITEM_RAINBOW_PASS @ Super Emerald: BILL gives the pass at his SEA COTTAGE
+	goto_if_eq VAR_RESULT, FALSE, VermilionCity_EventScript_NoRainbowPass
 	goto_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 5, VermilionCity_EventScript_ChooseSeagallopDestRainbowPass
 	goto_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 1, VermilionCity_EventScript_ChooseSeagallopDestTriPass
 	msgbox VermilionCity_Text_TheShipSetSail
@@ -208,12 +210,31 @@ VermilionCity_EventScript_DontHaveSSTicket::
 
 VermilionCity_EventScript_CheckSeagallopPresentTrigger::
 	setvar VAR_0x8004, SEAGALLOP_VERMILION_CITY
+	checkitem ITEM_RAINBOW_PASS
+	goto_if_eq VAR_RESULT, FALSE, VermilionCity_EventScript_NoRainbowPassTrigger
 	goto_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 5, VermilionCity_EventScript_ChooseSeagallopDestRainbowPass
 	goto_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 1, VermilionCity_EventScript_ChooseSeagallopDestTriPass
 	msgbox VermilionCity_Text_TheShipSetSail
 	closemessage
 	goto VermilionCity_EventScript_WalkUpPier
 	end
+
+VermilionCity_EventScript_NoRainbowPass::
+	msgbox VermilionCity_Text_NeedRainbowPass
+	release
+	end
+
+VermilionCity_EventScript_NoRainbowPassTrigger::
+	msgbox VermilionCity_Text_NeedRainbowPass
+	closemessage
+	goto VermilionCity_EventScript_WalkUpPier
+	end
+
+VermilionCity_Text_NeedRainbowPass:
+	.string "The SEAGALLOP ferries sail to the\n"
+	.string "SEVII ISLANDS from here.\p"
+	.string "You'll need a RAINBOW PASS to board.\n"
+	.string "BILL, up on CERULEAN CAPE, has them.$"
 
 VermilionCity_EventScript_Sailor::
 	msgbox VermilionCity_Text_SSAnneVisitsOnceAYear, MSGBOX_NPC

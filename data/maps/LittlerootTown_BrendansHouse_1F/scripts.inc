@@ -403,6 +403,8 @@ PlayersHouse_1F_Text_PortsInSlateportLilycove:
 
 PlayersHouse_1F_Text_BetterGetBackToGym:
 	.string "I'd better get back to PETALBURG GYM.\p"
+	.string "{PLAYER}, come and see me there.\n"
+	.string "I have something for you, too.\p"
 	.string "MOM, thanks for looking after the house\n"
 	.string "while I'm away.$"
 
