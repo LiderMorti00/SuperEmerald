@@ -60,12 +60,10 @@ JubilifeCity_JubilifeTV_F1_EventScript_PtNpc6::
 	end
 
 JubilifeCity_JubilifeTV_F1_Text_PtNpc6_0::
-	.string "Why don't you try dressing up your\n"
-	.string "POKéMON now?\p"
 	.string "We have a Fitting Room on the second\n"
-	.string "floor.\p"
-	.string "Dress up your POKéMON nicely with\n"
-	.string "Accessories!$"
+	.string "floor for dressing up POKéMON.\p"
+	.string "It's being redecorated right now,\n"
+	.string "though. Sorry about that!$"
 
 JubilifeCity_JubilifeTV_F1_EventScript_SNLottery::
 	lock

@@ -159,9 +159,9 @@ Route208_EventScript_PtNpc1_Received::
 	end
 
 Route208_Text_PtNpc1_Received::
-	.string "Go to ROUTE 209! Go underground!\p"
-	.string "Listen to the stone pillar! Talk to\n"
-	.string "people underground!$"
+	.string "Go to ROUTE 209!\p"
+	.string "Put that ODD KEYSTONE into the\n"
+	.string "wrecked stone pillar there!$"
 
 Route208_EventScript_SNHoneyTree::
 	lock

@@ -3,13 +3,16 @@ Route213_FootstepHouse_sinnoh_MapScripts::
 
 
 Route213_FootstepHouse_EventScript_PtNpc1::
-	msgbox Route213_FootstepHouse_Text_PtNpc1, MSGBOX_NPC
+	lock
+	faceplayer
+	msgbox Route213_FootstepHouse_Text_PtNpc1, MSGBOX_DEFAULT
+	goto VerdanturfTown_FriendshipRatersHouse_EventScript_RateLeadMon
 	end
 
 Route213_FootstepHouse_Text_PtNpc1::
-	.string "Dr. Footstep: Do you want to check the\n"
-	.string "feelings of your POKéMON again?\p"
-	.string "Then, let your POKéMON walk in front of\n"
-	.string "me, right here.\p"
-	.string "From its footprints, I will determine\n"
-	.string "how it feels about you.$"
+	.string "Dr. Footstep: Do you want to know the\n"
+	.string "feelings of your POKéMON?\p"
+	.string "Let your lead POKéMON walk in front\n"
+	.string "of me…\p"
+	.string "From its footprints, I can tell how\n"
+	.string "it feels about you!$"

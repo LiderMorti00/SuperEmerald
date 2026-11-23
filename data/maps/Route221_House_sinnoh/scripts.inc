@@ -3,10 +3,24 @@ Route221_House_sinnoh_MapScripts::
 
 
 Route221_House_EventScript_PtNpc1::
-	msgbox Route221_House_Text_PtNpc1, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_SE_GOT_ROUTE221_BELT, Route221_House_EventScript_BeltAfter
+	msgbox Route221_House_Text_PtNpc1, MSGBOX_DEFAULT
+	giveitem ITEM_EXPERT_BELT
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SE_GOT_ROUTE221_BELT
+Route221_House_EventScript_BeltAfter::
+	msgbox Route221_House_Text_BeltAfter, MSGBOX_DEFAULT
+	release
 	end
 
+Route221_House_Text_BeltAfter::
+	.string "An EXPERT BELT powers up moves that\n"
+	.string "are super effective. Use it well!$"
+
 Route221_House_Text_PtNpc1::
+	.string "Oh! What splendid POKéMON you have!\p"
 	.string "I'll thank you for that visual treat\n"
 	.string "with this item.$"
 

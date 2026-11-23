@@ -38,8 +38,8 @@ VeilstoneCity_DepartmentStore_2F_EventScript_PtNpc4::
 	end
 
 VeilstoneCity_DepartmentStore_2F_Text_PtNpc4::
-	.string "Hello, {PLAYER}. May I help you with\n"
-	.string "anything?$"
+	.string "Welcome to the VEILSTONE Department\n"
+	.string "Store! Please enjoy your shopping.$"
 
 VeilstoneCity_DepartmentStore_2F_EventScript_PtNpc5::
 	lock

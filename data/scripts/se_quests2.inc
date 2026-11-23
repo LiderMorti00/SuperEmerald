@@ -755,7 +755,7 @@ SE_Text_Spirit3After:
 
 SE_Text_Looker0:
 	.string "LOOKER: Ah, my friend! The CHAMPION\n"
-	.string "of SINNOH, no less!\p"
+	.string "from HOENN, no less!\p"
 	.string "TEAM GALACTIC's commanders have\n"
 	.string "escaped. They want to finish CYRUS's\l"
 	.string "plan using the three LAKES.\p"

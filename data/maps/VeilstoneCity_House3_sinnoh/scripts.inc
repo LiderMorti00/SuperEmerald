@@ -10,8 +10,7 @@ VeilstoneCity_House3_Text_PtNpc1::
 	.string "Oh? You want me to show you how to\n"
 	.string "massage POKéMON?\p"
 	.string "Tehehe…\p"
-	.string "It's a secret, of course!\p"
-	.string "Come back again tomorrow!$"
+	.string "It's a secret, of course!$"
 
 VeilstoneCity_House3_EventScript_PtNpc2::
 	lock

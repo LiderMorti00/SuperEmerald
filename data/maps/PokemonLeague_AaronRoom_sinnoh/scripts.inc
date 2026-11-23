@@ -13,8 +13,8 @@ PokemonLeague_AaronRoom_EventScript_Sidney::
 	faceplayer
 	goto_if_set FLAG_SN_DEFEATED_ELITE_4_SIDNEY, PokemonLeague_AaronRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
+	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, PokemonLeague_AaronRoom_EventScript_SERematchIntro
 	msgbox PokemonLeague_AaronRoom_Text_IntroSpeech, MSGBOX_DEFAULT
-	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, PokemonLeague_AaronRoom_EventScript_SNRematchBattle
 	trainerbattle_no_intro TRAINER_SE_ELITE_FOUR_AARON, PokemonLeague_AaronRoom_Text_Defeat
 	goto PokemonLeague_AaronRoom_EventScript_SNAfterBattle
 
@@ -64,3 +64,10 @@ PokemonLeague_AaronRoom_EventScript_PostBattleSpeech::
 	msgbox PokemonLeague_AaronRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
 	release
 	end
+
+PokemonLeague_AaronRoom_EventScript_SERematchIntro:: @ Super Emerald: the rematch has its own greeting
+	msgbox PokemonLeague_AaronRoom_Text_SERematchIntro, MSGBOX_DEFAULT
+	goto PokemonLeague_AaronRoom_EventScript_SNRematchBattle
+
+PokemonLeague_AaronRoom_Text_SERematchIntro::
+	.string "AARON: You're back! Welcome to the\nPOKéMON LEAGUE once again!\pMy bug POKéMON and I have trained\nhard since our last battle.\pThis time, we'll be perfect! Let's go!$"

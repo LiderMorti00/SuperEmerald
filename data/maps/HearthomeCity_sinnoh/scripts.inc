@@ -97,7 +97,7 @@ HearthomeCity_EventScript_SNMrGoods::
 	faceplayer
 	goto_if_set FLAG_SN_MRGOODS_GIFT, HearthomeCity_EventScript_SNMrGoods_Done
 	msgbox HearthomeCity_EventScript_SNMrGoods_Hello, MSGBOX_DEFAULT
-	goto_if_unset FLAG_SINNOH_BADGE3_GET, HearthomeCity_EventScript_SNMrGoods_Later
+	goto_if_unset FLAG_SINNOH_BADGE5_GET, HearthomeCity_EventScript_SNMrGoods_Later
 	givedecoration DECOR_PIKACHU_DOLL
 	goto_if_eq VAR_RESULT, FALSE, HearthomeCity_EventScript_SNMrGoods_Full
 	setflag FLAG_SN_MRGOODS_GIFT

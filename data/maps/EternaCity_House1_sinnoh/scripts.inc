@@ -41,8 +41,9 @@ EternaCity_House1_Text_PtNpc3_Yes::
 	.string "“The same time flows… …the blessing\n"
 	.string "of DIA…” Yikes… I've forgotten big\l"
 	.string "chunks of it.\p"
-	.string "Want to hear about the other\n"
-	.string "inscription?$"
+	.string "There was a second inscription about\n"
+	.string "PAL… and space, too. But I can't\l"
+	.string "remember a word of that one!$"
 
 EternaCity_House1_EventScript_PtNpc3_No::
 	msgbox EternaCity_House1_Text_PtNpc3_No, MSGBOX_DEFAULT

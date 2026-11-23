@@ -38,7 +38,7 @@ ResortArea_House_EventScript_PtNpc3::
 	end
 
 ResortArea_House_Text_PtNpc3::
-	.string "You've seen every POKéMON in SINNOH!\n"
-	.string "That is so cool!\p"
-	.string "I'm going to travel with POKéMON when I\n"
-	.string "get bigger!$"
+	.string "Have you seen every POKéMON in\n"
+	.string "SINNOH? That would be so cool!\p"
+	.string "I'm going to travel with POKéMON\n"
+	.string "when I get bigger!$"

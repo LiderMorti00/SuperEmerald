@@ -53,14 +53,13 @@ SurvivalArea_Battleground_EventScript_SNWelcome::
 	end
 
 SurvivalArea_Battleground_Text_SNWelcome::
-	.string "Oh? So, you are?! You're BUCK's friend,\n"
-	.string "yes!\p"
-	.string "I've heard about you from both BUCK\n"
-	.string "and Wake.\p"
+	.string "Oh? You must be the CHAMPION from\n"
+	.string "HOENN! The GYM LEADERS have told me\l"
+	.string "all about you.\p"
 	.string "Well, my young friend, you're always\n"
 	.string "welcome here from now on!\p"
 	.string "This is a private club for only SINNOH's\n"
-	.string "GYM LEADERS, or those vouched for by\p"
+	.string "GYM LEADERS, or those vouched for by\l"
 	.string "those selfsame GYM LEADERS.\p"
 	.string "It's a place where the best seek to\n"
 	.string "better themselves.\p"
@@ -1330,8 +1329,9 @@ SurvivalArea_Battleground_EventScript_SNCheryl_Ask::
 	return
 
 SurvivalArea_Battleground_EventScript_SNCheryl_Text_AskBattle::
-	.string "CHERYL: Oh, hello, {PLAYER}. You're my\n"
-	.string "opponent of the day?$"
+	.string "CHERYL: Oh, hello. You must be the\n"
+	.string "CHAMPION everyone talks about.\p"
+	.string "Would you be my opponent of the day?$"
 
 SurvivalArea_Battleground_EventScript_SNCheryl_AskAgain1::
 	msgbox SurvivalArea_Battleground_EventScript_SNCheryl_Text_AskBattleAgain, MSGBOX_YESNO
@@ -1666,8 +1666,9 @@ SurvivalArea_Battleground_EventScript_SNMira_Ask::
 	return
 
 SurvivalArea_Battleground_EventScript_SNMira_Text_AskBattle::
-	.string "MIRA: {PLAYER}! Please teach MIRA about\n"
-	.string "POKéMON!$"
+	.string "MIRA: You're the CHAMPION! MIRA heard\n"
+	.string "about you!\p"
+	.string "Please teach MIRA about POKéMON!$"
 
 SurvivalArea_Battleground_EventScript_SNMira_AskAgain1::
 	msgbox SurvivalArea_Battleground_EventScript_SNMira_Text_AskBattleAgain, MSGBOX_YESNO

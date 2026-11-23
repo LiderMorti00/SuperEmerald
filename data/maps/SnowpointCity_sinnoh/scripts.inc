@@ -76,7 +76,8 @@ SnowpointCity_EventScript_PtNpc4::
 SnowpointCity_Text_PtNpc4::
 	.string "Only the chosen may enter the\n"
 	.string "SNOWPOINT TEMPLE.\p"
-	.string "I'm sorry, but you will have to leave.$"
+	.string "…You're the CHAMPION from HOENN?\n"
+	.string "Then you may pass. Take care inside.$"
 
 SnowpointCity_EventScript_PtNpc5::
 	lock

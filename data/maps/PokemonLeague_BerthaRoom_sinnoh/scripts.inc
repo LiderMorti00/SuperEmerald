@@ -13,8 +13,8 @@ PokemonLeague_BerthaRoom_EventScript_Phoebe::
 	faceplayer
 	goto_if_set FLAG_SN_DEFEATED_ELITE_4_PHOEBE, PokemonLeague_BerthaRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
+	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, PokemonLeague_BerthaRoom_EventScript_SERematchIntro
 	msgbox PokemonLeague_BerthaRoom_Text_IntroSpeech, MSGBOX_DEFAULT
-	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, PokemonLeague_BerthaRoom_EventScript_SNRematchBattle
 	trainerbattle_no_intro TRAINER_SE_ELITE_FOUR_BERTHA, PokemonLeague_BerthaRoom_Text_Defeat
 	goto PokemonLeague_BerthaRoom_EventScript_SNAfterBattle
 
@@ -59,3 +59,10 @@ PokemonLeague_BerthaRoom_EventScript_PostBattleSpeech::
 	msgbox PokemonLeague_BerthaRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
 	release
 	end
+
+PokemonLeague_BerthaRoom_EventScript_SERematchIntro:: @ Super Emerald: the rematch has its own greeting
+	msgbox PokemonLeague_BerthaRoom_Text_SERematchIntro, MSGBOX_DEFAULT
+	goto PokemonLeague_BerthaRoom_EventScript_SNRematchBattle
+
+PokemonLeague_BerthaRoom_Text_SERematchIntro::
+	.string "BERTHA: Well, well. Back again,\nyoungster?\pAhaha! This old lady has been looking\nforward to it.\pShow me how much stronger you've\nbecome!$"

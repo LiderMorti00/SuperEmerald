@@ -13,8 +13,8 @@ PokemonLeague_LucianRoom_EventScript_Drake::
 	faceplayer
 	goto_if_set FLAG_SN_DEFEATED_ELITE_4_DRAKE, PokemonLeague_LucianRoom_EventScript_PostBattleSpeech
 	playbgm MUS_ENCOUNTER_ELITE_FOUR, FALSE
+	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, PokemonLeague_LucianRoom_EventScript_SERematchIntro
 	msgbox PokemonLeague_LucianRoom_Text_IntroSpeech, MSGBOX_DEFAULT
-	goto_if_set FLAG_SE_SINNOH_LEAGUE_CLEARED, PokemonLeague_LucianRoom_EventScript_SNRematchBattle
 	trainerbattle_no_intro TRAINER_SE_ELITE_FOUR_LUCIAN, PokemonLeague_LucianRoom_Text_Defeat
 	goto PokemonLeague_LucianRoom_EventScript_SNAfterBattle
 
@@ -69,3 +69,10 @@ PokemonLeague_LucianRoom_EventScript_PostBattleSpeech::
 	msgbox PokemonLeague_LucianRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
 	release
 	end
+
+PokemonLeague_LucianRoom_EventScript_SERematchIntro:: @ Super Emerald: the rematch has its own greeting
+	msgbox PokemonLeague_LucianRoom_Text_SERematchIntro, MSGBOX_DEFAULT
+	goto PokemonLeague_LucianRoom_EventScript_SNRematchBattle
+
+PokemonLeague_LucianRoom_Text_SERematchIntro::
+	.string "LUCIAN: Ah, the CHAMPION returns.\pI have read a great many books since\nour last battle.\pLet us see whether all that study\nwas enough.$"

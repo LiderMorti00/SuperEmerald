@@ -85,9 +85,9 @@ OreburghCity_PokemonCenter_1F_EventScript_PtNpc6::
 	end
 
 OreburghCity_PokemonCenter_1F_Text_PtNpc6::
-	.string "Cool! You have a Vs. Recorder!\p"
-	.string "So, did you record a great battle\n"
-	.string "with it? Did ya? Did ya?$"
+	.string "I want to get a Vs. Recorder!\p"
+	.string "Then I could record all my great\n"
+	.string "battles and watch them again!$"
 
 SE_OreburghCity_PC_OnTransition::
 	setrespawn HEAL_LOCATION_OREBURGH_CITY_SINNOH

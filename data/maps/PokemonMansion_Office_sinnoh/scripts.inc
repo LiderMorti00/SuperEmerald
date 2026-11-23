@@ -210,4 +210,5 @@ PokemonMansion_Office_EventScript_PtSign2::
 PokemonMansion_Office_Text_PtSign2::
 	.string "It's a very expensive-looking book on\n"
 	.string "POKéMON.\p"
-	.string "Would you like to read it?$"
+	.string "…The pages are stuck together. It's\n"
+	.string "only for show!$"

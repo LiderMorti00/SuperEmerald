@@ -11,16 +11,13 @@ HearthomeCity_PoffinHouse_EventScript_PtNpc1::
 	end
 
 HearthomeCity_PoffinHouse_Text_PtNpc1_0::
-	.string "Hi! Let's get cooking!\p"
-	.string "Here's my advice on cooking tasty\n"
+	.string "Hi! Let's get blending!\p"
+	.string "Here's my advice for making tasty\n"
 	.string "POKéBLOCKS for your POKéMON crew!\p"
-	.string "In the beginning, while it's still a\n"
-	.string "batter, swirl it gently and avoid\p"
-	.string "spillage.\p"
-	.string "When it starts to harden, churn it fast\n"
-	.string "in big circles!\p"
-	.string "At the end, make a wish for it to turn\n"
-	.string "scrumptious and whirl it!$"
+	.string "Press the A Button just as the\n"
+	.string "BLENDER's arrow reaches your marker.\p"
+	.string "The faster it spins, the better your\n"
+	.string "POKéBLOCKS turn out!$"
 
 HearthomeCity_PoffinHouse_EventScript_SNCase::
 	checkitem ITEM_POKEBLOCK_CASE

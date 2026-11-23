@@ -421,5 +421,5 @@ Route212_House_EventScript_PtNpc3::
 
 Route212_House_Text_PtNpc3_0::
 	.string "My daddy collects shards.\p"
-	.string "If you find any, like in the\n"
-	.string "UNDERGROUND, please bring them to us.$"
+	.string "If you find any, please bring them\n"
+	.string "to us!$"

@@ -53,8 +53,9 @@ SnowpointCity_PokemonCenter_1F_EventScript_PtNpc4::
 
 SnowpointCity_PokemonCenter_1F_Text_SNMayleneBefore::
 	.string "MAYLENE: Brrr…\p"
-	.string "Oh, hi, {PLAYER}! Are you taking the GYM\n"
-	.string "challenge now?\p"
+	.string "Oh! You're the CHAMPION from HOENN,\n"
+	.string "aren't you? Are you taking the GYM\l"
+	.string "challenge?\p"
 	.string "I'm hoping to see CANDICE soon, but I'm\n"
 	.string "staying put until I warm up again first.\p"
 	.string "Oh, you should know that CANDICE is a\n"

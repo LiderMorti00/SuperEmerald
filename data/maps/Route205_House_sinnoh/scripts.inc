@@ -7,6 +7,7 @@ Route205_House_EventScript_PtNpc1::
 	faceplayer
 	msgbox Route205_House_Text_PtNpc1, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route205_House_EventScript_PtNpc1_No
+	call Common_EventScript_OutOfCenterPartyHeal
 	msgbox Route205_House_Text_PtNpc1_Yes, MSGBOX_DEFAULT
 	release
 	end

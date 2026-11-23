@@ -7,8 +7,8 @@ VeilstoneCity_DepartmentStore_3F_EventScript_PtNpc1::
 	end
 
 VeilstoneCity_DepartmentStore_3F_Text_PtNpc1::
-	.string "Hello, {PLAYER}. May I help you with\n"
-	.string "anything?$"
+	.string "Welcome to the VEILSTONE Department\n"
+	.string "Store! Please enjoy your shopping.$"
 
 VeilstoneCity_DepartmentStore_3F_EventScript_PtNpc2::
 	lock

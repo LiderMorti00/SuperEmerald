@@ -49,9 +49,9 @@ Route228_House2_Text_PtNpc1_1::
 	.string "this to you…$"
 
 Route228_House2_Text_PtNpc1_0::
-	.string "That BADGE… It's from SUNYSHORE's\n"
-	.string "GYM?\p"
-	.string "You've been to that port town, then…\p"
+	.string "You're a TRAINER who travels all over…\n"
+	.string "Have you been to SUNYSHORE, the port\l"
+	.string "town?\p"
 	.string "Would… Would you lend an ear to this\n"
 	.string "old man's tale?$"
 

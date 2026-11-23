@@ -260,10 +260,10 @@ JubilifeCity_EventScript_Looker::
 	end
 
 JubilifeCity_Text_Looker::
-	.string "LOOKER: Hello, my friend. Have you\n"
-	.string "visited the TRAINERS' School?\p"
-	.string "Did your friend not guide you there\n"
-	.string "earlier?$"
+	.string "LOOKER: Hello, my friend. I am keeping\n"
+	.string "an eye on this city.\p"
+	.string "Have you visited the TRAINERS' SCHOOL?\n"
+	.string "Even a CHAMPION may learn something.$"
 
 JubilifeCity_EventScript_President::
 	lock

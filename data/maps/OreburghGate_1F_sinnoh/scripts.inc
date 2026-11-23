@@ -37,6 +37,7 @@ OreburghGate_1F_Text_CurtisIntro::
 	.string "anywhere! It's what we do.$"
 
 OreburghGate_1F_EventScript_PtNpc1::
+	goto_if_unset FLAG_SINNOH_BADGE1_GET, SE_OreburghGateHiker_NoBadge_Script
 	msgbox OreburghGate_1F_Text_PtNpc1, MSGBOX_NPC
 	end
 
@@ -83,3 +84,13 @@ OreburghGate_1F_EventScript_HikerAfter::
 	msgbox OreburghGate_1F_Text_HikerAfter, MSGBOX_DEFAULT
 	release
 	end
+
+SE_OreburghGateHiker_NoBadge_Script::
+	msgbox SE_OreburghGateHiker_NoBadge_Text, MSGBOX_NPC
+	end
+
+SE_OreburghGateHiker_NoBadge_Text::
+	.string "Have you been to OREBURGH CITY's GYM?\p"
+	.string "With its GYM BADGE, you can use the\n"
+	.string "hidden move ROCK SMASH on small\l"
+	.string "boulders!$"

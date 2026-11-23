@@ -53,5 +53,6 @@ FightArea_House2_Text_PtNpc4::
 	.string "Your POKéMON… Do they hold items?\p"
 	.string "The better the item they hold, the\n"
 	.string "stronger they become.\p"
-	.string "There are items that are worthy of my\n"
-	.string "recommendation. Care to know?$"
+	.string "For raw power, a LIFE ORB. For speed,\n"
+	.string "a CHOICE SCARF. For staying power,\l"
+	.string "LEFTOVERS. Choose wisely!$"

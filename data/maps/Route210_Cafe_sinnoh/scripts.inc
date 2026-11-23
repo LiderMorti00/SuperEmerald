@@ -72,8 +72,38 @@ Route210_Cafe_Text_PtNpc1_0::
 	.string "Do what you will with them. I don't mind.$"
 
 Route210_Cafe_EventScript_PtNpc2::
-	msgbox Route210_Cafe_Text_PtNpc2, MSGBOX_NPC
+	lock
+	faceplayer
+	msgbox Route210_Cafe_Text_PtNpc2, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route210_Cafe_EventScript_MilkNo
+	checkmoney 500
+	goto_if_eq VAR_RESULT, FALSE, Route210_Cafe_EventScript_MilkNoMoney
+	checkitemspace ITEM_MOOMOO_MILK
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	removemoney 500
+	giveitem ITEM_MOOMOO_MILK
+	msgbox Route210_Cafe_Text_MilkThanks, MSGBOX_DEFAULT
+	release
 	end
+
+Route210_Cafe_EventScript_MilkNo::
+	msgbox Route210_Cafe_Text_MilkNo, MSGBOX_DEFAULT
+	release
+	end
+
+Route210_Cafe_EventScript_MilkNoMoney::
+	msgbox Route210_Cafe_Text_MilkNoMoney, MSGBOX_DEFAULT
+	release
+	end
+
+Route210_Cafe_Text_MilkThanks::
+	.string "Thank you kindly! Come again!$"
+
+Route210_Cafe_Text_MilkNo::
+	.string "All right. Take your time!$"
+
+Route210_Cafe_Text_MilkNoMoney::
+	.string "Oh, dear. You don't have enough money.$"
 
 Route210_Cafe_Text_PtNpc2::
 	.string "How are ya doing? Whatcha having?\p"

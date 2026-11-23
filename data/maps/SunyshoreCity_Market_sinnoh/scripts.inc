@@ -7,8 +7,9 @@ SunyshoreCity_Market_EventScript_PtNpc1::
 	end
 
 SunyshoreCity_Market_Text_PtNpc1::
-	.string "Oh! That Effort Ribbon looks good on\n"
-	.string "your POKéMON!$"
+	.string "Effort Ribbons go to POKéMON that\n"
+	.string "train really hard.\p"
+	.string "I hope my POKéMON gets one someday!$"
 
 SunyshoreCity_Market_EventScript_PtNpc2::
 	msgbox SunyshoreCity_Market_Text_PtNpc2, MSGBOX_NPC
@@ -34,11 +35,10 @@ SunyshoreCity_Market_EventScript_PtNpc4::
 
 SunyshoreCity_Market_Text_PtNpc4::
 	.string "Ah, please, allow me a little of your\n"
-	.string "time, if you will. You won't regret it.\p"
+	.string "time, if you will.\p"
 	.string "…Oh, but, no, no, no! You have no Seal\n"
-	.string "Case?\p"
-	.string "You must return to the town with the\n"
-	.string "ruins and obtain a Seal Case!$"
+	.string "Case? What a shame! They're quite\l"
+	.string "hard to come by these days.$"
 
 SunyshoreCity_Market_EventScript_PtNpc5::
 	lock

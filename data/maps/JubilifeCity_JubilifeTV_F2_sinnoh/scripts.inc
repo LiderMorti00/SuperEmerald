@@ -17,8 +17,8 @@ JubilifeCity_JubilifeTV_F2_EventScript_PtNpc2::
 JubilifeCity_JubilifeTV_F2_Text_PtNpc2::
 	.string "The room at the back is our dreamy\n"
 	.string "fitting room.\p"
-	.string "Once you're done in there, get our\n"
-	.string "dreamy Hiker to take a dreamy photo!$"
+	.string "It's closed for redecorating, though.\n"
+	.string "Such a dreamy shame!$"
 
 JubilifeCity_JubilifeTV_F2_EventScript_PtNpc3::
 	msgbox JubilifeCity_JubilifeTV_F2_Text_PtNpc3, MSGBOX_NPC
@@ -45,14 +45,10 @@ JubilifeCity_JubilifeTV_F2_EventScript_PtNpc5::
 JubilifeCity_JubilifeTV_F2_Text_PtNpc5::
 	.string "Ooh, your POKéMON are so very\n"
 	.string "charming! How enchanting!\p"
-	.string "They're so charming I will even hang a\n"
-	.string "picture of one right beside me!\p"
-	.string "I'm only doing this especially for you!\n"
-	.string "Exciting, don't you think?\p"
-	.string "Dress up your POKéMON in my boudoir\n"
-	.string "and make it a sight to behold!\p"
-	.string "I will snap a photo when you're done.\n"
-	.string "You will do this, won't you?$"
+	.string "I would love to dress them up in my\n"
+	.string "boudoir and snap a photo…\p"
+	.string "But alas, it is being redecorated!\n"
+	.string "What a shame, don't you think?$"
 
 JubilifeCity_JubilifeTV_F2_EventScript_PtNpc6::
 	lock

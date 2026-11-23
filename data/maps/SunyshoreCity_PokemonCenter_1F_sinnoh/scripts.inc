@@ -35,10 +35,10 @@ SunyshoreCity_PokemonCenter_1F_EventScript_PtNpc2::
 	end
 
 SunyshoreCity_PokemonCenter_1F_Text_PtNpc2_0::
-	.string "Wow, you're really cool! You have seven\n"
-	.string "GYM BADGES!\p"
-	.string "All you need is one more to challenge\n"
-	.string "the POKéMON LEAGUE.$"
+	.string "Wow, you're a TRAINER! Are you\n"
+	.string "collecting SINNOH's GYM BADGES?\p"
+	.string "You need all eight to challenge the\n"
+	.string "POKéMON LEAGUE!$"
 
 SunyshoreCity_PokemonCenter_1F_EventScript_PtNpc2_AwesomelyCoolEightBadges::
 	msgbox SunyshoreCity_PokemonCenter_1F_Text_PtNpc2_1, MSGBOX_DEFAULT

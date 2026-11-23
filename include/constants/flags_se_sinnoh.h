@@ -202,5 +202,8 @@
 #define FLAG_SE_GOLDENROD_TM_LADY    0x32F5 // Goldenrod Dept. Store 5F: TM for the lead POKEMON's friendship
 #define FLAG_SE_GOT_HIDDEN_POWER_TM  0x32F6 // Lake of Rage: the HIDDEN POWER guru's TM
 #define FLAG_SE_GOT_ROUTE32_ROAR     0x32F7 // Route 32: the ROAR man's TM
+#define FLAG_SE_GOT_BYRON_APOLOGY    0x32F8 // Iron Island house: BYRON's apology gift
+#define FLAG_SE_GOT_ROUTE217_SPELL_TAG 0x32F9 // Route 217 house: SPELL TAG
+#define FLAG_SE_GOT_ROUTE221_BELT    0x32FA // Route 221 house: EXPERT BELT
 
 #endif // GUARD_CONSTANTS_FLAGS_SE_SINNOH_H

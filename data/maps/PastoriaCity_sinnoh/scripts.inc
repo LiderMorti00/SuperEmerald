@@ -15,7 +15,7 @@ PastoriaCity_Text_PtNpc1::
 PastoriaCity_EventScript_PtNpc2::
 	lock
 	faceplayer
-	goto_if_set FLAG_SINNOH_BADGE5_GET, PastoriaCity_EventScript_PtNpc2_SNVar0
+	goto_if_set FLAG_SINNOH_BADGE4_GET, PastoriaCity_EventScript_PtNpc2_SNVar0
 	msgbox PastoriaCity_Text_PtNpc2, MSGBOX_DEFAULT
 	release
 	end

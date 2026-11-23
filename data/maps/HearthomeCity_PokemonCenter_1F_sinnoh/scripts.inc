@@ -34,7 +34,8 @@ HearthomeCity_PokemonCenter_1F_EventScript_PtNpc2::
 HearthomeCity_PokemonCenter_1F_Text_PtNpc2_0::
 	.string "Hello, do you have a POKéBLOCK CASE?\p"
 	.string "If you haven't got one, you really must\n"
-	.string "visit the POKéMON Fan Club.$"
+	.string "visit the POKéBLOCK HOUSE here.\p"
+	.string "They'll give you one for free!$"
 
 HearthomeCity_PokemonCenter_1F_EventScript_PtNpc3::
 	lock

@@ -86,9 +86,10 @@ SurvivalArea_EventScript_SNBarry_B1::
 	goto SurvivalArea_EventScript_SNBarry_After
 
 SurvivalArea_EventScript_SNBarry_Intro::
-	.string "BARRY: Hey, {PLAYER}! You aren't the\n"
-	.string "only one getting tougher!\p"
-	.string "I'll prove it to you! Let's go!$"
+	.string "BARRY: Hey! You're that CHAMPION from\n"
+	.string "HOENN, right? I'm BARRY!\p"
+	.string "I'm gonna be the greatest TRAINER\n"
+	.string "ever! Let's battle! Let's go!$"
 
 SurvivalArea_EventScript_SNBarry_Done::
 	special SinnohDayOfWeek

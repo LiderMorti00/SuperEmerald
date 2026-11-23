@@ -51,7 +51,11 @@ JubilifeCity_PokemonSchool_EventScript_PtNpc5::
 	end
 
 JubilifeCity_PokemonSchool_Text_PtNpc5_Yes::
-	.string "Go! My POKéMON, go!$"
+	.string "Go! My POKéMON, go!\p"
+	.string "…Huh? The teacher says no battling\n"
+	.string "at our desks.\p"
+	.string "Battle the students over there\n"
+	.string "instead!$"
 
 JubilifeCity_PokemonSchool_EventScript_PtNpc5_No::
 	msgbox JubilifeCity_PokemonSchool_Text_PtNpc5_No, MSGBOX_DEFAULT
@@ -77,7 +81,9 @@ JubilifeCity_PokemonSchool_EventScript_PtNpc6::
 
 JubilifeCity_PokemonSchool_Text_PtNpc6_Yes::
 	.string "I need to try the things I learned\n"
-	.string "before I forget them!$"
+	.string "before I forget them!\p"
+	.string "…Oh, but the teacher is watching.\n"
+	.string "Maybe after class!$"
 
 JubilifeCity_PokemonSchool_EventScript_PtNpc6_No::
 	msgbox JubilifeCity_PokemonSchool_Text_PtNpc6_No, MSGBOX_DEFAULT

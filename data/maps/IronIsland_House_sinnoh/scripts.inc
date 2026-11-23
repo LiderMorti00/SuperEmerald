@@ -3,8 +3,22 @@ IronIsland_House_sinnoh_MapScripts::
 
 
 IronIsland_House_EventScript_PtNpc1::
-	msgbox IronIsland_House_Text_PtNpc1, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_SE_GOT_BYRON_APOLOGY, IronIsland_House_EventScript_ByronAfter
+	msgbox IronIsland_House_Text_PtNpc1, MSGBOX_DEFAULT
+	giveitem ITEM_METAL_COAT
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_SE_GOT_BYRON_APOLOGY
+IronIsland_House_EventScript_ByronAfter::
+	msgbox IronIsland_House_Text_ByronAfter, MSGBOX_DEFAULT
+	release
 	end
+
+IronIsland_House_Text_ByronAfter::
+	.string "BYRON: A METAL COAT hardens STEEL-type\n"
+	.string "moves. Some POKéMON even evolve with it!\p"
+	.string "Gwahahaha! Train hard, CHAMPION!$"
 
 IronIsland_House_Text_PtNpc1::
 	.string "BYRON: Hm? You're in training, then?\p"

@@ -144,7 +144,7 @@ HearthomeCity_Gym_EventScript_LeaderDefeated::
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox HearthomeCity_Gym_Text_ExplainBadge, MSGBOX_DEFAULT
-	setflag FLAG_SINNOH_BADGE3_GET
+	setflag FLAG_SINNOH_BADGE5_GET
 	settrainerflag TRAINER_JEFFREY_4_SINNOH
 	settrainerflag TRAINER_JEFFREY_5_SINNOH
 	settrainerflag TRAINER_CAMERON_1_SINNOH
@@ -227,7 +227,7 @@ HearthomeCity_Gym_EventScript_SNRematch_Ask::
 HearthomeCity_Gym_EventScript_PtGymGuide::
 	lock
 	faceplayer
-	goto_if_set FLAG_SINNOH_BADGE3_GET, HearthomeCity_Gym_EventScript_PtGymGuideAfter
+	goto_if_set FLAG_SINNOH_BADGE5_GET, HearthomeCity_Gym_EventScript_PtGymGuideAfter
 	msgbox HearthomeCity_Gym_Text_PtGymGuide, MSGBOX_DEFAULT
 	msgbox HearthomeCity_Gym_Text_SNGuideInfo, MSGBOX_DEFAULT
 	release
@@ -272,7 +272,7 @@ HearthomeCity_Gym_Text_PtGymGuideAfter::
 
 HearthomeCity_Gym_EventScript_PtGymStatue::
 	lockall
-	goto_if_set FLAG_SINNOH_BADGE3_GET, HearthomeCity_Gym_EventScript_PtGymStatueWon
+	goto_if_set FLAG_SINNOH_BADGE5_GET, HearthomeCity_Gym_EventScript_PtGymStatueWon
 	msgbox HearthomeCity_Gym_Text_PtGymStatue, MSGBOX_DEFAULT
 	releaseall
 	end

@@ -439,23 +439,13 @@ SunyshoreCity_Gym_Text_SNGuideInfo::
 	.string "and off and open a path to VOLKNER.$"
 
 SunyshoreCity_Gym_Text_PtGymGuide::
-	.string "Hey, there! How's it going,\n"
-	.string "CHAMP-to-be?\p"
-	.string "Let me check out your TRAINER Case.\n"
-	.string "Let's see how many BADGES you have.\p"
-	.string "One, two, three… Whoa! Wow! You've\n"
-	.string "already got seven!\p"
-	.string "That means if you can beat this GYM\n"
-	.string "LEADER, you're on your way to the\p"
-	.string "POKéMON LEAGUE next.\p"
-	.string "That also means this is the last time I\n"
-	.string "get to give you advice.\p"
-	.string "This is it, kiddo! Listen carefully…one\n"
-	.string "last time!\p"
+	.string "Hey, there! How's it going, CHAMP-to-be?\p"
+	.string "Let me check out your TRAINER Case…\n"
+	.string "Whoa! Look at all those BADGES!\p"
 	.string "The GYM LEADER here is a master of\n"
 	.string "Electric-type POKéMON!\p"
-	.string "That's all I have to say. The rest is up\n"
-	.string "to you!$"
+	.string "That's all I have to say. The rest is\n"
+	.string "up to you!$"
 
 SunyshoreCity_Gym_EventScript_PtGymGuideAfter::
 	msgbox SunyshoreCity_Gym_Text_PtGymGuideAfter, MSGBOX_DEFAULT

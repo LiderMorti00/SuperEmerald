@@ -56,9 +56,10 @@ OreburghCity_Flat2_F1_EventScript_PtNpc2::
 	end
 
 OreburghCity_Flat2_F1_Text_PtNpc2_Yes::
-	.string "Be nice to my ABRA!\p"
-	.string "I'll be sure to look after your MACHOP\n"
-	.string "in return!$"
+	.string "Really?! …Wait.\p"
+	.string "My ABRA just teleported behind me.\n"
+	.string "I don't think it wants to go…\p"
+	.string "Sorry, never mind! Forget I asked!$"
 
 OreburghCity_Flat2_F1_EventScript_PtNpc2_No::
 	msgbox OreburghCity_Flat2_F1_Text_PtNpc2_No, MSGBOX_DEFAULT

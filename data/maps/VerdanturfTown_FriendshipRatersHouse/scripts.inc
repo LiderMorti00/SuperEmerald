@@ -5,6 +5,7 @@ VerdanturfTown_FriendshipRatersHouse_EventScript_FriendshipRater::
 	lock
 	faceplayer
 	msgbox VerdanturfTown_FriendshipRatersHouse_Text_SeeHowMuchPokemonLikesYou, MSGBOX_DEFAULT
+VerdanturfTown_FriendshipRatersHouse_EventScript_RateLeadMon:: @ Super Emerald: also used by Dr. Footstep (Route 213)
 	specialvar VAR_RESULT, GetLeadMonFriendshipScore
 	switch VAR_RESULT
 	case FRIENDSHIP_NONE, VerdanturfTown_FriendshipRatersHouse_EventScript_DetestsYou

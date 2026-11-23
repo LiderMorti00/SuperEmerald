@@ -7,23 +7,17 @@ SolaceonTown_House1_EventScript_PtNpc1::
 	end
 
 SolaceonTown_House1_Text_PtNpc1::
-	.string "I wanted to give you some Seals, but\n"
-	.string "you don't have a Seal Case!\p"
-	.string "You should talk to my mom!$"
+	.string "I love putting Seals on POKé BALLS!\p"
+	.string "…Huh? You don't have any? I guess\n"
+	.string "it's just a SINNOH thing.$"
 
 SolaceonTown_House1_EventScript_PtNpc2::
 	msgbox SolaceonTown_House1_Text_PtNpc2, MSGBOX_NPC
 	end
 
 SolaceonTown_House1_Text_PtNpc2::
-	.string "I'll explain how the Seals work. You'll\n"
-	.string "need a POKéMON Center PC.\p"
-	.string "First, select your PC, then check the\n"
-	.string "heading “Ball Capsules” in the\p"
-	.string "PC menu.\p"
-	.string "Next, choose a Capsule and apply Seals\n"
-	.string "to it as you wish.\p"
-	.string "When you're done, put the Capsule on a\n"
-	.string "POKé BALL.\p"
-	.string "You can see the results when you use\n"
-	.string "that POKéMON in battle.$"
+	.string "In SINNOH, people decorate their\n"
+	.string "POKé BALLS with Seals.\p"
+	.string "When the POKéMON comes out, the Seals\n"
+	.string "make a pretty effect. My son adores\l"
+	.string "them!$"

@@ -47,7 +47,7 @@ VeilstoneCity_DepartmentStore_5F_Text_PtNpc4_0::
 	.string "That's all. What? What's the problem?$"
 
 VeilstoneCity_DepartmentStore_5F_EventScript_PtSign1::
-	msgbox VeilstoneCity_DepartmentStore_5F_Text_PtSign1, MSGBOX_SIGN
+	goto LilycoveCity_DepartmentStoreRooftop_EventScript_VendingMachine
 	end
 
 VeilstoneCity_DepartmentStore_5F_Text_PtSign1::

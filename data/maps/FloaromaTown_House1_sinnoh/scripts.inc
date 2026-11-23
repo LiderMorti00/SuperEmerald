@@ -27,8 +27,9 @@ FloaromaTown_House1_EventScript_PtNpc2::
 	end
 
 FloaromaTown_House1_Text_PtNpc2_Yes::
-	.string "Yes! You agreed! Here's the TM for the\n"
-	.string "move PLUCK!$"
+	.string "Yes! You agreed!\p"
+	.string "POKéMON look so happy when they\n"
+	.string "pluck Berries off the trees!$"
 
 FloaromaTown_House1_EventScript_PtNpc2_No::
 	msgbox FloaromaTown_House1_Text_PtNpc2_No, MSGBOX_DEFAULT

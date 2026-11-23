@@ -7,10 +7,10 @@ VeilstoneCity_GameCorner_EventScript_Woman2::
 	end
 
 VeilstoneCity_GameCorner_Text_CoinsAreNeededToPlay::
-	.string "Hey, kid, if you want to play here, you\n"
-	.string "need a COIN CASE.\p"
-	.string "I think the young man next door had\n"
-	.string "one.$"
+	.string "Hey, kid, if you want to play here,\n"
+	.string "you need a COIN CASE.\p"
+	.string "I think the clown next door gives\n"
+	.string "them away.$"
 
 VeilstoneCity_GameCorner_EventScript_Gentleman::
 	msgbox VeilstoneCity_GameCorner_Text_RouletteOnlyLuck, MSGBOX_NPC
@@ -66,8 +66,8 @@ VeilstoneCity_GameCorner_EventScript_NPCReturnToSlots::
 VeilstoneCity_GameCorner_Text_NeedCoinCaseGoNextDoor::
 	.string "Hey, kid, if you want to play here,\n"
 	.string "you need a COIN CASE.\p"
-	.string "I think the young lady next door\n"
-	.string "had one. Go see her!$"
+	.string "The clown next door had one.\n"
+	.string "Go see him!$"
 
 VeilstoneCity_GameCorner_EventScript_TryGive20Coins::
 	goto_if_set FLAG_SN_RECEIVED_20_COINS, VeilstoneCity_GameCorner_EventScript_PokefanMNormal

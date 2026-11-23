@@ -76,5 +76,5 @@ TurnbackCave_GiratinaRoom_EventScript_PtSign4::
 TurnbackCave_GiratinaRoom_Text_PtSign4::
 	.string "It's a portal leading to the Distortion\n"
 	.string "World…\p"
-	.string "Would you like to leap into the portal\n"
-	.string "and go to the DISTORTION WORLD?$"
+	.string "It seems to have closed. The way\n"
+	.string "through is shut tight.$"
