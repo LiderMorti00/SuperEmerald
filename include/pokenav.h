@@ -185,6 +185,7 @@ enum
     HELPBAR_RIBBONS_CHECK,
     HELPBAR_MAP_NO_ZOOM,            // Super Fire Red: Kanto map
     HELPBAR_MAP_NO_ZOOM_CANFLY,
+    HELPBAR_MAP_WORLD,              // Super Emerald: world map
     HELPBAR_COUNT
 };
 
@@ -300,7 +301,10 @@ enum
     POKENAV_MAP_FUNC_ZOOM_OUT,
     POKENAV_MAP_FUNC_ZOOM_IN,
     POKENAV_MAP_FUNC_EXIT,
-    POKENAV_MAP_FUNC_FLY
+    POKENAV_MAP_FUNC_FLY,
+    POKENAV_MAP_FUNC_WORLD_MOVED,   // Super Emerald: world map
+    POKENAV_MAP_FUNC_OPEN_REGION,
+    POKENAV_MAP_FUNC_BACK_TO_WORLD,
 };
 
 // Modes for PokenavFadeScreen

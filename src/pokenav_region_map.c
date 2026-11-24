@@ -3,6 +3,8 @@
 #include "decompress.h"
 #include "landmark.h"
 #include "event_data.h"
+#include "item.h"
+#include "constants/items.h"
 #include "field_effect.h"
 #include "main.h"
 #include "menu.h"
@@ -15,6 +17,7 @@
 #include "string_util.h"
 #include "task.h"
 #include "text_window.h"
+#include "util.h"
 #include "window.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
@@ -27,7 +30,9 @@
 
 struct Pokenav_RegionMapMenu
 {
-    u8 unused[12];
+    u8 worldSel;
+    bool8 inRegion;
+    u8 unused[10];
     bool32 zoomDisabled;
     u32 (*callback)(struct Pokenav_RegionMapMenu *);
 };
@@ -37,6 +42,7 @@ struct Pokenav_RegionMapGfx
     bool32 (*isTaskActiveCB)(void);
     u32 loopTaskId;
     u16 infoWindowId;
+    bool8 regionGfxLoaded;
     struct Sprite *cityZoomTextSprites[3];
     u8 ALIGNED(2) tilemapBuffer[BG_SCREEN_SIZE];
     u8 cityZoomPics[NUM_CITY_MAPS][200];
@@ -52,7 +58,6 @@ struct CityMapEntry
 static u32 HandleRegionMapInput(struct Pokenav_RegionMapMenu *);
 static u32 HandleRegionMapInputZoomDisabled(struct Pokenav_RegionMapMenu *);
 static u32 GetExitRegionMapMenuId(struct Pokenav_RegionMapMenu *);
-static u32 LoopedTask_OpenRegionMap(s32);
 static u32 LoopedTask_DecompressCityMaps(s32);
 static bool32 GetCurrentLoopedTaskActive(void);
 static void FreeCityZoomViewGfx(void);
@@ -77,6 +82,14 @@ static u32 LoopedTask_RegionMapZoomOut(s32);
 static u32 LoopedTask_RegionMapZoomIn(s32);
 static u32 LoopedTask_ExitRegionMap(s32);
 static u32 LoopedTask_TreatAsPokeNavFlyMap(s32);
+static u32 HandleWorldMapInput(struct Pokenav_RegionMapMenu *);
+static u32 OpenRegionMapStep(s32, bool32);
+static u32 OpenWorldMapStep(s32, bool32);
+static u32 LoopedTask_OpenWorldMap(s32);
+static u32 LoopedTask_WorldMapMoved(s32);
+static u32 LoopedTask_OpenRegionFromWorld(s32);
+static u32 LoopedTask_BackToWorldMap(s32);
+static bool32 CanFlyFromPokenavMap(struct RegionMap *regionMap);
 
 extern const u16 gRegionMapCityZoomTiles_Pal[];
 extern const u32 gRegionMapCityZoomText_Gfx[];
@@ -126,6 +139,9 @@ static const LoopedTask sRegionMapLoopTaskFuncs[] =
     [POKENAV_MAP_FUNC_ZOOM_IN]      = LoopedTask_RegionMapZoomIn,
     [POKENAV_MAP_FUNC_EXIT]         = LoopedTask_ExitRegionMap,
     [POKENAV_MAP_FUNC_FLY]          = LoopedTask_TreatAsPokeNavFlyMap,
+    [POKENAV_MAP_FUNC_WORLD_MOVED]  = LoopedTask_WorldMapMoved,
+    [POKENAV_MAP_FUNC_OPEN_REGION]  = LoopedTask_OpenRegionFromWorld,
+    [POKENAV_MAP_FUNC_BACK_TO_WORLD] = LoopedTask_BackToWorldMap,
 };
 
 static const struct CompressedSpriteSheet sCityZoomTextSpriteSheet[1] =
@@ -174,6 +190,187 @@ static const struct SpriteTemplate sCityZoomTextSpriteTemplate =
     .callback = SpriteCB_CityZoomText,
 };
 
+// ---------------------------------------------------------------------------
+// Super Emerald: world overview map (Hoenn, Johto, Kanto, Sinnoh, Sevii Islands)
+// The picture is a 4bpp text BG. Every BG palette from 5 to 14 holds the same
+// colours; a palette belongs to one region (or to the sea) so the selected
+// region can be lit and the others dimmed. Colours 13-15 draw the sea lanes,
+// and each palette says which lane each of those colours belongs to.
+// The land is drawn from the coastlines of the regional maps themselves.
+// graphics/pokenav/region_map/world_map.* are made by tools/sfr/world_map_gen.py
+
+enum {
+    WORLD_HOENN,
+    WORLD_JOHTO,
+    WORLD_KANTO,
+    WORLD_SINNOH,
+    WORLD_SEVII123,
+    WORLD_SEVII45,
+    WORLD_SEVII67,
+    WORLD_COUNT,
+    WORLD_SEVII_ALL = WORLD_COUNT,
+    WORLD_SEA,
+};
+
+enum {
+    LANE_NONE,
+    LANE_SLATEPORT_OLIVINE,   // S.S. TIDAL, JOHTO TICKET
+    LANE_OLIVINE_VERMILION,   // S.S. AQUA, after the JOHTO LEAGUE
+    LANE_VERMILION_CANALAVE,  // S.S. AQUA, CANALAVE TICKET
+    LANE_VERMILION_SEVII,     // SEAGALLOP, RAINBOW PASS
+    LANE_OLIVINE_CHANNEL,     // the stretch both Olivine lanes share
+    LANE_COUNT
+};
+
+#define WORLD_MAP_FIRST_PAL 5
+#define WORLD_MAP_NUM_PALS  10
+
+static const u16 sWorldMap_Pal[] = INCGFX_U16("graphics/pokenav/region_map/world_map.pal", ".gbapal");
+static const u32 sWorldMap_Gfx[] = INCGFX_U32("graphics/pokenav/region_map/world_map.png", ".4bpp.smol");
+static const u32 sWorldMap_Tilemap[] = INCGFX_U32("graphics/pokenav/region_map/world_map.bin", ".smolTM");
+
+static const struct {
+    u8 owner;
+    u8 lanes[3];
+} sWorldMapPalettes[WORLD_MAP_NUM_PALS] =
+{
+    {WORLD_HOENN,     {LANE_SLATEPORT_OLIVINE, LANE_OLIVINE_VERMILION, LANE_OLIVINE_CHANNEL}},
+    {WORLD_JOHTO,     {LANE_SLATEPORT_OLIVINE, LANE_OLIVINE_VERMILION, LANE_OLIVINE_CHANNEL}},
+    {WORLD_KANTO,     {LANE_VERMILION_SEVII,   LANE_OLIVINE_VERMILION, LANE_VERMILION_CANALAVE}},
+    {WORLD_SINNOH,    {LANE_SLATEPORT_OLIVINE, LANE_OLIVINE_VERMILION, LANE_VERMILION_CANALAVE}},
+    {WORLD_SEVII123,  {LANE_VERMILION_SEVII}},
+    {WORLD_SEVII45,   {LANE_VERMILION_SEVII}},
+    {WORLD_SEVII67,   {LANE_VERMILION_SEVII}},
+    {WORLD_SEVII_ALL, {LANE_VERMILION_SEVII}},
+    {WORLD_SEA,       {LANE_SLATEPORT_OLIVINE, LANE_OLIVINE_VERMILION, LANE_OLIVINE_CHANNEL}},
+    {WORLD_SEA,       {LANE_VERMILION_SEVII,   LANE_OLIVINE_VERMILION, LANE_VERMILION_CANALAVE}},
+};
+
+static const u8 sWorldTargetRegionMap[WORLD_COUNT] =
+{
+    [WORLD_HOENN]    = REGION_MAP_HOENN,
+    [WORLD_JOHTO]    = REGION_MAP_JOHTO,
+    [WORLD_KANTO]    = REGION_MAP_KANTO,
+    [WORLD_SINNOH]   = REGION_MAP_SINNOH,
+    [WORLD_SEVII123] = REGION_MAP_SEVII123,
+    [WORLD_SEVII45]  = REGION_MAP_SEVII45,
+    [WORLD_SEVII67]  = REGION_MAP_SEVII67,
+};
+
+// Up, down, left, right
+#define NO_TARGET 0xFF
+static const u8 sWorldTargetNeighbors[WORLD_COUNT][4] =
+{
+    [WORLD_HOENN]    = {WORLD_JOHTO,    NO_TARGET,      NO_TARGET,   WORLD_KANTO},
+    [WORLD_JOHTO]    = {NO_TARGET,      WORLD_HOENN,    WORLD_HOENN, WORLD_KANTO},
+    [WORLD_KANTO]    = {WORLD_SINNOH,   WORLD_SEVII123, WORLD_JOHTO, WORLD_SEVII123},
+    [WORLD_SINNOH]   = {NO_TARGET,      WORLD_SEVII123, WORLD_KANTO, NO_TARGET},
+    [WORLD_SEVII123] = {WORLD_SINNOH,   WORLD_SEVII67,  WORLD_KANTO, WORLD_SEVII45},
+    [WORLD_SEVII45]  = {WORLD_SINNOH,   WORLD_SEVII67,  WORLD_SEVII123, NO_TARGET},
+    [WORLD_SEVII67]  = {WORLD_SEVII123, NO_TARGET,      WORLD_HOENN, WORLD_SEVII45},
+};
+
+static u8 GetWorldTargetForRegionMap(enum RegionMapType type)
+{
+    u32 i;
+    for (i = 0; i < WORLD_COUNT; i++)
+    {
+        if (sWorldTargetRegionMap[i] == type)
+            return i;
+    }
+    return WORLD_HOENN;
+}
+
+static bool32 IsSeaLaneOpen(u32 lane)
+{
+    bool32 league = FlagGet(FLAG_SE_JOHTO_LEAGUE_CLEARED);
+    switch (lane)
+    {
+    case LANE_SLATEPORT_OLIVINE:
+        return CheckBagHasItem(ITEM_JOHTO_TICKET, 1);
+    case LANE_OLIVINE_VERMILION:
+        return league && CheckBagHasItem(ITEM_JOHTO_TICKET, 1);
+    case LANE_VERMILION_CANALAVE:
+        return league && CheckBagHasItem(ITEM_CANALAVE_TICKET, 1);
+    case LANE_VERMILION_SEVII:
+        return league && CheckBagHasItem(ITEM_RAINBOW_PASS, 1);
+    case LANE_OLIVINE_CHANNEL:
+        return IsSeaLaneOpen(LANE_SLATEPORT_OLIVINE) || IsSeaLaneOpen(LANE_OLIVINE_VERMILION);
+    }
+    return FALSE;
+}
+
+static bool32 IsWorldOwnerLit(u32 owner, u32 sel)
+{
+    if (owner == WORLD_SEA || owner == sel)
+        return TRUE;
+    if (owner == WORLD_SEVII_ALL)
+        return sel == WORLD_SEVII123 || sel == WORLD_SEVII45 || sel == WORLD_SEVII67;
+    return FALSE;
+}
+
+static void LoadWorldMapPalettes(u32 sel)
+{
+    u16 pal[16];
+    u32 i, j;
+    bool8 laneOpen[LANE_COUNT];
+
+    for (i = 0; i < LANE_COUNT; i++)
+        laneOpen[i] = IsSeaLaneOpen(i);
+
+    for (i = 0; i < WORLD_MAP_NUM_PALS; i++)
+    {
+        CpuCopy16(sWorldMap_Pal, pal, sizeof(pal));
+        for (j = 0; j < 3; j++)
+        {
+            if (!laneOpen[sWorldMapPalettes[i].lanes[j]])
+                pal[13 + j] = pal[1];
+        }
+        if (!IsWorldOwnerLit(sWorldMapPalettes[i].owner, sel))
+        {
+            // Dim the land colours of the regions that aren't selected
+            for (j = 3; j <= 12; j++)
+            {
+                u32 r = GET_R(pal[j]), g = GET_G(pal[j]), b = GET_B(pal[j]);
+                pal[j] = RGB((r * 7 + 2 * 9) / 16, (g * 7 + 4 * 9) / 16, (b * 7 + 8 * 9) / 16);
+            }
+        }
+        LoadPalette(pal, BG_PLTT_ID(WORLD_MAP_FIRST_PAL + i), PLTT_SIZE_4BPP);
+    }
+}
+
+// Gently pulse the selected region so it stands out, even the small Sevii groups
+static void Task_WorldMapPulse(u8 taskId)
+{
+    struct Pokenav_RegionMapMenu *menu = GetSubstructPtr(POKENAV_SUBSTRUCT_REGION_MAP_STATE);
+    s16 *data = gTasks[taskId].data;
+    u32 i, coeff;
+
+    if (gPaletteFade.active)
+        return;
+    data[0] = (data[0] + 1) & 63;
+    coeff = data[0] < 32 ? data[0] / 6 : (63 - data[0]) / 6;
+    for (i = 0; i < WORLD_MAP_NUM_PALS; i++)
+    {
+        if (sWorldMapPalettes[i].owner != WORLD_SEA && IsWorldOwnerLit(sWorldMapPalettes[i].owner, menu->worldSel))
+            BlendPalette(BG_PLTT_ID(WORLD_MAP_FIRST_PAL + i) + 3, 10, coeff, RGB_WHITE);
+    }
+}
+
+static void StopWorldMapPulse(void)
+{
+    u8 taskId = FindTaskIdByFunc(Task_WorldMapPulse);
+    if (taskId != TASK_NONE)
+        DestroyTask(taskId);
+}
+
+static void VBlankCB_WorldMap(void)
+{
+    TransferPlttBuffer();
+    LoadOam();
+    ProcessSpriteCopyRequests();
+}
+
 u32 PokenavCallback_Init_RegionMap(void)
 {
     struct Pokenav_RegionMapMenu *state = AllocSubstruct(POKENAV_SUBSTRUCT_REGION_MAP_STATE, sizeof(struct Pokenav_RegionMapMenu));
@@ -183,19 +380,19 @@ u32 PokenavCallback_Init_RegionMap(void)
     if (!AllocSubstruct(POKENAV_SUBSTRUCT_REGION_MAP, sizeof(struct RegionMap)))
         return FALSE;
 
-    // Super Fire Red: the Kanto map has no city zoom
-    state->zoomDisabled = IsEventIslandMapSecId(gMapHeader.regionMapSectionId) || IsInKanto();
-    if (!state->zoomDisabled)
-        state->callback = HandleRegionMapInput;
-    else
-        state->callback = HandleRegionMapInputZoomDisabled;
+    // Super Emerald: the map opens on the world overview, on the player's region
+    ClearRegionMapViewType();
+    state->worldSel = GetWorldTargetForRegionMap(GetPlayerRegionMapType());
+    state->inRegion = FALSE;
+    state->zoomDisabled = TRUE;
+    state->callback = HandleWorldMapInput;
 
     return TRUE;
 }
 
 void FreeRegionMapSubstruct1(void)
 {
-    gSaveBlock2Ptr->regionMapZoom = IsRegionMapZoomed();
+    ClearRegionMapViewType();
     FreePokenavSubstruct(POKENAV_SUBSTRUCT_REGION_MAP);
     FreePokenavSubstruct(POKENAV_SUBSTRUCT_REGION_MAP_STATE);
 }
@@ -219,11 +416,10 @@ static u32 HandleRegionMapInput(struct Pokenav_RegionMapMenu *state)
             return POKENAV_MAP_FUNC_ZOOM_IN;
         return POKENAV_MAP_FUNC_ZOOM_OUT;
     case MAP_INPUT_B_BUTTON:
-        state->callback = GetExitRegionMapMenuId;
-        return POKENAV_MAP_FUNC_EXIT;
+        state->callback = HandleWorldMapInput;
+        return POKENAV_MAP_FUNC_BACK_TO_WORLD;
     case MAP_INPUT_R_BUTTON:
-        if (regionMap->mapSecType == MAPSECTYPE_CITY_CANFLY && FlagGet(OW_FLAG_POKE_RIDER)
-        && Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
+        if (CanFlyFromPokenavMap(regionMap))
             return POKENAV_MAP_FUNC_FLY;
     }
 
@@ -236,27 +432,25 @@ static u32 HandleRegionMapInputZoomDisabled(struct Pokenav_RegionMapMenu *state)
 
     // Kanto has a full region map but no city zoom artwork. Keep cursor
     // navigation and Poke Rider flight available without enabling zoom.
-    if (IsInKanto())
+    if (IsRegionMapShowingKanto())
     {
         switch (DoRegionMapInputCallback())
         {
         case MAP_INPUT_MOVE_END:
             return POKENAV_MAP_FUNC_CURSOR_MOVED;
         case MAP_INPUT_B_BUTTON:
-            state->callback = GetExitRegionMapMenuId;
-            return POKENAV_MAP_FUNC_EXIT;
+            state->callback = HandleWorldMapInput;
+            return POKENAV_MAP_FUNC_BACK_TO_WORLD;
         case MAP_INPUT_R_BUTTON:
-            if (regionMap->mapSecType == MAPSECTYPE_CITY_CANFLY
-             && FlagGet(OW_FLAG_POKE_RIDER)
-             && Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType))
+            if (CanFlyFromPokenavMap(regionMap))
                 return POKENAV_MAP_FUNC_FLY;
             break;
         }
     }
     else if (JOY_NEW(B_BUTTON))
     {
-        state->callback = GetExitRegionMapMenuId;
-        return POKENAV_MAP_FUNC_EXIT;
+        state->callback = HandleWorldMapInput;
+        return POKENAV_MAP_FUNC_BACK_TO_WORLD;
     }
 
     return POKENAV_MAP_FUNC_NONE;
@@ -265,6 +459,57 @@ static u32 HandleRegionMapInputZoomDisabled(struct Pokenav_RegionMapMenu *state)
 static u32 GetExitRegionMapMenuId(struct Pokenav_RegionMapMenu *state)
 {
     return POKENAV_MAIN_MENU_CURSOR_ON_MAP;
+}
+
+// Flying from the PokeNav only works on the map of the region the player is in.
+// Other regions are reached by ship.
+static bool32 CanFlyFromPokenavMap(struct RegionMap *regionMap)
+{
+    return regionMap->mapSecType == MAPSECTYPE_CITY_CANFLY
+        && !IsRegionMapShowingOtherRegion()
+        && FlagGet(OW_FLAG_POKE_RIDER)
+        && Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE;
+}
+
+static u32 HandleWorldMapInput(struct Pokenav_RegionMapMenu *state)
+{
+    u32 dir, next;
+
+    if (JOY_NEW(A_BUTTON))
+    {
+        SetRegionMapViewType(sWorldTargetRegionMap[state->worldSel]);
+        // Kanto and the Sevii Islands have no city zoom
+        state->zoomDisabled = IsRegionMapShowingKanto()
+                           || (!IsRegionMapShowingOtherRegion() && IsEventIslandMapSecId(gMapHeader.regionMapSectionId));
+        if (!state->zoomDisabled)
+            state->callback = HandleRegionMapInput;
+        else
+            state->callback = HandleRegionMapInputZoomDisabled;
+        state->inRegion = TRUE;
+        return POKENAV_MAP_FUNC_OPEN_REGION;
+    }
+    if (JOY_NEW(B_BUTTON))
+    {
+        state->callback = GetExitRegionMapMenuId;
+        return POKENAV_MAP_FUNC_EXIT;
+    }
+
+    if (JOY_NEW(DPAD_UP))
+        dir = 0;
+    else if (JOY_NEW(DPAD_DOWN))
+        dir = 1;
+    else if (JOY_NEW(DPAD_LEFT))
+        dir = 2;
+    else if (JOY_NEW(DPAD_RIGHT))
+        dir = 3;
+    else
+        return POKENAV_MAP_FUNC_NONE;
+
+    next = sWorldTargetNeighbors[state->worldSel][dir];
+    if (next == NO_TARGET)
+        return POKENAV_MAP_FUNC_NONE;
+    state->worldSel = next;
+    return POKENAV_MAP_FUNC_WORLD_MOVED;
 }
 
 bool32 GetZoomDisabled(void)
@@ -279,7 +524,8 @@ bool32 OpenPokenavRegionMap(void)
     if (!state)
         return FALSE;
 
-    state->loopTaskId = CreateLoopedTask(LoopedTask_OpenRegionMap, 1);
+    state->regionGfxLoaded = FALSE;
+    state->loopTaskId = CreateLoopedTask(LoopedTask_OpenWorldMap, 1);
     state->isTaskActiveCB = GetCurrentLoopedTaskActive;
     return TRUE;
 }
@@ -300,9 +546,15 @@ bool32 IsRegionMapLoopedTaskActive(void)
 void FreeRegionMapSubstruct2(void)
 {
     struct Pokenav_RegionMapGfx *state = GetSubstructPtr(POKENAV_SUBSTRUCT_REGION_MAP_ZOOM);
-    FreeRegionMapIconResources();
-    FreeCityZoomViewGfx();
-    RemoveWindow(state->infoWindowId);
+    StopWorldMapPulse();
+    if (state->regionGfxLoaded)
+    {
+        if (!GetZoomDisabled())
+            gSaveBlock2Ptr->regionMapZoom = IsRegionMapZoomed();
+        FreeRegionMapIconResources();
+        FreeCityZoomViewGfx();
+        RemoveWindow(state->infoWindowId);
+    }
     FreePokenavSubstruct(POKENAV_SUBSTRUCT_REGION_MAP);
     FreePokenavSubstruct(POKENAV_SUBSTRUCT_REGION_MAP_ZOOM);
     SetPokenavVBlankCallback();
@@ -331,7 +583,7 @@ static bool8 ShouldOpenRegionMapZoomed(void)
     return gSaveBlock2Ptr->regionMapZoom == TRUE;
 }
 
-static u32 LoopedTask_OpenRegionMap(s32 taskState)
+static u32 OpenRegionMapStep(s32 taskState, bool32 fromWorld)
 {
     int menuGfxId;
     struct RegionMap *regionMap;
@@ -353,7 +605,7 @@ static u32 LoopedTask_OpenRegionMap(s32 taskState)
         if (LoadRegionMapGfx())
             return LT_PAUSE;
 
-        if (!GetZoomDisabled() || IsInKanto())
+        if (!GetZoomDisabled() || IsRegionMapShowingKanto())
         {
             CreateRegionMapPlayerIcon(4, 9);
             CreateRegionMapCursor(5, 10);
@@ -374,6 +626,7 @@ static u32 LoopedTask_OpenRegionMap(s32 taskState)
             return LT_PAUSE;
 
         LoadPokenavRegionMapGfx(state);
+        state->regionGfxLoaded = TRUE;
         return LT_INC_AND_CONTINUE;
     case 4:
         if (TryFreeTempTileDataBuffers())
@@ -397,8 +650,15 @@ static u32 LoopedTask_OpenRegionMap(s32 taskState)
             menuGfxId = POKENAV_GFX_MAP_MENU_ZOOMED_IN;
 
         UpdateRegionMapHelpBarText();
-        LoadLeftHeaderGfxForIndex(menuGfxId);
-        ShowLeftHeaderGfx(menuGfxId, TRUE, TRUE);
+        if (fromWorld)
+        {
+            UpdateRegionMapRightHeaderTiles(menuGfxId);
+        }
+        else
+        {
+            LoadLeftHeaderGfxForIndex(menuGfxId);
+            ShowLeftHeaderGfx(menuGfxId, TRUE, TRUE);
+        }
         PokenavFadeScreen(POKENAV_FADE_FROM_BLACK);
         return LT_INC_AND_PAUSE;
     case 7:
@@ -408,6 +668,119 @@ static u32 LoopedTask_OpenRegionMap(s32 taskState)
     default:
         return LT_FINISH;
     }
+}
+
+static u32 OpenWorldMapStep(s32 taskState, bool32 initial)
+{
+    struct Pokenav_RegionMapMenu *menu = GetSubstructPtr(POKENAV_SUBSTRUCT_REGION_MAP_STATE);
+    switch (taskState)
+    {
+    case 0:
+        SetVBlankCallback_(NULL);
+        HideBg(1);
+        HideBg(2);
+        HideBg(3);
+        SetBgMode(0);
+        InitBgFromTemplate(&sRegionMapBgTemplates[1]);
+        ChangeBgX(2, 0, BG_COORD_SET);
+        ChangeBgY(2, 0, BG_COORD_SET);
+        DecompressAndCopyTileDataToVram(2, sWorldMap_Gfx, 0, 0, 0);
+        return LT_INC_AND_PAUSE;
+    case 1:
+        if (FreeTempTileDataBuffersIfPossible())
+            return LT_PAUSE;
+        DecompressAndCopyTileDataToVram(2, sWorldMap_Tilemap, 0, 0, 1);
+        return LT_INC_AND_PAUSE;
+    case 2:
+        if (FreeTempTileDataBuffersIfPossible())
+            return LT_PAUSE;
+        LoadWorldMapPalettes(menu->worldSel);
+        FadeToBlackExceptPrimary();
+        return LT_INC_AND_PAUSE;
+    case 3:
+        if (IsDma3ManagerBusyWithBgCopy())
+            return LT_PAUSE;
+        ShowBg(2);
+        SetVBlankCallback_(VBlankCB_WorldMap);
+        PrintHelpBarText(HELPBAR_MAP_WORLD);
+        if (initial)
+        {
+            LoadLeftHeaderGfxForIndex(POKENAV_GFX_MAP_MENU_ZOOMED_OUT);
+            ShowLeftHeaderGfx(POKENAV_GFX_MAP_MENU_ZOOMED_OUT, TRUE, TRUE);
+        }
+        else
+        {
+            UpdateRegionMapRightHeaderTiles(POKENAV_GFX_MAP_MENU_ZOOMED_OUT);
+        }
+        PokenavFadeScreen(POKENAV_FADE_FROM_BLACK);
+        return LT_INC_AND_PAUSE;
+    case 4:
+        if (IsPaletteFadeActive() || AreLeftHeaderSpritesMoving())
+            return LT_PAUSE;
+        if (FindTaskIdByFunc(Task_WorldMapPulse) == TASK_NONE)
+            CreateTask(Task_WorldMapPulse, 2);
+        return LT_INC_AND_CONTINUE;
+    default:
+        return LT_FINISH;
+    }
+}
+
+static u32 LoopedTask_OpenWorldMap(s32 taskState)
+{
+    return OpenWorldMapStep(taskState, TRUE);
+}
+
+static u32 LoopedTask_WorldMapMoved(s32 taskState)
+{
+    struct Pokenav_RegionMapMenu *menu = GetSubstructPtr(POKENAV_SUBSTRUCT_REGION_MAP_STATE);
+    PlaySE(SE_DEX_SCROLL);
+    LoadWorldMapPalettes(menu->worldSel);
+    return LT_FINISH;
+}
+
+static u32 LoopedTask_OpenRegionFromWorld(s32 taskState)
+{
+    switch (taskState)
+    {
+    case 0:
+        StopWorldMapPulse();
+        PlaySE(SE_SELECT);
+        PokenavFadeScreen(POKENAV_FADE_TO_BLACK);
+        return LT_INC_AND_PAUSE;
+    case 1:
+        if (IsPaletteFadeActive())
+            return LT_PAUSE;
+        return LT_INC_AND_CONTINUE;
+    }
+    return OpenRegionMapStep(taskState - 2, TRUE);
+}
+
+static u32 LoopedTask_BackToWorldMap(s32 taskState)
+{
+    struct Pokenav_RegionMapGfx *state = GetSubstructPtr(POKENAV_SUBSTRUCT_REGION_MAP_ZOOM);
+    struct Pokenav_RegionMapMenu *menu = GetSubstructPtr(POKENAV_SUBSTRUCT_REGION_MAP_STATE);
+    switch (taskState)
+    {
+    case 0:
+        PlaySE(SE_SELECT);
+        PokenavFadeScreen(POKENAV_FADE_TO_BLACK);
+        return LT_INC_AND_PAUSE;
+    case 1:
+        if (IsPaletteFadeActive())
+            return LT_PAUSE;
+        if (!menu->zoomDisabled)
+            gSaveBlock2Ptr->regionMapZoom = IsRegionMapZoomed();
+        SetVBlankCallback_(NULL);
+        FreeRegionMapIconResources();
+        FreeCityZoomViewGfx();
+        RemoveWindow(state->infoWindowId);
+        state->regionGfxLoaded = FALSE;
+        ClearRegionMapViewType();
+        menu->inRegion = FALSE;
+        menu->zoomDisabled = TRUE;
+        return LT_INC_AND_CONTINUE;
+    }
+    return OpenWorldMapStep(taskState - 2, FALSE);
 }
 
 static u32 LoopedTask_UpdateInfoAfterCursorMove(s32 taskState)
@@ -492,6 +865,7 @@ static u32 LoopedTask_ExitRegionMap(s32 taskState)
     switch (taskState)
     {
     case 0:
+        StopWorldMapPulse();
         PlaySE(SE_SELECT);
         PokenavFadeScreen(POKENAV_FADE_TO_BLACK);
         return LT_INC_AND_PAUSE;
@@ -795,16 +1169,14 @@ void UpdateRegionMapHelpBarText(void)
 {
     struct RegionMap* regionMap = GetSubstructPtr(POKENAV_SUBSTRUCT_REGION_MAP);
 
-    if (IsInKanto()) // Super Fire Red: no zoom on the Kanto map
+    if (IsRegionMapShowingKanto()) // Super Fire Red: no zoom on the Kanto map
     {
-        if (regionMap->mapSecType == MAPSECTYPE_CITY_CANFLY && FlagGet(OW_FLAG_POKE_RIDER)
-            && Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
+        if (CanFlyFromPokenavMap(regionMap))
             PrintHelpBarText(HELPBAR_MAP_NO_ZOOM_CANFLY);
         else
             PrintHelpBarText(HELPBAR_MAP_NO_ZOOM);
     }
-    else if (regionMap->mapSecType == MAPSECTYPE_CITY_CANFLY && FlagGet(OW_FLAG_POKE_RIDER)
-        && Overworld_MapTypeAllowsTeleportAndFly(gMapHeader.mapType) == TRUE)
+    else if (CanFlyFromPokenavMap(regionMap))
     {
         if (IsRegionMapZoomed())
             PrintHelpBarText(HELPBAR_MAP_ZOOMED_IN_CANFLY);

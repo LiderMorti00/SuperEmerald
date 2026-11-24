@@ -770,8 +770,76 @@ static const struct SpriteTemplate sFlyDestIconSpriteTemplate =
     .anims = sFlyDestIcon_Anims,
 };
 
+// Super Emerald: the PokeNav world map can open any region's map for viewing.
+// 0 = follow the player's location, otherwise REGION_MAP_* + 1.
+static EWRAM_DATA u8 sRegionMapViewType = 0;
+
+void SetRegionMapViewType(enum RegionMapType type)
+{
+    sRegionMapViewType = type + 1;
+}
+
+void ClearRegionMapViewType(void)
+{
+    sRegionMapViewType = 0;
+}
+
+enum RegionMapType GetPlayerRegionMapType(void)
+{
+    return GetRegionMapType(gMapHeader.regionMapSectionId);
+}
+
+static enum RegionMapType GetDisplayedRegionMapType(void)
+{
+    if (sRegionMapViewType != 0)
+        return sRegionMapViewType - 1;
+    return GetPlayerRegionMapType();
+}
+
+bool32 IsRegionMapShowingOtherRegion(void)
+{
+    return sRegionMapViewType != 0 && sRegionMapViewType - 1 != GetPlayerRegionMapType();
+}
+
+bool32 IsRegionMapShowingKanto(void)
+{
+    switch (GetDisplayedRegionMapType())
+    {
+    case REGION_MAP_KANTO:
+    case REGION_MAP_SEVII123:
+    case REGION_MAP_SEVII45:
+    case REGION_MAP_SEVII67:
+        return TRUE;
+    default:
+        return FALSE;
+    }
+}
+
+// Where the cursor starts when the player looks at a region they aren't in
+static const mapsec_u16_t sRegionMapViewStartMapSec[] =
+{
+    [REGION_MAP_HOENN]    = MAPSEC_LITTLEROOT_TOWN,
+    [REGION_MAP_KANTO]    = MAPSEC_PALLET_TOWN,
+    [REGION_MAP_SEVII123] = MAPSEC_ONE_ISLAND,
+    [REGION_MAP_SEVII45]  = MAPSEC_FOUR_ISLAND,
+    [REGION_MAP_SEVII67]  = MAPSEC_SEVEN_ISLAND,
+    [REGION_MAP_JOHTO]    = MAPSEC_NEW_BARK_TOWN,
+    [REGION_MAP_SINNOH]   = MAPSEC_TWINLEAF_TOWN,
+};
+
+static void InitMapForViewedRegion(void)
+{
+    mapsec_u16_t mapSecId = sRegionMapViewStartMapSec[GetDisplayedRegionMapType()];
+
+    sRegionMap->mapSecId = mapSecId;
+    sRegionMap->playerIsInCave = FALSE;
+    sRegionMap->cursorPosX = gRegionMapEntries[mapSecId].x + MAPCURSOR_X_MIN;
+    sRegionMap->cursorPosY = gRegionMapEntries[mapSecId].y + MAPCURSOR_Y_MIN;
+}
+
 void InitRegionMap(struct RegionMap *regionMap, bool8 zoomed)
 {
+    ClearRegionMapViewType();
     InitRegionMapData(regionMap, NULL, zoomed);
     while (LoadRegionMapGfx());
 }
@@ -812,14 +880,14 @@ bool8 LoadRegionMapGfx(void)
     switch (sRegionMap->initStep)
     {
     case 0:
-        regionMapType = GetRegionMapType(gMapHeader.regionMapSectionId);
+        regionMapType = GetDisplayedRegionMapType();
         if (sRegionMap->bgManaged)
             DecompressAndCopyTileDataToVram(sRegionMap->bgNum, gRegionMapInfos[regionMapType].regionMapGfx, 0, 0, 0);
         else
             DecompressDataWithHeaderVram(gRegionMapInfos[regionMapType].regionMapGfx, (u16 *)BG_CHAR_ADDR(2));
         break;
     case 1:
-        regionMapType = GetRegionMapType(gMapHeader.regionMapSectionId);
+        regionMapType = GetDisplayedRegionMapType();
         if (sRegionMap->bgManaged)
         {
             if (!FreeTempTileDataBuffersIfPossible())
@@ -831,7 +899,7 @@ bool8 LoadRegionMapGfx(void)
         }
         break;
     case 2:
-        regionMapType = GetRegionMapType(gMapHeader.regionMapSectionId);
+        regionMapType = GetDisplayedRegionMapType();
         if (!FreeTempTileDataBuffersIfPossible())
             LoadPalette(gRegionMapInfos[regionMapType].regionMapPalette, BG_PLTT_ID(7), 3 * PLTT_SIZE_4BPP);
         break;
@@ -842,7 +910,10 @@ bool8 LoadRegionMapGfx(void)
         DecompressDataWithHeaderWram(sRegionMapCursorLargeGfxLZ, sRegionMap->cursorLargeImage);
         break;
     case 5:
-        InitMapBasedOnPlayerLocation();
+        if (IsRegionMapShowingOtherRegion())
+            InitMapForViewedRegion();
+        else
+            InitMapBasedOnPlayerLocation();
         sRegionMap->playerIconSpritePosX = sRegionMap->cursorPosX;
         sRegionMap->playerIconSpritePosY = sRegionMap->cursorPosY;
         sRegionMap->mapSecId = CorrectSpecialMapSecId_Internal(sRegionMap->mapSecId);
@@ -1267,28 +1338,23 @@ static mapsec_u16_t GetMapSecIdAt(u16 x, u16 y)
     y -= MAPCURSOR_Y_MIN;
     x -= MAPCURSOR_X_MIN;
 
-    switch (GetCurrentRegion())
+    switch (GetDisplayedRegionMapType())
     {
-    case REGION_JOHTO:
+    case REGION_MAP_JOHTO:
         return sRegionMapSections_Johto[y][x];
-    case REGION_SINNOH:
+    case REGION_MAP_SINNOH:
         return sRegionMapSections_Sinnoh[y][x];
-    case REGION_KANTO:
-        switch (GetKantoSubregion(gMapHeader.regionMapSectionId))
-        {
-        case KANTO_SUBREGION_SEVII123:
-                return sRegionMapSections_Sevii123[y][x];
-        case KANTO_SUBREGION_SEVII45:
-                return sRegionMapSections_Sevii45[y][x];
-        case KANTO_SUBREGION_SEVII67:
-                return sRegionMapSections_Sevii67[y][x];
-        case KANTO_SUBREGION_KANTO:
-        default:
-                return sRegionMapSections_Kanto[y][x];
-        }
-    case REGION_HOENN:
+    case REGION_MAP_SEVII123:
+        return sRegionMapSections_Sevii123[y][x];
+    case REGION_MAP_SEVII45:
+        return sRegionMapSections_Sevii45[y][x];
+    case REGION_MAP_SEVII67:
+        return sRegionMapSections_Sevii67[y][x];
+    case REGION_MAP_KANTO:
+        return sRegionMapSections_Kanto[y][x];
+    case REGION_MAP_HOENN:
     default:
-            return sRegionMap_MapSectionLayout[y][x];
+        return sRegionMap_MapSectionLayout[y][x];
     }
 }
 
@@ -1818,7 +1884,7 @@ void CreateRegionMapPlayerIcon(u16 tileTag, u16 paletteTag)
     struct SpritePalette palette = {sRegionMapPlayerIcon_BrendanPal, paletteTag};
     struct SpriteTemplate template = {tileTag, paletteTag, &sRegionMapPlayerIconOam, sRegionMapPlayerIconAnimTable, NULL, gDummySpriteAffineAnimTable, SpriteCallbackDummy};
 
-    if (IsEventIslandMapSecId(gMapHeader.regionMapSectionId))
+    if (IsEventIslandMapSecId(gMapHeader.regionMapSectionId) || IsRegionMapShowingOtherRegion())
     {
         sRegionMap->playerIconSprite = NULL;
         return;
