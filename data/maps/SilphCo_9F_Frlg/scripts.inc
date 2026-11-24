@@ -34,11 +34,6 @@ SilphCo_9F_EventScript_Ed::
 	msgbox SilphCo_9F_Text_EdPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-SilphCo_9F_EventScript_Grunt1::
-	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_37, SilphCo_9F_Text_Grunt1Intro, SilphCo_9F_Text_Grunt1Defeat
-	msgbox SilphCo_9F_Text_Grunt1PostBattle, MSGBOX_AUTOCLOSE
-	end
-
 SilphCo_9F_EventScript_Grunt2::
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_38, SilphCo_9F_Text_Grunt2Intro, SilphCo_9F_Text_Grunt2Defeat
 	msgbox SilphCo_9F_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
@@ -53,17 +48,6 @@ SilphCo_9F_Text_DontGiveUp::
 
 SilphCo_9F_Text_StaffRestArea::
 	.string "This is the staff rest area.$"
-
-SilphCo_9F_Text_Grunt1Intro::
-	.string "Your POKéMON seem to adore you,\n"
-	.string "kid!$"
-
-SilphCo_9F_Text_Grunt1Defeat::
-	.string "Ghaaah!$"
-
-SilphCo_9F_Text_Grunt1PostBattle::
-	.string "If I had started as a TRAINER at\n"
-	.string "your age…$"
 
 SilphCo_9F_Text_EdIntro::
 	.string "Your POKéMON have weak points!\n"

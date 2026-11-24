@@ -1,7 +1,6 @@
 GalacticHQ_Hall_sinnoh_MapScripts::
 	.byte 0
 
-
 GalacticHQ_Hall_EventScript_SNSpeech::
 	lock
 	faceplayer
@@ -101,10 +100,3 @@ GalacticHQ_Hall_EventScript_SNSpeech_T0::
 GalacticHQ_Hall_EventScript_SNSpeech_Cyrus::
 	msgbox GalacticHQ_Hall_EventScript_SNSpeech_T1, MSGBOX_NPC
 	end
-
-GalacticHQ_Hall_EventScript_SNSpeech_Grunt::
-	msgbox GalacticHQ_Hall_EventScript_SNSpeech_T6, MSGBOX_NPC
-	end
-
-GalacticHQ_Hall_EventScript_SNSpeech_T6::
-	.string "GRUNT: Master CYRUS is the greatest!$"

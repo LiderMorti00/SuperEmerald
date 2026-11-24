@@ -1,7 +1,6 @@
 GoldenrodCity_RadioTower_1F_hns_MapScripts::
 	.byte 0
 
-
 RadioTower1F_EventScript_Youngster::
 	lock
 	faceplayer
@@ -62,23 +61,6 @@ RadioTower1F_Text_ReceptionistWelcome::
 SE_J_GoldenrodCity_RadioTower_1F_hns_RadioTower1F_EventScript_Reception::
 	msgbox RadioTower1F_Text_ReceptionistWelcome, MSGBOX_NPC
 	end
-
-RadioTower1F_EventScript_Whitney::
-	lock
-	faceplayer
-	msgbox RadioTower1F_Text_Whitney1, MSGBOX_DEFAULT
-	closemessage
-	turnobject LOCALID_GOLDENROD_RADIOTOWER_WHITNEY, DIR_SOUTH
-	release
-	end
-
-RadioTower1F_Text_Whitney1::
-	.string "WHITNEY: Hi!\p"
-	.string "My name is WHITNEY!\p"
-	.string "I heard about the QUIZ to win a\n"
-	.string "RADIO CARD, so I came here to get\l"
-	.string "one…\p"
-	.string "But this QUIZ is so hard!$"
 
 GoldenrodCity_RadioTower_1F_EventScript_Sign::
 	lock

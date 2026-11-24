@@ -1,7 +1,6 @@
 ValorLakefront_sinnoh_MapScripts::
 	.byte 0
 
-
 ValorLakefront_EventScript_SNCynthia::
 	lock
 	faceplayer
@@ -243,17 +242,6 @@ ValorLakefront_EventScript_SNHoneyTree_Fresh::
 	special SinnohHoneySlather
 	msgbox SN_HoneyTree_Text_Done, MSGBOX_DEFAULT
 	goto ValorLakefront_EventScript_SNHoneyTree_End
-
-ValorLakefront_EventScript_SNCollector::
-	msgbox ValorLakefront_Text_SNBlackout, MSGBOX_NPC
-	end
-
-ValorLakefront_Text_SNBlackout::
-	.string "Stop, stop! Yes, you!\p"
-	.string "SUNYSHORE CITY, which is down this\n"
-	.string "road, had a major blackout!\p"
-	.string "Crews are working on restoring power,\n"
-	.string "but the road's closed now.$"
 
 ValorLakefront_EventScript_PtSign1::
 	msgbox ValorLakefront_Text_PtSign1, MSGBOX_SIGN

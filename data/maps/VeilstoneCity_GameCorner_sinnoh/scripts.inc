@@ -1,7 +1,6 @@
 VeilstoneCity_GameCorner_sinnoh_MapScripts::
 	.byte 0
 
-
 VeilstoneCity_GameCorner_EventScript_Woman2::
 	msgbox VeilstoneCity_GameCorner_Text_CoinsAreNeededToPlay, MSGBOX_NPC
 	end
@@ -166,44 +165,6 @@ VeilstoneCity_GameCorner_Text_HeresSomeSlotsInfo::
 	.string "counter.\p"
 	.string "You will be presented with a\n"
 	.string "fabulous prize!$"
-
-VeilstoneCity_GameCorner_EventScript_SNLooker::
-	lock
-	faceplayer
-	goto_if_set FLAG_SN_HIDE_STARK_R3, VeilstoneCity_GameCorner_EventScript_SNLookerPost
-	msgbox VeilstoneCity_GameCorner_Text_SNLooker, MSGBOX_DEFAULT
-	goto VeilstoneCity_GameCorner_EventScript_SNLookerEnd
-
-VeilstoneCity_GameCorner_EventScript_SNLookerEnd::
-	closemessage
-	applymovement LOCALID_SN_GC_LOOKER, Common_Movement_FaceUp
-	waitmovement 0
-	release
-	end
-
-VeilstoneCity_GameCorner_Text_SNLooker::
-	.string "LOOKER: Ah, it is you, yes.\p"
-	.string "Examine, if you will, the reels. The Team\n"
-	.string "GALACTIC logo, it is here.\p"
-	.string "Further investigation is needed, and I\n"
-	.string "am just the man to do it.\p"
-	.string "Also, where the masses gather, so too\n"
-	.string "does information.\p"
-	.string "…Ack. My streak is broken.$"
-
-VeilstoneCity_GameCorner_EventScript_SNLookerPost::
-	msgbox VeilstoneCity_GameCorner_Text_SNLookerPost, MSGBOX_DEFAULT
-	goto VeilstoneCity_GameCorner_EventScript_SNLookerEnd
-
-VeilstoneCity_GameCorner_Text_SNLookerPost::
-	.string "LOOKER: Ah, it is you, yes.\p"
-	.string "I have decided to use the opportunity\n"
-	.string "of being here in SINNOH.\p"
-	.string "I am therefore trying to teach moves\n"
-	.string "to POKéMON that I have captured.\p"
-	.string "Also, if I have nothing to do, it means\n"
-	.string "the world, it is at peace.\p"
-	.string "…Ack. My streak is broken.$"
 
 VeilstoneCity_GameCorner_EventScript_SlotMachine0::
 	lockall

@@ -14,23 +14,7 @@
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
-  "object_events": [
-    {
-      "local_id": "LOCALID_MTSILVER_MOLTRES",
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_MON_BASE+SPECIES_MOLTRES",
-      "x": 17,
-      "y": 20,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "MtSilver_1F_MoltresRoom_EventScript_Moltres",
-      "flag": "FLAG_J_HIDE_MOLTRES"
-    }
-  ],
+  "object_events": [],
   "warp_events": [
     {
       "x": 17,

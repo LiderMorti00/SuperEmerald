@@ -1,7 +1,6 @@
 EcruteakCity_Theater_hns_MapScripts::
 	.byte 0
 
-
 EcruteakCity_Theater_Text_KimonoDone::
 	.string "We are rehearsing a dance.$"
 
@@ -92,14 +91,6 @@ EcruteakCity_Theater_Text_Girl::
 
 SE_J_EcruteakCity_Theater_hns_EcruteakCity_Theater_EventScript_Girl::
 	msgbox EcruteakCity_Theater_Text_Girl, MSGBOX_NPC
-	end
-
-EcruteakCity_Theater_Text_RocketSeen::
-	.string "Huh? Who are you?\n"
-	.string "You dare to get in my way?$"
-
-SE_J_EcruteakCity_Theater_hns_EcruteakCity_Theater_EventScript_Rocket::
-	msgbox EcruteakCity_Theater_Text_RocketSeen, MSGBOX_NPC
 	end
 
 EcruteakCity_Theater_EventScript_FancyPanel::

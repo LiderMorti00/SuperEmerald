@@ -1,7 +1,6 @@
 SunyshoreCity_sinnoh_MapScripts::
 	.byte 0
 
-
 SunyshoreCity_EventScript_PtNpc1::
 	msgbox SunyshoreCity_Text_PtNpc1, MSGBOX_NPC
 	end
@@ -49,131 +48,6 @@ SunyshoreCity_Text_PtNpc5::
 	.string "Whatever the environment, people and\n"
 	.string "POKéMON adapt to live there.\p"
 	.string "That's what we all do to survive.$"
-
-SunyshoreCity_EventScript_SNJasmine::
-	lock
-	faceplayer
-	msgbox SunyshoreCity_EventScript_SNJasmine_T1, MSGBOX_DEFAULT
-	giveitem ITEM_HM_WATERFALL
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	setflag FLAG_SN_RECEIVED_HM_WATERFALL
-	msgbox SunyshoreCity_EventScript_SNJasmine_T2, MSGBOX_DEFAULT
-	closemessage
-	sn_walkto VAR_LAST_TALKED, 17, 9, SN_SPEED_NORMAL, 0, 0, 0
-	waitmovement VAR_LAST_TALKED
-	removeobject VAR_LAST_TALKED
-	setflag FLAG_SN_HIDE_JASMINE
-	release
-	end
-
-SunyshoreCity_EventScript_SNJasmine_T2::
-	.string "…That Hidden Machine… It contains\n"
-	.string "Waterfall.\p"
-	.string "If you use it, you can get to the\n"
-	.string "POKéMON LEAGUE.\p"
-	.string "…Um… I… I don't know how I should say\n"
-	.string "this, but good luck.$"
-
-SunyshoreCity_EventScript_SNJasmine_T1::
-	.string "…Er…um… M-my name is JASMINE, and I'm\n"
-	.string "a GYM LEADER.\p"
-	.string "Oh, I'm sorry, not the GYM LEADER of\n"
-	.string "this town…\p"
-	.string "I'm a GYM LEADER in the JOHTO region…\p"
-	.string "…Er…um… It would be nice if you knew\n"
-	.string "about\p"
-	.string "the JOHTO region…$"
-
-SunyshoreCity_EventScript_SNFlint::
-	lock
-	faceplayer
-	goto_if_set FLAG_SN_MET_VOLKNER, SunyshoreCity_EventScript_SNFlint_Back
-	goto_if_set FLAG_SN_MET_FLINT, SunyshoreCity_EventScript_SNFlint_Wait
-	msgbox SunyshoreCity_EventScript_SNFlint_T1, MSGBOX_DEFAULT
-	msgbox SunyshoreCity_EventScript_SNFlint_T2, MSGBOX_DEFAULT
-	setflag FLAG_SN_MET_FLINT
-	release
-	end
-
-SunyshoreCity_EventScript_SNFlint_T2::
-	.string "I just had this idea. Maybe you can pull\n"
-	.string "it off.\p"
-	.string "It's about this town's GYM LEADER.\p"
-	.string "He's really lost his enthusiasm lately\n"
-	.string "because there've been so few good\p"
-	.string "challengers worth his time.\p"
-	.string "He's been so bored, he spends all his\n"
-	.string "time renovating the GYM.\p"
-	.string "And then the blackout happened… That\n"
-	.string "sure didn't help lift his mood.\p"
-	.string "You know where I'm going with this,\n"
-	.string "don't you?\p"
-	.string "I need you to give him a battle that's\n"
-	.string "so hot, it will reignite his\p"
-	.string "passion for battling.\p"
-	.string "I'm counting on you, hotshot!$"
-
-SunyshoreCity_EventScript_SNFlint_T1::
-	.string "Yo! Fellow TRAINER!\p"
-	.string "Your POKéMON are secure inside their\n"
-	.string "POKé BALLS, but there's no masking\p"
-	.string "that aura of serious toughness!\p"
-	.string "Oops, sorry, I should introduce myself.\p"
-	.string "The name's FLINT! I'm one of the\n"
-	.string "POKéMON LEAGUE's ELITE FOUR!$"
-
-SunyshoreCity_EventScript_SNFlint_Wait::
-	msgbox SunyshoreCity_EventScript_SNFlint_T3, MSGBOX_DEFAULT
-	release
-	end
-
-SunyshoreCity_EventScript_SNFlint_T3::
-	.string "FLINT: Yo! Hiya! He hasn't come back\n"
-	.string "yet.\p"
-	.string "When he does, you know what you've\n"
-	.string "gotta do.\p"
-	.string "Give him a battle that's so hot, it will\n"
-	.string "reignite his passion for battling!\p"
-	.string "I'm counting on you, hotshot!$"
-
-SunyshoreCity_EventScript_SNFlint_Back::
-	msgbox SunyshoreCity_EventScript_SNFlint_T4, MSGBOX_DEFAULT
-	release
-	end
-
-SunyshoreCity_EventScript_SNFlint_T4::
-	.string "FLINT: Yo! Hiya! He's finally come back!\p"
-	.string "He seemed to be feeling upbeat, too.\p"
-	.string "I have a hunch that he recognized your\n"
-	.string "toughness right away.\p"
-	.string "I bet he's getting excited over the\n"
-	.string "thought of battling you.\p"
-	.string "Remember what you have to do, hotshot.\p"
-	.string "Give him a battle that's so hot, it will\n"
-	.string "reignite his passion for battling!\p"
-	.string "All right, hotshot! I'll be waiting at\n"
-	.string "the POKéMON LEAGUE!$"
-
-SunyshoreCity_EventScript_SNBarry8::
-	lock
-	faceplayer
-	msgbox SunyshoreCity_Text_SNBarry8, MSGBOX_DEFAULT
-	closemessage
-	setflag FLAG_SN_SUNYSHORE_BARRY
-	sn_walkto LOCALID_SN_SUNY_BARRY, 17, 9, SN_SPEED_FAST, 0, 0, 0
-	waitmovement LOCALID_SN_SUNY_BARRY
-	removeobject LOCALID_SN_SUNY_BARRY
-	setflag FLAG_SN_HIDE_SUNY_BARRY
-	release
-	end
-
-SunyshoreCity_Text_SNBarry8::
-	.string "{RIVAL}: Hey! {PLAYER}!\p"
-	.string "What the…\p"
-	.string "You went and got all eight GYM BADGES\n"
-	.string "of SINNOH!\p"
-	.string "Aww, you… That's wicked! I envy you!\p"
-	.string "But don't think you've won!$"
 
 SunyshoreCity_EventScript_PtSign1::
 	msgbox SunyshoreCity_Text_PtSign1, MSGBOX_SIGN

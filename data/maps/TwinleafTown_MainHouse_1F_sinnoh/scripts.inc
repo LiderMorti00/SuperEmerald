@@ -1,7 +1,6 @@
 TwinleafTown_MainHouse_1F_sinnoh_MapScripts::
 	.byte 0
 
-
 @ Super Emerald: the player is a TRAINER from HOENN, not this family's child
 TwinleafTown_MainHouse_1F_EventScript_Mom::
 	lock
@@ -26,13 +25,3 @@ TwinleafTown_MainHouse_1F_Text_MomTalk::
 	.string "with kindness.\p"
 	.string "Your POKéMON work hard, not for\n"
 	.string "themselves, but for you!$"
-
-TwinleafTown_MainHouse_1F_EventScript_BarrysMom::
-	msgbox TwinleafTown_MainHouse_1F_Text_BarrysMom2, MSGBOX_NPC
-	end
-
-TwinleafTown_MainHouse_1F_Text_BarrysMom2::
-	.string "BARRY's mom: Have you met my son?\p"
-	.string "He's always in a hurry. Even when\n"
-	.string "he comes home, he barely has time\l"
-	.string "to say hello!$"

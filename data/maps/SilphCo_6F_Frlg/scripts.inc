@@ -85,11 +85,6 @@ SilphCo_6F_EventScript_Grunt1::
 	msgbox SilphCo_6F_Text_Grunt1PostBattle, MSGBOX_AUTOCLOSE
 	end
 
-SilphCo_6F_EventScript_Grunt2::
-	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_31, SilphCo_6F_Text_Grunt2Intro, SilphCo_6F_Text_Grunt2Defeat
-	msgbox SilphCo_6F_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
-	end
-
 SilphCo_6F_Text_RocketsTookOverBuilding::
 	.string "The ROCKETS came and took over\n"
 	.string "the building!$"
@@ -154,16 +149,6 @@ SilphCo_6F_Text_TaylorDefeat::
 SilphCo_6F_Text_TaylorPostBattle::
 	.string "TIKSI BRANCH?\n"
 	.string "It's in Russian no-man's-land!$"
-
-SilphCo_6F_Text_Grunt2Intro::
-	.string "You dare betray TEAM ROCKET?$"
-
-SilphCo_6F_Text_Grunt2Defeat::
-	.string "You traitor!$"
-
-SilphCo_6F_Text_Grunt2PostBattle::
-	.string "If you stand for justice, you\n"
-	.string "betray us bad guys!$"
 
 SilphCo_6F_Text_FloorSign::
 	.string "SILPH CO. HEAD OFFICE\n"

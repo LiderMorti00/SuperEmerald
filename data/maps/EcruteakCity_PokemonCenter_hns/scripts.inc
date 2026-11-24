@@ -6,7 +6,6 @@ EcruteakCity_PokemonCenter_hns_OnTransition:
 	setrespawn HEAL_LOCATION_ECRUTEAK_CITY_HNS
 	end
 
-
 EcruteakCity_PokemonCenter_EventScript_Nerd::
 	lock
 	faceplayer
@@ -48,15 +47,6 @@ EcruteakCity_PokemonCenter1F_Text_CooltrainerF::
 	.string "MORTY, the GYM LEADER, is soooo\n"
 	.string "cool.\p"
 	.string "His POKéMON are really tough too.$"
-
-EcruteakCity_PokemonCenter1F_Text_Bill1::
-	.string "Hi, I'm BILL. And who are you?\p"
-	.string "Hmm, {PLAYER}, huh?\n"
-	.string "You've come at the right time.$"
-
-SE_J_EcruteakCity_PokemonCenter_hns_EcruteakCity_PokemonCenter_EventScript_Bill::
-	msgbox EcruteakCity_PokemonCenter1F_Text_Bill1, MSGBOX_NPC
-	end
 
 SE_EcruteakPC_RadioCalm_Script::
 	msgbox SE_EcruteakPC_RadioCalm_Text, MSGBOX_DEFAULT

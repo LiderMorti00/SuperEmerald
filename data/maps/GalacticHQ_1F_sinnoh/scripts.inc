@@ -1,7 +1,6 @@
 GalacticHQ_1F_sinnoh_MapScripts::
 	.byte 0
 
-
 GalacticHQ_1F_EventScript_Grunt::
 	trainerbattle_single TRAINER_GRUNT_SEAFLOOR_CAVERN_3_SINNOH, GalacticHQ_1F_Text_GruntIntro, GalacticHQ_1F_Text_GruntDefeat
 	msgbox GalacticHQ_1F_Text_GruntPost, MSGBOX_AUTOCLOSE
@@ -143,38 +142,6 @@ GalacticHQ_1F_Text_PtNpc4_1::
 	.string "That is TEAM GALACTIC's policy!\p"
 	.string "At least it used to be. There's nothing\n"
 	.string "left now…$"
-
-GalacticHQ_1F_EventScript_PtNpc5::
-	lock
-	faceplayer
-	msgbox GalacticHQ_1F_Text_PtNpc5_0, MSGBOX_DEFAULT
-	release
-	end
-
-GalacticHQ_1F_Text_PtNpc5_0::
-	.string "SATURN: So, it's you…\p"
-	.string "I've heard about you and what took\n"
-	.string "place at the SPEAR PILLAR.\p"
-	.string "Our leader, Master CYRUS, hated the\n"
-	.string "very idea of spirit.\p"
-	.string "He hated spirit for being incomplete.\p"
-	.string "And yet, using fiery exhortations, he\n"
-	.string "rallied the spirit of others.\p"
-	.string "What he hated most, he used to control\n"
-	.string "others. Isn't that ironic?\p"
-	.string "That fascinated me. I wanted to see\n"
-	.string "what he would do.\p"
-	.string "And I did. At his side. But it's over.\p"
-	.string "A world without spirit… Who would want\n"
-	.string "such a thing?!\p"
-	.string "So, what now…? What to do with Team\n"
-	.string "GALACTIC?\p"
-	.string "But I've learned that extremism is\n"
-	.string "never the solution…\p"
-	.string "Perhaps we should really be searching\n"
-	.string "for new sources of energy.\p"
-	.string "Instead of lying about it through our\n"
-	.string "commercials.$"
 
 GalacticHQ_1F_EventScript_PtSign1::
 	msgbox GalacticHQ_1F_Text_PtSign1, MSGBOX_SIGN

@@ -1,7 +1,6 @@
 SunyshoreCity_VistaLighthouse_sinnoh_MapScripts::
 	.byte 0
 
-
 SunyshoreCity_VistaLighthouse_EventScript_PtNpc1::
 	lock
 	faceplayer
@@ -25,40 +24,6 @@ SunyshoreCity_VistaLighthouse_Text_PtNpc2_0::
 	.string "the binoculars.\p"
 	.string "I'm going to go that far away with my\n"
 	.string "POKéMON one day!$"
-
-SunyshoreCity_VistaLighthouse_EventScript_SNVolkner::
-	lock
-	faceplayer
-	msgbox SunyshoreCity_VistaLighthouse_EventScript_SNVolkner_T1, MSGBOX_DEFAULT
-	msgbox SunyshoreCity_VistaLighthouse_EventScript_SNVolkner_T2, MSGBOX_DEFAULT
-	msgbox SunyshoreCity_VistaLighthouse_EventScript_SNVolkner_T3, MSGBOX_DEFAULT
-	closemessage
-	setflag FLAG_SN_MET_VOLKNER
-	sn_walkto LOCALID_SN_LH_VOLKNER, 6, 7, SN_SPEED_NORMAL, 0, 0, 0
-	waitmovement LOCALID_SN_LH_VOLKNER
-	removeobject LOCALID_SN_LH_VOLKNER
-	setflag FLAG_SN_HIDE_LH_VOLKNER
-	release
-	end
-
-SunyshoreCity_VistaLighthouse_EventScript_SNVolkner_T3::
-	.string "As the toughest GYM LEADER in SINNOH,\n"
-	.string "I'm going to unleash everything in\p"
-	.string "my arsenal on you.$"
-
-SunyshoreCity_VistaLighthouse_EventScript_SNVolkner_T2::
-	.string "All right, I've decided!\p"
-	.string "If I find you to be weak, I'm going to\n"
-	.string "challenge the POKéMON LEAGUE.\p"
-	.string "I'm all done with renovating the GYM, so\n"
-	.string "I don't need to be here.\p"
-	.string "More than anything, I want to have\n"
-	.string "battles that can thrill me again.$"
-
-SunyshoreCity_VistaLighthouse_EventScript_SNVolkner_T1::
-	.string "… …\p"
-	.string "…So, you're the latest challenger up\n"
-	.string "against the SUNYSHORE GYM…$"
 
 SunyshoreCity_VistaLighthouse_EventScript_PtSign1::
 	msgbox SunyshoreCity_VistaLighthouse_Text_PtSign1, MSGBOX_SIGN

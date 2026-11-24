@@ -1,7 +1,6 @@
 StarkMountain_Room2_West_sinnoh_MapScripts::
 	.byte 0
 
-
 StarkMountain_Room2_EventScript_Keenan::
 	trainerbattle_single TRAINER_DALTON_1_SINNOH, StarkMountain_Room2_Text_KeenanIntro, StarkMountain_Room2_Text_KeenanDefeat
 	msgbox StarkMountain_Room2_Text_KeenanPost, MSGBOX_AUTOCLOSE
@@ -102,17 +101,6 @@ StarkMountain_Room2_Text_JarrettDefeat::
 StarkMountain_Room2_Text_JarrettIntro::
 	.string "Hear the howl of my iron fists! Howdy!\n"
 	.string "I'm crazy for karate!$"
-
-StarkMountain_Room2_EventScript_SNBuckTalk::
-	lock
-	faceplayer
-	msgbox StarkMountain_Room2_EventScript_SNBuck_Together, MSGBOX_DEFAULT
-	release
-	end
-
-StarkMountain_Room2_EventScript_SNBuck_Together::
-	.string "BUCK: TEAM GALACTIC's here, right?\n"
-	.string "Let's go together!$"
 
 StarkMountain_Room2_EventScript_Skylar::
 	trainerbattle_single TRAINER_DALTON_3_SINNOH, StarkMountain_Room2_Text_SkylarIntro, StarkMountain_Room2_Text_SkylarDefeat

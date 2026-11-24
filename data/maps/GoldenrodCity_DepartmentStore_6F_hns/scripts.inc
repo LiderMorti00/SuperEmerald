@@ -2,7 +2,6 @@ GoldenrodCity_DepartmentStore_6F_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, SE_GoldenrodElevator_OnFrame
 	.byte 0
 
-
 GoldenrodDeptStore6_EventScript_Nerd::
 	lock
 	faceplayer
@@ -41,26 +40,6 @@ GoldenrodCity_DepartmentStore_6F_Text_ThisIsntAMon::
 SE_J_GoldenrodCity_DepartmentStore_6F_hns_GoldenrodCity_DepartmentStore_6F_EventScript_Jose::
 	msgbox GoldenrodCity_DepartmentStore_6F_Text_ThisIsntAMon, MSGBOX_NPC
 	end
-
-GoldenrodDeptStore6_EventScript_Whitney::
-	lock
-	faceplayer
-	msgbox GoldenrodDeptStore6_Text_Whitney, MSGBOX_DEFAULT
-	closemessage
-	fadescreenswapbuffers FADE_TO_BLACK
-	setflag FLAG_HIDE_DEPTSTORE_WHITNEY
-	removeobject LOCALID_STORE_WHITNEY
-	fadescreenswapbuffers FADE_FROM_BLACK
-	clearflag FLAG_HIDE_DOJO_WHITNEY
-	release
-	end
-
-GoldenrodDeptStore6_Text_Whitney::
-	.string "{PLAYER}! Fancy seeing you here!\p"
-	.string "I'm picking up something for\n"
-	.string "my MILTANK.\p"
-	.string "If you want another battle, come to\n"
-	.string "the FIGHTING DOJO!$"
 
 SE_J_GoldenrodCity_DepartmentStore_6F_hns_GoldenrodDeptStore_EventScript_VendingMachine::
 	msgbox GoldenrodDeptStore_Text_WhichDrinkWouldYouLike, MSGBOX_SIGN

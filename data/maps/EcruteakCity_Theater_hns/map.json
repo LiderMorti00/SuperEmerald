@@ -175,21 +175,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SE_J_EcruteakCity_Theater_hns_EcruteakCity_Theater_EventScript_Girl",
       "flag": "FLAG_HIDE_ECRUTEAK_CITY_THEATER_NPCS"
-    },
-    {
-      "local_id": "LOCALID_ECRUTEAK_ROCKET",
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_ROCKET_M_HNS",
-      "x": 10,
-      "y": 4,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_J_EcruteakCity_Theater_hns_EcruteakCity_Theater_EventScript_Rocket",
-      "flag": "FLAG_HIDE_ECRUTEAK_ROCKET"
     }
   ],
   "warp_events": [

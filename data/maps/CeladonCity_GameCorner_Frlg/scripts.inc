@@ -413,50 +413,6 @@ CeladonCity_GameCorner_EventScript_OpenRocketHideout::
 	setflag FLAG_OPENED_ROCKET_HIDEOUT
 	return
 
-CeladonCity_GameCorner_EventScript_RocketGrunt::
-	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_7, CeladonCity_GameCorner_Text_GruntIntro, CeladonCity_GameCorner_Text_GruntDefeat, CeladonCity_GameCorner_Text_DefeatedGrunt
-	msgbox CeladonCity_GameCorner_Text_GruntPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-CeladonCity_GameCorner_Text_DefeatedGrunt::
-	msgbox CeladonCity_GameCorner_Text_GruntPostBattle
-	closemessage
-	call_if_eq VAR_FACING, DIR_WEST, CeladonCity_GameCorner_Text_GruntExitWest
-	call_if_ne VAR_FACING, DIR_WEST, CeladonCity_GameCorner_Text_GruntExit
-	removeobject LOCALID_GAME_CORNER_GRUNT
-	release
-	end
-
-CeladonCity_GameCorner_Text_GruntExitWest::
-	applymovement LOCALID_GAME_CORNER_GRUNT, CeladonCity_GameCorner_Movement_GruntExitWest
-	waitmovement 0
-	return
-
-CeladonCity_GameCorner_Text_GruntExit::
-	applymovement LOCALID_GAME_CORNER_GRUNT, CeladonCity_GameCorner_Movement_GruntExit
-	waitmovement 0
-	return
-
-CeladonCity_GameCorner_Movement_GruntExitWest::
-	walk_down
-	walk_right
-	walk_right
-	walk_up
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	step_end
-
-CeladonCity_GameCorner_Movement_GruntExit::
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	step_end
-
 CeladonCity_GameCorner_EventScript_UnusableSlotMachine1::
 	msgbox CeladonCity_GameCorner_Text_OutOfOrder, MSGBOX_SIGN
 	end
@@ -576,18 +532,6 @@ CeladonCity_GameCorner_Text_YouveGotPlentyCoins::
 CeladonCity_GameCorner_Text_WatchReelsClosely::
 	.string "The trick is to watch the reels\n"
 	.string "closely.$"
-
-CeladonCity_GameCorner_Text_GruntIntro::
-	.string "I'm guarding this poster!\n"
-	.string "Go away, or else!$"
-
-CeladonCity_GameCorner_Text_GruntDefeat::
-	.string "Dang!$"
-
-CeladonCity_GameCorner_Text_GruntPostBattle::
-	.string "The TEAM ROCKET HIDEOUT might\n"
-	.string "be discovered!\p"
-	.string "I better tell BOSS!$"
 
 CeladonCity_GameCorner_Text_SwitchBehindPosterPushIt::
 	.string "Hey!\p"

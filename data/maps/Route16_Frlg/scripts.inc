@@ -28,43 +28,6 @@ Route16_OnWarpCyclingRoad::
 	special ForcePlayerOntoBike
 	end
 
-Route16_EventScript_Snorlax::
-	lock
-	faceplayer
-	goto_if_unset FLAG_GOT_POKE_FLUTE, Route16_EventScript_SnorlaxNoPokeFlute
-	msgbox Text_WantToUsePokeFlute, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, Route16_EventScript_DontUsePokeFlute
-	call EventScript_AwakenSnorlax
-	setwildbattle SPECIES_SNORLAX, 30
-	waitse
-	playmoncry SPECIES_SNORLAX, CRY_MODE_ENCOUNTER
-	delay 40
-	waitmoncry
-	setflag FLAG_HIDE_ROUTE_16_SNORLAX
-	setflag FLAG_SYS_CTRL_OBJ_DELETE
-	dowildbattle
-	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route16_EventScript_FoughtSnorlax
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route16_EventScript_FoughtSnorlax
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Route16_EventScript_FoughtSnorlax
-	release
-	end
-
-Route16_EventScript_DontUsePokeFlute::
-	release
-	end
-
-Route16_EventScript_FoughtSnorlax::
-	msgbox Text_SnorlaxReturnedToMountains
-	release
-	end
-
-Route16_EventScript_SnorlaxNoPokeFlute::
-	msgbox Route16_Text_MonSprawledOutInSlumber
-	release
-	end
-
 Route16_EventScript_CyclingRoadSign::
 	msgbox Route16_Text_CyclingRoadSign, MSGBOX_SIGN
 	end
@@ -140,10 +103,6 @@ Route16_Text_RubenPostBattle::
 	.string "with my stinking POKéMON.\p"
 	.string "They're great for startling people.\n"
 	.string "And, they bite, too.$"
-
-Route16_Text_MonSprawledOutInSlumber::
-	.string "A POKéMON is sprawled out in\n"
-	.string "a deep and comfortable slumber.$"
 
 Route16_Text_CyclingRoadSign::
 	.string "Enjoy the slope!\n"

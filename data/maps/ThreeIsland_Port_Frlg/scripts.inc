@@ -26,26 +26,6 @@ ThreeIsland_Port_EventScript_WomanBikersGone::
 	release
 	end
 
-ThreeIsland_Port_EventScript_Biker1::
-	msgbox ThreeIsland_Port_Text_WereKantoRiderFederation, MSGBOX_NPC
-	end
-
-ThreeIsland_Port_EventScript_Biker2::
-	lock
-	msgbox ThreeIsland_Port_Text_ForkOverMoney
-	release
-	end
-
-ThreeIsland_Port_Text_WereKantoRiderFederation::
-	.string "We're the KANTO RIDER FEDERATION!\n"
-	.string "Vroom! Vavavavooom! Vroom!\p"
-	.string "My bike's wimpy, so I have to\n"
-	.string "make exhaust noises myself!$"
-
-ThreeIsland_Port_Text_ForkOverMoney::
-	.string "Hey, hey, lady!\n"
-	.string "Fork over some spending money!$"
-
 ThreeIsland_Port_Text_IllCallThePolice::
 	.string "Aiyeeh!\p"
 	.string "Wh-who are you?!\n"

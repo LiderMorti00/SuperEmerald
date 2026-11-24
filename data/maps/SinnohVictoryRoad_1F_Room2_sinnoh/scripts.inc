@@ -1,7 +1,6 @@
 SinnohVictoryRoad_1F_Room2_sinnoh_MapScripts::
 	.byte 0
 
-
 SinnohVictoryRoad_1F_Room2_EventScript_Micah::
 	trainerbattle_single TRAINER_STEVE_2_SINNOH, SinnohVictoryRoad_1F_Room2_Text_MicahIntro, SinnohVictoryRoad_1F_Room2_Text_MicahDefeat
 	msgbox SinnohVictoryRoad_1F_Room2_Text_MicahPost, MSGBOX_AUTOCLOSE
@@ -244,15 +243,3 @@ SinnohVictoryRoad_1F_Room2_Text_BrendenDefeat::
 SinnohVictoryRoad_1F_Room2_Text_BrendenIntro::
 	.string "I'll wheel out some wicked POKéMON and\n"
 	.string "even wickeder moves!$"
-
-SinnohVictoryRoad_1F_Room2_EventScript_SNMarleyTalk::
-	lock
-	faceplayer
-	msgbox SinnohVictoryRoad_1F_Room2_EventScript_SNMarley_T2, MSGBOX_DEFAULT
-	release
-	end
-
-SinnohVictoryRoad_1F_Room2_EventScript_SNMarley_T2::
-	.string "MARLEY: …You took so long… Please,\n"
-	.string "don't make me wait…\p"
-	.string "I felt a little forlorn waiting…$"

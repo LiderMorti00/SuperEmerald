@@ -112,6 +112,3 @@ MoveTutor_Text_HeadbuttTeach::
 	.string "want to HEADBUTT, too?\p"
 	.string "I can teach one the move HEADBUTT\n"
 	.string "if you'd like. It's fun!$"
-
-SeafoamIslands_B1F_Text_ArticunoBattle::
-	.string "Gyaoo!$"

@@ -1,7 +1,6 @@
 GoldenrodCity_RadioTower_3F_hns_MapScripts::
 	.byte 0
 
-
 GoldenrodRaidoTower3_EventScript_Scientist::
 	trainerbattle_single TRAINER_MARC_HNS, GoldenrodCity_RadioTower_3F_Text_ScientistMarcSeen, GoldenrodCity_RadioTower_3F_Text_ScientistMarcBeaten
 	msgbox GoldenrodCity_RadioTower_3F_Text_ScientistMarcAfter, MSGBOX_AUTOCLOSE
@@ -42,56 +41,6 @@ GoldenrodCity_RadioTower_3F_Text_SuperNerd::
 	.string "We have recordings of the cries of\n"
 	.string "all POKéMON that have been found.\p"
 	.string "We must have over a thousand kinds.$"
-
-GoldenrodRaidoTower3_EventScript_Grunt6::
-	trainerbattle_single TRAINER_GRUNT_6_HNS, GoldenrodCity_RadioTower_3F_Text_GruntM7Seen, GoldenrodCity_RadioTower_3F_Text_GruntM7Beaten
-	msgbox GoldenrodCity_RadioTower_3F_Text_GruntM7After, MSGBOX_AUTOCLOSE
-	end
-
-GoldenrodCity_RadioTower_3F_Text_GruntM7After::
-	.string "I failed in my duties…\p"
-	.string "ARCHER will be so upset…$"
-
-GoldenrodCity_RadioTower_3F_Text_GruntM7Beaten::
-	.string "What?!$"
-
-GoldenrodCity_RadioTower_3F_Text_GruntM7Seen::
-	.string "I've been given strict orders.\p"
-	.string "I'm to crush anyone who challenges\n"
-	.string "TEAM ROCKET!$"
-
-GoldenrodRaidoTower3_EventScript_Grunt7::
-	trainerbattle_single TRAINER_GRUNT_7_HNS, GoldenrodCity_RadioTower_3F_Text_GruntM8Seen, GoldenrodCity_RadioTower_3F_Text_GruntM8Beaten
-	msgbox GoldenrodCity_RadioTower_3F_Text_GruntM8After, MSGBOX_AUTOCLOSE
-	end
-
-GoldenrodCity_RadioTower_3F_Text_GruntM8After::
-	.string "I feel lousy over losing!\p"
-	.string "Darn it! I hate useless POKéMON!$"
-
-GoldenrodCity_RadioTower_3F_Text_GruntM8Beaten::
-	.string "You're kidding!$"
-
-GoldenrodCity_RadioTower_3F_Text_GruntM8Seen::
-	.string "It feels great ordering POKéMON\n"
-	.string "to commit crimes.$"
-
-GoldenrodRaidoTower3_EventScript_Grunt8::
-	trainerbattle_single TRAINER_GRUNT_8_HNS, GoldenrodCity_RadioTower_3F_Text_GruntM9Seen, GoldenrodCity_RadioTower_3F_Text_GruntM9Beaten
-	msgbox GoldenrodCity_RadioTower_3F_Text_GruntM9After, MSGBOX_AUTOCLOSE
-	end
-
-GoldenrodCity_RadioTower_3F_Text_GruntM9After::
-	.string "What?! You made it past our men in\n"
-	.string "the UNDERGROUND?\p"
-	.string "How could you?$"
-
-GoldenrodCity_RadioTower_3F_Text_GruntM9Beaten::
-	.string "I'm done for!$"
-
-GoldenrodCity_RadioTower_3F_Text_GruntM9Seen::
-	.string "Why did the shutter open? Did you\n"
-	.string "have something to do with this?$"
 
 GoldenrodCity_RadioTower_3F_EventScript_Sign2::
 	lock
