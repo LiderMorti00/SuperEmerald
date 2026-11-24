@@ -91,30 +91,27 @@ def round_cut(t, side):
 
 src = {n: bands(n, w=30, h=20) for n in ['map', 'map_johto', 'map_kanto', 'map_sinnoh',
                                         'map_sevii_123', 'map_sevii_45', 'map_sevii_67']}
-# Johto + Kanto: the Kanto map continues the Johto map to the east
-JK_S = 0.36
+# Johto + Kanto: the Kanto map continues the Johto map to the east (one landmass)
+JK_S = 0.28
 src_j = src['map_johto'][:144]; src_k = src['map_kanto'][:144]
 tj = scaled(src_j, JK_S); tk = scaled(src_k, JK_S)
-JX, JY = 2, 0
-SEAM = 88                                   # Johto | Kanto, on a tile boundary
+SEAM = 64                                   # Johto | Kanto, on a tile boundary
+JX, JY = SEAM - tj.shape[1], 0
 KX = SEAM
 place(tj, JX, JY, 'JOHTO', xmax=SEAM)
 place(tk, KX, JY, 'KANTO', xmin=SEAM)
-# Hoenn
-HO_S = 0.5
+# Hoenn: south-west, well apart from Johto
+HO_S = 0.42
 th = scaled(src['map'][:150], HO_S); keep_small_islands(src['map'][:150], HO_S, th)
-HX, HY = 0, 66
+HX, HY = 0, 74
 place(th, HX, HY, 'HOENN')
-# Sinnoh
-SI_S = 0.4
+# Sinnoh: north-east, well apart from Kanto
+SI_S = 0.32
 ts = round_cut(scaled(src['map_sinnoh'], SI_S), 'left'); keep_small_islands(src['map_sinnoh'], SI_S, ts)
-SX, SY = 144, 14
+SX, SY = 166, 8
 place(ts, SX, SY, 'SINNOH')
-# Sevii inset: tiles cols 21..29, rows 9..17
-BX0, BY0, BX1, BY1 = 144, 80, 239, 143
-cls[BY0:BY1+1, BX0:BX1+1] = 0; owner[BY0:BY1+1, BX0:BX1+1] = 0
-SV_S = 0.22
-def sevii(name, own, rect, s=SV_S):
+# Sevii Islands: three groups on the open sea (no inset)
+def sevii(name, own, rect):
     c = src[name]
     ys, xs = np.where(c > 0)
     c = c[ys.min():ys.max()+1, xs.min():xs.max()+1]
@@ -128,9 +125,9 @@ def sevii(name, own, rect, s=SV_S):
             if t[y, x] and x0 <= X < x1 and y0 <= Y < y1:
                 cls[Y, X] = t[y, x]; owner[Y, X] = O[own]
     return ox, oy, ys.min(), xs.min(), s
-SV1 = sevii('map_sevii_123', 'SEVII1', (152, 88, 200, 112))
-SV2 = sevii('map_sevii_45', 'SEVII2', (200, 88, 232, 112))
-SV3 = sevii('map_sevii_67', 'SEVII3', (152, 112, 232, 136))
+SV1 = sevii('map_sevii_123', 'SEVII1', (120, 96, 160, 120))
+SV2 = sevii('map_sevii_45', 'SEVII2', (168, 88, 208, 112))
+SV3 = sevii('map_sevii_67', 'SEVII3', (168, 112, 232, 140))
 
 # ---- colours ----
 idx = np.zeros((H, W), np.uint8)
@@ -142,14 +139,6 @@ idx[land] = (cls[land] + 2).astype(np.uint8)
 def setpx(x, y, v, own):
     if 0 <= x < W and 0 <= y < H:
         idx[y, x] = v; owner[y, x] = O[own] if own else 0
-# inset frame + title bar
-for x in range(BX0 + 2, BX1 - 1):
-    for y in (BY1 - 3, BY1 - 2): setpx(x, y, 9, 'SEVII_ALL')
-for y in range(BY0 + 2, BY1 - 1):
-    for x in (BX0 + 2, BX0 + 3, BX1 - 3, BX1 - 2): setpx(x, y, 9, 'SEVII_ALL')
-for y in range(BY0 + 2, BY0 + 8):
-    for x in range(BX0 + 2, BX1 - 1): setpx(x, y, 9, 'SEVII_ALL')
-
 FONT = {
  'A': ["###","#.#","###","#.#","#.#"], 'D': ["##.","#.#","#.#","#.#","##."],
  'E': ["###","#..","##.","#..","###"], 'H': ["#.#","#.#","###","#.#","#.#"],
@@ -215,19 +204,87 @@ def lane(name, pts, dash=(3, 2)):
             if k % (dash[0] + dash[1]) >= dash[0]: continue
             lane_px[(x, y)] = name
 
-# ======== labels ========
-text('JOHTO', 30, 50, 'JOHTO')
-text('KANTO', 96, 47, 'KANTO')
-text('HOENN', 44, 60, 'HOENN')
-text('SINNOH', 200, 70, 'SINNOH')
-text('SEVII ISLANDS', BX0 + 4, BY0 + 3, 'SEVII_ALL', outline=False)
+# ======== labels: on the sea, next to each region ========
+def free_for(x0, y0, w, h, own):
+    for y in range(y0 - 1, y0 + h + 1):
+        for x in range(x0 - 1, x0 + w + 1):
+            if not (0 <= x < W and 0 <= y < H) or idx[y, x] not in (1, 2): return False
+    for ty in range((y0 - 1) // 8, (y0 + h) // 8 + 1):
+        for tx in range((x0 - 1) // 8, (x0 + w) // 8 + 1):
+            o = set(np.unique(owner[ty*8:ty*8+8, tx*8:tx*8+8]).tolist()) - {0}
+            if o - {O[own]}: return False
+    return True
+def label(s_, own, ax, ay, outline=True):
+    w = sum(len(FONT[c][0]) + 1 for c in s_) - 1
+    best = None
+    for dy in range(-14, 15):
+        for dx in range(-24, 25):
+            x0, y0 = ax + dx, ay + dy
+            if free_for(x0 - 1, y0 - 1, w + 2, 7, own):
+                dd = dx * dx + 2 * dy * dy
+                if best is None or dd < best[0]: best = (dd, x0, y0)
+    assert best, s_
+    text(s_, best[1], best[2], own, outline)
+label('JOHTO', 'JOHTO', 26, 46)
+label('KANTO', 'KANTO', 90, 44)
+label('HOENN', 'HOENN', 40, 66)
+label('SINNOH', 'SINNOH', 200, 66)
+label('SEVII ISLANDS', 'SEVII_ALL', 150, 84)
 
-# ======== sea lanes ========
-lane('E', [(20,24),(19,30),(19,52)])
-lane('A', [(19,52),(19,58),(100,58),(100,90),(84,106),(60,112),(44,118)])
-lane('B', [(19,52),(22,54),(112,54),(122,44),(127,40)])
-lane('C', [(131,40),(136,48),(143,56)])
-lane('D', [(130,40),(136,62),(140,92),(146,98),(154,98)])
+# ======== sea lanes: shortest way through open water ========
+import heapq
+def sea_start(p):
+    x, y = p
+    best = None
+    for yy_ in range(max(0, y - 10), min(H, y + 11)):
+        for xx_ in range(max(0, x - 10), min(W, x + 11)):
+            if idx[yy_, xx_] in (1, 2) and clear[yy_, xx_] >= 2:
+                d_ = (xx_ - x) ** 2 + (yy_ - y) ** 2
+                if best is None or d_ < best[0]: best = (d_, xx_, yy_)
+    return best[1], best[2]
+from scipy import ndimage as _nd
+clear = _nd.distance_transform_edt(np.isin(idx, (1, 2)))
+def route(p0, p1, avoid=None):
+    s0 = sea_start(p0); s1 = sea_start(p1)
+    cost = np.where(clear >= 3, 1.0, np.where(clear >= 2, 3.0, 60.0))
+    if avoid is not None: cost = cost + avoid
+    dist = np.full((H, W), np.inf); prev = {}
+    dist[s0[1], s0[0]] = 0; q = [(0, s0)]
+    while q:
+        dcur, (x, y) = heapq.heappop(q)
+        if (x, y) == s1: break
+        if dcur > dist[y, x]: continue
+        for dx, dy in ((1,0),(-1,0),(0,1),(0,-1),(1,1),(1,-1),(-1,1),(-1,-1)):
+            nx, ny = x + dx, y + dy
+            if 0 <= nx < W and 0 <= ny < H and idx[ny, nx] in (1, 2):
+                nd = dcur + cost[ny, nx] * (1.414 if dx and dy else 1)
+                if nd < dist[ny, nx]:
+                    dist[ny, nx] = nd; prev[(nx, ny)] = (x, y); heapq.heappush(q, (nd, (nx, ny)))
+    path = [s1]
+    while path[-1] != s0: path.append(prev[path[-1]])
+    return path[::-1]
+def avoid_of(path, r=3, w=6.0):
+    m = np.zeros((H, W), bool)
+    for x, y in path: m[y, x] = True
+    return _nd.binary_dilation(m, iterations=r) * w
+paths = {}
+paths['B'] = route(PORTS['OLIVINE'][1], PORTS['VERMILION'][1])
+paths['A'] = route(PORTS['SLATEPORT'][1], PORTS['OLIVINE'][1], avoid_of(paths['B']))
+paths['C'] = route(PORTS['VERMILION'][1], PORTS['CANALAVE'][1], avoid_of(paths['B']))
+paths['D'] = route(PORTS['VERMILION'][1], PORTS['ONE'][1], avoid_of(paths['B']) + avoid_of(paths['C']))
+ox_, oy_ = PORTS['OLIVINE'][1]; vx_, vy_ = PORTS['VERMILION'][1]
+for name in 'BACD':
+    k = 0
+    for (x, y) in paths[name]:
+        if y % 2 or idx[y, x] != 1: continue
+        k += 1
+        if k % 5 >= 3: continue
+        n = name
+        if name in 'AB' and (x - ox_) ** 2 + (y - oy_) ** 2 < 100: n = 'E'
+        if name in 'CD' and (x - vx_) ** 2 + (y - vy_) ** 2 < 64: n = 'B'
+        if (x, y) in lane_px and lane_px[(x, y)] != n:
+            n = 'E' if {n, lane_px[(x, y)]} <= set('ABE') else 'B'
+        lane_px[(x, y)] = n
 for (x, y), n in lane_px.items():
     if idx[y, x] == 1:
         idx[y, x] = 100 + 'ABCDE'.index(n)
@@ -263,7 +320,7 @@ def palette_for(slot, sel, unlocked):
     p = [list(c) for c in BASE]
     for i, n in enumerate(LANES_OF_SLOT[slot]):
         p[13 + i] = list(LANE_COLOR) if (n in unlocked) else list(BASE[1])
-    lit = own is None or own == sel or (own == 'SEVII_ALL' and sel.startswith('SEVII'))
+    lit = own is None or own == sel or (own.startswith('SEVII') and sel.startswith('SEVII'))
     if not lit:
         for i in range(3, 13):
             r, g, b = p[i]

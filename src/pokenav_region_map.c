@@ -261,13 +261,13 @@ static const u8 sWorldTargetRegionMap[WORLD_COUNT] =
 #define NO_TARGET 0xFF
 static const u8 sWorldTargetNeighbors[WORLD_COUNT][4] =
 {
-    [WORLD_HOENN]    = {WORLD_JOHTO,    NO_TARGET,      NO_TARGET,   WORLD_KANTO},
-    [WORLD_JOHTO]    = {NO_TARGET,      WORLD_HOENN,    WORLD_HOENN, WORLD_KANTO},
-    [WORLD_KANTO]    = {WORLD_SINNOH,   WORLD_SEVII123, WORLD_JOHTO, WORLD_SEVII123},
-    [WORLD_SINNOH]   = {NO_TARGET,      WORLD_SEVII123, WORLD_KANTO, NO_TARGET},
-    [WORLD_SEVII123] = {WORLD_SINNOH,   WORLD_SEVII67,  WORLD_KANTO, WORLD_SEVII45},
-    [WORLD_SEVII45]  = {WORLD_SINNOH,   WORLD_SEVII67,  WORLD_SEVII123, NO_TARGET},
-    [WORLD_SEVII67]  = {WORLD_SEVII123, NO_TARGET,      WORLD_HOENN, WORLD_SEVII45},
+    [WORLD_HOENN]    = {WORLD_JOHTO,    NO_TARGET,     NO_TARGET,      WORLD_SEVII123},
+    [WORLD_JOHTO]    = {NO_TARGET,      WORLD_HOENN,   NO_TARGET,      WORLD_KANTO},
+    [WORLD_KANTO]    = {NO_TARGET,      WORLD_SEVII123, WORLD_JOHTO,   WORLD_SINNOH},
+    [WORLD_SINNOH]   = {NO_TARGET,      WORLD_SEVII45, WORLD_KANTO,    NO_TARGET},
+    [WORLD_SEVII123] = {WORLD_KANTO,    WORLD_SEVII67, WORLD_HOENN,    WORLD_SEVII45},
+    [WORLD_SEVII45]  = {WORLD_SINNOH,   WORLD_SEVII67, WORLD_SEVII123, NO_TARGET},
+    [WORLD_SEVII67]  = {WORLD_SEVII45,  NO_TARGET,     WORLD_SEVII123, NO_TARGET},
 };
 
 static u8 GetWorldTargetForRegionMap(enum RegionMapType type)
@@ -300,13 +300,17 @@ static bool32 IsSeaLaneOpen(u32 lane)
     return FALSE;
 }
 
+static bool32 IsSeviiWorldOwner(u32 owner)
+{
+    return owner == WORLD_SEVII123 || owner == WORLD_SEVII45 || owner == WORLD_SEVII67 || owner == WORLD_SEVII_ALL;
+}
+
+// The three Sevii groups light up together
 static bool32 IsWorldOwnerLit(u32 owner, u32 sel)
 {
     if (owner == WORLD_SEA || owner == sel)
         return TRUE;
-    if (owner == WORLD_SEVII_ALL)
-        return sel == WORLD_SEVII123 || sel == WORLD_SEVII45 || sel == WORLD_SEVII67;
-    return FALSE;
+    return IsSeviiWorldOwner(owner) && IsSeviiWorldOwner(sel);
 }
 
 static void LoadWorldMapPalettes(u32 sel)
@@ -352,7 +356,9 @@ static void Task_WorldMapPulse(u8 taskId)
     coeff = data[0] < 32 ? data[0] / 6 : (63 - data[0]) / 6;
     for (i = 0; i < WORLD_MAP_NUM_PALS; i++)
     {
-        if (sWorldMapPalettes[i].owner != WORLD_SEA && IsWorldOwnerLit(sWorldMapPalettes[i].owner, menu->worldSel))
+        // Only the group A opens pulses (and the Sevii name with it)
+        u32 owner = sWorldMapPalettes[i].owner;
+        if (owner == menu->worldSel || (owner == WORLD_SEVII_ALL && IsSeviiWorldOwner(menu->worldSel)))
             BlendPalette(BG_PLTT_ID(WORLD_MAP_FIRST_PAL + i) + 3, 10, coeff, RGB_WHITE);
     }
 }
