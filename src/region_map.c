@@ -114,6 +114,7 @@ static void LoadFlyDestIcons(void);
 static void CreateFlyDestIcons(void);
 static void TryCreateRedOutlineFlyDestIcons(void);
 static void SpriteCB_FlyDestIcon(struct Sprite *sprite);
+static void SpriteCB_FlyDestIconLocked(struct Sprite *sprite);
 static void CB_FadeInFlyMap(void);
 static void CB_HandleFlyMapInput(void);
 static void CB_ExitFlyMap(void);
@@ -140,6 +141,15 @@ static const u8 sRegionMapPlayerIcon_LeafGfx[] = INCGFX_U8("graphics/pokenav/reg
 #include "data/region_map/region_map_layout_sevii67.h"
 #include "data/region_map/region_map_layout_johto.h"
 #include "data/region_map/region_map_layout_sinnoh.h"
+struct JointMapSecRect
+{
+    u16 mapSecId;
+    s8 x;
+    s8 y;
+    u8 width;
+    u8 height;
+};
+#include "data/region_map/region_map_layout_johto_kanto.h"
 #include "data/region_map/region_map_entries.h"
 
 static const mapsec_u16_t sRegionMap_SpecialPlaceLocations[][2] =
@@ -303,9 +313,6 @@ static const u32 sPokedexAreaMap_Tilemap[] = INCGFX_U32("graphics/pokedex/region
 static const u16 ALIGNED(4) sPokedexAreaMapKanto_Pal[] = INCGFX_U16("graphics/pokedex/region_map_kanto.pal", ".gbapal");
 static const u32 sPokedexAreaMapKanto_Gfx[] = INCGFX_U32("graphics/pokedex/region_map_kanto.png", ".8bpp.smol");
 static const u32 sPokedexAreaMapKanto_Tilemap[] = INCGFX_U32("graphics/pokedex/region_map_kanto.bin", ".smolTM");
-static const u16 ALIGNED(4) sRegionMapKanto_Pal[] = INCGFX_U16("graphics/pokenav/region_map/map_kanto.pal", ".gbapal");
-static const u32 sRegionMapKanto_Gfx[] = INCGFX_U32("graphics/pokenav/region_map/map_kanto.png", ".8bpp.smol");
-static const u32 sRegionMapKanto_Tilemap[] = INCGFX_U32("graphics/pokenav/region_map/map_kanto.bin", ".smolTM");
 
 static const u16 ALIGNED(4) sPokedexAreaMapSevii123_Pal[] = INCGFX_U16("graphics/pokedex/region_map_sevii123.pal", ".gbapal");
 static const u32 sPokedexAreaMapSevii123_Gfx[] = INCGFX_U32("graphics/pokedex/region_map_sevii123.png", ".8bpp.smol");
@@ -332,9 +339,10 @@ static const u32 sRegionMapSevii67_Tilemap[] = INCGFX_U32("graphics/pokenav/regi
 static const u16 ALIGNED(4) sPokedexAreaMapJohto_Pal[] = INCGFX_U16("graphics/pokedex/region_map_johto.pal", ".gbapal");
 static const u32 sPokedexAreaMapJohto_Gfx[] = INCGFX_U32("graphics/pokedex/region_map_johto.png", ".8bpp.smol");
 static const u32 sPokedexAreaMapJohto_Tilemap[] = INCGFX_U32("graphics/pokedex/region_map_johto.bin", ".smolTM");
-static const u16 ALIGNED(4) sRegionMapJohto_Pal[] = INCGFX_U16("graphics/pokenav/region_map/map_johto.pal", ".gbapal");
-static const u32 sRegionMapJohto_Gfx[] = INCGFX_U32("graphics/pokenav/region_map/map_johto.png", ".8bpp.smol");
-static const u32 sRegionMapJohto_Tilemap[] = INCGFX_U32("graphics/pokenav/region_map/map_johto.bin", ".smolTM");
+// Super Emerald: Johto and Kanto share one 480x160 map (a 4bpp text background that scrolls sideways)
+static const u16 ALIGNED(4) sRegionMapJohtoKanto_Pal[] = INCGFX_U16("graphics/pokenav/region_map/map_johto_kanto.pal", ".gbapal");
+static const u32 sRegionMapJohtoKanto_Gfx[] = INCGFX_U32("graphics/pokenav/region_map/map_johto_kanto.png", ".4bpp.smol");
+static const u32 sRegionMapJohtoKanto_Tilemap[] = INCGFX_U32("graphics/pokenav/region_map/map_johto_kanto.bin", ".smolTM");
 
 // Super Emerald: Sinnoh map from LiderMorti00's Sinnoh repo
 static const u16 ALIGNED(4) sPokedexAreaMapSinnoh_Pal[] = INCGFX_U16("graphics/pokedex/region_map_sinnoh.pal", ".gbapal");
@@ -362,9 +370,9 @@ const struct RegionMapInfo gRegionMapInfos[] =
         .dexMapGfx = sPokedexAreaMapJohto_Gfx,
         .dexMapTilemap = sPokedexAreaMapJohto_Tilemap,
         .dexMapPaletteSize = sizeof(sPokedexAreaMapJohto_Pal),
-        .regionMapPalette = sRegionMapJohto_Pal,
-        .regionMapGfx = sRegionMapJohto_Gfx,
-        .regionMapTilemap = sRegionMapJohto_Tilemap,
+        .regionMapPalette = sRegionMapJohtoKanto_Pal,
+        .regionMapGfx = sRegionMapJohtoKanto_Gfx,
+        .regionMapTilemap = sRegionMapJohtoKanto_Tilemap,
     },
     [REGION_MAP_HOENN]    =
     {
@@ -382,9 +390,9 @@ const struct RegionMapInfo gRegionMapInfos[] =
         .dexMapGfx = sPokedexAreaMapKanto_Gfx,
         .dexMapTilemap = sPokedexAreaMapKanto_Tilemap,
         .dexMapPaletteSize = sizeof(sPokedexAreaMapKanto_Pal),
-        .regionMapPalette = sRegionMapKanto_Pal,
-        .regionMapGfx = sRegionMapKanto_Gfx,
-        .regionMapTilemap = sRegionMapKanto_Tilemap,
+        .regionMapPalette = sRegionMapJohtoKanto_Pal,
+        .regionMapGfx = sRegionMapJohtoKanto_Gfx,
+        .regionMapTilemap = sRegionMapJohtoKanto_Tilemap,
     },
     [REGION_MAP_SEVII123] =
     {
@@ -801,10 +809,149 @@ bool32 IsRegionMapShowingOtherRegion(void)
     return sRegionMapViewType != 0 && sRegionMapViewType - 1 != GetPlayerRegionMapType();
 }
 
+static bool32 IsJointRegionMapType(enum RegionMapType type)
+{
+    return type == REGION_MAP_JOHTO || type == REGION_MAP_KANTO;
+}
+
+static s16 ShownMapSecX(mapsec_u16_t mapSecId);
+static s16 ShownMapSecY(mapsec_u16_t mapSecId);
+static u16 ShownMapSecWidth(mapsec_u16_t mapSecId);
+static u16 ShownMapSecHeight(mapsec_u16_t mapSecId);
+
+// Horizontal scroll of the joint Johto + Kanto map
+static EWRAM_DATA s16 sJointMapViewX = 0;
+static EWRAM_DATA bool8 sJointMapActive = FALSE;
+
+// Johto and Kanto are drawn on the same map; TRUE while that map is loaded
+static bool32 IsRegionMapJoint(void)
+{
+    return sJointMapActive;
+}
+
+// The player is somewhere on the map being shown (not necessarily in the region chosen)
+static bool32 IsPlayerOnShownMap(void)
+{
+    enum RegionMapType shown = GetDisplayedRegionMapType(), player = GetPlayerRegionMapType();
+    return shown == player || (IsJointRegionMapType(shown) && IsJointRegionMapType(player));
+}
+
+// Cursor limits, in tiles
+#define JOINT_MAP_CURSOR_X_MAX 46   // nothing east of Kanto
+#define JOINT_MAP_CURSOR_Y_MIN 1
+#define JOINT_MAP_CURSOR_Y_MAX 16
+#define JOINT_MAP_VIEW_MAX     176  // farthest horizontal scroll, in pixels
+static u16 CursorXMax(void) { return IsRegionMapJoint() ? JOINT_MAP_CURSOR_X_MAX : MAPCURSOR_X_MAX; }
+static u16 CursorYMin(void) { return IsRegionMapJoint() ? JOINT_MAP_CURSOR_Y_MIN : MAPCURSOR_Y_MIN; }
+static u16 CursorYMax(void) { return IsRegionMapJoint() ? JOINT_MAP_CURSOR_Y_MAX : MAPCURSOR_Y_MAX; }
+
+// Where a section is on the map being shown, in cursor coordinates (tile - MAPCURSOR_*_MIN)
+static void GetShownMapSecRect(mapsec_u16_t mapSecId, s16 *x, s16 *y, u16 *width, u16 *height)
+{
+    u32 i;
+    if (IsRegionMapJoint())
+    {
+        for (i = 0; i < ARRAY_COUNT(sJointMapSecRects); i++)
+        {
+            if (sJointMapSecRects[i].mapSecId == mapSecId)
+            {
+                *x = sJointMapSecRects[i].x;
+                *y = sJointMapSecRects[i].y;
+                *width = sJointMapSecRects[i].width;
+                *height = sJointMapSecRects[i].height;
+                return;
+            }
+        }
+    }
+    *x = gRegionMapEntries[mapSecId].x;
+    *y = gRegionMapEntries[mapSecId].y;
+    *width = gRegionMapEntries[mapSecId].width;
+    *height = gRegionMapEntries[mapSecId].height;
+}
+
+static void SetJointMapView(s16 viewX)
+{
+    if (viewX < 0)
+        viewX = 0;
+    if (viewX > JOINT_MAP_VIEW_MAX)
+        viewX = JOINT_MAP_VIEW_MAX;
+    sJointMapViewX = viewX;
+    ChangeBgX(sRegionMap->bgNum, viewX << 8, BG_COORD_SET);
+    SetGpuReg(REG_OFFSET_BG2HOFS, viewX);
+}
+
+// The view follows the cursor, a few pixels per frame
+#define JOINT_MAP_VIEW_MARGIN 56
+static void UpdateJointMapView(struct Sprite *cursor)
+{
+    s32 screenX, target, view;
+
+    if (!sJointMapActive)
+        return;
+    view = sJointMapViewX;
+    screenX = cursor->x - view;
+    target = view;
+    if (screenX < JOINT_MAP_VIEW_MARGIN)
+        target = cursor->x - JOINT_MAP_VIEW_MARGIN;
+    else if (screenX > DISPLAY_WIDTH - JOINT_MAP_VIEW_MARGIN)
+        target = cursor->x - (DISPLAY_WIDTH - JOINT_MAP_VIEW_MARGIN);
+    if (target < view - 4)
+        view -= 4;
+    else if (target > view + 4)
+        view += 4;
+    else
+        view = target;
+    if (view != sJointMapViewX)
+        SetJointMapView(view);
+    cursor->x2 = -sJointMapViewX;
+}
+
+static s16 ShownMapSecX(mapsec_u16_t mapSecId)
+{
+    s16 x, y; u16 w, h;
+    GetShownMapSecRect(mapSecId, &x, &y, &w, &h);
+    return x;
+}
+
+static s16 ShownMapSecY(mapsec_u16_t mapSecId)
+{
+    s16 x, y; u16 w, h;
+    GetShownMapSecRect(mapSecId, &x, &y, &w, &h);
+    return y;
+}
+
+static u16 ShownMapSecWidth(mapsec_u16_t mapSecId)
+{
+    s16 x, y; u16 w, h;
+    GetShownMapSecRect(mapSecId, &x, &y, &w, &h);
+    return w;
+}
+
+static u16 ShownMapSecHeight(mapsec_u16_t mapSecId)
+{
+    s16 x, y; u16 w, h;
+    GetShownMapSecRect(mapSecId, &x, &y, &w, &h);
+    return h;
+}
+
+// Keep a map sprite in step with the scroll; hide it when it is off screen
+static void ApplyJointMapScroll(struct Sprite *sprite)
+{
+    s32 x;
+    if (!sJointMapActive)
+        return;
+    sprite->x2 = -sJointMapViewX;
+    x = sprite->x - sJointMapViewX;
+    if (x < -8 || x > DISPLAY_WIDTH + 8)
+        sprite->invisible = TRUE;
+}
+
+
 bool32 IsRegionMapShowingKanto(void)
 {
     switch (GetDisplayedRegionMapType())
     {
+    case REGION_MAP_JOHTO:  // Super Emerald: the joint Johto + Kanto map has no zoom
     case REGION_MAP_KANTO:
     case REGION_MAP_SEVII123:
     case REGION_MAP_SEVII45:
@@ -831,10 +978,14 @@ static void InitMapForViewedRegion(void)
 {
     mapsec_u16_t mapSecId = sRegionMapViewStartMapSec[GetDisplayedRegionMapType()];
 
+    s16 x, y;
+    u16 width, height;
+
     sRegionMap->mapSecId = mapSecId;
     sRegionMap->playerIsInCave = FALSE;
-    sRegionMap->cursorPosX = gRegionMapEntries[mapSecId].x + MAPCURSOR_X_MIN;
-    sRegionMap->cursorPosY = gRegionMapEntries[mapSecId].y + MAPCURSOR_Y_MIN;
+    GetShownMapSecRect(mapSecId, &x, &y, &width, &height);
+    sRegionMap->cursorPosX = x + MAPCURSOR_X_MIN;
+    sRegionMap->cursorPosY = y + MAPCURSOR_Y_MIN;
 }
 
 void InitRegionMap(struct RegionMap *regionMap, bool8 zoomed)
@@ -847,6 +998,8 @@ void InitRegionMap(struct RegionMap *regionMap, bool8 zoomed)
 void InitRegionMapData(struct RegionMap *regionMap, const struct BgTemplate *template, bool8 zoomed)
 {
     sRegionMap = regionMap;
+    sJointMapActive = FALSE;
+    sJointMapViewX = 0;
     sRegionMap->initStep = 0;
     sRegionMap->zoomed = zoomed;
     sRegionMap->inputCallback = zoomed == TRUE ? ProcessRegionMapInput_Zoomed : ProcessRegionMapInput_Full;
@@ -869,6 +1022,7 @@ void InitRegionMapData(struct RegionMap *regionMap, const struct BgTemplate *tem
 void ShowRegionMapForPokedexAreaScreen(struct RegionMap *regionMap)
 {
     sRegionMap = regionMap;
+    sJointMapActive = FALSE;
     InitMapBasedOnPlayerLocation();
     sRegionMap->playerIconSpritePosX = sRegionMap->cursorPosX;
     sRegionMap->playerIconSpritePosY = sRegionMap->cursorPosY;
@@ -881,6 +1035,8 @@ bool8 LoadRegionMapGfx(void)
     {
     case 0:
         regionMapType = GetDisplayedRegionMapType();
+        sJointMapActive = IsJointRegionMapType(regionMapType);
+        sJointMapViewX = 0;
         if (sRegionMap->bgManaged)
             DecompressAndCopyTileDataToVram(sRegionMap->bgNum, gRegionMapInfos[regionMapType].regionMapGfx, 0, 0, 0);
         else
@@ -910,12 +1066,26 @@ bool8 LoadRegionMapGfx(void)
         DecompressDataWithHeaderWram(sRegionMapCursorLargeGfxLZ, sRegionMap->cursorLargeImage);
         break;
     case 5:
-        if (IsRegionMapShowingOtherRegion())
-            InitMapForViewedRegion();
-        else
+        if (IsPlayerOnShownMap())
+        {
+            // The player icon goes where the player is; on the joint Johto + Kanto
+            // map the cursor starts on the region that was picked
             InitMapBasedOnPlayerLocation();
-        sRegionMap->playerIconSpritePosX = sRegionMap->cursorPosX;
-        sRegionMap->playerIconSpritePosY = sRegionMap->cursorPosY;
+            sRegionMap->playerIconSpritePosX = sRegionMap->cursorPosX;
+            sRegionMap->playerIconSpritePosY = sRegionMap->cursorPosY;
+            if (IsRegionMapShowingOtherRegion())
+            {
+                bool8 inCave = sRegionMap->playerIsInCave;
+                InitMapForViewedRegion();
+                sRegionMap->playerIsInCave = inCave;
+            }
+        }
+        else
+        {
+            InitMapForViewedRegion();
+            sRegionMap->playerIconSpritePosX = sRegionMap->cursorPosX;
+            sRegionMap->playerIconSpritePosY = sRegionMap->cursorPosY;
+        }
         sRegionMap->mapSecId = CorrectSpecialMapSecId_Internal(sRegionMap->mapSecId);
         sRegionMap->mapSecType = GetMapsecType(sRegionMap->mapSecId);
         GetMapName(sRegionMap->mapSecName, sRegionMap->mapSecId, MAP_NAME_LENGTH);
@@ -941,7 +1111,20 @@ bool8 LoadRegionMapGfx(void)
         sRegionMap->playerIconSprite = NULL;
         sRegionMap->cursorMovementFrameCounter = 0;
         sRegionMap->blinkPlayerIcon = FALSE;
-        if (sRegionMap->bgManaged)
+        if (sJointMapActive)
+        {
+            // Joint Johto + Kanto map: a 512x256 4bpp text background that scrolls sideways
+            SetBgMode(0);
+            SetBgAttribute(sRegionMap->bgNum, BG_ATTR_SCREENSIZE, 1);
+            SetBgAttribute(sRegionMap->bgNum, BG_ATTR_CHARBASEINDEX, sRegionMap->charBaseIdx);
+            SetBgAttribute(sRegionMap->bgNum, BG_ATTR_MAPBASEINDEX, sRegionMap->mapBaseIdx);
+            SetBgAttribute(sRegionMap->bgNum, BG_ATTR_WRAPAROUND, 0);
+            SetBgAttribute(sRegionMap->bgNum, BG_ATTR_PALETTEMODE, 0);
+            ChangeBgY(sRegionMap->bgNum, 0, BG_COORD_SET);
+            SetGpuReg(REG_OFFSET_BG2VOFS, 0);
+            SetJointMapView(sRegionMap->cursorPosX * 8 + 4 - DISPLAY_WIDTH / 2);
+        }
+        else if (sRegionMap->bgManaged)
         {
             SetBgAttribute(sRegionMap->bgNum, BG_ATTR_SCREENSIZE, 2);
             SetBgAttribute(sRegionMap->bgNum, BG_ATTR_CHARBASEINDEX, sRegionMap->charBaseIdx);
@@ -992,12 +1175,12 @@ static u8 ProcessRegionMapInput_Full(void)
     input = MAP_INPUT_NONE;
     sRegionMap->cursorDeltaX = 0;
     sRegionMap->cursorDeltaY = 0;
-    if (JOY_HELD(DPAD_UP) && sRegionMap->cursorPosY > MAPCURSOR_Y_MIN)
+    if (JOY_HELD(DPAD_UP) && sRegionMap->cursorPosY > CursorYMin())
     {
         sRegionMap->cursorDeltaY = -1;
         input = MAP_INPUT_MOVE_START;
     }
-    if (JOY_HELD(DPAD_DOWN) && sRegionMap->cursorPosY < MAPCURSOR_Y_MAX)
+    if (JOY_HELD(DPAD_DOWN) && sRegionMap->cursorPosY < CursorYMax())
     {
         sRegionMap->cursorDeltaY = +1;
         input = MAP_INPUT_MOVE_START;
@@ -1007,7 +1190,7 @@ static u8 ProcessRegionMapInput_Full(void)
         sRegionMap->cursorDeltaX = -1;
         input = MAP_INPUT_MOVE_START;
     }
-    if (JOY_HELD(DPAD_RIGHT) && sRegionMap->cursorPosX < MAPCURSOR_X_MAX)
+    if (JOY_HELD(DPAD_RIGHT) && sRegionMap->cursorPosX < CursorXMax())
     {
         sRegionMap->cursorDeltaX = +1;
         input = MAP_INPUT_MOVE_START;
@@ -1331,6 +1514,12 @@ enum RegionMapType GetRegionMapType(u32 mapSecId)
 
 static mapsec_u16_t GetMapSecIdAt(u16 x, u16 y)
 {
+    if (IsRegionMapJoint())
+    {
+        if (y < JOINT_MAP_CURSOR_Y_MIN || y > JOINT_MAP_CURSOR_Y_MAX || x < MAPCURSOR_X_MIN || x > JOINT_MAP_CURSOR_X_MAX)
+            return MAPSEC_NONE;
+        return sRegionMapSections_JohtoKanto[y - JOINT_MAP_CURSOR_Y_MIN][x - MAPCURSOR_X_MIN];
+    }
     if (y < MAPCURSOR_Y_MIN || y > MAPCURSOR_Y_MAX || x < MAPCURSOR_X_MIN || x > MAPCURSOR_X_MAX)
     {
         return MAPSEC_NONE;
@@ -1454,26 +1643,26 @@ static void InitMapBasedOnPlayerLocation(void)
 
     xOnMap = x;
 
-    dimensionScale = mapWidth / gRegionMapEntries[sRegionMap->mapSecId].width;
+    dimensionScale = mapWidth / ShownMapSecWidth(sRegionMap->mapSecId);
     if (dimensionScale == 0)
     {
         dimensionScale = 1;
     }
     x /= dimensionScale;
-    if (x >= gRegionMapEntries[sRegionMap->mapSecId].width)
+    if (x >= ShownMapSecWidth(sRegionMap->mapSecId))
     {
-        x = gRegionMapEntries[sRegionMap->mapSecId].width - 1;
+        x = ShownMapSecWidth(sRegionMap->mapSecId) - 1;
     }
 
-    dimensionScale = mapHeight / gRegionMapEntries[sRegionMap->mapSecId].height;
+    dimensionScale = mapHeight / ShownMapSecHeight(sRegionMap->mapSecId);
     if (dimensionScale == 0)
     {
         dimensionScale = 1;
     }
     y /= dimensionScale;
-    if (y >= gRegionMapEntries[sRegionMap->mapSecId].height)
+    if (y >= ShownMapSecHeight(sRegionMap->mapSecId))
     {
-        y = gRegionMapEntries[sRegionMap->mapSecId].height - 1;
+        y = ShownMapSecHeight(sRegionMap->mapSecId) - 1;
     }
 
     switch (sRegionMap->mapSecId)
@@ -1509,8 +1698,8 @@ static void InitMapBasedOnPlayerLocation(void)
         GetMarineCaveCoords(&sRegionMap->cursorPosX, &sRegionMap->cursorPosY);
         return;
     }
-    sRegionMap->cursorPosX = gRegionMapEntries[sRegionMap->mapSecId].x + x + MAPCURSOR_X_MIN;
-    sRegionMap->cursorPosY = gRegionMapEntries[sRegionMap->mapSecId].y + y + MAPCURSOR_Y_MIN;
+    sRegionMap->cursorPosX = ShownMapSecX(sRegionMap->mapSecId) + x + MAPCURSOR_X_MIN;
+    sRegionMap->cursorPosY = ShownMapSecY(sRegionMap->mapSecId) + y + MAPCURSOR_Y_MIN;
 }
 
 static void RegionMap_InitializeStateBasedOnSSTidalLocation(void)
@@ -1545,27 +1734,40 @@ static void RegionMap_InitializeStateBasedOnSSTidalLocation(void)
         mapHeader = Overworld_GetMapHeaderByGroupAndId(mapGroup, mapNum);
 
         sRegionMap->mapSecId = mapHeader->regionMapSectionId;
-        dimensionScale = mapHeader->mapLayout->width / gRegionMapEntries[sRegionMap->mapSecId].width;
+        dimensionScale = mapHeader->mapLayout->width / ShownMapSecWidth(sRegionMap->mapSecId);
         if (dimensionScale == 0)
             dimensionScale = 1;
         x = xOnMap / dimensionScale;
-        if (x >= gRegionMapEntries[sRegionMap->mapSecId].width)
-            x = gRegionMapEntries[sRegionMap->mapSecId].width - 1;
+        if (x >= ShownMapSecWidth(sRegionMap->mapSecId))
+            x = ShownMapSecWidth(sRegionMap->mapSecId) - 1;
 
-        dimensionScale = mapHeader->mapLayout->height / gRegionMapEntries[sRegionMap->mapSecId].height;
+        dimensionScale = mapHeader->mapLayout->height / ShownMapSecHeight(sRegionMap->mapSecId);
         if (dimensionScale == 0)
             dimensionScale = 1;
         y = yOnMap / dimensionScale;
-        if (y >= gRegionMapEntries[sRegionMap->mapSecId].height)
-            y = gRegionMapEntries[sRegionMap->mapSecId].height - 1;
+        if (y >= ShownMapSecHeight(sRegionMap->mapSecId))
+            y = ShownMapSecHeight(sRegionMap->mapSecId) - 1;
         break;
     }
     sRegionMap->playerIsInCave = FALSE;
-    sRegionMap->cursorPosX = gRegionMapEntries[sRegionMap->mapSecId].x + x + MAPCURSOR_X_MIN;
-    sRegionMap->cursorPosY = gRegionMapEntries[sRegionMap->mapSecId].y + y + MAPCURSOR_Y_MIN;
+    sRegionMap->cursorPosX = ShownMapSecX(sRegionMap->mapSecId) + x + MAPCURSOR_X_MIN;
+    sRegionMap->cursorPosY = ShownMapSecY(sRegionMap->mapSecId) + y + MAPCURSOR_Y_MIN;
 }
 
+static u8 GetMapsecType_Internal(mapsec_u16_t mapSecId);
+
+// Super Emerald: on the joint Johto + Kanto map, the other region's towns are shown but
+// can't be flown to (travel between regions is by ship)
 static u8 GetMapsecType(mapsec_u16_t mapSecId)
+{
+    u8 type = GetMapsecType_Internal(mapSecId);
+    if (type == MAPSECTYPE_CITY_CANFLY && IsRegionMapJoint()
+     && GetRegionForSectionId(mapSecId) != GetRegionForSectionId(gMapHeader.regionMapSectionId))
+        return MAPSECTYPE_CITY_CANTFLY;
+    return type;
+}
+
+static u8 GetMapsecType_Internal(mapsec_u16_t mapSecId)
 {
     switch (mapSecId)
     {
@@ -1753,7 +1955,7 @@ static void GetPositionOfCursorWithinMapSec(void)
             if (RegionMap_IsMapSecIdInNextRow(y))
             {
                 y--;
-                x = MAPCURSOR_X_MAX + 1;
+                x = CursorXMax() + 1;
             }
             else
             {
@@ -1780,7 +1982,7 @@ static bool8 RegionMap_IsMapSecIdInNextRow(u16 y)
     {
         return FALSE;
     }
-    for (x = MAPCURSOR_X_MIN; x <= MAPCURSOR_X_MAX; x++)
+    for (x = MAPCURSOR_X_MIN; x <= CursorXMax(); x++)
     {
         if (GetMapSecIdAt(x, y) == sRegionMap->mapSecId)
         {
@@ -1798,6 +2000,7 @@ static void SpriteCB_CursorMapFull(struct Sprite *sprite)
         sprite->y += 2 * sRegionMap->cursorDeltaY;
         sRegionMap->cursorMovementFrameCounter--;
     }
+    UpdateJointMapView(sprite);
 }
 
 static void SpriteCB_CursorMapZoomed(struct Sprite *sprite)
@@ -1850,6 +2053,7 @@ void CreateRegionMapCursor(u16 tileTag, u16 paletteTag)
             sRegionMap->cursorSprite->oam.size = SPRITE_SIZE(16x16);
             sRegionMap->cursorSprite->x = 8 * sRegionMap->cursorPosX + 4;
             sRegionMap->cursorSprite->y = 8 * sRegionMap->cursorPosY + 4;
+            sRegionMap->cursorSprite->x2 = -sJointMapViewX * (sJointMapActive != FALSE);
         }
         sRegionMap->cursorSprite->data[1] = 2;
         sRegionMap->cursorSprite->data[2] = OBJ_PLTT_ID(IndexOfSpritePaletteTag(paletteTag)) + 1;
@@ -1884,7 +2088,7 @@ void CreateRegionMapPlayerIcon(u16 tileTag, u16 paletteTag)
     struct SpritePalette palette = {sRegionMapPlayerIcon_BrendanPal, paletteTag};
     struct SpriteTemplate template = {tileTag, paletteTag, &sRegionMapPlayerIconOam, sRegionMapPlayerIconAnimTable, NULL, gDummySpriteAffineAnimTable, SpriteCallbackDummy};
 
-    if (IsEventIslandMapSecId(gMapHeader.regionMapSectionId) || IsRegionMapShowingOtherRegion())
+    if (IsEventIslandMapSecId(gMapHeader.regionMapSectionId) || !IsPlayerOnShownMap())
     {
         sRegionMap->playerIconSprite = NULL;
         return;
@@ -1979,6 +2183,7 @@ static void SpriteCB_PlayerIconMapZoomed(struct Sprite *sprite)
 static void SpriteCB_PlayerIconMapFull(struct Sprite *sprite)
 {
     SpriteCB_PlayerIcon(sprite);
+    ApplyJointMapScroll(sprite);
 }
 
 static void SpriteCB_PlayerIcon(struct Sprite *sprite)
@@ -2062,12 +2267,9 @@ u8 *GetMapNameHandleAquaHideout(u8 *dest, mapsec_u16_t mapSecId)
         return GetMapNameGeneric(dest, mapSecId);
 }
 
-static void GetMapSecDimensions(mapsec_u16_t mapSecId, u16 *x, u16 *y, u16 *width, u16 *height)
+static void GetMapSecDimensions(mapsec_u16_t mapSecId, s16 *x, s16 *y, u16 *width, u16 *height)
 {
-    *x = gRegionMapEntries[mapSecId].x;
-    *y = gRegionMapEntries[mapSecId].y;
-    *width = gRegionMapEntries[mapSecId].width;
-    *height = gRegionMapEntries[mapSecId].height;
+    GetShownMapSecRect(mapSecId, x, y, width, height);
 }
 
 bool8 IsRegionMapZoomed(void)
@@ -2507,8 +2709,8 @@ static void CreateFlyDestIcons(void)
 {
     enum RegionMapType regionMapType = GetRegionMapType(gMapHeader.regionMapSectionId);
     u32 i;
-    u16 x;
-    u16 y;
+    s16 x;
+    s16 y;
     u16 width;
     u16 height;
     u16 shape;
@@ -2516,8 +2718,15 @@ static void CreateFlyDestIcons(void)
 
     for (i = 0; i < ARRAY_COUNT(sFlyLocations); i++)
     {
+        // Super Emerald: the joint Johto + Kanto map shows both regions' destinations,
+        // but you can only fly within the region you are in
+        bool32 otherRegion = FALSE;
         if (sFlyLocations[i].regionMapType != regionMapType)
-            continue;
+        {
+            if (!IsRegionMapJoint() || !IsJointRegionMapType(sFlyLocations[i].regionMapType))
+                continue;
+            otherRegion = TRUE;
+        }
 
         GetMapSecDimensions(sFlyLocations[i].mapsec, &x, &y, &width, &height);
         x = (x + MAPCURSOR_X_MIN) * 8 + 4;
@@ -2535,10 +2744,15 @@ static void CreateFlyDestIcons(void)
         {
             gSprites[spriteId].oam.shape = shape;
 
-            if (FlagGet(sFlyLocations[i].flag))
+            if (FlagGet(sFlyLocations[i].flag) && !otherRegion)
+            {
                 gSprites[spriteId].callback = SpriteCB_FlyDestIcon;
+            }
             else
+            {
                 shape += 3;
+                gSprites[spriteId].callback = SpriteCB_FlyDestIconLocked;
+            }
 
             StartSpriteAnim(&gSprites[spriteId], shape);
             gSprites[spriteId].sIconMapSec = sFlyLocations[i].mapsec;
@@ -2551,8 +2765,8 @@ static void CreateFlyDestIcons(void)
 static void TryCreateRedOutlineFlyDestIcons(void)
 {
     u16 i;
-    u16 x;
-    u16 y;
+    s16 x;
+    s16 y;
     u16 width;
     u16 height;
     mapsec_u16_t mapSecId;
@@ -2594,6 +2808,14 @@ static void SpriteCB_FlyDestIcon(struct Sprite *sprite)
         sprite->sFlickerTimer = 16;
         sprite->invisible = FALSE;
     }
+    ApplyJointMapScroll(sprite);
+}
+
+// Icons that can't be chosen only follow the scroll
+static void SpriteCB_FlyDestIconLocked(struct Sprite *sprite)
+{
+    sprite->invisible = FALSE;
+    ApplyJointMapScroll(sprite);
 }
 
 #undef sIconMapSec

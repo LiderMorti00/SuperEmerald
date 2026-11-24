@@ -89,17 +89,18 @@ def round_cut(t, side):
             t[col.min():col.min()+2, 0] = 0; t[col.max()-1:col.max()+1, 0] = 0
     return t
 
-src = {n: bands(n, w=30, h=20) for n in ['map', 'map_johto', 'map_kanto', 'map_sinnoh',
+src = {n: bands(n, w=30, h=20) for n in ['map', 'map_johto_kanto_source.png', 'map_sinnoh',
                                         'map_sevii_123', 'map_sevii_45', 'map_sevii_67']}
-# Johto + Kanto: the Kanto map continues the Johto map to the east (one landmass)
+# Johto + Kanto: the shared PokeNav map (Johto on the left, Kanto on the right)
 JK_S = 0.28
-src_j = src['map_johto'][:144]; src_k = src['map_kanto'][:144]
-tj = scaled(src_j, JK_S); tk = scaled(src_k, JK_S)
-SEAM = 64                                   # Johto | Kanto, on a tile boundary
-JX, JY = SEAM - tj.shape[1], 0
-KX = SEAM
-place(tj, JX, JY, 'JOHTO', xmax=SEAM)
-place(tk, KX, JY, 'KANTO', xmin=SEAM)
+src_jk = src['map_johto_kanto_source.png'][:144, :376]
+JK_SEAM_SRC = 208                           # Johto | Kanto column on the shared map
+tjk = scaled(src_jk, JK_S)
+SEAM = 64                                   # the same column on the overview, on a tile boundary
+JX, JY = SEAM - int(round(JK_SEAM_SRC * JK_S)), 0
+KX = JX
+place(tjk, JX, JY, 'JOHTO', xmax=SEAM)
+place(tjk, JX, JY, 'KANTO', xmin=SEAM)
 # Hoenn: south-west, well apart from Johto
 HO_S = 0.42
 th = scaled(src['map'][:150], HO_S); keep_small_islands(src['map'][:150], HO_S, th)
@@ -175,7 +176,7 @@ def to_thumb(p, s, ox, oy):
 PORTS = {
     'SLATEPORT': ('HOENN', to_thumb(cell(8, 10.5), HO_S, HX, HY)),
     'OLIVINE':   ('JOHTO', to_thumb(cell(6, 4), JK_S, JX, JY)),
-    'VERMILION': ('KANTO', to_thumb(cell(14, 9), JK_S, KX, JY)),
+    'VERMILION': ('KANTO', to_thumb(cell(38, 7), JK_S, KX, JY)),
     'CANALAVE':  ('SINNOH', to_thumb(cell(0, 10.5), SI_S, SX, SY)),
 }
 oi = cell(1, 8)
@@ -275,8 +276,11 @@ paths['D'] = route(PORTS['VERMILION'][1], PORTS['ONE'][1], avoid_of(paths['B']) 
 ox_, oy_ = PORTS['OLIVINE'][1]; vx_, vy_ = PORTS['VERMILION'][1]
 for name in 'BACD':
     k = 0
+    seen = set()
     for (x, y) in paths[name]:
-        if y % 2 or idx[y, x] != 1: continue
+        y -= y % 2                      # lanes use the plain sea rows
+        if (x, y) in seen or idx[y, x] != 1: continue
+        seen.add((x, y))
         k += 1
         if k % 5 >= 3: continue
         n = name

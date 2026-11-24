@@ -13,8 +13,15 @@ def full(name, w=30, h=18):
             t = m[r, c]; img[r*8:r*8+8, c*8:c*8+8] = tiles[t] if t < len(tiles) else 0
     p = np.array(pal[:768]).reshape(-1, 3)
     return p[img].astype(int)
+def png_rgb(path, h=18):
+    im = Image.open(path)
+    p = np.array(im.getpalette()[:768]).reshape(-1, 3)
+    return p[np.asarray(im)[:h*8]].astype(int)
 def bands(name, **kw):
-    rgb = full(name, **kw)
+    if name.endswith('.png'):
+        rgb = png_rgb(RM + name, kw.get('h', 18))
+    else:
+        rgb = full(name, **kw)
     r, g, b = rgb[..., 0], rgb[..., 1], rgb[..., 2]
     sea = (b > g) & (b > r + 30)
     land = (g > b + 20) & (g > r + 15)   # greens only; routes, markers and text are filled from around them
