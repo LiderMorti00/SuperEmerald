@@ -749,6 +749,96 @@ origin/master is the only branch with work that is not elsewhere:
 - A natural playthrough without prepared flags.
 - Loading a save from an older version (none available).
 
+## Regression pass 6: one save from Hoenn to Sinnoh (start: 9c99f97fd2)
+
+Played in mGBA with normal controls. The chain uses one save file. It went from the HOENN
+LEAGUE through the JOHTO, SINNOH and KANTO LEAGUES, with every ticket, ship and hint in
+between. Each step was saved in-game and continued from the .sav.
+
+### Prepared states (test-only builds; the delivered ROM has none of this)
+
+| Before | Prepared | Left to the game |
+|---|---|---|
+| Hoenn Champion | New game placed in the Champion's room (6,12). Prepared: Hoenn badges 1–8, Hoenn gyms and Elite Four beaten, VAR_ELITE_4_STATE 4, main Hoenn story vars, visited flags. Team: Mewtwo Lv100 (Moonblast/Psychic/Flamethrower/Surf, Lum Berry), Pidgeot (Fly), Gyarados | Battle, HoF record, credits, save, respawn, all later scenes |
+| Littleroot after the HoF | Continue hook hid the truck-intro objects the skipped intro would have hidden (Vigoroths, rival's mother and sibling, trucks) | Norman, Mom, TV, Birch scenes |
+| Johto Champion | Continue hook on save 04: Johto badges 1–8, Indigo Elite Four beaten, Johto visited flags, warp to the Champion's room (6,19) | Same as above |
+| Sinnoh Champion | Continue hook on save 11: Sinnoh badges 1–8, FLAG_SN_ENTERED_ELITE_FOUR, heal, warp to Cynthia's room (6,11), Mewtwo stats 999 and Earthquake (Milotic's Mirror Coat) | Same |
+| Kanto rematch | Continue hook on save 12: Kanto badges 9–16, FLAG_SE_KANTO_COMPLETE, Indigo Elite Four beaten, warp to the Champion's room | Same |
+| Walk to Bill | Continue hook on save 08: moved in front of the Sea Cottage (51,5); no flag changed | Bill and the pass |
+
+### Chain played (saves kept as 01–14)
+
+| # | Save | What happened in game |
+|---|---|---|
+| 01 | Hoenn HoF | STEVEN beaten → HoF → credits → title. CONTINUE: Littleroot, player's room 2F |
+| 02 | Littleroot | NORMAN gives the S.S. TICKET and says to come to the GYM; Mom; Lati TV; BIRCH National Dex upgrade |
+| 03 | Petalburg | Fly; NORMAN gives the JOHTO TICKET, then TM42 (a prep artifact: the TM is normally earned in the gym battle) |
+| 04 | Olivine | Slateport harbor offers OLIVINE only. S.S. TIDAL voyage, arrival with JASMINE's welcome |
+| 05 | Johto HoF | LANCE beaten → HoF → **NEW BARK** (fixed, see below). CONTINUE from the HoF save: New Bark |
+| 06 | Elm's lab | ELM: MAGNET TRAIN PASS and BIRCH's message; bag holds S.S. TICKET, JOHTO TICKET, PASS. Saved in the lab, CONTINUE: in the lab (fixed, see below) |
+| 07 | Birch's lab | Olivine port → SLATEPORT → Littleroot: BIRCH gives the CANALAVE TICKET (then the Johto starters offer) |
+| 08 | Vermilion | Slateport harbor now offers OLIVINE / VERMILION / CANALAVE. S.S. AQUA → VERMILION: OAK's welcome, Kanto starter, BILL hint, PALLET hint |
+| 09 | Sea Cottage | BILL gives the RAINBOW PASS |
+| 10 | One Island | Fly to Vermilion. The dock crew checks the RAINBOW PASS and the SEAGALLOP goes to ONE ISLAND, back to VERMILION and to ONE ISLAND again |
+| 11 | Canalave | Seagallop to Vermilion. S.S. AQUA sailor → CANALAVE; welcome and SANDGEM hint |
+| 12 | Sinnoh HoF | CYNTHIA beaten → HoF → SANDGEM (fixed). CONTINUE: Sandgem |
+| 13 | Kanto HoF | LANCE rematch → HoF → PALLET. CONTINUE: Pallet |
+| 14 | Oak's lab | OAK gives a Sinnoh starter and, for four regions, the SHINY CHARM |
+
+### Fixed
+
+- **Every League after Hoenn sent the player to PALLET TOWN.** The Hall of Fame code
+  (hall_of_fame_frlg.c, shared by the Johto, Kanto and Sinnoh Leagues) still had
+  SuperFireRed's hard-coded warp to Pallet. It ignored the respawn that the League scripts
+  set:
+  - after the first JOHTO win the player landed in KANTO before reaching it;
+  - after SINNOH the player was sent across the world to PALLET;
+  - the HoF save also continued at PALLET.
+
+  Now both the warp and the continue use the respawn the League script set:
+  - New Bark after Johto (ROM: New Bark, and CONTINUE from the HoF save, New Bark);
+  - Pallet after the Kanto rematch (ROM: Pallet);
+  - Sandgem after Sinnoh (ROM: Sandgem, and CONTINUE, Sandgem).
+- **After those Leagues, the next save anywhere continued back at the respawn town.**
+  These HoFs warp without a reset, so the continue-warp status was never cleared.
+  - Example: Johto HoF, enter Elm's lab, save, CONTINUE → New Bark instead of the lab.
+  - The status is now cleared when the player is warped home. The HoF save keeps it, so a
+    reset right after the HoF still starts at the respawn.
+  - ROM: same steps, CONTINUE → Elm's lab.
+
+### Music (final code)
+
+The mart and its town were recorded through a null audio sink: 7 s outside, enter, 7 s
+inside, leave, 7 s outside. Spectral fingerprints of the segments, where lower means more
+alike:
+
+| Mart | outside vs inside | outside before vs after | inside vs the other marts |
+|---|---|---|---|
+| Petalburg (Hoenn) | 0.34 | 0.08 | ≤ 0.02 |
+| Cherrygrove (Johto) | 0.45 | 0.12 | ≤ 0.02 |
+| Vermilion (Kanto) | 0.48 | 0.24 | ≤ 0.02 |
+| Four Island (Sevii) | 0.35 | 0.17 | ≤ 0.02 |
+| Sandgem (Sinnoh) | 0.16 | 0.09 | ≤ 0.02 |
+
+All five play the same mart track inside, and the town track returns on leaving.
+
+### Saves
+
+- Every step above was saved in game, mGBA was closed, and CONTINUE was used. Position and
+  unlocks were kept: key items, harbor menus, the Seagallop and the HoF records.
+- No .sav from an older public version exists, so compatibility with older saves stays
+  **pending**.
+- Note for testers: saves 06–11 were made before the continue fix and still carry the stale
+  continue warp.
+
+### Still open
+
+- No known progress blocker on the chain above.
+- Not played naturally: the Elite Four rooms before each Champion (prepared), and the walks
+  between distant towns (Fly or the Sea Cottage warp).
+- The Mewtwo follower can stand in one-tile corridors. Here that only happened with
+  prepared objects (the truck-intro Vigoroths).
+
 ## Map-by-map branch audit (Johto, Kanto, Sinnoh)
 
 Each map was traced from its objects, signs, trainers and transition/coord events through local and shared scripts. Every branch was checked for its condition, what sets it, and what the speaker knows at that point (first visit, return, rematch, quest in progress, save/load, regional travel order).

@@ -113,7 +113,9 @@ bool8 EnterHallOfFame(void)
         SetGameStat(GAME_STAT_FIRST_HOF_PLAY_TIME, (gSaveBlock2Ptr->playTimeHours << 16) | (gSaveBlock2Ptr->playTimeMinutes << 8) | gSaveBlock2Ptr->playTimeSeconds);
     }
     SetContinueGameWarpStatus();
-    SetContinueGameWarpToHealLocation(HEAL_LOCATION_PALLET_TOWN);
+    // Super Emerald: continue where the League script set the respawn (SE_EventScript_HallOfFameRespawn):
+    // NEW BARK after the first JOHTO LEAGUE win, PALLET after the KANTO rematch
+    gSaveBlock1Ptr->continueGameWarp = gSaveBlock1Ptr->lastHealLocation;
     gaveAtLeastOneRibbon = FALSE;
     for (i = 0, r7 = &ribbonState; i < PARTY_SIZE; i++)
     {

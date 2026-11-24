@@ -1,4 +1,5 @@
 #include "global.h"
+#include "load_save.h"
 #include "bg.h"
 #include "credits_frlg.h"
 #include "data.h"
@@ -697,10 +698,15 @@ static void Task_Hof_HandleExit(u8 taskId)
     }
 }
 
-// Super Emerald: as in HGSS, no credits after beating Red; the player goes home to Pallet Town
+// Super Emerald: no credits here; the player goes home to the respawn the League script set
+// (NEW BARK after the first JOHTO LEAGUE win, PALLET after the KANTO rematch)
 static void SetWarpsToRollCredits(void)
 {
-    SetWarpDestination(MAP_GROUP(MAP_PALLET_TOWN), MAP_NUM(MAP_PALLET_TOWN), -1, 6, 8);
+    SetWarpDestinationForTeleport();
+    // The Hall of Fame save keeps the continue warp (so a reset right after it still
+    // starts at the respawn), but play goes on without a reset: clear it now, or the
+    // next save anywhere would continue back at the respawn town.
+    ClearContinueGameWarpStatus();
     DoWarp();
     ResetInitialPlayerAvatarState();
 }
