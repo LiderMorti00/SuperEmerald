@@ -3127,6 +3127,9 @@ static bool32 IsObjectTemplateHidden(u16 flagId)
         return TRUE;
     if (flagId >= FLAG_SE_LEGENDS_START && flagId <= FLAG_SE_LEGENDS_END && !FlagGet(FLAG_SE_SINNOH_LEAGUE_CLEARED))
         return TRUE;
+    // Super Emerald: the Mega Stones fall over Hoenn when Steven gives the Mega Ring
+    if (flagId >= FLAG_SFR_ITEM_ABOMASITE && flagId <= FLAG_SFR_ITEM_VENUSAURITE && VarGet(VAR_SE_MEGA_RING_STATE) < 2)
+        return TRUE;
     return FALSE;
 }
 
