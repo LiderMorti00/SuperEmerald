@@ -1,7 +1,6 @@
 EternaForest_sinnoh_MapScripts::
 	.byte 0
 
-
 EternaForest_EventScript_Cheryl::
 	lockall
 	goto_if_ne VAR_SN_SINNOH_STORY, 22, EternaForest_EventScript_CherylEnd
@@ -233,33 +232,6 @@ EternaForest_EventScript_SNHoneyTree_Fresh::
 	special SinnohHoneySlather
 	msgbox SN_HoneyTree_Text_Done, MSGBOX_DEFAULT
 	goto EternaForest_EventScript_SNHoneyTree_End
-
-EternaForest_EventScript_SNGardenia::
-	lock
-	faceplayer
-	msgbox EternaForest_Text_SNGardenia1, MSGBOX_DEFAULT
-	msgbox EternaForest_Text_SNGardenia2, MSGBOX_DEFAULT
-	release
-	end
-
-EternaForest_Text_SNGardenia2::
-	.string "GARDENIA: I should check it out myself,\n"
-	.string "but going in there is…\p"
-	.string "…Well, you know, being that I'm a GYM\n"
-	.string "LEADER, I'm always busy.\p"
-	.string "So, since I'm so busy, I can't go in. It's\n"
-	.string "not because I'm s-scared!\p"
-	.string "S-so, good luck with your\n"
-	.string "investigation!$"
-
-EternaForest_Text_SNGardenia1::
-	.string "GARDENIA: Hiya! Were you intrigued by\n"
-	.string "the rumors going around, too?\p"
-	.string "GARDENIA: You know, people've been\n"
-	.string "talking about the ghost POKéMON of\l"
-	.string "the OLD CHATEAU.\p"
-	.string "I've been hearing rumors about\n"
-	.string "sinister shadows, too.$"
 
 EternaForest_EventScript_SNMossRock::
 	msgbox EternaForest_EventScript_SNMossRock_Text, MSGBOX_SIGN

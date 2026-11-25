@@ -22,7 +22,6 @@ LakeOfRage_EventScript_ThunderStorm::
 	setweather WEATHER_RAIN_THUNDERSTORM
 	end
 
-
 LakeOfRage_EventScript_Lass::
 	msgbox LakeOfRage_Text_CooltrainerF, MSGBOX_NPC
 	end
@@ -49,16 +48,6 @@ LakeOfRage_Text_FisherAndreBeaten::
 LakeOfRage_Text_FisherAndreSeen::
     .string "Let me battle with the POKéMON I\n"
     .string "just caught!$"
-
-LakeOfRage_Text_LanceForcedToEvolve::
-    .string "This lake is full of GYARADOS\n"
-    .string "but nothing else…\p"
-    .string "So the MAGIKARP are being forced\n"
-    .string "to evolve…$"
-
-SE_J_LakeOfRage_hns_LakeOfRage_EventScript_Lance::
-	msgbox LakeOfRage_Text_LanceForcedToEvolve, MSGBOX_NPC
-	end
 
 LakeOfRage_Text_Gramps::
 	.string "The GYARADOS here went on a\n"
@@ -158,39 +147,6 @@ LakeOfRage_Text_SuperNerd::
 	.string "I heard this lake was made by\n"
 	.string "rampaging GYARADOS.\p"
 	.string "I wonder if that's really true?$"
-
-LakeOfRage_EventScript_Dragonite::
-	lock
-	faceplayer
-	waitse
-	playmoncry SPECIES_DRAGONITE, CRY_MODE_NORMAL
-	msgbox LakeOfRage_Text_Dragonite, MSGBOX_DEFAULT
-	waitmoncry
-	turnobject LOCALID_LAKEOFRAGE_DRAGONITE, DIR_WEST
-	release
-	end
-
-LakeOfRage_Text_Dragonite::
-	.string "DRAGONITE: Gyafooha!$"
-
-LakeOfRage_EventScript_Pryce::
-    lock
-    faceplayer
-    msgbox LakeOfRage_Text_Pryce, MSGBOX_DEFAULT
-    closemessage
-    fadescreenswapbuffers FADE_TO_BLACK
-    setflag FLAG_HIDE_LAKE_PRYCE
-    removeobject LOCALID_LAKE_PRYCE
-    fadescreenswapbuffers FADE_FROM_BLACK
-    clearflag FLAG_HIDE_DOJO_PRYCE
-    release
-    end
-
-LakeOfRage_Text_Pryce::
-    .string "{PLAYER}.\p"
-    .string "Even here, the cold keeps me sharp.\p"
-    .string "If you wish to battle again, come\n"
-    .string "to the FIGHTING DOJO.$"
 
 LakeOfRage_EventScript_Sign1::
 	msgbox LakeOfRage_Text_Sign, MSGBOX_SIGN

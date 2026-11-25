@@ -1,22 +1,6 @@
 FloaromaTown_sinnoh_MapScripts::
 	.byte 0
 
-
-FloaromaTown_EventScript_Grunts::
-	msgbox FloaromaTown_Text_Grunts, MSGBOX_NPC
-	end
-
-FloaromaTown_Text_Grunts::
-	.string "GRUNT 1: Aren't we TEAM GALACTIC? And\n"
-	.string "we're assigned here?\p"
-	.string "Standing around among flowers… This\n"
-	.string "doesn't seem all that cool.\p"
-	.string "GRUNT 2: Hey now! Don't complain. This\n"
-	.string "is a pretty decent assignment.\p"
-	.string "But Bug- and Grass-type POKéMON so\n"
-	.string "creep me out…\p"
-	.string "I don't like being here either.$"
-
 FloaromaTown_EventScript_PtNpc1::
 	msgbox FloaromaTown_Text_PtNpc1, MSGBOX_NPC
 	end

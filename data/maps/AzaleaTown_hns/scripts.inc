@@ -1,20 +1,6 @@
 AzaleaTown_hns_MapScripts::
 	.byte 0
 
-
-AzaleaTown_EventScript_Rocket1::
-	lock
-	faceplayer
-	msgbox AzaleaTown_Text_Rocket1, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-AzaleaTown_Text_Rocket1::
-	.string "It's unsafe to go in there,\n"
-	.string "so I'm standing guard.\p"
-	.string "Aren't I a good Samaritan?$"
-
 AzaleaTown_EventScript_Gramps::
 	lock
 	faceplayer

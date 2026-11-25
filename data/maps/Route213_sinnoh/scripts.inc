@@ -1,7 +1,6 @@
 Route213_sinnoh_MapScripts::
 	.byte 0
 
-
 Route213_EventScript_Sheltin::
 	trainerbattle_single TRAINER_PAUL_SINNOH, Route213_Text_SheltinIntro, Route213_Text_SheltinDefeat
 	msgbox Route213_Text_SheltinPost, MSGBOX_AUTOCLOSE
@@ -237,46 +236,6 @@ Route213_EventScript_SNBomb_T1::
 	.string "make something like this…\p"
 	.string "Therefore, our boss, who made this, is a\n"
 	.string "scientific mechanical genius!$"
-
-Route213_EventScript_SNBomb_Looker::
-	lock
-	faceplayer
-	msgbox Route213_EventScript_SNBomb_L1, MSGBOX_DEFAULT
-	msgbox Route213_EventScript_SNBomb_L2, MSGBOX_DEFAULT
-	msgbox Route213_EventScript_SNBomb_L3, MSGBOX_DEFAULT
-	closemessage
-	sn_walkto LOCALID_SN_BOMB_GRUNT, 52, 0, SN_SPEED_NORMAL, 0, 0, 0
-	sn_walkto LOCALID_SN_BOMB_LOOKER, 52, 0, SN_SPEED_NORMAL, 0, 0, 1
-	waitmovement LOCALID_SN_BOMB_GRUNT
-	waitmovement LOCALID_SN_BOMB_LOOKER
-	removeobject LOCALID_SN_BOMB_GRUNT
-	removeobject LOCALID_SN_BOMB_LOOKER
-	setflag FLAG_SN_HIDE_BOMB
-	release
-	end
-
-Route213_EventScript_SNBomb_L3::
-	.string "Ach! This will not do! Wait! Wait, I say!$"
-
-Route213_EventScript_SNBomb_L2::
-	.string "Oh, no, no, no! How did I miss it?\p"
-	.string "Ah, LOOKER, this time you have made a\n"
-	.string "mistake of the ages!\p"
-	.string "The man, who I have seen running away,\n"
-	.string "he was the bearer of the bomb!$"
-
-Route213_EventScript_SNBomb_L1::
-	.string "LOOKER: Hello, my friend!\p"
-	.string "The cargo that the TEAM GALACTIC\n"
-	.string "brought is worrisome, so I have come.\p"
-	.string "…You say the cargo, it was a bomb? And\n"
-	.string "there was an explosion?\p"
-	.string "The explosion was at the GREAT MARSH?\p"
-	.string "Furthermore, you are pursuing a man… A\n"
-	.string "man with funny bowl-cut hair.\p"
-	.string "In an outfit that is very strange?\p"
-	.string "In other words, that is the Team\n"
-	.string "GALACTIC!$"
 
 Route213_EventScript_SNHoneyTree::
 	lock

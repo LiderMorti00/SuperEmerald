@@ -85,7 +85,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_Route201_Route201_EventScript_Barry",
+      "script": "0x0",
       "flag": "FLAG_HIDE_ROUTE201_BARRY"
     },
     {
@@ -100,7 +100,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_Route201_Route201_EventScript_Barry",
+      "script": "0x0",
       "flag": "FLAG_HIDE_ROUTE201_ROWAN"
     },
     {
@@ -115,7 +115,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_S_Route201_Route201_EventScript_Barry",
+      "script": "0x0",
       "flag": "FLAG_HIDE_ROUTE201_ROWAN"
     },
     {

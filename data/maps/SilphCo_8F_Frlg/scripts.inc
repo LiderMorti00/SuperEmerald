@@ -23,59 +23,12 @@ SilphCo_8F_EventScript_FloorSign::
 	msgbox SilphCo_8F_Text_FloorSign, MSGBOX_SIGN
 	end
 
-SilphCo_8F_EventScript_Parker::
-	trainerbattle_single TRAINER_SCIENTIST_PARKER, SilphCo_8F_Text_ParkerIntro, SilphCo_8F_Text_ParkerDefeat
-	msgbox SilphCo_8F_Text_ParkerPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-SilphCo_8F_EventScript_Grunt1::
-	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_32, SilphCo_8F_Text_Grunt1Intro, SilphCo_8F_Text_Grunt1Defeat
-	msgbox SilphCo_8F_Text_Grunt1PostBattle, MSGBOX_AUTOCLOSE
-	end
-
-SilphCo_8F_EventScript_Grunt2::
-	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_36, SilphCo_8F_Text_Grunt2Intro, SilphCo_8F_Text_Grunt2Defeat
-	msgbox SilphCo_8F_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
-	end
-
 SilphCo_8F_Text_WonderIfSilphIsFinished::
 	.string "I wonder if SILPH is finished…$"
 
 SilphCo_8F_Text_BackToWork::
 	.string "It took a while after the ROCKET\n"
 	.string "incident, but we're back to work.$"
-
-SilphCo_8F_Text_Grunt1Intro::
-	.string "That's as far as you'll go!$"
-
-SilphCo_8F_Text_Grunt1Defeat::
-	.string "Not enough grit!$"
-
-SilphCo_8F_Text_Grunt1PostBattle::
-	.string "If you don't turn back…\n"
-	.string "I'll call for backup!$"
-
-SilphCo_8F_Text_ParkerIntro::
-	.string "You're causing us problems!$"
-
-SilphCo_8F_Text_ParkerDefeat::
-	.string "Huh?\n"
-	.string "I lost?$"
-
-SilphCo_8F_Text_ParkerPostBattle::
-	.string "So, what do you think of SILPH\n"
-	.string "BUILDING's maze?$"
-
-SilphCo_8F_Text_Grunt2Intro::
-	.string "I am one of the four ROCKET\n"
-	.string "BROTHERS!$"
-
-SilphCo_8F_Text_Grunt2Defeat::
-	.string "Whoo!\n"
-	.string "Oh, Brothers!$"
-
-SilphCo_8F_Text_Grunt2PostBattle::
-	.string "I'll leave you up to my brothers.$"
 
 SilphCo_8F_Text_FloorSign::
 	.string "SILPH CO. HEAD OFFICE\n"

@@ -1,40 +1,6 @@
 ResortArea_sinnoh_MapScripts::
 	.byte 0
 
-
-ResortArea_EventScript_SNSyndicate::
-	lock
-	faceplayer
-	special SinnohPartyMaxRibbons
-	goto_if_ge VAR_RESULT, 10, ResortArea_EventScript_SNSyndicate_Member
-	msgbox ResortArea_Text_SNSyndNo, MSGBOX_DEFAULT
-	release
-	end
-
-ResortArea_Text_SNSyndNo::
-	.string "This is the Ribbon Syndicate. Only\n"
-	.string "TRAINERS whose POKéMON have earned at\l"
-	.string "least ten Ribbons may join.\p"
-	.string "Oh, how I long to become a member of\n"
-	.string "the Ribbon Syndicate…$"
-
-ResortArea_EventScript_SNSyndicate_Member::
-	msgbox ResortArea_Text_SNSyndYes, MSGBOX_DEFAULT
-	closemessage
-	setflag FLAG_SN_RIBBON_MEMBER
-	fadescreen FADE_TO_BLACK
-	removeobject LOCALID_SN_SYND_GUARD
-	setflag FLAG_SN_HIDE_SYND_GUARD
-	fadescreen FADE_FROM_BLACK
-	release
-	end
-
-ResortArea_Text_SNSyndYes::
-	.string "A member of the Ribbon Syndicate? You\n"
-	.string "are? Really?\p"
-	.string "How did you manage to collect so many\n"
-	.string "POKéMON Ribbons?$"
-
 ResortArea_EventScript_PtNpc2::
 	msgbox ResortArea_Text_PtNpc2, MSGBOX_NPC
 	end

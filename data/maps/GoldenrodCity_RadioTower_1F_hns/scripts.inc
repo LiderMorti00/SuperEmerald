@@ -26,17 +26,6 @@ RadioTower1F_Text_Lass::
     .string "BEN is a fabulous DJ.\p"
     .string "His sweet voice makes me melt!$"
 
-RadioTower1F_Text_GruntM3Seen::
-    .string "We've finally taken over the\n"
-    .string "RADIO TOWER!\p"
-    .string "Now everyone will get to experience\n"
-    .string "the true terror of TEAM ROCKET!\p"
-    .string "We'll show you how scary we are!$"
-
-SE_J_GoldenrodCity_RadioTower_1F_hns_RadioTower1F_EventScript_Grunt::
-	msgbox RadioTower1F_Text_GruntM3Seen, MSGBOX_NPC
-	end
-
 GoldenrodCity_RadioTower_1F_Text_LotteryCornerDrawTicket::
 	.string "This is the POKéMON LOTTERY CORNER.\p"
 	.string "If the LOTO TICKET's number matches\n"

@@ -1,60 +1,6 @@
 GoldenrodCity_UndergroundSwitches_hns_MapScripts::
 	.byte 0
 
-
-GoldenrodCity_UndergroundSwitches_EventScript_Grunt11::
-    trainerbattle_single TRAINER_GRUNT_11_HNS, GoldenrodUnderground_Text_GruntM13Seen, GoldenrodUnderground_Text_GruntM13Beaten
-	msgbox GoldenrodUnderground_Text_GruntM13After, MSGBOX_AUTOCLOSE
-	end
-
-GoldenrodUnderground_Text_GruntM13After::
-    .string "You must have ice in your veins to\n"
-    .string "diss TEAM ROCKET.$"
-
-GoldenrodUnderground_Text_GruntM13Beaten::
-    .string "Urk! Yeah, think you're cool, huh?$"
-
-GoldenrodUnderground_Text_GruntM13Seen::
-    .string "I don't care if you're lost.\p"
-    .string "You show up here, you're nothing but\n"
-    .string "a victim!$"
-
-GoldenrodCity_UndergroundSwitches_EventScript_Grunt20::
-    trainerbattle_single TRAINER_GRUNT_20_HNS, GoldenrodUnderground_Text_GruntM25Seen, GoldenrodUnderground_Text_GruntM25Beaten
-	msgbox GoldenrodUnderground_Text_GruntM25After, MSGBOX_AUTOCLOSE
-	end
-
-GoldenrodUnderground_Text_GruntM25After::
-    .string "All right. A hint!\p"
-    .string "Change the order of switching.\p"
-    .string "That'll change the ways the shutters\n"
-    .string "open and close.$"
-
-GoldenrodUnderground_Text_GruntM25Beaten::
-    .string "Uwww… I blew it.$"
-
-GoldenrodUnderground_Text_GruntM25Seen::
-    .string "Kwahaha!\p"
-    .string "Confounded by the shutters, are we?\p"
-    .string "I'll let you in on a secret if you\n"
-    .string "can beat me!$"
-
-GoldenrodCity_UndergroundSwitches_EventScript_Grunt10::
-    trainerbattle_single TRAINER_GRUNT_10_HNS, GoldenrodUnderground_Text_GruntM11Seen, GoldenrodUnderground_Text_GruntM11Beaten
-	msgbox GoldenrodUnderground_Text_GruntM11After, MSGBOX_AUTOCLOSE
-	end
-
-GoldenrodUnderground_Text_GruntM11After::
-    .string "I'm confused too… The switch on the\n"
-    .string "end is the one to press first, but…$"
-
-GoldenrodUnderground_Text_GruntM11Beaten::
-    .string "Drat! I was sunk by indecision!$"
-
-GoldenrodUnderground_Text_GruntM11Seen::
-    .string "Open one shutter, another closes.\p"
-    .string "Bet you can't get where you want!$"
-
 GoldenrodCity_UndergroundSwitches_EventScript_Duncan::
     trainerbattle_single TRAINER_DUNCAN_HNS, GoldenrodUnderground_Text_BurglarDuncanSeen, GoldenrodUnderground_Text_BurglarDuncanBeaten
 	msgbox GoldenrodUnderground_Text_BurglarDuncanAfter, MSGBOX_AUTOCLOSE
@@ -87,24 +33,6 @@ GoldenrodUnderground_Text_BurglarEddieSeen::
     .string "They ditched this project before they\n"
     .string "finished.\p"
     .string "I'm searching for leftover loot.$"
-
-GoldenrodCity_UndergroundSwitches_EventScript_Grunt27::
-    trainerbattle_single TRAINER_GRUNT_27_HNS, GoldenrodUnderground_Text_GruntF3Seen, GoldenrodUnderground_Text_GruntF3Beaten
-	msgbox GoldenrodUnderground_Text_GruntF3After, MSGBOX_AUTOCLOSE
-	end
-
-GoldenrodUnderground_Text_GruntF3After::
-    .string "Go wherever you'd like! Get lost!\n"
-    .string "See if I care!$"
-
-GoldenrodUnderground_Text_GruntF3Beaten::
-    .string "How could you?$"
-
-GoldenrodUnderground_Text_GruntF3Seen::
-    .string "Are you lost? No, you can't be.\p"
-    .string "You don't have that scared look.\p"
-    .string "I'll give you something to be\n"
-    .string "scared about!$"
 
 GoldenrodCity_UndergroundSwitches_EventScript_Item_Revive::
 	finditem ITEM_MAX_REVIVE
@@ -336,7 +264,6 @@ GoldenrodCity_UndergroundSwitches_EventScript_Panel2ActivateCorrect::
 	waitse
 	release
 	end
-
 
 @==============================================================================================================================================
 

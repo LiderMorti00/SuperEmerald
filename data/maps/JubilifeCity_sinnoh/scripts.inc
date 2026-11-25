@@ -1,7 +1,6 @@
 JubilifeCity_sinnoh_MapScripts::
 	.byte 0
 
-
 JubilifeCity_EventScript_PtNpc1::
 	msgbox JubilifeCity_Text_PtNpc1, MSGBOX_NPC
 	end
@@ -144,16 +143,6 @@ JubilifeCity_Text_PtNpc11::
 	.string "That will make the other TRAINER\n"
 	.string "double happy!$"
 
-JubilifeCity_EventScript_Dawn::
-	msgbox JubilifeCity_Text_SNJFollowD, MSGBOX_NPC
-	end
-
-JubilifeCity_Text_SNJFollowD::
-	.string "Oh, I know! Don't you think it's better\n"
-	.string "to know more about POKéMON?\p"
-	.string "Sure it is! I know just the place.\p"
-	.string "Come on! Don't be shy. Follow me!$"
-
 JubilifeCity_EventScript_Clown1::
 	lock
 	faceplayer
@@ -239,10 +228,6 @@ JubilifeCity_Text_ClownQuiz3::
 	.string "Last POKéNAV campaign quiz! Ready?\p"
 	.string "Can a POKéMON hold an item?$"
 
-JubilifeCity_EventScript_Rowan::
-
-	goto JubilifeCity_EventScript_Looker
-
 JubilifeCity_EventScript_CampaignComplete::
 	msgbox JubilifeCity_Text_CampaignComplete, MSGBOX_DEFAULT
 	release
@@ -251,7 +236,6 @@ JubilifeCity_EventScript_CampaignComplete::
 JubilifeCity_Text_CampaignComplete::
 	.string "There's our quiz winner!\n"
 	.string "How's that CATCHING CHARM working?$"
-
 
 JubilifeCity_EventScript_Looker::
 	lock

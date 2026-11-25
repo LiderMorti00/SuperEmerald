@@ -1,7 +1,6 @@
 Route205_South_sinnoh_MapScripts::
 	.byte 0
 
-
 Route205_South_EventScript_Daniel::
 	trainerbattle_single TRAINER_LEAH_SINNOH, Route205_South_Text_DanielIntro, Route205_South_Text_DanielDefeat
 	msgbox Route205_South_Text_DanielPost, MSGBOX_AUTOCLOSE
@@ -159,33 +158,6 @@ Route205_South_Text_ZackaryDefeat::
 Route205_South_Text_ZackaryIntro::
 	.string "It's a long way between FLOAROMA and\n"
 	.string "ETERNA CITY. So, let's battle!$"
-
-Route205_South_EventScript_BridgeGrunts::
-	msgbox Route205_South_Text_BridgeGrunts, MSGBOX_NPC
-	end
-
-Route205_South_Text_BridgeGrunts::
-	.string "Our research involves catching\n"
-	.string "POKéMON in the flowery meadows of\l"
-	.string "FLOAROMA.\p"
-	.string "We are also covertly stealing the\n"
-	.string "energy of the VALLEY WINDWORKS.\p"
-	.string "But that is of no concern to you!$"
-
-Route205_South_EventScript_Girl::
-	msgbox Route205_South_Text_Girl, MSGBOX_NPC
-	end
-
-Route205_South_Text_Girl::
-	.string "Help, help, TRAINER! Please, I want to\n"
-	.string "see my papa.\p"
-	.string "My papa and I lived at the VALLEY\n"
-	.string "WINDWORKS.\p"
-	.string "But then a whole bunch of people\n"
-	.string "dressed like spacemen came…\p"
-	.string "They kicked me out, and they're making\n"
-	.string "my papa do something.\p"
-	.string "Please, TRAINER! I miss my papa!$"
 
 Route205_South_EventScript_PtNpc1::
 	msgbox Route205_South_Text_PtNpc1, MSGBOX_NPC

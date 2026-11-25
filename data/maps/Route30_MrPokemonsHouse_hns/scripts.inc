@@ -1,15 +1,6 @@
 Route30_MrPokemonsHouse_hns_MapScripts::
 	.byte 0
 
-
-MrPokemonHouse_Text_AlwaysNewDiscoveries::
-	.string "Life is delightful!\n"
-	.string "Always, new discoveries to be made.$"
-
-SE_J_Route30_MrPokemonsHouse_hns_MrPokemonHouse_EventScript_MrPokemon::
-	msgbox MrPokemonHouse_Text_AlwaysNewDiscoveries, MSGBOX_NPC
-	end
-
 MrPokemonHouse_EventScript_Coins::
 	lock
 	msgbox MrPokemonHouse_Text_StrangeCoins, MSGBOX_SIGN

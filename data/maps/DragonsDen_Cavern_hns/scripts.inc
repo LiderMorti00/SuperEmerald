@@ -1,7 +1,6 @@
 DragonsDen_Cavern_hns_MapScripts::
 	.byte 0
 
-
 DragonsDen_Cavern_EventScript_Darin::
 	trainerbattle_single TRAINER_DARIN_HNS, DragonsDen_Cavern_Text_CooltrainermDarinSeen, DragonsDen_Cavern_Text_CooltrainermDarinBeaten
 	msgbox DragonsDen_Cavern_Text_CooltrainermDarinAfter, MSGBOX_AUTOCLOSE
@@ -82,22 +81,3 @@ DragonsDen_Cavern_EventScript_Item_Max_Potion::
 DragonsDen_Cavern_EventScript_Item_Dragon_Fang::
 	finditem ITEM_DRAGON_FANG
 	end
-
-DragonsDen_EventScript_ClairRematch::
-    lock
-    faceplayer
-    msgbox DragonsDen_Text_Clair, MSGBOX_DEFAULT
-    closemessage
-    fadescreenswapbuffers FADE_TO_BLACK
-    setflag FLAG_HIDE_DEN_CLAIR
-    removeobject LOCALID_DEN_CLAIR
-    fadescreenswapbuffers FADE_FROM_BLACK
-    clearflag FLAG_HIDE_DOJO_CLAIR
-    release
-    end
-
-DragonsDen_Text_Clair::
-    .string "{PLAYER}… So you're here.\p"
-    .string "If you think you can keep up,\n"
-    .string "with me, come to the FIGHTING\l"
-    .string "DOJO in SAFFRON.$"

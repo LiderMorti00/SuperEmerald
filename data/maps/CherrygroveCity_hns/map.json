@@ -38,7 +38,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_J_CherrygroveCity_hns_CherryGroveCity_EventScript_TriggerGent_Top",
+      "script": "0x0",
       "flag": "FLAG_HIDE_GUIDE_GENT_CHERRYGROVE"
     },
     {
@@ -208,21 +208,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
       "flag": "0"
-    },
-    {
-      "local_id": "LOCALID_CHERRYGROVE_SILVER",
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_SILVER_HNS",
-      "x": 65,
-      "y": 10,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "FLAG_HIDE_SILVER_CHERRYGROVE"
     }
   ],
   "warp_events": [

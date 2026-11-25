@@ -1,7 +1,6 @@
 EternaCity_GalacticBuilding_1F_sinnoh_MapScripts::
 	.byte 0
 
-
 EternaCity_GalacticBuilding_1F_EventScript_GruntWelcome::
 	msgbox EternaCity_GalacticBuilding_1F_Text_GruntWelcome, MSGBOX_NPC
 	end
@@ -57,20 +56,3 @@ EternaCity_GalacticBuilding_1F_Text_Grunt2Defeat::
 EternaCity_GalacticBuilding_1F_Text_Grunt2Intro::
 	.string "So sorry, sweetie. TEAM GALACTIC has\n"
 	.string "no room for kiddies!$"
-
-EternaCity_GalacticBuilding_1F_EventScript_SNLooker::
-	msgbox EternaCity_GalacticBuilding_1F_Text_SNFirstRate, MSGBOX_NPC
-	end
-
-EternaCity_GalacticBuilding_1F_Text_SNFirstRate::
-	.string "…Incidentally, you are a first-rate\n"
-	.string "TRAINER. Of that, I am very aware.\p"
-	.string "I therefore think you will be OK, but I\n"
-	.string "must warn you to be careful anyway.\p"
-	.string "Also, a word of advice.\p"
-	.string "This building, it has two stairs. One of\n"
-	.string "them, a trap it must be.\p"
-	.string "But the crooks of TEAM GALACTIC, they\n"
-	.string "do not appear, how shall I say, smart.\p"
-	.string "There should be an easy way to tell the\n"
-	.string "stairs apart!$"

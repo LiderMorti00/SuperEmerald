@@ -32,7 +32,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "IlexForest_EventScript_Boss",
+      "script": "0x0",
       "flag": "FLAG_HIDE_ILEX_FOREST_MASTER"
     },
     {
@@ -46,7 +46,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_J_IlexForest_hns_IlexForest_EventScript_Apprentice",
+      "script": "0x0",
       "flag": "FLAG_HIDE_ILEX_FOREST_APPRENTICE"
     },
     {
@@ -545,7 +545,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_J_IlexForest_hns_IlexForest_EventScript_SecondCelebi",
+      "script": "0x0",
       "flag": "FLAG_HIDE_ILEX_FOREST_SECOND_CELEBI"
     },
     {

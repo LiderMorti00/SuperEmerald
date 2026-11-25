@@ -1,19 +1,6 @@
 CherrygroveCity_hns_MapScripts::
 	.byte 0
 
-
-CherrygroveCity_Text_GuideGentIntro::
-	.string "You're a rookie TRAINER,\n"
-	.string "aren't you? I can tell!\p"
-	.string "That's OK! Everyone is a\n"
-	.string "rookie at some point!\p"
-	.string "If you'd like, I can teach\n"
-	.string "you a few things.$"
-
-SE_J_CherrygroveCity_hns_CherryGroveCity_EventScript_TriggerGent_Top::
-	msgbox CherrygroveCity_Text_GuideGentIntro, MSGBOX_NPC
-	end
-
 CherryGroveCity_EventScript_Fisherman::
 	lock
 	faceplayer

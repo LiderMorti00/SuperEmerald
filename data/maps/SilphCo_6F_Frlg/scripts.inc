@@ -75,16 +75,6 @@ SilphCo_6F_EventScript_FloorSign::
 	msgbox SilphCo_6F_Text_FloorSign, MSGBOX_SIGN
 	end
 
-SilphCo_6F_EventScript_Taylor::
-	trainerbattle_single TRAINER_SCIENTIST_TAYLOR, SilphCo_6F_Text_TaylorIntro, SilphCo_6F_Text_TaylorDefeat
-	msgbox SilphCo_6F_Text_TaylorPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-SilphCo_6F_EventScript_Grunt1::
-	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_30, SilphCo_6F_Text_Grunt1Intro, SilphCo_6F_Text_Grunt1Defeat
-	msgbox SilphCo_6F_Text_Grunt1PostBattle, MSGBOX_AUTOCLOSE
-	end
-
 SilphCo_6F_Text_RocketsTookOverBuilding::
 	.string "The ROCKETS came and took over\n"
 	.string "the building!$"
@@ -124,31 +114,6 @@ SilphCo_6F_Text_TargetedSilphForOurMonProducts::
 SilphCo_6F_Text_ComeWorkForSilphWhenYoureOlder::
 	.string "Come work for SILPH when you\n"
 	.string "get older.$"
-
-SilphCo_6F_Text_Grunt1Intro::
-	.string "I am one of the four ROCKET\n"
-	.string "BROTHERS!$"
-
-SilphCo_6F_Text_Grunt1Defeat::
-	.string "Flame out!$"
-
-SilphCo_6F_Text_Grunt1PostBattle::
-	.string "No matter!\n"
-	.string "My brothers will avenge me!$"
-
-SilphCo_6F_Text_TaylorIntro::
-	.string "That rotten PRESIDENT!\p"
-	.string "Serves him right for shipping me\n"
-	.string "off to the TIKSI BRANCH!\p"
-	.string "That's why TEAM ROCKET came after\n"
-	.string "us, I'm sure of it!$"
-
-SilphCo_6F_Text_TaylorDefeat::
-	.string "Shoot!$"
-
-SilphCo_6F_Text_TaylorPostBattle::
-	.string "TIKSI BRANCH?\n"
-	.string "It's in Russian no-man's-land!$"
 
 SilphCo_6F_Text_FloorSign::
 	.string "SILPH CO. HEAD OFFICE\n"

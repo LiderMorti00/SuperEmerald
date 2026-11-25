@@ -1,7 +1,6 @@
 Route217_sinnoh_MapScripts::
 	.byte 0
 
-
 Route217_EventScript_Shawn::
 	trainerbattle_single TRAINER_COLIN_SINNOH, Route217_Text_ShawnIntro, Route217_Text_ShawnDefeat
 	msgbox Route217_Text_ShawnPost, MSGBOX_AUTOCLOSE
@@ -187,37 +186,6 @@ Route217_Text_PtNpc1_0::
 	.string "POKéNAV.\p"
 	.string "I'm looking for things buried under the\n"
 	.string "snow.$"
-
-Route217_EventScript_SNMaylene::
-	lock
-	faceplayer
-	msgbox Route217_EventScript_SNMaylene_T1, MSGBOX_DEFAULT
-	msgbox Route217_EventScript_SNMaylene_T2, MSGBOX_DEFAULT
-	closemessage
-	setflag FLAG_SN_MET_MAYLENE_217
-	sn_walkto LOCALID_SN_MAYLENE, 19, 108, SN_SPEED_NORMAL, 0, 0, 0
-	waitmovement LOCALID_SN_MAYLENE
-	removeobject LOCALID_SN_MAYLENE
-	setflag FLAG_SN_HIDE_MAYLENE
-	release
-	end
-
-Route217_EventScript_SNMaylene_T2::
-	.string "Um, are you maybe on your way to\n"
-	.string "SNOWPOINT CITY?\p"
-	.string "That's where I'm going, too.\p"
-	.string "If I use FLY, I can get there instantly,\n"
-	.string "but I'm walking for my training.\p"
-	.string "I have no problem with this.\p"
-	.string "I'm used to the cold because I go\n"
-	.string "barefoot and lightly dressed.\p"
-	.string "…Achoo!\p"
-	.string "Oh, that was nothing. Really, I'm not\n"
-	.string "cold at all.\p"
-	.string "I'll be going now. Please take care!$"
-
-Route217_EventScript_SNMaylene_T1::
-	.string "MAYLENE: Oh, {PLAYER}!$"
 
 Route217_EventScript_SNIceRock::
 	msgbox Route217_EventScript_SNIceRock_Text, MSGBOX_SIGN

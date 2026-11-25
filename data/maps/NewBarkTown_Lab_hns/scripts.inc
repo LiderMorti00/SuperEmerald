@@ -6,7 +6,6 @@ NewBarkTown_Lab_hns_OnTransition:
 	setrespawn HEAL_LOCATION_NEW_BARK_TOWN_HNS
 	end
 
-
 NewBarkTown_EventScript_Aide1::
 	lock
 	faceplayer
@@ -81,18 +80,6 @@ SE_J_NewBarkTown_Lab_hns_NewBarkTown_EventScript_Aide2::
 
 NewBarkTown_Lab_Text_ShouldntTouch::
 	.string "Probably shouldn't touch!$"
-
-SE_J_NewBarkTown_Lab_hns_NewBarkTown_Lab_EventScript_ChikoritaBall::
-	msgbox NewBarkTown_Lab_Text_ShouldntTouch, MSGBOX_NPC
-	end
-
-SE_J_NewBarkTown_Lab_hns_NewBarkTown_Lab_EventScript_CyndaquilBall::
-	msgbox NewBarkTown_Lab_Text_ShouldntTouch, MSGBOX_NPC
-	end
-
-SE_J_NewBarkTown_Lab_hns_NewBarkTown_Lab_EventScript_TotodileBall::
-	msgbox NewBarkTown_Lab_Text_ShouldntTouch, MSGBOX_NPC
-	end
 
 NewBarkTown_Lab_EventScript_HealingMachine1::
 	lock

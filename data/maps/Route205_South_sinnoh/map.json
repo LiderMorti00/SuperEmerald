@@ -149,7 +149,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route205_South_EventScript_BridgeGrunts",
+      "script": "0x0",
       "flag": "FLAG_HIDE_ROUTE205_GRUNTS"
     },
     {
@@ -162,7 +162,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route205_South_EventScript_BridgeGrunts",
+      "script": "0x0",
       "flag": "FLAG_HIDE_ROUTE205_GRUNTS"
     },
     {
@@ -176,7 +176,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route205_South_EventScript_Girl",
+      "script": "0x0",
       "flag": "FLAG_HIDE_ROUTE205_GRUNTS"
     },
     {

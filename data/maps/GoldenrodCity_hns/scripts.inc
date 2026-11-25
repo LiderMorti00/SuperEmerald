@@ -2,7 +2,6 @@ GoldenrodCity_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, SE_EventScript_OroGoldenrodOnTransition
 	.byte 0
 
-
 GoldenrodCity_EventScript_Lass::
 	lock
 	faceplayer
@@ -41,18 +40,6 @@ GoldenrodCity_Text_HikerNight::
 	.string "it was day time… How long was I\l"
 	.string "in there?!$"
 
-GoldenrodCity_EventScript_Rocket6::
-	lock
-	faceplayer
-	msgbox GoldenrodCity_Text_Rocket6, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-GoldenrodCity_Text_Rocket6::
-	.string "Come and taste the terror of\n"
-	.string "TEAM ROCKET!$"
-
 GoldenrodCity_EventScript_Gramps::
 	lock
 	faceplayer
@@ -64,30 +51,6 @@ GoldenrodCity_EventScript_Gramps::
 GoldenrodCity_Text_Gramps::
 	.string "Whew! This town is so big,\n"
 	.string "I can't find anything at all.$"
-
-GoldenrodCity_EventScript_Rocket4::
-	lock
-	faceplayer
-	msgbox GoldenrodCity_Text_Rocket4, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-GoldenrodCity_Text_Rocket4::
-	.string "Our dream will soon come true…\p"
-	.string "It was a long, hard struggle…$"
-
-GoldenrodCity_EventScript_Rocket5::
-	lock
-	faceplayer
-	msgbox GoldenrodCity_Text_Rocket5, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-GoldenrodCity_Text_Rocket5::
-	.string "Hey, brat! You don't belong here!\n"
-	.string "Get lost already!$"
 
 GoldenrodCity_EventScript_Youngster::
 	msgbox GoldenrodCity_Text_Youngster1, MSGBOX_NPC
@@ -129,18 +92,6 @@ GoldenrodCity_Text_CooltrainerF1_Cleared::
 	.string "Was that man in black really part\n"
 	.string "of TEAM ROCKET? I can't believe it!$"
 
-GoldenrodCity_EventScript_Rocket1::
-	lock
-	faceplayer
-	msgbox GoldenrodCity_Text_Rocket1, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-GoldenrodCity_Text_Rocket1::
-	.string "Stay out of the way!\n"
-	.string "Beat it, kid!$"
-
 GoldenrodCity_Text_RocketScout1::
 	.string "So this is the RADIO TOWER…$"
 
@@ -159,30 +110,6 @@ GoldenrodCity_EventScript_PokefanM::
 GoldenrodCity_Text_PokefanM::
 	.string "They built the new RADIO TOWER\n"
 	.string "to replace the old creaky one.$"
-
-GoldenrodCity_EventScript_Rocket2::
-	lock
-	faceplayer
-	msgbox GoldenrodCity_Text_Rocket2, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-GoldenrodCity_Text_Rocket2::
-	.string "Take over the RADIO TOWER…\p"
-	.string "What? It's none of your business!$"
-
-GoldenrodCity_EventScript_Rocket3::
-	lock
-	faceplayer
-	msgbox GoldenrodCity_Text_Rocket3, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-GoldenrodCity_Text_Rocket3::
-	.string "POKéMON? They're just tools\n"
-	.string "we use to make money!$"
 
 GoldenrodCity_EventScript_Snubbull::
 	lock

@@ -29,16 +29,6 @@ SilphCo_9F_EventScript_FloorSign::
 	msgbox SilphCo_9F_Text_FloorSign, MSGBOX_SIGN
 	end
 
-SilphCo_9F_EventScript_Ed::
-	trainerbattle_single TRAINER_SCIENTIST_ED, SilphCo_9F_Text_EdIntro, SilphCo_9F_Text_EdDefeat
-	msgbox SilphCo_9F_Text_EdPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-SilphCo_9F_EventScript_Grunt2::
-	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_38, SilphCo_9F_Text_Grunt2Intro, SilphCo_9F_Text_Grunt2Defeat
-	msgbox SilphCo_9F_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
-	end
-
 SilphCo_9F_Text_YouShouldTakeQuickNap::
 	.string "You look tired.\n"
 	.string "You should take a quick nap.$"
@@ -48,28 +38,6 @@ SilphCo_9F_Text_DontGiveUp::
 
 SilphCo_9F_Text_StaffRestArea::
 	.string "This is the staff rest area.$"
-
-SilphCo_9F_Text_EdIntro::
-	.string "Your POKéMON have weak points!\n"
-	.string "I can nail them!$"
-
-SilphCo_9F_Text_EdDefeat::
-	.string "You hammered me!$"
-
-SilphCo_9F_Text_EdPostBattle::
-	.string "Exploiting weak spots does work.\n"
-	.string "Think about type advantages.$"
-
-SilphCo_9F_Text_Grunt2Intro::
-	.string "I am one of the four ROCKET\n"
-	.string "BROTHERS!$"
-
-SilphCo_9F_Text_Grunt2Defeat::
-	.string "Warg!\n"
-	.string "Brothers, I lost!$"
-
-SilphCo_9F_Text_Grunt2PostBattle::
-	.string "My brothers will avenge me!$"
 
 SilphCo_9F_Text_FloorSign::
 	.string "SILPH CO. HEAD OFFICE\n"

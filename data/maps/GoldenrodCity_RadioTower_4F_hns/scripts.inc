@@ -1,41 +1,6 @@
 GoldenrodCity_RadioTower_4F_hns_MapScripts::
 	.byte 0
 
-
-GoldenrodCity_RadioTower_4F4_EventScript_Scientist::
-	trainerbattle_single TRAINER_RICH_HNS, GoldenrodCity_RadioTower_4F4_Text_ScientistRichSeen, GoldenrodCity_RadioTower_4F4_Text_ScientistRichBeaten
-	msgbox GoldenrodCity_RadioTower_4F4_Text_ScientistRichAfter, MSGBOX_AUTOCLOSE
-	end
-
-GoldenrodCity_RadioTower_4F4_Text_ScientistRichAfter::
-	.string "Do you honestly believe you can stop\n"
-	.string "TEAM ROCKET?$"
-
-GoldenrodCity_RadioTower_4F4_Text_ScientistRichBeaten::
-	.string "Hmmm…\p"
-	.string "All grand plans come with snags.$"
-
-GoldenrodCity_RadioTower_4F4_Text_ScientistRichSeen::
-	.string "Most excellent.\p"
-	.string "This RADIO TOWER will fulfill our\n"
-	.string "grand design.$"
-
-GoldenrodRaidoTower4_EventScript_Grunt9::
-	trainerbattle_single TRAINER_GRUNT_9_HNS, GoldenrodCity_RadioTower_4F4_Text_GruntM10Seen, GoldenrodCity_RadioTower_4F4_Text_GruntM10Beaten
-	msgbox GoldenrodCity_RadioTower_4F4_Text_GruntM10After, MSGBOX_AUTOCLOSE
-	end
-
-GoldenrodCity_RadioTower_4F4_Text_GruntM10After::
-	.string "I don't believe it! I was beaten!$"
-
-GoldenrodCity_RadioTower_4F4_Text_GruntM10Beaten::
-	.string "No! Unbelievable!$"
-
-GoldenrodCity_RadioTower_4F4_Text_GruntM10Seen::
-	.string "You plan to rescue the DIRECTOR?\p"
-	.string "That won't be possible because I'm\n"
-	.string "going to beat you!$"
-
 GoldenrodCity_RadioTower_4F4_EventScript_Fisher::
 	lock
 	faceplayer
@@ -56,47 +21,6 @@ GoldenrodCity_RadioTower_4F4_Text_DJMaryAfter::
 SE_J_GoldenrodCity_RadioTower_4F_hns_GoldenrodCity_RadioTower_4F4_EventScript_Mary::
 	msgbox GoldenrodCity_RadioTower_4F4_Text_DJMaryAfter, MSGBOX_NPC
 	end
-
-GoldenrodRaidoTower4_EventScript_Grunt28::
-	trainerbattle_single TRAINER_GRUNT_28_HNS, GoldenrodCity_RadioTower_4F4_Text_GruntF4Seen, GoldenrodCity_RadioTower_4F4_Text_GruntF4Beaten
-	msgbox GoldenrodCity_RadioTower_4F4_Text_GruntF4After, MSGBOX_AUTOCLOSE
-	end
-
-GoldenrodCity_RadioTower_4F4_Text_GruntF4After::
-	.string "I love my beautiful self!\p"
-	.string "Who cares about POKéMON?$"
-
-GoldenrodCity_RadioTower_4F4_Text_GruntF4Beaten::
-	.string "Oh, no! They're so useless!$"
-
-GoldenrodCity_RadioTower_4F4_Text_GruntF4Seen::
-	.string "Don't I think POKéMON are cute?\p"
-	.string "I'll think my POKéMON are cute--\p"
-	.string "after they beat yours!$"
-
-GoldenrodRaidoTower4_EventScript_Proton::
-	trainerbattle_single TRAINER_PROTON_2_HNS, GoldenrodCity_RadioTower_4F4_Text_Proton_Seen, GoldenrodCity_RadioTower_4F4_Text_Proton_Beaten
-	msgbox GoldenrodCity_RadioTower_4F4_Text_Proton_After, MSGBOX_AUTOCLOSE
-	end
-
-GoldenrodCity_RadioTower_4F4_Text_Proton_After::
-	.string "PROTON: You may have won this\n"
-	.string "time… But all you did was make\p"
-	.string "TEAM ROCKET's wrath grow.$"
-
-GoldenrodCity_RadioTower_4F4_Text_Proton_Beaten::
-	.string "Phew…$"
-
-GoldenrodCity_RadioTower_4F4_Text_Proton_Seen::
-	.string "PROTON: Now wait just one second!\p"
-	.string "Aren't you the one who got in our\n"
-	.string "way at SLOWPOKE WELL?\p"
-	.string "I see… You're doing all this\n"
-	.string "because you want to make me angry.\l"
-	.string "Be careful!\p"
-	.string "But since you seem to wish it, I'll\n"
-	.string "show you the full extent of a TEAM\l"
-	.string "ROCKET EXECUTIVE's wrath!$"
 
 GoldenrodCity_RadioTower_4F4_EventScript_Meowth::
 	lock

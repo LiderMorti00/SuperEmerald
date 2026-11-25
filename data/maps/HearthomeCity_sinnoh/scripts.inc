@@ -1,7 +1,6 @@
 HearthomeCity_sinnoh_MapScripts::
 	.byte 0
 
-
 HearthomeCity_EventScript_PtNpc1::
 	lock
 	faceplayer
@@ -254,40 +253,6 @@ HearthomeCity_EventScript_PtNpc17::
 
 HearthomeCity_Text_PtNpc17_0::
 	.string "Papa! Mama!$"
-
-HearthomeCity_EventScript_SNKeira::
-	lock
-	faceplayer
-	msgbox HearthomeCity_EventScript_SNKeira_T1, MSGBOX_DEFAULT
-	closemessage
-	playmoncry SPECIES_BUNEARY, CRY_MODE_NORMAL
-	waitmoncry
-	msgbox HearthomeCity_EventScript_SNKeira_T2, MSGBOX_DEFAULT
-	removeobject LOCALID_SN_BUNEARY
-	msgbox HearthomeCity_EventScript_SNKeira_T3, MSGBOX_DEFAULT
-	closemessage
-	setflag FLAG_SN_MET_KEIRA
-	sn_walkto LOCALID_SN_KEIRA, 8, 46, SN_SPEED_NORMAL, 0, 0, 0
-	waitmovement LOCALID_SN_KEIRA
-	removeobject LOCALID_SN_KEIRA
-	setflag FLAG_SN_HIDE_KEIRA
-	release
-	end
-
-HearthomeCity_EventScript_SNKeira_T3::
-	.string "I'm KEIRA! I'm a POKéMON CONTEST Judge.\p"
-	.string "Be sure to drop by the CONTEST Hall so\n"
-	.string "I can thank you properly!$"
-
-HearthomeCity_EventScript_SNKeira_T2::
-	.string "Baby BUNEARY, back into the POKé BALL\n"
-	.string "you go!$"
-
-HearthomeCity_EventScript_SNKeira_T1::
-	.string "Oh, thank goodness that you happened\n"
-	.string "to be there!\p"
-	.string "If it weren't for you, who knows how\n"
-	.string "far away my BUNEARY could have run…$"
 
 HearthomeCity_EventScript_SNGymBlock::
 	msgbox HearthomeCity_EventScript_SNGymBlock_T, MSGBOX_NPC

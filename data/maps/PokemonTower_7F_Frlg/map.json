@@ -42,7 +42,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "PokemonTower_7F_EventScript_Grunt1",
+      "script": "0x0",
       "flag": "FLAG_HIDE_TOWER_ROCKET_1"
     },
     {
@@ -57,7 +57,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "PokemonTower_7F_EventScript_Grunt2",
+      "script": "0x0",
       "flag": "FLAG_HIDE_TOWER_ROCKET_2"
     },
     {
@@ -72,7 +72,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "PokemonTower_7F_EventScript_Grunt3",
+      "script": "0x0",
       "flag": "FLAG_HIDE_TOWER_ROCKET_3"
     },
     {

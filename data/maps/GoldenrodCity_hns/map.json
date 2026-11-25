@@ -65,7 +65,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "GoldenrodCity_EventScript_Rocket6",
+      "script": "0x0",
       "flag": "FLAG_HIDE_GOLDENROD_ROCKETS"
     },
     {
@@ -93,7 +93,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "GoldenrodCity_EventScript_Rocket4",
+      "script": "0x0",
       "flag": "FLAG_HIDE_GOLDENROD_ROCKETS"
     },
     {
@@ -107,7 +107,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "GoldenrodCity_EventScript_Rocket5",
+      "script": "0x0",
       "flag": "FLAG_HIDE_GOLDENROD_ROCKETS"
     },
     {
@@ -163,7 +163,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "GoldenrodCity_EventScript_Rocket1",
+      "script": "0x0",
       "flag": "FLAG_HIDE_GOLDENROD_ROCKETS"
     },
     {
@@ -206,7 +206,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "GoldenrodCity_EventScript_Rocket2",
+      "script": "0x0",
       "flag": "FLAG_HIDE_GOLDENROD_ROCKETS"
     },
     {
@@ -220,7 +220,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "GoldenrodCity_EventScript_Rocket3",
+      "script": "0x0",
       "flag": "FLAG_HIDE_GOLDENROD_ROCKETS"
     },
     {
@@ -430,7 +430,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "GoldenrodCity_EventScript_Rocket5",
+      "script": "0x0",
       "flag": "FLAG_HIDE_GOLDENROD_ROCKETS"
     },
     {
@@ -444,7 +444,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "GoldenrodCity_EventScript_Rocket5",
+      "script": "0x0",
       "flag": "FLAG_HIDE_GOLDENROD_ROCKETS"
     },
     {
@@ -458,7 +458,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "GoldenrodCity_EventScript_Rocket5",
+      "script": "0x0",
       "flag": "FLAG_HIDE_GOLDENROD_ROCKETS"
     },
     {

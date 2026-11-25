@@ -1,8 +1,6 @@
 Route202_sinnoh_MapScripts::
 	.byte 0
 
-Route202_EventScript_Dawn::
-
 Route202_EventScript_Tristan::
 	trainerbattle_single TRAINER_BILLY_SINNOH, Route202_Text_TristanIntro, Route202_Text_TristanDefeat
 	specialvar VAR_RESULT, ShouldTryRematchBattle

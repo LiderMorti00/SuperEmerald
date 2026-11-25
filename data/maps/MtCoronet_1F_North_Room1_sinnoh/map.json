@@ -251,7 +251,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MtCoronet_1F_North_Room1_EventScript_SNFog1",
+      "script": "0x0",
       "flag": "FLAG_SN_HIDE_FOG_GRUNTS"
     },
     {
@@ -266,7 +266,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "MtCoronet_1F_North_Room1_EventScript_SNFog2",
+      "script": "0x0",
       "flag": "FLAG_SN_HIDE_FOG_GRUNTS"
     },
     {

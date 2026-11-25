@@ -1,27 +1,6 @@
 SlowpokeWell_B1F_hns_MapScripts::
 	.byte 0
 
-
-SlowpokeWell_B1F_EventScript_Kurt::
-	lock
-	msgbox SlowpokeWell_B1F_Text_KurtIntro, MSGBOX_DEFAULT
-	closemessage
-	end
-
-SlowpokeWell_B1F_Text_KurtIntro::
-	.string "KURT: Hey there, {PLAYER}!\p"
-	.string "The guard up top took off when\n"
-	.string "I shouted at him.\p"
-	.string "But then I took a tumble down\n"
-	.string "the WELL.\p"
-	.string "I slammed down hard on my back,\n"
-	.string "so I can't move.\p"
-	.string "Rats! If I were fit, my POKéMON\n"
-	.string "would've punished them…\p"
-	.string "Ah, it can't be helped.\p"
-	.string "{PLAYER}, show them how gutsy\n"
-	.string "you are in my place!$"
-
 SlowpokeWell_B1F_EventScript_Grunt21::
 	trainerbattle_single TRAINER_GRUNT_21_HNS, SlowpokeWell_B1F_Text_GruntM29Seen, SlowpokeWell_B1F_Text_GruntM29Beaten
 	msgbox SlowpokeWell_B1F_Text_GruntM29After, MSGBOX_AUTOCLOSE

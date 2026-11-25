@@ -1,47 +1,6 @@
 ValleyWindworks_sinnoh_MapScripts::
 	.byte 0
 
-
-ValleyWindworks_EventScript_DoorGrunt::
-	trainerbattle_single TRAINER_CHARLIE_SINNOH, ValleyWindworks_Text_DoorIntro, ValleyWindworks_Text_DoorDefeat, ValleyWindworks_EventScript_DoorGruntFlees
-	msgbox ValleyWindworks_Text_DoorDefeat, MSGBOX_AUTOCLOSE
-	end
-
-ValleyWindworks_Text_DoorDefeat::
-	.string "Tch! Lucky kid!$"
-
-ValleyWindworks_EventScript_DoorGruntFlees::
-	msgbox ValleyWindworks_Text_DoorFlee, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_WINDWORKS_DOOR_GRUNT, Common_Movement_WalkUp
-	waitmovement 0
-	playse SE_DOOR
-	removeobject LOCALID_WINDWORKS_DOOR_GRUNT
-	setflag FLAG_HIDE_WINDWORKS_DOOR_GRUNT
-	playse SE_PIN
-	msgbox ValleyWindworks_Text_Locked, MSGBOX_DEFAULT
-	release
-	end
-
-ValleyWindworks_Text_Locked::
-	.string "It's locked from inside!$"
-
-ValleyWindworks_Text_DoorFlee::
-	.string "Isn't that just great. Getting owned\n"
-	.string "by some kid.\p"
-	.string "But you can't do a thing if I lock\n"
-	.string "myself in with my Works Key!\p"
-	.string "That's right, the other Works Key's not\n"
-	.string "here!\p"
-	.string "My cohorts in the flower patch have\n"
-	.string "the only other one!\p"
-	.string "Hahaha! In that sense, I'm no longer\n"
-	.string "the loser!$"
-
-ValleyWindworks_Text_DoorIntro::
-	.string "GRUNT: The WINDWORKS belongs to\n"
-	.string "TEAM GALACTIC now! Get lost!$"
-
 ValleyWindworks_EventScript_Looker::
 	lock
 	faceplayer

@@ -1,10 +1,6 @@
 Route203_sinnoh_MapScripts::
 	.byte 0
 
-
-Route203_EventScript_Barry::
-
-
 Route203_EventScript_Sebastian::
 	trainerbattle_single TRAINER_EDDIE_SINNOH, Route203_Text_SebastianIntro, Route203_Text_SebastianDefeat
 	msgbox Route203_Text_SebastianPost, MSGBOX_AUTOCLOSE

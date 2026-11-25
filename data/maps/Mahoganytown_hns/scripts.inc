@@ -8,7 +8,6 @@ Mahoganytown_OnLoad::
 	setmetatile 19, 8, 0x379, FALSE
 	end
 
-
 MahoganyTown_Text_Gramps::
 	.string "Are you off to see the LAKE OF\n"
 	.string "RAGE? It's a fine place to fish.$"
@@ -73,20 +72,6 @@ MahoganyTown_Text_MerchantNo::
 MahoganyTown_Text_MerchantNoMoney::
 	.string "Hm? You don't have enough money.\n"
 	.string "Come back when you do!$"
-
-MahoganyTown_EventScript_Fisher::
-	lock
-	faceplayer
-	msgbox MahoganyTown_Text_Fisher, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-MahoganyTown_Text_Fisher::
-    .string "Since you came this far, take the\n"
-    .string "time to do some sightseeing.\p"
-    .string "You should head north and check\n"
-    .string "out LAKE OF RAGE right now.$"
 
 MahoganyTown_EventScript_Sign::
 	lock

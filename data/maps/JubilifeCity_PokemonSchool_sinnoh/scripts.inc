@@ -1,7 +1,6 @@
 JubilifeCity_PokemonSchool_sinnoh_MapScripts::
 	.byte 0
 
-
 JubilifeCity_PokemonSchool_EventScript_PtNpc1::
 	msgbox JubilifeCity_PokemonSchool_Text_PtNpc1, MSGBOX_NPC
 	end
@@ -100,9 +99,6 @@ JubilifeCity_PokemonSchool_Text_PtNpc6::
 	.string "POKéMON.\p"
 	.string "I'm not sure if we can do this\n"
 	.string "properly, but may we battle?$"
-
-JubilifeCity_PokemonSchool_EventScript_Barry::
-
 
 JubilifeCity_PokemonSchool_EventScript_Harrison::
 	trainerbattle_single TRAINER_DAISY_SINNOH, JubilifeCity_PokemonSchool_Text_HarrisonIntro, JubilifeCity_PokemonSchool_Text_HarrisonDefeat

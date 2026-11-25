@@ -1,7 +1,6 @@
 CelesticTown_sinnoh_MapScripts::
 	.byte 0
 
-
 CelesticTown_EventScript_PtNpc1::
 	msgbox CelesticTown_Text_PtNpc1, MSGBOX_NPC
 	end
@@ -85,50 +84,6 @@ CelesticTown_Text_SNWillYouMess::
 	.string "you down with a POKéMON battle.\p"
 	.string "So, what's it going to be? Are you going\n"
 	.string "to mess with me?$"
-
-CelesticTown_EventScript_SNCynthia::
-	lock
-	faceplayer
-	msgbox CelesticTown_EventScript_SNCynthia_T1, MSGBOX_DEFAULT
-	msgbox CelesticTown_EventScript_SNCynthia_T2, MSGBOX_DEFAULT
-	msgbox CelesticTown_EventScript_SNCynthia_T3, MSGBOX_DEFAULT
-	closemessage
-	sn_walkto LOCALID_SN_CEL_CYNTHIA, 18, 13, SN_SPEED_NORMAL, 0, 0, 0
-	waitmovement LOCALID_SN_CEL_CYNTHIA
-	removeobject LOCALID_SN_CEL_CYNTHIA
-	setflag FLAG_SN_HIDE_CEL_CYNTHIA
-	release
-	end
-
-CelesticTown_EventScript_SNCynthia_T3::
-	.string "By the way, were the ruins fun to\n"
-	.string "explore?\p"
-	.string "If you're interested, there is a library\n"
-	.string "in CANALAVE CITY.\p"
-	.string "It's stocked with ancient books. You\n"
-	.string "can look up SINNOH history there.\p"
-	.string "It might help you complete your\n"
-	.string "POKéDEX, too.\p"
-	.string "The quickest way to CANALAVE CITY is\n"
-	.string "to go west from JUBILIFE CITY.$"
-
-CelesticTown_EventScript_SNCynthia_T2::
-	.string "But those TEAM GALACTIC people…! I\n"
-	.string "thought they were harmless.\p"
-	.string "The bizarre ways they dress, and all\n"
-	.string "their wild claims about making a new\p"
-	.string "universe…\p"
-	.string "I thought it was just silly talk.\n"
-	.string "Nothing to take seriously.\p"
-	.string "But they're surprisingly more trouble\n"
-	.string "than expected.\p"
-	.string "Trying to monopolize POKéMON just\n"
-	.string "isn't acceptable!$"
-
-CelesticTown_EventScript_SNCynthia_T1::
-	.string "CYNTHIA: Was everything all right here?\p"
-	.string "You saw those strange people with a\n"
-	.string "GALACTIC Bomb, didn't you?$"
 
 CelesticTown_EventScript_SNElderOut::
 	msgbox CelesticTown_Text_SNOddSpaceman, MSGBOX_NPC

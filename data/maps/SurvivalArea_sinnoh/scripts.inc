@@ -6,7 +6,6 @@ SurvivalArea_OnTransition::
 	call_if_unset FLAG_SE_SINNOH_LEAGUE_CLEARED, SE_EventScript_HideRival
 	end
 
-
 SurvivalArea_EventScript_PtNpc1::
 	msgbox SurvivalArea_Text_PtNpc1, MSGBOX_NPC
 	end
@@ -143,23 +142,6 @@ SurvivalArea_Text_SNBarryTalk1::
 	.string "though?\p"
 	.string "When people talk about POKéMON, they\n"
 	.string "all start smiling!$"
-
-SurvivalArea_EventScript_SNBuck::
-	lock
-	faceplayer
-	msgbox SurvivalArea_Text_SNBuck, MSGBOX_DEFAULT
-	closemessage
-	setflag FLAG_SN_SURVIVAL_BUCK
-	fadescreen FADE_TO_BLACK
-	removeobject LOCALID_SN_SURV_BUCK
-	setflag FLAG_SN_HIDE_SURV_BUCK
-	fadescreen FADE_FROM_BLACK
-	release
-	end
-
-SurvivalArea_Text_SNBuck::
-	.string "BUCK: Yo, if it isn't {PLAYER}!\p"
-	.string "This! It's my place! Drop in, hey?$"
 
 SurvivalArea_EventScript_PtSign1::
 	msgbox SurvivalArea_Text_PtSign1, MSGBOX_SIGN

@@ -1,7 +1,6 @@
 EcruteakCity_hns_MapScripts::
 	.byte 0
 
-
 EcruteakCity_EventScript_Lass::
 	lock
 	faceplayer
@@ -13,19 +12,6 @@ EcruteakCity_EventScript_Lass::
 EcruteakCity_Text_Lass1::
 	.string "I'm going to practice at the DANCE\n"
 	.string "THEATER. Care to join me?$"
-
-EcruteakCity_EventScript_SageGym::
-	lock
-	faceplayer
-	msgbox EcruteakCity_Text_SageGym, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-EcruteakCity_Text_SageGym::
-	.string "GYM LEADER MORTY is not here right\n"
-	.string "now. You may find him at the\l"
-	.string "BURNED TOWER.$"
 
 EcruteakCity_EventScript_SageRight::
 	lock

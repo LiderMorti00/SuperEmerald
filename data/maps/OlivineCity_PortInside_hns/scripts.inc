@@ -6,7 +6,6 @@ OlivineCity_PortInside_hns_OnFrame:
 	map_script_2 VAR_SE_JOHTO_ARRIVAL, 1, SE_EventScript_OlivineJasmineArrival
 	.2byte 0
 
-
 OlivinePort_Text_AskBoard::
     .string "Welcome to FAST SHIP S.S.AQUA.\p"
     .string "Will you be boarding today?$"
@@ -47,18 +46,3 @@ OlivinePort_EventScript_Fisher1::
 OlivinePort_Text_FishingGuru1::
     .string "SHELLDER are easy to catch here.\p"
     .string "They're kind of rare elsewhere.$"
-
-OlivineCity_PortInside_Text_Nationaldex1::
-	.string "PROF.OAK: Hello!\n"
-	.string "You are starting to have the\l"
-	.string "attitude of a CHAMPION, {PLAYER}!\p"
-	.string "It's time for your POKéDEX to\n"
-	.string "match who you are.\p"
-	.string "Let me see your POKéDEX for a\n"
-	.string "second.\p"
-	.string "I'll upgrade your POKéDEX with the\n"
-	.string "NATIONAL MODE.$"
-
-SE_J_OlivineCity_PortInside_hns_OlivineCity_PortInside_EventScript_Oak::
-	msgbox OlivineCity_PortInside_Text_Nationaldex1, MSGBOX_NPC
-	end

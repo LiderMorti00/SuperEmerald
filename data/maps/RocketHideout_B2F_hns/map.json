@@ -71,7 +71,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_J_RocketHideout_B2F_hns_RocketHideout_B2F_EventScript_Electrode",
+      "script": "0x0",
       "flag": "FLAG_HIDE_ROCKETHIDEOUT_ELECTRODE1"
     },
     {
@@ -85,7 +85,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_J_RocketHideout_B2F_hns_RocketHideout_B2F_EventScript_Electrode",
+      "script": "0x0",
       "flag": "FLAG_HIDE_ROCKETHIDEOUT_ELECTRODE2"
     },
     {
@@ -99,7 +99,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_J_RocketHideout_B2F_hns_RocketHideout_B2F_EventScript_Electrode",
+      "script": "0x0",
       "flag": "FLAG_HIDE_ROCKETHIDEOUT_ELECTRODE3"
     },
     {
@@ -143,7 +143,7 @@
       "movement_range_y": 8,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "8",
-      "script": "RocketHideout_B2F_EventScript_Grunt14",
+      "script": "0x0",
       "flag": "FLAG_HIDE_MAHOGANY_ROCKETS"
     },
     {
@@ -157,7 +157,7 @@
       "movement_range_y": 6,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "RocketHideout_B2F_EventScript_Grunt15",
+      "script": "0x0",
       "flag": "FLAG_HIDE_MAHOGANY_ROCKETS"
     },
     {
@@ -171,7 +171,7 @@
       "movement_range_y": 6,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "6",
-      "script": "RocketHideout_B2F_EventScript_Grunt16",
+      "script": "0x0",
       "flag": "FLAG_HIDE_MAHOGANY_ROCKETS"
     },
     {
@@ -215,7 +215,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_J_RocketHideout_B2F_hns_RocketHideout_B2F_EventScript_ReadyForBattlePrompt",
+      "script": "0x0",
       "flag": "FLAG_HIDE_ROCKETHIDEOUT2_ARIANA_AND_GRUNT"
     },
     {

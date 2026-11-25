@@ -1,7 +1,6 @@
 OlivineCity_Lighthouse_hns_MapScripts::
 	.byte 0
 
-
 OlivineLighthouse_EventScript_1FPokefanF::
 	lock
 	faceplayer
@@ -225,20 +224,6 @@ OlivineLighthouse_Text_SailorErnestSeen::
 	.string "I was going to challenge JASMINE\n"
 	.string "at the GYM after my shift.\p"
 	.string "Care to help me warm up?$"
-
-OlivineLighthouse_Text_JasmineCianwoodPharmacy::
-	.string "JASMINE: …This POKéMON always kept\n"
-	.string "the sea lit at night.\p"
-	.string "…But it suddenly got sick… It's\n"
-	.string "gasping for air…\p"
-	.string "…I understand that there is a\n"
-	.string "wonderful PHARMACY in CIANWOOD…\p"
-	.string "But that's across the sea…\n"
-	.string "And I can't leave AMPHY unattended…$"
-
-SE_J_OlivineCity_Lighthouse_hns_OlivineLighthouse_EventScript_Jasmine::
-	msgbox OlivineLighthouse_Text_JasmineCianwoodPharmacy, MSGBOX_NPC
-	end
 
 OlivineLighthouse_Text_AmphyPaluPalulu::
 	.string "AMPHY: Palu! Palulu!$"

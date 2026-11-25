@@ -1,7 +1,6 @@
 VeilstoneCity_sinnoh_MapScripts::
 	.byte 0
 
-
 VeilstoneCity_EventScript_PtNpc1::
 	msgbox VeilstoneCity_Text_PtNpc1, MSGBOX_NPC
 	end
@@ -131,97 +130,6 @@ VeilstoneCity_Text_PtNpc10_0::
 	.string "have meteorites!\p"
 	.string "This has nothing to do with anything,\n"
 	.string "but take this Technical Machine!$"
-
-VeilstoneCity_EventScript_SNGymCP::
-	lock
-	faceplayer
-	checkplayergender
-	goto_if_eq VAR_RESULT, FEMALE, VeilstoneCity_EventScript_SNGymCP_A_L
-	msgbox VeilstoneCity_EventScript_SNGymCP_A_D, MSGBOX_DEFAULT
-	goto VeilstoneCity_EventScript_SNGymCP_A_N
-
-VeilstoneCity_EventScript_SNGymCP_A_N::
-	checkplayergender
-	goto_if_eq VAR_RESULT, FEMALE, VeilstoneCity_EventScript_SNGymCP_B_L
-	msgbox VeilstoneCity_EventScript_SNGymCP_B_D, MSGBOX_DEFAULT
-	goto VeilstoneCity_EventScript_SNGymCP_B_N
-
-VeilstoneCity_EventScript_SNGymCP_B_N::
-	release
-	end
-
-VeilstoneCity_EventScript_SNGymCP_B_D::
-	.string "So, uh, {PLAYER}. Good luck on your GYM\n"
-	.string "challenge.$"
-
-VeilstoneCity_EventScript_SNGymCP_B_L::
-	msgbox VeilstoneCity_EventScript_SNGymCP_B_Lu, MSGBOX_DEFAULT
-	goto VeilstoneCity_EventScript_SNGymCP_B_N
-
-VeilstoneCity_EventScript_SNGymCP_B_Lu::
-	.string "So, uh, yeah, {PLAYER}. Good luck with\n"
-	.string "the POKéMON GYM.$"
-
-VeilstoneCity_EventScript_SNGymCP_A_D::
-	.string "DAWN: {PLAYER}, are you going to take\n"
-	.string "the GYM challenge?\p"
-	.string "Gee, you keep getting tougher and\n"
-	.string "tougher, don't you?\p"
-	.string "Me? Well, I went shopping at the\n"
-	.string "department store, and…\p"
-	.string "I mean, well, of course I've been\n"
-	.string "working on my POKéDEX, but…$"
-
-VeilstoneCity_EventScript_SNGymCP_A_L::
-	msgbox VeilstoneCity_EventScript_SNGymCP_A_Lu, MSGBOX_DEFAULT
-	goto VeilstoneCity_EventScript_SNGymCP_A_N
-
-VeilstoneCity_EventScript_SNGymCP_A_Lu::
-	.string "LUCAS: Hey! {PLAYER}, are you going to\n"
-	.string "take on the GYM LEADER?\p"
-	.string "Wow, you just keep getting tougher and\n"
-	.string "tougher.\p"
-	.string "Me? Well, I took a look in the Game\n"
-	.string "Corner, and…\p"
-	.string "I mean, yeah, of course I've been\n"
-	.string "working on my POKéDEX, but…\p"
-	.string "Anyway, keep it up!$"
-
-VeilstoneCity_EventScript_SNGymWake::
-	lock
-	faceplayer
-	msgbox VeilstoneCity_EventScript_SNGymWake_T1, MSGBOX_DEFAULT
-	msgbox VeilstoneCity_EventScript_SNGymWake_T2, MSGBOX_DEFAULT
-	msgbox VeilstoneCity_EventScript_SNGymWake_T3, MSGBOX_DEFAULT
-	release
-	end
-
-VeilstoneCity_EventScript_SNGymWake_T3::
-	.string "Whoops! I'd better tell you who I am!\p"
-	.string "I'm the triple-threat GYM LEADER in\n"
-	.string "POKéMON, wrestling, and song.\p"
-	.string "I'm CRASHER WAKE of PASTORIA GYM! We'll\n"
-	.string "meet again!$"
-
-VeilstoneCity_EventScript_SNGymWake_T2::
-	.string "Hello, dude and young lady! You're\n"
-	.string "challenging the GYM LEADER,\p"
-	.string "are you?\p"
-	.string "Let me tell you now, she's young, but\n"
-	.string "she's a born genius.\p"
-	.string "I tried training with her, and I was\n"
-	.string "stunned by how tough she was!$"
-
-VeilstoneCity_EventScript_SNGymWake_T1::
-	.string "The ring is my roiling sea.\n"
-	.string "The towering waves shaped me.\p"
-	.string "Crash! Crash! CRASHER WAKE! Crash!\n"
-	.string "Crash! CRASHER WAKE!\p"
-	.string "I'm the tidal wave of power to wash you\n"
-	.string "away!\p"
-	.string "Put out the fire, CRASHER WAKE! Run\n"
-	.string "from electricity, CRASHER WAKE!\p"
-	.string "Ah, ah, aaaah! The ring is my sea.$"
 
 VeilstoneCity_EventScript_SNWHGrunt0::
 	msgbox VeilstoneCity_EventScript_SNWHGrunt0_T, MSGBOX_NPC

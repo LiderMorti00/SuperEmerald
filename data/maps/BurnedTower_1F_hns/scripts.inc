@@ -7,38 +7,6 @@ BurnedTower_1F_OnLoad::
 	setmetatile 16, 12, 0x37E, FALSE
 	end
 
-
-BurnedTower_1F_EventScript_Eusine::
-	lock
-	faceplayer
-	msgbox BurnedTower_1FEusineText, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-BurnedTower_1FEusineText::
-	.string "EUSINE: I heard SUICUNE might\n"
-	.string "be in this BURNED TOWER, so I\l"
-	.string "came to check it out.\p"
-	.string "But where exactly could it be?$"
-
-BurnedTower_1F_EventScript_Morty::
-	lock
-	faceplayer
-	msgbox BurnedTower_1FMortyText, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-BurnedTower_1FMortyText::
-	.string "MORTY: ECRUTEAK's GYM LEADER\n"
-	.string "has to study what are said to\l"
-	.string "be the legendary POKéMON--\l"
-	.string "SUICUNE, ENTEI and RAIKOU.\p"
-	.string "EUSINE is here, so I've\n"
-	.string "decided to investigate the\l"
-	.string "TOWER with him.$"
-
 BurnedTower_1F_EventScript_Nard::
 	trainerbattle_single TRAINER_NARD_HNS, BurnedTower_Text_NardSeen, BurnedTower_Text_NardBeaten
 	msgbox BurnedTower_Text_NardAfter, MSGBOX_AUTOCLOSE

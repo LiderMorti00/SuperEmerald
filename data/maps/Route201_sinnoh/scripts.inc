@@ -1,7 +1,6 @@
 Route201_sinnoh_MapScripts::
 	.byte 0
 
-
 Route201_EventScript_PtNpc1::
 	msgbox Route201_Text_PtNpc1, MSGBOX_NPC
 	end
@@ -30,13 +29,6 @@ Route201_Text_PtNpc3::
 	.string "If your POKéMON's health--that's its\n"
 	.string "HP--is getting low, you should go home\l"
 	.string "and get some rest.$"
-
-Route201_Text_PtTooSlow::
-	.string "Too slow!$"
-
-SE_S_Route201_Route201_EventScript_Barry::
-	msgbox Route201_Text_PtTooSlow, MSGBOX_NPC
-	end
 
 Route201_EventScript_Clerk::
 	lock

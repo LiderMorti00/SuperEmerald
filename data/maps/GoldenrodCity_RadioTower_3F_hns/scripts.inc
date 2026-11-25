@@ -1,23 +1,6 @@
 GoldenrodCity_RadioTower_3F_hns_MapScripts::
 	.byte 0
 
-GoldenrodRaidoTower3_EventScript_Scientist::
-	trainerbattle_single TRAINER_MARC_HNS, GoldenrodCity_RadioTower_3F_Text_ScientistMarcSeen, GoldenrodCity_RadioTower_3F_Text_ScientistMarcBeaten
-	msgbox GoldenrodCity_RadioTower_3F_Text_ScientistMarcAfter, MSGBOX_AUTOCLOSE
-	end
-
-GoldenrodCity_RadioTower_3F_Text_ScientistMarcAfter::
-	.string "Bwahahaha…\p"
-	.string "I can transmit as strong a signal\n"
-	.string "as I need from here.$"
-
-GoldenrodCity_RadioTower_3F_Text_ScientistMarcBeaten::
-	.string "Tch! I took you too lightly!$"
-
-GoldenrodCity_RadioTower_3F_Text_ScientistMarcSeen::
-	.string "An unknown child wandering here?\p"
-	.string "Who are you?$"
-
 GoldenrodCity_RadioTower_3F_Text_CooltrainerFPleaseSave::
 	.string "ARCHER of TEAM ROCKET went up to\n"
 	.string "the fifth floor!\p"

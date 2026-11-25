@@ -1,7 +1,6 @@
 StarkMountain_sinnoh_MapScripts::
 	.byte 0
 
-
 StarkMountain_EventScript_Darien::
 	trainerbattle_single TRAINER_FERNANDO_1_SINNOH, StarkMountain_Text_DarienIntro, StarkMountain_Text_DarienDefeat
 	msgbox StarkMountain_Text_DarienPost, MSGBOX_AUTOCLOSE
@@ -18,56 +17,6 @@ StarkMountain_Text_DarienDefeat::
 
 StarkMountain_Text_DarienIntro::
 	.string "My POKéMON and I seek only victory!$"
-
-StarkMountain_EventScript_SNGrunts::
-	goto_if_set FLAG_SN_HIDE_STARK_OUT_GRUNTS, StarkMountain_EventScript_SNGrunts_End
-	lockall
-	msgbox StarkMountain_EventScript_SNGrunts_T1, MSGBOX_DEFAULT
-	applymovement LOCALID_SN_STARK_GRUNT1, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	msgbox StarkMountain_EventScript_SNGrunts_T2, MSGBOX_DEFAULT
-	msgbox StarkMountain_EventScript_SNGrunts_T3, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_SN_STARK_GRUNT2, StarkMountain_EventScript_SNGrunts_M2
-	applymovement LOCALID_SN_STARK_GRUNT1, StarkMountain_EventScript_SNGrunts_M1
-	waitmovement 0
-	playse SE_EXIT
-	removeobject LOCALID_SN_STARK_GRUNT1
-	removeobject LOCALID_SN_STARK_GRUNT2
-	setflag FLAG_SN_HIDE_STARK_OUT_GRUNTS
-	setflag FLAG_SN_STARK_OUT_DONE
-	releaseall
-
-StarkMountain_EventScript_SNGrunts_M1::
-	walk_right
-	walk_right
-	walk_up
-	step_end
-
-StarkMountain_EventScript_SNGrunts_M2::
-	walk_right
-	walk_up
-	step_end
-
-StarkMountain_EventScript_SNGrunts_T3::
-	.string "GRUNT 1: Yeah, I hear you…\p"
-	.string "That elder CHARON is a COMMANDER, but\n"
-	.string "he can't replace Master CYRUS.\p"
-	.string "…Maybe this is a good time for me to be\n"
-	.string "done with this TEAM GALACTIC thing…$"
-
-StarkMountain_EventScript_SNGrunts_T2::
-	.string "GRUNT 2: Yeah, but… Can that old guy\n"
-	.string "really take over?\p"
-	.string "Can he replace Master CYRUS?$"
-
-StarkMountain_EventScript_SNGrunts_T1::
-	.string "GRUNT 1: This is it! STARK MOUNTAIN!\p"
-	.string "Now we need to get deep inside. Let's\n"
-	.string "do this!$"
-
-StarkMountain_EventScript_SNGrunts_End::
-	end
 
 StarkMountain_EventScript_SNFarewell::
 	setvar VAR_TEMP_E, 1

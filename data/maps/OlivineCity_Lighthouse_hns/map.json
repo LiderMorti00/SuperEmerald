@@ -180,7 +180,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_J_OlivineCity_Lighthouse_hns_OlivineLighthouse_EventScript_Jasmine",
+      "script": "0x0",
       "flag": "FLAG_HIDE_LIGHTHOUSE_JASMINE"
     },
     {

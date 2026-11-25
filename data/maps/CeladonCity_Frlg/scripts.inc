@@ -51,20 +51,8 @@ CeladonCity_EventScript_Poliwrath::
 	release
 	end
 
-CeladonCity_EventScript_RocketGrunt1::
-	msgbox CeladonCity_Text_KeepOutOfTeamRocketsWay, MSGBOX_NPC
-	end
-
-CeladonCity_EventScript_RocketGrunt2::
-	msgbox CeladonCity_Text_GetLostOrIllPunchYou, MSGBOX_NPC
-	end
-
 CeladonCity_EventScript_Boy::
 	msgbox CeladonCity_Text_ScaldedTongueOnTea, MSGBOX_NPC
-	end
-
-CeladonCity_EventScript_SilphCoScientist::
-	msgbox CeladonCity_Text_SomeoneStoleSilphScope, MSGBOX_NPC
 	end
 
 CeladonCity_EventScript_TrainerTips1::
@@ -130,13 +118,6 @@ CeladonCity_Text_MyTrustedPalPoliwrath::
 
 CeladonCity_Text_Poliwrath::
 	.string "POLIWRATH: Ribi ribit!$"
-
-CeladonCity_Text_GetLostOrIllPunchYou::
-	.string "What are you staring at?\n"
-	.string "Get lost, or I'll punch you.$"
-
-CeladonCity_Text_KeepOutOfTeamRocketsWay::
-	.string "Keep out of TEAM ROCKET's way!$"
 
 CeladonCity_Text_ExplainXAccuracyDireHit::
 	.string "TRAINER TIPS\p"
@@ -207,12 +188,3 @@ Text_SoftboiledWhichMon::
 
 Text_SoftboiledTaught::
 	.string "I wish you the best of luck!$"
-
-CeladonCity_Text_SomeoneStoleSilphScope::
-	.string "Oh, what am I to do…\p"
-	.string "Someone stole our SILPH SCOPE.\p"
-	.string "The thief came running this way,\n"
-	.string "I'm sure of it.\p"
-	.string "But I lost sight of him!\n"
-	.string "Where'd he go?$"
-

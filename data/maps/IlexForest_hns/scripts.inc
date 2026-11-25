@@ -1,34 +1,6 @@
 IlexForest_hns_MapScripts::
 	.byte 0
 
-
-IlexForest_EventScript_Boss::
-	lock
-	faceplayer
-	msgbox IlexForest_Text_CharcoalMasterTalkAfter, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-IlexForest_Text_CharcoalMasterTalkAfter::
-	.string "Do you want to apprentice as a\n"
-	.string "charcoal maker with me?\p"
-	.string "You'll be first-rate in ten years!$"
-
-IlexForest_Text_ApprenticeIntro::
-	.string "Oh, man… My boss is going to be\n"
-	.string "steaming…\p"
-	.string "The FARFETCH'D that CUTS trees\n"
-	.string "for charcoal took off on me.\p"
-	.string "I can't go looking for it here\n"
-	.string "in the ILEX FOREST.\p"
-	.string "It's too big, dark and scary\n"
-	.string "for me…$"
-
-SE_J_IlexForest_hns_IlexForest_EventScript_Apprentice::
-	msgbox IlexForest_Text_ApprenticeIntro, MSGBOX_NPC
-	end
-
 IlexForest_Text_Kwaaaa::
 	.string "FARFETCH'D: Kwaa!$"
 
@@ -232,9 +204,6 @@ IlexForest_Movement_Farfetchd_3B::
 	walk_fast_down
 	step_end
 
-SE_J_IlexForest_hns_IlexForest_EventScript_SecondCelebi::
-	end
-
 SE_J_IlexForest_hns_IlexForest_EventScript_Item_FalseSwipe::
 	end
 
@@ -299,7 +268,6 @@ IlexForest_Text_ShrineGSBallPlaced:
 IlexForest_Text_ShrineCelebi:
 	.string "Something is coming out of the\n"
 	.string "forest's shadows!$"
-
 
 IlexForest_EventScript_Sign::
 	lock

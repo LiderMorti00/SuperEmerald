@@ -1,7 +1,6 @@
 VioletCity_TrainerSchool_hns_MapScripts::
 	.byte 0
 
-
 VioletCity_TrainerSchool_EventScript_Boy1::
 	lock
 	faceplayer
@@ -65,20 +64,6 @@ VioletCity_TrainerSchool_Text_Youngster1::
 	.string "COAT, have also been found to\p"
 	.string "evolve certain POKéMON\n"
 	.string "while holding and leveling up.$"
-
-VioletCity_TrainerSchool_EventScript_Earl::
-	lock
-	faceplayer
-	msgbox VioletCity_TrainerSchool_Text_EarlIntro, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-VioletCity_TrainerSchool_Text_EarlIntro::
-	.string "EARL, I am!\p"
-	.string "Wonderful are POKéMON, yes!\p"
-	.string "Teach you I will to be a better\n"
-	.string "trainer!$"
 
 VioletCity_TrainerSchool_EventScript_Teacher::
 	lock

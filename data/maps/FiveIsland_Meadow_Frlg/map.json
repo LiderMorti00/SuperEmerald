@@ -38,7 +38,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "FiveIsland_Meadow_EventScript_Rocket3",
+      "script": "0x0",
       "flag": "FLAG_HIDE_FIVE_ISLAND_ROCKETS"
     },
     {
@@ -52,7 +52,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
-      "script": "FiveIsland_Meadow_EventScript_Rocket1",
+      "script": "0x0",
       "flag": "FLAG_HIDE_FIVE_ISLAND_ROCKETS"
     },
     {
@@ -66,7 +66,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "FiveIsland_Meadow_EventScript_Rocket2",
+      "script": "0x0",
       "flag": "FLAG_HIDE_FIVE_ISLAND_ROCKETS"
     },
     {

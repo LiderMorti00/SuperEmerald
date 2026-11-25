@@ -1,7 +1,6 @@
 ValleyWindoworks_Indoor_sinnoh_MapScripts::
 	.byte 0
 
-
 ValleyWindoworks_Indoor_EventScript_MarsEnd::
 	releaseall
 	end
@@ -151,42 +150,6 @@ ValleyWindoworks_Indoor_Text_WorkerAfter::
 	.string "Could its appearance have something\n"
 	.string "to do with this windworks using\p"
 	.string "wind-generated energy?$"
-
-ValleyWindoworks_Indoor_EventScript_Grunt1::
-	trainerbattle_single TRAINER_GEORGE_SINNOH, ValleyWindoworks_Indoor_Text_G1Intro, ValleyWindoworks_Indoor_Text_G1Defeat
-	msgbox ValleyWindoworks_Indoor_Text_G1Post, MSGBOX_AUTOCLOSE
-	end
-
-ValleyWindoworks_Indoor_Text_G1Post::
-	.string "TEAM GALACTIC needs electricity for\n"
-	.string "doing something big!$"
-
-ValleyWindoworks_Indoor_Text_G1Defeat::
-	.string "What…?! Some brat messed up my job…$"
-
-ValleyWindoworks_Indoor_Text_G1Intro::
-	.string "Oi! This is no fun and games! This is\n"
-	.string "proper work, I tell you!$"
-
-ValleyWindoworks_Indoor_EventScript_Grunt2::
-	trainerbattle_single TRAINER_BERKE_SINNOH, ValleyWindoworks_Indoor_Text_G2Intro, ValleyWindoworks_Indoor_Text_G2Defeat
-	msgbox ValleyWindoworks_Indoor_Text_G2Post, MSGBOX_AUTOCLOSE
-	end
-
-ValleyWindoworks_Indoor_Text_G2Post::
-	.string "You don't have an inkling of what TEAM\n"
-	.string "GALACTIC is trying to achieve!\p"
-	.string "Of course, they don't tell a grunt like\n"
-	.string "me anything, either… But still!$"
-
-ValleyWindoworks_Indoor_Text_G2Defeat::
-	.string "I really don't like kids who also\n"
-	.string "happen to be tough TRAINERS…$"
-
-ValleyWindoworks_Indoor_Text_G2Intro::
-	.string "Collecting electricity from the\n"
-	.string "VALLEY WINDWORKS… That's our\l"
-	.string "mission.$"
 
 ValleyWindoworks_Indoor_EventScript_SNGirl::
 	lock

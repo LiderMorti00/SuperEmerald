@@ -54,7 +54,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "SE_J_GoldenrodCity_RadioTower_1F_hns_RadioTower1F_EventScript_Grunt",
+      "script": "0x0",
       "flag": "FLAG_HIDE_ROCKET_GOLDENROD_RADIOTOWER_1",
       "local_id": "LOCALID_GOLDENROD_RADIOTOWER_GRUNT"
     },

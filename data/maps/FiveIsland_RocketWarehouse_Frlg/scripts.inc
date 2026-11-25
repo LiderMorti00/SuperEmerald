@@ -98,11 +98,6 @@ FiveIsland_RocketWarehouse_EventScript_PlayerFaceAdmin2::
 	waitmovement 0
 	return
 
-FiveIsland_RocketWarehouse_EventScript_Grunt1::
-	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_42, FiveIsland_RocketWarehouse_Text_Grunt1Intro, FiveIsland_RocketWarehouse_Text_Grunt1Defeat
-	msgbox FiveIsland_RocketWarehouse_Text_Grunt1PostBattle, MSGBOX_AUTOCLOSE
-	end
-
 FiveIsland_RocketWarehouse_EventScript_Admin1::
 	trainerbattle_single TRAINER_TEAM_ROCKET_ADMIN, FiveIsland_RocketWarehouse_Text_Admin1Intro, FiveIsland_RocketWarehouse_Text_Admin1Defeat, FiveIsland_RocketWarehouse_EventScript_DefeatedAdmin1
 	msgbox FiveIsland_RocketWarehouse_Text_MadeItSoYouCanComeBackThrough, MSGBOX_AUTOCLOSE
@@ -188,20 +183,6 @@ FiveIsland_RocketWarehouse_Text_Grunt2Defeat::
 FiveIsland_RocketWarehouse_Text_Grunt2PostBattle::
 	.string "TEAM ROCKET broke up?\n"
 	.string "What planet are you from?$"
-
-FiveIsland_RocketWarehouse_Text_Grunt1Intro::
-	.string "Oh, now your POKéMON look strong.\n"
-	.string "You're willing to sell them?\p"
-	.string "Oh?\n"
-	.string "You wanted to battle?$"
-
-FiveIsland_RocketWarehouse_Text_Grunt1Defeat::
-	.string "Oh, but…\n"
-	.string "Too much!$"
-
-FiveIsland_RocketWarehouse_Text_Grunt1PostBattle::
-	.string "We can give you a great price.\n"
-	.string "Sell us your POKéMON!$"
 
 FiveIsland_RocketWarehouse_Text_Grunt3Intro::
 	.string "I got word about you from the\n"

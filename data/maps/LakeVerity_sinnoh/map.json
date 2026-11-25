@@ -70,7 +70,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LakeVerity_EventScript_SNVERITY_MARS",
+      "script": "0x0",
       "flag": "FLAG_SN_HIDE_VERITY_MARS"
     },
     {
@@ -84,7 +84,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "LakeVerity_EventScript_SNVERITY_GRUNT1",
+      "script": "0x0",
       "flag": "FLAG_SN_HIDE_VERITY_GRUNT1"
     },
     {
@@ -98,7 +98,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "LakeVerity_EventScript_SNVERITY_GRUNT2",
+      "script": "0x0",
       "flag": "FLAG_SN_HIDE_VERITY_GRUNT2"
     },
     {
@@ -112,7 +112,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "LakeVerity_EventScript_SNVERITY_GRUNT3",
+      "script": "0x0",
       "flag": "FLAG_SN_HIDE_VERITY_GRUNT3"
     },
     {
@@ -126,7 +126,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "LakeVerity_EventScript_SNVERITY_GRUNT4",
+      "script": "0x0",
       "flag": "FLAG_SN_HIDE_VERITY_GRUNT4"
     },
     {
@@ -141,7 +141,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LakeVerity_EventScript_SNRowan",
+      "script": "0x0",
       "flag": "FLAG_SN_HIDE_VERITY_ROWAN"
     },
     {
@@ -156,7 +156,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LakeVerity_EventScript_SNCounterpart",
+      "script": "0x0",
       "flag": "FLAG_SN_HIDE_VERITY_ROWAN"
     },
     {

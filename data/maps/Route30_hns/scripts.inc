@@ -1,7 +1,6 @@
 Route30_hns_MapScripts::
 	.byte 0
 
-
 Route30_EventScript_Poliwag::
 	lock
 	faceplayer
@@ -130,29 +129,6 @@ Route30_Text_BugCatcherDonBeaten::
 Route30_Text_BugCatcherDonSeen::
 	.string "Instead of a bug POKéMON,\n"
 	.string "I found a TRAINER!$"
-
-Route30_EventScript_Youngster_Joey_Fighting::
-	lock
-	msgbox Route30_Text_UseTackle, 	MSGBOX_AUTOCLOSE
-	waitmessage
-	playse SE_PIN
-	applymovement LOCALID_ROUTE_30_JOEY, Common_Movement_QuestionMark
-	delay 55
-	waitmovement LOCALID_ROUTE_30_JOEY
-	faceplayer
-	msgbox Route30_Text_ThisIsABigBattle, MSGBOX_AUTOCLOSE
-	waitmessage
-	turnobject LOCALID_ROUTE_30_JOEY DIR_NORTH
-	release
-	end
-
-Route30_Text_ThisIsABigBattle::
-	.string "What? This is a big battle!\n"
-	.string "Leave me alone!$"
-
-Route30_Text_UseTackle::
-	.string "Go, RATTATA!\p"
-	.string "TACKLE!$"
 
 Route30_EventScript_Youngster_Mikey::
 	trainerbattle_single TRAINER_MIKEY_HNS, Route30_Text_YoungsterMikeySeen, Route30_Text_YoungsterMikeyBeaten
