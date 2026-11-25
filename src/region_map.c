@@ -823,6 +823,13 @@ static u16 ShownMapSecHeight(mapsec_u16_t mapSecId);
 static EWRAM_DATA s16 sJointMapViewX = 0;
 static EWRAM_DATA bool8 sJointMapActive = FALSE;
 
+// PokeNav full view framing: the drawing of some maps can shift so the cursor
+// stays clear of the "MAP / FULL VIEW" header and the location name box.
+// sJointMapViewX doubles as the horizontal view of these maps.
+static EWRAM_DATA s16 sMapViewY = 0;
+static EWRAM_DATA bool8 sMapFramingActive = FALSE;
+static EWRAM_DATA bool8 sNameBoxOnLeft = FALSE;
+
 // Johto and Kanto are drawn on the same map; TRUE while that map is loaded
 static bool32 IsRegionMapJoint(void)
 {
@@ -869,41 +876,214 @@ static void GetShownMapSecRect(mapsec_u16_t mapSecId, s16 *x, s16 *y, u16 *width
     *height = gRegionMapEntries[mapSecId].height;
 }
 
-static void SetJointMapView(s16 viewX)
+// View limits in pixels; a negative view moves the drawing right or down.
+// Past the edges of a drawing the tilemaps hold plain sea (tile 0), so the stripes stay aligned.
+struct MapViewLimits
 {
-    if (viewX < 0)
-        viewX = 0;
-    if (viewX > JOINT_MAP_VIEW_MAX)
-        viewX = JOINT_MAP_VIEW_MAX;
-    sJointMapViewX = viewX;
-    ChangeBgX(sRegionMap->bgNum, viewX << 8, BG_COORD_SET);
-    SetGpuReg(REG_OFFSET_BG2HOFS, viewX);
+    s16 xMin, xMax, yMin, yMax;
+};
+
+static void GetMapViewLimits(struct MapViewLimits *lim)
+{
+    lim->xMin = lim->xMax = lim->yMin = lim->yMax = 0;
+    if (sJointMapActive)
+    {
+        // Johto's west coast and the north edge of both regions run off the drawing:
+        // no room to the right, and downwards only what the header needs.
+        lim->xMax = JOINT_MAP_VIEW_MAX;
+        if (sMapFramingActive)
+        {
+            lim->yMin = -24;
+            lim->yMax = 16;   // the drawing's bottom rows are sea
+        }
+        return;
+    }
+    if (!sMapFramingActive)
+        return;
+    switch (GetDisplayedRegionMapType())
+    {
+    case REGION_MAP_SINNOH:
+        // The east edge is open sea; the south coast reaches the bottom edge,
+        // so upwards only the rows hidden under the bottom bar can come up.
+        lim->xMin = -32;
+        lim->xMax = 32;
+        lim->yMin = -32;
+        lim->yMax = 16;
+        break;
+    case REGION_MAP_SEVII123:
+    case REGION_MAP_SEVII45:
+    case REGION_MAP_SEVII67:
+        lim->xMin = -32;
+        lim->xMax = 32;
+        lim->yMin = -32;
+        lim->yMax = 32;
+        break;
+    default:
+        break;
+    }
 }
+
+static void SetMapView(s16 viewX, s16 viewY)
+{
+    struct MapViewLimits lim;
+    GetMapViewLimits(&lim);
+    if (viewX < lim.xMin)
+        viewX = lim.xMin;
+    if (viewX > lim.xMax)
+        viewX = lim.xMax;
+    if (viewY < lim.yMin)
+        viewY = lim.yMin;
+    if (viewY > lim.yMax)
+        viewY = lim.yMax;
+    sJointMapViewX = viewX;
+    sMapViewY = viewY;
+    if (sJointMapActive)
+    {
+        ChangeBgX(sRegionMap->bgNum, viewX << 8, BG_COORD_SET);
+        ChangeBgY(sRegionMap->bgNum, viewY << 8, BG_COORD_SET);
+        SetGpuReg(REG_OFFSET_BG2HOFS, viewX);
+        SetGpuReg(REG_OFFSET_BG2VOFS, viewY);
+    }
+    else if (sMapFramingActive)
+    {
+        sRegionMap->bg2x = viewX << 8;
+        sRegionMap->bg2y = viewY << 8;
+        sRegionMap->needUpdateVideoRegs = TRUE;
+    }
+}
+
+static bool32 IsMapViewScrollable(void)
+{
+    return (sJointMapActive || sMapFramingActive) && !sRegionMap->zoomed;
+}
+
+// Areas of the screen covered by the PokeNav, in pixels
+#define FRAME_HEADER_LEFT    128  // "MAP / FULL VIEW", top right
+#define FRAME_HEADER_BOTTOM  24
+#define FRAME_NAMEBOX_LEFT   128  // location name, bottom right
+#define FRAME_NAMEBOX_TOP    120
+#define FRAME_BAR_TOP        144  // bottom bar
+#define FRAME_EDGE           8
+#define FRAME_CURSOR_HALF    8    // the cursor box around the selected tile
+
+static void MoveNameBox(bool8 onLeft)
+{
+    if (onLeft == sNameBoxOnLeft)
+        return;
+    sNameBoxOnLeft = onLeft;
+    // The name box is a window on BG1 at x = 136; shifting BG1 brings it to the left corner
+    ChangeBgX(1, onLeft ? (128 << 8) : 0, BG_COORD_SET);
+}
+
+// Where the view should be so the cursor box is clear of the header, the name box and the edges
+static void GetFramingTarget(s32 cx, s32 cy, s32 *outX, s32 *outY, bool8 *nameBoxLeft)
+{
+    struct MapViewLimits lim;
+    s32 left = cx - FRAME_CURSOR_HALF, right = cx + FRAME_CURSOR_HALF;
+    s32 top = cy - FRAME_CURSOR_HALF, bottom = cy + FRAME_CURSOR_HALF;
+    s32 vx = *outX, vy = 0;
+
+    GetMapViewLimits(&lim);
+    if (!sJointMapActive)
+    {
+        // Other maps rest at their default position unless the cursor needs room
+        vx = 0;
+        if (left - vx < FRAME_EDGE)
+            vx = left - FRAME_EDGE;
+        else if (right - vx > DISPLAY_WIDTH - FRAME_EDGE)
+            vx = right - (DISPLAY_WIDTH - FRAME_EDGE);
+    }
+    if (vx < lim.xMin)
+        vx = lim.xMin;
+    if (vx > lim.xMax)
+        vx = lim.xMax;
+
+    if (top - vy < FRAME_EDGE)
+        vy = top - FRAME_EDGE;
+    if (right - vx > FRAME_HEADER_LEFT && top - vy < FRAME_HEADER_BOTTOM)
+        vy = top - FRAME_HEADER_BOTTOM;
+    if (right - vx > FRAME_NAMEBOX_LEFT && bottom - vy > FRAME_NAMEBOX_TOP)
+        vy = bottom - FRAME_NAMEBOX_TOP;
+    if (bottom - vy > FRAME_BAR_TOP)
+        vy = bottom - FRAME_BAR_TOP;
+    if (vy < lim.yMin)
+        vy = lim.yMin;
+    if (vy > lim.yMax)
+        vy = lim.yMax;
+
+    // If the drawing can't go far enough, the name box moves to the bottom left corner
+    *nameBoxLeft = sMapFramingActive && right - vx > FRAME_NAMEBOX_LEFT && bottom - vy > FRAME_NAMEBOX_TOP;
+    *outX = vx;
+    *outY = vy;
+}
+
 
 // The view follows the cursor, a few pixels per frame
 #define JOINT_MAP_VIEW_MARGIN 56
+static s32 StepTowards(s32 view, s32 target)
+{
+    if (target < view - 4)
+        return view - 4;
+    if (target > view + 4)
+        return view + 4;
+    return target;
+}
+
 static void UpdateJointMapView(struct Sprite *cursor)
 {
-    s32 screenX, target, view;
+    s32 screenX, targetX, targetY;
+    bool8 nameBoxLeft;
 
-    if (!sJointMapActive)
+    if (!IsMapViewScrollable())
         return;
-    view = sJointMapViewX;
-    screenX = cursor->x - view;
-    target = view;
-    if (screenX < JOINT_MAP_VIEW_MARGIN)
-        target = cursor->x - JOINT_MAP_VIEW_MARGIN;
-    else if (screenX > DISPLAY_WIDTH - JOINT_MAP_VIEW_MARGIN)
-        target = cursor->x - (DISPLAY_WIDTH - JOINT_MAP_VIEW_MARGIN);
-    if (target < view - 4)
-        view -= 4;
-    else if (target > view + 4)
-        view += 4;
-    else
-        view = target;
-    if (view != sJointMapViewX)
-        SetJointMapView(view);
+    targetX = sJointMapViewX;
+    if (sJointMapActive)
+    {
+        screenX = cursor->x - sJointMapViewX;
+        if (screenX < JOINT_MAP_VIEW_MARGIN)
+            targetX = cursor->x - JOINT_MAP_VIEW_MARGIN;
+        else if (screenX > DISPLAY_WIDTH - JOINT_MAP_VIEW_MARGIN)
+            targetX = cursor->x - (DISPLAY_WIDTH - JOINT_MAP_VIEW_MARGIN);
+    }
+    GetFramingTarget(cursor->x, cursor->y, &targetX, &targetY, &nameBoxLeft);
+    targetX = StepTowards(sJointMapViewX, targetX);
+    targetY = StepTowards(sMapViewY, targetY);
+    if (targetX != sJointMapViewX || targetY != sMapViewY)
+        SetMapView(targetX, targetY);
+    if (sMapFramingActive)
+        MoveNameBox(nameBoxLeft);
     cursor->x2 = -sJointMapViewX;
+    cursor->y2 = -sMapViewY;
+}
+
+// Places the view for the cursor at once, when a map opens
+static void InitMapView(void)
+{
+    s32 x = sRegionMap->cursorPosX * 8 + 4, y = sRegionMap->cursorPosY * 8 + 4;
+    s32 targetX = x - DISPLAY_WIDTH / 2, targetY;
+    bool8 nameBoxLeft = FALSE;
+
+    sNameBoxOnLeft = FALSE;
+    if (!IsMapViewScrollable())
+    {
+        sJointMapViewX = 0;
+        sMapViewY = 0;
+        return;
+    }
+    GetFramingTarget(x, y, &targetX, &targetY, &nameBoxLeft);
+    SetMapView(targetX, targetY);
+}
+
+// Called when the PokeNav leaves the map or starts zooming
+void RegionMap_ResetFraming(void)
+{
+    if (sMapFramingActive)
+        MoveNameBox(FALSE);
+    if (sMapFramingActive && !sJointMapActive)
+    {
+        sJointMapViewX = 0;
+        sMapViewY = 0;
+    }
 }
 
 static s16 ShownMapSecX(mapsec_u16_t mapSecId)
@@ -937,12 +1117,14 @@ static u16 ShownMapSecHeight(mapsec_u16_t mapSecId)
 // Keep a map sprite in step with the scroll; hide it when it is off screen
 static void ApplyJointMapScroll(struct Sprite *sprite)
 {
-    s32 x;
-    if (!sJointMapActive)
+    s32 x, y;
+    if (!IsMapViewScrollable())
         return;
     sprite->x2 = -sJointMapViewX;
+    sprite->y2 = -sMapViewY;
     x = sprite->x - sJointMapViewX;
-    if (x < -8 || x > DISPLAY_WIDTH + 8)
+    y = sprite->y - sMapViewY;
+    if (x < -8 || x > DISPLAY_WIDTH + 8 || y < -8 || y > DISPLAY_HEIGHT + 8)
         sprite->invisible = TRUE;
 }
 
@@ -999,7 +1181,10 @@ void InitRegionMapData(struct RegionMap *regionMap, const struct BgTemplate *tem
 {
     sRegionMap = regionMap;
     sJointMapActive = FALSE;
+    sMapFramingActive = FALSE;
     sJointMapViewX = 0;
+    sMapViewY = 0;
+    sNameBoxOnLeft = FALSE;
     sRegionMap->initStep = 0;
     sRegionMap->zoomed = zoomed;
     sRegionMap->inputCallback = zoomed == TRUE ? ProcessRegionMapInput_Zoomed : ProcessRegionMapInput_Full;
@@ -1023,6 +1208,8 @@ void ShowRegionMapForPokedexAreaScreen(struct RegionMap *regionMap)
 {
     sRegionMap = regionMap;
     sJointMapActive = FALSE;
+    sMapFramingActive = FALSE;
+    sMapViewY = 0;
     InitMapBasedOnPlayerLocation();
     sRegionMap->playerIconSpritePosX = sRegionMap->cursorPosX;
     sRegionMap->playerIconSpritePosY = sRegionMap->cursorPosY;
@@ -1036,7 +1223,14 @@ bool8 LoadRegionMapGfx(void)
     case 0:
         regionMapType = GetDisplayedRegionMapType();
         sJointMapActive = IsJointRegionMapType(regionMapType);
+        // Only the PokeNav (which brings its own BG templates) frames the map
+        sMapFramingActive = sRegionMap->bgManaged
+                         && (sJointMapActive || regionMapType == REGION_MAP_SINNOH
+                          || regionMapType == REGION_MAP_SEVII123 || regionMapType == REGION_MAP_SEVII45
+                          || regionMapType == REGION_MAP_SEVII67);
         sJointMapViewX = 0;
+        sMapViewY = 0;
+        sNameBoxOnLeft = FALSE;
         if (sRegionMap->bgManaged)
             DecompressAndCopyTileDataToVram(sRegionMap->bgNum, gRegionMapInfos[regionMapType].regionMapGfx, 0, 0, 0);
         else
@@ -1122,7 +1316,7 @@ bool8 LoadRegionMapGfx(void)
             SetBgAttribute(sRegionMap->bgNum, BG_ATTR_PALETTEMODE, 0);
             ChangeBgY(sRegionMap->bgNum, 0, BG_COORD_SET);
             SetGpuReg(REG_OFFSET_BG2VOFS, 0);
-            SetJointMapView(sRegionMap->cursorPosX * 8 + 4 - DISPLAY_WIDTH / 2);
+            InitMapView();
         }
         else if (sRegionMap->bgManaged)
         {
@@ -1131,6 +1325,8 @@ bool8 LoadRegionMapGfx(void)
             SetBgAttribute(sRegionMap->bgNum, BG_ATTR_MAPBASEINDEX, sRegionMap->mapBaseIdx);
             SetBgAttribute(sRegionMap->bgNum, BG_ATTR_WRAPAROUND, 1);
             SetBgAttribute(sRegionMap->bgNum, BG_ATTR_PALETTEMODE, 1);
+            InitMapView();
+            UpdateRegionMapVideoRegs();
         }
         sRegionMap->initStep++;
         return FALSE;
@@ -1336,6 +1532,9 @@ void SetRegionMapDataForZoom(void)
 {
     if (sRegionMap->zoomed == FALSE)
     {
+        // Zooming works from the map's default position
+        RegionMap_ResetFraming();
+        CalcZoomScrollParams(0, 0, 0, 0, 0x100, 0x100, 0);
         sRegionMap->scrollY = 0;
         sRegionMap->scrollX = 0;
         sRegionMap->unk_040 = 0;
@@ -2053,7 +2252,11 @@ void CreateRegionMapCursor(u16 tileTag, u16 paletteTag)
             sRegionMap->cursorSprite->oam.size = SPRITE_SIZE(16x16);
             sRegionMap->cursorSprite->x = 8 * sRegionMap->cursorPosX + 4;
             sRegionMap->cursorSprite->y = 8 * sRegionMap->cursorPosY + 4;
-            sRegionMap->cursorSprite->x2 = -sJointMapViewX * (sJointMapActive != FALSE);
+            if (IsMapViewScrollable())
+            {
+                sRegionMap->cursorSprite->x2 = -sJointMapViewX;
+                sRegionMap->cursorSprite->y2 = -sMapViewY;
+            }
         }
         sRegionMap->cursorSprite->data[1] = 2;
         sRegionMap->cursorSprite->data[2] = OBJ_PLTT_ID(IndexOfSpritePaletteTag(paletteTag)) + 1;

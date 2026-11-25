@@ -557,6 +557,7 @@ void FreeRegionMapSubstruct2(void)
     {
         if (!GetZoomDisabled())
             gSaveBlock2Ptr->regionMapZoom = IsRegionMapZoomed();
+        RegionMap_ResetFraming();
         FreeRegionMapIconResources();
         FreeCityZoomViewGfx();
         RemoveWindow(state->infoWindowId);
@@ -777,6 +778,7 @@ static u32 LoopedTask_BackToWorldMap(s32 taskState)
         if (!menu->zoomDisabled)
             gSaveBlock2Ptr->regionMapZoom = IsRegionMapZoomed();
         SetVBlankCallback_(NULL);
+        RegionMap_ResetFraming();
         FreeRegionMapIconResources();
         FreeCityZoomViewGfx();
         RemoveWindow(state->infoWindowId);
