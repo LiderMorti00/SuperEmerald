@@ -75694,6 +75694,468 @@
           }
         },
         {
+          "map": "MAP_PAL_PARK_SINNOH",
+          "base_label": "gPalPark_Field_Sinnoh",
+          "land_mons": {
+            "encounter_rate": 25,
+            "mons": [
+              {
+                "min_level": 60,
+                "max_level": 63,
+                "species": "SPECIES_PONYTA_GALAR"
+              },
+              {
+                "min_level": 60,
+                "max_level": 63,
+                "species": "SPECIES_ZIGZAGOON_GALAR"
+              },
+              {
+                "min_level": 60,
+                "max_level": 63,
+                "species": "SPECIES_TAUROS_PALDEA_COMBAT"
+              },
+              {
+                "min_level": 60,
+                "max_level": 63,
+                "species": "SPECIES_GROWLITHE_HISUI"
+              },
+              {
+                "min_level": 60,
+                "max_level": 63,
+                "species": "SPECIES_VOLTORB_HISUI"
+              },
+              {
+                "min_level": 64,
+                "max_level": 66,
+                "species": "SPECIES_WYRDEER"
+              },
+              {
+                "min_level": 60,
+                "max_level": 63,
+                "species": "SPECIES_TAUROS_PALDEA_BLAZE"
+              },
+              {
+                "min_level": 60,
+                "max_level": 63,
+                "species": "SPECIES_TAUROS_PALDEA_AQUA"
+              },
+              {
+                "min_level": 60,
+                "max_level": 63,
+                "species": "SPECIES_STUNFISK_GALAR"
+              },
+              {
+                "min_level": 64,
+                "max_level": 66,
+                "species": "SPECIES_RAPIDASH_GALAR"
+              },
+              {
+                "min_level": 64,
+                "max_level": 66,
+                "species": "SPECIES_LINOONE_GALAR"
+              },
+              {
+                "min_level": 64,
+                "max_level": 66,
+                "species": "SPECIES_ARCANINE_HISUI"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_WOOPER_PALDEA"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_SLOWPOKE_GALAR"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_CORSOLA_GALAR"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_WOOPER_PALDEA"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_CORSOLA_GALAR"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_QWILFISH_HISUI"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_CORSOLA_GALAR"
+              },
+              {
+                "min_level": 58,
+                "max_level": 61,
+                "species": "SPECIES_QWILFISH_HISUI"
+              },
+              {
+                "min_level": 58,
+                "max_level": 61,
+                "species": "SPECIES_BASCULIN_WHITE_STRIPED"
+              },
+              {
+                "min_level": 58,
+                "max_level": 61,
+                "species": "SPECIES_CORSOLA_GALAR"
+              },
+              {
+                "min_level": 60,
+                "max_level": 64,
+                "species": "SPECIES_BASCULIN_WHITE_STRIPED"
+              },
+              {
+                "min_level": 60,
+                "max_level": 64,
+                "species": "SPECIES_QWILFISH_HISUI"
+              },
+              {
+                "min_level": 60,
+                "max_level": 64,
+                "species": "SPECIES_SLOWPOKE_GALAR"
+              },
+              {
+                "min_level": 62,
+                "max_level": 65,
+                "species": "SPECIES_CORSOLA_GALAR"
+              },
+              {
+                "min_level": 62,
+                "max_level": 65,
+                "species": "SPECIES_BASCULIN_WHITE_STRIPED"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_PAL_PARK_SINNOH",
+          "base_label": "gPalPark_Forest_Sinnoh",
+          "land_mons": {
+            "encounter_rate": 25,
+            "mons": [
+              {
+                "min_level": 60,
+                "max_level": 63,
+                "species": "SPECIES_ZORUA_HISUI"
+              },
+              {
+                "min_level": 60,
+                "max_level": 63,
+                "species": "SPECIES_SNEASEL_HISUI"
+              },
+              {
+                "min_level": 60,
+                "max_level": 63,
+                "species": "SPECIES_PONYTA_GALAR"
+              },
+              {
+                "min_level": 64,
+                "max_level": 66,
+                "species": "SPECIES_LILLIGANT_HISUI"
+              },
+              {
+                "min_level": 64,
+                "max_level": 66,
+                "species": "SPECIES_WEEZING_GALAR"
+              },
+              {
+                "min_level": 64,
+                "max_level": 66,
+                "species": "SPECIES_WYRDEER"
+              },
+              {
+                "min_level": 60,
+                "max_level": 63,
+                "species": "SPECIES_GROWLITHE_HISUI"
+              },
+              {
+                "min_level": 60,
+                "max_level": 63,
+                "species": "SPECIES_VOLTORB_HISUI"
+              },
+              {
+                "min_level": 64,
+                "max_level": 66,
+                "species": "SPECIES_BRAVIARY_HISUI"
+              },
+              {
+                "min_level": 64,
+                "max_level": 66,
+                "species": "SPECIES_ZOROARK_HISUI"
+              },
+              {
+                "min_level": 60,
+                "max_level": 63,
+                "species": "SPECIES_MR_MIME_GALAR"
+              },
+              {
+                "min_level": 64,
+                "max_level": 66,
+                "species": "SPECIES_RAPIDASH_GALAR"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_WOOPER_PALDEA"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_SLOWPOKE_GALAR"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_CORSOLA_GALAR"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_WOOPER_PALDEA"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_CORSOLA_GALAR"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_QWILFISH_HISUI"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_CORSOLA_GALAR"
+              },
+              {
+                "min_level": 58,
+                "max_level": 61,
+                "species": "SPECIES_QWILFISH_HISUI"
+              },
+              {
+                "min_level": 58,
+                "max_level": 61,
+                "species": "SPECIES_BASCULIN_WHITE_STRIPED"
+              },
+              {
+                "min_level": 58,
+                "max_level": 61,
+                "species": "SPECIES_CORSOLA_GALAR"
+              },
+              {
+                "min_level": 60,
+                "max_level": 64,
+                "species": "SPECIES_BASCULIN_WHITE_STRIPED"
+              },
+              {
+                "min_level": 60,
+                "max_level": 64,
+                "species": "SPECIES_QWILFISH_HISUI"
+              },
+              {
+                "min_level": 60,
+                "max_level": 64,
+                "species": "SPECIES_SLOWPOKE_GALAR"
+              },
+              {
+                "min_level": 62,
+                "max_level": 65,
+                "species": "SPECIES_CORSOLA_GALAR"
+              },
+              {
+                "min_level": 62,
+                "max_level": 65,
+                "species": "SPECIES_BASCULIN_WHITE_STRIPED"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_PAL_PARK_SINNOH",
+          "base_label": "gPalPark_Highlands_Sinnoh",
+          "land_mons": {
+            "encounter_rate": 25,
+            "mons": [
+              {
+                "min_level": 60,
+                "max_level": 63,
+                "species": "SPECIES_DARUMAKA_GALAR"
+              },
+              {
+                "min_level": 60,
+                "max_level": 63,
+                "species": "SPECIES_MR_MIME_GALAR"
+              },
+              {
+                "min_level": 64,
+                "max_level": 66,
+                "species": "SPECIES_SLIGGOO_HISUI"
+              },
+              {
+                "min_level": 64,
+                "max_level": 66,
+                "species": "SPECIES_BRAVIARY_HISUI"
+              },
+              {
+                "min_level": 60,
+                "max_level": 63,
+                "species": "SPECIES_SNEASEL_HISUI"
+              },
+              {
+                "min_level": 64,
+                "max_level": 66,
+                "species": "SPECIES_AVALUGG_HISUI"
+              },
+              {
+                "min_level": 60,
+                "max_level": 63,
+                "species": "SPECIES_ZORUA_HISUI"
+              },
+              {
+                "min_level": 64,
+                "max_level": 66,
+                "species": "SPECIES_WYRDEER"
+              },
+              {
+                "min_level": 64,
+                "max_level": 66,
+                "species": "SPECIES_GOODRA_HISUI"
+              },
+              {
+                "min_level": 64,
+                "max_level": 66,
+                "species": "SPECIES_DARMANITAN_GALAR_STANDARD"
+              },
+              {
+                "min_level": 64,
+                "max_level": 66,
+                "species": "SPECIES_MR_RIME"
+              },
+              {
+                "min_level": 64,
+                "max_level": 66,
+                "species": "SPECIES_ZOROARK_HISUI"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_WOOPER_PALDEA"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_SLOWPOKE_GALAR"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_CORSOLA_GALAR"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_WOOPER_PALDEA"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_CORSOLA_GALAR"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_QWILFISH_HISUI"
+              },
+              {
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_CORSOLA_GALAR"
+              },
+              {
+                "min_level": 58,
+                "max_level": 61,
+                "species": "SPECIES_QWILFISH_HISUI"
+              },
+              {
+                "min_level": 58,
+                "max_level": 61,
+                "species": "SPECIES_BASCULIN_WHITE_STRIPED"
+              },
+              {
+                "min_level": 58,
+                "max_level": 61,
+                "species": "SPECIES_CORSOLA_GALAR"
+              },
+              {
+                "min_level": 60,
+                "max_level": 64,
+                "species": "SPECIES_BASCULIN_WHITE_STRIPED"
+              },
+              {
+                "min_level": 60,
+                "max_level": 64,
+                "species": "SPECIES_QWILFISH_HISUI"
+              },
+              {
+                "min_level": 60,
+                "max_level": 64,
+                "species": "SPECIES_SLOWPOKE_GALAR"
+              },
+              {
+                "min_level": 62,
+                "max_level": 65,
+                "species": "SPECIES_CORSOLA_GALAR"
+              },
+              {
+                "min_level": 62,
+                "max_level": 65,
+                "species": "SPECIES_BASCULIN_WHITE_STRIPED"
+              }
+            ]
+          }
+        },
+        {
           "map": "MAP_ROUTE222_SINNOH",
           "base_label": "gRoute222_Sinnoh",
           "land_mons": {

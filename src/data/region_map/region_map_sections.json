@@ -2913,6 +2913,15 @@
       "width": 1,
       "height": 1,
       "region": "sinnoh"
+    },
+    {
+      "id": "MAPSEC_PAL_PARK",
+      "name": "PAL PARK",
+      "x": 8,
+      "y": 14,
+      "width": 1,
+      "height": 1,
+      "region": "sinnoh"
     }
   ]
 }

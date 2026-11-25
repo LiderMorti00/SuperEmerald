@@ -421,6 +421,22 @@ u8 ChooseWildMonLevel(const struct WildPokemon *wildPokemon, u8 wildMonIndex, en
     }
 }
 
+// Super Emerald: the PAL PARK has one wild table per area, stored as consecutive headers
+// (like the Altering Cave): 0 FIELD (east and south), 1 FOREST (west groves), 2 HIGHLANDS.
+static u32 SE_GetPalParkArea(void)
+{
+    s16 x, y;
+
+    PlayerGetDestCoords(&x, &y);
+    x -= MAP_OFFSET;
+    y -= MAP_OFFSET;
+    if (x <= 33 && y <= 17)
+        return 2;
+    if (x <= 33 && y <= 29)
+        return 1;
+    return 0;
+}
+
 u16 GetCurrentMapWildMonHeaderId(void)
 {
     u16 i;
@@ -442,6 +458,11 @@ u16 GetCurrentMapWildMonHeaderId(void)
                     alteringCaveId = 0;
 
                 i += alteringCaveId;
+            }
+            else if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_PAL_PARK_SINNOH) &&
+                     gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_PAL_PARK_SINNOH))
+            {
+                i += SE_GetPalParkArea();
             }
 
             return i;

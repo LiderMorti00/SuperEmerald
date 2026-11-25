@@ -74,6 +74,15 @@
 #define FLAG_SE_GIFT_STARTERS_PALDEA     0x3264
 #define FLAG_SE_GIFT_STARTERS_GALAR      0x3265
 #define FLAG_SE_GIFT_STARTERS_ALOLA      0x3266
+// Pal Park (end of Route 221): regional forms, after the Sinnoh League
+#define FLAG_SE_GIFT_STARTERS_HISUI      0x3267 // lobby researcher's Hisuian starters
+#define FLAG_SE_LEG_ARTICUNO_GALAR       0x3268
+#define FLAG_SE_LEG_ZAPDOS_GALAR         0x3269
+#define FLAG_SE_LEG_MOLTRES_GALAR        0x326A
+#define FLAG_SE_ITEM_PAL_PARK_GALARICA_CUFF   0x326B
+#define FLAG_SE_ITEM_PAL_PARK_GALARICA_WREATH 0x326C
+#define FLAG_SE_ITEM_PAL_PARK_ICE_STONE       0x326D
+#define FLAG_SE_ITEM_PAL_PARK_RAZOR_CLAW      0x326E
 // Static legendaries: hidden until the Sinnoh League is cleared (see event_object_movement.c)
 #define FLAG_SE_LEGENDS_START                    0x3280
 #define FLAG_SE_LEG_VICTINI              0x3280
