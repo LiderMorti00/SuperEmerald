@@ -1545,7 +1545,8 @@
     "BattleTower_Sinnoh",
     "BattleTowe_Elevator_Sinnoh",
     "BattleTower_Corridor_Sinnoh",
-    "BattleTower_BattleRoom_Sinnoh"
+    "BattleTower_BattleRoom_Sinnoh",
+    "PalPark_sinnoh"
   ],
   "gMapGroup_DungeonsSinnoh_Sinnoh": [
     "OreburghGate_1F_sinnoh",
@@ -1679,7 +1680,8 @@
     "IronIsland_House_sinnoh",
     "FuegoIronworks_Inside_sinnoh",
     "BattlePark_Access",
-    "Route226_Access_sinnoh"
+    "Route226_Access_sinnoh",
+    "PalPark_Lobby_sinnoh"
   ],
   "gMapGroup_IndoorTwinleaf_Sinnoh": [
     "TwinleafTown_MainHouse_1F_sinnoh",

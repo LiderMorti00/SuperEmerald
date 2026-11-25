@@ -2428,3 +2428,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/PokemonWorldTournamentLobby/scripts.inc"
 
 	.include "data/maps/PokemonWorldTournamentRoom/scripts.inc"
+
+	.include "data/maps/PalPark_Lobby_sinnoh/scripts.inc"
+
+	.include "data/maps/PalPark_sinnoh/scripts.inc"
