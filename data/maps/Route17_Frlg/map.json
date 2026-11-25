@@ -16,12 +16,12 @@
   "connections": [
     {
       "map": "MAP_ROUTE16",
-      "offset": 0,
+      "offset": -6,
       "direction": "up"
     },
     {
       "map": "MAP_ROUTE18",
-      "offset": 0,
+      "offset": 6,
       "direction": "down"
     }
   ],
@@ -29,7 +29,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 4,
+      "x": 10,
       "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
@@ -43,7 +43,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 11,
+      "x": 17,
       "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
@@ -57,7 +57,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 15,
+      "x": 21,
       "y": 24,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_RIGHT_DOWN_LEFT_UP",
@@ -71,7 +71,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 18,
+      "x": 24,
       "y": 41,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
@@ -85,7 +85,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 7,
+      "x": 13,
       "y": 38,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT",
@@ -99,7 +99,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 2,
+      "x": 8,
       "y": 61,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
@@ -113,7 +113,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 21,
+      "x": 27,
       "y": 61,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -127,7 +127,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 18,
+      "x": 24,
       "y": 94,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
@@ -141,7 +141,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 16,
+      "x": 22,
       "y": 134,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_SEQUENCE_LEFT_DOWN_RIGHT_UP",
@@ -155,7 +155,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 4,
+      "x": 10,
       "y": 116,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
@@ -172,7 +172,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 12,
+      "x": 18,
       "y": 97,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -180,7 +180,7 @@
     },
     {
       "type": "sign",
-      "x": 12,
+      "x": 18,
       "y": 83,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -188,7 +188,7 @@
     },
     {
       "type": "sign",
-      "x": 12,
+      "x": 18,
       "y": 68,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -196,7 +196,7 @@
     },
     {
       "type": "sign",
-      "x": 12,
+      "x": 18,
       "y": 53,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -204,7 +204,7 @@
     },
     {
       "type": "sign",
-      "x": 12,
+      "x": 18,
       "y": 125,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -212,7 +212,7 @@
     },
     {
       "type": "sign",
-      "x": 11,
+      "x": 17,
       "y": 157,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -220,7 +220,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 18,
+      "x": 24,
       "y": 83,
       "elevation": 3,
       "item": "ITEM_RARE_CANDY",
@@ -230,7 +230,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 10,
+      "x": 16,
       "y": 53,
       "elevation": 3,
       "item": "ITEM_FULL_RESTORE",
@@ -240,7 +240,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 4,
+      "x": 10,
       "y": 68,
       "elevation": 3,
       "item": "ITEM_PP_UP",
@@ -250,7 +250,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 4,
+      "x": 10,
       "y": 125,
       "elevation": 3,
       "item": "ITEM_MAX_REVIVE",
@@ -260,7 +260,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 14,
+      "x": 20,
       "y": 157,
       "elevation": 3,
       "item": "ITEM_MAX_ELIXIR",

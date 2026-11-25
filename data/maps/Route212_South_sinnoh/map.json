@@ -11,7 +11,6 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -27,7 +26,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FISHER",
       "x": 61,
       "y": 18,
@@ -41,7 +39,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FISHER",
       "x": 54,
       "y": 13,
@@ -55,7 +52,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FISHER",
       "x": 53,
       "y": 23,
@@ -69,7 +65,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_RANGER_M",
       "x": 105,
       "y": 22,
@@ -83,7 +78,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_RANGER_F",
       "x": 11,
       "y": 9,
@@ -97,7 +91,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_RANGER_M",
       "x": 11,
       "y": 12,
@@ -111,7 +104,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_POLICEMAN",
       "x": 28,
       "y": 5,
@@ -125,7 +117,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_SCIENTIST_M",
       "x": 12,
       "y": 23,
@@ -139,7 +130,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_COLLECTOR",
       "x": 46,
       "y": 20,
@@ -153,7 +143,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_SCIENTIST_M",
       "x": 95,
       "y": 5,
@@ -167,7 +156,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_PARASOL_LADY",
       "x": 74,
       "y": 16,
@@ -181,7 +169,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_PARASOL_LADY",
       "x": 82,
       "y": 4,
@@ -195,7 +182,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY",
       "x": 48,
       "y": 11,
@@ -209,7 +195,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_LADY",
       "x": 97,
       "y": 18,
@@ -223,7 +208,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_FAT_MAN",
       "x": 124,
       "y": 19,
@@ -237,7 +221,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
       "x": 17,
       "y": 15,
@@ -251,7 +234,6 @@
       "flag": "FLAG_TEMP_11"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
       "x": 50,
       "y": 7,
@@ -265,7 +247,6 @@
       "flag": "FLAG_TEMP_12"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
       "x": 50,
       "y": 8,
@@ -279,7 +260,6 @@
       "flag": "FLAG_TEMP_13"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
       "x": 79,
       "y": 3,
@@ -293,7 +273,6 @@
       "flag": "FLAG_TEMP_14"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
       "x": 87,
       "y": 4,
@@ -307,7 +286,6 @@
       "flag": "FLAG_TEMP_15"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
       "x": 90,
       "y": 4,
@@ -321,7 +299,6 @@
       "flag": "FLAG_TEMP_16"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
       "x": 103,
       "y": 6,
@@ -335,7 +312,6 @@
       "flag": "FLAG_TEMP_17"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
       "x": 114,
       "y": 27,
@@ -349,7 +325,6 @@
       "flag": "FLAG_TEMP_18"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
       "x": 115,
       "y": 27,
@@ -363,7 +338,6 @@
       "flag": "FLAG_TEMP_19"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 9,
       "y": 27,
@@ -377,7 +351,6 @@
       "flag": "FLAG_SN_ITEM_SHOAL_CAVE_STAIRS_ROOM_ICE_HEAL"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 76,
       "y": 9,
@@ -391,7 +364,6 @@
       "flag": "FLAG_SN_ITEM_VICTORY_ROAD_1F_MAX_ELIXIR"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 99,
       "y": 2,
@@ -405,7 +377,6 @@
       "flag": "FLAG_SN_ITEM_VICTORY_ROAD_1F_PP_UP"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 101,
       "y": 29,
@@ -419,7 +390,6 @@
       "flag": "FLAG_SN_ITEM_VICTORY_ROAD_B1F_TM_PSYCHIC"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 110,
       "y": 11,
@@ -433,7 +403,6 @@
       "flag": "FLAG_SN_ITEM_VICTORY_ROAD_B1F_FULL_RESTORE"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 85,
       "y": 16,
@@ -447,7 +416,6 @@
       "flag": "FLAG_SN_ITEM_VICTORY_ROAD_B2F_FULL_HEAL"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 6,
       "y": 7,
@@ -461,7 +429,6 @@
       "flag": "FLAG_SN_ITEM_MT_PYRE_6F_TM_SHADOW_BALL"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 113,
       "y": 21,
@@ -475,7 +442,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 114,
       "y": 21,
@@ -489,7 +455,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 115,
       "y": 21,
@@ -503,7 +468,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 116,
       "y": 21,
@@ -517,7 +481,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 29,
       "y": 19,
@@ -531,7 +494,6 @@
       "flag": "FLAG_ITEM_ROUTE212_SOUTH_TM_POISON_JAB"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 61,
       "y": 12,
@@ -545,7 +507,6 @@
       "flag": "FLAG_ITEM_ROUTE212_SOUTH_TM_SILVER_WIND"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 29,
       "y": 18,
@@ -559,7 +520,6 @@
       "flag": "FLAG_ITEM_SN_ROUTE212_SOUTH_TM84"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 60,
       "y": 12,
@@ -573,7 +533,6 @@
       "flag": "FLAG_ITEM_SN_ROUTE212_SOUTH_TM62"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 100,
       "y": 29,
@@ -686,5 +645,6 @@
       "item": "ITEM_BIG_MUSHROOM",
       "flag": "FLAG_SN_HIDDEN_ITEM_PETALBURG_WOODS_POKE_BALL"
     }
-  ]
+  ],
+  "floor_number": 0
 }
