@@ -13,6 +13,8 @@
 .include "sound/voicegroups/keysplits/tuba.inc"
 .include "sound/voicegroups/keysplits/french_horn.inc"
 
+.include "sound/voicegroups/poke_center.inc"
+.include "sound/voicegroups/poke_mart.inc"
 .include "sound/voicegroups/route110.inc"
 .include "sound/voicegroups/route101.inc"
 .include "sound/voicegroups/fanfare.inc"

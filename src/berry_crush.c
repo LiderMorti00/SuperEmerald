@@ -964,7 +964,7 @@ static u32 QuitBerryCrush(MainCallback exitCallback)
     if (exitCallback == CB2_ReturnToField)
     {
         gTextFlags.autoScroll = TRUE;
-        PlayNewMapMusic(MUS_DPP_PC);
+        PlayNewMapMusic(MUS_POKE_CENTER);
         SetMainCallback1(CB1_Overworld);
     }
 
