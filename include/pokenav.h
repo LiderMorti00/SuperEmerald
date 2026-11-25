@@ -379,6 +379,12 @@ bool32 WaitForHelpBar(void);
 void SlideMenuHeaderDown(void);
 bool32 MainMenuLoopedTaskIsBusy(void);
 void SetLeftHeaderSpritesInvisibility(void);
+void SetMapHeaderHidden(bool32 hidden);
+
+// The compact "MAP / FULL VIEW" header of the map screens, anchored top right
+#define MAP_HEADER_SHIFT   28
+#define MAP_HEADER_LEFT    (128 + MAP_HEADER_SHIFT)
+#define MAP_HEADER_BOTTOM  24
 void PokenavCopyPalette(const u16 *src, const u16 *dest, int size, int a3, int a4, u16 *palette);
 void FadeToBlackExceptPrimary(void);
 struct Sprite *GetSpinningPokenavSprite(void);

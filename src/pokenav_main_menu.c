@@ -682,10 +682,29 @@ static void LoadLeftHeaderGfxForMenu(u32 menuGfxId)
     RequestDma3Copy(menu->leftHeaderMenuBuffer, (void *)OBJ_VRAM0 + (GetSpriteTileStartByTag(2) * 32), size, 1);
     menu->leftHeaderSprites[1]->oam.tileNum = GetSpriteTileStartByTag(2) + sMenuLeftHeaderSpriteSheets[menuGfxId].size;
 
+    // The map header is compact: "MAP" (its block is cut after 28 px) sits right next to "FULL VIEW"
     if (menuGfxId == POKENAV_GFX_MAP_MENU_ZOOMED_OUT || menuGfxId == POKENAV_GFX_MAP_MENU_ZOOMED_IN)
+    {
+        menu->leftHeaderSprites[0]->x2 = MAP_HEADER_SHIFT;
         menu->leftHeaderSprites[1]->x2 = 56;
+    }
     else
+    {
+        menu->leftHeaderSprites[0]->x2 = 0;
         menu->leftHeaderSprites[1]->x2 = 64;
+    }
+}
+
+// Hides the map header while it would cover the cursor on a region map
+void SetMapHeaderHidden(bool32 hidden)
+{
+    struct Pokenav_MainMenu *menu = GetSubstructPtr(POKENAV_SUBSTRUCT_MAIN_MENU);
+    s32 i;
+
+    if (menu == NULL)
+        return;
+    for (i = 0; i < (s32)ARRAY_COUNT(menu->leftHeaderSprites); i++)
+        menu->leftHeaderSprites[i]->invisible = hidden;
 }
 
 static void LoadLeftHeaderGfxForSubMenu(u32 menuGfxId)

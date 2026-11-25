@@ -21,6 +21,7 @@
 #include "fldeff.h"
 #include "regions.h"
 #include "region_map.h"
+#include "pokenav.h"
 #include "decompress.h"
 #include "constants/region_map_sections.h"
 #include "heal_location.h"
@@ -829,6 +830,7 @@ static EWRAM_DATA bool8 sJointMapActive = FALSE;
 static EWRAM_DATA s16 sMapViewY = 0;
 static EWRAM_DATA bool8 sMapFramingActive = FALSE;
 static EWRAM_DATA bool8 sNameBoxOnLeft = FALSE;
+static EWRAM_DATA bool8 sMapHeaderHidden = FALSE;
 
 // Johto and Kanto are drawn on the same map; TRUE while that map is loaded
 static bool32 IsRegionMapJoint(void)
@@ -958,8 +960,8 @@ static bool32 IsMapViewScrollable(void)
 }
 
 // Areas of the screen covered by the PokeNav, in pixels
-#define FRAME_HEADER_LEFT    128  // "MAP / FULL VIEW", top right
-#define FRAME_HEADER_BOTTOM  24
+#define FRAME_HEADER_LEFT    MAP_HEADER_LEFT    // "MAP / FULL VIEW", top right
+#define FRAME_HEADER_BOTTOM  MAP_HEADER_BOTTOM
 #define FRAME_NAMEBOX_LEFT   128  // location name, bottom right
 #define FRAME_NAMEBOX_TOP    120
 #define FRAME_BAR_TOP        144  // bottom bar
@@ -1051,7 +1053,17 @@ static void UpdateJointMapView(struct Sprite *cursor)
     if (targetX != sJointMapViewX || targetY != sMapViewY)
         SetMapView(targetX, targetY);
     if (sMapFramingActive)
+    {
+        // If the drawing could not move far enough, the header steps aside while it covers the cursor
+        bool8 headerOverCursor = cursor->x + FRAME_CURSOR_HALF - sJointMapViewX > FRAME_HEADER_LEFT
+                              && cursor->y - FRAME_CURSOR_HALF - sMapViewY < FRAME_HEADER_BOTTOM;
         MoveNameBox(nameBoxLeft);
+        if (headerOverCursor != sMapHeaderHidden)
+        {
+            sMapHeaderHidden = headerOverCursor;
+            SetMapHeaderHidden(headerOverCursor);
+        }
+    }
     cursor->x2 = -sJointMapViewX;
     cursor->y2 = -sMapViewY;
 }
@@ -1079,6 +1091,11 @@ void RegionMap_ResetFraming(void)
 {
     if (sMapFramingActive)
         MoveNameBox(FALSE);
+    if (sMapHeaderHidden)
+    {
+        sMapHeaderHidden = FALSE;
+        SetMapHeaderHidden(FALSE);
+    }
     if (sMapFramingActive && !sJointMapActive)
     {
         sJointMapViewX = 0;
@@ -1185,6 +1202,7 @@ void InitRegionMapData(struct RegionMap *regionMap, const struct BgTemplate *tem
     sJointMapViewX = 0;
     sMapViewY = 0;
     sNameBoxOnLeft = FALSE;
+    sMapHeaderHidden = FALSE;
     sRegionMap->initStep = 0;
     sRegionMap->zoomed = zoomed;
     sRegionMap->inputCallback = zoomed == TRUE ? ProcessRegionMapInput_Zoomed : ProcessRegionMapInput_Full;
@@ -1231,6 +1249,7 @@ bool8 LoadRegionMapGfx(void)
         sJointMapViewX = 0;
         sMapViewY = 0;
         sNameBoxOnLeft = FALSE;
+        sMapHeaderHidden = FALSE;
         if (sRegionMap->bgManaged)
             DecompressAndCopyTileDataToVram(sRegionMap->bgNum, gRegionMapInfos[regionMapType].regionMapGfx, 0, 0, 0);
         else
