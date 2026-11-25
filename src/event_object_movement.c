@@ -3418,7 +3418,10 @@ static void SetBerryTreeGraphicsById(struct ObjectEvent *objectEvent, u8 berryId
     const u16 graphicsId = gBerryTreeObjectEventGraphicsIdTable[berryStage];
     const struct ObjectEventGraphicsInfo *graphicsInfo = GetObjectEventGraphicsInfo(graphicsId);
     struct Sprite *sprite = &gSprites[objectEvent->spriteId];
-    UpdateSpritePalette(&sObjectEventSpritePalettes[gBerries[berryId].berryTreePaletteSlotTable[berryStage] - 2], sprite);
+    // Super Emerald: slots 2-5 are the NPC palettes. Look them up by tag, since the
+    // imported palettes come first in sObjectEventSpritePalettes.
+    u16 palTag = OBJ_EVENT_PAL_TAG_NPC_1 + gBerries[berryId].berryTreePaletteSlotTable[berryStage] - 2;
+    UpdateSpritePalette(&sObjectEventSpritePalettes[FindObjectEventPaletteIndexByTag(palTag)], sprite);
     sprite->oam.shape = graphicsInfo->oam->shape;
     sprite->oam.size = graphicsInfo->oam->size;
     sprite->images = gBerries[berryId].berryTreePicTable;
