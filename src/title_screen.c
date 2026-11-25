@@ -164,7 +164,7 @@ static const union AnimCmd *const sVersionBannerRightAnimTable[] =
     sVersionBannerRightAnimSequence,
 };
 
-static const struct SpriteTemplate sVersionBannerLeftSpriteTemplate =
+static const struct SpriteTemplate UNUSED sVersionBannerLeftSpriteTemplate =
 {
     .tileTag = TAG_VERSION,
     .paletteTag = TAG_VERSION,
@@ -173,7 +173,7 @@ static const struct SpriteTemplate sVersionBannerLeftSpriteTemplate =
     .callback = SpriteCB_VersionBannerLeft,
 };
 
-static const struct SpriteTemplate sVersionBannerRightSpriteTemplate =
+static const struct SpriteTemplate UNUSED sVersionBannerRightSpriteTemplate =
 {
     .tileTag = TAG_VERSION,
     .paletteTag = TAG_VERSION,
@@ -701,8 +701,6 @@ static void Task_TitleScreenPhase1(u8 taskId)
     }
     else
     {
-        u8 spriteId;
-
         SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_1 | DISPCNT_OBJ_1D_MAP | DISPCNT_BG2_ON | DISPCNT_OBJ_ON);
         SetGpuReg(REG_OFFSET_WININ, 0);
         SetGpuReg(REG_OFFSET_WINOUT, 0);
@@ -710,15 +708,7 @@ static void Task_TitleScreenPhase1(u8 taskId)
         SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(16, 0));
         SetGpuReg(REG_OFFSET_BLDY, 0);
 
-        // Create left side of version banner
-        spriteId = CreateSprite(&sVersionBannerLeftSpriteTemplate, VERSION_BANNER_LEFT_X, VERSION_BANNER_Y, 0);
-        gSprites[spriteId].sAlphaBlendIdx = ARRAY_COUNT(gTitleScreenAlphaBlend);
-        gSprites[spriteId].sParentTaskId = taskId;
-
-        // Create right side of version banner
-        spriteId = CreateSprite(&sVersionBannerRightSpriteTemplate, VERSION_BANNER_RIGHT_X, VERSION_BANNER_Y, 0);
-        gSprites[spriteId].sParentTaskId = taskId;
-
+        // Super Emerald: the logo carries the whole title, so the "EMERALD VERSION" banner is not shown
         gTasks[taskId].tCounter = 144;
         gTasks[taskId].func = Task_TitleScreenPhase2;
     }
