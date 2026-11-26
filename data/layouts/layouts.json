@@ -17369,8 +17369,8 @@
     {
       "id": "LAYOUT_SUNYSHORE_CITY_GYM_SINNOH",
       "name": "SunyshoreCity_Gym_Layout_Sinnoh",
-      "width": 10,
-      "height": 21,
+      "width": 15,
+      "height": 22,
       "primary_tileset": "gTileset_Building_Sinnoh",
       "secondary_tileset": "gTileset_MauvilleGym_Sinnoh",
       "border_filepath": "data/layouts/SunyshoreCity_Gym_sinnoh/border.bin",

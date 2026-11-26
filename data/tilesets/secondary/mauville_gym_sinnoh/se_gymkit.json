@@ -1,0 +1,10 @@
+{
+ "orig_tiles": 160,
+ "orig_metatiles": 117,
+ "names": {
+  "gate_on": "0x275",
+  "gate_off": "0x276",
+  "console0": "0x277",
+  "console1": "0x278"
+ }
+}

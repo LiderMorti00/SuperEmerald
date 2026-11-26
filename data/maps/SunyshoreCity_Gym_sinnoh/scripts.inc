@@ -1,139 +1,111 @@
+	.include "data/maps/SunyshoreCity_Gym_sinnoh/gym_metatiles.inc"
+
 SunyshoreCity_Gym_sinnoh_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, SunyshoreCity_Gym_OnLoad
 	.byte 0
 
-@ Super Emerald: barrier puzzle from the Sinnoh repo
+@ Super Emerald: two switch sectors over electric walkways (tools/sfr/gyms/sunyshore.py).
+@ Sector 1 (console 7,18): VAR_SE_SUNYSHORE_GYM_STATE 0 = left walkway (3,17) live, right (11,16)
+@ dead; 1 = the other way round. Sector 2 (console 12,12): FLAG_SE_SUNYSHORE_GYM_BARRIERS clear =
+@ side path (4,10) live, VOLKNER's walkway (9,9) dead; set = the other way round.
+@ The map is drawn in state 0 / clear; ON_LOAD redraws whatever the player left behind.
 SunyshoreCity_Gym_OnLoad::
-	goto_if_set FLAG_SINNOH_BADGE8_GET, SunyshoreCity_Gym_EventScript_DeactivatePuzzle
-	switch VAR_SE_SUNYSHORE_GYM_STATE
-	case 0, SunyshoreCity_Gym_EventScript_UpdateBarriers
-	case 1, SunyshoreCity_Gym_EventScript_Switch1Pressed
-	case 2, SunyshoreCity_Gym_EventScript_Switch2Pressed
-	case 3, SunyshoreCity_Gym_EventScript_Switch3Pressed
-	case 4, SunyshoreCity_Gym_EventScript_Switch4Pressed
+	call_if_eq VAR_SE_SUNYSHORE_GYM_STATE, 1, SunyshoreCity_Gym_EventScript_DrawSector1Right
+	call_if_set FLAG_SE_SUNYSHORE_GYM_BARRIERS, SunyshoreCity_Gym_EventScript_DrawSector2Volkner
 	end
 
-SunyshoreCity_Gym_EventScript_UpdateBarriers::
-	goto_if_set FLAG_SE_SUNYSHORE_GYM_BARRIERS, SunyshoreCity_Gym_EventScript_SetAltBarriers
-	end
+SunyshoreCity_Gym_EventScript_DrawSector1Left::
+	setmetatile 3, 17, METATILE_SunyshoreGym_gate_off, FALSE
+	setmetatile 11, 16, METATILE_SunyshoreGym_gate_on, TRUE
+	setmetatile 7, 18, METATILE_SunyshoreGym_console0, TRUE
+	return
 
-SunyshoreCity_Gym_EventScript_SetAltBarriers::
-	setmetatile 3, 11, METATILE_MauvilleGym_RedBeamV1_On, TRUE
-	setmetatile 3, 12, METATILE_MauvilleGym_RedBeamV2_On, TRUE
-	setmetatile 3, 13, METATILE_MauvilleGym_PoleTop_On, TRUE
-	setmetatile 4, 10, METATILE_MauvilleGym_RedBeamH1_On, FALSE
-	setmetatile 5, 10, METATILE_MauvilleGym_RedBeamH2_On, FALSE
-	setmetatile 4, 11, METATILE_MauvilleGym_RedBeamH3_On, TRUE
-	setmetatile 5, 11, METATILE_MauvilleGym_RedBeamH4_On, TRUE
-	setmetatile 7, 10, METATILE_MauvilleGym_RedBeamH1_On, FALSE
-	setmetatile 8, 10, METATILE_MauvilleGym_RedBeamH2_On, FALSE
-	setmetatile 7, 11, METATILE_MauvilleGym_RedBeamH3_On, TRUE
-	setmetatile 8, 11, METATILE_MauvilleGym_RedBeamH4_On, TRUE
-	setmetatile 4, 13, METATILE_MauvilleGym_GreenBeamH1_Off, FALSE
-	setmetatile 5, 13, METATILE_MauvilleGym_GreenBeamH2_Off, FALSE
-	setmetatile 4, 14, METATILE_MauvilleGym_GreenBeamH3_Off, FALSE
-	setmetatile 5, 14, METATILE_MauvilleGym_GreenBeamH4_Off, FALSE
-	setmetatile 1, 10, METATILE_MauvilleGym_GreenBeamH1_Off, FALSE
-	setmetatile 2, 10, METATILE_MauvilleGym_GreenBeamH2_Off, FALSE
-	setmetatile 1, 11, METATILE_MauvilleGym_GreenBeamH3_Off, FALSE
-	setmetatile 2, 11, METATILE_MauvilleGym_GreenBeamH4_Off, FALSE
-	setmetatile 6, 8, METATILE_MauvilleGym_PoleBottom_On, TRUE
-	setmetatile 6, 9, METATILE_MauvilleGym_FloorTile, FALSE
-	setmetatile 6, 10, METATILE_MauvilleGym_PoleTop_Off, FALSE
-	setmetatile 4, 6, METATILE_MauvilleGym_GreenBeamH1_Off, FALSE
-	setmetatile 5, 6, METATILE_MauvilleGym_GreenBeamH2_Off, FALSE
-	setmetatile 4, 7, METATILE_MauvilleGym_GreenBeamH3_Off, FALSE
-	setmetatile 5, 7, METATILE_MauvilleGym_GreenBeamH4_Off, FALSE
-	end
+SunyshoreCity_Gym_EventScript_DrawSector1Right::
+	setmetatile 3, 17, METATILE_SunyshoreGym_gate_on, TRUE
+	setmetatile 11, 16, METATILE_SunyshoreGym_gate_off, FALSE
+	setmetatile 7, 18, METATILE_SunyshoreGym_console1, TRUE
+	return
 
-SunyshoreCity_Gym_EventScript_Switch1Pressed::
-	setvar VAR_0x8004, 0
-	special MauvilleGymPressSwitch
-	goto SunyshoreCity_Gym_EventScript_UpdateBarriers
-	end
+SunyshoreCity_Gym_EventScript_DrawSector2Side::
+	setmetatile 4, 10, METATILE_SunyshoreGym_gate_off, FALSE
+	setmetatile 9, 9, METATILE_SunyshoreGym_gate_on, TRUE
+	setmetatile 12, 12, METATILE_SunyshoreGym_console0, TRUE
+	return
 
-SunyshoreCity_Gym_EventScript_Switch2Pressed::
-	setvar VAR_0x8004, 1
-	special MauvilleGymPressSwitch
-	goto SunyshoreCity_Gym_EventScript_UpdateBarriers
-	end
+SunyshoreCity_Gym_EventScript_DrawSector2Volkner::
+	setmetatile 4, 10, METATILE_SunyshoreGym_gate_on, TRUE
+	setmetatile 9, 9, METATILE_SunyshoreGym_gate_off, FALSE
+	setmetatile 12, 12, METATILE_SunyshoreGym_console1, TRUE
+	return
 
-SunyshoreCity_Gym_EventScript_Switch3Pressed::
-	setvar VAR_0x8004, 2
-	special MauvilleGymPressSwitch
-	goto SunyshoreCity_Gym_EventScript_UpdateBarriers
-	end
-
-SunyshoreCity_Gym_EventScript_Switch4Pressed::
-	setvar VAR_0x8004, 3
-	special MauvilleGymPressSwitch
-	goto SunyshoreCity_Gym_EventScript_UpdateBarriers
-	end
-
-SunyshoreCity_Gym_EventScript_DeactivatePuzzle::
-	special MauvilleGymDeactivatePuzzle
-	end
-
-SunyshoreCity_Gym_EventScript_Switch1::
+SunyshoreCity_Gym_EventScript_Console1::
 	lockall
-	goto_if_set FLAG_SINNOH_BADGE8_GET, SunyshoreCity_Gym_EventScript_SwitchDoNothing
-	goto_if_eq VAR_SE_SUNYSHORE_GYM_STATE, 1, SunyshoreCity_Gym_EventScript_SwitchDoNothing
+	msgbox SunyshoreCity_Gym_Text_Console1, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SunyshoreCity_Gym_EventScript_ConsoleLeave
+	playse SE_SWITCH
+	goto_if_eq VAR_SE_SUNYSHORE_GYM_STATE, 1, SunyshoreCity_Gym_EventScript_Console1ToLeft
 	setvar VAR_SE_SUNYSHORE_GYM_STATE, 1
-	setvar VAR_0x8004, 0
-	goto SunyshoreCity_Gym_EventScript_PressFloorSwitch
-	end
-
-SunyshoreCity_Gym_EventScript_Switch2::
-	lockall
-	goto_if_set FLAG_SINNOH_BADGE8_GET, SunyshoreCity_Gym_EventScript_SwitchDoNothing
-	goto_if_eq VAR_SE_SUNYSHORE_GYM_STATE, 2, SunyshoreCity_Gym_EventScript_SwitchDoNothing
-	setvar VAR_SE_SUNYSHORE_GYM_STATE, 2
-	setvar VAR_0x8004, 1
-	goto SunyshoreCity_Gym_EventScript_PressFloorSwitch
-	end
-
-SunyshoreCity_Gym_EventScript_Switch3::
-	lockall
-	goto_if_set FLAG_SINNOH_BADGE8_GET, SunyshoreCity_Gym_EventScript_SwitchDoNothing
-	goto_if_eq VAR_SE_SUNYSHORE_GYM_STATE, 3, SunyshoreCity_Gym_EventScript_SwitchDoNothing
-	setvar VAR_SE_SUNYSHORE_GYM_STATE, 3
-	setvar VAR_0x8004, 2
-	goto SunyshoreCity_Gym_EventScript_PressFloorSwitch
-	end
-
-SunyshoreCity_Gym_EventScript_Switch4::
-	lockall
-	goto_if_set FLAG_SINNOH_BADGE8_GET, SunyshoreCity_Gym_EventScript_SwitchDoNothing
-	goto_if_eq VAR_SE_SUNYSHORE_GYM_STATE, 4, SunyshoreCity_Gym_EventScript_SwitchDoNothing
-	setvar VAR_SE_SUNYSHORE_GYM_STATE, 4
-	setvar VAR_0x8004, 3
-	goto SunyshoreCity_Gym_EventScript_PressFloorSwitch
-	end
-
-SunyshoreCity_Gym_EventScript_PressFloorSwitch::
-	special MauvilleGymSetDefaultBarriers
-	special MauvilleGymPressSwitch
-	special DrawWholeMapView
-	playse SE_UNLOCK
-	goto_if_set FLAG_SE_SUNYSHORE_GYM_BARRIERS, SunyshoreCity_Gym_EventScript_ClearBarriersAltState
-	goto_if_unset FLAG_SE_SUNYSHORE_GYM_BARRIERS, SunyshoreCity_Gym_EventScript_SetBarriersAltState
+	call SunyshoreCity_Gym_EventScript_DrawSector1Right
+	call SunyshoreCity_Gym_EventScript_ConsoleZap
+	msgbox SunyshoreCity_Gym_Text_RightLive, MSGBOX_DEFAULT
 	releaseall
 	end
 
-SunyshoreCity_Gym_EventScript_SwitchDoNothing::
+SunyshoreCity_Gym_EventScript_Console1ToLeft::
+	setvar VAR_SE_SUNYSHORE_GYM_STATE, 0
+	call SunyshoreCity_Gym_EventScript_DrawSector1Left
+	call SunyshoreCity_Gym_EventScript_ConsoleZap
+	msgbox SunyshoreCity_Gym_Text_LeftLive, MSGBOX_DEFAULT
 	releaseall
 	end
 
-SunyshoreCity_Gym_EventScript_SetBarriersAltState::
+SunyshoreCity_Gym_EventScript_Console2::
+	lockall
+	msgbox SunyshoreCity_Gym_Text_Console2, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SunyshoreCity_Gym_EventScript_ConsoleLeave
+	playse SE_SWITCH
+	goto_if_set FLAG_SE_SUNYSHORE_GYM_BARRIERS, SunyshoreCity_Gym_EventScript_Console2ToSide
 	setflag FLAG_SE_SUNYSHORE_GYM_BARRIERS
+	call SunyshoreCity_Gym_EventScript_DrawSector2Volkner
+	call SunyshoreCity_Gym_EventScript_ConsoleZap
+	msgbox SunyshoreCity_Gym_Text_RightLive, MSGBOX_DEFAULT
 	releaseall
 	end
 
-SunyshoreCity_Gym_EventScript_ClearBarriersAltState::
+SunyshoreCity_Gym_EventScript_Console2ToSide::
 	clearflag FLAG_SE_SUNYSHORE_GYM_BARRIERS
+	call SunyshoreCity_Gym_EventScript_DrawSector2Side
+	call SunyshoreCity_Gym_EventScript_ConsoleZap
+	msgbox SunyshoreCity_Gym_Text_LeftLive, MSGBOX_DEFAULT
 	releaseall
 	end
 
+SunyshoreCity_Gym_EventScript_ConsoleZap::
+	special DrawWholeMapView
+	waitse
+	playse SE_M_THUNDER_WAVE
+	waitse
+	return
+
+SunyshoreCity_Gym_EventScript_ConsoleLeave::
+	releaseall
+	end
+
+SunyshoreCity_Gym_Text_Console1::
+	.string "A switch for the barriers on the two\n"
+	.string "walkways up ahead. Flip it?$"
+
+SunyshoreCity_Gym_Text_Console2::
+	.string "A switch for the barriers on the left\n"
+	.string "path and the one to VOLKNER. Flip it?$"
+
+SunyshoreCity_Gym_Text_LeftLive::
+	.string "Bzzt! The left lamp is green: the\n"
+	.string "left way is open, the right one shut.$"
+
+SunyshoreCity_Gym_Text_RightLive::
+	.string "Bzzt! The right lamp is green: the\n"
+	.string "right way is open, the left one shut.$"
 
 SunyshoreCity_Gym_EventScript_Tiera::
 	trainerbattle_single TRAINER_MIGUEL_3_SINNOH, SunyshoreCity_Gym_Text_TieraIntro, SunyshoreCity_Gym_Text_TieraDefeat
@@ -143,7 +115,7 @@ SunyshoreCity_Gym_EventScript_Tiera::
 SunyshoreCity_Gym_Text_TieraPost::
 	.string "Our GYM's electric barriers are sure to\n"
 	.string "give you a shock! Think before you\l"
-	.string "step on a switch.$"
+	.string "flip a switch.$"
 
 SunyshoreCity_Gym_Text_TieraDefeat::
 	.string "The barriers crackle on and off… And\n"
@@ -431,12 +403,15 @@ SunyshoreCity_Gym_Text_SNGuideInfo::
 	.string "Electric types are weak to Ground\n"
 	.string "moves, and Ground types are immune to\l"
 	.string "Electric moves!\p"
-	.string "Electric barriers block the GYM. Step\n"
-	.string "on the floor switches to turn them on\l"
-	.string "and off and open a path to VOLKNER.$"
+	.string "Each switch box powers one pair of\n"
+	.string "barriers. Flip it and one way opens\l"
+	.string "while the other one shuts.\p"
+	.string "The green lamp on the box shows which\n"
+	.string "side is open. Use the one here first,\l"
+	.string "then the one by the walkway's end!$"
 
 SunyshoreCity_Gym_Text_PtGymGuide::
-	.string "Hey, there! How's it going, CHAMP-to-be?\p"
+	.string "Hey there, CHAMPION! How's it going?\p"
 	.string "Let me check out your TRAINER Case…\n"
 	.string "Whoa! Look at all those BADGES!\p"
 	.string "The GYM LEADER here is a master of\n"

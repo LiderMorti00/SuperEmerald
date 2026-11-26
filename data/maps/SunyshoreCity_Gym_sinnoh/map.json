@@ -18,42 +18,42 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_SCHOOL_KID_F",
-      "x": 7,
-      "y": 8,
+      "x": 5,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "1",
+      "trainer_sight_or_berry_tree_id": "2",
       "script": "SunyshoreCity_Gym_EventScript_Tiera",
       "flag": "0"
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY",
-      "x": 1,
-      "y": 16,
+      "x": 4,
+      "y": 14,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "SunyshoreCity_Gym_EventScript_Forrest",
       "flag": "0"
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GUITARIST",
-      "x": 5,
-      "y": 10,
+      "x": 10,
+      "y": 13,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
+      "trainer_sight_or_berry_tree_id": "1",
       "script": "SunyshoreCity_Gym_EventScript_Jerry",
       "flag": "0"
     },
@@ -61,21 +61,21 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MON_PIKACHU",
       "x": 1,
-      "y": 13,
+      "y": 15,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "SunyshoreCity_Gym_EventScript_Meghan",
       "flag": "0"
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_F",
-      "x": 7,
-      "y": 10,
+      "x": 5,
+      "y": 13,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
@@ -88,10 +88,10 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GUITARIST",
-      "x": 3,
-      "y": 4,
+      "x": 2,
+      "y": 7,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -102,22 +102,22 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GUITARIST",
-      "x": 7,
-      "y": 18,
+      "x": 12,
+      "y": 14,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
+      "trainer_sight_or_berry_tree_id": "1",
       "script": "SunyshoreCity_Gym_EventScript_Lonnie",
       "flag": "0"
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_M",
-      "x": 9,
-      "y": 8,
+      "x": 10,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -130,9 +130,9 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_VOLKNER",
-      "x": 5,
+      "x": 9,
       "y": 2,
-      "elevation": 0,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -144,10 +144,10 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GYM_GUY",
-      "x": 7,
+      "x": 4,
       "y": 20,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -158,74 +158,53 @@
   ],
   "warp_events": [
     {
-      "x": 4,
-      "y": 20,
+      "x": 7,
+      "y": 21,
       "elevation": 0,
       "dest_map": "MAP_SUNYSHORE_CITY_SINNOH",
       "dest_warp_id": "8"
     },
     {
-      "x": 5,
-      "y": 20,
-      "elevation": 0,
-      "dest_map": "MAP_SUNYSHORE_CITY_SINNOH",
-      "dest_warp_id": "8"
-    }
-  ],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 4,
-      "y": 12,
-      "elevation": 3,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "SunyshoreCity_Gym_EventScript_Switch2"
-    },
-    {
-      "type": "trigger",
-      "x": 3,
-      "y": 9,
-      "elevation": 3,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "SunyshoreCity_Gym_EventScript_Switch3"
-    },
-    {
-      "type": "trigger",
-      "x": 0,
-      "y": 15,
-      "elevation": 3,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "SunyshoreCity_Gym_EventScript_Switch1"
-    },
-    {
-      "type": "trigger",
       "x": 8,
-      "y": 9,
-      "elevation": 3,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "SunyshoreCity_Gym_EventScript_Switch4"
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_SUNYSHORE_CITY_SINNOH",
+      "dest_warp_id": "8"
     }
   ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",
-      "x": 3,
-      "y": 18,
+      "x": 5,
+      "y": 20,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "SunyshoreCity_Gym_EventScript_PtGymStatue"
     },
     {
       "type": "sign",
-      "x": 6,
+      "x": 10,
+      "y": 20,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SunyshoreCity_Gym_EventScript_PtGymStatue"
+    },
+    {
+      "type": "sign",
+      "x": 7,
       "y": 18,
       "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "SunyshoreCity_Gym_EventScript_PtGymStatue"
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SunyshoreCity_Gym_EventScript_Console1"
+    },
+    {
+      "type": "sign",
+      "x": 12,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "SunyshoreCity_Gym_EventScript_Console2"
     }
   ]
 }
