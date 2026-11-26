@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
-"""Super Emerald: Sunyshore City Gym (Volkner) - electric walkways over the dark, two switch sectors.
+"""Super Emerald: Sunyshore City Gym (Volkner) - rotating walkway crosses over a night sea.
 
 Run from the repo root: python3 tools/sfr/gyms/sunyshore.py
-Sector 1 (switch console at 7,18, by the entrance): toggles the barriers at (3,17) and
-(11,16). State 0 = left walkway on (to a side platform), right walkway off; state 1 = the
-right walkway on (up to the hub), left off. Stored in VAR_SE_SUNYSHORE_GYM_STATE.
-Sector 2 (console at 12,12, on the hub): toggles (4,10) and (9,9). Clear = side path on,
-VOLKNER's walkway off; set = VOLKNER's walkway on, side path off. FLAG_SE_SUNYSHORE_GYM_BARRIERS.
-Both consoles are on ground that never depends on their own switch, so they stay reachable.
-The console lamps show which side is live; scripts.inc reapplies both states on load.
+Adapted from the Platinum gym (pret/pokeplatinum src/overlay008/gym_features.c, SunyshoreGym_*):
+floor buttons turn the walkway gears 90 degrees, a "reverse" button turns them back.
+On GBA each gear is a 3x3 turntable drawn with metatiles: a round base, a hub that is always
+walkable and three walkway arms (a T). The missing arm is the turntable's state:
+0 = north, 1 = east, 2 = south, 3 = west. Pressing a normal button turns it clockwise (+1),
+the reverse button counter-clockwise (-1). scripts.inc redraws arms and hub (graphics and
+collision together) on every turn and on load. Turntable 1 (by the entrance, orange) is turned
+by the button in the hall; turntable 2 (blue) by the two buttons on the hub. States live in
+VAR_TEMP_1 / VAR_TEMP_2 and reset to 0 when the player leaves; check() below walks every
+reachable (position, state) pair and asserts the player can always get back to the door and
+VOLKNER is reachable.
 """
 import json, os, sys
+from collections import deque
 sys.path.insert(0, os.path.dirname(__file__))
 from gymkit import Canvas, Tileset, build_map, write_metatile_defs
 
@@ -83,48 +88,66 @@ def cable(dirs, sector, base=None):
     return c
 
 
-def gate(on, sector):
-    """Barrier across a north-south catwalk. Shut: tall pylons with a crackling field and a red bar.
-    Open: the pylons sink into the floor, the field is gone and green chevrons point the way."""
-    c = Canvas(0)
+
+def turntable(missing, sector):
+    """48x48 picture of a turntable whose arm `missing` (0 N, 1 E, 2 S, 3 W) is retracted."""
     col, dk = CABLE[sector]
-    if on:
-        for x0 in (0, 12):
-            c.rect(x0, 0, x0 + 3, 15, PD); c.rect(x0 + 1, 0, x0 + 2, 15, PL); c.rect(x0, 0, x0 + 3, 2, col)
-        for y in range(2, 14, 4):
-            for x in range(4, 12):
-                c.px(x, y + (x % 3 == 0), CY); c.px(x, y + 1 + (x % 2), PW)
-        c.rect(4, 7, 11, 8, OR)
-    else:
-        for x0 in (0, 12):
-            c.rect(x0, 6, x0 + 3, 9, PD); c.rect(x0 + 1, 7, x0 + 2, 8, col)
-        for y0 in (3, 9):
-            for i in range(4):
-                c.px(5 + i, y0 + i, PW); c.px(10 - i, y0 + i, PW)
+    g = [[0] * 48 for _ in range(48)]
+    sea_c = sea()
+    for y in range(48):
+        for x in range(48):
+            g[y][x] = sea_c.p[y % 16][x % 16]
+            r = ((x - 23.5) ** 2 + (y - 23.5) ** 2) ** 0.5
+            if r <= 22.5:
+                g[y][x] = PW if r > 21.5 else YS if r > 20 and ((x + y) // 3) % 2 else BK if r > 20 else PD if r > 17 else PM
+                if 17 < r <= 20 and (x * 7 + y * 3) % 11 == 0:
+                    g[y][x] = PL
+    arms = {0: (19, 0, 28, 18), 1: (30, 19, 47, 28), 2: (19, 30, 28, 47), 3: (0, 19, 18, 28)}
+    for d, (x0, y0, x1, y1) in arms.items():
+        if d == missing:
+            continue
+        for y in range(y0, y1 + 1):
+            for x in range(x0, x1 + 1):
+                edge = (x in (x0, x1)) if d in (0, 2) else (y in (y0, y1))
+                g[y][x] = PW if edge else (PD if (x % 4 == 0 or y % 4 == 0) else PM)
+    for y in range(16, 32):                  # hub
+        for x in range(16, 32):
+            r = ((x - 23.5) ** 2 + (y - 23.5) ** 2) ** 0.5
+            if r <= 8:
+                g[y][x] = PW if r > 7 else dk if r > 5.5 else col
+    # arrow in the hub pointing at the retracted arm, so the state reads at a glance
+    tip = {0: [(23, 18), (24, 18), (22, 19), (25, 19)], 1: [(29, 23), (29, 24), (28, 22), (28, 25)],
+           2: [(23, 29), (24, 29), (22, 28), (25, 28)], 3: [(18, 23), (18, 24), (19, 22), (19, 25)]}.get(missing, [])
+    for x, y in tip:
+        g[y][x] = BK
+    return g
+
+
+def cut(g, cx, cy):
+    c = Canvas(0)
+    c.p = [row[cx * 16:cx * 16 + 16] for row in g[cy * 16:cy * 16 + 16]]
     return c
 
 
-def console(state, sector):
-    c = Canvas(0)
+def floor_button(sector, reverse):
+    c = plate('', False)
     col, dk = CABLE[sector]
-    c.rect(1, 1, 14, 15, PD); c.rect(2, 2, 13, 13, PM); c.hline(1, 14, 1, PL); c.hline(1, 14, 15, BK)
-    c.rect(2, 2, 13, 3, col)                               # sector colour band
-    for x0, live in ((3, state == 0), (10, state == 1)):
-        c.rect(x0, 5, x0 + 2, 7, CY if live else ORD); c.px(x0, 5, PW if live else OR)
-    c.rect(6, 10, 9, 13, BK)
-    if state == 0:
-        c.rect(4, 9, 7, 10, PH); c.rect(3, 9, 4, 10, YS)
-    else:
-        c.rect(8, 9, 11, 10, PH); c.rect(11, 9, 12, 10, YS)
-    c.rect(7, 10, 8, 12, PL)
-    c.vline(7, 14, 15, col); c.vline(8, 14, 15, dk)     # cable out of the bottom
+    for y in range(16):
+        for x in range(16):
+            r = ((x - 7.5) ** 2 + (y - 7.5) ** 2) ** 0.5
+            if r <= 7:
+                c.px(x, y, BK if r > 6 else dk if r > 4.5 else col)
+    pts = [(5, 6), (6, 5), (7, 5), (8, 5), (9, 6), (10, 7), (10, 8), (9, 9)]       # turning arrow
+    head = [(4, 7), (5, 7), (6, 7)] if not reverse else [(9, 10), (10, 10), (8, 10)]
+    for x, y in pts:
+        c.px(15 - x if reverse else x, y, PW)
+    for x, y in ([(4, 6), (4, 7), (5, 7)] if not reverse else [(11, 6), (11, 7), (10, 7)]):
+        c.px(x, y, PW)
     return c
 
 
 def build_tileset(walk_kinds, cables):
     ts = Tileset(TS)
-    live = set()
-    b = open('data/layouts/SunyshoreCity_Gym_sinnoh/map.bin', 'rb').read()
     print('free tile slots:', ts.free_unused({0x216, 0x21e, 0x212, 0x213, 0x24a, 0x24b, 0x207, 0x20d, 0x20e,
                                                0x252, 0x253, 0x20f}))
     for kind in sorted(walk_kinds):
@@ -134,17 +157,29 @@ def build_tileset(walk_kinds, cables):
             stripes(c, 12, 15)
         ts.add('walk_%s%s%s' % ('g' if grate else 'p', edges or '0', '_y' if stripe else ''), [(c, P2), None, None])
     ts.add('sea', [(sea(), P2), None, None])
-    ts.replace(0x216, [(plate('', False), P2), None, ('mt', 0x216, 2)])      # statues stand on metal now
+    ts.replace(0x216, [(plate('', False), P2), None, ('mt', 0x216, 2)])      # statues stand on metal
     ts.replace(0x21e, [(plate('', False), P2), ('mt', 0x21e, 1), None])
     for (dirs, sector, on_walk) in sorted(cables):
         base = plate('we', True) if on_walk else None
         ts.add('cable%d_%s%s' % (sector, dirs, '_w' if on_walk else ''), [(cable(dirs, sector, base), P2), None, None])
+    pos = {'nw': (0, 0), 'n': (1, 0), 'ne': (2, 0), 'w': (0, 1), 'c': (1, 1), 'e': (2, 1),
+           'sw': (0, 2), 's': (1, 2), 'se': (2, 2)}
     for sector in (1, 2):
-        g = ('mt', 0, 0)
-        for on in (True, False):
-            ts.add('gate%d_%s' % (sector, 'on' if on else 'off'), [(plate('we', True), P2), (gate(on, sector), P2), None])
-        for st in (0, 1):
-            ts.add('console%d_%d' % (sector, st), [(sea(), P2), (console(st, sector), P2), None])
+        ts.add('button%d' % sector, [(floor_button(sector, False), P2), None, None])
+        ts.add('button%d_rev' % sector, [(floor_button(sector, True), P2), None, None])
+        for missing in range(4):
+            g = turntable(missing, sector)
+            ts.add('tt%d_c%d' % (sector, missing), [(cut(g, 1, 1), P2), None, None])
+        g_all = turntable(-1, sector)            # all arms out
+        g_none = [row[:] for row in g_all]
+        for d in range(4):                       # arms in: take each arm from a picture missing it
+            gm = turntable(d, sector)
+            k = 'nesw'[d]
+            cx, cy = pos[k]
+            ts.add('tt%d_%s_on' % (sector, k), [(cut(g_all, cx, cy), P2), None, None])
+            ts.add('tt%d_%s_off' % (sector, k), [(cut(gm, cx, cy), P2), None, None])
+        for k in ('nw', 'ne', 'sw', 'se'):
+            ts.add('tt%d_%s' % (sector, k), [(cut(g_all, *pos[k]), P2), None, None])
     pals = {P2: SEA}
     import colorsys
     for slot in (6, 7):                   # purple walls of VOLKNER's room -> steel blue
@@ -160,89 +195,152 @@ def build_tileset(walk_kinds, cables):
     return ts.names
 
 
-# '#' dark void, '.' walkway, G gate (drawn in state 0: '+' open, 'x' shut), 1/2 consoles,
-# T statue top, t statue base, m exit mat. Walls of VOLKNER's room use the original tiles.
+# '#' sea, '.' walkway, '1'/'2' turntable centres (3x3 around them), b/B buttons (b normal, B reverse;
+# sector from the turntable they sit nearest), T/t statue, m exit mat, letters A-N VOLKNER's room walls.
 PLAN = [
-    "#####ABBCDBBE##",   # 0  wall top (C D = emblem)
+    "#####ABBCDBBE##",   # 0  wall top
     "#####FGGHIGGJ##",   # 1  wall face
-    "#####K......N##",   # 2  VOLKNER (9,2)
+    "#####K......N##",   # 2  VOLKNER (8,2)
     "#####K......N##",   # 3
     "#####K......N##",   # 4
     "#####K......N##",   # 5
-    "#.....###.#####",   # 6  side platform x1-5 rows 6-8; VOLKNER's walkway x9
-    "#.....###..####",   # 7  ZACHERY alcove (10,7)
-    "#.....###.#####",   # 8
-    "####.####x#####",   # 9  sector-2 gate to VOLKNER (9,9), shut in state 0
-    "####+####.#####",   # 10 sector-2 gate to the side path (4,10), open in state 0
-    "####.####.#####",   # 11
-    "####........2##",   # 12 hub x4-11, console 2 (12,12)
-    "#####.####..###",   # 13 DESTINY alcove (5,13), JERRY alcove (10,13); right walkway x11
-    "#....######..##",   # 14 left platform x1-4 rows 14-15; LONNIE alcove (12,14)
-    "#....######.###",   # 15
-    "###.#######x###",   # 16 sector-1 gate on the right walkway (11,16), shut in state 0
-    "###+#######.###",   # 17 sector-1 gate on the left walkway (3,17), open in state 0
-    "###.###1###.###",   # 18 console 1 (7,18)
-    "###..T....T..##",   # 19 entrance hall x3-11, statues (5,19) and (10,19)
-    "###.Pt....t..##",   # 20 guide (4,20)
-    "#######mm######",   # 21 exit mat (7,21),(8,21)
+    "########..#####",   # 6  ZACHERY alcove (9,6) watches (8,6)
+    "#.....##.##...#",   # 7  west platform 2 x1-5 rows 7-10, east platform 2 x11-13
+    "#.....#~~~#...#",   # 8  turntable 2 (centre 8,9)
+    "#......~2~....#",   # 9
+    "#.....#~~~#...#",   # 10
+    "########.######",   # 11
+    "####.b.....B.##",   # 12 hub x4-12: button (5,12), reverse button (11,12)
+    "######.#.#.####",   # 13 alcoves: DESTINY (6,13), JERRY (10,13)
+    "########.######",   # 14
+    "#.....#~~~#...#",   # 15 turntable 1 (centre 8,16); west platform 1 x1-5 rows 15-16
+    "#......~1~....#",   # 16 east platform 1 x11-13
+    "#######~~~#####",   # 17
+    "###.......b...#",   # 18 hall x3-13: button (10,18), right beside turntable 1
+    "###.T.......T.#",   # 19 statues (4,19) and (12,19)
+    "###.t.......t.#",   # 20
+    "#######mm######",   # 21 exit mat
 ]
-
-
-WALKABLE = set('.PxT+')
-CABLES = {   # (x, y): (dirs, sector)
-    (6, 18): ('we', 1), (5, 18): ('we', 1), (4, 18): ('ne', 1), (4, 17): ('sw', 1),
-    (8, 18): ('we', 1), (9, 18): ('we', 1), (10, 18): ('nw', 1), (10, 17): ('ns', 1), (10, 16): ('se', 1),
-    (12, 11): ('nsw', 2), (11, 11): ('we', 2), (10, 11): ('we', 2), (9, 11): ('we', 2), (8, 11): ('we', 2),
-    (7, 11): ('we', 2), (6, 11): ('we', 2), (5, 11): ('ne', 2), (5, 10): ('sw', 2),
-    (12, 10): ('ns', 2), (12, 9): ('sw', 2), (11, 9): ('we', 2), (10, 9): ('we', 2),
+TURNTABLES = {1: (8, 16), 2: (8, 9)}
+BUTTONS = {(10, 18): ('Button1', 1, False), (5, 12): ('Button2', 2, False), (11, 12): ('Button2Rev', 2, True)}
+CABLES = {   # (x, y): (dirs, sector) - each button wired to its turntable
+    (10, 17): ('sw', 1),
+    (5, 11): ('se', 2), (6, 11): ('we', 2), (7, 11): ('nw', 2),
+    (11, 11): ('sw', 2), (10, 11): ('we', 2), (9, 11): ('ne', 2),
 }
-STRIPES = {(7, 19), (11, 12), (3, 16), (3, 18), (11, 15), (11, 17), (4, 9), (4, 11), (9, 8), (9, 10)}
+STRIPES = {(8, 18), (8, 14), (8, 11), (8, 13), (8, 7), (6, 9), (10, 9), (6, 16), (10, 16)}
+ARM = {0: (0, -1), 1: (1, 0), 2: (0, 1), 3: (-1, 0)}
+
+
+def walkable(plan, x, y, st):
+    """Is (x, y) walkable with turntable states st = {1: s1, 2: s2}?"""
+    H, W = len(plan), len(plan[0])
+    if not (0 <= x < W and 0 <= y < H):
+        return False
+    for t, (cx, cy) in TURNTABLES.items():
+        if abs(x - cx) <= 1 and abs(y - cy) <= 1:
+            if (x, y) == (cx, cy):
+                return True
+            for d, (dx, dy) in ARM.items():
+                if (x, y) == (cx + dx, cy + dy):
+                    return d != st[t]
+            return False
+    return plan[y][x] in '.bBTm'
+
+
+def check(plan):
+    """Every reachable (position, states) can get back to the door; VOLKNER is reachable."""
+    start = ((7, 21), 0, 0)
+    def nxt(node):
+        (x, y), s1, s2 = node
+        for dx, dy in ARM.values():
+            nx, ny = x + dx, y + dy
+            if not walkable(plan, nx, ny, {1: s1, 2: s2}):
+                continue
+            a, b = s1, s2
+            if (nx, ny) in BUTTONS:
+                _, t, rev = BUTTONS[(nx, ny)]
+                if t == 1: a = (a + (3 if rev else 1)) % 4
+                else: b = (b + (3 if rev else 1)) % 4
+            yield ((nx, ny), a, b)
+    seen = {start}; q = deque([start])
+    while q:
+        n = q.popleft()
+        for m in nxt(n):
+            if m not in seen:
+                seen.add(m); q.append(m)
+    assert any(p == (8, 3) for p, _, _ in seen), 'VOLKNER unreachable'
+    for n in seen:            # can each state get home?
+        s2 = {n}; q2 = deque([n]); ok = False
+        while q2 and not ok:
+            for m in nxt(q2.popleft()):
+                if m[0] == (7, 21):
+                    ok = True; break
+                if m not in s2:
+                    s2.add(m); q2.append(m)
+        assert ok, f'trapped at {n}'
+    return len(seen)
 
 
 def main():
     plan = [list(r) for r in PLAN]
+    for r in plan:
+        assert len(r) == 15, ''.join(r)
+    print('reachable states checked:', check(PLAN))
     H, W = len(plan), len(plan[0])
-    ok = lambda x, y: 0 <= x < W and 0 <= y < H and plan[y][x] in WALKABLE | set('1mM2Tt')
+    st0 = {1: 0, 2: 0}
     kinds, cells = set(), {}
     for y in range(H):
         for x in range(W):
-            if plan[y][x] in '.P' and (x, y) not in CABLES:
+            if plan[y][x] == '.' and (x, y) not in CABLES:
                 edges = ''.join(e for e, (dx, dy) in (('n', (0, -1)), ('s', (0, 1)), ('w', (-1, 0)), ('e', (1, 0)))
-                                if not ok(x + dx, y + dy))
-                grate = 'w' in edges and 'e' in edges
+                                if not (walkable(PLAN, x + dx, y + dy, {1: -1, 2: -1}) or
+                                        (0 <= x + dx < W and 0 <= y + dy < H and PLAN[y + dy][x + dx] in 'KNtT~12')))
+                grate = 'w' in edges and 'e' in edges or 'n' in edges and 's' in edges
                 k = (grate, edges, (x, y) in STRIPES)
                 kinds.add(k); cells[(x, y)] = k
-    cab = {(d, sec, plan[y][x] in '.P') for (x, y), (d, sec) in CABLES.items()}
+    cab = {(d, sec, False) for (x, y), (d, sec) in CABLES.items()}
     names = build_tileset(kinds, cab)
     n = lambda k: names[k]
     write_metatile_defs('data/maps/SunyshoreCity_Gym_sinnoh', 'SunyshoreGym', names)
     legend = {
-        '#': (n('sea'), 1, 0), 'x': (n('gate1_on'), 1, 3), '+': (n('gate1_off'), 0, 3),
-        'X': (n('gate2_on'), 1, 3), '=': (n('gate2_off'), 0, 3),
-        '1': (n('console1_0'), 1, 3), '2': (n('console2_0'), 1, 3),
+        '#': (n('sea'), 1, 0),
         'T': (0x216, 0, 3), 't': (0x21e, 1, 3), 'm': (0x006, 0, 3), 'M': (0x007, 0, 3),
         'A': (0x212, 1, 0), 'B': (0x213, 1, 0), 'C': (0x24a, 1, 0), 'D': (0x24b, 1, 0), 'E': (0x207, 1, 0),
         'F': (0x20d, 1, 0), 'G': (0x20e, 1, 0), 'H': (0x252, 1, 0), 'I': (0x253, 1, 0), 'J': (0x20f, 1, 0),
         'K': (0x20d, 1, 0), 'N': (0x20f, 1, 0),
     }
-    plan[9][9] = 'X'; plan[10][4] = '='          # sector-2 gates
     plan[21][8] = 'M'
     out = []
+    def key(m, col, el):
+        ch = chr(0x100 + len(legend)); legend[ch] = (m, col, el); return ch
     for y in range(H):
         line = ''
         for x in range(W):
             ch = plan[y][x]
-            if (x, y) in CABLES:
+            tt = [t for t, (cx, cy) in TURNTABLES.items() if abs(x - cx) <= 1 and abs(y - cy) <= 1]
+            if tt:
+                t = tt[0]; cx, cy = TURNTABLES[t]
+                dx, dy = x - cx, y - cy
+                if (dx, dy) == (0, 0):
+                    line += key(n('tt%d_c0' % t), 0, 3)
+                elif dx and dy:
+                    line += key(n('tt%d_%s%s' % (t, 'n' if dy < 0 else 's', 'w' if dx < 0 else 'e')), 1, 3)
+                else:
+                    d = [k for k, v in ARM.items() if v == (dx, dy)][0]
+                    on = d != st0[t]
+                    line += key(n('tt%d_%s_%s' % (t, 'nesw'[d], 'on' if on else 'off')), 0 if on else 1, 3)
+            elif (x, y) in BUTTONS:
+                _, t, rev = BUTTONS[(x, y)]
+                line += key(n('button%d%s' % (t, '_rev' if rev else '')), 0, 3)
+            elif (x, y) in CABLES:
                 d_, sec = CABLES[(x, y)]
-                key = 'cable%d_%s%s' % (sec, d_, '_w' if ch in '.P' else '')
-                ch2 = chr(0x100 + len(legend)); legend[ch2] = (n(key), 0 if ch in '.P' else 1, 3 if ch in '.P' else 0)
-                ch = ch2
+                line += key(n('cable%d_%s' % (sec, d_)), 1, 0)
             elif (x, y) in cells:
-                grate, edges, st = cells[(x, y)]
-                key = 'walk_%s%s%s' % ('g' if grate else 'p', edges or '0', '_y' if st else '')
-                ch2 = chr(0x100 + len(legend)); legend[ch2] = (n(key), 0, 3)
-                ch = ch2
-            line += ch
+                grate, edges, s_ = cells[(x, y)]
+                line += key(n('walk_%s%s%s' % ('g' if grate else 'p', edges or '0', '_y' if s_ else '')), 0, 3)
+            else:
+                line += ch
         out.append(line)
     build_map(LAYOUT, out, legend, border=n('sea'))
 
@@ -250,16 +348,16 @@ def main():
     d['warp_events'] = [{'x': x, 'y': 21, 'elevation': 0, 'dest_map': 'MAP_SUNYSHORE_CITY_SINNOH', 'dest_warp_id': '8'}
                         for x in (7, 8)]
     pos = {
-        'SunyshoreCity_Gym_EventScript_Meghan': (1, 15, 'MOVEMENT_TYPE_FACE_RIGHT', '3'),   # left platform
-        'SunyshoreCity_Gym_EventScript_Forrest': (4, 14, 'MOVEMENT_TYPE_FACE_LEFT', '3'),
-        'SunyshoreCity_Gym_EventScript_Lonnie': (12, 14, 'MOVEMENT_TYPE_FACE_LEFT', '1'),   # right walkway
-        'SunyshoreCity_Gym_EventScript_Destiny': (5, 13, 'MOVEMENT_TYPE_FACE_UP', '1'),     # hub, west
-        'SunyshoreCity_Gym_EventScript_Jerry': (10, 13, 'MOVEMENT_TYPE_FACE_UP', '1'),      # hub, east
-        'SunyshoreCity_Gym_EventScript_Preston': (2, 7, 'MOVEMENT_TYPE_FACE_RIGHT', '2'),   # side platform
-        'SunyshoreCity_Gym_EventScript_Tiera': (5, 6, 'MOVEMENT_TYPE_FACE_DOWN', '2'),
-        'SunyshoreCity_Gym_EventScript_Zachery': (10, 7, 'MOVEMENT_TYPE_FACE_LEFT', '1'),   # VOLKNER's walkway
-        'SE_EventScript_SinnohLeader_Volkner': (9, 2, 'MOVEMENT_TYPE_FACE_DOWN', '0'),
-        'SunyshoreCity_Gym_EventScript_PtGymGuide': (4, 20, 'MOVEMENT_TYPE_FACE_RIGHT', '0'),
+        'SunyshoreCity_Gym_EventScript_Meghan': (2, 16, 'MOVEMENT_TYPE_FACE_RIGHT', '3'),   # west platform 1
+        'SunyshoreCity_Gym_EventScript_Forrest': (1, 15, 'MOVEMENT_TYPE_FACE_RIGHT', '2'),
+        'SunyshoreCity_Gym_EventScript_Lonnie': (12, 16, 'MOVEMENT_TYPE_FACE_LEFT', '1'),   # east platform 1
+        'SunyshoreCity_Gym_EventScript_Destiny': (6, 13, 'MOVEMENT_TYPE_FACE_UP', '1'),     # hub, by the button
+        'SunyshoreCity_Gym_EventScript_Jerry': (10, 13, 'MOVEMENT_TYPE_FACE_UP', '1'),      # hub, by the reverse button
+        'SunyshoreCity_Gym_EventScript_Preston': (2, 9, 'MOVEMENT_TYPE_FACE_RIGHT', '3'),   # west platform 2
+        'SunyshoreCity_Gym_EventScript_Tiera': (12, 9, 'MOVEMENT_TYPE_FACE_LEFT', '1'),     # east platform 2
+        'SunyshoreCity_Gym_EventScript_Zachery': (9, 6, 'MOVEMENT_TYPE_FACE_LEFT', '1'),    # VOLKNER's walkway
+        'SE_EventScript_SinnohLeader_Volkner': (8, 2, 'MOVEMENT_TYPE_FACE_DOWN', '0'),
+        'SunyshoreCity_Gym_EventScript_PtGymGuide': (6, 20, 'MOVEMENT_TYPE_FACE_RIGHT', '0'),
     }
     for o in d['object_events']:
         x, y, mv, s = pos[o['script']]
@@ -269,9 +367,9 @@ def main():
     any_ = 'BG_EVENT_PLAYER_FACING_ANY'
     sign = lambda x, y, s: {'type': 'sign', 'x': x, 'y': y, 'elevation': 0, 'player_facing_dir': any_,
                             'script': 'SunyshoreCity_Gym_EventScript_' + s}
-    d['bg_events'] = [sign(5, 20, 'PtGymStatue'), sign(10, 20, 'PtGymStatue'),
-                      sign(7, 18, 'Console1'), sign(12, 12, 'Console2')]
-    d['coord_events'] = []
+    d['bg_events'] = [sign(4, 20, 'PtGymStatue'), sign(12, 20, 'PtGymStatue')]
+    d['coord_events'] = [{'type': 'trigger', 'x': x, 'y': y, 'elevation': 3, 'var': 'VAR_TEMP_0', 'var_value': '0',
+                          'script': 'SunyshoreCity_Gym_EventScript_' + s} for (x, y), (s, _, _) in BUTTONS.items()]
     open(MAP, 'w').write(json.dumps(d, indent=2, ensure_ascii=False) + '\n')
 
 

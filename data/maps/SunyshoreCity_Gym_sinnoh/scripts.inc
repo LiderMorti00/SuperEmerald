@@ -4,108 +4,159 @@ SunyshoreCity_Gym_sinnoh_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, SunyshoreCity_Gym_OnLoad
 	.byte 0
 
-@ Super Emerald: two switch sectors over electric walkways (tools/sfr/gyms/sunyshore.py).
-@ Sector 1 (console 7,18): VAR_SE_SUNYSHORE_GYM_STATE 0 = left walkway (3,17) live, right (11,16)
-@ dead; 1 = the other way round. Sector 2 (console 12,12): FLAG_SE_SUNYSHORE_GYM_BARRIERS clear =
-@ side path (4,10) live, VOLKNER's walkway (9,9) dead; set = the other way round.
-@ The map is drawn in state 0 / clear; ON_LOAD redraws whatever the player left behind.
+@ Super Emerald: rotating walkway crosses, after Platinum's gear rooms (tools/sfr/gyms/sunyshore.py).
+@ VAR_TEMP_1 / VAR_TEMP_2 = which arm of turntable 1 / 2 is retracted (0 N, 1 E, 2 S, 3 W).
+@ Floor buttons turn a turntable clockwise; the reverse button on the hub turns it back.
+@ The map is drawn in state 0; ON_LOAD redraws the current state (temp vars reset on leaving).
 SunyshoreCity_Gym_OnLoad::
-	call_if_eq VAR_SE_SUNYSHORE_GYM_STATE, 1, SunyshoreCity_Gym_EventScript_DrawSector1Right
-	call_if_set FLAG_SE_SUNYSHORE_GYM_BARRIERS, SunyshoreCity_Gym_EventScript_DrawSector2Volkner
+	call SunyshoreCity_Gym_EventScript_DrawTT1
+	call SunyshoreCity_Gym_EventScript_DrawTT2
 	end
 
-SunyshoreCity_Gym_EventScript_DrawSector1Left::
-	setmetatile 3, 17, METATILE_SunyshoreGym_gate1_off, FALSE
-	setmetatile 11, 16, METATILE_SunyshoreGym_gate1_on, TRUE
-	setmetatile 7, 18, METATILE_SunyshoreGym_console1_0, TRUE
+SunyshoreCity_Gym_EventScript_DrawTT1::
+	switch VAR_TEMP_1
+	case 0, SunyshoreCity_Gym_EventScript_TT1_0
+	case 1, SunyshoreCity_Gym_EventScript_TT1_1
+	case 2, SunyshoreCity_Gym_EventScript_TT1_2
+	case 3, SunyshoreCity_Gym_EventScript_TT1_3
 	return
 
-SunyshoreCity_Gym_EventScript_DrawSector1Right::
-	setmetatile 3, 17, METATILE_SunyshoreGym_gate1_on, TRUE
-	setmetatile 11, 16, METATILE_SunyshoreGym_gate1_off, FALSE
-	setmetatile 7, 18, METATILE_SunyshoreGym_console1_1, TRUE
+SunyshoreCity_Gym_EventScript_TT1_0::
+	setmetatile 8, 16, METATILE_SunyshoreGym_tt1_c0, FALSE
+	setmetatile 8, 15, METATILE_SunyshoreGym_tt1_n_off, TRUE
+	setmetatile 9, 16, METATILE_SunyshoreGym_tt1_e_on, FALSE
+	setmetatile 8, 17, METATILE_SunyshoreGym_tt1_s_on, FALSE
+	setmetatile 7, 16, METATILE_SunyshoreGym_tt1_w_on, FALSE
 	return
 
-SunyshoreCity_Gym_EventScript_DrawSector2Side::
-	setmetatile 4, 10, METATILE_SunyshoreGym_gate2_off, FALSE
-	setmetatile 9, 9, METATILE_SunyshoreGym_gate2_on, TRUE
-	setmetatile 12, 12, METATILE_SunyshoreGym_console2_0, TRUE
+SunyshoreCity_Gym_EventScript_TT1_1::
+	setmetatile 8, 16, METATILE_SunyshoreGym_tt1_c1, FALSE
+	setmetatile 8, 15, METATILE_SunyshoreGym_tt1_n_on, FALSE
+	setmetatile 9, 16, METATILE_SunyshoreGym_tt1_e_off, TRUE
+	setmetatile 8, 17, METATILE_SunyshoreGym_tt1_s_on, FALSE
+	setmetatile 7, 16, METATILE_SunyshoreGym_tt1_w_on, FALSE
 	return
 
-SunyshoreCity_Gym_EventScript_DrawSector2Volkner::
-	setmetatile 4, 10, METATILE_SunyshoreGym_gate2_on, TRUE
-	setmetatile 9, 9, METATILE_SunyshoreGym_gate2_off, FALSE
-	setmetatile 12, 12, METATILE_SunyshoreGym_console2_1, TRUE
+SunyshoreCity_Gym_EventScript_TT1_2::
+	setmetatile 8, 16, METATILE_SunyshoreGym_tt1_c2, FALSE
+	setmetatile 8, 15, METATILE_SunyshoreGym_tt1_n_on, FALSE
+	setmetatile 9, 16, METATILE_SunyshoreGym_tt1_e_on, FALSE
+	setmetatile 8, 17, METATILE_SunyshoreGym_tt1_s_off, TRUE
+	setmetatile 7, 16, METATILE_SunyshoreGym_tt1_w_on, FALSE
 	return
 
-SunyshoreCity_Gym_EventScript_Console1::
-	lockall
-	msgbox SunyshoreCity_Gym_Text_Console1, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, SunyshoreCity_Gym_EventScript_ConsoleLeave
-	playse SE_SWITCH
-	goto_if_eq VAR_SE_SUNYSHORE_GYM_STATE, 1, SunyshoreCity_Gym_EventScript_Console1ToLeft
-	setvar VAR_SE_SUNYSHORE_GYM_STATE, 1
-	call SunyshoreCity_Gym_EventScript_DrawSector1Right
-	call SunyshoreCity_Gym_EventScript_ConsoleZap
-	msgbox SunyshoreCity_Gym_Text_RightLive, MSGBOX_DEFAULT
-	releaseall
-	end
+SunyshoreCity_Gym_EventScript_TT1_3::
+	setmetatile 8, 16, METATILE_SunyshoreGym_tt1_c3, FALSE
+	setmetatile 8, 15, METATILE_SunyshoreGym_tt1_n_on, FALSE
+	setmetatile 9, 16, METATILE_SunyshoreGym_tt1_e_on, FALSE
+	setmetatile 8, 17, METATILE_SunyshoreGym_tt1_s_on, FALSE
+	setmetatile 7, 16, METATILE_SunyshoreGym_tt1_w_off, TRUE
+	return
 
-SunyshoreCity_Gym_EventScript_Console1ToLeft::
-	setvar VAR_SE_SUNYSHORE_GYM_STATE, 0
-	call SunyshoreCity_Gym_EventScript_DrawSector1Left
-	call SunyshoreCity_Gym_EventScript_ConsoleZap
-	msgbox SunyshoreCity_Gym_Text_LeftLive, MSGBOX_DEFAULT
-	releaseall
-	end
-
-SunyshoreCity_Gym_EventScript_Console2::
-	lockall
-	msgbox SunyshoreCity_Gym_Text_Console2, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, SunyshoreCity_Gym_EventScript_ConsoleLeave
-	playse SE_SWITCH
-	goto_if_set FLAG_SE_SUNYSHORE_GYM_BARRIERS, SunyshoreCity_Gym_EventScript_Console2ToSide
-	setflag FLAG_SE_SUNYSHORE_GYM_BARRIERS
-	call SunyshoreCity_Gym_EventScript_DrawSector2Volkner
-	call SunyshoreCity_Gym_EventScript_ConsoleZap
-	msgbox SunyshoreCity_Gym_Text_RightLive, MSGBOX_DEFAULT
-	releaseall
-	end
-
-SunyshoreCity_Gym_EventScript_Console2ToSide::
-	clearflag FLAG_SE_SUNYSHORE_GYM_BARRIERS
-	call SunyshoreCity_Gym_EventScript_DrawSector2Side
-	call SunyshoreCity_Gym_EventScript_ConsoleZap
-	msgbox SunyshoreCity_Gym_Text_LeftLive, MSGBOX_DEFAULT
-	releaseall
-	end
-
-SunyshoreCity_Gym_EventScript_ConsoleZap::
+SunyshoreCity_Gym_EventScript_TT1_Turning::
+	setmetatile 8, 15, METATILE_SunyshoreGym_tt1_n_off, TRUE
+	setmetatile 9, 16, METATILE_SunyshoreGym_tt1_e_off, TRUE
+	setmetatile 8, 17, METATILE_SunyshoreGym_tt1_s_off, TRUE
+	setmetatile 7, 16, METATILE_SunyshoreGym_tt1_w_off, TRUE
 	special DrawWholeMapView
-	waitse
 	playse SE_M_THUNDER_WAVE
-	waitse
+	delay 10
 	return
 
-SunyshoreCity_Gym_EventScript_ConsoleLeave::
+SunyshoreCity_Gym_EventScript_DrawTT2::
+	switch VAR_TEMP_2
+	case 0, SunyshoreCity_Gym_EventScript_TT2_0
+	case 1, SunyshoreCity_Gym_EventScript_TT2_1
+	case 2, SunyshoreCity_Gym_EventScript_TT2_2
+	case 3, SunyshoreCity_Gym_EventScript_TT2_3
+	return
+
+SunyshoreCity_Gym_EventScript_TT2_0::
+	setmetatile 8, 9, METATILE_SunyshoreGym_tt2_c0, FALSE
+	setmetatile 8, 8, METATILE_SunyshoreGym_tt2_n_off, TRUE
+	setmetatile 9, 9, METATILE_SunyshoreGym_tt2_e_on, FALSE
+	setmetatile 8, 10, METATILE_SunyshoreGym_tt2_s_on, FALSE
+	setmetatile 7, 9, METATILE_SunyshoreGym_tt2_w_on, FALSE
+	return
+
+SunyshoreCity_Gym_EventScript_TT2_1::
+	setmetatile 8, 9, METATILE_SunyshoreGym_tt2_c1, FALSE
+	setmetatile 8, 8, METATILE_SunyshoreGym_tt2_n_on, FALSE
+	setmetatile 9, 9, METATILE_SunyshoreGym_tt2_e_off, TRUE
+	setmetatile 8, 10, METATILE_SunyshoreGym_tt2_s_on, FALSE
+	setmetatile 7, 9, METATILE_SunyshoreGym_tt2_w_on, FALSE
+	return
+
+SunyshoreCity_Gym_EventScript_TT2_2::
+	setmetatile 8, 9, METATILE_SunyshoreGym_tt2_c2, FALSE
+	setmetatile 8, 8, METATILE_SunyshoreGym_tt2_n_on, FALSE
+	setmetatile 9, 9, METATILE_SunyshoreGym_tt2_e_on, FALSE
+	setmetatile 8, 10, METATILE_SunyshoreGym_tt2_s_off, TRUE
+	setmetatile 7, 9, METATILE_SunyshoreGym_tt2_w_on, FALSE
+	return
+
+SunyshoreCity_Gym_EventScript_TT2_3::
+	setmetatile 8, 9, METATILE_SunyshoreGym_tt2_c3, FALSE
+	setmetatile 8, 8, METATILE_SunyshoreGym_tt2_n_on, FALSE
+	setmetatile 9, 9, METATILE_SunyshoreGym_tt2_e_on, FALSE
+	setmetatile 8, 10, METATILE_SunyshoreGym_tt2_s_on, FALSE
+	setmetatile 7, 9, METATILE_SunyshoreGym_tt2_w_off, TRUE
+	return
+
+SunyshoreCity_Gym_EventScript_TT2_Turning::
+	setmetatile 8, 8, METATILE_SunyshoreGym_tt2_n_off, TRUE
+	setmetatile 9, 9, METATILE_SunyshoreGym_tt2_e_off, TRUE
+	setmetatile 8, 10, METATILE_SunyshoreGym_tt2_s_off, TRUE
+	setmetatile 7, 9, METATILE_SunyshoreGym_tt2_w_off, TRUE
+	special DrawWholeMapView
+	playse SE_M_THUNDER_WAVE
+	delay 10
+	return
+
+SunyshoreCity_Gym_EventScript_Button1::
+	lockall
+	playse SE_SWITCH
+	call SunyshoreCity_Gym_EventScript_TT1_Turning
+	addvar VAR_TEMP_1, 1
+	call_if_eq VAR_TEMP_1, 4, SunyshoreCity_Gym_EventScript_TT1_Wrap
+	call SunyshoreCity_Gym_EventScript_DrawTT1
+	special DrawWholeMapView
 	releaseall
 	end
 
-SunyshoreCity_Gym_Text_Console1::
-	.string "A switch for the barriers on the two\n"
-	.string "walkways up ahead. Flip it?$"
+SunyshoreCity_Gym_EventScript_TT1_Wrap::
+	setvar VAR_TEMP_1, 0
+	return
 
-SunyshoreCity_Gym_Text_Console2::
-	.string "A switch for the barriers on the left\n"
-	.string "path and the one to VOLKNER. Flip it?$"
+SunyshoreCity_Gym_EventScript_Button2::
+	lockall
+	playse SE_SWITCH
+	call SunyshoreCity_Gym_EventScript_TT2_Turning
+	addvar VAR_TEMP_2, 1
+	call_if_eq VAR_TEMP_2, 4, SunyshoreCity_Gym_EventScript_TT2_Wrap
+	call SunyshoreCity_Gym_EventScript_DrawTT2
+	special DrawWholeMapView
+	releaseall
+	end
 
-SunyshoreCity_Gym_Text_LeftLive::
-	.string "Bzzt! The left lamp is green: the\n"
-	.string "left way is open, the right one shut.$"
+SunyshoreCity_Gym_EventScript_TT2_Wrap::
+	setvar VAR_TEMP_2, 0
+	return
 
-SunyshoreCity_Gym_Text_RightLive::
-	.string "Bzzt! The right lamp is green: the\n"
-	.string "right way is open, the left one shut.$"
+SunyshoreCity_Gym_EventScript_Button2Rev::
+	lockall
+	playse SE_SWITCH
+	call SunyshoreCity_Gym_EventScript_TT2_Turning
+	call_if_eq VAR_TEMP_2, 0, SunyshoreCity_Gym_EventScript_TT2_Unwrap
+	subvar VAR_TEMP_2, 1
+	call SunyshoreCity_Gym_EventScript_DrawTT2
+	special DrawWholeMapView
+	releaseall
+	end
+
+SunyshoreCity_Gym_EventScript_TT2_Unwrap::
+	setvar VAR_TEMP_2, 4
+	return
 
 SunyshoreCity_Gym_EventScript_Tiera::
 	trainerbattle_single TRAINER_MIGUEL_3_SINNOH, SunyshoreCity_Gym_Text_TieraIntro, SunyshoreCity_Gym_Text_TieraDefeat
@@ -113,13 +164,13 @@ SunyshoreCity_Gym_EventScript_Tiera::
 	end
 
 SunyshoreCity_Gym_Text_TieraPost::
-	.string "Our GYM's electric barriers are sure to\n"
-	.string "give you a shock! Think before you\l"
-	.string "flip a switch.$"
+	.string "Our GYM's turning walkways are sure to\n"
+	.string "give you a spin! Think before you\l"
+	.string "step on a button.$"
 
 SunyshoreCity_Gym_Text_TieraDefeat::
-	.string "The barriers crackle on and off… And\n"
-	.string "I'm switched off…$"
+	.string "The gears spin round and round… And\n"
+	.string "I'm spun right out…$"
 
 SunyshoreCity_Gym_Text_TieraIntro::
 	.string "Can you make it to the GYM LEADER? You\n"
@@ -403,12 +454,15 @@ SunyshoreCity_Gym_Text_SNGuideInfo::
 	.string "Electric types are weak to Ground\n"
 	.string "moves, and Ground types are immune to\l"
 	.string "Electric moves!\p"
-	.string "Each switch box powers one pair of\n"
-	.string "barriers. Flip it and one way opens\l"
-	.string "while the other one shuts.\p"
-	.string "The green lamp on the box shows which\n"
-	.string "side is open. Use the one here first,\l"
-	.string "then the one by the walkway's end!$"
+	.string "The walkways meet on big turning\n"
+	.string "gears. Step on a round button and its\l"
+	.string "gear turns a quarter of a circle.\p"
+	.string "The arrow on the gear points at the\n"
+	.string "side that's closed. The orange button\l"
+	.string "here turns the first gear.\p"
+	.string "Up ahead, the blue button turns the\n"
+	.string "second gear, and the one with the\l"
+	.string "backward arrow turns it back!$"
 
 SunyshoreCity_Gym_Text_PtGymGuide::
 	.string "Hey there, CHAMPION! How's it going?\p"
