@@ -18,16 +18,16 @@ OreburghCity_Gym_EventScript_Jonathon::
 	end
 
 OreburghCity_Gym_Text_JonathonPost::
-	.string "You should go whichever way you want,\n"
-	.string "shortcut or the long way!$"
+	.string "The path behind the rocks would have\n"
+	.string "kept you out of my sight, you know!$"
 
 OreburghCity_Gym_Text_JonathonDefeat::
 	.string "Now I understand why you decided to\n"
 	.string "battle with me.$"
 
 OreburghCity_Gym_Text_JonathonIntro::
-	.string "You avoided the long way around?\n"
-	.string "Let's see why you'd do that!$"
+	.string "You came straight down the dig?\n"
+	.string "Then you're ready to battle!$"
 
 OreburghCity_Gym_EventScript_Darius::
 	trainerbattle_single TRAINER_TOMMY_SINNOH, OreburghCity_Gym_Text_DariusIntro, OreburghCity_Gym_Text_DariusDefeat
@@ -64,14 +64,17 @@ OreburghCity_Gym_Text_SNGuideInfo::
 	.string "CRANIDOS.\p"
 	.string "Rock types are weak to Water, Grass,\n"
 	.string "Fighting, Ground and Steel moves!\p"
-	.string "His TRAINERS wait along the path. Beat\n"
-	.string "them and you can walk right up to\l"
-	.string "ROARK. Go for it!$"
+	.string "This GYM is a mine dig. Twice, the\n"
+	.string "rocks squeeze the tunnel into a gap,\l"
+	.string "and a TRAINER keeps watch over it.\p"
+	.string "Walk through the gap and you'll have\n"
+	.string "to battle.\p"
+	.string "But every rock pile hides a short way\n"
+	.string "around. Take it and you can reach\l"
+	.string "ROARK without a fight. Your call!$"
 
 OreburghCity_Gym_Text_Guide::
-	.string "Howdy! How's it going, CHAMP-to-be?\p"
-	.string "That's what I said to a really\n"
-	.string "impatient boy earlier, too.\p"
+	.string "Howdy! How's it going, CHAMPION?\p"
 	.string "The GYM LEADER is a user of Rock-type\n"
 	.string "POKéMON.\p"
 	.string "Well, listen. Rock-type POKéMON really\n"

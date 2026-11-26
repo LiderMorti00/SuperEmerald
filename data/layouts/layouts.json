@@ -15783,8 +15783,8 @@
     {
       "id": "LAYOUT_OREBURGH_CITY_GYM_SINNOH",
       "name": "OreburghCity_Gym_Layout_Sinnoh",
-      "width": 13,
-      "height": 16,
+      "width": 17,
+      "height": 28,
       "primary_tileset": "gTileset_Building_Sinnoh",
       "secondary_tileset": "gTileset_OreburghGym_Sinnoh",
       "border_filepath": "data/layouts/OreburghCity_Gym_sinnoh/border.bin",
