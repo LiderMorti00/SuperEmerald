@@ -8,12 +8,12 @@ HearthomeCity_Gym_EventScript_Donny::
 	end
 
 HearthomeCity_Gym_Text_DonnyPost::
-	.string "Just walk around and look for the blue\n"
-	.string "marks on the tiles.$"
+	.string "Read the plaque by each entrance.\n"
+	.string "It tells you which symbol to trust.$"
 
 HearthomeCity_Gym_Text_DonnyDefeat::
-	.string "Argh! I should've sent you back to the\n"
-	.string "entrance with a warp panel!$"
+	.string "Argh! You picked the wrong door,\n"
+	.string "but you still beat me!$"
 
 HearthomeCity_Gym_Text_DonnyIntro::
 	.string "Hey, now! You're not even close to\n"
@@ -81,7 +81,7 @@ HearthomeCity_Gym_Text_ChancePost::
 	.string "Whatever happens in life, it's better\n"
 	.string "to try to enjoy it the best one can.\p"
 	.string "Getting lost between these rooms\n"
-	.string "again and again, I came to realize that.$"
+	.string "again and again taught me that.$"
 
 HearthomeCity_Gym_Text_ChanceDefeat::
 	.string "Let me guess. You are enjoying\n"
@@ -105,9 +105,9 @@ HearthomeCity_Gym_Text_CatherineDefeat::
 	.string "going forward even into the unknown.$"
 
 HearthomeCity_Gym_Text_CatherineIntro::
-	.string "What does it feel like, stepping on one\n"
-	.string "warp panel after another without\l"
-	.string "knowing where it leads?$"
+	.string "What does it feel like, opening one\n"
+	.string "door after another without knowing\l"
+	.string "where it leads?$"
 
 HearthomeCity_Gym_EventScript_Leader::
 	goto_if_set FLAG_SYS_GAME_CLEAR, HearthomeCity_Gym_EventScript_SNRematch
@@ -243,16 +243,22 @@ HearthomeCity_Gym_Text_SNGuideInfo::
 	.string "Ghost types are weak to Ghost and\n"
 	.string "Dark moves, and Normal and Fighting\l"
 	.string "moves can't touch them!\p"
-	.string "The GYM is split into nine rooms linked\n"
-	.string "by warp panels. Step on a panel to be\l"
-	.string "sent to another room.\p"
-	.string "Some panels take you back where you\n"
-	.string "started, so remember the ones you\l"
-	.string "used! FANTINA waits in the middle room.$"
+	.string "To reach FANTINA, you must pass\n"
+	.string "three rooms, each with two doors.\p"
+	.string "Each door bears a symbol. Only one\n"
+	.string "of them leads onward.\p"
+	.string "Read the plaque by each room's\n"
+	.string "entrance: it tells you which symbol\l"
+	.string "to choose.\p"
+	.string "A wrong door leads to a side room.\n"
+	.string "Leave it by the door you came in\l"
+	.string "and you're back where you chose!\p"
+	.string "The door in each room's south wall\n"
+	.string "always leads back toward me.$"
 
 HearthomeCity_Gym_Text_PtGymGuide::
 	.string "Hey, there! How's it going,\n"
-	.string "CHAMP-to-be?\p"
+	.string "CHAMPION?\p"
 	.string "I'm the GYM guide! I help out TRAINERS\n"
 	.string "who come to challenge the GYM LEADER.$"
 
@@ -291,3 +297,31 @@ HearthomeCity_Gym_Text_PtGymStatueWon::
 	.string "LEADER: FANTINA\p"
 	.string "Certified TRAINERS:\n"
 	.string "{PLAYER}$"
+
+HearthomeCity_Gym_EventScript_HintRoom1::
+	msgbox HearthomeCity_Gym_Text_HintRoom1, MSGBOX_SIGN
+	end
+
+HearthomeCity_Gym_EventScript_HintRoom2::
+	msgbox HearthomeCity_Gym_Text_HintRoom2, MSGBOX_SIGN
+	end
+
+HearthomeCity_Gym_EventScript_HintRoom3::
+	msgbox HearthomeCity_Gym_Text_HintRoom3, MSGBOX_SIGN
+	end
+
+HearthomeCity_Gym_Text_HintRoom1::
+	.string "Two doors, two symbols.\p"
+	.string "Look around this room and seek the\n"
+	.string "symbol that appears only once.$"
+
+HearthomeCity_Gym_Text_HintRoom2::
+	.string "The painting on the north wall\n"
+	.string "knows the way.\p"
+	.string "Choose the door that bears its\n"
+	.string "symbol.$"
+
+HearthomeCity_Gym_Text_HintRoom3::
+	.string "Candles burn beside the false door.\p"
+	.string "Choose the symbol that no flame\n"
+	.string "lights.$"

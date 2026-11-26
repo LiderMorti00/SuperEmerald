@@ -16329,8 +16329,8 @@
     {
       "id": "LAYOUT_HEARTHOME_CITY_GYM_SINNOH",
       "name": "HearthomeCity_Gym_Layout_Sinnoh",
-      "width": 29,
-      "height": 25,
+      "width": 37,
+      "height": 60,
       "primary_tileset": "gTileset_Building_Sinnoh",
       "secondary_tileset": "gTileset_HearthomeCityGym_Sinnoh",
       "border_filepath": "data/layouts/HearthomeCity_Gym_sinnoh/border.bin",
