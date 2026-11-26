@@ -131,21 +131,21 @@
   "warp_events": [
     {
       "x": 7,
-      "y": 23,
+      "y": 24,
       "elevation": 0,
       "dest_map": "MAP_PASTORIA_CITY_SINNOH",
       "dest_warp_id": "1"
     },
     {
       "x": 8,
-      "y": 23,
+      "y": 24,
       "elevation": 0,
       "dest_map": "MAP_PASTORIA_CITY_SINNOH",
       "dest_warp_id": "1"
     },
     {
       "x": 9,
-      "y": 23,
+      "y": 24,
       "elevation": 0,
       "dest_map": "MAP_PASTORIA_CITY_SINNOH",
       "dest_warp_id": "1"

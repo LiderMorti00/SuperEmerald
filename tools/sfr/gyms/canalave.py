@@ -420,5 +420,132 @@ def main():
     open(MAP, 'w').write(json.dumps(d, indent=2, ensure_ascii=False) + '\n')
 
 
+# ------------------------------------------------------------------ FRLG dressing (Power Plant)
+# Base: FRLG's Power Plant. Workshop floor = its beige floor plates (with the shade its walls
+# cast, learned from the map); catwalks and BYRON's floor = its steel grating; their front
+# faces = the plate base of its machine walls; the rail between levels = its girder band; the
+# pillar = its wall divider; the back wall = cap + girder. Lift decks are its yellow mesh with
+# a new frame and number; the lift towers keep their drawn guide rails and number plate, now
+# standing on the FRLG floor of each level.
+PPM = 'PowerPlant_Frlg'
+
+
+def pad_ov(n):
+    c = Canvas(0)
+    c.rect(0, 0, 15, 15, K); c.rect(1, 1, 14, 14, 0)
+    for i in range(16):                                # hazard frame (the deck's rim)
+        for j in (0, 15):
+            c.px(i, j, Y if (i // 2) % 2 else K); c.px(j, i, Y if (i // 2) % 2 else K)
+    c.rect(4, 3, 11, 11, SH); c.rect(4, 3, 11, 3, WH); c.rect(4, 11, 11, 11, SD)
+    for y, row in enumerate(DIGITS[n]):
+        for x, ch in enumerate(row):
+            if ch == '#':
+                c.px(5 + x, 4 + y, K); c.px(6 + x, 4 + y, K)
+    c.hline(1, 14, 14, SD)                            # deck edge: the gap below
+    return c
+
+
+def mast_ov(n):
+    c = Canvas(0)
+    for x0 in (2, 12):
+        c.rect(x0, 0, x0 + 1, 15, SD); c.vline(x0, 0, 15, SL); c.vline(x0 + 2, 0, 15, K)
+    for y in (1, 14):
+        c.hline(2, 13, y, SD)
+    c.rect(3, 3, 12, 12, K); c.rect(4, 4, 11, 11, Y)
+    for y, row in enumerate(DIGITS[n]):
+        for x, ch in enumerate(row):
+            if ch == '#':
+                c.px(5 + x, 4 + y, K); c.px(6 + x, 4 + y, K)
+    c.hline(2, 13, 15, K)
+    return c
+
+
+def main_frlg():
+    import gbaref as G
+    print('reachable tiles:', check())
+    ts = Tileset(TS)
+    ts.free_unused(set())
+    src = G.source_for(PPM)
+    imp = G.Importer(ts, G.free_slots({P}))
+    A = lambda nm, mid, col, el=3, mb=0: (imp.add(nm, src, mid, mb), col, el)
+    table = G.learn(src, [PPM], lambda m, c, b: 'W' if c else 'F', edge='W')
+    plan = [r if r else None for r in PLAN]
+    H, Wd = len(plan), 20
+    cls = []
+    for y in range(H):
+        r = plan[y]
+        cls.append(['F' if r and ch in '.12s' else 'W' for ch in (r or '#' * Wd)])
+    rows = []
+    for y in range(H):
+        r = plan[y]
+        row = []
+        for x in range(Wd):
+            ch = r[x] if r else None
+            if y == 0:
+                mid = 0x284 if x == 0 else 0x286 if x == Wd - 1 else 0x285
+                row.append(A('w_%x' % mid, mid, 1, 0))
+            elif y == 1:
+                mid = 0x28C if x == 0 else 0x28E if x == Wd - 1 else (0x2E6 if x % 10 == 3 else 0x2E7 if x % 10 == 7 else 0x28D)
+                row.append(A('w_%x' % mid, mid, 1, 0))
+            elif y == H - 1:
+                if x in (16, 17, 18):
+                    row.append(A('mat%d' % (x - 16), 0x174 + x - 16, 0, 3, 0x65))
+                else:
+                    row.append((0x000, 1, 0))
+            elif ch is None or ch in '.s' and y == H - 2 or ch in '.':
+                key = ''.join(k for k in G.neigh(cls, x, y))
+                mid, d = G.pick(table, 'F', key)
+                if d > 2 or mid not in (0x29F, 0x29B, 0x29C, 0x29D, 0x29E): mid = 0x29F
+                row.append(A('f_%x' % mid, mid, 0))
+            elif ch in 'PT':
+                row.append(A('grate', 0x2C4, 0))
+            elif ch == 'x':
+                mid = 0x2A0 if plan[y - 1] and plan[y - 1][x] == 'x' else 0x2BC
+                row.append(A('w_%x' % mid, mid, 1))
+            elif ch == 'R':
+                mid = 0x2D4 if x == 0 else 0x2D3 if x == Wd - 1 else 0x28D
+                row.append(A('w_%x' % mid, mid, 1))
+            elif ch == 'F':
+                row.append(A('w_295', 0x295, 1))
+            elif ch == 'v':
+                row.append((0x000, 1, 3))
+            elif ch in '12345':
+                nm = 'pad' + ch
+                if nm not in ts.names:
+                    ts.add(nm, [imp.flat(src, 0x2CC), (pad_ov(int(ch)), P), None], 0)
+                row.append((ts.names[nm], 0, 3))
+            elif ch == 'M':
+                n_, bg = MASTS[(x, y)]
+                nm = 'mast%d_%s' % (n_, bg)
+                if nm not in ts.names:
+                    base = {'sheet': 0x29F, 'grate': 0x2C4, 'beams': 0x2C4, 'drop': None}[bg]
+                    ts.add(nm, [imp.flat(src, base) if base else None, (mast_ov(n_), P), None], 0)
+                row.append((ts.names[nm], 1, 3))
+            elif ch == 's':
+                fl = imp.flat(src, 0x29F)
+                if 'statue_top' not in ts.names:
+                    ts.add('statue_top', [fl, None, ('raw', [0x0001, 0x0002, 0x0011, 0x0012])], 0)
+                row.append((ts.names['statue_top'], 0, 3))
+            elif ch == 'z':
+                fl = imp.flat(src, 0x29F)
+                if 'statue_base' not in ts.names:
+                    ts.add('statue_base', [fl, ('raw', [0x0021, 0x0022, 0x0031, 0x0032]), None], 0)
+                row.append((ts.names['statue_base'], 1, 3))
+            else:
+                raise SystemExit((x, y, ch))
+        rows.append(row)
+    print('palette slots:', sorted(imp.colors), '+', P)
+    pals = imp.palettes(); pals[P] = STEEL
+    ts.save(pals)
+    write_metatile_defs('data/maps/CanalaveCity_Gym_sinnoh', 'CanalaveGym', ts.names)
+    from gymkit import build_cells
+    build_cells(LAYOUT, rows, border=0x000)
+    d = json.load(open(MAP))
+    d['warp_events'] = [{'x': x, 'y': H - 1, 'elevation': 3, 'dest_map': 'MAP_CANALAVE_CITY_SINNOH', 'dest_warp_id': '1'}
+                        for x in (16, 17, 18)]
+    open(MAP, 'w').write(json.dumps(d, indent=2, ensure_ascii=False) + '\n')
+
+
 if __name__ == '__main__':
-    main()
+    main()            # objects, lift scripts
+    main_frlg()

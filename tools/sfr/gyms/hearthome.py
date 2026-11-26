@@ -483,7 +483,7 @@ def main():
     write_events(g)
 
 
-def write_events(g):
+def write_events(g, exit_y=YE + 8):
     d = json.load(open(MAP))
     cx = 18
     warps = []      # (name, x, y, dest_name)
@@ -492,7 +492,7 @@ def write_events(g):
         warps.append((name, x, y, dest))
     # 0-2: exit to Hearthome City (warp 12 of the city points to warp 0)
     for i, x in enumerate((cx - 1, cx, cx + 1)):
-        warps.append(('exit%d' % i, x, YE + 8, None))
+        warps.append(('exit%d' % i, x, exit_y, None))
     # entrance hall <-> R1
     W_('E_n', cx, YE + 2, 'R1_s')
     W_('R1_s', cx, Y1 + 9, 'E_n')
@@ -548,5 +548,164 @@ def write_events(g):
         print(' ', i, name, (x, y), '->', dest)
 
 
+# ------------------------------------------------------------------ Emerald dressing (Petalburg Gym)
+# Base: Emerald's Petalburg Gym, the GBA gym built of rooms joined by doors with a nameplate
+# over each door. Its plank floor, lattice wall, door, door lintel, nameplate, the shadow the
+# wall casts on the floor and the black between rooms are copied and toned to Platinum's dark
+# violet (tint below). The nameplates carry Fantina's symbols; paintings, candles, lecterns,
+# curtains and the carpet runner keep their drawn art, now laid over Petalburg's floor/wall.
+PET = 'PetalburgCity_Gym'
+PET_AVOID = {0x207, 0x21D, 0x21E, 0x21F, 0x218, 0x220} | set(range(0x228, 0x240)) | set(range(0x241, 0x260))
+
+
+def violet(c):
+    r, g, b = c
+    L = 0.30 * r + 0.55 * g + 0.15 * b
+    q = lambda v: max(0, min(248, int(v) // 8 * 8))
+    return (q(L * 0.62 + 10), q(L * 0.50 + 6), q(L * 0.86 + 22))
+
+
+def main_frlg():
+    import gbaref as G
+    from gymkit import build_cells, write_metatile_defs
+    global floor, wallpaper, wainscot
+    bg = lambda *a, **k: Canvas(0)
+    floor_full = floor
+    floor, wallpaper, wainscot = bg, bg, bg          # the drawn props become overlays
+    g = plan()
+    cx = 18
+    sym = {Y1: ('star', 'moon'), Y2: ('flame', 'eye'), Y3: ('star', 'flame')}
+    ts = Tileset(TS)
+    ts.free_unused(set())
+    src = G.source_for(PET)
+    imp = G.Importer(ts, G.free_slots({PG, PS}), tint=violet)
+    table = G.learn(src, [PET], lambda m, c, b: 'W' if c else 'F', ext=True, edge='W')
+    cls = [['W' if ch in '#tpwLRbnDS123456' else 'F' for ch in r] for r in g]
+    flb = G.base(imp.layers(src, 0x201))
+    pnl = G.base(imp.layers(src, 0x20B))
+    special = {}
+    A = lambda name, mid, col=1, el=0, mb=0: (imp.add(name, src, mid, mb), col, el)
+
+    def over(name, ground, canvas, pal, col, el, mb=0, top=False):
+        if name not in ts.names:
+            ts.add(name, [ground, None, (canvas, pal)] if top else [ground, (canvas, pal), None], mb)
+        return (ts.names[name], col, el)
+    # doors: Petalburg's lintel + door in the two wall rows, nameplate in the top row
+    for y in range(H):
+        for x in range(W):
+            if g[y][x] != 'D':
+                continue
+            special[(x, y)] = A('door', 0x220, 0, 3, 0x60)
+            special[(x, y - 1)] = A('door_top', 0x218)
+            y0 = y - 2
+            symbol = None
+            for yy, (a, b) in sym.items():
+                if y0 == yy:
+                    symbol = a if x == X0 + 3 else b
+            special[(x - 1, y0)] = A('plate_l', 0x21D)
+            special[(x + 1, y0)] = A('plate_r', 0x21F)
+            if symbol:
+                c = Canvas(0); c.rect(1, 2, 14, 13, K1); c.rect(1, 2, 14, 2, GOLD); c.rect(1, 13, 14, 13, GOLD)
+                draw_symbol(c, symbol, 3, 3)
+                special[(x, y0)] = over('plate_' + symbol, G.base(imp.layers(src, 0x21E)), c, PS, 1, 0)
+            else:
+                special[(x, y0)] = A('plate', 0x21E)
+    # props on the wall row and on the floor
+    for (x, y), nm in (((cx, Y1 + 1), 'moon'), ((cx, Y2 + 1), 'eye'), ((cx, Y3 + 1), 'ghost')):
+        special[(x, y)] = over('painting_' + nm, pnl, painting(nm), PS, 1, 0)
+    for x0, y0 in ((27, Y1), (1, Y2), (27, Y3)):
+        for x in (x0 + 2, x0 + 6):
+            special[(x, y0 + 1)] = over('painting_ghost', pnl, painting('ghost'), PS, 1, 0)
+        special[(x0 + 2, y0 + 5)] = over('floor_ghost', flb, shadow_ghost(), PG, 0, 3)
+    for x in (X0 + 2, X0 + 10):
+        special[(x, 1)] = over('painting_ghost', pnl, painting('ghost'), PS, 1, 0)
+        special[(x, YE + 1)] = over('painting_ghost', pnl, painting('ghost'), PS, 1, 0)
+        for y in (4, 8):
+            special[(x, y)] = over('candle', flb, candle_top(), PG, 1, 3, top=True)
+            special[(x, y + 1)] = over('ped', flb, pedestal_base(), PG, 1, 3)
+    special[(X0 + 1, 1)] = (ts.add('curtain_l', [(curtain(False), PG), None, None]) if 'curtain_l' not in ts.names else ts.names['curtain_l'], 1, 0)
+    special[(X0 + 11, 1)] = (ts.add('curtain_r', [(curtain(True), PG), None, None]) if 'curtain_r' not in ts.names else ts.names['curtain_r'], 1, 0)
+    special[(X0 + 4, 6)] = over('floor_ghost', flb, shadow_ghost(), PG, 0, 3)
+    special[(X0 + 8, 7)] = over('floor_ghost', flb, shadow_ghost(), PG, 0, 3)
+    special[(X0 + 2, Y1 + 5)] = over('floor_ghost', flb, shadow_ghost(), PG, 0, 3)
+    special[(X0 + 10, Y2 + 5)] = over('floor_ghost', flb, shadow_ghost(), PG, 0, 3)
+    for x in (X0 + 1, X0 + 11):              # R3: candles on FLAME pedestals (the false door)
+        special[(x, Y3 + 3)] = over('candle', flb, candle_top(), PG, 1, 3, top=True)
+        special[(x, Y3 + 4)] = over('ped_flame', flb, pedestal_base('flame'), PS, 1, 3)
+    for y0 in (Y3, Y2, Y1):                  # hint lecterns
+        special[(cx - 2, y0 + 8)] = over('lectern', flb, lectern(), PG, 1, 3)
+    # carpet runner (drawn) up the main rooms
+    if 'carpet' not in ts.names:
+        ts.add('carpet', [(carpet('lr'), PG), None, None])
+    for y in range(H):
+        if g[y][cx] in 'c':
+            special.setdefault((cx, y), (ts.names['carpet'], 0, 3))
+    # south doors: a dark threshold in the bottom wall
+    for y in range(H):
+        for x in range(W):
+            if g[y][x] == 'S':
+                c = floor_full()
+                for yy in range(16):
+                    for xx in range(16):
+                        c.p[yy][xx] = K1 if yy > 9 else (K2 if yy > 4 else K3)
+                c.vline(0, 0, 15, GD); c.vline(15, 0, 15, GD)
+                special[(x, y)] = over('door_s', None, c, PG, 0, 3, 0x65)
+    # statues and exit mat (FRLG three-wide mat, untinted)
+    for x in (cx - 3, cx + 3):
+        special[(x, YE + 5)] = over('statue_top', flb, None, 0, 0, 3) if False else None
+    ts.add('statue_top', [flb, None, ('raw', [0x0001, 0x0002, 0x0011, 0x0012])], 0)
+    ts.add('statue_base', [flb, ('raw', [0x0021, 0x0022, 0x0031, 0x0032]), None], 0)
+    for x in (cx - 3, cx + 3):
+        special[(x, YE + 5)] = (ts.names['statue_top'], 0, 3)
+        special[(x, YE + 6)] = (ts.names['statue_base'], 1, 3)
+    imp.tint = None
+    cel = G.source_for('CeladonCity_Gym_Frlg')
+    for i, x in enumerate((cx - 1, cx, cx + 1)):
+        special[(x, YE + 8)] = (flb and ts.names.get('_'), 0, 3) if False else special.get((x, YE + 8), None)
+        special[(x, YE + 9)] = (imp.add('mat%d' % i, cel, 0x174 + i, 0x65), 0, 3)
+        special.pop((x, YE + 8), None)
+    imp.tint = violet
+    special = {k: v for k, v in special.items() if v is not None}
+    # walls by hand from Petalburg's pieces: top edge, two rows of lattice panel, the shadow
+    # the wall casts on the floor, the shaded west column, black between rooms
+    rows = []
+    for y in range(H):
+        row = []
+        for x in range(W):
+            if (x, y) in special:
+                row.append(special[(x, y)]); continue
+            ch = g[y][x]
+            west, east = g[y][x - 1] if x else '#', g[y][x + 1] if x + 1 < W else '#'
+            if ch == 't':
+                mid = 0x202 if west == '#' else 0x204 if east == '#' else 0x203
+                row.append(A('w_%x' % mid, mid))
+            elif ch in 'pwnL R'.replace(' ', '') and g[y - 1][x] in 'tpwn' + 'AB' and ch not in 'LR':
+                mid = 0x20A if west in '#' else 0x20C if east in '#' else 0x20B
+                row.append(A('w_%x' % mid, mid))
+            elif ch in 'LRb#':
+                row.append((0x000, 1, 0))
+            elif ch in 'pw':
+                row.append(A('w_20b', 0x20B))
+            else:            # floor
+                if ch == 'h' or g[y - 1][x] in 'w':
+                    mid = 0x212 if west in 'LR' else 0x214 if east in 'LR' else 0x213
+                elif west in 'LR':
+                    mid = 0x209
+                else:
+                    mid = 0x201
+                row.append(A('f_%x' % mid, mid, 0, 3))
+        rows.append(row)
+    for y in range(H):        # exit row: plain floor where the old mat was
+        for x in (cx - 1, cx, cx + 1):
+            if g[y][x] in '123':
+                rows[y][x] = (imp.add('f_201', src, 0x201, 0), 0, 3)
+    print('palette slots:', sorted(imp.colors), '+', PG, PS)
+    pals = imp.palettes(); pals[PG] = GHOST; pals[PS] = SYMB
+    ts.save(pals)
+    write_metatile_defs('data/maps/HearthomeCity_Gym_sinnoh', 'HearthomeGym', ts.names)
+    build_cells(LAYOUT, rows, border=0x000)
+    write_events(g, exit_y=YE + 9)
+
+
 if __name__ == '__main__':
-    main()
+    main_frlg()

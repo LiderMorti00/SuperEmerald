@@ -735,7 +735,7 @@ def main_frlg():
            (11, 21): (imp.add('ladder_top', src, REF['ladder_top'], 0), 1, 3)}
     rows2 = dress(b1, sp1)
     print('rink: from', *rink_check())
-    pals = dict(imp.colors); pals[P] = SNOW
+    pals = imp.palettes(); pals[P] = SNOW
     print('palette slots used:', sorted(pals))
     ts.save(pals)
     write_metatile_defs('data/maps/SnowpointCity_Gym_1F_sinnoh', 'SnowpointGym', ts.names)

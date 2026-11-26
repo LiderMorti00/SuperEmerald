@@ -261,5 +261,136 @@ def main():
     open(MAP, 'w').write(json.dumps(d, indent=2, ensure_ascii=False) + '\n')
 
 
+# ------------------------------------------------------------------ FRLG dressing (Saffron Dojo)
+# Base: FRLG's Fighting Dojo in Saffron. Plank floor (with its knots and the shade along the
+# west wall), the wall with round windows and hanging scrolls, the tatami (9-slice), and the
+# lacquered pillar (cap, shaft, red base) - its red base, set side by side, makes the fixed
+# partitions. The two sliding panels are new: a shoji screen in a wooden frame on a sill, with
+# its shadow on the planks, running in a short floor rail with a brass stop at each end.
+DOJO_MAP = 'SaffronCity_Dojo_Frlg'
+
+
+def shoji():
+    c = Canvas(0)
+    c.rect(2, 13, 15, 15, K)                                   # shadow on the floor (east/south)
+    c.rect(1, 0, 13, 12, WD); c.rect(2, 1, 12, 11, PAPER)      # frame + paper
+    for x in (5, 9):
+        c.vline(x, 1, 11, W)
+    for y in (4, 8):
+        c.hline(2, 12, y, W)
+    c.hline(1, 13, 0, WH); c.vline(1, 0, 12, WL)
+    c.rect(0, 12, 14, 14, TD); c.hline(0, 14, 12, WH)          # sill (edge + base)
+    c.vline(14, 12, 14, K)
+    return c
+
+
+def rail_only(end):
+    c = Canvas(0)
+    c.rect(0, 13, 15, 14, IRON); c.hline(0, 15, 13, GREY); c.hline(0, 15, 15, WD)
+    x0 = 0 if end == 'l' else 13
+    c.rect(x0, 11, x0 + 2, 15, TD); c.hline(x0, x0 + 2, 11, WH); c.vline(x0 + (2 if end == 'l' else 0), 11, 15, K)
+    return c
+
+
+def main_frlg():
+    import gbaref as G
+    from gymkit import build_cells
+    ts = Tileset(TS)
+    ts.free_unused(set())
+    src = G.source_for(DOJO_MAP)
+    imp = G.Importer(ts, G.free_slots({P}))
+    A = lambda mid, col=0, el=3: (imp.add('d_%x' % mid, src, mid, 0), col, el)
+    plan = [list(r) for r in PLAN]
+    H, Wd = len(plan), len(plan[0])
+    for y in (2, 3):                          # MAYLENE's tatami dais: one rectangle
+        for x in range(6, 11):
+            plan[y][x] = 't'
+        plan[3][11] = '.'
+    wood = G.base(imp.layers(src, 0x2C0))
+
+    def over(name, canvas, mb=0, top=False):
+        if name not in ts.names:
+            ts.add(name, [wood, None, (canvas, P)] if top else [wood, (canvas, P), None], mb)
+        return ts.names[name]
+    over('rail_l', rail_only('l')); over('rail_r', rail_only('r'))
+    pl = Canvas(0); [pl.p[y].__setitem__(x, v) for y, r in enumerate(rail_only('l').p) for x, v in enumerate(r) if v]
+    over('panel_l', merge(rail_only('l'), shoji())); over('panel_r', merge(rail_only('r'), shoji()))
+    over('sandbag', sandbag(), top=True)
+    ts.add('statue_top', [wood, None, ('raw', [0x0001, 0x0002, 0x0011, 0x0012])], 0)
+    ts.add('statue_base', [wood, ('raw', [0x0021, 0x0022, 0x0031, 0x0032]), None], 0)
+    rows = []
+    walls = 'PAB'
+    for y in range(H):
+        row = []
+        for x in range(Wd):
+            ch = plan[y][x]
+            north = plan[y - 1][x] if y else 'T'
+            west = plan[y][x - 1] if x else '|'
+            if y in (0, 1) and 0 < x < Wd - 1:   # dojo wall: scrolls where the banners hung, round windows
+                k = 0 if x in (6, 12) else 1 if x in (3, 9, 14) else 2
+                row.append(A([[0x2C7, 0x2C6, 0x2C1], [0x2CF, 0x2CE, 0x2C9]][y][k], 1, 0))
+            elif ch in '|T' or y == H - 1:
+                row.append((0x000, 1, 0))
+            elif ch == 'P':
+                below = plan[y + 1][x]
+                if below != 'P':
+                    row.append(A(0x2DD, 1))
+                elif plan[y + 2][x] != 'P':
+                    row.append(A(0x2D5, 1))
+                else:
+                    row.append(A(0x2CD, 1))
+            elif ch in 'AB':
+                row.append((ts.names['panel_l'], 1, 3))
+            elif ch == 's':
+                row.append((ts.names['sandbag'], 1, 3))
+            elif ch == 'Z':
+                row.append((ts.names['statue_top'], 0, 3))
+            elif ch == 'z':
+                row.append((ts.names['statue_base'], 1, 3))
+            elif ch in 'tem':
+                same = lambda xx, yy: plan[yy][xx] in ('te' if ch in 'te' else 'm')
+                n_, s_ = same(x, y - 1), same(x, y + 1)
+                w_, e_ = same(x - 1, y), same(x + 1, y)
+                col = 0 if not w_ else 2 if not e_ else 1
+                rowk = 0 if not n_ else 2 if not s_ else 1
+                mid = [[0x2C2, 0x2C3, 0x2C4], [0x2CA, 0x2CB, 0x2CC], [0x2D2, 0x2D3, 0x2D4]][rowk][col]
+                row.append(A(mid))
+            else:              # planks: shade under the wall and along the west wall, shadow east of pillars
+                if y == 2 or x == 1:
+                    mid = 0x2C8
+                elif west in walls:
+                    mid = 0x2D0
+                elif (x * 7 + y * 5) % 11 == 0:
+                    mid = 0x2D9
+                else:
+                    mid = 0x2C0
+                row.append(A(mid))
+        rows.append(row)
+    rows[1][0] = rows[1][Wd - 1] = (0x000, 1, 0)
+    plan[10][13] = 'r'; plan[5][9] = 'r'
+    rows[10][13] = (ts.names['rail_r'], 0, 3); rows[5][9] = (ts.names['rail_r'], 0, 3)
+    for i, x in enumerate((7, 8, 9)):        # FRLG dojo's red three-wide mat
+        rows[H - 1][x] = (imp.add('mat%d' % i, src, 0x01A + i, 0x65), 0, 3)
+    print('palette slots:', sorted(imp.colors), '+', P)
+    pals = imp.palettes(); pals[P] = DOJO
+    ts.save(pals)
+    write_metatile_defs('data/maps/VeilstoneCity_Gym_sinnoh', 'VeilstoneGym', ts.names)
+    build_cells(LAYOUT, rows, border=0x000)
+    d = json.load(open(MAP))
+    d['warp_events'] = [{'x': x, 'y': H - 1, 'elevation': 0, 'dest_map': 'MAP_VEILSTONE_CITY_SINNOH', 'dest_warp_id': '11'}
+                        for x in (8, 7, 9)]
+    open(MAP, 'w').write(json.dumps(d, indent=2, ensure_ascii=False) + '\n')
+
+
+def merge(a, b):
+    c = a.copy()
+    for y in range(16):
+        for x in range(16):
+            if b.p[y][x]:
+                c.p[y][x] = b.p[y][x]
+    return c
+
+
 if __name__ == '__main__':
-    main()
+    main()          # objects, bg events (unchanged)
+    main_frlg()

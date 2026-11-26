@@ -331,5 +331,111 @@ def main():
     open(MAP, 'w').write(json.dumps(d, indent=2, ensure_ascii=False) + '\n')
 
 
+# ------------------------------------------------------------------ FRLG dressing (Mt. Moon)
+# Base: FRLG Mt. Moon (gTileset_Cave_Frlg). Its rock ridges become Oreburgh's raised rock
+# outcrops (top + face + rounded ends, all from the cave), its sand patches the excavated
+# ground, its craters the decorative gravel (walkable). The rail and the cart are the only new
+# pixels: drawn on a transparent layer over the cave floor so the floor stays FRLG's own.
+CAVE_MAPS = ['MtMoon_1F_Frlg', 'MtMoon_B1F_Frlg', 'MtMoon_B2F_Frlg']
+CAVE = {'floor': 641, 'sand': 764, 'crater': (725, 726, 733, 734)}
+
+
+def rail_overlay(end=False, cart_=False):
+    c = Canvas(0)
+    for y in range(1, 16, 4):
+        c.rect(3, y, 12, y + 1, W); c.hline(3, 12, y + 1, WD)
+    c.vline(5, 0, 15, M); c.vline(4, 0, 15, MD); c.vline(10, 0, 15, M); c.vline(11, 0, 15, MD)
+    if end:      # buffer stop: a timber beam across both rails
+        c.rect(2, 0, 13, 4, W); c.rect(3, 1, 12, 3, WD); c.hline(2, 13, 4, K); c.vline(2, 0, 4, K); c.vline(13, 0, 4, K)
+    if cart_:     # a loaded ore cart, as wide as the tile
+        c.art(0, 1, ['.KKKKKKKKKKKKKK.',
+                     'KMHHHHHHHHHHHHMK',
+                     'KMRLRHLRRLRHRRMK',
+                     'KMLRRLRRLRRLRLMK',
+                     'KMMMMMMMMMMMMMMK',
+                     'KMDMMMMMMMMMMDMK',
+                     'KMDMMHMMMMHMMDMK',
+                     'KMDMMMMMMMMMMDMK',
+                     'KMMMMMMMMMMMMMMK',
+                     '.KKKKKKKKKKKKKK.',
+                     '.KMK........KMK.',
+                     '..K..........K..'],
+              {'M': M, 'H': MH, 'K': K, 'R': R, 'L': RL, 'D': MD})
+    return c
+
+
+FPLAN = [r for r in PLAN[:27]] + ["TTTTTTTT12TTTTTTT"]
+
+
+def main_frlg():
+    import gbaref as G
+    from gymkit import write_metatile_defs, build_cells
+    ts = Tileset(TS)
+    ts.free_unused(set())
+    src = G.source_for(CAVE_MAPS[0])
+    imp = G.Importer(ts, G.free_slots({PM}))
+
+    def cl(m, c, b):
+        if 755 <= m <= 773: return 'S'
+        return G.classify_basic(m, c, b)
+    table = G.learn(src, CAVE_MAPS, cl)
+    plan = [r.replace('1', '.').replace('2', '.').replace('3', '.') if y < 27 else r for y, r in enumerate(FPLAN)]
+    plan = [r.replace('4', 'T').replace('5', 'T').replace('6', 'T') for r in plan]
+    H, Wd = len(plan), len(plan[0])
+    cls = [['W' if ch in 'TfoblB_' else 'S' if ch == 'd' else 'F' for ch in r] for r in plan]
+    fl = imp.layers(src, CAVE['floor'])
+    fb = G.base(fl)
+    special = {}
+    ts.add('rail', [fb, (rail_overlay(), PM), None], 0)
+    ts.add('rail_end', [fb, (rail_overlay(end=True), PM), None], 0)
+    ts.add('cart', [fb, (rail_overlay(cart_=True), PM), None], 0)
+    ts.add('statue_top', [fb, None, ('raw', [0x0001, 0x0002, 0x0011, 0x0012])], 0)
+    ts.add('statue_base', [fb, ('raw', [0x0021, 0x0022, 0x0031, 0x0032]), None], 0)
+    for y, r in enumerate(plan):
+        for x, ch in enumerate(r):
+            if ch == '=': special[(x, y)] = (ts.names['rail'], 0, 3)
+            elif ch == '^': special[(x, y)] = (ts.names['rail_end'], 0, 3)
+            elif ch == 'C': special[(x, y)] = (ts.names['cart'], 1, 3)
+            elif ch == 's': special[(x, y)] = (ts.names['statue_top'], 0, 3)
+            elif ch == 't': special[(x, y)] = (ts.names['statue_base'], 1, 3)
+            elif ch in '12': special[(x, y)] = ((0x006 if ch == '1' else 0x007), 0, 3)
+    # walkable gravel: whole FRLG craters (2x2), where 'p' marks their top-left corner
+    for y, r in enumerate(plan):
+        for x, ch in enumerate(r):
+            if ch == 'p' and all(plan[y + j][x + i] in '.,p' for i in (0, 1) for j in (0, 1)):
+                for k, (i, j) in enumerate(((0, 0), (1, 0), (0, 1), (1, 1))):
+                    special[(x + i, y + j)] = (imp.add('crater%d' % k, src, CAVE['crater'][k], 0), 0, 3)
+    def wall_fb(x, y):
+        return (imp.add('w_%x_%s' % (665, src.name), src, 665, 0), 1, 0)
+    rows = G.dress(cls, table, imp, src, special, floor=CAVE['floor'], wall_fallback=wall_fb,
+                   avoid=(667, 750, 751))      # cave pieces with blue water marks
+    print('palette slots:', sorted(imp.colors), '+', PM)
+    pals = imp.palettes(); pals[PM] = MINE
+    ts.save(pals)
+    write_metatile_defs('data/maps/OreburghCity_Gym_sinnoh', 'OreburghGym', ts.names)
+    build_cells(LAYOUT, rows, border=0x000)
+    write_events(mat_y=27)
+
+
+def write_events(mat_y=26):
+    d = json.load(open(MAP))
+    d['warp_events'] = [{'x': x, 'y': mat_y, 'elevation': 0, 'dest_map': 'MAP_OREBURGH_CITY_SINNOH', 'dest_warp_id': '6'}
+                        for x in (8, 9)]
+    pos = {
+        'SE_EventScript_SinnohLeader_Roark': (8, 3, 'MOVEMENT_TYPE_FACE_DOWN', '0'),
+        'OreburghCity_Gym_EventScript_Jonathon': (6, 16, 'MOVEMENT_TYPE_FACE_RIGHT', '3'),
+        'OreburghCity_Gym_EventScript_Darius': (10, 8, 'MOVEMENT_TYPE_FACE_LEFT', '3'),
+        'OreburghCity_Gym_EventScript_Guide': (10, 25, 'MOVEMENT_TYPE_FACE_DOWN', '0'),
+    }
+    for o in d['object_events']:
+        x, y, mv, s = pos[o['script']]
+        o['x'], o['y'], o['movement_type'], o['elevation'] = x, y, mv, 3
+        if o['trainer_type'] != 'TRAINER_TYPE_NONE':
+            o['trainer_sight_or_berry_tree_id'] = s
+    d['bg_events'] = [{'type': 'sign', 'x': x, 'y': 24, 'elevation': 0, 'player_facing_dir': 'BG_EVENT_PLAYER_FACING_ANY',
+                       'script': 'OreburghCity_Gym_EventScript_GymStatue'} for x in (4, 11)]
+    open(MAP, 'w').write(json.dumps(d, indent=2, ensure_ascii=False) + '\n')
+
+
 if __name__ == '__main__':
-    main()
+    main_frlg()

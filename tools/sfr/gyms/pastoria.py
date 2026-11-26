@@ -429,5 +429,219 @@ def main():
     open(MAP, 'w').write(json.dumps(d, indent=2, ensure_ascii=False) + '\n')
 
 
+# ------------------------------------------------------------------ FRLG dressing (Cerulean Gym)
+# Base: FRLG's Cerulean Gym (Misty). Its pool (water with rim, corners and the shadow a
+# walkway casts), its raised cream walkways with posts, the tiled floor around the pool and
+# the windowed north wall become the tanks and decks. LOW water reuses the very same pool
+# pieces re-toned as a drained tank floor (drained() below), so every edge keeps its shape and
+# the tank's rim still reads as a front face above the lower water line. Pontoons, submerged
+# walkways, buttons and gauges are new pixels laid over those pieces.
+CER = 'CeruleanCity_Gym_Frlg'
+CER_WATER = {m for m in range(0x288, 0x294)} | {0x2A8, 0x2B0, 0x2B7, 0x2BB, 0x2BC, 0x2BD, 0x2BE, 0x2BF,
+                                              0x2C3, 0x2C6, 0x2C7, 0x2D3, 0x298, 0x299, 0x29A, 0x29B}
+CER_DECK = {0x2A1, 0x2A2, 0x2A9, 0x2AA, 0x2B1, 0x2B2, 0x29C, 0x2C4, 0x2C5}
+
+
+def drained(c):
+    r, g, b = c
+    if b > r + 24:          # water blues -> wet, mossy tank floor
+        L = 0.3 * r + 0.5 * g + 0.2 * b
+        q = lambda v: max(0, min(248, int(v) // 8 * 8))
+        return (q(L * 0.55 + 18), q(L * 0.62 + 20), q(L * 0.58 + 14))
+    return c
+
+
+def pontoon_ov(level):
+    c = Canvas(0)
+    if level == 0:
+        c.rect(0, 1, 15, 13, ORD); c.rect(1, 1, 14, 12, OR)
+        for y in range(2, 12, 3):
+            c.hline(1, 14, y, YE)
+        c.rect(5, 1, 10, 12, CL); c.vline(5, 1, 12, CD); c.vline(10, 1, 12, CM)
+        c.hline(0, 15, 13, K); c.hline(1, 14, 14, WD); c.hline(2, 13, 15, WD)
+    else:
+        c.rect(2, 4, 13, 14, K); c.rect(3, 4, 12, 13, ORD)
+        c.rect(6, 4, 9, 13, CD)
+    return c
+
+
+def lowpath_ov(level, ns):
+    """ns: the strip runs north-south (else east-west)."""
+    c = Canvas(0)
+    if level == 0:                  # under water: only its outline shows through
+        for i in range(0, 16, 2):
+            if ns:
+                c.px(2, i, WL); c.px(13, i, WL)
+            else:
+                c.px(i, 2, WL); c.px(i, 13, WL)
+        c.rect(6, 6, 9, 9, WL)
+    else:                           # dry concrete ridge
+        if ns:
+            c.rect(2, 0, 13, 15, CL); c.vline(2, 0, 15, CH); c.vline(13, 0, 15, CD); c.vline(14, 0, 15, K)
+        else:
+            c.rect(0, 2, 15, 13, CL); c.hline(0, 15, 2, CH); c.hline(0, 15, 13, CD); c.hline(0, 15, 14, K)
+        c.rect(6, 6, 9, 9, CD); c.vline(7, 6, 9, K)
+    return c
+
+
+def button_ov(kind):
+    c = Canvas(0)
+    col, dk = (YE, ORD) if kind == 'y' else (WL, WD)
+    c.rect(2, 3, 13, 14, K); c.rect(3, 3, 12, 13, dk); c.rect(3, 2, 12, 11, col); c.hline(3, 12, 2, WT)
+    arrow = [(7, 4), (8, 4), (7, 5), (8, 5), (5, 6), (6, 6), (7, 6), (8, 6), (9, 6), (10, 6),
+             (6, 7), (7, 7), (8, 7), (9, 7), (7, 8), (8, 8)]
+    for x, y in arrow:
+        c.px(x, y if kind == 'y' else 12 - y, K)
+    return c
+
+
+def gauge_ov(level):
+    c = Canvas(0)
+    c.rect(4, 1, 11, 14, K); c.rect(5, 2, 10, 13, CH)
+    for y in range(3, 13, 3):
+        c.hline(5, 6, y, K)
+    top = 3 if level == 0 else 10
+    c.rect(7, top, 10, 13, WL if level == 0 else WM); c.hline(5, 10, top, OR)
+    return c
+
+
+def main_frlg():
+    import gbaref as G
+    print('reachable states checked:', check())
+    g = grid()
+    H = len(g)
+    ts = Tileset(TS)
+    ts.free_unused(set())
+    src = G.source_for(CER)
+    imp = G.Importer(ts, G.free_slots({P}))
+
+    def cl(m, c, b):
+        if m in CER_WATER: return 'S'
+        if m in CER_DECK: return 'K'
+        if 0x2A3 <= m <= 0x2B5 or m in (0x2B9, 0x2BA, 0x2C1, 0x2C8, 0x2C9, 0x2CA, 0x2D0, 0x2D1, 0x2D2): return 'X'
+        return 'W' if c else 'F'
+    table = G.learn(src, [CER], cl, edge='F')
+    # classes: walls count as the pool rim (floor) for the water/deck pieces around them
+    cls = []
+    for y in range(H):
+        row = []
+        for x in range(W_):
+            ch = g[y][x] if g[y] else '#'
+            if y >= 20 and ch in 'DZYzm':
+                row.append('F')
+            elif ch in 'DyuZYz':
+                row.append('F')          # platforms: Cerulean's tiled floor; the pool rim is on the water pieces
+            elif ch in '~dFL':
+                row.append('S')
+            else:
+                row.append('F')
+        cls.append(row)
+    picks = {}
+    for y in range(H):
+        for x in range(W_):
+            c = cls[y][x]
+            key = G.neigh(cls, x, y)
+            if c == 'S':
+                mid, d = G.pick(table, c, key)
+                if c == 'S' and d > 2: mid = 0x291
+                if mid == 0x2C6: mid = 0x299            # pool ladder rails: plain rim (the landings stay open)
+                if c == 'K' and d > 2: mid = 0x2B2
+                picks[(x, y)] = mid
+    floor_l = G.base(imp.layers(src, 0x281))
+    rows = [[None] * W_ for _ in range(H)]
+    pairs = []
+
+    def pair(name, mid, ov_hi, ov_lo, c_hi, c_lo):
+        """hi/lo metatiles of a level-dependent cell; returns the HIGH one."""
+        hn, ln = name + '_hi', name + '_lo'
+        if hn not in ts.names:
+            hb = imp.flat(src, mid)
+            imp.tint = drained
+            lb = imp.flat(src, mid)
+            imp.tint = None
+            ts.add(hn, [hb, (ov_hi, P) if ov_hi else None, None], 0)
+            ts.add(ln, [lb, (ov_lo, P) if ov_lo else None, None], 0)
+            pairs.append((hn, ln, c_hi, c_lo))
+        return ts.names[hn]
+    for y in range(H):
+        for x in range(W_):
+            ch = g[y][x] if g[y] else None
+            if y in (0, 1, 2):          # Cerulean's north wall: rim, window band, base
+                k = 0 if x == 0 else 2 if x == W_ - 1 else 1
+                mid = [[0x2A6, 0x286, 0x2A7], [0x2AE, 0x28E, 0x2AF], [0x2AE, 0x296, 0x2AF]][y][k]
+                if y == 0 and x == 1: mid = 0x285
+                if y == 0 and x == W_ - 2: mid = 0x287
+                if y == 0 and x == W_ // 2: mid = 0x294
+                if y == 1 and x in (5, 7, 9, 11): mid = 0x2CB
+                if y == 1 and x == 1: mid = 0x28D
+                if y == 1 and x == W_ - 2: mid = 0x28F
+                if y == 2 and x == 1: mid = 0x295
+                if y == 2 and x == W_ - 2: mid = 0x297
+                rows[y][x] = (imp.add('top_%x' % mid, src, mid, 0), 1, 0)
+            elif ch is None:            # bottom: black, FRLG mat in the middle
+                if x in (7, 8, 9):
+                    rows[y][x] = (imp.add('mat%d' % (x - 7), src, 0x174 + x - 7, 0x65), 0, 3)
+                else:
+                    rows[y][x] = (0x000, 1, 0)
+            elif ch == '|':
+                rows[y][x] = (imp.add('side_%d' % (x > 8), src, 0x2AF if x > 8 else 0x2AE, 0), 1, 0)
+            elif ch == 'g':
+                side = imp.layers(src, 0x2AF if x > 8 else 0x2AE)
+                ts.names.setdefault('dummy', 0)
+                nm = 'gauge%d' % (x > 8)
+                if nm + '_hi' not in ts.names:
+                    ts.add(nm + '_hi', [G.base(side), (gauge_ov(0), P), None], 0)
+                    ts.add(nm + '_lo', [G.base(side), (gauge_ov(1), P), None], 0)
+                    pairs.append((nm + '_hi', nm + '_lo', 1, 1))
+                rows[y][x] = (ts.names[nm + '_hi'], 1, 0)
+            elif ch in '~d':
+                mid = picks[(x, y)]
+                rows[y][x] = (pair('water_%x' % mid, mid, None, None, 1, 1), 1, 3)
+            elif ch == 'F':
+                mid = picks[(x, y)]
+                rows[y][x] = (pair('pontoon_%x' % mid, mid, pontoon_ov(0), pontoon_ov(1), 0, 1), 0, 3)
+            elif ch == 'L':
+                mid = picks[(x, y)]
+                ns = g[y - 1][x] in 'L' or g[y + 1][x] in 'L' if g[y + 1] else False
+                rows[y][x] = (pair('lowpath%d_%x' % (ns, mid), mid, lowpath_ov(0, ns), lowpath_ov(1, ns), 1, 0), 1, 3)
+            elif ch in 'yu':
+                mid = 0x281
+                nm = 'button_%s_%x' % (ch, mid)
+                if nm not in ts.names:
+                    ts.add(nm, [imp.flat(src, mid), (button_ov(ch), P), None], 0)
+                rows[y][x] = (ts.names[nm], 0, 3)
+            elif ch == 'Z' or ch == 'Y':
+                ts.add('statue_top', [floor_l, None, ('raw', [0x0001, 0x0002, 0x0011, 0x0012])], 0) if 'statue_top' not in ts.names else None
+                rows[y][x] = (ts.names['statue_top'], 0, 3)
+            elif ch == 'z':
+                ts.add('statue_base', [floor_l, ('raw', [0x0021, 0x0022, 0x0031, 0x0032]), None], 0) if 'statue_base' not in ts.names else None
+                rows[y][x] = (ts.names['statue_base'], 1, 3)
+            elif cls[y][x] == 'F':
+                mid = 0x281 if y < H - 2 or True else 0x281
+                rows[y][x] = (imp.add('floor', src, 0x281, 0), 0, 3)
+            else:                      # platform
+                rows[y][x] = (imp.add('floor', src, 0x281, 0), 0, 3)
+    ts.names.pop('dummy', None)
+    print('palette slots:', sorted(imp.colors), '+', P, '| level pairs:', len(pairs))
+    pals = imp.palettes(); pals[P] = TANK
+    ts.save(pals)
+    write_metatile_defs('data/maps/PastoriaCity_Gym_sinnoh', 'PastoriaGym', ts.names)
+    lines = ['@ Generated by tools/sfr/gyms/pastoria.py; do not edit.']
+    for lv, label in ((1, 'Low'), (0, 'High')):
+        lines.append(f'PastoriaCity_Gym_EventScript_SetWater{label}::')
+        for hi, lo, c_hi, c_lo in pairs:
+            a, b, col = (hi, lo, c_lo) if lv == 1 else (lo, hi, c_hi)
+            lines += [f'\tsetvar VAR_0x8004, METATILE_PastoriaGym_{a}', f'\tsetvar VAR_0x8005, METATILE_PastoriaGym_{b}',
+                      f'\tsetvar VAR_0x8006, {col}', '\tspecial SE_SwapMapMetatiles']
+        lines.append('\treturn\n')
+    open(GEN_INC, 'w').write('\n'.join(lines) + '\n')
+    from gymkit import build_cells
+    build_cells(LAYOUT, rows, border=0x000)
+    d = json.load(open(MAP))
+    d['warp_events'] = [{'x': x, 'y': H - 1, 'elevation': 0, 'dest_map': 'MAP_PASTORIA_CITY_SINNOH', 'dest_warp_id': '1'}
+                        for x in (7, 8, 9)]
+    open(MAP, 'w').write(json.dumps(d, indent=2, ensure_ascii=False) + '\n')
+
+
 if __name__ == '__main__':
-    main()
+    main_frlg()

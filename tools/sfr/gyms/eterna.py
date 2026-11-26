@@ -473,5 +473,149 @@ def main():
     open(MAP, 'w').write(json.dumps(d, indent=2, ensure_ascii=False) + '\n')
 
 
+# ------------------------------------------------------------------ FRLG dressing (Celadon Gym)
+# Base: FRLG Celadon Gym (Erika). Its glazed north wall with arched windows, orange side
+# walls, teal lawn, round clipped trees and edged sand paths become the greenhouse; the
+# gate is FRLG Celadon City's iron fence (posts + rail, general tileset) set on the gym's
+# own path. Planters, roses, sunflowers, bench, lily pond and the notice board keep their
+# drawn art, now standing on Celadon's lawn.
+CEL = 'CeladonCity_Gym_Frlg'
+CELCITY = 'CeladonCity_Frlg'
+TREES = (0x28D, 0x295)
+PATHS = set(range(0x29C, 0x2B3)) | {0x2B8}
+
+
+def main_frlg():
+    import gbaref as G
+    plan = [list(r) for r in PLAN]
+    H, Wd = len(plan), 21
+    # pillars become clipped trees, the exit mat is FRLG's three-wide mat on the bottom wall
+    for y in range(H):
+        for x in range(Wd):
+            if plan[y][x] == 'P': plan[y][x] = 'H'
+            if plan[y][x] in '123': plan[y][x] = '.'
+            if plan[y][x] == 'c': plan[y][x] = ','
+    for i, x in enumerate((9, 10, 11)):
+        plan[H - 1][x] = '123'[i]
+    ts = Tileset(TS)
+    ts.free_unused(set())
+    src = G.source_for(CEL)
+    city = G.source_for(CELCITY)
+    imp = G.Importer(ts, G.free_slots({P}))
+
+    def cl(m, c, b):
+        if m in TREES: return 'T'
+        if c: return 'W'
+        return 'P' if m in PATHS else 'F'
+    table = G.learn(src, [CEL], cl, ext=True, edge='W')
+    WALK = set('.,krybS123')
+    cls = []
+    for y in range(H):
+        row = []
+        for x in range(Wd):
+            ch = plan[y][x]
+            row.append('W' if ch in '#|' else 'T' if ch in 'H' else 'P' if ch in '.S123Gp' else 'F')
+        cls.append(row)
+    lawn_l = G.base(imp.layers(src, 0x281))
+    path_l = G.base(imp.layers(src, 0x2A5))
+    special = {}
+
+    def prop(name, ground, canvas, col=1, mb=0):
+        if name not in ts.names:
+            ts.add(name, [ground, (canvas, P), None], mb)
+        return (ts.names[name], col, 3)
+    for y in range(H):
+        for x in range(Wd):
+            ch = plan[y][x]
+            if ch in 'ryb':
+                if ch == 'r':
+                    special[(x, y)] = (imp.add('flowers_r', src, 0x2B6, 0), 0, 3)
+                else:
+                    special[(x, y)] = prop('fl_%s%d' % (ch, (x + y) % 2), lawn_l, flowers(ch, (x + y) % 2), 0)
+            elif ch in 'RYB':
+                special[(x, y)] = prop('planter_' + ch.lower(), lawn_l, planter(ch.lower()))
+            elif ch == 'Q':
+                special[(x, y)] = prop('rose', lawn_l, rose_bush())
+            elif ch == 'U':
+                special[(x, y)] = prop('sunflower', lawn_l, sunflower())
+            elif ch == 'W':
+                special[(x, y)] = prop('bench', lawn_l, bench())
+            elif ch == 'O':
+                part = ('n' if plan[y + 1][x] == 'O' else 's') + ('w' if plan[y][x + 1] == 'O' else 'e')
+                special[(x, y)] = prop('pond_' + part, lawn_l, pond(part))
+            elif ch == 'S':
+                special[(x, y)] = prop('notice', path_l, notice())
+            elif ch == 'k':
+                special[(x, y)] = prop('tilled', lawn_l, tilled(), 0)
+            elif ch == 'Z':
+                if 'statue_top' not in ts.names:
+                    ts.add('statue_top', [path_l, None, ('raw', [0x0001, 0x0002, 0x0011, 0x0012])], 0)
+                special[(x, y)] = (ts.names['statue_top'], 0, 3)
+            elif ch == 'z':
+                if 'statue_base' not in ts.names:
+                    ts.add('statue_base', [path_l, ('raw', [0x0021, 0x0022, 0x0031, 0x0032]), None], 0)
+                special[(x, y)] = (ts.names['statue_base'], 1, 3)
+            elif ch in '123':
+                special[(x, y)] = (imp.add('mat' + ch, src, 0x173 + int(ch), 0x65), 0, 3)
+    # gate: Celadon City's iron fence. Posts stand on the path; the leaf is the fence rail.
+    fence = imp.layers(city, 0x0E7)[1]          # the picket rail (the city's grass is left out)
+    ts.add('gatepost_w', [path_l, imp.layers(city, 0x353)[1], None], 0)
+    ts.add('gatepost_e', [path_l, imp.layers(city, 0x354)[1], None], 0)
+    ts.add('gate_closed', [path_l, fence, None], 0)
+    ts.add('gate_open', [path_l, None, None], 0)
+    gy = [y for y in range(H) if 'G' in plan[y]][0]
+    gx = plan[gy].index('G')
+    special[(gx, gy)] = (ts.names['gate_closed'], 1, 3)
+    special[(gx - 1, gy)] = (ts.names['gatepost_w'], 1, 3)
+    special[(gx + 1, gy)] = (ts.names['gatepost_e'], 1, 3)
+    # glazed north wall, as Celadon's: rim with the leaf emblem, arched windows, wall shadow
+    for x in range(Wd):
+        r0 = {0: 0x290, 1: 0x291, Wd - 2: 0x292, Wd - 1: 0x293, Wd // 2: 0x2B3}.get(x, 0x283 if x % 2 else 0x284)
+        r1 = {0: 0x298, 1: 0x299, Wd - 2: 0x29A, Wd - 1: 0x29B}.get(x, 0x28C if x % 3 else 0x28B)
+        special[(x, 0)] = (imp.add('top0_%x' % r0, src, r0, 0), 1, 0)
+        special[(x, 1)] = (imp.add('top1_%x' % r1, src, r1, 0), 1, 0)
+    for y in range(2, H - 1):
+        for x in (0, Wd - 1):
+            special[(x, y)] = (imp.add('side', src, 0x2A0, 0), 1, 0)
+    for x in range(Wd):
+        if plan[H - 1][x] not in '123':
+            special[(x, H - 1)] = (0x000, 1, 0)
+    rows = G.dress(cls, table, imp, src, special, ext=True, floor={'F': 0x281, 'P': 0x2A5, 'T': 0x28D}, tol={'P': 2, 'F': 2, 'T': 5},
+                   wall_fallback=lambda x, y: (imp.add('w_2a0', src, 0x2A0, 0), 1, 0))
+    # the dressing picks lawn/path/tree pieces from Celadon by neighbourhood; behaviours stay normal
+    print('palette slots:', sorted(imp.colors), '+', P)
+    pals = imp.palettes(); pals[P] = GARDEN
+    ts.save(pals)
+    write_metatile_defs('data/maps/EternaCity_Gym_sinnoh', 'EternaGym', ts.names)
+    build_cells(LAYOUT, rows, border=0x000)
+    write_events(H - 1)
+
+
+def write_events(mat_y):
+    d = json.load(open(MAP))
+    d['warp_events'] = [{'x': x, 'y': mat_y, 'elevation': 0, 'dest_map': 'MAP_ETERNA_CITY_SINNOH', 'dest_warp_id': '2'}
+                        for x in (9, 10, 11)]
+    pos = {
+        'EternaCity_Gym_EventScript_Angela': (3, 4, 'MOVEMENT_TYPE_FACE_DOWN', '3'),
+        'EternaCity_Gym_EventScript_Jenna': (17, 4, 'MOVEMENT_TYPE_FACE_DOWN', '3'),
+        'EternaCity_Gym_EventScript_Caroline': (3, 17, 'MOVEMENT_TYPE_FACE_RIGHT', '3'),
+        'SE_EventScript_SinnohLeader_Gardenia': (10, 4, 'MOVEMENT_TYPE_FACE_DOWN', '0'),
+        'EternaCity_Gym_EventScript_Guide': (13, 24, 'MOVEMENT_TYPE_FACE_DOWN', '0'),
+    }
+    for o in d['object_events']:
+        x, y, mv, s = pos[o['script']]
+        o['x'], o['y'], o['movement_type'], o['elevation'] = x, y, mv, 3
+        if o['trainer_type'] != 'TRAINER_TYPE_NONE':
+            o['trainer_sight_or_berry_tree_id'] = s
+    any_ = 'BG_EVENT_PLAYER_FACING_ANY'
+    d['bg_events'] = [
+        {'type': 'sign', 'x': 7, 'y': 23, 'elevation': 0, 'player_facing_dir': any_, 'script': 'EternaCity_Gym_EventScript_GymStatue'},
+        {'type': 'sign', 'x': 15, 'y': 23, 'elevation': 0, 'player_facing_dir': any_, 'script': 'EternaCity_Gym_EventScript_GymStatue'},
+        {'type': 'sign', 'x': 9, 'y': 9, 'elevation': 0, 'player_facing_dir': any_, 'script': 'EternaCity_Gym_EventScript_GardenNotice'},
+    ]
+    d['coord_events'] = []
+    open(MAP, 'w').write(json.dumps(d, indent=2, ensure_ascii=False) + '\n')
+
+
 if __name__ == '__main__':
-    main()
+    main_frlg()

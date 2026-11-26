@@ -137,7 +137,7 @@ def turntable(missing, sector):
         for y in range(y0, y1 + 1):
             for x in range(x0, x1 + 1):
                 edge = (x in (x0, x1)) if d in (0, 2) else (y == y0)
-                g[y][x] = PW if edge else (PD if (x % 4 == 0 or y % 4 == 0) else PM)
+                g[y][x] = PW if edge else (ORD if (x % 4 == 0 or y % 4 == 0) else YS)   # deck like the walkways
                 if d in (1, 3) and y >= y1 - 2:          # side arms show their front face
                     g[y][x] = BK if y == y1 else PD
                 if d in (0, 2) and x == x1:
@@ -219,24 +219,49 @@ def room(cx, cy):
     return c
 
 
+VERM = 'VermilionCity_Gym_Frlg'
+# FRLG Vermilion Gym (Lt. Surge): its yellow grid floor is the walkway deck (given a drawn
+# rim and a front face so it stands above the night sea), its wall with the orange band and
+# the electric machines is VOLKNER's room. Turntables, buttons and cables stay drawn.
+ROOM = [[0x288, 0x2C0, 0x2C1, 0x292, 0x2CA, 0x2C0, 0x2C1, 0x28F],
+        [0x290, 0x2C8, 0x2C9, 0x2A0, 0x2A0, 0x2C8, 0x2C9, 0x297]]
+
+
+def rim(edges, stripe):
+    c = Canvas(0)
+    if 'n' in edges: c.hline(0, 15, 0, PH); c.hline(0, 15, 1, PL)
+    if 'w' in edges: c.vline(0, 0, 15, PL)
+    if 'e' in edges: c.vline(15, 0, 15, PD)
+    if 's' in edges:                         # the deck's thickness: a steel front face
+        c.rect(0, 11, 15, 15, PM); c.hline(0, 15, 11, PH); c.hline(0, 15, 15, BK)
+        for x in range(1, 16, 5):
+            c.px(x, 13, PL)
+    if stripe:
+        stripes(c, 2, 4) if 's' in edges else stripes(c, 12, 14)
+    return c
+
+
 def build_tileset(walk_kinds, cables):
+    import gbaref as G
     ts = Tileset(TS)
-    print('free tile slots:', ts.free_unused({0x216, 0x21e, 0x212, 0x213, 0x24a, 0x24b, 0x207, 0x20d, 0x20e,
-                                               0x252, 0x253, 0x20f}))
+    ts.free_unused(set())
+    vsrc = G.source_for(VERM)
+    imp = G.Importer(ts, G.free_slots({P2}))
+    deck = imp.flat(vsrc, 0x281)
     for kind in sorted(walk_kinds):
         grate, edges, stripe = kind
-        c = plate(edges, grate)
-        if stripe:
-            stripes(c, 12, 15)
-        ts.add('walk_%s%s%s' % ('g' if grate else 'p', edges or '0', '_y' if stripe else ''), [(c, P2), None, None])
+        ts.add('walk_%s%s%s' % ('g' if grate else 'p', edges or '0', '_y' if stripe else ''),
+               [deck, (rim(edges, stripe), P2), None])
     ts.add('sea', [(sea(), P2), None, None])
     ts.add('sea_sh', [(sea_shadow(), P2), None, None])
     for cy in range(6):
         for cx in range(8):
-            if cy < 2 or cx in (0, 7):
-                ts.add('room_%d_%d' % (cx, cy), [(room(cx, cy), P2), None, None])
-    ts.replace(0x216, [(plate('', False), P2), None, ('mt', 0x216, 2)])      # statues stand on metal
-    ts.replace(0x21e, [(plate('', False), P2), ('mt', 0x21e, 1), None])
+            if cy < 2:
+                ts.add('room_%d_%d' % (cx, cy), [imp.flat(vsrc, ROOM[cy][cx]), None, None])
+            elif cx in (0, 7):
+                ts.add('room_%d_%d' % (cx, cy), [imp.flat(vsrc, 0x290 if cx == 0 else 0x297), None, None])
+    ts.add('statue_top', [deck, None, ('raw', [0x0001, 0x0002, 0x0011, 0x0012])], 0)
+    ts.add('statue_base', [deck, ('raw', [0x0021, 0x0022, 0x0031, 0x0032]), None], 0)
     for (dirs, sector, on_walk) in sorted(cables):
         base = plate('we', True) if on_walk else None
         ts.add('cable%d_%s%s' % (sector, dirs, '_w' if on_walk else ''), [(cable(dirs, sector, base), P2), None, None])
@@ -258,17 +283,8 @@ def build_tileset(walk_kinds, cables):
             ts.add('tt%d_%s_off' % (sector, k), [(cut(gm, cx, cy), P2), None, None])
         for k in ('nw', 'ne', 'sw', 'se'):
             ts.add('tt%d_%s' % (sector, k), [(cut(g_all, *pos[k]), P2), None, None])
-    pals = {P2: SEA}
-    import colorsys
-    for slot in (6, 7):                   # purple walls of VOLKNER's room -> steel blue
-        cols = []
-        for i, (r, g, bb) in enumerate(ts.orig_pal(slot)):
-            h, sat, v = colorsys.rgb_to_hsv(r / 255, g / 255, bb / 255)
-            if i and sat > 0.08 and 0.70 < h < 0.95:
-                h, sat = 0.60, min(sat, 0.30)
-                r, g, bb = (round(x * 255) for x in colorsys.hsv_to_rgb(h, sat, v))
-            cols.append((r, g, bb))
-        pals[slot] = cols
+    pals = imp.palettes(); pals[P2] = SEA
+    print('palette slots:', sorted(pals))
     ts.save(pals)
     return ts.names
 
@@ -383,7 +399,7 @@ def main():
     write_metatile_defs('data/maps/SunyshoreCity_Gym_sinnoh', 'SunyshoreGym', names)
     legend = {
         '#': (n('sea'), 1, 0),
-        'T': (0x216, 0, 3), 't': (0x21e, 1, 3), 'm': (0x006, 0, 3), 'M': (0x007, 0, 3),
+        'T': (n('statue_top'), 0, 3), 't': (n('statue_base'), 1, 3), 'm': (0x006, 0, 3), 'M': (0x007, 0, 3),
         'A': (0x212, 1, 0), 'B': (0x213, 1, 0), 'C': (0x24a, 1, 0), 'D': (0x24b, 1, 0), 'E': (0x207, 1, 0),
         'F': (0x20d, 1, 0), 'G': (0x20e, 1, 0), 'H': (0x252, 1, 0), 'I': (0x253, 1, 0), 'J': (0x20f, 1, 0),
         'K': (0x20d, 1, 0), 'N': (0x20f, 1, 0),
