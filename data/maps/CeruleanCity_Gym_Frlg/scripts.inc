@@ -134,7 +134,7 @@ CeruleanCity_Gym_Text_LuisPostBattle::
 
 CeruleanCity_Gym_Text_GymGuyAdvice::
 	.string "Yo!\n"
-	.string "Champ in the making!\p"
+	.string "Hey there, CHAMPION!\p"
 	.string "Let me give you some advice!\p"
 	.string "The LEADER, MISTY, is a pro who\n"
 	.string "uses WATER-type POKéMON.\p"

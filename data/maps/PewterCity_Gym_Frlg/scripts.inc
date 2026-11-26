@@ -160,12 +160,12 @@ PewterCity_Gym_Text_LiamPostBattle::
 
 PewterCity_Gym_Text_LetMeTakeYouToTheTop::
 	.string "Hiya!\n"
-	.string "Do you want to dream big?\p"
-	.string "Do you dare to dream of becoming\n"
-	.string "the POKéMON champ?\p"
+	.string "You're the CHAMPION from HOENN?\p"
+	.string "Then you know how to dream big!\n"
+	.string "But KANTO's GYMS are a new climb.\p"
 	.string "I'm no TRAINER, but I can advise\n"
 	.string "you on how to win.\p"
-	.string "Let me take you to the top!$"
+	.string "Want me to take you to the top?$"
 
 PewterCity_Gym_Text_LetsGetHappening::
 	.string "All right!\n"
@@ -185,7 +185,7 @@ PewterCity_Gym_Text_ItsFreeLetsGetHappening::
 
 PewterCity_Gym_Text_YoureChampMaterial::
 	.string "Just as I thought!\n"
-	.string "You're POKéMON champ material!$"
+	.string "You're a true CHAMPION!$"
 
 PewterCity_Gym_Text_GymStatue::
 	.string "PEWTER POKéMON GYM\n"

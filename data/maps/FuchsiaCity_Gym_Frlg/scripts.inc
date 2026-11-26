@@ -220,7 +220,7 @@ FuchsiaCity_Gym_Text_ShawnPostBattle::
 
 FuchsiaCity_Gym_Text_GymGuyAdvice::
 	.string "Yo!\n"
-	.string "Champ in the making!\p"
+	.string "Hey there, CHAMPION!\p"
 	.string "FUCHSIA GYM is a tricked-up place.\n"
 	.string "It's riddled with invisible walls!\p"
 	.string "JANINE might appear close, but she's\n"

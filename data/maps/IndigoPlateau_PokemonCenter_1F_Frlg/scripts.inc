@@ -70,7 +70,7 @@ IndigoPlateau_PokemonCenter_1F_EventScript_Nurse::
 
 IndigoPlateau_PokemonCenter_1F_Text_GymGuyAdvice::
 	.string "Yo!\n"
-	.string "Champ in the making!\p"
+	.string "Hey there, CHAMPION!\p"
 	.string "At the POKéMON LEAGUE, you will\n"
 	.string "face the ELITE FOUR all in a row.\p"
 	.string "If you lose, you have to start all\n"

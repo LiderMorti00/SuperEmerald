@@ -250,7 +250,7 @@ ViridianCity_Gym_Text_SamuelPostBattle::
 
 ViridianCity_Gym_Text_GymGuyAdvice::
 	.string "Yo!\n"
-	.string "Champ in the making!\p"
+	.string "Hey there, CHAMPION!\p"
 	.string "The VIRIDIAN LEADER is BLUE,\n"
 	.string "PROF. OAK's grandson.\p"
 	.string "He was the CHAMPION once, so this\n"

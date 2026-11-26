@@ -230,7 +230,7 @@ SaffronCity_Gym_Text_PrestonPostBattle::
 
 SaffronCity_Gym_Text_GymGuyAdvice::
 	.string "Yo!\n"
-	.string "Champ in the making!\p"
+	.string "Hey there, CHAMPION!\p"
 	.string "SABRINA's POKéMON use psychic\n"
 	.string "power instead of force.\p"
 	.string "FIGHTING POKéMON are especially\n"

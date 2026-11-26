@@ -836,7 +836,7 @@ CinnabarIsland_Gym_Text_ZacPostBattle::
 
 CinnabarIsland_Gym_Text_GymGuyAdvice::
 	.string "Yo!\n"
-	.string "Champ in the making!\p"
+	.string "Hey there, CHAMPION!\p"
 	.string "The hotheaded BLAINE is a FIRE\n"
 	.string "POKéMON pro.\p"
 	.string "Douse his spirits with water!\p"

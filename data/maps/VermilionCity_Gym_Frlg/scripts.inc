@@ -371,7 +371,7 @@ VermilionCity_Gym_Text_DwaynePostBattle::
 
 VermilionCity_Gym_Text_GymGuyAdvice::
 	.string "Yo!\n"
-	.string "Champ in the making!\p"
+	.string "Hey there, CHAMPION!\p"
 	.string "LT. SURGE has a nickname.\p"
 	.string "People refer to him as the\n"
 	.string "Lightning American!\p"
