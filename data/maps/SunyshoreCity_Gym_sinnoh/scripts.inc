@@ -15,27 +15,27 @@ SunyshoreCity_Gym_OnLoad::
 	end
 
 SunyshoreCity_Gym_EventScript_DrawSector1Left::
-	setmetatile 3, 17, METATILE_SunyshoreGym_gate_off, FALSE
-	setmetatile 11, 16, METATILE_SunyshoreGym_gate_on, TRUE
-	setmetatile 7, 18, METATILE_SunyshoreGym_console0, TRUE
+	setmetatile 3, 17, METATILE_SunyshoreGym_gate1_off, FALSE
+	setmetatile 11, 16, METATILE_SunyshoreGym_gate1_on, TRUE
+	setmetatile 7, 18, METATILE_SunyshoreGym_console1_0, TRUE
 	return
 
 SunyshoreCity_Gym_EventScript_DrawSector1Right::
-	setmetatile 3, 17, METATILE_SunyshoreGym_gate_on, TRUE
-	setmetatile 11, 16, METATILE_SunyshoreGym_gate_off, FALSE
-	setmetatile 7, 18, METATILE_SunyshoreGym_console1, TRUE
+	setmetatile 3, 17, METATILE_SunyshoreGym_gate1_on, TRUE
+	setmetatile 11, 16, METATILE_SunyshoreGym_gate1_off, FALSE
+	setmetatile 7, 18, METATILE_SunyshoreGym_console1_1, TRUE
 	return
 
 SunyshoreCity_Gym_EventScript_DrawSector2Side::
-	setmetatile 4, 10, METATILE_SunyshoreGym_gate_off, FALSE
-	setmetatile 9, 9, METATILE_SunyshoreGym_gate_on, TRUE
-	setmetatile 12, 12, METATILE_SunyshoreGym_console0, TRUE
+	setmetatile 4, 10, METATILE_SunyshoreGym_gate2_off, FALSE
+	setmetatile 9, 9, METATILE_SunyshoreGym_gate2_on, TRUE
+	setmetatile 12, 12, METATILE_SunyshoreGym_console2_0, TRUE
 	return
 
 SunyshoreCity_Gym_EventScript_DrawSector2Volkner::
-	setmetatile 4, 10, METATILE_SunyshoreGym_gate_on, TRUE
-	setmetatile 9, 9, METATILE_SunyshoreGym_gate_off, FALSE
-	setmetatile 12, 12, METATILE_SunyshoreGym_console1, TRUE
+	setmetatile 4, 10, METATILE_SunyshoreGym_gate2_on, TRUE
+	setmetatile 9, 9, METATILE_SunyshoreGym_gate2_off, FALSE
+	setmetatile 12, 12, METATILE_SunyshoreGym_console2_1, TRUE
 	return
 
 SunyshoreCity_Gym_EventScript_Console1::

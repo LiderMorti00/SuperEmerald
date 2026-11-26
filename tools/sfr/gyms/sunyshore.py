@@ -25,48 +25,138 @@ K, D, M, L, H, W, Y, YD, C, CD, G, GD, R, RD, YL = range(1, 16)
 FLOOR, VOID = 0x20a, 0x001
 
 
-def gate(on):
-    """Barrier across a north-south walkway; posts at both sides. On = blocks."""
+P2 = 11
+SEA = [(0, 0, 0), (10, 18, 34), (18, 32, 58), (30, 52, 88), (52, 84, 128), (36, 40, 48), (62, 68, 80),
+       (96, 104, 118), (150, 158, 172), (210, 216, 226), (232, 196, 40), (24, 24, 28), (240, 130, 40),
+       (150, 70, 20), (90, 200, 250), (30, 110, 170)]
+NV1, NV2, NV3, NV4, PD, PM, PL, PH, PW, YS, BK, OR, ORD, CY, CYD = range(1, 16)
+CABLE = {1: (OR, ORD), 2: (CY, CYD)}
+
+
+def plate(edges, grate=False):
+    """Dark metal walkway; light trim where it meets the void, grating on the narrow catwalks."""
+    c = Canvas(PM)
+    if grate:
+        for y in range(16):
+            for x in range(16):
+                c.px(x, y, PD if (x % 4 == 0 or y % 4 == 0) else NV2 if (x + y) % 2 else PM)
+    else:
+        for y in (0, 8):
+            c.hline(0, 15, y, PD)
+        c.vline(7, 1, 7, PD); c.vline(15, 9, 15, PD)
+        for x, y in ((2, 2), (12, 2), (5, 11), (10, 13)):
+            c.px(x, y, PL)
+    trim = {'n': lambda i: (i, 0), 's': lambda i: (i, 15), 'w': lambda i: (0, i), 'e': lambda i: (15, i)}
+    inner = {'n': lambda i: (i, 1), 's': lambda i: (i, 14), 'w': lambda i: (1, i), 'e': lambda i: (14, i)}
+    for e in edges:
+        for i in range(16):
+            c.px(*trim[e](i), PW); c.px(*inner[e](i), PH)
+    return c
+
+
+def stripes(c, y0, y1):
+    for y in range(y0, y1 + 1):
+        for x in range(16):
+            c.px(x, y, YS if ((x + y) // 2) % 2 == 0 else BK)
+    return c
+
+
+def sea():
+    c = Canvas(NV1)
+    for x, y in ((2, 3), (3, 3), (9, 6), (10, 6), (11, 6), (5, 11), (6, 11), (13, 13), (14, 13)):
+        c.px(x, y, NV3)
+    c.px(10, 5, NV2); c.px(4, 10, NV2)
+    return c
+
+
+def cable(dirs, sector, base=None):
+    """A power cable from this tile's centre towards each direction in dirs."""
+    c = base.copy() if base else sea()
+    col, dk = CABLE[sector]
+    if 'n' in dirs: c.rect(6, 0, 9, 9, dk); c.rect(7, 0, 8, 9, col)
+    if 's' in dirs: c.rect(6, 6, 9, 15, dk); c.rect(7, 6, 8, 15, col)
+    if 'w' in dirs: c.rect(0, 6, 9, 9, dk); c.rect(0, 7, 9, 8, col)
+    if 'e' in dirs: c.rect(6, 6, 15, 9, dk); c.rect(6, 7, 15, 8, col)
+    for x in (1, 13):
+        if 'w' in dirs or 'e' in dirs:
+            if c.p[7][x] == col: c.px(x, 6, PH); c.px(x, 9, PH)       # clamps
+    return c
+
+
+def gate(on, sector):
+    """Barrier across a north-south catwalk. Shut: tall pylons with a crackling field and a red bar.
+    Open: the pylons sink into the floor, the field is gone and green chevrons point the way."""
     c = Canvas(0)
-    for x0 in (0, 13):
-        c.rect(x0, 2, x0 + 2, 13, D); c.vline(x0 + 1, 2, 13, M); c.rect(x0, 1, x0 + 2, 3, H if on else M)
-        c.rect(x0, 1, x0 + 2, 2, C if on else L)
+    col, dk = CABLE[sector]
     if on:
-        import random
-        rnd = random.Random(7)
-        for y0 in (4, 8, 11):
-            y = y0
-            for x in range(3, 13):
-                y = max(y0 - 1, min(y0 + 1, y + rnd.choice((-1, 0, 1))))
-                c.px(x, y, W); c.px(x, y + 1, C); c.px(x, y - 1, CD)
+        for x0 in (0, 12):
+            c.rect(x0, 0, x0 + 3, 15, PD); c.rect(x0 + 1, 0, x0 + 2, 15, PL); c.rect(x0, 0, x0 + 3, 2, col)
+        for y in range(2, 14, 4):
+            for x in range(4, 12):
+                c.px(x, y + (x % 3 == 0), CY); c.px(x, y + 1 + (x % 2), PW)
+        c.rect(4, 7, 11, 8, OR)
     else:
-        c.hline(3, 12, 14, M)            # cold rail on the floor
+        for x0 in (0, 12):
+            c.rect(x0, 6, x0 + 3, 9, PD); c.rect(x0 + 1, 7, x0 + 2, 8, col)
+        for y0 in (3, 9):
+            for i in range(4):
+                c.px(5 + i, y0 + i, PW); c.px(10 - i, y0 + i, PW)
     return c
 
 
-def console(state):
-    """Switch console: two lamps (left / right connection) and a lever pointing at the live side."""
+def console(state, sector):
     c = Canvas(0)
-    c.rect(1, 2, 14, 15, D); c.rect(2, 3, 13, 14, M); c.hline(1, 14, 2, L); c.hline(1, 14, 15, K)
+    col, dk = CABLE[sector]
+    c.rect(1, 1, 14, 15, PD); c.rect(2, 2, 13, 13, PM); c.hline(1, 14, 1, PL); c.hline(1, 14, 15, BK)
+    c.rect(2, 2, 13, 3, col)                               # sector colour band
     for x0, live in ((3, state == 0), (10, state == 1)):
-        c.rect(x0, 4, x0 + 2, 6, G if live else RD); c.px(x0, 4, W if live else R)
-    c.rect(6, 10, 9, 13, K)
+        c.rect(x0, 5, x0 + 2, 7, CY if live else ORD); c.px(x0, 5, PW if live else OR)
+    c.rect(6, 10, 9, 13, BK)
     if state == 0:
-        c.rect(4, 8, 7, 9, H); c.rect(3, 8, 4, 9, Y)
+        c.rect(4, 9, 7, 10, PH); c.rect(3, 9, 4, 10, YS)
     else:
-        c.rect(8, 8, 11, 9, H); c.rect(11, 8, 12, 9, Y)
-    c.rect(7, 9, 8, 11, L)
+        c.rect(8, 9, 11, 10, PH); c.rect(11, 9, 12, 10, YS)
+    c.rect(7, 10, 8, 12, PL)
+    c.vline(7, 14, 15, col); c.vline(8, 14, 15, dk)     # cable out of the bottom
     return c
 
 
-def build_tileset():
+def build_tileset(walk_kinds, cables):
     ts = Tileset(TS)
-    floor = ('mt', FLOOR, 1)
-    ts.add('gate_on', [floor, (gate(True), P), None])
-    ts.add('gate_off', [floor, (gate(False), P), None])
-    ts.add('console0', [floor, (console(0), P), None])
-    ts.add('console1', [floor, (console(1), P), None])
-    ts.save({P: VOLT})
+    live = set()
+    b = open('data/layouts/SunyshoreCity_Gym_sinnoh/map.bin', 'rb').read()
+    print('free tile slots:', ts.free_unused({0x216, 0x21e, 0x212, 0x213, 0x24a, 0x24b, 0x207, 0x20d, 0x20e,
+                                               0x252, 0x253, 0x20f}))
+    for kind in sorted(walk_kinds):
+        grate, edges, stripe = kind
+        c = plate(edges, grate)
+        if stripe:
+            stripes(c, 12, 15)
+        ts.add('walk_%s%s%s' % ('g' if grate else 'p', edges or '0', '_y' if stripe else ''), [(c, P2), None, None])
+    ts.add('sea', [(sea(), P2), None, None])
+    ts.replace(0x216, [(plate('', False), P2), None, ('mt', 0x216, 2)])      # statues stand on metal now
+    ts.replace(0x21e, [(plate('', False), P2), ('mt', 0x21e, 1), None])
+    for (dirs, sector, on_walk) in sorted(cables):
+        base = plate('we', True) if on_walk else None
+        ts.add('cable%d_%s%s' % (sector, dirs, '_w' if on_walk else ''), [(cable(dirs, sector, base), P2), None, None])
+    for sector in (1, 2):
+        g = ('mt', 0, 0)
+        for on in (True, False):
+            ts.add('gate%d_%s' % (sector, 'on' if on else 'off'), [(plate('we', True), P2), (gate(on, sector), P2), None])
+        for st in (0, 1):
+            ts.add('console%d_%d' % (sector, st), [(sea(), P2), (console(st, sector), P2), None])
+    pals = {P2: SEA}
+    import colorsys
+    for slot in (6, 7):                   # purple walls of VOLKNER's room -> steel blue
+        cols = []
+        for i, (r, g, bb) in enumerate(ts.orig_pal(slot)):
+            h, sat, v = colorsys.rgb_to_hsv(r / 255, g / 255, bb / 255)
+            if i and sat > 0.08 and 0.70 < h < 0.95:
+                h, sat = 0.60, min(sat, 0.30)
+                r, g, bb = (round(x * 255) for x in colorsys.hsv_to_rgb(h, sat, v))
+            cols.append((r, g, bb))
+        pals[slot] = cols
+    ts.save(pals)
     return ts.names
 
 
@@ -98,24 +188,63 @@ PLAN = [
 ]
 
 
+WALKABLE = set('.PxT+')
+CABLES = {   # (x, y): (dirs, sector)
+    (6, 18): ('we', 1), (5, 18): ('we', 1), (4, 18): ('ne', 1), (4, 17): ('sw', 1),
+    (8, 18): ('we', 1), (9, 18): ('we', 1), (10, 18): ('nw', 1), (10, 17): ('ns', 1), (10, 16): ('se', 1),
+    (12, 11): ('nsw', 2), (11, 11): ('we', 2), (10, 11): ('we', 2), (9, 11): ('we', 2), (8, 11): ('we', 2),
+    (7, 11): ('we', 2), (6, 11): ('we', 2), (5, 11): ('ne', 2), (5, 10): ('sw', 2),
+    (12, 10): ('ns', 2), (12, 9): ('sw', 2), (11, 9): ('we', 2), (10, 9): ('we', 2),
+}
+STRIPES = {(7, 19), (11, 12), (3, 16), (3, 18), (11, 15), (11, 17), (4, 9), (4, 11), (9, 8), (9, 10)}
+
+
 def main():
-    names = build_tileset()
+    plan = [list(r) for r in PLAN]
+    H, W = len(plan), len(plan[0])
+    ok = lambda x, y: 0 <= x < W and 0 <= y < H and plan[y][x] in WALKABLE | set('1mM2Tt')
+    kinds, cells = set(), {}
+    for y in range(H):
+        for x in range(W):
+            if plan[y][x] in '.P' and (x, y) not in CABLES:
+                edges = ''.join(e for e, (dx, dy) in (('n', (0, -1)), ('s', (0, 1)), ('w', (-1, 0)), ('e', (1, 0)))
+                                if not ok(x + dx, y + dy))
+                grate = 'w' in edges and 'e' in edges
+                k = (grate, edges, (x, y) in STRIPES)
+                kinds.add(k); cells[(x, y)] = k
+    cab = {(d, sec, plan[y][x] in '.P') for (x, y), (d, sec) in CABLES.items()}
+    names = build_tileset(kinds, cab)
     n = lambda k: names[k]
     write_metatile_defs('data/maps/SunyshoreCity_Gym_sinnoh', 'SunyshoreGym', names)
     legend = {
-        '#': (VOID, 1, 0), '.': (FLOOR, 0, 3), 'P': (FLOOR, 0, 3),
-        'x': (n('gate_on'), 1, 3), '+': (n('gate_off'), 0, 3),
-        '1': (n('console0'), 1, 3), '2': (n('console0'), 1, 3),
+        '#': (n('sea'), 1, 0), 'x': (n('gate1_on'), 1, 3), '+': (n('gate1_off'), 0, 3),
+        'X': (n('gate2_on'), 1, 3), '=': (n('gate2_off'), 0, 3),
+        '1': (n('console1_0'), 1, 3), '2': (n('console2_0'), 1, 3),
         'T': (0x216, 0, 3), 't': (0x21e, 1, 3), 'm': (0x006, 0, 3), 'M': (0x007, 0, 3),
         'A': (0x212, 1, 0), 'B': (0x213, 1, 0), 'C': (0x24a, 1, 0), 'D': (0x24b, 1, 0), 'E': (0x207, 1, 0),
         'F': (0x20d, 1, 0), 'G': (0x20e, 1, 0), 'H': (0x252, 1, 0), 'I': (0x253, 1, 0), 'J': (0x20f, 1, 0),
         'K': (0x20d, 1, 0), 'N': (0x20f, 1, 0),
     }
-    plan = [r for r in PLAN]
-    plan[21] = plan[21].replace('mm', 'mM')
-    for r in plan:
-        assert len(r) == 15, r
-    build_map(LAYOUT, plan, legend, border=VOID)
+    plan[9][9] = 'X'; plan[10][4] = '='          # sector-2 gates
+    plan[21][8] = 'M'
+    out = []
+    for y in range(H):
+        line = ''
+        for x in range(W):
+            ch = plan[y][x]
+            if (x, y) in CABLES:
+                d_, sec = CABLES[(x, y)]
+                key = 'cable%d_%s%s' % (sec, d_, '_w' if ch in '.P' else '')
+                ch2 = chr(0x100 + len(legend)); legend[ch2] = (n(key), 0 if ch in '.P' else 1, 3 if ch in '.P' else 0)
+                ch = ch2
+            elif (x, y) in cells:
+                grate, edges, st = cells[(x, y)]
+                key = 'walk_%s%s%s' % ('g' if grate else 'p', edges or '0', '_y' if st else '')
+                ch2 = chr(0x100 + len(legend)); legend[ch2] = (n(key), 0, 3)
+                ch = ch2
+            line += ch
+        out.append(line)
+    build_map(LAYOUT, out, legend, border=n('sea'))
 
     d = json.load(open(MAP))
     d['warp_events'] = [{'x': x, 'y': 21, 'elevation': 0, 'dest_map': 'MAP_SUNYSHORE_CITY_SINNOH', 'dest_warp_id': '8'}
