@@ -10,6 +10,11 @@ room has a packed-snow landing at its entrance, and from every stop the player c
 reach both the exit stairs and the landing (checked by solve() below), so nobody gets stuck.
 B1F stays reachable from the ladder by the entrance; its stair columns are now walkable
 both ways, so its trainers can still be fought.
+
+Both floors are drawn from a character plan by autotile(): walls are stone masses that step
+down to the rooms (deep snow, cold stone, snowy rim), with an ice-block face wherever a floor
+lies to the south and a cast shadow on that floor; firm floor is blue-grey stone slab, ice is
+glossy and banked with snow at its edges, mounds are round outlined heaps.
 """
 import json, os, struct, sys
 from collections import deque
@@ -18,6 +23,7 @@ from gymkit import Canvas, Tileset, write_metatile_defs
 
 TS = 'data/tilesets/secondary/sootopolis_gym_sinnoh'
 LAYOUT = 'LAYOUT_SNOWPOINT_CITY_GYM_1F_SINNOH'
+LAYOUT_B1F = 'LAYOUT_SNOWPOINT_CITY_GYM_B1F_SINNOH'
 P = 10
 SNOW = [(0, 0, 0), (40, 56, 96), (88, 120, 176), (136, 168, 216), (184, 208, 240), (224, 236, 252),
         (248, 252, 255), (160, 200, 232), (112, 152, 200), (52, 62, 78), (88, 102, 120), (128, 142, 158),
@@ -200,77 +206,247 @@ def solve(grid):
     return path[::-1]
 
 
+# ---------------------------------------------------------------- floors and walls
+OPEN = set('.iLoSTBHmCP')         # everything that is not wall mass
+
+
+def ice_tile(shadow=False):
+    """Glossy ice: pale cyan with long glints and a few hairline cracks (no tiles, no grid)."""
+    c = Canvas(IC)
+    for x, y in ((2, 13), (3, 12), (4, 11), (5, 10), (9, 5), (10, 4), (11, 3), (12, 2), (8, 14), (9, 13)):
+        c.px(x, y, WH)
+    for x, y in ((3, 13), (4, 12), (10, 5), (11, 4), (6, 3), (7, 3), (13, 9), (13, 10), (1, 6)):
+        c.px(x, y, SH)
+    for x, y in ((6, 8), (7, 9), (8, 9), (14, 13)):
+        c.px(x, y, ICD)
+    if shadow:
+        for y in range(3):
+            c.hline(0, 15, y, ICD if y < 2 else S)
+    return c
+
+
+def slab(shadow=False, dust=True):
+    """Firm ground: big blue-grey stone slabs; a wall face to the north casts a shadow."""
+    c = Canvas(ST4)
+    c.hline(0, 15, 15, ST2); c.vline(15, 0, 15, ST2); c.hline(0, 14, 0, ST5); c.vline(0, 0, 14, ST5)
+    for x, y in ((4, 4), (11, 9), (6, 12), (12, 3)):
+        c.px(x, y, ST3)
+    if dust:
+        for x, y in ((2, 9), (9, 2), (13, 12)):
+            c.px(x, y, WH)
+    if shadow:
+        for y in range(4):
+            c.hline(0, 15, y, ST1 if y < 2 else ST2)
+    return c
+
+
+def face(w_open, e_open, window=None):
+    """Wall face (a floor lies south): ice blocks under a snow cap, icicles, dark foot line."""
+    c = Canvas(SL)
+    for y in range(16):
+        for x in range(16):
+            v = SL if (y // 5 + x // 8) % 2 else SH
+            if y % 5 == 4 or (x + (4 if (y // 5) % 2 else 0)) % 8 == 7:
+                v = ICD
+            c.px(x, y, v)
+    c.hline(0, 15, 0, K); c.hline(0, 15, 1, WH); c.hline(0, 15, 2, WH); c.hline(0, 15, 3, SH)
+    for x in (2, 6, 11, 14):                                       # icicles
+        c.px(x, 4, WH); c.px(x, 5, SH)
+    c.px(6, 6, SH)
+    c.hline(0, 15, 14, S); c.hline(0, 15, 15, SD)
+    if w_open: c.vline(0, 0, 15, K)
+    if e_open: c.vline(15, 0, 15, K)
+    return c
+
+
+TIER = {1: (WH, SH), 2: (ST3, ST2), 3: (ST2, ST1)}
+
+
+def top(d, sides, steps):
+    """Top of a wall mass seen from above. d = distance to the nearest floor (1 snowy rim,
+    2 cold stone, 3+ dark stone). sides: open floor at n/w/e (a cliff edge there);
+    steps: neighbouring tiers that are lower (drawn as a step line)."""
+    t = min(d, 3)
+    a, b = TIER[t]
+    c = Canvas(a)
+    for x, y in ((3, 4), (10, 2), (6, 11), (13, 9), (1, 14)):
+        c.px(x, y, b)
+    if t == 3:
+        for x, y in ((5, 6), (6, 6), (11, 12), (12, 12)):
+            c.px(x, y, SH)                                         # snow caught on the stone
+    for e in steps:                                                # step down towards a lower tier
+        for i in range(16):
+            px = {'n': (i, 0), 's': (i, 15), 'w': (0, i), 'e': (15, i)}[e]
+            c.px(*px, ST1 if t > 1 else SH)
+    for e in sides:                                                # cliff edge to the floor
+        for i in range(16):
+            px, px2 = {'n': ((i, 0), (i, 1)), 'w': ((0, i), (1, i)), 'e': ((15, i), (14, i)),
+                       's': ((i, 15), (i, 14))}[e]
+            c.px(*px, K); c.px(*px2, S)
+    return c
+
+
+def crystal():
+    """Ice crystal on a stone foot (decoration that blocks)."""
+    c = slab()
+    pts = [(7, 1), (8, 1), (6, 3), (9, 3), (5, 6), (10, 6), (5, 10), (10, 10), (6, 12), (9, 12)]
+    for y in range(1, 13):
+        w = min(y, 13 - y, 4)
+        for x in range(8 - w, 8 + w):
+            c.px(x, y, SH if x < 8 else S)
+    for y in range(2, 12):
+        c.px(7, y, WH)
+    c.hline(4, 11, 13, K); c.hline(5, 10, 14, ST1)
+    return c
+
+
+def plan_1f():
+    W, H = 17, 26
+    g = [['#'] * W for _ in range(H)]
+    def fill(x0, y0, x1, y1, ch):
+        for y in range(y0, y1 + 1):
+            for x in range(x0, x1 + 1):
+                g[y][x] = ch
+    fill(3, 2, 13, 3, '.')                     # CANDICE's floor
+    g[2][4] = g[2][12] = 'P'                   # ice crystals
+    for name, (x0, y0, rows) in ROOMS.items():
+        for j, r in enumerate(rows):
+            for i, ch in enumerate(r):
+                g[y0 + j][x0 + i] = {'.': 'i'}.get(ch, ch)
+    for x, y in STAIR_TILES + [(8, 20), (8, 21)]:
+        g[y][x] = 'S'
+    fill(5, 22, 11, 25, '.')                   # entrance hall
+    g[23][6] = g[23][10] = 'T'; g[24][6] = g[24][10] = 'B'
+    g[22][11] = 'H'                            # ladder down to B1F
+    g[25][8] = g[25][9] = 'm'
+    return [''.join(r) for r in g]
+
+
+def plan_b1f(orig):
+    """Basement plan from its current collision: floor stays floor, the stair columns stay stairs."""
+    W, H = 17, len(orig) // 17
+    g = []
+    for y in range(H):
+        row = ''
+        for x in range(W):
+            v = orig[y * W + x]
+            m, col = v & 0x3FF, (v >> 10) & 3
+            row += 'H' if m == 0x214 else 'S' if m == LOCKED_STAIRS else '#' if col else '.'
+        g.append(row)
+    return g
+
+
+def autotile(plan):
+    """Return {(x, y): (name, canvas_layers, collision, behavior)} for every cell of a plan."""
+    H, W = len(plan), len(plan[0])
+    at = lambda x, y: plan[y][x] if 0 <= x < W and 0 <= y < H else '#'
+    op = lambda x, y: at(x, y) in OPEN
+    dist = {}
+    q = deque()
+    for y in range(H):
+        for x in range(W):
+            if op(x, y):
+                dist[(x, y)] = 0; q.append((x, y))
+    while q:
+        x, y = q.popleft()
+        for dx in (-1, 0, 1):
+            for dy in (-1, 0, 1):
+                n = (x + dx, y + dy)
+                if 0 <= n[0] < W and 0 <= n[1] < H and n not in dist:
+                    dist[n] = dist[(x, y)] + 1; q.append(n)
+    out = {}
+    D4 = (('n', 0, -1), ('s', 0, 1), ('w', -1, 0), ('e', 1, 0))
+    for y in range(H):
+        for x in range(W):
+            ch = at(x, y)
+            shadow = at(x, y - 1) == '#'
+            if ch == '#':
+                if op(x, y + 1):
+                    key = ('face', op(x - 1, y) or at(x - 1, y + 1) == '#', op(x + 1, y) or at(x + 1, y + 1) == '#')
+                    key = ('face', op(x - 1, y), op(x + 1, y))
+                    out[(x, y)] = ('wf_%d%d' % key[1:], lambda k=key: [(face(k[1], k[2]), P), None, None], 1, 0)
+                else:
+                    d = dist[(x, y)]; t = min(d, 3)
+                    sides = ''.join(e for e, dx, dy in D4 if op(x + dx, y + dy))
+                    steps = ''.join(e for e, dx, dy in D4 if not op(x + dx, y + dy) and
+                                    0 <= x + dx < W and 0 <= y + dy < H and min(dist[(x + dx, y + dy)], 3) < t)
+                    nm = 'wt%d_%s_%s' % (t, sides or '0', steps or '0')
+                    out[(x, y)] = (nm, lambda t=t, a=sides, b=steps: [(top(t, a, b), P), None, None], 1, 0)
+            elif ch in '.CL':
+                out[(x, y)] = ('slab%d' % shadow, lambda s=shadow: [(slab(s), P), None, None], 0, MB_NORMAL)
+            elif ch == 'i':
+                edges = ''.join(e for e, dx, dy in D4 if at(x + dx, y + dy) not in 'ioL')
+                edges = ''.join(e for e in 'nswe' if e in edges)
+                nm = 'ice_%s%d' % (edges or '0', shadow)
+                out[(x, y)] = (nm, lambda e=edges, s=shadow: [(ice_tile(s), P), (drift(e), P) if e else None, None], 0, MB_ICE)
+            elif ch == 'o':
+                out[(x, y)] = ('mound%d' % shadow, lambda s=shadow: [(ice_tile(s), P), (mound(), P), None], 1, MB_NORMAL)
+            elif ch == 'S':
+                out[(x, y)] = ('stairs', lambda: [(stone_steps(), P), None, None], 0, MB_NORMAL)
+            elif ch == 'P':
+                out[(x, y)] = ('crystal', lambda: [(crystal(), P), None, None], 1, MB_NORMAL)
+            elif ch == 'T':
+                out[(x, y)] = ('statue_top', lambda: [(slab(False), P), None, ('mt', 0x217, 2)], 0, MB_NORMAL)
+            elif ch == 'B':
+                out[(x, y)] = ('statue_base', lambda: [(slab(False), P), ('mt', 0x21f, 1), None], 1, MB_NORMAL)
+    return out
+
+
 def main():
     ts = Tileset(TS)
-    ice = ('mt', ICE, 1)
-    live = set()
-    for m in ('SnowpointCity_Gym_1F_sinnoh', 'SnowpointCity_Gym_B1F_sinnoh'):
-        b = open(f'data/layouts/{m}/map.bin', 'rb').read() + open(f'data/layouts/{m}/border.bin', 'rb').read()
-        live |= {v & 0x3FF for v in struct.unpack('<%dH' % (len(b) // 2), b)}
-    live |= {ICE, ICE_SHADE, STAIRS, LOCKED_STAIRS}
-    redrawn = {0x268, 0x269, 0x270, 0x271, 0x278, 0x279, STAIRS}
-    print('free tile slots:', ts.free_unused(live, redrawn))
-    ts.add('mound', [ice, (mound(), P), None])
-    ts.add('mound_shade', [ice, (mound(), P), None])
-    ts.add('snow', [(stone_slab(), P), None, None])
-    # mountain pavilion: frosted windows instead of the Sootopolis waterfalls, stone stairs
-    win = frost_window()
-    for (cx, cy), mid in {(0, 0): 0x268, (1, 0): 0x269, (0, 1): 0x270, (1, 1): 0x271,
-                          (0, 2): 0x278, (1, 2): 0x279}.items():
-        ts.replace(mid, [(cut(win, cx, cy), P), None, None], MB_NORMAL)
-    ts.replace(STAIRS, [(stone_steps(), P), None, None])
-    for k in ('n', 's', 'w', 'e', 'nw', 'ne', 'sw', 'se'):
-        ts.add('ice_' + k, [ice, (drift(k), P), None], MB_ICE)
-    # behaviours: ice slides now; the old locked ice stairs (still used as B1F's stair columns)
-    # no longer push the player south
-    for m, b in ((ICE, MB_ICE), (ICE_SHADE, MB_ICE), (LOCKED_STAIRS, MB_NORMAL)):
-        i = (m - 0x200) * 2
-        ts.at[i:i + 2] = struct.pack('<H', (struct.unpack_from('<H', ts.at, i)[0] & 0xFF00) | b)
-    pals = {P: SNOW}
-    for slot in (6, 7, 8, 9):            # purple mouldings -> blue-grey stone
-        cols = []
-        for i, (r, g, b) in enumerate(ts.orig_pal(slot)):
-            h, sat, v = colorsys.rgb_to_hsv(r / 255, g / 255, b / 255)
-            if i and sat > 0.06 and 0.62 < h < 0.92:
-                h, sat = 0.58, min(sat, 0.22)
-                r, g, b = (round(c * 255) for c in colorsys.hsv_to_rgb(h, sat, v))
-            cols.append((r, g, b))
-        pals[slot] = cols
-    ts.save(pals)
-    names = ts.names
-    write_metatile_defs('data/maps/SnowpointCity_Gym_1F_sinnoh', 'SnowpointGym', names)
-
+    s_orig = json.load(open(TS + '/se_gymkit.json'))
     L = json.load(open('data/layouts/layouts.json'))
-    lay = [l for l in L['layouts'] if l.get('id') == LAYOUT][0]
-    w, h = lay['width'], lay['height']
-    data = bytearray(open(lay['blockdata_filepath'], 'rb').read())
-    state = json.load(open(TS + '/se_gymkit.json'))
-    if 'orig_map' not in state:
-        state['orig_map'] = list(struct.unpack('<%dH' % (w * h), data))
-        json.dump(state, open(TS + '/se_gymkit.json', 'w'), indent=1)
-    cells = list(state['orig_map'])
-    put = lambda x, y, m, col: cells.__setitem__(y * w + x, (m & 0x3FF) | (col << 10))
-    for name, (x0, y0, rows) in ROOMS.items():
+    lays = {k: [l for l in L['layouts'] if l.get('id') == k][0] for k in (LAYOUT, LAYOUT_B1F)}
+    b1 = open(lays[LAYOUT_B1F]['blockdata_filepath'], 'rb').read()
+    if 'orig_b1f' not in s_orig:
+        s_orig['orig_b1f'] = list(struct.unpack('<%dH' % (len(b1) // 2), b1))
+        ts.state['orig_b1f'] = s_orig['orig_b1f']
+    orig_b1f = ts.state.get('orig_b1f', s_orig.get('orig_b1f'))
+    ts.state['orig_b1f'] = orig_b1f
+    print('free tile slots:', ts.free_unused({0x217, 0x21f, 0x21c, 0x214, 0x20c}))
+    plans = {LAYOUT: plan_1f(), LAYOUT_B1F: plan_b1f(orig_b1f)}
+    cells = {k: autotile(v) for k, v in plans.items()}
+    made = {}
+    for k in plans:
+        for (x, y), (nm, fn, col, mb) in sorted(cells[k].items()):
+            if nm not in made:
+                ts.add(nm, fn(), mb); made[nm] = True
+    win = frost_window()                       # snowed-in windows in the top wall of 1F
+    for (cx, cy) in ((0, 0), (1, 0), (0, 1), (1, 1)):
+        ts.add('win_%d%d' % (cx, cy), [(cut(win, cx, cy + 1), P), None, None])
+    for name, (x0, y0, rows) in ROOMS.items():  # check every room still solves and can't trap
         grid = [['#'] * (len(rows[0]) + 2) for _ in range(len(rows) + 4)]
         for j, r in enumerate(rows):
             for i, ch in enumerate(r):
-                x, y = x0 + i, y0 + j
-                shade = j == 0
-                if ch == 'o':
-                    put(x, y, names['mound_shade' if shade else 'mound'], 1)
-                elif ch == 'L':
-                    put(x, y, names['snow'], 0)
-                else:
-                    edges = ''.join(e for e, (dx, dy) in (('n', (0, -1)), ('s', (0, 1)), ('w', (-1, 0)), ('e', (1, 0)))
-                                    if not (0 <= i + dx < len(r) and 0 <= j + dy < len(rows)))
-                    put(x, y, names['ice_' + edges] if edges else ICE, 0)
                 grid[j + 2][i + 1] = {'o': 'o', 'L': 'L'}.get(ch, 'i')
         mid = 8 - x0 + 1
         grid[1][mid] = 'E'; grid[len(rows) + 2][mid] = 'S'
         print(name, ''.join(solve([''.join(r) for r in grid])))
-    for x, y in STAIR_TILES:
-        put(x, y, STAIRS, 0)
-    open(lay['blockdata_filepath'], 'wb').write(struct.pack('<%dH' % (w * h), *cells))
+    ts.save({P: SNOW})
+    names = ts.names
+    write_metatile_defs('data/maps/SnowpointCity_Gym_1F_sinnoh', 'SnowpointGym', names)
+    for k, plan in plans.items():
+        lay = lays[k]; w, h = lay['width'], lay['height']
+        assert (w, h) == (len(plan[0]), len(plan)), (k, w, h)
+        vals = []
+        for y in range(h):
+            for x in range(w):
+                ch = plan[y][x]
+                if (x, y) in cells[k]:
+                    nm, fn, col, mb = cells[k][(x, y)]
+                    vals.append((names[nm] & 0x3FF) | (col << 10) | (3 << 12 if not col else 0))
+                elif ch == 'H':
+                    v = (s_orig['orig_map'][y * w + x] if k == LAYOUT else orig_b1f[y * w + x])
+                    vals.append(v)
+                elif ch == 'm':
+                    vals.append((0x006 if x == 8 else 0x007) | (3 << 12))
+                else:
+                    raise SystemExit(f'no tile for {ch!r} at {x},{y} in {k}')
+        if k == LAYOUT:
+            for (wx, wy), cx, cy in (((4, 0), 0, 0), ((5, 0), 1, 0), ((4, 1), 0, 1), ((5, 1), 1, 1),
+                                     ((11, 0), 0, 0), ((12, 0), 1, 0), ((11, 1), 0, 1), ((12, 1), 1, 1)):
+                vals[wy * w + wx] = (names['win_%d%d' % (cx, cy)] & 0x3FF) | (1 << 10)
+        open(lay['blockdata_filepath'], 'wb').write(struct.pack('<%dH' % (w * h), *vals))
 
 
 if __name__ == '__main__':
