@@ -16563,8 +16563,8 @@
     {
       "id": "LAYOUT_VEILSTONE_CITY_GYM_SINNOH",
       "name": "VeilstoneCity_Gym_Layout_Sinnoh",
-      "width": 18,
-      "height": 28,
+      "width": 17,
+      "height": 16,
       "primary_tileset": "gTileset_Building_Sinnoh",
       "secondary_tileset": "gTileset_DewfordGym_Sinnoh",
       "border_filepath": "data/layouts/VeilstoneCity_Gym_sinnoh/border.bin",

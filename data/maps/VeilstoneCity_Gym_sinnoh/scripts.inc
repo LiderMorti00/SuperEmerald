@@ -1,9 +1,124 @@
+	.include "data/maps/VeilstoneCity_Gym_sinnoh/gym_metatiles.inc"
+
 VeilstoneCity_Gym_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, VeilstoneCity_Gym_OnLoad
 	.byte 0
+
+@ Super Emerald: two sliding panels. VAR_TEMP_1 = panel A (0: at 12,10 in front of the gap / 1: at 13,10),
+@ VAR_TEMP_2 = panel B (0: at 8,5 in front of the last corridor / 1: at 9,5). Temp vars reset
+@ when the player leaves, so the panels go back to their places.
+VeilstoneCity_Gym_OnLoad::
+	call_if_eq VAR_TEMP_1, 1, VeilstoneCity_Gym_EventScript_DrawPanelAMoved
+	call_if_eq VAR_TEMP_2, 1, VeilstoneCity_Gym_EventScript_DrawPanelBMoved
+	end
+
+VeilstoneCity_Gym_EventScript_DrawPanelAMoved::
+	setmetatile 12, 10, METATILE_VeilstoneGym_wood, FALSE
+	setmetatile 13, 10, METATILE_VeilstoneGym_panel, TRUE
+	return
+
+VeilstoneCity_Gym_EventScript_DrawPanelBMoved::
+	setmetatile 8, 5, METATILE_VeilstoneGym_wood, FALSE
+	setmetatile 9, 5, METATILE_VeilstoneGym_panel, TRUE
+	return
+
+@ VAR_0x8004/5 = the tile the player faces
+VeilstoneCity_Gym_EventScript_GetFacedTile::
+	getplayerxy VAR_0x8004, VAR_0x8005
+	call_if_eq VAR_FACING, DIR_NORTH, VeilstoneCity_Gym_EventScript_FaceNorth
+	call_if_eq VAR_FACING, DIR_SOUTH, VeilstoneCity_Gym_EventScript_FaceSouth
+	call_if_eq VAR_FACING, DIR_WEST, VeilstoneCity_Gym_EventScript_FaceWest
+	call_if_eq VAR_FACING, DIR_EAST, VeilstoneCity_Gym_EventScript_FaceEast
+	return
+
+VeilstoneCity_Gym_EventScript_FaceNorth::
+	subvar VAR_0x8005, 1
+	return
+
+VeilstoneCity_Gym_EventScript_FaceSouth::
+	addvar VAR_0x8005, 1
+	return
+
+VeilstoneCity_Gym_EventScript_FaceWest::
+	subvar VAR_0x8004, 1
+	return
+
+VeilstoneCity_Gym_EventScript_FaceEast::
+	addvar VAR_0x8004, 1
+	return
+
+VeilstoneCity_Gym_EventScript_PanelA::
+	lockall
+	call VeilstoneCity_Gym_EventScript_GetFacedTile
+	goto_if_eq VAR_TEMP_1, 1, VeilstoneCity_Gym_EventScript_PanelAMoved
+	goto_if_ne VAR_0x8004, 12, VeilstoneCity_Gym_EventScript_PanelEnd
+	goto_if_ne VAR_FACING, DIR_EAST, VeilstoneCity_Gym_EventScript_PanelWontBudge
+	msgbox VeilstoneCity_Gym_Text_PushPanel, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, VeilstoneCity_Gym_EventScript_PanelEnd
+	playse SE_M_STRENGTH
+	call VeilstoneCity_Gym_EventScript_DrawPanelAMoved
+	special DrawWholeMapView
+	setvar VAR_TEMP_1, 1
+	msgbox VeilstoneCity_Gym_Text_PanelSlid, MSGBOX_DEFAULT
+	releaseall
+	end
+
+VeilstoneCity_Gym_EventScript_PanelAMoved::
+	goto_if_ne VAR_0x8004, 13, VeilstoneCity_Gym_EventScript_PanelEnd
+	goto VeilstoneCity_Gym_EventScript_PanelNoFurther
+
+VeilstoneCity_Gym_EventScript_PanelB::
+	lockall
+	call VeilstoneCity_Gym_EventScript_GetFacedTile
+	goto_if_eq VAR_TEMP_2, 1, VeilstoneCity_Gym_EventScript_PanelBMoved
+	goto_if_ne VAR_0x8004, 8, VeilstoneCity_Gym_EventScript_PanelEnd
+	goto_if_ne VAR_FACING, DIR_EAST, VeilstoneCity_Gym_EventScript_PanelWontBudge
+	msgbox VeilstoneCity_Gym_Text_PushPanel, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, VeilstoneCity_Gym_EventScript_PanelEnd
+	playse SE_M_STRENGTH
+	call VeilstoneCity_Gym_EventScript_DrawPanelBMoved
+	special DrawWholeMapView
+	setvar VAR_TEMP_2, 1
+	msgbox VeilstoneCity_Gym_Text_PanelSlid, MSGBOX_DEFAULT
+	releaseall
+	end
+
+VeilstoneCity_Gym_EventScript_PanelBMoved::
+	goto_if_ne VAR_0x8004, 9, VeilstoneCity_Gym_EventScript_PanelEnd
+	goto VeilstoneCity_Gym_EventScript_PanelNoFurther
+
+VeilstoneCity_Gym_EventScript_PanelWontBudge::
+	msgbox VeilstoneCity_Gym_Text_PanelWontBudge, MSGBOX_DEFAULT
+	releaseall
+	end
+
+VeilstoneCity_Gym_EventScript_PanelNoFurther::
+	msgbox VeilstoneCity_Gym_Text_PanelNoFurther, MSGBOX_DEFAULT
+	releaseall
+	end
+
+VeilstoneCity_Gym_EventScript_PanelEnd::
+	releaseall
+	end
+
+VeilstoneCity_Gym_Text_PushPanel::
+	.string "It's a sliding panel on a floor rail.\n"
+	.string "Give it a push?$"
+
+VeilstoneCity_Gym_Text_PanelSlid::
+	.string "The panel slid along its rail!$"
+
+VeilstoneCity_Gym_Text_PanelWontBudge::
+	.string "The panel won't budge from this side.\p"
+	.string "Its rail must run the other way…$"
+
+VeilstoneCity_Gym_Text_PanelNoFurther::
+	.string "The panel is at the end of its rail.\n"
+	.string "It won't move any further.$"
 
 
 VeilstoneCity_Gym_EventScript_Colby::
-	trainerbattle_single TRAINER_JACKI_1_SINNOH, VeilstoneCity_Gym_Text_ColbyIntro, VeilstoneCity_Gym_Text_ColbyDefeat, VeilstoneCity_Gym_EventScript_TakaoBrightenRoom
+	trainerbattle_single TRAINER_JACKI_1_SINNOH, VeilstoneCity_Gym_Text_ColbyIntro, VeilstoneCity_Gym_Text_ColbyDefeat
 	msgbox VeilstoneCity_Gym_Text_ColbyPost, MSGBOX_AUTOCLOSE
 	end
 
@@ -11,77 +126,6 @@ VeilstoneCity_Gym_Text_ColbyPost::
 	.string "Your POKéMON sure are tough!\p"
 	.string "But our GYM LEADER MAYLENE will break\n"
 	.string "you like a stack of bricks!$"
-
-VeilstoneCity_Gym_EventScript_TakaoBrightenRoom::
-	call VeilstoneCity_Gym_EventScript_BrightenRoom
-	release
-	end
-
-VeilstoneCity_Gym_EventScript_NoLightChange::
-	return
-
-@ NOTE: A little confusingly, a larger animateflash param value is a smaller flash radius
-
-VeilstoneCity_Gym_EventScript_BrightenRoom::
-	call VeilstoneCity_Gym_EventScript_CountTrainersDefeated
-	nop1
-	goto_if_eq VAR_0x8000, VAR_0x8001, VeilstoneCity_Gym_EventScript_NoLightChange
-	copyvar VAR_0x8001, VAR_0x8000
-	goto_if_eq VAR_0x8000, 1, VeilstoneCity_Gym_EventScript_AnimateFlash1Trainer
-	goto_if_eq VAR_0x8000, 2, VeilstoneCity_Gym_EventScript_AnimateFlash2Trainers
-	goto_if_eq VAR_0x8000, 3, VeilstoneCity_Gym_EventScript_AnimateFlash3Trainers
-	goto_if_eq VAR_0x8000, 4, VeilstoneCity_Gym_EventScript_AnimateFlash4Trainers
-	goto_if_eq VAR_0x8000, 5, VeilstoneCity_Gym_EventScript_AnimateFlash5Trainers
-	goto_if_eq VAR_0x8000, 6, VeilstoneCity_Gym_EventScript_AnimateFlash6Trainers
-	goto VeilstoneCity_Gym_EventScript_NoLightChange
-
-VeilstoneCity_Gym_EventScript_AnimateFlash6Trainers::
-	playse SE_SWITCH
-	animateflash 1
-	call VeilstoneCity_Gym_EventScript_SetFlashLevel
-	return
-
-VeilstoneCity_Gym_EventScript_SetFlashLevel::
-	goto_if_defeated TRAINER_CAMERON_5_SINNOH, VeilstoneCity_Gym_EventScript_SetLightsOn
-	call VeilstoneCity_Gym_EventScript_CountTrainersDefeated
-	copyvar VAR_0x8001, VAR_0x8000
-	goto_if_eq VAR_0x8000, 0, VeilstoneCity_Gym_EventScript_SetFlashLevel7
-	goto_if_eq VAR_0x8000, 1, VeilstoneCity_Gym_EventScript_SetFlashLevel6
-	goto_if_eq VAR_0x8000, 2, VeilstoneCity_Gym_EventScript_SetFlashLevel5
-	goto_if_eq VAR_0x8000, 3, VeilstoneCity_Gym_EventScript_SetFlashLevel4
-	goto_if_eq VAR_0x8000, 4, VeilstoneCity_Gym_EventScript_SetFlashLevel3
-	goto_if_eq VAR_0x8000, 5, VeilstoneCity_Gym_EventScript_SetFlashLevel2
-	goto VeilstoneCity_Gym_EventScript_SetFlashLevel1
-
-VeilstoneCity_Gym_EventScript_SetFlashLevel1::
-	setflashlevel 1
-	return
-
-VeilstoneCity_Gym_EventScript_SetFlashLevel2::
-	setflashlevel 2
-	return
-
-VeilstoneCity_Gym_EventScript_SetFlashLevel3::
-	setflashlevel 3
-	return
-
-VeilstoneCity_Gym_EventScript_SetFlashLevel4::
-	setflashlevel 4
-	return
-
-VeilstoneCity_Gym_EventScript_SetFlashLevel5::
-	setflashlevel 5
-	return
-
-VeilstoneCity_Gym_EventScript_SetFlashLevel6::
-	setflashlevel 6
-	return
-
-@ Darkest
-
-VeilstoneCity_Gym_EventScript_SetFlashLevel7::
-	setflashlevel 7
-	return
 
 VeilstoneCity_Gym_EventScript_StopCountingTrainers::
 	return
@@ -111,48 +155,6 @@ VeilstoneCity_Gym_EventScript_CheckJocelyn::
 	addvar VAR_0x8000, 1
 	goto VeilstoneCity_Gym_EventScript_CheckLaura
 
-VeilstoneCity_Gym_EventScript_CountTrainersDefeated::
-	setvar VAR_0x8000, 0
-	goto_if_not_defeated TRAINER_JACKI_1_SINNOH, VeilstoneCity_Gym_EventScript_CheckJocelyn
-	addvar VAR_0x8000, 1
-	goto VeilstoneCity_Gym_EventScript_CheckJocelyn
-
-VeilstoneCity_Gym_EventScript_SetLightsOn::
-	setflashlevel 0
-	return
-
-@ Brightest
-
-VeilstoneCity_Gym_EventScript_AnimateFlash5Trainers::
-	playse SE_SWITCH
-	animateflash 2
-	call VeilstoneCity_Gym_EventScript_SetFlashLevel
-	return
-
-VeilstoneCity_Gym_EventScript_AnimateFlash4Trainers::
-	playse SE_SWITCH
-	animateflash 3
-	call VeilstoneCity_Gym_EventScript_SetFlashLevel
-	return
-
-VeilstoneCity_Gym_EventScript_AnimateFlash3Trainers::
-	playse SE_SWITCH
-	animateflash 4
-	call VeilstoneCity_Gym_EventScript_SetFlashLevel
-	return
-
-VeilstoneCity_Gym_EventScript_AnimateFlash2Trainers::
-	playse SE_SWITCH
-	animateflash 5
-	call VeilstoneCity_Gym_EventScript_SetFlashLevel
-	return
-
-VeilstoneCity_Gym_EventScript_AnimateFlash1Trainer::
-	playse SE_SWITCH
-	animateflash 6
-	call VeilstoneCity_Gym_EventScript_SetFlashLevel
-	return
-
 VeilstoneCity_Gym_Text_ColbyDefeat::
 	.string "Argh! Crunched!$"
 
@@ -162,7 +164,7 @@ VeilstoneCity_Gym_Text_ColbyIntro::
 	.string "fist! Hiyah, looooooooove!$"
 
 VeilstoneCity_Gym_EventScript_Darren::
-	trainerbattle_single TRAINER_JACKI_2_SINNOH, VeilstoneCity_Gym_Text_DarrenIntro, VeilstoneCity_Gym_Text_DarrenDefeat, VeilstoneCity_Gym_EventScript_JocelynBrightenRoom
+	trainerbattle_single TRAINER_JACKI_2_SINNOH, VeilstoneCity_Gym_Text_DarrenIntro, VeilstoneCity_Gym_Text_DarrenDefeat
 	msgbox VeilstoneCity_Gym_Text_DarrenPost, MSGBOX_AUTOCLOSE
 	end
 
@@ -171,11 +173,6 @@ VeilstoneCity_Gym_Text_DarrenPost::
 	.string "ideal beat-down style.\p"
 	.string "It doesn't seem to work that way with\n"
 	.string "POKéMON, however.$"
-
-VeilstoneCity_Gym_EventScript_JocelynBrightenRoom::
-	call VeilstoneCity_Gym_EventScript_BrightenRoom
-	release
-	end
 
 VeilstoneCity_Gym_Text_DarrenDefeat::
 	.string "I couldn't force my way to victory…$"
@@ -186,7 +183,7 @@ VeilstoneCity_Gym_Text_DarrenIntro::
 	.string "fist! Hiyah, couraaaaaaaaaaage!$"
 
 VeilstoneCity_Gym_EventScript_Jeffery::
-	trainerbattle_single TRAINER_JACKI_3_SINNOH, VeilstoneCity_Gym_Text_JefferyIntro, VeilstoneCity_Gym_Text_JefferyDefeat, VeilstoneCity_Gym_EventScript_LauraBrightenRoom
+	trainerbattle_single TRAINER_JACKI_3_SINNOH, VeilstoneCity_Gym_Text_JefferyIntro, VeilstoneCity_Gym_Text_JefferyDefeat
 	msgbox VeilstoneCity_Gym_Text_JefferyPost, MSGBOX_AUTOCLOSE
 	end
 
@@ -195,11 +192,6 @@ VeilstoneCity_Gym_Text_JefferyPost::
 	.string "pizza.\p"
 	.string "…No. Anything I say will sound like I'm\n"
 	.string "making excuses.$"
-
-VeilstoneCity_Gym_EventScript_LauraBrightenRoom::
-	call VeilstoneCity_Gym_EventScript_BrightenRoom
-	release
-	end
 
 VeilstoneCity_Gym_Text_JefferyDefeat::
 	.string "I'm so hungry, kid… I don't have any\n"
@@ -211,18 +203,13 @@ VeilstoneCity_Gym_Text_JefferyIntro::
 	.string "fist! Hiyah, teeeeeeaaaaaaaaars!$"
 
 VeilstoneCity_Gym_EventScript_Rafael::
-	trainerbattle_single TRAINER_JACKI_4_SINNOH, VeilstoneCity_Gym_Text_RafaelIntro, VeilstoneCity_Gym_Text_RafaelDefeat, VeilstoneCity_Gym_EventScript_CristianBrightenRoom
+	trainerbattle_single TRAINER_JACKI_4_SINNOH, VeilstoneCity_Gym_Text_RafaelIntro, VeilstoneCity_Gym_Text_RafaelDefeat
 	msgbox VeilstoneCity_Gym_Text_RafaelPost, MSGBOX_AUTOCLOSE
 	end
 
 VeilstoneCity_Gym_Text_RafaelPost::
 	.string "I'll have to redo my training, though.\n"
 	.string "MAYLENE's gonna trample me again…$"
-
-VeilstoneCity_Gym_EventScript_CristianBrightenRoom::
-	call VeilstoneCity_Gym_EventScript_BrightenRoom
-	release
-	end
 
 VeilstoneCity_Gym_Text_RafaelDefeat::
 	.string "We came up short, but not by much.$"
@@ -266,7 +253,6 @@ VeilstoneCity_Gym_Text_ExplainTM::
 	.string "robs the target's HP.$"
 
 VeilstoneCity_Gym_EventScript_LeaderDefeated::
-	call VeilstoneCity_Gym_EventScript_AnimateFlashFullBrightness
 	setflag FLAG_SN_DEFEATED_DEWFORD_GYM
 	message VeilstoneCity_Gym_Text_ReceivedBadge
 	waitmessage
@@ -289,12 +275,6 @@ VeilstoneCity_Gym_Text_ExplainBadge::
 VeilstoneCity_Gym_Text_ReceivedBadge::
 	.string "{PLAYER} received the Cobble BADGE\n"
 	.string "from MAYLENE.$"
-
-VeilstoneCity_Gym_EventScript_AnimateFlashFullBrightness::
-	playse SE_SWITCH
-	animateflash 0
-	call VeilstoneCity_Gym_EventScript_SetFlashLevel
-	return
 
 VeilstoneCity_Gym_Text_LeaderDefeat::
 	.string "…OK. You win.\p"
@@ -368,15 +348,22 @@ VeilstoneCity_Gym_Text_SNGuideInfo::
 	.string "MACHOKE and her partner LUCARIO.\p"
 	.string "Fighting types are weak to Flying,\n"
 	.string "Psychic and Fairy moves!\p"
-	.string "This GYM is a pitch-dark maze. Every\n"
-	.string "TRAINER you defeat makes the room a\l"
-	.string "little brighter.\p"
-	.string "Battle them all to light up the way to\n"
-	.string "MAYLENE!$"
+	.string "This GYM is a training hall. Sliding\n"
+	.string "panels on floor rails close the way.\p"
+	.string "Walk up to a panel and push it.\n"
+	.string "Panels only slide along their rail,\l"
+	.string "so try the first one from the side!\p"
+	.string "The last one stands in front of\n"
+	.string "MAYLENE's corridor. It only slides\l"
+	.string "one way, so think about which side\l"
+	.string "to push it from!\p"
+	.string "If you get it wrong, just walk\n"
+	.string "around and try the other side.\l"
+	.string "The panels reset when you leave.$"
 
 VeilstoneCity_Gym_Text_PtGymGuide::
 	.string "Hey, there! How's it going,\n"
-	.string "CHAMP-to-be?\p"
+	.string "CHAMPION?\p"
 	.string "I'm the GYM guide! I help out TRAINERS\n"
 	.string "who come to challenge the GYM LEADER.$"
 

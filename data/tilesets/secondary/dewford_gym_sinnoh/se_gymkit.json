@@ -1,0 +1,18 @@
+{
+ "orig_tiles": 61,
+ "orig_metatiles": 69,
+ "names": {
+  "wood": "0x245",
+  "tatami": "0x246",
+  "tatami_edge": "0x247",
+  "mat": "0x248",
+  "wall_top": "0x249",
+  "wall_face": "0x24a",
+  "wall_scroll": "0x24b",
+  "wall_banner": "0x24c",
+  "partition": "0x24d",
+  "panel": "0x24e",
+  "sandbag": "0x24f",
+  "bottom": "0x250"
+ }
+}
