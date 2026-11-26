@@ -695,3 +695,4 @@ gSpecials::
 	def_special SinnohPathTo
 	def_special SinnohPlayerFaceObject
 	def_special SinnohGetObjectPos
+	def_special SE_SwapMapMetatiles

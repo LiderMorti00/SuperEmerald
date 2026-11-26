@@ -216,3 +216,20 @@ void SinnohGetObjectPos(void)
     gSpecialVar_0x8008 = o->currentCoords.x - MAP_OFFSET;
     gSpecialVar_0x8009 = o->currentCoords.y - MAP_OFFSET;
 }
+
+// Super Emerald: gym helper. Replaces every metatile VAR_0x8004 in the loaded map with
+// VAR_0x8005 and sets its collision to VAR_0x8006 (0 = walkable, 1 = blocked). Used by the
+// Sinnoh gyms to flip whole classes of tiles at once (Pastoria's water levels).
+void SE_SwapMapMetatiles(void)
+{
+    u16 from = gSpecialVar_0x8004, to = gSpecialVar_0x8005;
+    u16 collision = gSpecialVar_0x8006 ? MAPGRID_IMPASSABLE : 0;
+    s32 i, n = gBackupMapLayout.width * gBackupMapLayout.height;
+
+    for (i = 0; i < n; i++)
+    {
+        u16 cell = gBackupMapLayout.map[i];
+        if ((cell & MAPGRID_METATILE_ID_MASK) == from)
+            gBackupMapLayout.map[i] = (cell & MAPGRID_ELEVATION_MASK) | (to & MAPGRID_METATILE_ID_MASK) | collision;
+    }
+}

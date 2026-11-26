@@ -4,62 +4,68 @@ PastoriaCity_Gym_sinnoh_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, PastoriaCity_Gym_OnLoad
 	.byte 0
 
-@ Super Emerald: two water tanks. VAR_TEMP_1 = button 1 (floodgate 8,12 open),
-@ VAR_TEMP_2 = button 2 (bridge 8,5 lowered). Temp vars reset when the player leaves,
-@ so the gym starts closed again; while inside, ON_LOAD redraws the state after battles.
+@ Super Emerald: two water levels, after Diamond/Platinum's buttons (tools/sfr/gyms/pastoria.py).
+@ VAR_TEMP_1: 0 = HIGH (pontoons float at deck height), 1 = LOW (low paths dry, pontoons sunk).
+@ The map is drawn HIGH; the level resets to HIGH when the player leaves.
 PastoriaCity_Gym_OnLoad::
-	call_if_eq VAR_TEMP_1, 1, PastoriaCity_Gym_EventScript_DrawGateOpen
-	call_if_eq VAR_TEMP_2, 1, PastoriaCity_Gym_EventScript_DrawBridgeDown
+	call_if_eq VAR_TEMP_1, 1, PastoriaCity_Gym_EventScript_SetWaterLow
 	end
 
-PastoriaCity_Gym_EventScript_DrawGateOpen::
-	setmetatile 4, 14, METATILE_PastoriaGym_button_on, FALSE
-	setmetatile 7, 12, METATILE_PastoriaGym_wall_lamp_on, TRUE
-	setmetatile 9, 12, METATILE_PastoriaGym_wall_lamp_on, TRUE
-	setmetatile 8, 12, METATILE_PastoriaGym_gate_open, FALSE
-	return
-
-PastoriaCity_Gym_EventScript_DrawBridgeDown::
-	setmetatile 11, 6, METATILE_PastoriaGym_button_on, FALSE
-	setmetatile 7, 5, METATILE_PastoriaGym_post_on, TRUE
-	setmetatile 9, 5, METATILE_PastoriaGym_post_on, TRUE
-	setmetatile 8, 5, METATILE_PastoriaGym_bridge_on, FALSE
-	return
-
-PastoriaCity_Gym_EventScript_Button1::
+PastoriaCity_Gym_EventScript_Drain::
 	lockall
 	playse SE_SWITCH
+	goto_if_eq VAR_TEMP_1, 1, PastoriaCity_Gym_EventScript_AlreadyLow
 	setvar VAR_TEMP_1, 1
-	call PastoriaCity_Gym_EventScript_DrawGateOpen
+	waitse
+	playse SE_FALL
+	call PastoriaCity_Gym_EventScript_SetWaterLow
 	special DrawWholeMapView
 	waitse
-	delay 8
-	playse SE_DOOR
-	msgbox PastoriaCity_Gym_Text_GateOpened, MSGBOX_DEFAULT
+	msgbox PastoriaCity_Gym_Text_Drained, MSGBOX_DEFAULT
 	releaseall
 	end
 
-PastoriaCity_Gym_EventScript_Button2::
+PastoriaCity_Gym_EventScript_Fill::
 	lockall
 	playse SE_SWITCH
-	setvar VAR_TEMP_2, 1
-	call PastoriaCity_Gym_EventScript_DrawBridgeDown
+	goto_if_eq VAR_TEMP_1, 0, PastoriaCity_Gym_EventScript_AlreadyHigh
+	setvar VAR_TEMP_1, 0
+	waitse
+	playse SE_M_SURF
+	call PastoriaCity_Gym_EventScript_SetWaterHigh
 	special DrawWholeMapView
 	waitse
-	delay 8
-	playse SE_M_STRENGTH
-	msgbox PastoriaCity_Gym_Text_BridgeLowered, MSGBOX_DEFAULT
+	msgbox PastoriaCity_Gym_Text_Filled, MSGBOX_DEFAULT
 	releaseall
 	end
 
-PastoriaCity_Gym_Text_GateOpened::
-	.string "Click! The lights by the floodgate\n"
-	.string "turned green and the gate rose!$"
+PastoriaCity_Gym_EventScript_AlreadyLow::
+	msgbox PastoriaCity_Gym_Text_AlreadyLow, MSGBOX_DEFAULT
+	releaseall
+	end
 
-PastoriaCity_Gym_Text_BridgeLowered::
-	.string "Click! The lamps by the ring turned\n"
-	.string "green and a bridge slid into place!$"
+PastoriaCity_Gym_EventScript_AlreadyHigh::
+	msgbox PastoriaCity_Gym_Text_AlreadyHigh, MSGBOX_DEFAULT
+	releaseall
+	end
 
+	.include "data/maps/PastoriaCity_Gym_sinnoh/water_levels.inc"
+
+PastoriaCity_Gym_Text_Drained::
+	.string "Glug glug glug…\n"
+	.string "The water drained away!$"
+
+PastoriaCity_Gym_Text_Filled::
+	.string "Whoosh!\n"
+	.string "The water rushed back in!$"
+
+PastoriaCity_Gym_Text_AlreadyLow::
+	.string "Click!\n"
+	.string "The water is already low.$"
+
+PastoriaCity_Gym_Text_AlreadyHigh::
+	.string "Click!\n"
+	.string "The water is already high.$"
 
 PastoriaCity_Gym_EventScript_Jacky::
 	trainerbattle_single TRAINER_WALTER_1_SINNOH, PastoriaCity_Gym_Text_JackyIntro, PastoriaCity_Gym_Text_JackyDefeat
@@ -156,8 +162,8 @@ PastoriaCity_Gym_EventScript_Walter::
 	end
 
 PastoriaCity_Gym_Text_WalterPost::
-	.string "Two tanks, two buttons. Step on one\n"
-	.string "and watch what changes!\p"
+	.string "Yellow drains the water, blue fills\n"
+	.string "it back up. Watch what each one does!\p"
 	.string "If you lose sight of yourself, that's\n"
 	.string "when you're set to lose.$"
 
@@ -298,12 +304,14 @@ PastoriaCity_Gym_Text_SNGuideInfo::
 	.string "FLOATZEL.\p"
 	.string "Water types are weak to Electric and\n"
 	.string "Grass moves!\p"
-	.string "The GYM is two water tanks. Walk to\n"
-	.string "the red button in this tank to raise\l"
-	.string "the floodgate in the middle wall.\p"
-	.string "The button in the upper tank lowers\n"
-	.string "the bridge to WAKE's ring. The lamps\l"
-	.string "turn green when a button works!$"
+	.string "This GYM is a water plant. The yellow\n"
+	.string "buttons drain the tanks and the blue\l"
+	.string "ones fill them back up.\p"
+	.string "When the water is high, the orange\n"
+	.string "floats rise and you can cross them.\l"
+	.string "When it's low, the paths below dry out.\p"
+	.string "The gauges on the walls show the\n"
+	.string "level. Switch it to reach WAKE!$"
 
 PastoriaCity_Gym_Text_PtGymGuide::
 	.string "The GYM LEADER WAKE… Uh, I mean\n"
