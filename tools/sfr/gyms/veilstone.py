@@ -42,11 +42,16 @@ def tatami(edge=False):
     return c
 
 
-def mat():
-    c = Canvas(BLU)
-    c.rect(0, 0, 15, 15, BLU)
-    for y in range(0, 16, 4):
-        c.hline(0, 15, y, BLUL)
+def mat(edges=''):
+    """Training tatami: straw weave with a dark cloth border on its outer sides."""
+    c = Canvas(TM)
+    for y in range(0, 16, 2):
+        c.hline(0, 15, y, TL)
+    for e in edges:
+        for i in range(16):
+            for k in range(2):
+                p = {'n': (i, k), 's': (i, 15 - k), 'w': (k, i), 'e': (15 - k, i)}[e]
+                c.px(*p, K if k == 0 else BLU)
     return c
 
 
@@ -74,23 +79,35 @@ def wall_face(kind=None):
     return c
 
 
-def partition():
-    """Fixed wooden partition (blocks)."""
+def partition(face):
+    """Fixed shoji partition, a solid wall object. face=True (floor to the south): dark wooden
+    cap on top, paper panes in a lattice frame, dark sill. face=False: only the thick cap
+    (another partition stands in front of it)."""
     c = Canvas(0)
-    c.rect(0, 0, 15, 15, PAPER)
-    c.rect(0, 0, 15, 1, WD); c.rect(0, 14, 15, 15, WD)
-    c.vline(0, 0, 15, WD); c.vline(15, 0, 15, WD); c.vline(7, 0, 15, W); c.vline(8, 0, 15, WD)
-    c.hline(0, 15, 7, W)
+    c.rect(0, 0, 15, 4, WD); c.hline(0, 15, 0, K); c.hline(0, 15, 1, W); c.hline(0, 15, 4, K)
+    if not face:
+        c.rect(0, 0, 15, 15, WD); c.hline(0, 15, 0, K)
+        for y in range(2, 16, 4):
+            c.hline(0, 15, y, W)
+        c.vline(0, 0, 15, K); c.vline(15, 0, 15, K)
+        return c
+    c.rect(0, 5, 15, 13, PAPER)
+    for x in (0, 5, 10, 15):
+        c.vline(x, 5, 13, WD)
+    c.hline(0, 15, 9, W)
+    c.rect(0, 14, 15, 15, K); c.hline(0, 15, 14, WD)
     return c
 
 
-def panel():
-    """Movable panel: red-framed screen with handles (blocks)."""
+def panel(cap):
+    """Movable panel: red lacquered frame, paper face with a black handle bar, sitting on two
+    small wheels in its rail (blocks). Reads as an object: taller than the floor, own shadow."""
     c = Canvas(0)
-    c.rect(1, 0, 14, 15, RED); c.rect(2, 1, 13, 14, PAPER)
-    c.rect(2, 7, 13, 8, REDL)
-    c.vline(7, 1, 14, REDL)
-    c.rect(4, 4, 5, 11, IRON); c.rect(10, 4, 11, 11, IRON)
+    c.rect(1, 0, 14, 3, RED); c.hline(1, 14, 0, K); c.hline(2, 13, 1, REDL)
+    c.rect(1, 4, 14, 12, RED); c.rect(3, 5, 12, 11, PAPER); c.vline(7, 5, 11, REDL); c.vline(8, 5, 11, RED)
+    c.rect(4, 8, 11, 8, K)                                   # push bar
+    c.vline(1, 0, 12, K); c.vline(14, 0, 12, K)
+    c.rect(2, 13, 4, 14, IRON); c.rect(11, 13, 13, 14, IRON)  # wheels
     c.hline(1, 14, 15, K)
     return c
 
@@ -105,14 +122,22 @@ def sandbag():
     return c
 
 
-def rail(end):
-    """Floor rail the panel runs in: a groove with a peg stopping it at one end."""
-    c = wood_floor()
-    c.hline(0, 15, 12, K); c.hline(0, 15, 13, WD); c.hline(0, 15, 11, WH)
-    for x in range(1, 16, 4):                      # arrows along the rail: east
-        c.px(x, 9, TD); c.px(x + 1, 10, TD); c.px(x, 11, TD)
+def rail(end, base=None):
+    """Steel floor rail for a panel: a dark groove with a brass stop at the end it can't pass
+    and arrows showing the way it runs (east)."""
+    c = (base or wood_floor()).copy() if base else wood_floor()
+    c.rect(0, 11, 15, 13, IRON); c.hline(0, 15, 11, GREY); c.hline(0, 15, 13, K)
+    for x in range(2, 16, 5):
+        c.px(x, 7, RED); c.px(x + 1, 8, RED); c.px(x, 9, RED)
     x0 = 0 if end == 'l' else 13
-    c.rect(x0, 8, x0 + 2, 14, IRON); c.rect(x0, 8, x0 + 2, 8, GREY)
+    c.rect(x0, 9, x0 + 2, 14, TD); c.rect(x0, 9, x0 + 2, 9, WH); c.vline(x0 + (2 if end == 'l' else 0), 9, 14, K)
+    return c
+
+
+def shade(c, rows=2):
+    for y in range(rows):
+        for x in range(16):
+            c.px(x, y, K if y == 0 else WD)
     return c
 
 
@@ -134,12 +159,16 @@ def build_tileset():
     ts.add('wall_face', [p(wall_face()), None, None])
     ts.add('wall_scroll', [p(wall_face('scroll')), None, None])
     ts.add('wall_banner', [p(wall_face('banner')), None, None])
-    ts.add('partition', [wood, p(partition()), None])
-    ts.add('panel', [wood, p(panel()), None])
+    ts.add('partition', [wood, p(partition(True)), None])
+    ts.add('partition_top', [wood, p(partition(False)), None])
     ts.add('rail_l', [p(rail('l')), None, None])
     ts.add('rail_r', [p(rail('r')), None, None])
-    ts.add('panel_l', [p(rail('l')), p(panel()), None])
-    ts.add('panel_r', [p(rail('r')), p(panel()), None])
+    ts.add('panel_l', [p(rail('l')), p(panel(True)), None])
+    ts.add('panel_r', [p(rail('r')), p(panel(True)), None])
+    ts.add('wood_sh', [p(shade(wood_floor())), None, None])
+    for e in ('', 'n', 's', 'w', 'e', 'nw', 'ne', 'sw', 'se', 'ns', 'we', 'nsw', 'nse', 'nwe', 'swe', 'nswe'):
+        ts.add('mat_' + (e or '0'), [p(mat(e)), None, None])
+        ts.add('matsh_' + (e or '0'), [p(shade(mat(e))), None, None])
     ts.add('sandbag', [wood, p(sandbag()), None])
     ts.add('bottom', [p(bottom()), None, None])
     ts.save({P: DOJO})
@@ -181,7 +210,28 @@ def main():
     }
     plan = [list(r) for r in PLAN]
     plan[10][13] = 'r'; plan[5][9] = 'r'           # the rail's far end for panels A and B
-    build_map(LAYOUT, [''.join(r) for r in plan], legend, border=n('wall_top'))
+    H, Wd = len(plan), len(plan[0])
+    rows = []
+    for y in range(H):
+        row = []
+        for x in range(Wd):
+            ch = plan[y][x]
+            north = plan[y - 1][x] if y else 'T'
+            sh = north in 'PTfbS|AB'
+            if ch == 'P':
+                face = y + 1 < H and plan[y + 1][x] not in 'P'
+                row.append((n('partition' if face else 'partition_top'), 1, 3))
+            elif ch == 'm':
+                e = ''.join(k for k, dx, dy in (('n', 0, -1), ('s', 0, 1), ('w', -1, 0), ('e', 1, 0))
+                            if plan[y + dy][x + dx] != 'm')
+                row.append((n(('matsh_' if sh else 'mat_') + (e or '0')), 0, 3))
+            elif ch in '.,' and sh:
+                row.append((n('wood_sh'), 0, 3))
+            else:
+                row.append(legend[ch])
+        rows.append(row)
+    from gymkit import build_cells
+    build_cells(LAYOUT, rows, border=n('wall_top'))
     d = json.load(open(MAP))
     d['warp_events'] = [{'x': x, 'y': 15, 'elevation': 0, 'dest_map': 'MAP_VEILSTONE_CITY_SINNOH', 'dest_warp_id': '11'}
                         for x in (8, 9)]
