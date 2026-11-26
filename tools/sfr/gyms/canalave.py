@@ -147,17 +147,74 @@ def machine(kind):
 
 
 def pad(n):
+    """Lift platform: a steel deck sunk into its shaft (black gap all round), hazard-striped
+    rim, big number on top, and the deck's front face with its shadow below."""
     c = Canvas(K)
-    for i in range(16):
-        for j in range(16):
-            if i in (0, 1, 14, 15) or j in (0, 1, 14, 15):
-                c.px(i, j, Y if ((i + j) // 2) % 2 == 0 else K)
-    c.rect(2, 2, 13, 13, S); c.rect(3, 3, 12, 12, SL)
+    for i in range(1, 15):
+        for j in range(1, 12):
+            c.px(i, j, Y if ((i + j) // 2) % 2 == 0 and (i in (1, 14) or j in (1, 11)) else
+                 K if (i in (1, 14) or j in (1, 11)) else SL)
+    c.rect(3, 3, 12, 10, SH); c.hline(3, 12, 3, WH)
     for y, row in enumerate(DIGITS[n]):
         for x, ch in enumerate(row):
             if ch == '#':
-                c.px(6 + x, 4 + y, K)
-    # small up/down arrows under the number
+                c.px(5 + x, 3 + y, K); c.px(6 + x, 3 + y, K)
+                c.px(5 + x, 3 + y, SD)
+    for y, row in enumerate(DIGITS[n]):
+        for x, ch in enumerate(row):
+            if ch == '#':
+                c.px(6 + x, 3 + y, K)
+    c.rect(1, 12, 14, 14, SD); c.hline(1, 14, 12, S)                 # front face
+    for x in (3, 7, 11):
+        c.px(x, 13, SL)
+    c.hline(0, 15, 15, K)
+    return c
+
+
+def mast(n, bg):
+    """Lift tower beside each pad: two guide rails with bracing and a big yellow number plate,
+    so the same number shows at both ends of the trip (blocks)."""
+    c = {'sheet': sheet, 'grate': grate, 'beams': beams, 'drop': drop}[bg]()
+    for x0 in (2, 12):
+        c.rect(x0, 0, x0 + 1, 15, SD); c.vline(x0, 0, 15, SL); c.vline(x0 + 2, 0, 15, K)
+    for y in (1, 14):
+        c.hline(2, 13, y, SD)
+    c.rect(3, 3, 12, 12, K); c.rect(4, 4, 11, 11, Y)
+    for y, row in enumerate(DIGITS[n]):
+        for x, ch in enumerate(row):
+            if ch == '#':
+                c.px(5 + x, 4 + y, K); c.px(6 + x, 4 + y, K)
+    c.hline(2, 13, 15, K)
+    return c
+
+
+def wall_top(cx, cy):
+    """Back wall of the workshop, 2 rows: girder on top, a riveted steel wall below with a
+    pipe and the shield of the steel gym in the middle."""
+    c = Canvas(SD)
+    for y in range(16):
+        for x in range(16):
+            X, Y_ = cx * 16 + x, cy * 16 + y
+            if cy == 0:
+                v = SM if 3 <= Y_ <= 12 else SD
+                if Y_ in (0, 15): v = K
+                if (X - Y_) % 16 in (0, 1) and 3 <= Y_ <= 12: v = SD                # girder lattice
+                if (X + Y_) % 16 in (0, 1) and 3 <= Y_ <= 12: v = SD
+                if Y_ == 3: v = SL
+            else:
+                v = S if (X % 32) else SD
+                if Y_ == 16: v = SL
+                if X % 32 in (3, 28) and Y_ in (19, 27): v = SH                        # rivets
+                if 22 <= Y_ <= 25: v = RUST if Y_ in (23, 24) else SD                  # pipe
+                if Y_ == 31: v = K
+            c.px(x, y, v)
+    if cy == 1 and cx in (9, 10):                                                 # shield
+        for y in range(2, 14):
+            for x in range(16):
+                X = cx * 16 + x - 160
+                if abs(X) <= 7 - max(0, y - 8):
+                    c.px(x, y, SH if X < 0 else SL)
+                    if abs(X) == 7 - max(0, y - 8) or y == 2: c.px(x, y, K)
     return c
 
 
@@ -197,6 +254,14 @@ def build_tileset():
         ts.add('machine_' + k, [p(machine(k)), None, None])
     for n in (1, 2, 3, 4, 5):
         ts.add(f'pad{n}', [p(pad(n)), None, None])
+    for n_, bg in MASTS.values():
+        ts.add('mast%d_%s' % (n_, bg), [p(mast(n_, bg)), None, None])
+    for cy in range(2):
+        for cx in range(20):
+            ts.add('top_%d_%d' % (cx, cy), [p(wall_top(cx, cy)), None, None])
+    bw = Canvas(SD); bw.hline(0, 15, 0, SL); bw.hline(0, 15, 1, S); bw.hline(0, 15, 15, K)
+    for x in range(0, 16, 4): bw.px(x, 8, SH)
+    ts.add('bottom', [p(bw), None, None])
     ts.save({P: STEEL})
     return ts.names
 
@@ -228,6 +293,11 @@ PLAN = [
     "....................",   # 21
     None, None,
 ]
+MASTS = {(0, 13): (1, 'sheet'), (0, 10): (1, 'grate'), (19, 13): (2, 'sheet'), (19, 10): (2, 'grate'),
+         (0, 6): (3, 'grate'), (0, 3): (3, 'beams'), (19, 6): (4, 'grate'), (19, 3): (4, 'beams'),
+         (8, 8): (5, 'drop'), (11, 7): (5, 'drop')}
+for (mx, my), _ in MASTS.items():
+    PLAN[my] = PLAN[my][:mx] + 'M' + PLAN[my][mx + 1:]
 LIFTS = {   # number: (end A, end B, label A->B, label B->A)
     1: ((1, 13), (1, 10), 'WEST CATWALK', 'WORKSHOP FLOOR'),
     2: ((18, 13), (18, 10), 'EAST CATWALK', 'WORKSHOP FLOOR'),
@@ -275,8 +345,10 @@ def main():
         state['orig_rows'] = {str(y): row(y) for y in (0, 1, 22, 23)}
         json.dump(state, open(TS + '/se_gymkit.json', 'w'), indent=1)
     rows = dict(state['orig_rows'])
-    rows['1'] = [0x613] * 20                                   # plain wall: the old window is gone
+    rows['0'] = [n('top_%d_0' % x) | 0x400 for x in range(20)]
+    rows['1'] = [n('top_%d_1' % x) | 0x400 for x in range(20)]
     rows['22'] = [r if 0x222 <= (r & 0x3FF) <= 0x224 else (n('sheet') | 0x3000) for r in rows['22']]   # floor + exit mat
+    rows['23'] = [n('bottom') | 0x400 for x in range(20)]
     legend = {
         '.': (n('sheet'), 0, 3), 'P': (n('grate'), 0, 3), 'T': (n('beams'), 0, 3), 'x': (n('pillar'), 1, 3),
         'R': (n('rail'), 1, 3), 'F': (n('face'), 1, 3), 'v': (n('drop'), 1, 3),
@@ -299,7 +371,13 @@ def main():
             out.append(raw(rows[str(y)]))
         else:
             assert len(r) == 20, (y, len(r))
-            out.append(r)
+            line = ''
+            for x, ch in enumerate(r):
+                if ch == 'M':
+                    line += raw([n('mast%d_%s' % MASTS[(x, y)]) | 0x3400])
+                else:
+                    line += ch
+            out.append(line)
     build_map(LAYOUT, out, legend)
 
     d = json.load(open(MAP))
