@@ -70,6 +70,34 @@ def gate(open_):
     return c
 
 
+def glass_wall(right):
+    """Greenhouse side wall: tall glass panes in white frames with leaves pressed behind."""
+    c = Canvas(BLUL)
+    for y in range(16):
+        for x in range(16):
+            if (x + y * 2) % 9 == 0:
+                c.px(x, y, WHT)
+    for x in (0, 7, 15):
+        c.vline(x, 0, 15, WHT)
+    c.hline(0, 15, 0, WHT); c.hline(0, 15, 8, WHT)
+    for x, y in ((3, 3), (4, 4), (10, 11), (11, 12), (3, 12), (12, 4)):
+        c.px(x, y, G); c.px(x + 1, y, GD)
+    edge = 15 if right else 0
+    c.vline(edge, 0, 15, WD)
+    return c
+
+
+def soil(seed=0):
+    """Tilled bed with seedlings (walkable): cultivation rows."""
+    c = Canvas(SOIL)
+    for y in (2, 6, 10, 14):
+        c.hline(0, 15, y, WD); c.hline(0, 15, y + 1, W)
+    for i, x in enumerate(range(1 + seed, 16, 4)):
+        for y in (1, 5, 9, 13):
+            c.px(x, y, G); c.px(x + 1, y - 1, GD if i % 2 else G)
+    return c
+
+
 def signpost():
     c = Canvas(0)
     c.rect(1, 2, 14, 9, W); c.hline(1, 14, 2, WH); c.hline(1, 14, 9, WD); c.vline(1, 2, 9, WL); c.vline(14, 2, 9, WD)
@@ -90,6 +118,10 @@ def build_tileset():
     ts.add('gate_closed', [grass, (gate(False), P), None])
     ts.add('gate_open', [sand, (gate(True), P), None])
     ts.add('sign', [grass, (signpost(), P), None])
+    ts.add('glass_l', [(glass_wall(False), P), None, None])
+    ts.add('glass_r', [(glass_wall(True), P), None, None])
+    ts.add('soil', [(soil(), P), None, None])
+    ts.add('soil2', [(soil(2), P), None, None])
     ts.add('sign_sand', [sand, (signpost(), P), None])
     ts.save({P: GARDEN})
     return ts.names
@@ -146,6 +178,7 @@ def main():
         'f': (0x215, 1, 0), 'A': (0x219, 1, 0), 'C': (0x21a, 1, 0), 'D': (0x20e, 1, 0), 'E': (0x20f, 1, 0),
         'F': (0x21b, 1, 0), 'I': (0x21c, 1, 0), 'L': (0x233, 1, 0), 'X': (0x201, 1, 0), 'V': (0x202, 1, 0),
         'W': (0x203, 1, 0),
+        'gl': (n('glass_l'), 1, 0), 'gr': (n('glass_r'), 1, 0), 'k': (n('soil'), 0, 3), 'k2': (n('soil2'), 0, 3),
     }
     W = len(PLAN[0])
     rows = [list(r) for r in PLAN]
@@ -156,6 +189,13 @@ def main():
     top1 = top1[:W - 2] + ['F', 'I']
     rows[0], rows[1] = top0, top1
     rows[26][9:12] = ['X', 'V', 'W']
+    for y in range(2, 26):                       # glass walls instead of the plain side walls
+        if rows[y][0] == '|': rows[y][0] = 'gl'
+        if rows[y][W - 1] == '|': rows[y][W - 1] = 'gr'
+    for x, y in ((1, 11), (2, 11), (3, 11), (4, 11), (16, 11), (17, 11), (18, 11), (19, 11),
+                 (1, 24), (2, 24), (17, 24), (18, 24), (4, 25), (5, 25), (6, 25), (14, 25), (15, 25), (16, 25)):
+        if rows[y][x] in ',;':                   # cultivation beds along the paths
+            rows[y][x] = 'k' if (x + y) % 2 else 'k2'
     keymap = {}
     out = []
     for r in rows:
