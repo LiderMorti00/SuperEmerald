@@ -28,6 +28,14 @@ PastoriaCity_Gym_EventScript_SetWaterLow::
 	setvar VAR_0x8005, METATILE_PastoriaGym_gauge1_lo
 	setvar VAR_0x8006, 1
 	special SE_SwapMapMetatiles
+	setvar VAR_0x8004, METATILE_PastoriaGym_waterf_288_hi
+	setvar VAR_0x8005, METATILE_PastoriaGym_waterf_288_lo
+	setvar VAR_0x8006, 1
+	special SE_SwapMapMetatiles
+	setvar VAR_0x8004, METATILE_PastoriaGym_waterf_289_hi
+	setvar VAR_0x8005, METATILE_PastoriaGym_waterf_289_lo
+	setvar VAR_0x8006, 1
+	special SE_SwapMapMetatiles
 	setvar VAR_0x8004, METATILE_PastoriaGym_lowpath1_289_hi
 	setvar VAR_0x8005, METATILE_PastoriaGym_lowpath1_289_lo
 	setvar VAR_0x8006, 0
@@ -62,6 +70,10 @@ PastoriaCity_Gym_EventScript_SetWaterLow::
 	special SE_SwapMapMetatiles
 	setvar VAR_0x8004, METATILE_PastoriaGym_pontoon_289_hi
 	setvar VAR_0x8005, METATILE_PastoriaGym_pontoon_289_lo
+	setvar VAR_0x8006, 1
+	special SE_SwapMapMetatiles
+	setvar VAR_0x8004, METATILE_PastoriaGym_waterf_28a_hi
+	setvar VAR_0x8005, METATILE_PastoriaGym_waterf_28a_lo
 	setvar VAR_0x8006, 1
 	special SE_SwapMapMetatiles
 	setvar VAR_0x8004, METATILE_PastoriaGym_pontoon_291_hi
@@ -103,6 +115,14 @@ PastoriaCity_Gym_EventScript_SetWaterHigh::
 	setvar VAR_0x8005, METATILE_PastoriaGym_gauge1_hi
 	setvar VAR_0x8006, 1
 	special SE_SwapMapMetatiles
+	setvar VAR_0x8004, METATILE_PastoriaGym_waterf_288_lo
+	setvar VAR_0x8005, METATILE_PastoriaGym_waterf_288_hi
+	setvar VAR_0x8006, 1
+	special SE_SwapMapMetatiles
+	setvar VAR_0x8004, METATILE_PastoriaGym_waterf_289_lo
+	setvar VAR_0x8005, METATILE_PastoriaGym_waterf_289_hi
+	setvar VAR_0x8006, 1
+	special SE_SwapMapMetatiles
 	setvar VAR_0x8004, METATILE_PastoriaGym_lowpath1_289_lo
 	setvar VAR_0x8005, METATILE_PastoriaGym_lowpath1_289_hi
 	setvar VAR_0x8006, 1
@@ -138,6 +158,10 @@ PastoriaCity_Gym_EventScript_SetWaterHigh::
 	setvar VAR_0x8004, METATILE_PastoriaGym_pontoon_289_lo
 	setvar VAR_0x8005, METATILE_PastoriaGym_pontoon_289_hi
 	setvar VAR_0x8006, 0
+	special SE_SwapMapMetatiles
+	setvar VAR_0x8004, METATILE_PastoriaGym_waterf_28a_lo
+	setvar VAR_0x8005, METATILE_PastoriaGym_waterf_28a_hi
+	setvar VAR_0x8006, 1
 	special SE_SwapMapMetatiles
 	setvar VAR_0x8004, METATILE_PastoriaGym_pontoon_291_lo
 	setvar VAR_0x8005, METATILE_PastoriaGym_pontoon_291_hi

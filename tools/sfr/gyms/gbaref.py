@@ -149,7 +149,7 @@ class Importer:
             out.append(('raw', row))
         return out
 
-    def flat(self, src, mid, layers=(0, 1, 2)):
+    def flat(self, src, mid, layers=(0, 1, 2), drop=()):
         """One ('raw', 4 entries) layer: the source metatile's layers composited (8x8 tile by
         tile, upper layers over lower), for pieces that must sit under a drawn overlay."""
         ents = src.entries(mid)
@@ -169,8 +169,9 @@ class Importer:
                     for x in range(8):
                         v = t[y][x]
                         if v:
-                            rgb[y][x] = tc(src.pals[pal][v])
-                        elif L == layers[0] and rgb[y][x] is None:
+                            c_ = tc(src.pals[pal][v])
+                            rgb[y][x] = None if c_ in drop else c_
+                        elif L == layers[0] and rgb[y][x] is None and not drop:
                             rgb[y][x] = tc(src.pals[0][0])
             cols = []
             for r in rgb:
@@ -184,6 +185,16 @@ class Importer:
             grid = tuple(tuple(have.index(c, 1) if c is not None else 0 for c in r) for r in rgb)
             row.append(self.ts.tile_entry(grid, s_))
         return ('raw', row)
+
+    def colours_of(self, src, mid):
+        """Set of (tinted) colours a source metatile draws."""
+        tc = (lambda c: tuple(self.tint(c))) if self.tint else (lambda c: tuple(c))
+        out = set()
+        for e in src.entries(mid):
+            t = src.tiles[e & 0x3FF] if (e & 0x3FF) < len(src.tiles) else None
+            if t:
+                out |= {tc(src.pals[e >> 12][v]) for r in t for v in r if v}
+        return out
 
     def palettes(self):
         return {s: list(c) + [(0, 0, 0)] * (16 - len(c)) for s, c in self.colors.items()}

@@ -130,26 +130,26 @@ VeilstoneCity_Gym_EventScript_PanelEnd::
 	end
 
 VeilstoneCity_Gym_Text_PushPanel::
-	.string "It's a sliding panel on a floor rail.\n"
+	.string "It's a sliding screen on a floor rail.\n"
 	.string "Give it a push?$"
 
 VeilstoneCity_Gym_Text_PushPanelBack::
-	.string "The panel can slide back along its\n"
+	.string "The screen can slide back along its\n"
 	.string "rail. Push it back?$"
 
 VeilstoneCity_Gym_Text_PanelSlidBack::
-	.string "The panel slid back to its peg!$"
+	.string "The screen slid back to its stop!$"
 
 VeilstoneCity_Gym_Text_PanelSlid::
-	.string "The panel slid along its rail!$"
+	.string "The screen slid along its rail!$"
 
 VeilstoneCity_Gym_Text_PanelWontBudge::
-	.string "The panel won't budge from this side.\p"
-	.string "There's a peg at this end of its\n"
+	.string "The screen won't budge from this side.\p"
+	.string "There's a stop at this end of its\n"
 	.string "rail. Push it from the other side!$"
 
 VeilstoneCity_Gym_Text_PanelNoFurther::
-	.string "The panel is at the end of its rail.\n"
+	.string "The screen is at the end of its rail.\n"
 	.string "It won't move any further.$"
 
 
@@ -385,17 +385,19 @@ VeilstoneCity_Gym_Text_SNGuideInfo::
 	.string "Fighting types are weak to Flying,\n"
 	.string "Psychic and Fairy moves!\p"
 	.string "This GYM is a training hall. Sliding\n"
-	.string "panels on floor rails close the way.\p"
-	.string "Walk up to a panel and push it.\n"
-	.string "Panels only slide along their rail,\l"
-	.string "so try the first one from the side!\p"
+	.string "screens on floor rails close the way.\p"
+	.string "Push the sliding screens along\n"
+	.string "their rails.\p"
+	.string "Each screen runs toward the red\n"
+	.string "arrows on its rail, so push it\l"
+	.string "from the other side!\p"
 	.string "The last one stands in front of\n"
 	.string "MAYLENE's corridor. It only slides\l"
 	.string "one way, so think about which side\l"
 	.string "to push it from!\p"
 	.string "If you get it wrong, just walk\n"
 	.string "around and try the other side.\l"
-	.string "The panels reset when you leave.$"
+	.string "The screens reset when you leave.$"
 
 VeilstoneCity_Gym_Text_PtGymGuide::
 	.string "Hey, there! How's it going,\n"

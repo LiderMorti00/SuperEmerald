@@ -431,17 +431,24 @@ PPM = 'PowerPlant_Frlg'
 
 
 def pad_ov(n):
+    """Lift deck seen from above and in front: a raised plate with a hazard rim, the number on a
+    steel boss, the deck's front face (riveted) and its shadow on the gap below."""
     c = Canvas(0)
-    c.rect(0, 0, 15, 15, K); c.rect(1, 1, 14, 14, 0)
-    for i in range(16):                                # hazard frame (the deck's rim)
-        for j in (0, 15):
-            c.px(i, j, Y if (i // 2) % 2 else K); c.px(j, i, Y if (i // 2) % 2 else K)
-    c.rect(4, 3, 11, 11, SH); c.rect(4, 3, 11, 3, WH); c.rect(4, 11, 11, 11, SD)
+    c.rect(0, 0, 15, 11, 0)
+    for i in range(16):                                    # hazard rim around the deck top
+        for j in (0, 11):
+            c.px(i, j, Y if (i // 2) % 2 else K)
+    for j in range(12):
+        c.px(0, j, Y if (j // 2) % 2 else K); c.px(15, j, Y if (j // 2) % 2 else K)
+    c.rect(4, 2, 11, 9, SH); c.hline(4, 11, 2, WH); c.hline(4, 11, 9, SD); c.vline(11, 2, 9, SD)
     for y, row in enumerate(DIGITS[n]):
         for x, ch in enumerate(row):
             if ch == '#':
-                c.px(5 + x, 4 + y, K); c.px(6 + x, 4 + y, K)
-    c.hline(1, 14, 14, SD)                            # deck edge: the gap below
+                c.px(5 + x, 2 + y, K); c.px(6 + x, 2 + y, K)
+    c.rect(0, 12, 15, 14, SD); c.hline(0, 15, 12, S)       # front face
+    for x in (2, 7, 13):
+        c.px(x, 13, SL)
+    c.hline(0, 15, 15, K)                                  # shadow on the floor/gap
     return c
 
 

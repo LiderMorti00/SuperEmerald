@@ -236,10 +236,10 @@ def main():
     d['warp_events'] = [{'x': x, 'y': 15, 'elevation': 0, 'dest_map': 'MAP_VEILSTONE_CITY_SINNOH', 'dest_warp_id': '11'}
                         for x in (8, 9)]
     pos = {
-        'VeilstoneCity_Gym_EventScript_Colby': (11, 12, 'MOVEMENT_TYPE_FACE_UP', '2'),      # guards the push spot (11,10)
-        'VeilstoneCity_Gym_EventScript_Jeffery': (14, 11, 'MOVEMENT_TYPE_FACE_LEFT', '2'),
+        'VeilstoneCity_Gym_EventScript_Colby': (14, 8, 'MOVEMENT_TYPE_FACE_LEFT', '2'),      # watches the way past panel A (12,8)
+        'VeilstoneCity_Gym_EventScript_Jeffery': (14, 12, 'MOVEMENT_TYPE_FACE_LEFT', '2'),   # (14,11): free, panel A can be pushed back
         'VeilstoneCity_Gym_EventScript_Darren': (2, 7, 'MOVEMENT_TYPE_FACE_RIGHT', '2'),
-        'VeilstoneCity_Gym_EventScript_Rafael': (15, 8, 'MOVEMENT_TYPE_FACE_LEFT', '2'),
+        'VeilstoneCity_Gym_EventScript_Rafael': (15, 7, 'MOVEMENT_TYPE_FACE_LEFT', '2'),
         'SE_EventScript_SinnohLeader_Maylene': (8, 2, 'MOVEMENT_TYPE_FACE_DOWN', '0'),
         'VeilstoneCity_Gym_EventScript_PtGymGuide': (11, 14, 'MOVEMENT_TYPE_FACE_DOWN', '0'),
     }
@@ -271,24 +271,40 @@ DOJO_MAP = 'SaffronCity_Dojo_Frlg'
 
 
 def shoji():
+    """A standing paper-and-wood screen: dark wooden frame with a lit top/left edge, paper with
+    a lattice, a wooden foot whose front face shows, and a short shadow to the south-east."""
     c = Canvas(0)
-    c.rect(2, 13, 15, 15, K)                                   # shadow on the floor (east/south)
-    c.rect(1, 0, 13, 12, WD); c.rect(2, 1, 12, 11, PAPER)      # frame + paper
-    for x in (5, 9):
-        c.vline(x, 1, 11, W)
-    for y in (4, 8):
-        c.hline(2, 12, y, W)
-    c.hline(1, 13, 0, WH); c.vline(1, 0, 12, WL)
-    c.rect(0, 12, 14, 14, TD); c.hline(0, 14, 12, WH)          # sill (edge + base)
-    c.vline(14, 12, 14, K)
+    for y in range(3, 13):                                   # short cast shadow on the floor
+        c.px(14, y, K if y % 2 else 0)
+    c.hline(3, 14, 13, K)
+    c.rect(1, 0, 13, 10, WD)                                 # frame
+    c.hline(1, 13, 0, WH); c.vline(1, 0, 10, WL)
+    c.rect(3, 1, 11, 9, PAPER)                               # paper
+    c.vline(7, 1, 9, W); c.hline(3, 11, 5, W)                # lattice
+    c.vline(5, 1, 9, WL); c.vline(9, 1, 9, WL)
+    c.rect(0, 10, 14, 12, W); c.hline(0, 14, 10, WH)         # foot: top edge
+    c.hline(0, 14, 12, WD); c.vline(14, 10, 12, K)           # front face
     return c
 
 
 def rail_only(end):
+    """Short iron rail with red end stops; red arrows on the free end point the way it runs."""
     c = Canvas(0)
     c.rect(0, 13, 15, 14, IRON); c.hline(0, 15, 13, GREY); c.hline(0, 15, 15, WD)
     x0 = 0 if end == 'l' else 13
-    c.rect(x0, 11, x0 + 2, 15, TD); c.hline(x0, x0 + 2, 11, WH); c.vline(x0 + (2 if end == 'l' else 0), 11, 15, K)
+    c.rect(x0, 11, x0 + 2, 15, RED); c.hline(x0, x0 + 2, 11, REDL); c.vline(x0 + (2 if end == 'l' else 0), 11, 15, K)
+    return c
+
+
+def arrows(end):
+    c = Canvas(0)
+    for k in range(2):                                       # chevrons on the floor beside the rail
+        xa = (5 + 4 * k) if end == 'r' else (10 - 4 * k)
+        for i in range(3):
+            if end == 'r':
+                c.px(xa + i, 6 + i, RED); c.px(xa + i, 10 - i, RED)
+            else:
+                c.px(xa - i, 6 + i, RED); c.px(xa - i, 10 - i, RED)
     return c
 
 
@@ -312,7 +328,7 @@ def main_frlg():
         if name not in ts.names:
             ts.add(name, [wood, None, (canvas, P)] if top else [wood, (canvas, P), None], mb)
         return ts.names[name]
-    over('rail_l', rail_only('l')); over('rail_r', rail_only('r'))
+    over('rail_l', merge(rail_only('l'), arrows('l'))); over('rail_r', merge(rail_only('r'), arrows('r')))
     pl = Canvas(0); [pl.p[y].__setitem__(x, v) for y, r in enumerate(rail_only('l').p) for x, v in enumerate(r) if v]
     over('panel_l', merge(rail_only('l'), shoji())); over('panel_r', merge(rail_only('r'), shoji()))
     over('sandbag', sandbag(), top=True)

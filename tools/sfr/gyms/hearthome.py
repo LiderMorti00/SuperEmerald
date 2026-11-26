@@ -5,7 +5,7 @@ Run from the repo root: python3 tools/sfr/gyms/hearthome.py
 Rebuilds the gym's new metatiles (palettes 10-11 of its tileset), map.bin and map.json
 warps/objects/bg events. Scripts live in data/maps/HearthomeCity_Gym_sinnoh/scripts.inc.
 """
-import json, os, sys
+import json, os, struct, sys
 sys.path.insert(0, os.path.dirname(__file__))
 from gymkit import Canvas, Tileset, build_map
 
@@ -707,5 +707,252 @@ def main_frlg():
     write_events(g, exit_y=YE + 9)
 
 
+# ------------------------------------------------------------------ v3: the violet hall, detailed
+# Back to the drawn violet hall (violet panelled walls, maroon wainscot, dark stone slabs), with
+# more relief per tile after the FRLG/Emerald interiors: each wall panel has a lit top/left edge
+# and a dark lower/right edge, the wainscot a gilded cap and a short shadow on the floor below,
+# the slabs bevelled joints (light above, dark below) instead of black lines, and four slab
+# variants (plain, worn, a reflection, a hairline crack). Doors, door lintels and nameplates are
+# still Petalburg's (violet), with gold pilasters where they meet the wainscot.
+def slab(v=0, shadow=0, lit=0):
+    c = Canvas(K2)
+    for y in range(16):
+        for x in range(16):
+            if y % 8 == 7 or x % 8 == 7:
+                c.px(x, y, K1 if (x + y) % 2 == 0 else K2)      # joint: soft, dithered
+            elif y % 8 == 0 or x % 8 == 0:
+                c.px(x, y, K3)                                  # bevel catches the light
+    if v == 1:                                                  # worn
+        for x, y in ((3, 3), (4, 3), (3, 4), (11, 10), (12, 11), (10, 12), (5, 12)):
+            c.px(x, y, K3)
+    elif v == 2:                                                # reflection
+        for i in range(4):
+            c.px(2 + i, 5 - i, K4); c.px(3 + i, 5 - i, K3)
+        c.px(12, 11, K4)
+    elif v == 3:                                                # hairline crack
+        for x, y in ((9, 2), (10, 3), (10, 4), (11, 5), (4, 10), (5, 11)):
+            c.px(x, y, K1)
+    if lit:
+        up = {K1: K2 if lit == 1 else K3, K2: K3 if lit == 1 else K4, K3: K4 if lit == 1 else K5, K4: K5 if lit == 1 else K6}
+        for y in range(16):
+            for x in range(16):
+                c.p[y][x] = up.get(c.p[y][x], c.p[y][x])
+    for y in range(shadow):                                     # short shadow under the wainscot
+        for x in range(16):
+            if y == 0 or (y == 1 and (x + y) % 2 == 0):
+                c.p[y][x] = K1
+            elif y < shadow:
+                c.p[y][x] = {K3: K2, K4: K3}.get(c.p[y][x], c.p[y][x])
+    return c
+
+
+def wallpaper3():
+    c = Canvas(K3)
+    c.hline(0, 15, 0, K2)
+    for x0 in (0, 8):                                           # two raised panels per tile
+        c.rect(x0 + 1, 2, x0 + 6, 13, K4)
+        c.hline(x0 + 1, x0 + 6, 2, K6); c.vline(x0 + 1, 2, 13, K5)       # lit edge
+        c.hline(x0 + 1, x0 + 6, 13, K2); c.vline(x0 + 6, 3, 13, K2)      # shaded edge
+        c.px(x0 + 3, 5, K5); c.px(x0 + 4, 9, K3)
+    c.hline(0, 15, 15, K2)
+    return c
+
+
+def wainscot3():
+    c = Canvas(MM)
+    c.hline(0, 15, 0, GD); c.hline(0, 15, 1, GL); c.hline(0, 15, 2, GD)
+    for x0 in (0, 8):
+        c.rect(x0 + 1, 4, x0 + 6, 11, MM)
+        c.hline(x0 + 1, x0 + 6, 4, ML); c.vline(x0 + 1, 4, 11, ML)
+        c.hline(x0 + 1, x0 + 6, 11, MD); c.vline(x0 + 6, 5, 11, MD)
+    c.hline(0, 15, 13, MD); c.hline(0, 15, 14, K1); c.hline(0, 15, 15, K1)
+    return c
+
+
+def jamb3(right):
+    c = wainscot3()
+    x0 = 0 if right else 12
+    c.rect(x0, 0, x0 + 3, 15, GD); c.rect(x0 + 1, 0, x0 + 2, 15, GL)
+    c.vline(x0 + (3 if right else 0), 0, 15, K1)
+    return c
+
+
+def pjamb3(right):
+    c = wallpaper3()
+    x0 = 0 if right else 12
+    c.rect(x0, 0, x0 + 3, 15, GD); c.rect(x0 + 1, 0, x0 + 2, 15, GL)
+    c.vline(x0 + (3 if right else 0), 0, 15, K1)
+    c.rect(x0, 4, x0 + 3, 6, FO); c.px(x0 + 1, 3, FY); c.px(x0 + 2, 3, FY)       # sconce
+    return c
+
+
+def wall_top3():
+    c = Canvas(K3)
+    c.hline(0, 15, 0, K1); c.hline(0, 15, 1, K5); c.hline(0, 15, 2, K4)      # cornice, lit from above
+    for x in range(0, 16, 4):
+        c.vline(x, 4, 12, K2); c.vline(x + 1, 4, 12, K4)
+    c.hline(0, 15, 13, K2); c.hline(0, 15, 14, K1); c.hline(0, 15, 15, K2)
+    return c
+
+
+def scaled_symbol(c, sym, x0, y0, size=14):
+    rows, leg = SYMBOLS[sym]
+    for y in range(size):
+        for x in range(size):
+            ch = rows[y * 10 // size][x * 10 // size]
+            if ch in leg:
+                c.px(x0 + x, y0 + y, leg[ch])
+
+
+def big_plate(sym, part):
+    """Wide gold plate over a door, 3 tiles (part 0/1/2 = west/middle/east), big symbol."""
+    cv = Canvas(K1)
+    x0 = -16 * part
+    cv.rect(x0 + 1, 0, x0 + 46, 15, GOLD); cv.rect(x0 + 2, 1, x0 + 45, 14, K1)
+    cv.hline(x0 + 2, x0 + 45, 1, K2)
+    for x, y in ((x0 + 1, 0), (x0 + 46, 0), (x0 + 1, 15), (x0 + 46, 15)):
+        cv.px(x, y, SIL)
+    if part == 1:
+        scaled_symbol(cv, sym, 1, 1)
+    else:
+        cv.px(8, 7, SIL); cv.px(8, 8, K4)
+    return cv
+
+
+def main_v3():
+    import gbaref as G
+    from gymkit import build_cells, write_metatile_defs
+    g = plan()
+    cx = 18
+    sym = {Y1: ('star', 'moon'), Y2: ('flame', 'eye'), Y3: ('star', 'flame')}
+    ts = Tileset(TS)
+    ts.free_unused(set())
+    src = G.source_for(PET)
+    imp = G.Importer(ts, G.free_slots({PG, PS}), tint=violet)
+    A = lambda name, mid, col=1, el=0, mb=0: (imp.add(name, src, mid, mb), col, el)
+    q = lambda c: (c, PG)
+    names = {}
+
+    def T(name, layers, mb=0):
+        if name not in ts.names:
+            ts.add(name, layers, mb)
+        return ts.names[name]
+    for v in range(4):
+        for sh in (0, 3):
+            for lit in (0, 1, 2):
+                T('slab%d_%d_%d' % (v, sh, lit), [q(slab(v, sh, lit)), None, None])
+    T('wall_top', [q(wall_top3()), None, None]); T('wallpaper', [q(wallpaper3()), None, None])
+    T('wainscot', [q(wainscot3()), None, None])
+    T('side_l', [q(side_wall(False)), None, None]); T('side_r', [q(side_wall(True)), None, None])
+    T('bottom', [q(bottom_wall()), None, None]); T('void', [q(Canvas(K1)), None, None])
+    T('jamb_l', [q(jamb3(False)), None, None]); T('jamb_r', [q(jamb3(True)), None, None])
+    T('pjamb_l', [q(pjamb3(False)), None, None]); T('pjamb_r', [q(pjamb3(True)), None, None])
+    T('carpet', [q(carpet('lr')), None, None])
+    T('curtain_l', [q(curtain(False)), None, None]); T('curtain_r', [q(curtain(True)), None, None])
+    sl = lambda x, y, sh=0, lit=0: ts.names['slab%d_%d_%d' % ((x * 7 + y * 3 + (x * y) % 5) % 4 if (x * 5 + y) % 3 else 0, sh, lit)]
+    flat = ('raw', [e for e in struct.unpack_from('<4H', bytes(ts.mt), (ts.names['slab0_0_0'] - 0x200) * 24)])
+
+    def over(name, canvas, pal, top=False, base_name='slab0_0_0'):
+        base = ('mt', ts.names[base_name], 0)
+        return T(name, [base, None, (canvas, pal)] if top else [base, (canvas, pal), None])
+    lights = []
+    for y in range(H):
+        for x in range(W):
+            if g[y][x] == 'D':
+                lights.append((x, y + 1))
+    for y0 in (Y3, Y2, Y1):
+        lights.append((cx - 2, y0 + 8))
+    rows = []
+    for y in range(H):
+        row = []
+        for x in range(W):
+            ch = g[y][x]
+            west, east = g[y][x - 1] if x else '#', g[y][x + 1] if x + 1 < W else '#'
+            if ch == 't': row.append((ts.names['wall_top'], 1, 0))
+            elif ch in 'pABn': row.append((ts.names['wallpaper'], 1, 0))
+            elif ch == 'w': row.append((ts.names['wainscot'], 1, 0))
+            elif ch == 'L': row.append((ts.names['side_l'], 1, 0))
+            elif ch == 'R': row.append((ts.names['side_r'], 1, 0))
+            elif ch == 'b' or ch in '456': row.append((ts.names['bottom'], 1, 0))
+            elif ch == '#': row.append((ts.names['void'], 1, 0))
+            elif ch == 'c': row.append((ts.names['carpet'], 0, 3))
+            elif ch in '.h123':
+                d = min(abs(x - lx) + abs(y - ly) for lx, ly in lights)
+                lit = 2 if d == 0 else 1 if d == 1 else 0
+                row.append((sl(x, y, 3 if ch == 'h' else 0, lit), 0, 3))
+            elif ch in 'DS':
+                row.append(None)
+            else:
+                raise SystemExit((x, y, ch))
+        rows.append(row)
+    # doors (Petalburg), their lintel in the wallpaper row, nameplate in the top row, pilasters
+    for y in range(H):
+        for x in range(W):
+            if g[y][x] != 'D':
+                continue
+            lat = {violet(c) for c in ((139, 74, 41), (172, 106, 65), (205, 139, 98), (255, 213, 156))}   # the lattice's wood
+            rows[y][x] = (T('door', [q(wainscot3()), imp.flat(src, 0x220, drop=lat), None], 0x60), 0, 3)
+            rows[y - 1][x] = (T('door_top', [q(wallpaper3()), imp.flat(src, 0x218, drop=lat), None]), 1, 0)
+            rows[y][x - 1] = (ts.names['jamb_l'], 1, 0); rows[y][x + 1] = (ts.names['jamb_r'], 1, 0)
+            rows[y - 1][x - 1] = (ts.names['pjamb_l'], 1, 0); rows[y - 1][x + 1] = (ts.names['pjamb_r'], 1, 0)
+            y0 = y - 2
+            symbol = None
+            for yy, (a, b) in sym.items():
+                if y0 == yy:
+                    symbol = a if x == X0 + 3 else b
+            if symbol:          # a wide gold plate with a big symbol (no Petalburg nameplate)
+                for k in range(3):
+                    rows[y0][x - 1 + k] = (T('plate_%s_%d' % (symbol, k), [(big_plate(symbol, k), PS), None, None]), 1, 0)
+    for y in range(H):                     # south doors: a dark threshold in the bottom wall
+        for x in range(W):
+            if g[y][x] == 'S':
+                c = slab()
+                for yy in range(16):
+                    for xx in range(16):
+                        c.p[yy][xx] = K1 if yy > 9 else (K2 if yy > 4 else K3)
+                c.vline(0, 0, 15, GD); c.vline(15, 0, 15, GD)
+                rows[y][x] = (T('door_s', [q(c), None, None], 0x65), 0, 3)
+    # props
+    P_ = lambda name, canvas, pal, top=False: over(name, canvas, pal, top)
+    wp = lambda name, canvas: T(name, [('mt', ts.names['wallpaper'], 0), (canvas, PS), None])
+    global wallpaper, floor
+    wallpaper_bg, floor_bg = (lambda *a, **k: Canvas(0)), (lambda *a, **k: Canvas(0))
+    wallpaper, floor = wallpaper_bg, floor_bg
+    for (x, y), nm in (((cx, Y1 + 1), 'moon'), ((cx, Y2 + 1), 'eye'), ((cx, Y3 + 1), 'ghost')):
+        rows[y][x] = (wp('painting_' + nm, painting(nm)), 1, 0)
+    for x0, y0 in ((27, Y1), (1, Y2), (27, Y3)):
+        for x in (x0 + 2, x0 + 6):
+            rows[y0 + 1][x] = (wp('painting_ghost', painting('ghost')), 1, 0)
+        rows[y0 + 5][x0 + 2] = (P_('floor_ghost', shadow_ghost(), PG), 0, 3)
+    for x in (X0 + 2, X0 + 10):
+        rows[1][x] = (wp('painting_ghost', painting('ghost')), 1, 0)
+        rows[YE + 1][x] = (wp('painting_ghost', painting('ghost')), 1, 0)
+        for y in (4, 8):
+            rows[y][x] = (P_('candle', candle_top(), PG, top=True), 1, 3)
+            rows[y + 1][x] = (P_('ped', pedestal_base(), PG), 1, 3)
+    rows[1][X0 + 1] = (ts.names['curtain_l'], 1, 0); rows[1][X0 + 11] = (ts.names['curtain_r'], 1, 0)
+    for (x, y) in ((X0 + 4, 6), (X0 + 8, 7), (X0 + 2, Y1 + 5), (X0 + 10, Y2 + 5)):
+        rows[y][x] = (P_('floor_ghost', shadow_ghost(), PG), 0, 3)
+    for x in (X0 + 1, X0 + 11):
+        rows[Y3 + 3][x] = (P_('candle', candle_top(), PG, top=True), 1, 3)
+        rows[Y3 + 4][x] = (P_('ped_flame', pedestal_base('flame'), PS), 1, 3)
+    for y0 in (Y3, Y2, Y1):
+        rows[y0 + 8][cx - 2] = (P_('lectern', lectern(), PG), 1, 3)
+    T('statue_top', [('mt', ts.names['slab0_0_0'], 0), None, ('raw', [0x0001, 0x0002, 0x0011, 0x0012])])
+    T('statue_base', [('mt', ts.names['slab0_0_0'], 0), ('raw', [0x0021, 0x0022, 0x0031, 0x0032]), None])
+    for x in (cx - 3, cx + 3):
+        rows[YE + 5][x] = (ts.names['statue_top'], 0, 3); rows[YE + 6][x] = (ts.names['statue_base'], 1, 3)
+    imp.tint = None
+    cel = G.source_for('CeladonCity_Gym_Frlg')
+    for i, x in enumerate((cx - 1, cx, cx + 1)):
+        rows[YE + 9][x] = (imp.add('mat%d' % i, cel, 0x174 + i, 0x65), 0, 3)
+    print('palette slots:', sorted(imp.colors), '+', PG, PS)
+    pals = imp.palettes(); pals[PG] = GHOST; pals[PS] = SYMB
+    ts.save(pals)
+    write_metatile_defs('data/maps/HearthomeCity_Gym_sinnoh', 'HearthomeGym', ts.names)
+    build_cells(LAYOUT, rows, border=ts.names['void'])
+    write_events(g, exit_y=YE + 9)
+
+
 if __name__ == '__main__':
-    main_frlg()
+    main_v3()

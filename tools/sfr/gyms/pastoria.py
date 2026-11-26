@@ -407,7 +407,7 @@ def main():
         'PastoriaCity_Gym_EventScript_Caitlyn': (13, 14, 'MOVEMENT_TYPE_FACE_DOWN', '2'),   # island 2: guards the buttons
         'PastoriaCity_Gym_EventScript_Samson': (10, 9, 'MOVEMENT_TYPE_FACE_RIGHT', '5'),    # island 3: guards the buttons
         'PastoriaCity_Gym_EventScript_Damian': (2, 9, 'MOVEMENT_TYPE_FACE_RIGHT', '2'),     # island 4 (side)
-        'PastoriaCity_Gym_EventScript_Erick': (6, 4, 'MOVEMENT_TYPE_FACE_RIGHT', '2'),      # WAKE's deck
+        'PastoriaCity_Gym_EventScript_Erick': (13, 8, 'MOVEMENT_TYPE_FACE_LEFT', '2'),      # island 3, the way up
         'PastoriaCity_Gym_EventScript_Walter': (10, 3, 'MOVEMENT_TYPE_FACE_DOWN', '1'),
         'SE_EventScript_SinnohLeader_Wake': (8, 3, 'MOVEMENT_TYPE_FACE_DOWN', '0'),
         'PastoriaCity_Gym_EventScript_PtGymGuide': (11, 22, 'MOVEMENT_TYPE_FACE_LEFT', '0'),
@@ -468,19 +468,36 @@ def pontoon_ov(level):
 def lowpath_ov(level, ns):
     """ns: the strip runs north-south (else east-west)."""
     c = Canvas(0)
-    if level == 0:                  # under water: only its outline shows through
-        for i in range(0, 16, 2):
-            if ns:
-                c.px(2, i, WL); c.px(13, i, WL)
-            else:
-                c.px(i, 2, WL); c.px(i, 13, WL)
-        c.rect(6, 6, 9, 9, WL)
+    if level == 0:                  # under water: a dark, rimless shape with ripples over it
+        if ns:
+            c.rect(3, 0, 12, 15, WM)
+            for y in range(1, 16, 4):
+                c.hline(4, 7, y, WL); c.hline(8, 11, y + 2, WL)
+        else:
+            c.rect(0, 3, 15, 12, WM)
+            for x in range(1, 16, 4):
+                c.hline(x, x + 2, 5, WL); c.hline(x + 2, x + 4, 9, WL)
     else:                           # dry concrete ridge
         if ns:
             c.rect(2, 0, 13, 15, CL); c.vline(2, 0, 15, CH); c.vline(13, 0, 15, CD); c.vline(14, 0, 15, K)
         else:
             c.rect(0, 2, 15, 13, CL); c.hline(0, 15, 2, CH); c.hline(0, 15, 13, CD); c.hline(0, 15, 14, K)
         c.rect(6, 6, 9, 9, CD); c.vline(7, 6, 9, K)
+    return c
+
+
+def face_ov(level):
+    """The tank wall below a platform's edge, and the water line against it. HIGH: a short
+    concrete face ending in a foam line. LOW: the full face shows, with the old water mark."""
+    c = Canvas(0)
+    if level == 0:
+        c.rect(0, 0, 15, 3, CM); c.hline(0, 15, 0, CL); c.hline(0, 15, 3, CD)
+        c.hline(0, 15, 4, WT); c.hline(0, 15, 5, WL)
+        for x in range(1, 16, 4):
+            c.px(x, 6, WL)
+    else:
+        c.rect(0, 0, 15, 9, CM); c.hline(0, 15, 0, CL); c.hline(0, 15, 4, WM); c.hline(0, 15, 5, CD)
+        c.hline(0, 15, 9, CD); c.hline(0, 15, 10, K)
     return c
 
 
@@ -596,7 +613,11 @@ def main_frlg():
                 rows[y][x] = (ts.names[nm + '_hi'], 1, 0)
             elif ch in '~d':
                 mid = picks[(x, y)]
-                rows[y][x] = (pair('water_%x' % mid, mid, None, None, 1, 1), 1, 3)
+                above = g[y - 1][x] if g[y - 1] else '#'
+                if above in 'DyuZYz':      # tank wall under a platform edge: water line
+                    rows[y][x] = (pair('waterf_%x' % mid, mid, face_ov(0), face_ov(1), 1, 1), 1, 3)
+                else:
+                    rows[y][x] = (pair('water_%x' % mid, mid, None, None, 1, 1), 1, 3)
             elif ch == 'F':
                 mid = picks[(x, y)]
                 rows[y][x] = (pair('pontoon_%x' % mid, mid, pontoon_ov(0), pontoon_ov(1), 0, 1), 0, 3)
@@ -640,6 +661,9 @@ def main_frlg():
     d = json.load(open(MAP))
     d['warp_events'] = [{'x': x, 'y': H - 1, 'elevation': 0, 'dest_map': 'MAP_PASTORIA_CITY_SINNOH', 'dest_warp_id': '1'}
                         for x in (7, 8, 9)]
+    for o in d['object_events']:       # ERICK: on island 3, watching (12,8)-(11,8), the only way to the low path up
+        if o['script'] == 'PastoriaCity_Gym_EventScript_Erick':
+            o['x'], o['y'], o['movement_type'], o['trainer_sight_or_berry_tree_id'] = 13, 8, 'MOVEMENT_TYPE_FACE_LEFT', '2'
     open(MAP, 'w').write(json.dumps(d, indent=2, ensure_ascii=False) + '\n')
 
 
