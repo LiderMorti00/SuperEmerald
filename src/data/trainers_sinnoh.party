@@ -4641,61 +4641,6 @@ Level: 50
 SPECIES_CROBAT
 Level: 50
 
-=== TRAINER_CINDY_2_SINNOH ===
-Name: GRUNT
-Class: TRAINER_CLASS_TEAM_GALACTIC
-Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Basic Trainer
-
-SPECIES_CROBAT
-Level: 57
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-=== TRAINER_CINDY_3_SINNOH ===
-Name: GRUNT
-Class: TRAINER_CLASS_TEAM_GALACTIC
-Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_F
-Gender: Female
-Music: Aqua
-Double Battle: No
-AI: Basic Trainer
-
-SPECIES_PURUGLY
-Level: 56
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-SPECIES_HONCHKROW
-Level: 56
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-=== TRAINER_CINDY_4_SINNOH ===
-Name: GRUNT
-Class: TRAINER_CLASS_TEAM_GALACTIC
-Pic: TRAINER_PIC_SINNOH_GALACTIC_GRUNT_M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Basic Trainer
-
-SPECIES_TOXICROAK
-Level: 56
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-SPECIES_PURUGLY
-Level: 56
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-SPECIES_SKUNTANK
-Level: 56
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-SPECIES_HOUNDOOM
-Level: 56
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
 === TRAINER_FERNANDO_1_SINNOH ===
 Name: DARIEN
 Class: TRAINER_CLASS_DRAGON_TAMER

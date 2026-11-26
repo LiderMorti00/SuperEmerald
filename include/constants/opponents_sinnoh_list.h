@@ -262,9 +262,7 @@
 #define TRAINER_CAROLINE_SINNOH                  2404
 #define TRAINER_RANDALL_SINNOH                   2405
 #define TRAINER_PARKER_SINNOH                    2406
-#define TRAINER_CINDY_2_SINNOH                   2407
-#define TRAINER_CINDY_3_SINNOH                   2408
-#define TRAINER_CINDY_4_SINNOH                   2409
+// 2407-2409: free, they were the Lake Valor (drained) Galactic Grunts (map removed)
 #define TRAINER_FERNANDO_1_SINNOH                2410
 #define TRAINER_AUTUMN_SINNOH                    2411
 #define TRAINER_TED_SINNOH                       2412
