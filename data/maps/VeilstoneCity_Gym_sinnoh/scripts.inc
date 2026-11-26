@@ -13,13 +13,23 @@ VeilstoneCity_Gym_OnLoad::
 	end
 
 VeilstoneCity_Gym_EventScript_DrawPanelAMoved::
-	setmetatile 12, 10, METATILE_VeilstoneGym_wood, FALSE
-	setmetatile 13, 10, METATILE_VeilstoneGym_panel, TRUE
+	setmetatile 12, 10, METATILE_VeilstoneGym_rail_l, FALSE
+	setmetatile 13, 10, METATILE_VeilstoneGym_panel_r, TRUE
+	return
+
+VeilstoneCity_Gym_EventScript_DrawPanelAHome::
+	setmetatile 12, 10, METATILE_VeilstoneGym_panel_l, TRUE
+	setmetatile 13, 10, METATILE_VeilstoneGym_rail_r, FALSE
 	return
 
 VeilstoneCity_Gym_EventScript_DrawPanelBMoved::
-	setmetatile 8, 5, METATILE_VeilstoneGym_wood, FALSE
-	setmetatile 9, 5, METATILE_VeilstoneGym_panel, TRUE
+	setmetatile 8, 5, METATILE_VeilstoneGym_rail_l, FALSE
+	setmetatile 9, 5, METATILE_VeilstoneGym_panel_r, TRUE
+	return
+
+VeilstoneCity_Gym_EventScript_DrawPanelBHome::
+	setmetatile 8, 5, METATILE_VeilstoneGym_panel_l, TRUE
+	setmetatile 9, 5, METATILE_VeilstoneGym_rail_r, FALSE
 	return
 
 @ VAR_0x8004/5 = the tile the player faces
@@ -65,7 +75,16 @@ VeilstoneCity_Gym_EventScript_PanelA::
 
 VeilstoneCity_Gym_EventScript_PanelAMoved::
 	goto_if_ne VAR_0x8004, 13, VeilstoneCity_Gym_EventScript_PanelEnd
-	goto VeilstoneCity_Gym_EventScript_PanelNoFurther
+	goto_if_ne VAR_FACING, DIR_WEST, VeilstoneCity_Gym_EventScript_PanelNoFurther
+	msgbox VeilstoneCity_Gym_Text_PushPanelBack, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, VeilstoneCity_Gym_EventScript_PanelEnd
+	playse SE_M_STRENGTH
+	call VeilstoneCity_Gym_EventScript_DrawPanelAHome
+	special DrawWholeMapView
+	setvar VAR_TEMP_1, 0
+	msgbox VeilstoneCity_Gym_Text_PanelSlidBack, MSGBOX_DEFAULT
+	releaseall
+	end
 
 VeilstoneCity_Gym_EventScript_PanelB::
 	lockall
@@ -85,7 +104,16 @@ VeilstoneCity_Gym_EventScript_PanelB::
 
 VeilstoneCity_Gym_EventScript_PanelBMoved::
 	goto_if_ne VAR_0x8004, 9, VeilstoneCity_Gym_EventScript_PanelEnd
-	goto VeilstoneCity_Gym_EventScript_PanelNoFurther
+	goto_if_ne VAR_FACING, DIR_WEST, VeilstoneCity_Gym_EventScript_PanelNoFurther
+	msgbox VeilstoneCity_Gym_Text_PushPanelBack, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, VeilstoneCity_Gym_EventScript_PanelEnd
+	playse SE_M_STRENGTH
+	call VeilstoneCity_Gym_EventScript_DrawPanelBHome
+	special DrawWholeMapView
+	setvar VAR_TEMP_2, 0
+	msgbox VeilstoneCity_Gym_Text_PanelSlidBack, MSGBOX_DEFAULT
+	releaseall
+	end
 
 VeilstoneCity_Gym_EventScript_PanelWontBudge::
 	msgbox VeilstoneCity_Gym_Text_PanelWontBudge, MSGBOX_DEFAULT
@@ -105,12 +133,20 @@ VeilstoneCity_Gym_Text_PushPanel::
 	.string "It's a sliding panel on a floor rail.\n"
 	.string "Give it a push?$"
 
+VeilstoneCity_Gym_Text_PushPanelBack::
+	.string "The panel can slide back along its\n"
+	.string "rail. Push it back?$"
+
+VeilstoneCity_Gym_Text_PanelSlidBack::
+	.string "The panel slid back to its peg!$"
+
 VeilstoneCity_Gym_Text_PanelSlid::
 	.string "The panel slid along its rail!$"
 
 VeilstoneCity_Gym_Text_PanelWontBudge::
 	.string "The panel won't budge from this side.\p"
-	.string "Its rail must run the other way…$"
+	.string "There's a peg at this end of its\n"
+	.string "rail. Push it from the other side!$"
 
 VeilstoneCity_Gym_Text_PanelNoFurther::
 	.string "The panel is at the end of its rail.\n"

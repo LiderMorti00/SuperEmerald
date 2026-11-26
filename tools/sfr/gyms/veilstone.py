@@ -105,6 +105,17 @@ def sandbag():
     return c
 
 
+def rail(end):
+    """Floor rail the panel runs in: a groove with a peg stopping it at one end."""
+    c = wood_floor()
+    c.hline(0, 15, 12, K); c.hline(0, 15, 13, WD); c.hline(0, 15, 11, WH)
+    for x in range(1, 16, 4):                      # arrows along the rail: east
+        c.px(x, 9, TD); c.px(x + 1, 10, TD); c.px(x, 11, TD)
+    x0 = 0 if end == 'l' else 13
+    c.rect(x0, 8, x0 + 2, 14, IRON); c.rect(x0, 8, x0 + 2, 8, GREY)
+    return c
+
+
 def bottom():
     c = Canvas(K)
     c.hline(0, 15, 0, WD)
@@ -125,6 +136,10 @@ def build_tileset():
     ts.add('wall_banner', [p(wall_face('banner')), None, None])
     ts.add('partition', [wood, p(partition()), None])
     ts.add('panel', [wood, p(panel()), None])
+    ts.add('rail_l', [p(rail('l')), None, None])
+    ts.add('rail_r', [p(rail('r')), None, None])
+    ts.add('panel_l', [p(rail('l')), p(panel()), None])
+    ts.add('panel_r', [p(rail('r')), p(panel()), None])
     ts.add('sandbag', [wood, p(sandbag()), None])
     ts.add('bottom', [p(bottom()), None, None])
     ts.save({P: DOJO})
@@ -161,10 +176,12 @@ def main():
         'T': (n('wall_top'), 1, 0), 'f': (n('wall_face'), 1, 0), 'b': (n('wall_banner'), 1, 0),
         'S': (n('wall_scroll'), 1, 0), '|': (n('wall_top'), 1, 0), '_': (n('bottom'), 1, 0),
         '.': (n('wood'), 0, 3), ',': (n('wood'), 0, 3), 't': (n('tatami'), 0, 3), 'e': (n('tatami_edge'), 0, 3),
-        'm': (n('mat'), 0, 3), 'P': (n('partition'), 1, 3), 'A': (n('panel'), 1, 3), 'B': (n('panel'), 1, 3),
+        'm': (n('mat'), 0, 3), 'P': (n('partition'), 1, 3), 'A': (n('panel_l'), 1, 3), 'B': (n('panel_l'), 1, 3), 'r': (n('rail_r'), 0, 3),
         's': (n('sandbag'), 1, 3), 'Z': (0x21f, 0, 3), 'z': (0x227, 1, 3), '1': (0x006, 0, 3), '2': (0x007, 0, 3),
     }
-    build_map(LAYOUT, PLAN, legend, border=n('wall_top'))
+    plan = [list(r) for r in PLAN]
+    plan[10][13] = 'r'; plan[5][9] = 'r'           # the rail's far end for panels A and B
+    build_map(LAYOUT, [''.join(r) for r in plan], legend, border=n('wall_top'))
     d = json.load(open(MAP))
     d['warp_events'] = [{'x': x, 'y': 15, 'elevation': 0, 'dest_map': 'MAP_VEILSTONE_CITY_SINNOH', 'dest_warp_id': '11'}
                         for x in (8, 9)]

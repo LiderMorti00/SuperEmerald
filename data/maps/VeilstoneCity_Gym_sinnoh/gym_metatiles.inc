@@ -9,5 +9,9 @@
 .set METATILE_VeilstoneGym_wall_banner, 0x24c
 .set METATILE_VeilstoneGym_partition, 0x24d
 .set METATILE_VeilstoneGym_panel, 0x24e
-.set METATILE_VeilstoneGym_sandbag, 0x24f
-.set METATILE_VeilstoneGym_bottom, 0x250
+.set METATILE_VeilstoneGym_rail_l, 0x24f
+.set METATILE_VeilstoneGym_rail_r, 0x250
+.set METATILE_VeilstoneGym_panel_l, 0x251
+.set METATILE_VeilstoneGym_panel_r, 0x252
+.set METATILE_VeilstoneGym_sandbag, 0x253
+.set METATILE_VeilstoneGym_bottom, 0x254
