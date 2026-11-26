@@ -1,8 +1,42 @@
+	.include "data/maps/SnowpointCity_Gym_1F_sinnoh/gym_metatiles.inc"
+
 SnowpointCity_Gym_1F_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, SnowpointCity_Gym_1F_OnLoad
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SnowpointCity_Gym_1F_OnFrame
 	.byte 0
 
-@ Super Emerald: the three ice rooms are sliding ice (MB_ICE) with snow mounds as stoppers;
-@ see tools/sfr/gyms/snowpoint.py. No scripts are needed: nothing breaks and nothing locks.
+@ Super Emerald: one big rink (MB_ICE) with snow mounds as stoppers and CANDICE on a raised dais
+@ in the middle, entered only from below (tools/sfr/gyms/snowpoint.py). Once she has been
+@ beaten, the ice under the dais is a firm snow path down to the walkway: drawn on load, and
+@ right after the battle: talking to her sets VAR_TEMP_2, and the frame script that fires when
+@ the field comes back checks the badge.
+SnowpointCity_Gym_1F_OnLoad::
+	call_if_set FLAG_SINNOH_BADGE7_GET, SnowpointCity_Gym_1F_EventScript_DrawPath
+	end
+
+SnowpointCity_Gym_1F_OnFrame:
+	map_script_2 VAR_TEMP_2, 1, SnowpointCity_Gym_1F_EventScript_CheckPath
+	.2byte 0
+
+SnowpointCity_Gym_1F_EventScript_Candice::
+	setvar VAR_TEMP_2, 1
+	goto SE_EventScript_SinnohLeader_Candice
+
+SnowpointCity_Gym_1F_EventScript_CheckPath::
+	setvar VAR_TEMP_2, 2
+	goto_if_unset FLAG_SINNOH_BADGE7_GET, SnowpointCity_Gym_1F_EventScript_CheckPathEnd
+	call SnowpointCity_Gym_1F_EventScript_DrawPath
+	special DrawWholeMapView
+SnowpointCity_Gym_1F_EventScript_CheckPathEnd::
+	end
+
+SnowpointCity_Gym_1F_EventScript_DrawPath::
+	setmetatile 9, 11, METATILE_SnowpointGym_path, FALSE
+	setmetatile 9, 12, METATILE_SnowpointGym_path, FALSE
+	setmetatile 9, 13, METATILE_SnowpointGym_path, FALSE
+	setmetatile 9, 14, METATILE_SnowpointGym_path, FALSE
+	setmetatile 9, 15, METATILE_SnowpointGym_path, FALSE
+	return
 
 SnowpointCity_Gym_1F_EventScript_Leader::
 	goto_if_set FLAG_SYS_GAME_CLEAR, SnowpointCity_Gym_1F_EventScript_SNRematch
@@ -134,12 +168,15 @@ SnowpointCity_Gym_1F_Text_SNGuideInfo::
 	.string "FROSLASS.\p"
 	.string "Ice types are weak to Fire, Fighting,\n"
 	.string "Rock and Steel moves!\p"
-	.string "The rooms are slippery ice. Once you\n"
-	.string "start sliding, only a snow mound or a\l"
-	.string "wall will stop you.\p"
-	.string "The small room is for practice. If you\n"
-	.string "slide wrong, head back to the stone\l"
-	.string "slab by the stairs and try again.\p"
+	.string "CANDICE waits on the ice platform in\n"
+	.string "the middle of the rink.\p"
+	.string "Once you slide, only a snow mound, the\n"
+	.string "snowbank or firm ground stops you.\p"
+	.string "Her platform can only be climbed from\n"
+	.string "below. Line up under it, then slide up!\p"
+	.string "Try the gap on the left first. If you\n"
+	.string "slide wrong, aim for a gap in the bank\l"
+	.string "and you're back on the walkway.\p"
 	.string "Her TRAINERS train in the basement.\n"
 	.string "Take the ladder over there!$"
 

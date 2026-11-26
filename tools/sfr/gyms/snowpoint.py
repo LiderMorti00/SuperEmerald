@@ -19,7 +19,7 @@ glossy and banked with snow at its edges, mounds are round outlined heaps.
 import json, os, struct, sys
 from collections import deque
 sys.path.insert(0, os.path.dirname(__file__))
-from gymkit import Canvas, Tileset, write_metatile_defs
+from gymkit import Canvas, Tileset, write_metatile_defs, build_cells
 
 TS = 'data/tilesets/secondary/sootopolis_gym_sinnoh'
 LAYOUT = 'LAYOUT_SNOWPOINT_CITY_GYM_1F_SINNOH'
@@ -207,36 +207,69 @@ def solve(grid):
 
 
 # ---------------------------------------------------------------- floors and walls
-OPEN = set('.iLoSTBHmCP')         # everything that is not wall mass
+OPEN = set('.iLoSTBHmCPAbd')       # everything that is not outer wall mass
 
 
-def ice_tile(shadow=False):
-    """Glossy ice: pale cyan with long glints and a few hairline cracks (no tiles, no grid)."""
+def _ice_tex():
+    """32x32 ice texture: smooth pale ice, a few long glints and one hairline crack, so the rink
+    reads as one sheet instead of a repeated tile."""
+    g = [[IC] * 32 for _ in range(32)]
+    for x0, y0, n in ((3, 26, 9), (18, 12, 7), (25, 30, 5), (8, 9, 4)):
+        for i in range(n):
+            x, y = (x0 + i) % 32, (y0 - i) % 32
+            g[y][x] = WH; g[(y + 1) % 32][x] = SH
+    for x, y in ((12, 20), (13, 21), (14, 21), (15, 22), (16, 22), (28, 6), (29, 7)):
+        g[y][x] = ICD
+    for x, y in ((22, 3), (5, 16), (30, 18)):
+        g[y][x] = SH
+    return g
+
+
+ICE_TEX = None
+
+
+def ice_tile(shadow=False, v=(0, 0)):
+    global ICE_TEX
+    ICE_TEX = ICE_TEX or _ice_tex()
     c = Canvas(IC)
-    for x, y in ((2, 13), (3, 12), (4, 11), (5, 10), (9, 5), (10, 4), (11, 3), (12, 2), (8, 14), (9, 13)):
-        c.px(x, y, WH)
-    for x, y in ((3, 13), (4, 12), (10, 5), (11, 4), (6, 3), (7, 3), (13, 9), (13, 10), (1, 6)):
-        c.px(x, y, SH)
-    for x, y in ((6, 8), (7, 9), (8, 9), (14, 13)):
-        c.px(x, y, ICD)
+    for y in range(16):
+        for x in range(16):
+            c.px(x, y, ICE_TEX[v[1] * 16 + y][v[0] * 16 + x])
     if shadow:
         for y in range(3):
             c.hline(0, 15, y, ICD if y < 2 else S)
     return c
 
 
-def slab(shadow=False, dust=True):
-    """Firm ground: big blue-grey stone slabs; a wall face to the north casts a shadow."""
+def slab(shadow=False, dust=True, v=(0, 0)):
+    """Firm ground: large blue-grey flagstones (32x16, laid in a running bond) with soft joints."""
     c = Canvas(ST4)
-    c.hline(0, 15, 15, ST2); c.vline(15, 0, 15, ST2); c.hline(0, 14, 0, ST5); c.vline(0, 0, 14, ST5)
-    for x, y in ((4, 4), (11, 9), (6, 12), (12, 3)):
-        c.px(x, y, ST3)
+    for y in range(16):
+        for x in range(16):
+            X, Y = v[0] * 16 + x, v[1] * 16 + y
+            off = 16 if (Y // 16) % 2 else 0
+            if Y % 16 == 15 or (X + off) % 32 == 31:
+                c.px(x, y, ST3)
+            elif Y % 16 == 0 or (X + off) % 32 == 0:
+                c.px(x, y, ST5)
+    for x, y in ((5, 5), (11, 9), (3, 12)):
+        c.px(x, y, ST3 if (x + v[0] + v[1]) % 2 else ST5)
     if dust:
-        for x, y in ((2, 9), (9, 2), (13, 12)):
+        for x, y in ((9, 3) if v[0] else (2, 9),):
             c.px(x, y, WH)
     if shadow:
-        for y in range(4):
-            c.hline(0, 15, y, ST1 if y < 2 else ST2)
+        for y in range(3):
+            c.hline(0, 15, y, ST2 if y < 2 else ST3)
+    return c
+
+
+def ladder_hole():
+    c = slab()
+    c.rect(2, 2, 13, 13, K); c.rect(3, 3, 12, 12, SD)
+    for y in (4, 7, 10):
+        c.hline(4, 11, y, ST4); c.hline(4, 11, y + 1, ST2)
+    c.vline(4, 3, 12, ST5); c.vline(11, 3, 12, ST5)
+    c.hline(2, 13, 2, ST1)
     return c
 
 
@@ -300,26 +333,136 @@ def crystal():
     return c
 
 
+# One big rink, after Diamond/Platinum's Snowpoint gym: a firm stone walkway runs all round, a low
+# snowbank separates it from the ice and has openings in it ('.'), and CANDICE stands on a raised
+# ice dais in the middle. The dais can only be entered from below, through its access tile A,
+# so the player has to stop in column 9 under it and slide up. Mounds (o) are the stoppers.
+# After the battle the ice under the dais turns into a snowy path down to the walkway (scripts).
+RINK = [
+    "###################",   # 0  top wall
+    "###################",   # 1  wall face (windows)
+    "#.................#",   # 2  walkway
+    '#.bbb.bbbbbbb.bbb.#',   # 3  openings (5,3), (13,3)
+    '#.biiiiioiioiiiib.#',   # 4
+    '#..iioiioiiiiioi..#',   # 5  openings (2,5), (16,5)
+    '#.biiiiiiiiiiioib.#',   # 6
+    '#.biooiiiiiiiiiib.#',   # 7
+    '#..iiiiiPPPiiiiib.#',   # 8  opening (2,8); CANDICE's dais
+    '#.biiiiiPCPiiiii..#',   # 9  CANDICE (9,9); opening (16,9)
+    '#.biiiiiPAPiiiiib.#',   # 10  access (9,10), from below only
+    '#.biiiiiiiiiiiiib.#',   # 11
+    '#.biiiiiiioiiiii..#',   # 12  opening (16,12)
+    '#..iiooiiiiiiiiob.#',   # 13  opening (2,13): first slide - right to the mounds and back
+    '#.boiiiiiiiiiiiib.#',   # 14
+    "#.bbbbbbbbbbbbbbb.#",   # 15 closed: the first gap the player meets is (2,13), with CANDICE in view
+    "#.....T.....T.....#",   # 16 walkway; statues (6,16) and (12,16)
+    "#.....B.....B....H#",   # 17 foyer; ladder down to B1F (17,17)
+    "########mm#########",   # 18 exit mat (8,18), (9,18)
+]
+PATH = [(9, 11), (9, 12), (9, 13), (9, 14), (9, 15)]     # the way back opened after the battle
+ACCESS = (9, 10)
+
+
+def rink_check():
+    """Shortest way to CANDICE from the walkway, and no stop on the ice that can't get back to firm
+    ground. Returns the list of moves."""
+    g = [list(r) for r in RINK]
+    H, W = len(g), len(g[0])
+    D = {'U': (0, -1), 'D': (0, 1), 'L': (-1, 0), 'R': (1, 0)}
+    solid = set('#boPCTBH')
+    def moves(p):
+        for k, (dx, dy) in D.items():
+            x, y = p[0] + dx, p[1] + dy
+            if not (0 <= y < H and 0 <= x < W) or g[y][x] in solid: continue
+            while g[y][x] == 'i' and g[y + dy][x + dx] not in solid:
+                x += dx; y += dy
+            yield k, (x, y)
+    def bfs(starts):
+        prev = {s: None for s in starts}; q = deque(starts)
+        while q:
+            p = q.popleft()
+            for k, n in moves(p):
+                if n not in prev: prev[n] = (p, k); q.append(n)
+        return prev
+    firm = [(x, y) for y in range(H) for x in range(W) if g[y][x] in '.m']
+    r = bfs(firm)
+    assert ACCESS in r, 'CANDICE unreachable'
+    for p in r:
+        if g[p[1]][p[0]] in 'iA':
+            assert any(g[q[1]][q[0]] == '.' for q in bfs([p])), f'stuck at {p}'
+    path, p = [], ACCESS
+    while r[p]:
+        p, k = r[p]; path.append((k, p))
+    start = path[-1][1]
+    return start, ''.join(k for k, _ in path[::-1])
+
+
 def plan_1f():
-    W, H = 17, 26
-    g = [['#'] * W for _ in range(H)]
-    def fill(x0, y0, x1, y1, ch):
-        for y in range(y0, y1 + 1):
-            for x in range(x0, x1 + 1):
-                g[y][x] = ch
-    fill(3, 2, 13, 3, '.')                     # CANDICE's floor
-    g[2][4] = g[2][12] = 'P'                   # ice crystals
-    for name, (x0, y0, rows) in ROOMS.items():
-        for j, r in enumerate(rows):
-            for i, ch in enumerate(r):
-                g[y0 + j][x0 + i] = {'.': 'i'}.get(ch, ch)
-    for x, y in STAIR_TILES + [(8, 20), (8, 21)]:
-        g[y][x] = 'S'
-    fill(5, 22, 11, 25, '.')                   # entrance hall
-    g[23][6] = g[23][10] = 'T'; g[24][6] = g[24][10] = 'B'
-    g[22][11] = 'H'                            # ladder down to B1F
-    g[25][8] = g[25][9] = 'm'
-    return [''.join(r) for r in g]
+    return [r.replace('A', 'A') for r in RINK]
+
+
+def bank(face, edges):
+    """Low snowbank between the walkway and the rink (blocks): a rounded drift of snow on a
+    stone kerb; its kerb face shows where the floor lies to the south."""
+    c = Canvas(0)
+    top = 1
+    c.rect(0, top, 15, 11 if face else 15, WH)
+    for x in range(16):
+        c.px(x, top, SH); c.px(x, top + 1, WH)
+        if (x * 5) % 7 == 0: c.px(x, top + 4, SH)
+    for x, y in ((3, 6), (4, 6), (10, 4), (11, 4), (7, 9)):
+        c.px(x, y, SL)
+    if face:
+        c.rect(0, 12, 15, 14, ST3); c.hline(0, 15, 12, ST4); c.hline(0, 15, 15, K)
+        for x in range(0, 16, 4): c.px(x, 13, ST2)
+    if 'w' in edges: c.vline(0, top, 15 if not face else 14, S)
+    if 'e' in edges: c.vline(15, top, 15 if not face else 14, S)
+    c.hline(0, 15, 0, 0)
+    return c
+
+
+def dais(n_in, s_in, w_in, e_in):
+    """Border of CANDICE's raised ice dais (blocks): a thick block of blue ice with a snowy rim on
+    top and a frozen front face; corners are rounded off."""
+    c = Canvas(S)
+    for y in range(16):
+        for x in range(16):
+            v = S if (x + y) % 5 else ICD
+            if (x * 3 + y) % 11 == 0: v = SH
+            c.px(x, y, v)
+    if not n_in:
+        c.hline(0, 15, 0, K); c.rect(0, 1, 15, 3, WH); c.hline(0, 15, 4, SH)
+    if not s_in:
+        c.rect(0, 10, 15, 14, ICD); c.hline(0, 15, 10, SH); c.hline(0, 15, 15, K)
+        for x in range(1, 16, 4): c.px(x, 12, SL)
+    if not w_in: c.vline(0, 0, 15, K); c.vline(1, 0, 15, SH)
+    if not e_in: c.vline(15, 0, 15, K); c.vline(14, 0, 15, ICD)
+    if not n_in and not w_in: c.px(0, 0, 0); c.px(1, 0, 0); c.px(0, 1, 0)
+    if not n_in and not e_in: c.px(15, 0, 0); c.px(14, 0, 0); c.px(15, 1, 0)
+    return c
+
+
+def dais_floor(access):
+    """Top of the dais: packed white snow with a snowflake; the access tile has a frozen lip."""
+    c = Canvas(WH)
+    for x, y in ((3, 3), (12, 4), (5, 12), (11, 11)):
+        c.px(x, y, SH)
+    for i in range(-3, 4):
+        c.px(7 + i, 7, SL); c.px(7, 7 + i, SL); c.px(7 + i, 7 + i, SH); c.px(7 + i, 7 - i, SH)
+    if access:
+        c.hline(0, 15, 14, S); c.hline(0, 15, 15, ICD)
+        c.vline(0, 0, 15, SH); c.vline(15, 0, 15, SH)
+    return c
+
+
+def snow_path():
+    """Firm snow trail CANDICE opens over the ice after the battle (walkable, no sliding)."""
+    c = Canvas(WH)
+    for y in range(16):
+        c.px(0, y, SH); c.px(15, y, SH)
+    for x, y in ((4, 2), (10, 3), (5, 9), (11, 10), (4, 13), (10, 14)):
+        c.px(x, y, SL); c.px(x + 1, y, SL); c.px(x, y + 1, SH)
+    return c
 
 
 def plan_b1f(orig):
@@ -372,19 +515,36 @@ def autotile(plan):
                                     0 <= x + dx < W and 0 <= y + dy < H and min(dist[(x + dx, y + dy)], 3) < t)
                     nm = 'wt%d_%s_%s' % (t, sides or '0', steps or '0')
                     out[(x, y)] = (nm, lambda t=t, a=sides, b=steps: [(top(t, a, b), P), None, None], 1, 0)
-            elif ch in '.CL':
-                out[(x, y)] = ('slab%d' % shadow, lambda s=shadow: [(slab(s), P), None, None], 0, MB_NORMAL)
+            elif ch == 'b':
+                fc = at(x, y + 1) not in 'b#'
+                e = ''.join(k for k, dx, dy in D4[2:] if at(x + dx, y) not in 'b#')
+                nm = 'bank_%d%s' % (fc, e or '0')
+                out[(x, y)] = (nm, lambda f=fc, e=e: [(slab(False), P), (bank(f, e), P), None], 1, MB_NORMAL)
+            elif ch == 'P':
+                part = ('n' if at(x, y - 1) != 'P' else 's' if at(x, y + 1) not in 'PC' and at(x, y + 1) != 'A' and at(x, y - 1) == 'P' else 'm') if False else None
+                X0 = min(i for i in range(W) if 'P' in plan[y]) if False else None
+                key = (at(x, y - 1) == 'P', at(x, y + 1) in 'PA', at(x - 1, y) in 'PCA', at(x + 1, y) in 'PCA')
+                nm = 'dais_%d%d%d%d' % key
+                out[(x, y)] = (nm, lambda k=key: [(ice_tile(False), P), (dais(*k), P), None], 1, MB_NORMAL)
+            elif ch in 'CA':
+                nm = 'dais_floor_%s' % ch
+                out[(x, y)] = (nm, lambda c=ch: [(dais_floor(c == 'A'), P), None, None], 0, MB_NORMAL)
+            elif ch in '.L':
+                v = (x % 2, y % 2)
+                out[(x, y)] = ('slab%d_%d%d' % (shadow, *v), lambda s=shadow, v=v: [(slab(s, v=v), P), None, None], 0, MB_NORMAL)
+            elif ch == 'H' and len(plan) == len(RINK):
+                out[(x, y)] = ('ladder', lambda: [(ladder_hole(), P), None, None], 0, 0x61)
             elif ch == 'i':
-                edges = ''.join(e for e, dx, dy in D4 if at(x + dx, y + dy) not in 'ioL')
+                edges = ''.join(e for e, dx, dy in D4 if at(x + dx, y + dy) not in 'ioLPCA')
                 edges = ''.join(e for e in 'nswe' if e in edges)
-                nm = 'ice_%s%d' % (edges or '0', shadow)
-                out[(x, y)] = (nm, lambda e=edges, s=shadow: [(ice_tile(s), P), (drift(e), P) if e else None, None], 0, MB_ICE)
+                v = (x % 2, y % 2)
+                nm = 'ice_%s%d_%d%d' % (edges or '0', shadow, *v)
+                out[(x, y)] = (nm, lambda e=edges, s=shadow, v=v: [(ice_tile(s, v), P), (drift(e), P) if e else None, None], 0, MB_ICE)
             elif ch == 'o':
-                out[(x, y)] = ('mound%d' % shadow, lambda s=shadow: [(ice_tile(s), P), (mound(), P), None], 1, MB_NORMAL)
+                v = (x % 2, y % 2)
+                out[(x, y)] = ('mound%d_%d%d' % (shadow, *v), lambda s=shadow, v=v: [(ice_tile(s, v), P), (mound(), P), None], 1, MB_NORMAL)
             elif ch == 'S':
                 out[(x, y)] = ('stairs', lambda: [(stone_steps(), P), None, None], 0, MB_NORMAL)
-            elif ch == 'P':
-                out[(x, y)] = ('crystal', lambda: [(crystal(), P), None, None], 1, MB_NORMAL)
             elif ch == 'T':
                 out[(x, y)] = ('statue_top', lambda: [(slab(False), P), None, ('mt', 0x217, 2)], 0, MB_NORMAL)
             elif ch == 'B':
@@ -414,20 +574,13 @@ def main():
     win = frost_window()                       # snowed-in windows in the top wall of 1F
     for (cx, cy) in ((0, 0), (1, 0), (0, 1), (1, 1)):
         ts.add('win_%d%d' % (cx, cy), [(cut(win, cx, cy + 1), P), None, None])
-    for name, (x0, y0, rows) in ROOMS.items():  # check every room still solves and can't trap
-        grid = [['#'] * (len(rows[0]) + 2) for _ in range(len(rows) + 4)]
-        for j, r in enumerate(rows):
-            for i, ch in enumerate(r):
-                grid[j + 2][i + 1] = {'o': 'o', 'L': 'L'}.get(ch, 'i')
-        mid = 8 - x0 + 1
-        grid[1][mid] = 'E'; grid[len(rows) + 2][mid] = 'S'
-        print(name, ''.join(solve([''.join(r) for r in grid])))
+    ts.add('path', [(snow_path(), P), None, None])
+    print('rink: from', *rink_check())
     ts.save({P: SNOW})
     names = ts.names
     write_metatile_defs('data/maps/SnowpointCity_Gym_1F_sinnoh', 'SnowpointGym', names)
     for k, plan in plans.items():
-        lay = lays[k]; w, h = lay['width'], lay['height']
-        assert (w, h) == (len(plan[0]), len(plan)), (k, w, h)
+        lay = lays[k]; w, h = len(plan[0]), len(plan)
         vals = []
         for y in range(h):
             for x in range(w):
@@ -436,18 +589,161 @@ def main():
                     nm, fn, col, mb = cells[k][(x, y)]
                     vals.append((names[nm] & 0x3FF) | (col << 10) | (3 << 12 if not col else 0))
                 elif ch == 'H':
-                    v = (s_orig['orig_map'][y * w + x] if k == LAYOUT else orig_b1f[y * w + x])
-                    vals.append(v)
+                    vals.append(orig_b1f[y * w + x])
+                elif ch == 'H' and k == LAYOUT:
+                    vals.append(0x21c | (3 << 12))
                 elif ch == 'm':
                     vals.append((0x006 if x == 8 else 0x007) | (3 << 12))
                 else:
                     raise SystemExit(f'no tile for {ch!r} at {x},{y} in {k}')
         if k == LAYOUT:
-            for (wx, wy), cx, cy in (((4, 0), 0, 0), ((5, 0), 1, 0), ((4, 1), 0, 1), ((5, 1), 1, 1),
-                                     ((11, 0), 0, 0), ((12, 0), 1, 0), ((11, 1), 0, 1), ((12, 1), 1, 1)):
-                vals[wy * w + wx] = (names['win_%d%d' % (cx, cy)] & 0x3FF) | (1 << 10)
-        open(lay['blockdata_filepath'], 'wb').write(struct.pack('<%dH' % (w * h), *vals))
+            for x0 in (4, 13):
+                for (dx, dy) in ((0, 0), (1, 0), (0, 1), (1, 1)):
+                    vals[dy * w + x0 + dx] = (names['win_%d%d' % (dx, dy)] & 0x3FF) | (1 << 10)
+        rows = [[(v & 0x3FF, (v >> 10) & 3, v >> 12) for v in vals[y * w:(y + 1) * w]] for y in range(h)]
+        build_cells(k, rows)
+    write_events()
+
+
+def write_events():
+    m = 'data/maps/SnowpointCity_Gym_1F_sinnoh/map.json'
+    d = json.load(open(m))
+    pos = {'SE_EventScript_SinnohLeader_Candice': (9, 9, 'MOVEMENT_TYPE_FACE_DOWN'),
+           'SnowpointCity_Gym_1F_EventScript_Candice': (9, 9, 'MOVEMENT_TYPE_FACE_DOWN'),
+           'SnowpointCity_Gym_1F_EventScript_PtGymGuide': (10, 17, 'MOVEMENT_TYPE_FACE_LEFT')}
+    for o in d['object_events']:
+        o['x'], o['y'], o['movement_type'] = pos[o['script']]
+        o['elevation'] = 3
+        if o['script'] == 'SE_EventScript_SinnohLeader_Candice':
+            o['script'] = 'SnowpointCity_Gym_1F_EventScript_Candice'   # same object, local_id kept
+    d['warp_events'] = [{'x': 8, 'y': 18, 'elevation': 3, 'dest_map': 'MAP_SNOWPOINT_CITY_SINNOH', 'dest_warp_id': '6'},
+                        {'x': 9, 'y': 18, 'elevation': 3, 'dest_map': 'MAP_SNOWPOINT_CITY_SINNOH', 'dest_warp_id': '6'},
+                        {'x': 17, 'y': 17, 'elevation': 3, 'dest_map': 'MAP_SNOWPOINT_CITY_GYM_B1F_SINNOH', 'dest_warp_id': '0'}]
+    any_ = 'BG_EVENT_PLAYER_FACING_ANY'
+    d['bg_events'] = [{'type': 'sign', 'x': x, 'y': 17, 'elevation': 0, 'player_facing_dir': any_,
+                       'script': 'SnowpointCity_Gym_1F_EventScript_PtGymStatue'} for x in (6, 12)]
+    d['coord_events'] = []
+    open(m, 'w').write(json.dumps(d, indent=2, ensure_ascii=False) + '\n')
+
+
+# ---------------------------------------------------------------- FRLG-based dressing
+# Both floors are dressed with FireRed's Icefall Cave / Seafoam Islands graphics, which are already
+# in the project (data/tilesets/secondary/seafoam_islands_frlg + primary/general_frlg): their walls
+# are placed by example - for every wall/floor cell the metatile the original FRLG maps use for the
+# same arrangement of neighbours (gbaref.learn) - and their ice, rocks and snow mounds are used as
+# they are. New pixels are limited to the threshold of CANDICE's landing.
+FRLG_P, FRLG_S = 'data/tilesets/primary/general_frlg', 'data/tilesets/secondary/seafoam_islands_frlg'
+FRLG_MAPS = ['FourIsland_IcefallCave_Entrance_Frlg', 'FourIsland_IcefallCave_1F_Frlg', 'FourIsland_IcefallCave_B1F_Frlg',
+             'FourIsland_IcefallCave_Back_Frlg', 'SeafoamIslands_1F_Frlg', 'SeafoamIslands_B1F_Frlg',
+             'SeafoamIslands_B2F_Frlg', 'SeafoamIslands_B3F_Frlg', 'SeafoamIslands_B4F_Frlg']
+REF = {'ice': 0x34B, 'mound': 0x33F, 'rock_a': 0x35F, 'rock_b': 0x35E, 'floor': 0x281, 'snow': 0x291,
+       'ladder_down': 0x2AF, 'ladder_up': 0x296, 'ladder_top': 0x28E}
+
+
+def threshold():
+    """Lip of snow along the bottom of CANDICE's landing: where the slide ends."""
+    c = Canvas(0)
+    for x in range(16):
+        h = 3 + (x * 7) % 3 // 2
+        for y in range(16 - h, 16):
+            c.px(x, y, WH if y < 15 else SH)
+        c.px(x, 15 - h, SH)
+    return c
+
+
+def main_frlg():
+    import gbaref as G
+    ts = Tileset(TS)
+    L = json.load(open('data/layouts/layouts.json'))
+    lay_b1 = [l for l in L['layouts'] if l.get('id') == LAYOUT_B1F][0]
+    orig_b1f = ts.state.get('orig_b1f')
+    print('free tile slots:', ts.free_unused(set()))
+    src = G.SourceSet(FRLG_P, FRLG_S, True)
+    imp = G.Importer(ts, [6, 7, 8, 9, 11, 12])
+    def cl(m, c, b):
+        if b == 0x20: return 'I'
+        if c: return 'W'
+        return 'F' if b in (0x00, 0x08) else 'X'      # water, ladders, doors, currents: not learned
+    table = G.learn(src, FRLG_MAPS, cl)
+
+    def dress(plan, special):
+        """plan chars -> rows of (metatile, collision, elevation)."""
+        H, W = len(plan), len(plan[0])
+        cls = [['W' if ch in '#P' else 'I' if ch in 'io' else 'F' for ch in r] for r in plan]
+        rows = []
+        for y in range(H):
+            row = []
+            for x in range(W):
+                ch = plan[y][x]
+                key = ''.join(k if k != '#' else 'W' for k in G.neigh(cls, x, y))   # beyond the map: more rock
+                if (x, y) in special:
+                    row.append(special[(x, y)]); continue
+                if ch == '#' and set(key) == {'W'}:
+                    row.append((0x000, 1, 0)); continue      # solid interior: the black void of Emerald gyms
+                if ch in '#P':
+                    mid, d = G.pick(table, 'W', key)
+                    if mid == REF['snow'] and ch == '#':      # FRLG's snowy rock fill: void instead
+                        row.append((0x000, 1, 0)); continue
+                    if (d >= 4 or mid == 0x289) and ch == '#':   # 0x289: bare snow ledge, reads as floor         # no FRLG precedent for this wall shape: a boulder reads better
+                        k = 'rock_a' if (x + y) % 2 else 'rock_b'
+                        row.append((imp.add(k, src, REF[k], 0), 1, 3)); continue
+                    row.append((imp.add('w_%x' % mid, src, mid, 0), 1, 0))
+                elif ch == 'i':
+                    row.append((imp.add('ice', src, REF['ice'], MB_ICE), 0, 3))
+                elif ch == 'o':
+                    row.append((imp.add('mound', src, REF['mound'], 0), 1, 3))
+                elif ch == 'b':
+                    k = 'rock_a' if (x + y) % 2 else 'rock_b'
+                    row.append((imp.add(k, src, REF[k], 0), 1, 3))
+                else:
+                    mid, d = G.pick(table, 'F', key)
+                    narrow = (x > 0 and x + 1 < W and plan[y][x-1] in '#P' and plan[y][x+1] in '#P')
+                    if d or narrow or mid == REF['snow']:   # no exact precedent / 1-wide corridor / snow patch: plain floor
+                        mid = REF['floor']
+                    row.append((imp.add('f_%x' % mid, src, mid, 0), 0, 3))
+            rows.append(row)
+        return rows
+
+    # ---- 1F
+    plan = list(RINK)
+    special = {}
+    for x, y in ((8, 18), (9, 18)):
+        special[(x, y)] = ((0x006 if x == 8 else 0x007), 0, 3)
+    special[(17, 17)] = (imp.add('ladder_down', src, REF['ladder_down'], 0x61), 0, 3)
+    fl = imp.layers(src, REF['floor'])
+    ts.add('threshold', [fl[0], fl[1], (threshold(), P)], 0)
+    special[ACCESS] = (ts.names['threshold'], 0, 3)
+    special[(9, 9)] = (imp.add('floor', src, REF['floor'], 0), 0, 3)     # CANDICE stands on plain floor
+    for sx in (6, 12):                     # gym statues (primary tiles) standing on the cave floor
+        ts.add('statue_top', [fl[0], fl[1], ('raw', [0x0001, 0x0002, 0x0011, 0x0012])], 0) if 'statue_top' not in ts.names else None
+        ts.add('statue_base', [fl[0], ('raw', [0x0021, 0x0022, 0x0031, 0x0032]), None], 0) if 'statue_base' not in ts.names else None
+        special[(sx, 16)] = (ts.names['statue_top'], 0, 3)
+        special[(sx, 17)] = (ts.names['statue_base'], 1, 3)
+    rows1 = dress(plan, special)
+    path = imp.add('path', src, REF['floor'], 0)          # the way back opened after the battle
+    imp.add('snow', src, REF['snow'], 0)
+    # ---- B1F, from its own collision
+    w = 17
+    b1 = []
+    for y in range(len(orig_b1f) // w):
+        r = ''
+        for x in range(w):
+            v = orig_b1f[y * w + x]
+            r += '#' if (v >> 10) & 3 and (v & 0x3FF) != 0x214 else '.'
+        b1.append(r)
+    sp1 = {(11, 22): (imp.add('ladder_up', src, REF['ladder_up'], 0x61), 0, 3),
+           (11, 21): (imp.add('ladder_top', src, REF['ladder_top'], 0), 1, 3)}
+    rows2 = dress(b1, sp1)
+    print('rink: from', *rink_check())
+    pals = dict(imp.colors); pals[P] = SNOW
+    print('palette slots used:', sorted(pals))
+    ts.save(pals)
+    write_metatile_defs('data/maps/SnowpointCity_Gym_1F_sinnoh', 'SnowpointGym', ts.names)
+    border = 0x000                         # Building primary void (black), as in every Emerald gym
+    build_cells(LAYOUT, rows1, border=border)
+    build_cells(LAYOUT_B1F, rows2, border=border)
+    write_events()
 
 
 if __name__ == '__main__':
-    main()
+    main_frlg()

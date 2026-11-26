@@ -17226,8 +17226,8 @@
     {
       "id": "LAYOUT_SNOWPOINT_CITY_GYM_1F_SINNOH",
       "name": "SnowpointCity_Gym_1F_Layout_Sinnoh",
-      "width": 17,
-      "height": 26,
+      "width": 19,
+      "height": 19,
       "primary_tileset": "gTileset_Building_Sinnoh",
       "secondary_tileset": "gTileset_SootopolisGym_Sinnoh",
       "border_filepath": "data/layouts/SnowpointCity_Gym_1F_sinnoh/border.bin",
