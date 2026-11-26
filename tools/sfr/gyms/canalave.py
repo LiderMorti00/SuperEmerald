@@ -221,7 +221,7 @@ def main():
         'CanalaveCity_Gym_EventScript_David': (4, 8, 'MOVEMENT_TYPE_FACE_UP', '2'),         # catwalk, forced
         'CanalaveCity_Gym_EventScript_Ricky': (14, 6, 'MOVEMENT_TYPE_FACE_DOWN', '1'),      # catwalk, optional
         'SE_EventScript_SinnohLeader_Byron': (9, 2, 'MOVEMENT_TYPE_FACE_DOWN', '0'),
-        'CanalaveCity_Gym_EventScript_PtGymGuide': (16, 20, 'MOVEMENT_TYPE_FACE_DOWN', '0'),
+        'CanalaveCity_Gym_EventScript_PtGymGuide': (14, 21, 'MOVEMENT_TYPE_FACE_RIGHT', '0'),
     }
     for o in d['object_events']:
         x, y, mv, s = pos[o['script']]
