@@ -11,12 +11,10 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": false,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
       "x": 31,
       "y": 42,
@@ -30,7 +28,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_LASS",
       "x": 5,
       "y": 30,
@@ -44,7 +41,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_SCHOOL_KID_F",
       "x": 31,
       "y": 18,
@@ -58,7 +54,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_M",
       "x": 16,
       "y": 19,
@@ -72,7 +67,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY",
       "x": 22,
       "y": 43,
@@ -86,7 +80,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_F",
       "x": 14,
       "y": 30,
@@ -100,7 +93,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_FANTINA",
       "x": 18,
       "y": 4,
@@ -115,10 +107,9 @@
     },
     {
       "local_id": "LOCALID_HEARTHOME_GYM_GUIDE",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GYM_GUY",
       "x": 20,
-      "y": 57,
+      "y": 56,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -132,21 +123,21 @@
   "warp_events": [
     {
       "x": 17,
-      "y": 59,
+      "y": 58,
       "elevation": 0,
       "dest_map": "MAP_HEARTHOME_CITY_SINNOH",
       "dest_warp_id": "12"
     },
     {
       "x": 18,
-      "y": 59,
+      "y": 58,
       "elevation": 0,
       "dest_map": "MAP_HEARTHOME_CITY_SINNOH",
       "dest_warp_id": "12"
     },
     {
       "x": 19,
-      "y": 59,
+      "y": 58,
       "elevation": 0,
       "dest_map": "MAP_HEARTHOME_CITY_SINNOH",
       "dest_warp_id": "12"
@@ -160,7 +151,7 @@
     },
     {
       "x": 18,
-      "y": 47,
+      "y": 46,
       "elevation": 0,
       "dest_map": "MAP_HEARTHOME_CITY_GYM_SINNOH",
       "dest_warp_id": "3"
@@ -174,7 +165,7 @@
     },
     {
       "x": 18,
-      "y": 35,
+      "y": 34,
       "elevation": 0,
       "dest_map": "MAP_HEARTHOME_CITY_GYM_SINNOH",
       "dest_warp_id": "5"
@@ -188,7 +179,7 @@
     },
     {
       "x": 31,
-      "y": 47,
+      "y": 46,
       "elevation": 0,
       "dest_map": "MAP_HEARTHOME_CITY_GYM_SINNOH",
       "dest_warp_id": "7"
@@ -202,7 +193,7 @@
     },
     {
       "x": 18,
-      "y": 23,
+      "y": 22,
       "elevation": 0,
       "dest_map": "MAP_HEARTHOME_CITY_GYM_SINNOH",
       "dest_warp_id": "9"
@@ -216,7 +207,7 @@
     },
     {
       "x": 5,
-      "y": 35,
+      "y": 34,
       "elevation": 0,
       "dest_map": "MAP_HEARTHOME_CITY_GYM_SINNOH",
       "dest_warp_id": "11"
@@ -230,7 +221,7 @@
     },
     {
       "x": 18,
-      "y": 11,
+      "y": 10,
       "elevation": 0,
       "dest_map": "MAP_HEARTHOME_CITY_GYM_SINNOH",
       "dest_warp_id": "13"
@@ -244,7 +235,7 @@
     },
     {
       "x": 31,
-      "y": 23,
+      "y": 22,
       "elevation": 0,
       "dest_map": "MAP_HEARTHOME_CITY_GYM_SINNOH",
       "dest_warp_id": "15"
@@ -292,5 +283,6 @@
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "HearthomeCity_Gym_EventScript_HintRoom3"
     }
-  ]
+  ],
+  "floor_number": 0
 }

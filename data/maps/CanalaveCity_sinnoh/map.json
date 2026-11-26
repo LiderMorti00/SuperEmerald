@@ -11,7 +11,6 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -22,7 +21,6 @@
   ],
   "object_events": [
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_FAT_MAN",
       "x": 28,
       "y": 51,
@@ -36,7 +34,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_LASS",
       "x": 22,
       "y": 21,
@@ -50,7 +47,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BREEDER_M",
       "x": 29,
       "y": 31,
@@ -64,7 +60,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_F",
       "x": 3,
       "y": 33,
@@ -78,7 +73,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_2",
       "x": 11,
       "y": 38,
@@ -92,7 +86,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 6,
       "y": 65,
@@ -106,7 +99,6 @@
       "flag": "FLAG_ITEM_CANALAVECITY_TM_U_TURN"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
       "x": 15,
       "y": 50,
@@ -120,7 +112,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MON_PSYDUCK",
       "x": 22,
       "y": 22,
@@ -134,7 +125,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
       "x": 16,
       "y": 51,
@@ -148,7 +138,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 6,
       "y": 64,
@@ -163,7 +152,6 @@
     },
     {
       "local_id": "LOCALID_CANALAVE_SE_DAWN",
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_DAWN",
       "x": 22,
       "y": 17,
@@ -177,7 +165,6 @@
       "flag": "FLAG_SE_HIDE_CANALAVE_DAWN"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SS_TIDAL",
       "x": 22,
       "y": 13,
@@ -191,7 +178,6 @@
       "flag": "0"
     },
     {
-      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
       "x": 23,
       "y": 15,
@@ -335,5 +321,6 @@
       "item": "ITEM_BIG_PEARL",
       "flag": "FLAG_SN_HIDDEN_ITEM_LILYCOVE_CITY_HEART_SCALE"
     }
-  ]
+  ],
+  "floor_number": 0
 }

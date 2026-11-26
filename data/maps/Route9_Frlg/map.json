@@ -182,6 +182,7 @@
     },
     {
       "local_id": "LOCALID_SE_LEG_TORNADUS",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(TORNADUS)",
       "x": 34,
       "y": 12,
