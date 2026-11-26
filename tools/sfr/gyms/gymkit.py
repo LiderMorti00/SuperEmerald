@@ -237,3 +237,28 @@ def write_metatile_defs(map_dir, prefix, names):
     for k, v in sorted(names.items(), key=lambda kv: kv[1]):
         lines.append(f'.set METATILE_{prefix}_{k}, 0x{v:03x}')
     open(f'{map_dir}/gym_metatiles.inc', 'w').write('\n'.join(lines) + '\n')
+
+
+def build_cells(layout_id, cells, border=None):
+    """cells: rows of (metatile, collision, elevation) tuples; writes map.bin (and border)."""
+    chars, legend, plan = {}, {}, []
+    for row in cells:
+        line = ''
+        for v in row:
+            if v not in chars:
+                chars[v] = chr(0x100 + len(chars)); legend[chars[v]] = v
+            line += chars[v]
+        plan.append(line)
+    return build_map(layout_id, plan, legend, border)
+
+
+def neighbours(plan, x, y, pred):
+    """'nswe' letters of the 4 neighbours (x, y) for which pred(char) is true (outside = '#')."""
+    H, W = len(plan), len(plan[0])
+    out = ''
+    for e, dx, dy in (('n', 0, -1), ('s', 0, 1), ('w', -1, 0), ('e', 1, 0)):
+        X, Y = x + dx, y + dy
+        ch = plan[Y][X] if 0 <= X < W and 0 <= Y < H else '#'
+        if pred(ch):
+            out += e
+    return out
