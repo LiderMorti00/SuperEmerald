@@ -1,7 +1,6 @@
 Route28_hns_MapScripts::
 	.byte 0
 
-
 SE_J_Route28_hns_Route28_EventScript_Item_Flamethrower::
 	finditem ITEM_TM_FLAMETHROWER
 	end

@@ -17,101 +17,6 @@ SilphCo_7F_EventScript_SetObjRocketsGone::
 	setobjectmovementtype LOCALID_SILPH_CO_7F_WORKER_M2, MOVEMENT_TYPE_FACE_UP
 	return
 
-SilphCo_7F_EventScript_RivalTriggerTop::
-	lockall
-	setvar VAR_TEMP_1, 0
-	goto SilphCo_7F_EventScript_RivalScene
-	end
-
-SilphCo_7F_EventScript_RivalTriggerBottom::
-	lockall
-	setvar VAR_TEMP_1, 1
-	goto SilphCo_7F_EventScript_RivalScene
-	end
-
-SilphCo_7F_EventScript_RivalScene::
-	textcolor NPC_TEXT_COLOR_MALE
-	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
-	applymovement LOCALID_SILPH_CO_RIVAL, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
-	applymovement LOCALID_SILPH_CO_RIVAL, Common_Movement_Delay48
-	waitmovement 0
-	msgbox SilphCo_7F_Text_RivalWhatKeptYou
-	call_if_eq VAR_TEMP_1, 0, SilphCo_7F_EventScript_RivalApproachTop
-	call_if_eq VAR_TEMP_1, 1, SilphCo_7F_EventScript_RivalApproachBottom
-	msgbox SilphCo_7F_Text_RivalIntro
-	setvar VAR_LAST_TALKED, LOCALID_SILPH_CO_RIVAL
-	call_if_eq VAR_STARTER_MON, 2, SilphCo_7F_EventScript_RivalSquirtle
-	call_if_eq VAR_STARTER_MON, 1, SilphCo_7F_EventScript_RivalBulbasaur
-	call_if_eq VAR_STARTER_MON, 0, SilphCo_7F_EventScript_RivalCharmander
-	msgbox SilphCo_7F_Text_RivalPostBattle
-	closemessage
-	playbgm MUS_RG_RIVAL_EXIT, 0
-	call_if_eq VAR_TEMP_1, 0, SilphCo_7F_EventScript_RivalExitTop
-	call_if_eq VAR_TEMP_1, 1, SilphCo_7F_EventScript_RivalExitBottom
-	playse SE_WARP_IN
-	fadedefaultbgm
-	removeobject LOCALID_SILPH_CO_RIVAL
-	waitse
-	setvar VAR_MAP_SCENE_SILPH_CO_7F, 1
-	releaseall
-	end
-
-SilphCo_7F_EventScript_RivalApproachTop::
-	closemessage
-	applymovement LOCALID_SILPH_CO_RIVAL, SilphCo_7F_Movement_RivalApproachTop
-	waitmovement 0
-	return
-
-SilphCo_7F_EventScript_RivalApproachBottom::
-	return
-
-SilphCo_7F_EventScript_RivalSquirtle::
-	trainerbattle_no_intro TRAINER_RIVAL_SILPH_SQUIRTLE, SilphCo_7F_Text_RivalDefeat
-	return
-
-SilphCo_7F_EventScript_RivalBulbasaur::
-	trainerbattle_no_intro TRAINER_RIVAL_SILPH_BULBASAUR, SilphCo_7F_Text_RivalDefeat
-	return
-
-SilphCo_7F_EventScript_RivalCharmander::
-	trainerbattle_no_intro TRAINER_RIVAL_SILPH_CHARMANDER, SilphCo_7F_Text_RivalDefeat
-	return
-
-SilphCo_7F_EventScript_RivalExitTop::
-	applymovement LOCALID_SILPH_CO_RIVAL, SilphCo_7F_Movement_RivalExitTop
-	waitmovement 0
-	return
-
-SilphCo_7F_EventScript_RivalExitBottom::
-	applymovement LOCALID_SILPH_CO_RIVAL, SilphCo_7F_Movement_RivalExitBottom
-	waitmovement 0
-	return
-
-SilphCo_7F_Movement_RivalApproachTop::
-	walk_up
-	step_end
-
-SilphCo_7F_Movement_RivalExitTop::
-	walk_right
-	walk_right
-	walk_right
-	walk_up
-	delay_16
-	step_end
-
-SilphCo_7F_Movement_RivalExitBottom::
-	walk_left
-	walk_up
-	walk_up
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	delay_16
-	step_end
-
 SilphCo_7F_EventScript_LaprasGuy::
 	lock
 	faceplayer
@@ -261,37 +166,6 @@ SilphCo_7F_Text_ReallyDangerousHere::
 SilphCo_7F_Text_VisitorsWelcome::
 	.string "We've had visitors again since\n"
 	.string "SILPH reopened. Welcome!$"
-
-SilphCo_7F_Text_RivalWhatKeptYou::
-	.string "{RIVAL}: What kept you, {PLAYER}?$"
-
-SilphCo_7F_Text_RivalIntro::
-	.string "{RIVAL}: Hahaha! I thought you'd\n"
-	.string "turn up if I waited here!\p"
-	.string "I guess TEAM ROCKET slowed you\n"
-	.string "down! Not that I care!\p"
-	.string "I saw you in SAFFRON, so I decided\n"
-	.string "to see if you got better!$"
-
-SilphCo_7F_Text_RivalDefeat::
-	.string "Oh, man!\n"
-	.string "So, you are ready for BOSS\l"
-	.string "ROCKET!$"
-
-SilphCo_7F_Text_RivalPostBattle::
-	.string "Well, {PLAYER}!\n"
-	.string "I'm moving on up and ahead!\p"
-	.string "By checking my POKéDEX, I'm\n"
-	.string "starting to see what's strong and\l"
-	.string "how they evolve!\p"
-	.string "Am I a genius or what?\p"
-	.string "I'm going to the POKéMON LEAGUE to\n"
-	.string "boot out the ELITE FOUR.\p"
-	.string "I'll become the world's most\n"
-	.string "powerful TRAINER!\p"
-	.string "{PLAYER}, well, good luck to you!\n"
-	.string "Don't sweat it!\l"
-	.string "Smell ya!$"
 
 SilphCo_7F_Text_FloorSign::
 	.string "SILPH CO. HEAD OFFICE\n"

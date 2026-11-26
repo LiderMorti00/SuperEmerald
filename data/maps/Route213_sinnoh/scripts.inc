@@ -206,37 +206,6 @@ Route213_Text_PtNpc3::
 	.string "My instincts tell me that, but how am I\n"
 	.string "supposed to climb up?$"
 
-Route213_EventScript_SNBomb::
-	lock
-	msgbox Route213_EventScript_SNBomb_T1, MSGBOX_DEFAULT
-	faceplayer
-	msgbox Route213_EventScript_SNBomb_T2, MSGBOX_DEFAULT
-	msgbox Route213_EventScript_SNBomb_T3, MSGBOX_DEFAULT
-	release
-	end
-
-Route213_EventScript_SNBomb_T3::
-	.string "But, boy, this GALACTIC Bomb packs a\n"
-	.string "pretty big wallop.\p"
-	.string "With this baby here there's not much we\n"
-	.string "can't blow up.\p"
-	.string "I wonder what they have planned for\n"
-	.string "this?$"
-
-Route213_EventScript_SNBomb_T2::
-	.string "Graw! You were eavesdropping! I was\n"
-	.string "just thinking out loud!\p"
-	.string "But I'm not going to waste my energy\n"
-	.string "knocking you around…$"
-
-Route213_EventScript_SNBomb_T1::
-	.string "We needed the energy from the VALLEY\n"
-	.string "WINDWORKS to make this…\p"
-	.string "It would take a scientific genius to\n"
-	.string "make something like this…\p"
-	.string "Therefore, our boss, who made this, is a\n"
-	.string "scientific mechanical genius!$"
-
 Route213_EventScript_SNHoneyTree::
 	lock
 	goto_if_ne VAR_SN_HONEY_TREE, 10, Route213_EventScript_SNHoneyTree_Fresh

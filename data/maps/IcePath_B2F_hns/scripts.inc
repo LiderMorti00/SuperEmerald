@@ -1,7 +1,6 @@
 IcePath_B2F_hns_MapScripts::
 	.byte 0
 
-
 IcePath_B2F_EventScript_Item_MaxPotion::
 	finditem ITEM_MAX_POTION
 	end

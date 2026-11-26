@@ -6,14 +6,6 @@ OlivineCity_PortInside_hns_OnFrame:
 	map_script_2 VAR_SE_JOHTO_ARRIVAL, 1, SE_EventScript_OlivineJasmineArrival
 	.2byte 0
 
-OlivinePort_Text_AskBoard::
-    .string "Welcome to FAST SHIP S.S.AQUA.\p"
-    .string "Will you be boarding today?$"
-
-SE_J_OlivineCity_PortInside_hns_OlivinePort_EventScript_Sailor::
-	msgbox OlivinePort_Text_AskBoard, MSGBOX_NPC
-	end
-
 OlivinePort_EventScript_Youngster::
 	msgbox OlivinePort_Text_Youngster, MSGBOX_NPC
 	end

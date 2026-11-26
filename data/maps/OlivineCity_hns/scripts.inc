@@ -1,7 +1,6 @@
 OlivineCity_hns_MapScripts::
 	.byte 0
 
-
 OlivineCity_EventScript_Youngster::
 	lock
 	faceplayer

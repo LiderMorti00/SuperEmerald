@@ -14,10 +14,6 @@ KurtsHouse_Text_KurtAskYouHaveAnApricorn::
 	.string "KURT: You have BERRIES for me?\p"
 	.string "Fine! I'll turn them into POKé BALLS.$"
 
-SE_J_AzaleaTown_KurtsHouse_hns_AzaleaTown_KurtsHouse_EventScript_Kurt::
-	msgbox KurtsHouse_Text_KurtAskYouHaveAnApricorn, MSGBOX_NPC
-	end
-
 AzaleaTown_KurtsHouse_EventScript_CelebiStatue::
 	msgbox KurtsHouse_Text_CelebiStatue, MSGBOX_SIGN
 	closemessage

@@ -1,7 +1,6 @@
 SproutTower_3F_hns_MapScripts::
 	.byte 0
 
-
 SproutTower_3F_EventScript_SageNeal::
 	trainerbattle_single TRAINER_NEAL_HNS, SproutTower_Text_SageNeal_Seen, SproutTower_Text_SageNeal_Beaten
 	msgbox SproutTower_Text_SageNeal_AfterBattle, MSGBOX_AUTOCLOSE

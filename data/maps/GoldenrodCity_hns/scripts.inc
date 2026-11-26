@@ -92,13 +92,6 @@ GoldenrodCity_Text_CooltrainerF1_Cleared::
 	.string "Was that man in black really part\n"
 	.string "of TEAM ROCKET? I can't believe it!$"
 
-GoldenrodCity_Text_RocketScout1::
-	.string "So this is the RADIO TOWER…$"
-
-SE_J_GoldenrodCity_hns_GoldenrodCity_EventScript_RocketScout::
-	msgbox GoldenrodCity_Text_RocketScout1, MSGBOX_NPC
-	end
-
 GoldenrodCity_EventScript_PokefanM::
 	lock
 	faceplayer

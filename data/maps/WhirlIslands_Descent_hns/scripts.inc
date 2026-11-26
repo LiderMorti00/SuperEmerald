@@ -1,7 +1,6 @@
 WhirlIslands_Descent_hns_MapScripts::
 	.byte 0
 
-
 WhirlIslands_Descent_EventScript_Item_PP_Max::
 	finditem ITEM_PP_MAX
 	end

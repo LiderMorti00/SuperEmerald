@@ -27,19 +27,6 @@ AzaleaTown_Text_GrampsAfter::
 	.string "Knowing them, they could've just\n"
 	.string "been goofing off somewhere.$"
 
-AzaleaTown_EventScript_Rocket2::
-	lock
-	faceplayer
-	msgbox AzaleaTown_Text_Rocket2, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-AzaleaTown_Text_Rocket2::
-	.string "Do you know about SLOWPOKETAIL?\n"
-	.string "I heard it's tasty!\p"
-	.string "Aren't you glad I told you that?$"
-
 AzaleaTown_EventScript_Youngster::
 	lock
 	faceplayer

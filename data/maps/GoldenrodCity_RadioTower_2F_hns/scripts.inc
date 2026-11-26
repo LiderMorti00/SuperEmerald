@@ -44,18 +44,6 @@ SE_J_GoldenrodCity_RadioTower_2F_hns_GoldenrodCity_RadioTower_2F_EventScript_Bue
 	msgbox GoldenrodCity_RadioTower_2F_Text_BuenaAskPassword, MSGBOX_NPC
 	end
 
-GoldenrodCity_RadioTower_2F_EventScript_Policeman::
-	lock
-	faceplayer
-	msgbox GoldenrodCity_RadioTower_2F_Text_Policeman, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-GoldenrodCity_RadioTower_2F_Text_Policeman::
-	.string "Restricted access beyond this\n"
-	.string "point.$"
-
 GoldenrodCity_RadioTower_2F_EventScript_Sign1::
 	lock
 	msgbox GoldenrodCity_RadioTower_2F_Text_SalesSign, MSGBOX_SIGN

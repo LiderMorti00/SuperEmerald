@@ -1,7 +1,6 @@
 TohjoFalls_GiovanniRoom_hns_MapScripts::
 	.byte 0
 
-
 TohjoFalls_GiovanniRoom_EventScript_Radio::
 	msgbox TohjoFalls_GiovanniRoom_Text_RadioObject, MSGBOX_SIGN
 	end

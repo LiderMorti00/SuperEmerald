@@ -254,23 +254,6 @@ HearthomeCity_EventScript_PtNpc17::
 HearthomeCity_Text_PtNpc17_0::
 	.string "Papa! Mama!$"
 
-HearthomeCity_EventScript_SNGymBlock::
-	msgbox HearthomeCity_EventScript_SNGymBlock_T, MSGBOX_NPC
-	end
-
-HearthomeCity_EventScript_SNGymBlock_T::
-	.string "Hey, there! How's it going, TRAINER?\p"
-	.string "You being here tells me you're going to\n"
-	.string "challenge the GYM LEADER.\p"
-	.string "Well… I hate to break it to you, but\n"
-	.string "that's impossible.\p"
-	.string "You're questioning why, and the answer\n"
-	.string "is: she's not here.\p"
-	.string "Not to worry, though. We know she's at\n"
-	.string "the CONTEST Hall.\p"
-	.string "Come back another time, OK? I'll be\n"
-	.string "waiting right here.$"
-
 HearthomeCity_EventScript_PtSign1::
 	msgbox HearthomeCity_Text_PtSign1, MSGBOX_SIGN
 	end

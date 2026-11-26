@@ -1,44 +1,6 @@
 GalacticHQ_1F_sinnoh_MapScripts::
 	.byte 0
 
-GalacticHQ_1F_EventScript_Grunt::
-	trainerbattle_single TRAINER_GRUNT_SEAFLOOR_CAVERN_3_SINNOH, GalacticHQ_1F_Text_GruntIntro, GalacticHQ_1F_Text_GruntDefeat
-	msgbox GalacticHQ_1F_Text_GruntPost, MSGBOX_AUTOCLOSE
-	end
-
-GalacticHQ_1F_Text_GruntPost::
-	.string "In our HQ, we get around by taking warp\n"
-	.string "panels.\p"
-	.string "I'd like to see you figure out how they\n"
-	.string "connect.$"
-
-GalacticHQ_1F_Text_GruntDefeat::
-	.string "A tough little TRAINER is what you are…$"
-
-GalacticHQ_1F_Text_GruntIntro::
-	.string "Who do you think you are? Desecrating\n"
-	.string "the halls of our HQ?!$"
-
-GalacticHQ_1F_EventScript_Fredrick::
-	trainerbattle_single TRAINER_GABRIELLE_1_SINNOH, GalacticHQ_1F_Text_FredrickIntro, GalacticHQ_1F_Text_FredrickDefeat
-	msgbox GalacticHQ_1F_Text_FredrickPost, MSGBOX_AUTOCLOSE
-	end
-
-GalacticHQ_1F_Text_FredrickPost::
-	.string "Our boss is trying to create an\n"
-	.string "entirely new world.\p"
-	.string "A world only for us! For TEAM GALACTIC!$"
-
-GalacticHQ_1F_Text_FredrickDefeat::
-	.string "You and your POKéMON weren't part of\n"
-	.string "my calculations…$"
-
-GalacticHQ_1F_Text_FredrickIntro::
-	.string "Hey, now! Our HQ is a state-of-the- art\n"
-	.string "facility!\p"
-	.string "A snot-nosed kid like you ought to\n"
-	.string "keep your dirty hands to yourself!$"
-
 GalacticHQ_1F_EventScript_PtNpc1::
 	lock
 	faceplayer

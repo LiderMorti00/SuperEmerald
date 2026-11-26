@@ -403,34 +403,6 @@
       "flag": "0"
     },
     {
-      "local_id": "LOCALID_SN_BOMB_GRUNT",
-      "graphics_id": "OBJ_EVENT_GFX_SINNOH_GALAXY_GRUNT_M",
-      "x": 55,
-      "y": 18,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route213_EventScript_SNBomb",
-      "flag": "FLAG_SN_HIDE_BOMB"
-    },
-    {
-      "local_id": "LOCALID_SN_BOMB_LOOKER",
-      "graphics_id": "OBJ_EVENT_GFX_SINNOH_LOOKER",
-      "x": 54,
-      "y": 18,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x0",
-      "flag": "FLAG_SN_HIDE_BOMB"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 44,
       "y": 30,

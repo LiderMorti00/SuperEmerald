@@ -1,7 +1,6 @@
 Route42_hns_MapScripts::
 	.byte 0
 
-
 Route42_EventScript_Item_SuperPotion::
 	finditem ITEM_SUPER_POTION
 	end

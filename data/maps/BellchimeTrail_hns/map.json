@@ -680,21 +680,6 @@
       "flag": "FLAG_NIGHT_POKEMON"
     },
     {
-      "local_id": "LOCALID_BELLCHIME_MORTY",
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_MORTY_HNS",
-      "x": 54,
-      "y": 59,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x0",
-      "flag": "FLAG_HIDE_BELLCHIME_MORTY"
-    },
-    {
       "local_id": "LOCALID_SE_LEG_PECHARUNT",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(PECHARUNT)",

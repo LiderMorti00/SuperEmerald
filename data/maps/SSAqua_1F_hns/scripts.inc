@@ -2,7 +2,6 @@ SSAqua_1F_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, SSAqua_1F_OnFrame
 	.byte 0
 
-
 SSAqua_1F_EventScript_Sailor3::
 	msgbox SSAqua_1F_Text_Sailor3, MSGBOX_NPC
 	end

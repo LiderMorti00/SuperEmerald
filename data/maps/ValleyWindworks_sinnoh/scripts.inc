@@ -1,38 +1,6 @@
 ValleyWindworks_sinnoh_MapScripts::
 	.byte 0
 
-ValleyWindworks_EventScript_Looker::
-	lock
-	faceplayer
-	msgbox ValleyWindworks_Text_Looker, MSGBOX_DEFAULT
-	closemessage
-	fadescreenswapbuffers FADE_TO_BLACK
-	removeobject LOCALID_WINDWORKS_LOOKER
-	setflag FLAG_HIDE_WINDWORKS_LOOKER
-	fadescreenswapbuffers FADE_FROM_BLACK
-	release
-	end
-
-ValleyWindworks_Text_Looker::
-	.string "LOOKER: Ah, yes. It is you, yes.\p"
-	.string "I have heard that the TEAM GALACTIC\n"
-	.string "appeared at this power plant.\p"
-	.string "I have, therefore, come running. So,\n"
-	.string "the TEAM GALACTIC. Where are they?\p"
-	.string "…\p"
-	.string "You have run them off, you say? You\n"
-	.string "are a TRAINER, but…?\p"
-	.string "Very well! I shall go investigate\n"
-	.string "inside!\p"
-	.string "LOOKER: Magnificent! Yes, it is! What\n"
-	.string "you have said, it is all true!\p"
-	.string "Superb! Though you are young, you are\n"
-	.string "a TRAINER through and through!\p"
-	.string "Very well! I shall pursue the culprits!\p"
-	.string "I have received tips that the Team\n"
-	.string "GALACTIC hideout is in ETERNA CITY.\p"
-	.string "To there, I must be off!$"
-
 ValleyWindworks_EventScript_SNDRIFLOON::
 	lock
 	faceplayer

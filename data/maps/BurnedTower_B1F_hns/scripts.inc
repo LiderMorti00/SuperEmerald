@@ -3,7 +3,6 @@ BurnedTower_B1F_hns_MapScripts::
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, SE_BurnedTowerB1F_OnFrame
 	.byte 0
 
-
 BurnedTower_B1F_EventScript_Item_UltraBall::
 	finditem ITEM_ULTRA_BALL
 	end

@@ -1,7 +1,6 @@
 CianwoodCity_hns_MapScripts::
 	.byte 0
 
-
 CianwoodCity_EventScript_PokefanM::
 	lock
 	faceplayer
@@ -50,19 +49,6 @@ CianwoodCity_Text_ChucksWifeEasierToFly::
 SE_J_CianwoodCity_hns_CianwoodCity_EventScript_ChucksWife::
 	msgbox CianwoodCity_Text_ChucksWifeEasierToFly, MSGBOX_NPC
 	end
-
-CianwoodCity_EventScript_Engineer::
-	lock
-	faceplayer
-	msgbox CianwoodCity_Text_Engineer, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
-CianwoodCity_Text_Engineer::
-	.string "This path is under construction.\n"
-	.string "We're getting the new SAFARI ZONE\l"
-	.string "up and running!$"
 
 CianwoodCity_EventScript_CitySign::
 	lock

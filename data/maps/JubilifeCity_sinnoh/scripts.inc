@@ -237,19 +237,6 @@ JubilifeCity_Text_CampaignComplete::
 	.string "There's our quiz winner!\n"
 	.string "How's that CATCHING CHARM working?$"
 
-JubilifeCity_EventScript_Looker::
-	lock
-	faceplayer
-	msgbox JubilifeCity_Text_Looker, MSGBOX_DEFAULT
-	release
-	end
-
-JubilifeCity_Text_Looker::
-	.string "LOOKER: Hello, my friend. I am keeping\n"
-	.string "an eye on this city.\p"
-	.string "Have you visited the TRAINERS' SCHOOL?\n"
-	.string "Even a CHAMPION may learn something.$"
-
 JubilifeCity_EventScript_President::
 	lock
 	faceplayer
@@ -282,9 +269,6 @@ JubilifeCity_Text_PresidentPokenav::
 JubilifeCity_EventScript_SetStory16::
 	setvar VAR_SN_SINNOH_STORY, 16
 	return
-
-JubilifeCity_Text_ReceivedPokenav::
-	.string "{PLAYER} received the POKéNAV!$"
 
 JubilifeCity_Text_PresidentCoupons::
 	.string "Wonderful! You found all three\n"

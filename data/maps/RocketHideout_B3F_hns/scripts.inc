@@ -1,19 +1,6 @@
 RocketHideout_B3F_hns_MapScripts::
 	.byte 0
 
-RocketHideout_B3F_EventScript_Murkrow::
-	lock
-	faceplayer
-	waitse
-	playmoncry SPECIES_MURKROW, CRY_MODE_NORMAL
-	msgbox RocketHideout_B3F_Text_MurkrowSpeak1, MSGBOX_DEFAULT
-	waitmoncry
-	release
-	end
-
-RocketHideout_B3F_Text_MurkrowSpeak1::
-    .string "MURKROW: Hail GIOVANNI.$"
-
 RocketHideout_B3F_EventScript_Item_Protein::
 	finditem ITEM_PROTEIN
 	end

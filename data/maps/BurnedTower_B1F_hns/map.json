@@ -159,21 +159,6 @@
       "flag": "0"
     },
     {
-      "local_id": "LOCALID_BURNEDTOWER2_EUSINE",
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_EUSINE_HNS",
-      "x": 25,
-      "y": 9,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "FLAG_HIDE_BURNED_TOWER_B1F_EUSINE"
-    },
-    {
       "local_id": "LOCALID_SE_LEG_CHI_YU",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(CHI_YU)",

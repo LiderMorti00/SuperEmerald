@@ -1,7 +1,6 @@
 Route39_hns_MapScripts::
 	.byte 0
 
-
 Route39_EventScript_Norman::
 	trainerbattle_single TRAINER_NORMAN_HNS, Route39_Text_PsychicNormanSeen, Route39_Text_PsychicNormanBeaten
 	msgbox Route39_Text_PsychicNormanAfter, MSGBOX_AUTOCLOSE

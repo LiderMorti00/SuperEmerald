@@ -1,7 +1,6 @@
 Route36_hns_MapScripts::
 	.byte 0
 
-
 Route36_EventScript_Lass::
 	lock
 	faceplayer
@@ -78,13 +77,6 @@ Route36_Text_SchoolboyAlanAfter::
 SE_J_Route36_hns_Route36_EventScript_Schoolboy::
 	trainerbattle_single TRAINER_ALAN_HNS, Route36_Text_SchoolboyAlan1Seen, Route36_Text_SchoolboyAlan1Beaten
 	msgbox Route36_Text_SchoolboyAlanAfter, MSGBOX_AUTOCLOSE
-	end
-
-Route36_Text_OddTree::
-	.string "A weird tree is blocking the way.$"
-
-SE_J_Route36_hns_Route36_EventScript_SudoWoodo::
-	msgbox Route36_Text_OddTree, MSGBOX_NPC
 	end
 
 Route36_EventScript_Sign::
