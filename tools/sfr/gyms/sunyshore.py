@@ -39,23 +39,43 @@ CABLE = {1: (OR, ORD), 2: (CY, CYD)}
 
 
 def plate(edges, grate=False):
-    """Dark metal walkway; light trim where it meets the void, grating on the narrow catwalks."""
+    """Raised dark-metal walkway. Top: riveted plate (or grating on narrow catwalks), light rim
+    where it meets the sea; on the south side the walkway's front face shows (rows 12-15)."""
     c = Canvas(PM)
     if grate:
         for y in range(16):
             for x in range(16):
                 c.px(x, y, PD if (x % 4 == 0 or y % 4 == 0) else NV2 if (x + y) % 2 else PM)
     else:
-        for y in (0, 8):
-            c.hline(0, 15, y, PD)
-        c.vline(7, 1, 7, PD); c.vline(15, 9, 15, PD)
-        for x, y in ((2, 2), (12, 2), (5, 11), (10, 13)):
-            c.px(x, y, PL)
-    trim = {'n': lambda i: (i, 0), 's': lambda i: (i, 15), 'w': lambda i: (0, i), 'e': lambda i: (15, i)}
-    inner = {'n': lambda i: (i, 1), 's': lambda i: (i, 14), 'w': lambda i: (1, i), 'e': lambda i: (14, i)}
-    for e in edges:
-        for i in range(16):
-            c.px(*trim[e](i), PW); c.px(*inner[e](i), PH)
+        c.hline(0, 15, 0, PL); c.vline(0, 0, 15, PL); c.hline(0, 15, 15, PD); c.vline(15, 0, 15, PD)
+        for x, y in ((2, 2), (13, 2), (2, 13), (13, 13)):
+            c.px(x, y, PH); c.px(x + 1, y + 1, PD)
+        for i in range(4, 12):
+            c.px(i, 15 - i, PL if i % 2 else PM)
+    if 'n' in edges:
+        c.hline(0, 15, 0, BK); c.hline(0, 15, 1, PW); c.hline(0, 15, 2, PH)
+    if 'w' in edges:
+        c.vline(0, 0, 15, BK); c.vline(1, 0, 15, PW)
+    if 'e' in edges:
+        c.vline(15, 0, 15, BK); c.vline(14, 0, 15, PH)
+    if 's' in edges:
+        c.hline(0, 15, 11, PW)
+        for y in range(12, 16):
+            c.hline(0, 15, y, PD if y < 15 else BK)
+        for x in range(1, 16, 5):
+            c.px(x, 13, PL)
+        if 'w' in edges: c.vline(0, 11, 15, BK)
+        if 'e' in edges: c.vline(15, 11, 15, BK)
+    return c
+
+
+def sea_shadow(w=True, e=True):
+    """Sea right below a walkway's front face: the cast shadow and a line of foam."""
+    c = sea()
+    for y in range(0, 4):
+        c.hline(0, 15, y, BK if y < 2 else NV1)
+    for x in range(0, 16, 3):
+        c.px(x, 4, NV3); c.px(x + 1, 4, PH)
     return c
 
 
@@ -97,19 +117,31 @@ def turntable(missing, sector):
     for y in range(48):
         for x in range(48):
             g[y][x] = sea_c.p[y % 16][x % 16]
-            r = ((x - 23.5) ** 2 + (y - 23.5) ** 2) ** 0.5
-            if r <= 22.5:
-                g[y][x] = PW if r > 21.5 else YS if r > 20 and ((x + y) // 3) % 2 else BK if r > 20 else PD if r > 17 else PM
-                if 17 < r <= 20 and (x * 7 + y * 3) % 11 == 0:
+            r = ((x - 23.5) ** 2 + (y - 21.5) ** 2) ** 0.5
+            rf = ((x - 23.5) ** 2 + (y - 24.5) ** 2) ** 0.5
+            if r > 21.5 and rf <= 21.5 and y > 21:          # the base's front face (thickness 3px)
+                g[y][x] = BK if rf > 20.5 else PD if (x % 6) else PL
+            if r <= 21.5:
+                g[y][x] = PW if r > 20.5 else YS if r > 19 and ((x + y) // 3) % 2 else BK if r > 19 else PD if r > 16 else PM
+                if 16 < r <= 19 and (x * 7 + y * 3) % 11 == 0:
                     g[y][x] = PL
     arms = {0: (19, 0, 28, 18), 1: (30, 19, 47, 28), 2: (19, 30, 28, 47), 3: (0, 19, 18, 28)}
     for d, (x0, y0, x1, y1) in arms.items():
-        if d == missing:
+        if d == missing:                          # retracted arm: an open slot in the base
+            for y in range(y0, y1 + 1):
+                for x in range(x0, x1 + 1):
+                    r = ((x - 23.5) ** 2 + (y - 21.5) ** 2) ** 0.5
+                    if r <= 20.5:
+                        g[y][x] = BK if (x in (x0, x1) or y in (y0, y1)) else NV1 if (x + y) % 3 else NV2
             continue
         for y in range(y0, y1 + 1):
             for x in range(x0, x1 + 1):
-                edge = (x in (x0, x1)) if d in (0, 2) else (y in (y0, y1))
+                edge = (x in (x0, x1)) if d in (0, 2) else (y == y0)
                 g[y][x] = PW if edge else (PD if (x % 4 == 0 or y % 4 == 0) else PM)
+                if d in (1, 3) and y >= y1 - 2:          # side arms show their front face
+                    g[y][x] = BK if y == y1 else PD
+                if d in (0, 2) and x == x1:
+                    g[y][x] = BK
     for y in range(16, 32):                  # hub
         for x in range(16, 32):
             r = ((x - 23.5) ** 2 + (y - 23.5) ** 2) ** 0.5
@@ -130,19 +162,60 @@ def cut(g, cx, cy):
 
 
 def floor_button(sector, reverse):
+    """A raised round switch on the walkway: hazard-striped ring, dark collar, coloured cap
+    with a turning arrow (backwards for the reverse switch) and a shadow on its south side."""
     c = plate('', False)
     col, dk = CABLE[sector]
     for y in range(16):
         for x in range(16):
-            r = ((x - 7.5) ** 2 + (y - 7.5) ** 2) ** 0.5
-            if r <= 7:
-                c.px(x, y, BK if r > 6 else dk if r > 4.5 else col)
-    pts = [(5, 6), (6, 5), (7, 5), (8, 5), (9, 6), (10, 7), (10, 8), (9, 9)]       # turning arrow
-    head = [(4, 7), (5, 7), (6, 7)] if not reverse else [(9, 10), (10, 10), (8, 10)]
-    for x, y in pts:
+            r = ((x - 7.5) ** 2 + (y - 7.0) ** 2) ** 0.5
+            rs = ((x - 7.5) ** 2 + (y - 9.0) ** 2) ** 0.5
+            if r > 7.5 and rs <= 7.5:
+                c.px(x, y, BK)                                   # shadow / side of the base
+            if r <= 7.5:
+                ang = (x - 7.5) + (y - 7)
+                c.px(x, y, BK if r > 6.8 else (YS if int((x + y) / 2) % 2 else BK) if r > 5.3
+                     else PD if r > 4.6 else dk if r > 3.6 else col)
+    c.px(6, 5, PW); c.px(5, 6, PW)                               # highlight on the cap
+    arrow = [(9, 5), (10, 6), (10, 7), (9, 8)]
+    for x, y in arrow:
         c.px(15 - x if reverse else x, y, PW)
-    for x, y in ([(4, 6), (4, 7), (5, 7)] if not reverse else [(11, 6), (11, 7), (10, 7)]):
+    tip = [(9, 9), (10, 9), (8, 8)] if not reverse else [(6, 9), (5, 9), (7, 8)]
+    for x, y in tip:
         c.px(x, y, PW)
+    return c
+
+
+def room(cx, cy):
+    """VOLKNER's control room shell, 8x6 tiles (x5-12, y0-5): steel wall with a lightning
+    emblem and lamps on its face, steel pillars down the sides."""
+    c = Canvas(0)
+    for y in range(16):
+        for x in range(16):
+            X, Y = cx * 16 + x, cy * 16 + y
+            if cy == 0:                                   # wall top
+                v = BK if Y in (0, 15) else PD if Y < 4 else PM if Y < 13 else PD
+                if 4 <= Y < 13 and X % 16 in (0, 15): v = PD
+            elif cy == 1:                                 # wall face
+                v = PL if Y == 16 else PM if Y < 26 else PD
+                if X % 32 in (0, 31) or Y == 31: v = BK
+                if 27 <= Y <= 29: v = YS if ((X + Y) // 2) % 2 else BK       # safety band
+                if 19 <= Y <= 23 and X % 32 in (6, 7, 24, 25): v = CY         # wall lamps
+            else:                                         # side pillars
+                v = PM
+                left = cx == 0
+                edge = 15 if left else 0
+                if x == edge: v = BK
+                elif (left and x >= 12) or (not left and x <= 3): v = PL if x in (12, 3) else PD
+                if y % 8 == 0: v = PD
+            c.px(x, y, v)
+    if cy == 1 and cx in (3, 4):                          # lightning emblem across the middle
+        bolt = [(10, 1), (9, 2), (8, 3), (7, 4), (6, 5), (7, 6), (8, 6), (9, 6), (8, 7), (7, 8), (6, 9), (5, 10)]
+        for bx, by in bolt:
+            X = 16 + bx - (cx - 3) * 16
+            for dx in (0, 1, 2):
+                if 0 <= X - 8 + dx < 16:
+                    c.px(X - 8 + dx, by + 1, PW if dx == 1 else CY)
     return c
 
 
@@ -157,6 +230,11 @@ def build_tileset(walk_kinds, cables):
             stripes(c, 12, 15)
         ts.add('walk_%s%s%s' % ('g' if grate else 'p', edges or '0', '_y' if stripe else ''), [(c, P2), None, None])
     ts.add('sea', [(sea(), P2), None, None])
+    ts.add('sea_sh', [(sea_shadow(), P2), None, None])
+    for cy in range(6):
+        for cx in range(8):
+            if cy < 2 or cx in (0, 7):
+                ts.add('room_%d_%d' % (cx, cy), [(room(cx, cy), P2), None, None])
     ts.replace(0x216, [(plate('', False), P2), None, ('mt', 0x216, 2)])      # statues stand on metal
     ts.replace(0x21e, [(plate('', False), P2), ('mt', 0x21e, 1), None])
     for (dirs, sector, on_walk) in sorted(cables):
@@ -336,6 +414,10 @@ def main():
             elif (x, y) in CABLES:
                 d_, sec = CABLES[(x, y)]
                 line += key(n('cable%d_%s' % (sec, d_)), 1, 0)
+            elif ch in 'ABCDEFGHIJKN':
+                line += key(n('room_%d_%d' % (x - 5, y)), 1, 0)
+            elif ch == '#' and y > 0 and (plan[y - 1][x] in '.bBTtmM' or (x, y - 1) in cells):
+                line += key(n('sea_sh'), 1, 0)
             elif (x, y) in cells:
                 grate, edges, s_ = cells[(x, y)]
                 line += key(n('walk_%s%s%s' % ('g' if grate else 'p', edges or '0', '_y' if s_ else '')), 0, 3)
