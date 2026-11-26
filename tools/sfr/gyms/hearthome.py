@@ -148,11 +148,27 @@ def door_south():
 
 
 def plaque(sym):
-    """Wallpaper with a framed symbol plaque (symbol palette)."""
+    """Big symbol plaque above a door: gold frame with silver studs and a halo of light on the
+    wallpaper around it, so the symbol stands out of the dark (symbol palette)."""
     c = wallpaper()
-    c.rect(2, 2, 13, 13, GOLD)
-    c.rect(3, 3, 12, 12, K1)
+    c.rect(0, 0, 15, 15, K5); c.rect(1, 1, 14, 14, K6)
+    c.rect(1, 1, 14, 14, GOLD)
+    c.rect(2, 2, 13, 13, K1)
+    for x, y in ((1, 1), (14, 1), (1, 14), (14, 14)):
+        c.px(x, y, SIL)
     draw_symbol(c, sym, 3, 3)
+    return c
+
+
+def door_jamb(right):
+    """Wainscot beside a door: a gold pilaster framing the opening and a lit wall sconce."""
+    c = wainscot()
+    x0 = 0 if right else 12
+    c.rect(x0, 0, x0 + 3, 15, GD); c.rect(x0 + 1, 0, x0 + 2, 15, GL)
+    c.vline(x0 + (3 if right else 0), 0, 15, K1)
+    sx = 8 if right else 4
+    c.rect(sx, 6, sx + 2, 8, GD); c.px(sx + 1, 5, FY); c.px(sx + 1, 4, FO); c.px(sx + 1, 3, FY)
+    c.px(sx, 4, K6); c.px(sx + 2, 4, K6)
     return c
 
 
@@ -288,6 +304,8 @@ def build_tileset():
     ts.add('bottom', [g(bottom_wall()), None, None])
     ts.add('door_n', [g(door_north()), None, None], DOOR)
     ts.add('door_n_top', [g(door_north_top()), None, None])
+    ts.add('jamb_l', [g(door_jamb(False)), None, None])
+    ts.add('jamb_r', [g(door_jamb(True)), None, None])
     ts.add('door_s', [g(door_south()), None, None], 0x65)
     for sym in ('star', 'moon', 'flame', 'eye'):
         ts.add('plaque_' + sym, [s(plaque(sym)), None, None])
@@ -412,6 +430,11 @@ def main():
     # R1 decoration: a ghost shadow on the floor
     g[Y1 + 5][X0 + 2] = 'g'
     g[Y2 + 5][X0 + 10] = 'g'
+    for y in range(H):                                    # gold pilasters and sconces beside every door
+        for x in range(W):
+            if g[y][x] == 'D':
+                if g[y][x - 1] == 'w': g[y][x - 1] = 'JL'
+                if g[y][x + 1] == 'w': g[y][x + 1] = 'JR'
     # pools of light: in front of every door and around every hint lectern
     lights = []
     for y in range(H):
@@ -437,7 +460,7 @@ def main():
         'D': (n('door_n'), 0, 3), 'n': (n('door_n_top'), 1, 0), 'S': (n('door_s'), 0, 3),
         'Q': (n('lectern'), 1, 3), 'C': (n('candle'), 1, 3), 'E': (n('ped'), 1, 3),
         'G': (n('painting_ghost'), 1, 0), 'K': (n('curtain_l'), 1, 0), 'J': (n('curtain_r'), 1, 0),
-        'Z': (0x21b, 1, 3),
+        'Z': (0x21b, 1, 3), 'JL': (n('jamb_l'), 1, 0), 'JR': (n('jamb_r'), 1, 0),
         '1': (0x205, 0, 3), '2': (0x206, 0, 3), '3': (0x207, 0, 3),
         '4': (0x20d, 1, 0), '5': (0x20e, 1, 0), '6': (0x20f, 1, 0),
     }
