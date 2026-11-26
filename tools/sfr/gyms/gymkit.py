@@ -118,6 +118,9 @@ class Tileset:
                 _, mid0, li = L
                 ents.extend(struct.unpack_from('<4H', self.mt, (mid0 - 0x200) * 24 + li * 8))
                 continue
+            if isinstance(L, tuple) and L and L[0] == 'raw':     # ('raw', [4 tile entries])
+                ents.extend(L[1])
+                continue
             for q in range(4):
                 if L is None:
                     ents.append(0)

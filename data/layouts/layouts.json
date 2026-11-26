@@ -16902,7 +16902,7 @@
       "id": "LAYOUT_PASTORIA_CITY_GYM_SINNOH",
       "name": "PastoriaCity_Gym_Layout_Sinnoh",
       "width": 17,
-      "height": 20,
+      "height": 25,
       "primary_tileset": "gTileset_Building_Sinnoh",
       "secondary_tileset": "gTileset_PastoriaCityGym_Sinnoh",
       "border_filepath": "data/layouts/PastoriaCity_Gym_sinnoh/border.bin",

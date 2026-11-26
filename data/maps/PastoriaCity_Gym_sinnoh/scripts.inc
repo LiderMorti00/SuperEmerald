@@ -1,5 +1,64 @@
+	.include "data/maps/PastoriaCity_Gym_sinnoh/gym_metatiles.inc"
+
 PastoriaCity_Gym_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, PastoriaCity_Gym_OnLoad
 	.byte 0
+
+@ Super Emerald: two water tanks. VAR_TEMP_1 = button 1 (floodgate 8,12 open),
+@ VAR_TEMP_2 = button 2 (bridge 8,5 lowered). Temp vars reset when the player leaves,
+@ so the gym starts closed again; while inside, ON_LOAD redraws the state after battles.
+PastoriaCity_Gym_OnLoad::
+	call_if_eq VAR_TEMP_1, 1, PastoriaCity_Gym_EventScript_DrawGateOpen
+	call_if_eq VAR_TEMP_2, 1, PastoriaCity_Gym_EventScript_DrawBridgeDown
+	end
+
+PastoriaCity_Gym_EventScript_DrawGateOpen::
+	setmetatile 4, 14, METATILE_PastoriaGym_button_on, FALSE
+	setmetatile 7, 12, METATILE_PastoriaGym_wall_lamp_on, TRUE
+	setmetatile 9, 12, METATILE_PastoriaGym_wall_lamp_on, TRUE
+	setmetatile 8, 12, METATILE_PastoriaGym_gate_open, FALSE
+	return
+
+PastoriaCity_Gym_EventScript_DrawBridgeDown::
+	setmetatile 11, 6, METATILE_PastoriaGym_button_on, FALSE
+	setmetatile 7, 5, METATILE_PastoriaGym_post_on, TRUE
+	setmetatile 9, 5, METATILE_PastoriaGym_post_on, TRUE
+	setmetatile 8, 5, METATILE_PastoriaGym_bridge_on, FALSE
+	return
+
+PastoriaCity_Gym_EventScript_Button1::
+	lockall
+	playse SE_SWITCH
+	setvar VAR_TEMP_1, 1
+	call PastoriaCity_Gym_EventScript_DrawGateOpen
+	special DrawWholeMapView
+	waitse
+	delay 8
+	playse SE_DOOR
+	msgbox PastoriaCity_Gym_Text_GateOpened, MSGBOX_DEFAULT
+	releaseall
+	end
+
+PastoriaCity_Gym_EventScript_Button2::
+	lockall
+	playse SE_SWITCH
+	setvar VAR_TEMP_2, 1
+	call PastoriaCity_Gym_EventScript_DrawBridgeDown
+	special DrawWholeMapView
+	waitse
+	delay 8
+	playse SE_M_STRENGTH
+	msgbox PastoriaCity_Gym_Text_BridgeLowered, MSGBOX_DEFAULT
+	releaseall
+	end
+
+PastoriaCity_Gym_Text_GateOpened::
+	.string "Click! The lights by the floodgate\n"
+	.string "turned green and the gate rose!$"
+
+PastoriaCity_Gym_Text_BridgeLowered::
+	.string "Click! The lamps by the ring turned\n"
+	.string "green and a bridge slid into place!$"
 
 
 PastoriaCity_Gym_EventScript_Jacky::
@@ -97,8 +156,8 @@ PastoriaCity_Gym_EventScript_Walter::
 	end
 
 PastoriaCity_Gym_Text_WalterPost::
-	.string "The walkway twists and turns over the\n"
-	.string "water, but don't let it annoy you.\p"
+	.string "Two tanks, two buttons. Step on one\n"
+	.string "and watch what changes!\p"
 	.string "If you lose sight of yourself, that's\n"
 	.string "when you're set to lose.$"
 
@@ -239,9 +298,12 @@ PastoriaCity_Gym_Text_SNGuideInfo::
 	.string "FLOATZEL.\p"
 	.string "Water types are weak to Electric and\n"
 	.string "Grass moves!\p"
-	.string "The whole GYM is a big pool. Follow the\n"
-	.string "walkway over the water and beat his\l"
-	.string "TRAINERS to reach the ring at the top!$"
+	.string "The GYM is two water tanks. Walk to\n"
+	.string "the red button in this tank to raise\l"
+	.string "the floodgate in the middle wall.\p"
+	.string "The button in the upper tank lowers\n"
+	.string "the bridge to WAKE's ring. The lamps\l"
+	.string "turn green when a button works!$"
 
 PastoriaCity_Gym_Text_PtGymGuide::
 	.string "The GYM LEADER WAKE… Uh, I mean\n"
