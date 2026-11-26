@@ -43,6 +43,18 @@ def floor(shadow=0):
     return c
 
 
+def lit_floor(level, shadow=0):
+    """Floor in a pool of candle light (Platinum's lit spots in the dark): level 2 bright, 1 dim."""
+    c = floor(shadow)
+    up = {K1: K2 if level == 1 else K3, K2: K3 if level == 1 else K5, K3: K4 if level == 1 else K6}
+    for y in range(16):
+        for x in range(16):
+            v = c.p[y][x]
+            if v in up:
+                c.p[y][x] = up[v]
+    return c
+
+
 def carpet(edge=None):
     c = Canvas(MM)
     for y in range(16):
@@ -260,6 +272,10 @@ def build_tileset():
     s = lambda c: (c, PS)
     ts.add('floor', [g(floor()), None, None])
     ts.add('floor_sh', [g(floor(6)), None, None])
+    ts.add('floor_lit1', [g(lit_floor(1)), None, None])
+    ts.add('floor_lit2', [g(lit_floor(2)), None, None])
+    ts.add('floor_lit1_sh', [g(lit_floor(1, 6)), None, None])
+    ts.add('floor_lit2_sh', [g(lit_floor(2, 6)), None, None])
     ts.add('floor_ghost', [g(shadow_ghost()), None, None])
     ts.add('carpet', [g(carpet('lr')), None, None])
     ts.add('carpet_sh', [g(carpet('lr')), None, None])
@@ -396,7 +412,24 @@ def main():
     # R1 decoration: a ghost shadow on the floor
     g[Y1 + 5][X0 + 2] = 'g'
     g[Y2 + 5][X0 + 10] = 'g'
+    # pools of light: in front of every door and around every hint lectern
+    lights = []
+    for y in range(H):
+        for x in range(W):
+            if g[y][x] == 'D':
+                lights.append((x, y + 1))
+            elif g[y][x] == 'Q':
+                lights.append((x, y))
+    for y in range(H):
+        for x in range(W):
+            if g[y][x] not in ('.', 'h'):
+                continue
+            d = min(abs(x - lx) + abs(y - ly) for lx, ly in lights)
+            if d <= 2:
+                g[y][x] = ('l2' if d <= 1 else 'l1') + ('s' if g[y][x] == 'h' else '')
     legend = {
+        'l1': (n('floor_lit1'), 0, 3), 'l2': (n('floor_lit2'), 0, 3),
+        'l1s': (n('floor_lit1_sh'), 0, 3), 'l2s': (n('floor_lit2_sh'), 0, 3),
         '#': (n('void'), 1, 0), 't': (n('wall_top'), 1, 0), 'p': (n('wallpaper'), 1, 0),
         'w': (n('wainscot'), 1, 0), 'L': (n('side_l'), 1, 0), 'R': (n('side_r'), 1, 0),
         'b': (n('bottom'), 1, 0), '.': (n('floor'), 0, 3), 'h': (n('floor_sh'), 0, 3),
