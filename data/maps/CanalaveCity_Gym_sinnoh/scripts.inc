@@ -1,5 +1,121 @@
+	.include "data/maps/CanalaveCity_Gym_sinnoh/gym_metatiles.inc"
+
 CanalaveCity_Gym_sinnoh_MapScripts::
 	.byte 0
+
+@ Super Emerald: freight lifts. Each numbered pad is a coord event (VAR_TEMP_0 is always 0);
+@ the ride asks YES/NO and warps inside the gym to the pad with the same number, so the
+@ same pad always rides back.
+CanalaveCity_Gym_EventScript_Lift1Up::
+	lockall
+	msgbox CanalaveCity_Gym_Text_Lift1Up, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CanalaveCity_Gym_EventScript_LiftStay
+	call CanalaveCity_Gym_EventScript_LiftRide
+	warpsilent MAP_CANALAVE_CITY_GYM_SINNOH, 9, 16
+	waitstate
+	end
+
+CanalaveCity_Gym_EventScript_Lift1Down::
+	lockall
+	msgbox CanalaveCity_Gym_Text_Lift1Down, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CanalaveCity_Gym_EventScript_LiftStay
+	call CanalaveCity_Gym_EventScript_LiftRide
+	warpsilent MAP_CANALAVE_CITY_GYM_SINNOH, 0, 16
+	waitstate
+	end
+
+CanalaveCity_Gym_EventScript_Lift2Up::
+	lockall
+	msgbox CanalaveCity_Gym_Text_Lift2Up, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CanalaveCity_Gym_EventScript_LiftStay
+	call CanalaveCity_Gym_EventScript_LiftRide
+	warpsilent MAP_CANALAVE_CITY_GYM_SINNOH, 17, 7
+	waitstate
+	end
+
+CanalaveCity_Gym_EventScript_Lift2Down::
+	lockall
+	msgbox CanalaveCity_Gym_Text_Lift2Down, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CanalaveCity_Gym_EventScript_LiftStay
+	call CanalaveCity_Gym_EventScript_LiftRide
+	warpsilent MAP_CANALAVE_CITY_GYM_SINNOH, 0, 11
+	waitstate
+	end
+
+CanalaveCity_Gym_EventScript_Lift3Up::
+	lockall
+	msgbox CanalaveCity_Gym_Text_Lift3Up, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CanalaveCity_Gym_EventScript_LiftStay
+	call CanalaveCity_Gym_EventScript_LiftRide
+	warpsilent MAP_CANALAVE_CITY_GYM_SINNOH, 0, 3
+	waitstate
+	end
+
+CanalaveCity_Gym_EventScript_Lift3Down::
+	lockall
+	msgbox CanalaveCity_Gym_Text_Lift3Down, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CanalaveCity_Gym_EventScript_LiftStay
+	call CanalaveCity_Gym_EventScript_LiftRide
+	warpsilent MAP_CANALAVE_CITY_GYM_SINNOH, 0, 7
+	waitstate
+	end
+
+CanalaveCity_Gym_EventScript_LiftRide::
+	playse SE_ELEVATOR
+	waitse
+	return
+
+CanalaveCity_Gym_EventScript_LiftStay::
+	releaseall
+	end
+
+CanalaveCity_Gym_EventScript_Panel1::
+	msgbox CanalaveCity_Gym_Text_Panel1, MSGBOX_SIGN
+	end
+
+CanalaveCity_Gym_EventScript_Panel2::
+	msgbox CanalaveCity_Gym_Text_Panel2, MSGBOX_SIGN
+	end
+
+CanalaveCity_Gym_EventScript_Panel3::
+	msgbox CanalaveCity_Gym_Text_Panel3, MSGBOX_SIGN
+	end
+
+CanalaveCity_Gym_Text_Lift1Up::
+	.string "LIFT 1: TEST PLATFORM.\n"
+	.string "Ride it up?$"
+
+CanalaveCity_Gym_Text_Lift1Down::
+	.string "LIFT 1: GROUND FLOOR.\n"
+	.string "Ride it back down?$"
+
+CanalaveCity_Gym_Text_Lift2Up::
+	.string "LIFT 2: MAIN CATWALK.\n"
+	.string "Ride it up?$"
+
+CanalaveCity_Gym_Text_Lift2Down::
+	.string "LIFT 2: GROUND FLOOR.\n"
+	.string "Ride it back down?$"
+
+CanalaveCity_Gym_Text_Lift3Up::
+	.string "LIFT 3: LEADER'S FLOOR.\n"
+	.string "Ride it up?$"
+
+CanalaveCity_Gym_Text_Lift3Down::
+	.string "LIFT 3: MAIN CATWALK.\n"
+	.string "Ride it back down?$"
+
+CanalaveCity_Gym_Text_Panel1::
+	.string "LIFT 1\n"
+	.string "GROUND FLOOR {UP_ARROW}{DOWN_ARROW} TEST PLATFORM$"
+
+CanalaveCity_Gym_Text_Panel2::
+	.string "LIFT 2\n"
+	.string "GROUND FLOOR {UP_ARROW}{DOWN_ARROW} MAIN CATWALK$"
+
+CanalaveCity_Gym_Text_Panel3::
+	.string "LIFT 3\n"
+	.string "MAIN CATWALK {UP_ARROW}{DOWN_ARROW} LEADER'S FLOOR$"
 
 
 CanalaveCity_Gym_EventScript_David::
@@ -25,14 +141,14 @@ CanalaveCity_Gym_EventScript_Jackson::
 
 CanalaveCity_Gym_Text_JacksonPost::
 	.string "I can't keep this up! I'll go back to\n"
-	.string "spinning on the panels.$"
+	.string "oiling the lifts.$"
 
 CanalaveCity_Gym_Text_JacksonDefeat::
 	.string "You've got me feeling down!$"
 
 CanalaveCity_Gym_Text_JacksonIntro::
-	.string "Round and round you go on the arrow\n"
-	.string "panels. Me? I like to battle!$"
+	.string "Up and down you go on the lifts.\n"
+	.string "Me? I like to battle!$"
 
 CanalaveCity_Gym_EventScript_Gary::
 	trainerbattle_single TRAINER_JERRY_5_SINNOH, CanalaveCity_Gym_Text_GaryIntro, CanalaveCity_Gym_Text_GaryDefeat
@@ -258,14 +374,15 @@ CanalaveCity_Gym_Text_SNGuideInfo::
 	.string "MAGNETON, STEELIX and BASTIODON.\p"
 	.string "Steel types are weak to Fire, Fighting\n"
 	.string "and Ground moves!\p"
-	.string "The floor is full of arrow panels that\n"
-	.string "spin you around and send you sliding.\l"
-	.string "The yellow panels stop you.\p"
-	.string "Check where each arrow points to find\n"
-	.string "the way through the maze to BYRON!$"
+	.string "This GYM is a steel workshop with\n"
+	.string "freight lifts. Each pad has a number.\p"
+	.string "LIFT 1 only goes to a test platform.\n"
+	.string "LIFT 2 takes you up to the catwalk,\l"
+	.string "and LIFT 3 at its end goes to BYRON.\p"
+	.string "Step on the same pad to ride back!$"
 
 CanalaveCity_Gym_Text_PtGymGuide::
-	.string "Hey, there! CHAMP-to-be!\p"
+	.string "Hey there, CHAMPION!\p"
 	.string "The GYM LEADER here uses Steel-type\n"
 	.string "POKéMON.\p"
 	.string "Steel-type POKéMON have high Defense,\n"
