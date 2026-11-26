@@ -77,6 +77,10 @@ class Tileset:
             tiles = tiles[:self.state['orig_tiles']]
             mt = mt[:self.state['orig_metatiles'] * 24]
             at = at[:self.state['orig_metatiles'] * 2]
+            if 'orig_mt' in self.state:       # original metatiles may have been redrawn by replace()
+                mt = bytes.fromhex(self.state['orig_mt'])
+            else:
+                self.state['orig_mt'] = mt.hex()
         else:
             # drop trailing empty tiles of the sheet
             while len(tiles) > 1 and all(v == 0 for r in tiles[-1] for v in r):
@@ -89,6 +93,45 @@ class Tileset:
         for i, t in enumerate(self.tiles):
             self._remember(t, i)
         self.names = {}
+        self.state.setdefault('orig_pals', {})
+
+    def free_unused(self, live, redrawn=()):
+        """Reuse the slots of original tiles that no live metatile draws any more.
+        live: metatile ids still used by maps or scripts; redrawn: ids replace() will redraw."""
+        used = {0}
+        for mid in live:
+            if mid < 0x200 or mid in redrawn or (mid - 0x200) * 24 >= self.state['orig_metatiles'] * 24:
+                continue
+            for e in struct.unpack_from('<12H', self.mt, (mid - 0x200) * 24):
+                if e & 0x3FF >= 0x200:
+                    used.add((e & 0x3FF) - 0x200)
+        self.free = [i for i in range(self.state['orig_tiles']) if i not in used]
+        self.index = {k: v for k, v in self.index.items() if v[0] not in self.free}
+        blank = tuple(tuple(0 for _ in range(8)) for _ in range(8))
+        for i in self.free:
+            self.tiles[i] = blank
+        return len(self.free)
+
+    def orig_pal(self, slot):
+        """The gym's original colours of a palette slot (remembered the first time)."""
+        k = str(slot)
+        if k not in self.state['orig_pals']:
+            lines = open(f'{self.path}/palettes/{slot:02d}.pal').read().split()
+            vals = list(map(int, lines[3:3 + 48]))
+            self.state['orig_pals'][k] = [vals[i:i + 3] for i in range(0, 48, 3)]
+        return [tuple(c) for c in self.state['orig_pals'][k]]
+
+    def replace(self, mid, layers, behavior=None):
+        """Redraw an existing metatile in place (same id, so maps and scripts keep working)."""
+        n = len(self.mt) // 24
+        self.add('_tmp', layers, 0)
+        ent = self.mt[-24:]
+        del self.mt[-24:]; del self.at[-2:]; del self.names['_tmp']
+        assert len(self.mt) // 24 == n
+        i = mid - 0x200
+        self.mt[i * 24:i * 24 + 24] = ent
+        if behavior is not None:
+            struct.pack_into('<H', self.at, i * 2, (struct.unpack_from('<H', self.at, i * 2)[0] & 0xFF00) | behavior)
 
     def _remember(self, t, i):
         for hf in (0, 1):
@@ -105,8 +148,13 @@ class Tileset:
         if all(v == 0 for r in t for v in r):
             return 0 | (pal << 12)          # secondary tile 0 is blank
         if t not in self.index:
-            self.tiles.append(t)
-            self._remember(t, len(self.tiles) - 1)
+            if getattr(self, 'free', None):
+                i = self.free.pop(0)
+                self.tiles[i] = t
+                self._remember(t, i)
+            else:
+                self.tiles.append(t)
+                self._remember(t, len(self.tiles) - 1)
         i, hf, vf = self.index[t]
         return (0x200 + i) | (hf << 10) | (vf << 11) | (pal << 12)
 

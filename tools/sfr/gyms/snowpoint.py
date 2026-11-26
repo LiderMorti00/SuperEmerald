@@ -20,9 +20,10 @@ TS = 'data/tilesets/secondary/sootopolis_gym_sinnoh'
 LAYOUT = 'LAYOUT_SNOWPOINT_CITY_GYM_1F_SINNOH'
 P = 10
 SNOW = [(0, 0, 0), (40, 56, 96), (88, 120, 176), (136, 168, 216), (184, 208, 240), (224, 236, 252),
-        (248, 252, 255), (160, 200, 232), (112, 152, 200), (0, 0, 0), (0, 0, 0), (0, 0, 0),
-        (0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0)]
-K, SD, S, SL, SH, WH, IC, ICD = range(1, 9)
+        (248, 252, 255), (160, 200, 232), (112, 152, 200), (52, 62, 78), (88, 102, 120), (128, 142, 158),
+        (170, 182, 196), (208, 216, 226), (120, 176, 224), (24, 40, 72)]
+K, SD, S, SL, SH, WH, IC, ICD, ST1, ST2, ST3, ST4, ST5, GL, NIGHT = range(1, 16)
+import colorsys
 MB_ICE, MB_NORMAL = 0x20, 0x00
 ICE, ICE_SHADE, STAIRS, LOCKED_STAIRS = 0x20d, 0x215, 0x207, 0x20f
 
@@ -43,13 +44,115 @@ STAIR_TILES = [(8, 4), (8, 5), (8, 10), (8, 11), (8, 15), (8, 16)]
 
 
 def mound():
+    """A tall heap of snow: the stopper. Round, white, with a dark shadow on the ice."""
     c = Canvas(0)
-    c.rect(3, 6, 12, 13, WH); c.rect(2, 8, 13, 12, WH); c.rect(5, 4, 10, 5, WH)
-    c.rect(4, 5, 11, 6, WH)
-    c.hline(5, 10, 4, SH); c.hline(3, 5, 6, SH)
-    c.rect(9, 9, 13, 12, SL); c.rect(11, 7, 12, 9, SH)
-    c.hline(2, 13, 13, S); c.hline(3, 12, 14, SD)
-    c.px(6, 7, SH); c.px(7, 6, SH)
+    for y in range(16):
+        for x in range(16):
+            dx, dy = (x - 7.5) / 7.5, (y - 8.5) / 7.0
+            r2 = dx * dx + dy * dy
+            if r2 <= 1:
+                shade = dx * 0.7 + dy * 0.7
+                c.px(x, y, S if r2 > 0.78 else WH if shade < -0.1 else SH if shade < 0.45 else SL)
+    for x in range(1, 15):
+        c.px(x, 15, SD); c.px(x, 14, S if c.p[14][x] == 0 else c.p[14][x])
+    c.px(4, 4, WH); c.px(5, 3, WH); c.px(9, 10, SH)
+    return c
+
+
+def big(w, h, fill=0):
+    return [[fill] * w for _ in range(h)]
+
+
+def cut(g, cx, cy):
+    c = Canvas(0)
+    c.p = [row[cx * 16:cx * 16 + 16] for row in g[cy * 16:cy * 16 + 16]]
+    return c
+
+
+def frost_window():
+    """2x3 metatiles: a snowed-in window set in blue-grey stone (replaces the old waterfalls)."""
+    g = big(32, 48, ST3)
+    for y in range(48):                      # stone courses
+        for x in range(32):
+            if y % 8 == 7 or (x + (8 if (y // 8) % 2 else 0)) % 16 == 15:
+                g[y][x] = ST2
+    for y in range(0, 3):
+        for x in range(32):
+            g[y][x] = (ST5, ST4, ST2)[y]
+    for y in range(6, 41):                   # frame
+        for x in range(4, 28):
+            g[y][x] = ST1 if (x in (4, 27) or y in (6, 40)) else ST4 if (x in (5, 26) or y in (7, 39)) else NIGHT
+    for y in range(8, 39):                   # glass: night sky with falling snow
+        for x in range(6, 26):
+            g[y][x] = NIGHT if y < 20 else SD if y < 30 else S
+    for x in range(6, 26):
+        g[8][x] = SD
+    for y in range(8, 39):
+        g[y][15] = g[y][16] = ST4            # mullion
+    for x in range(6, 26):
+        g[23][x] = ST4
+    import random
+    rnd = random.Random(3)
+    for _ in range(26):
+        x, y = rnd.randrange(6, 26), rnd.randrange(9, 32)
+        if g[y][x] not in (ST4,):
+            g[y][x] = WH if rnd.random() < .6 else SH
+    for y in range(31, 39):                  # snow piled against the glass
+        for x in range(6, 26):
+            if y >= 35 - int(2 * abs(((x - 6) % 10) - 5) / 5):
+                g[y][x] = WH if y > 33 else SH
+    for (x0, sx) in ((6, 1), (25, -1)):      # frost in the corners
+        for i in range(5):
+            for j in range(5 - i):
+                g[9 + i][x0 + sx * j] = SH if (i + j) % 2 else WH
+    for y in range(40, 44):                  # snowy sill
+        for x in range(2, 30):
+            g[y][x] = WH if y < 42 else SL if y == 42 else ST1
+    return g
+
+
+def stone_steps():
+    c = Canvas(ST3)
+    for y in range(16):
+        c.hline(0, 15, y, (ST5, ST4, ST3, ST2)[y % 4])
+    c.vline(0, 0, 15, ST1); c.vline(15, 0, 15, ST1)
+    for x, y in ((1, 0), (2, 0), (13, 4), (14, 4), (1, 8), (14, 12), (13, 12)):
+        c.px(x, y, WH)
+    return c
+
+
+def stone_slab():
+    """Firm ground: rough blue-grey slabs dusted with snow, nothing like the glossy ice."""
+    c = Canvas(ST4)
+    c.hline(0, 15, 7, ST2); c.hline(0, 15, 15, ST2); c.vline(7, 0, 7, ST2); c.vline(15, 8, 15, ST2)
+    c.vline(0, 0, 15, ST1); c.vline(15, 0, 15, ST1); c.hline(0, 15, 0, ST5)
+    for x, y in ((3, 3), (11, 2), (5, 11), (12, 10), (2, 13), (9, 5)):
+        c.px(x, y, ST3); c.px(x + 1, y, WH)
+    return c
+
+
+def drift(edges):
+    """Snow banked against the walls on the given edges of an ice tile ('n','s','w','e')."""
+    c = Canvas(0)
+    wave = [6, 7, 7, 6, 5, 5, 6, 7, 7, 6, 5, 6, 7, 6, 5, 6]
+    for i in range(16):
+        d = wave[i]
+        if 'n' in edges:
+            for y in range(d):
+                c.px(i, y, WH)
+            c.px(i, d, S); c.px(i, d - 1, SH)
+        if 's' in edges:
+            for y in range(16 - d + 1, 16):
+                c.px(i, y, WH)
+            c.px(i, 15 - d, S); c.px(i, 16 - d, SH)
+        if 'w' in edges:
+            for x in range(d - 1):
+                c.px(x, i, WH)
+            c.px(d - 1, i, S); c.px(d - 2, i, SH)
+        if 'e' in edges:
+            for x in range(17 - d, 16):
+                c.px(x, i, WH)
+            c.px(16 - d, i, S); c.px(17 - d, i, SH)
     return c
 
 
@@ -100,15 +203,40 @@ def solve(grid):
 def main():
     ts = Tileset(TS)
     ice = ('mt', ICE, 1)
+    live = set()
+    for m in ('SnowpointCity_Gym_1F_sinnoh', 'SnowpointCity_Gym_B1F_sinnoh'):
+        b = open(f'data/layouts/{m}/map.bin', 'rb').read() + open(f'data/layouts/{m}/border.bin', 'rb').read()
+        live |= {v & 0x3FF for v in struct.unpack('<%dH' % (len(b) // 2), b)}
+    live |= {ICE, ICE_SHADE, STAIRS, LOCKED_STAIRS}
+    redrawn = {0x268, 0x269, 0x270, 0x271, 0x278, 0x279, STAIRS}
+    print('free tile slots:', ts.free_unused(live, redrawn))
     ts.add('mound', [ice, (mound(), P), None])
-    ts.add('mound_shade', [('mt', ICE_SHADE, 1), (mound(), P), None])
-    ts.add('snow', [(packed_snow(), P), None, None])
+    ts.add('mound_shade', [ice, (mound(), P), None])
+    ts.add('snow', [(stone_slab(), P), None, None])
+    # mountain pavilion: frosted windows instead of the Sootopolis waterfalls, stone stairs
+    win = frost_window()
+    for (cx, cy), mid in {(0, 0): 0x268, (1, 0): 0x269, (0, 1): 0x270, (1, 1): 0x271,
+                          (0, 2): 0x278, (1, 2): 0x279}.items():
+        ts.replace(mid, [(cut(win, cx, cy), P), None, None], MB_NORMAL)
+    ts.replace(STAIRS, [(stone_steps(), P), None, None])
+    for k in ('n', 's', 'w', 'e', 'nw', 'ne', 'sw', 'se'):
+        ts.add('ice_' + k, [ice, (drift(k), P), None], MB_ICE)
     # behaviours: ice slides now; the old locked ice stairs (still used as B1F's stair columns)
     # no longer push the player south
     for m, b in ((ICE, MB_ICE), (ICE_SHADE, MB_ICE), (LOCKED_STAIRS, MB_NORMAL)):
         i = (m - 0x200) * 2
         ts.at[i:i + 2] = struct.pack('<H', (struct.unpack_from('<H', ts.at, i)[0] & 0xFF00) | b)
-    ts.save({P: SNOW})
+    pals = {P: SNOW}
+    for slot in (6, 7, 8, 9):            # purple mouldings -> blue-grey stone
+        cols = []
+        for i, (r, g, b) in enumerate(ts.orig_pal(slot)):
+            h, sat, v = colorsys.rgb_to_hsv(r / 255, g / 255, b / 255)
+            if i and sat > 0.06 and 0.62 < h < 0.92:
+                h, sat = 0.58, min(sat, 0.22)
+                r, g, b = (round(c * 255) for c in colorsys.hsv_to_rgb(h, sat, v))
+            cols.append((r, g, b))
+        pals[slot] = cols
+    ts.save(pals)
     names = ts.names
     write_metatile_defs('data/maps/SnowpointCity_Gym_1F_sinnoh', 'SnowpointGym', names)
 
@@ -133,7 +261,9 @@ def main():
                 elif ch == 'L':
                     put(x, y, names['snow'], 0)
                 else:
-                    put(x, y, ICE_SHADE if shade else ICE, 0)
+                    edges = ''.join(e for e, (dx, dy) in (('n', (0, -1)), ('s', (0, 1)), ('w', (-1, 0)), ('e', (1, 0)))
+                                    if not (0 <= i + dx < len(r) and 0 <= j + dy < len(rows)))
+                    put(x, y, names['ice_' + edges] if edges else ICE, 0)
                 grid[j + 2][i + 1] = {'o': 'o', 'L': 'L'}.get(ch, 'i')
         mid = 8 - x0 + 1
         grid[1][mid] = 'E'; grid[len(rows) + 2][mid] = 'S'

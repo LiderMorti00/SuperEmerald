@@ -2,3 +2,11 @@
 .set METATILE_SnowpointGym_mound, 0x27a
 .set METATILE_SnowpointGym_mound_shade, 0x27b
 .set METATILE_SnowpointGym_snow, 0x27c
+.set METATILE_SnowpointGym_ice_n, 0x27d
+.set METATILE_SnowpointGym_ice_s, 0x27e
+.set METATILE_SnowpointGym_ice_w, 0x27f
+.set METATILE_SnowpointGym_ice_e, 0x280
+.set METATILE_SnowpointGym_ice_nw, 0x281
+.set METATILE_SnowpointGym_ice_ne, 0x282
+.set METATILE_SnowpointGym_ice_sw, 0x283
+.set METATILE_SnowpointGym_ice_se, 0x284

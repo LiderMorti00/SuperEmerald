@@ -1756,7 +1756,7 @@ const struct Tileset gTileset_MauvilleGym_Sinnoh =
     .palettes = gTilesetPalettes_MauvilleGym_Sinnoh,
     .metatiles = gMetatiles_MauvilleGym_Sinnoh,
     .metatileAttributes = gMetatileAttributes_MauvilleGym_Sinnoh,
-    .callback = InitTilesetAnim_MauvilleGym,
+    .callback = NULL, // Super Emerald: the gym was redrawn, no waterfalls/beams to animate
 };
 
 const struct Tileset gTileset_OreburghGym_Sinnoh =
@@ -1910,7 +1910,7 @@ const struct Tileset gTileset_SootopolisGym_Sinnoh =
     .palettes = gTilesetPalettes_SootopolisGym_Sinnoh,
     .metatiles = gMetatiles_SootopolisGym_Sinnoh,
     .metatileAttributes = gMetatileAttributes_SootopolisGym_Sinnoh,
-    .callback = InitTilesetAnim_SootopolisGym,
+    .callback = NULL, // Super Emerald: the gym was redrawn, no waterfalls/beams to animate
 };
 
 const struct Tileset gTileset_Sunnyshore_Sinnoh =
