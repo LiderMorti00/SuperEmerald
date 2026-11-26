@@ -21,49 +21,49 @@
       "x": 4,
       "y": 8,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
+      "trainer_sight_or_berry_tree_id": "3",
       "script": "CanalaveCity_Gym_EventScript_David",
       "flag": "0"
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_WORKER",
-      "x": 14,
-      "y": 10,
+      "x": 3,
+      "y": 13,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
+      "trainer_sight_or_berry_tree_id": "1",
       "script": "CanalaveCity_Gym_EventScript_Jackson",
       "flag": "0"
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_WORKER",
-      "x": 4,
-      "y": 10,
+      "x": 19,
+      "y": 14,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "1",
+      "trainer_sight_or_berry_tree_id": "2",
       "script": "CanalaveCity_Gym_EventScript_Gary",
       "flag": "0"
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_FRLG",
-      "x": 14,
-      "y": 6,
+      "x": 16,
+      "y": 7,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -74,49 +74,49 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_M",
-      "x": 11,
-      "y": 16,
+      "x": 15,
+      "y": 10,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "1",
+      "trainer_sight_or_berry_tree_id": "2",
       "script": "CanalaveCity_Gym_EventScript_Cesar",
       "flag": "0"
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_WORKER",
-      "x": 5,
-      "y": 19,
+      "x": 4,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
+      "trainer_sight_or_berry_tree_id": "2",
       "script": "CanalaveCity_Gym_EventScript_Gerardo",
       "flag": "0"
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ACE_TRAINER_F",
-      "x": 10,
+      "x": 3,
       "y": 6,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
+      "trainer_sight_or_berry_tree_id": "1",
       "script": "CanalaveCity_Gym_EventScript_Breanna",
       "flag": "0"
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BYRON",
-      "x": 9,
+      "x": 13,
       "y": 2,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -168,57 +168,93 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 0,
-      "y": 16,
+      "x": 1,
+      "y": 13,
       "elevation": 3,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "CanalaveCity_Gym_EventScript_Lift1Up"
+      "script": "CanalaveCity_Gym_EventScript_Lift1A"
     },
     {
       "type": "trigger",
-      "x": 9,
-      "y": 16,
+      "x": 1,
+      "y": 10,
       "elevation": 3,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "CanalaveCity_Gym_EventScript_Lift1Down"
+      "script": "CanalaveCity_Gym_EventScript_Lift1B"
     },
     {
       "type": "trigger",
-      "x": 0,
-      "y": 11,
+      "x": 18,
+      "y": 13,
       "elevation": 3,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "CanalaveCity_Gym_EventScript_Lift2Up"
+      "script": "CanalaveCity_Gym_EventScript_Lift2A"
     },
     {
       "type": "trigger",
-      "x": 17,
-      "y": 7,
+      "x": 18,
+      "y": 10,
       "elevation": 3,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "CanalaveCity_Gym_EventScript_Lift2Down"
+      "script": "CanalaveCity_Gym_EventScript_Lift2B"
     },
     {
       "type": "trigger",
-      "x": 0,
-      "y": 7,
+      "x": 1,
+      "y": 6,
       "elevation": 3,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "CanalaveCity_Gym_EventScript_Lift3Up"
+      "script": "CanalaveCity_Gym_EventScript_Lift3A"
     },
     {
       "type": "trigger",
-      "x": 0,
+      "x": 1,
       "y": 3,
       "elevation": 3,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "CanalaveCity_Gym_EventScript_Lift3Down"
+      "script": "CanalaveCity_Gym_EventScript_Lift3B"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 6,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "CanalaveCity_Gym_EventScript_Lift4A"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 3,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "CanalaveCity_Gym_EventScript_Lift4B"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 8,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "CanalaveCity_Gym_EventScript_Lift5A"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 7,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "CanalaveCity_Gym_EventScript_Lift5B"
     }
   ],
   "bg_events": [
@@ -237,54 +273,6 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CanalaveCity_Gym_EventScript_PtGymStatue"
-    },
-    {
-      "type": "sign",
-      "x": 0,
-      "y": 15,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "CanalaveCity_Gym_EventScript_Panel1"
-    },
-    {
-      "type": "sign",
-      "x": 9,
-      "y": 15,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "CanalaveCity_Gym_EventScript_Panel1"
-    },
-    {
-      "type": "sign",
-      "x": 0,
-      "y": 10,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "CanalaveCity_Gym_EventScript_Panel2"
-    },
-    {
-      "type": "sign",
-      "x": 17,
-      "y": 6,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "CanalaveCity_Gym_EventScript_Panel2"
-    },
-    {
-      "type": "sign",
-      "x": 0,
-      "y": 6,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "CanalaveCity_Gym_EventScript_Panel3"
-    },
-    {
-      "type": "sign",
-      "x": 0,
-      "y": 2,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "CanalaveCity_Gym_EventScript_Panel3"
     }
   ]
 }

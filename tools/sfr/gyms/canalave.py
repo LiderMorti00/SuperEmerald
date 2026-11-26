@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
-"""Super Emerald: Canalave City Gym (Byron) - a two-level steel workshop with freight lifts.
+"""Super Emerald: Canalave City Gym (Byron) - a steel workshop on three levels joined by lifts.
 
 Run from the repo root: python3 tools/sfr/gyms/canalave.py
-Floor level (entrance): LIFT 1 rides to a small test platform with a trainer and back;
-LIFT 2 rides up to the main catwalk. LIFT 3, at the far end of the catwalk, rides to
-BYRON's floor. Every pad is numbered and the arrival pad has the same number, so stepping
-on it again rides back. The rides are coord events in scripts.inc (YES/NO + warpsilent).
+After Platinum's moving platforms (pokeplatinum CanalaveGym_*): numbered lifts join the
+sheet-metal workshop floor, two grating catwalks and BYRON's beam floor. Each lift has the
+same number at both ends; stepping on a pad asks YES/NO and rides to the other end
+(lifts.inc is generated). The player has to pick: LIFT 1 -> west catwalk -> LIFT 5 (a
+sideways platform over the drop) -> east catwalk -> LIFT 4 -> BYRON. LIFT 2 only reaches a
+lower part of the east catwalk and LIFT 3 a balcony above, each with a trainer.
+check() verifies BYRON is reachable and every pad leads back to the door.
 """
 import json, os, struct, sys
 sys.path.insert(0, os.path.dirname(__file__))
@@ -26,6 +29,8 @@ DIGITS = {
     1: ["..#..", ".##..", "..#..", "..#..", "..#..", "..#..", ".###."],
     2: [".###.", "#...#", "....#", "...#.", "..#..", ".#...", "#####"],
     3: [".###.", "#...#", "....#", "..##.", "....#", "#...#", ".###."],
+    4: ["...#.", "..##.", ".#.#.", "#..#.", "#####", "...#.", "...#."],
+    5: ["#####", "#....", "####.", "....#", "....#", "#...#", ".###."],
 }
 
 
@@ -35,6 +40,56 @@ def plate():
         for x in range((y // 4) % 2 * 2, 16, 4):
             c.px(x, y + 1, SL); c.px(x + 1, y + 2, SL); c.px(x + 1, y + 1, S)
     c.hline(0, 15, 0, SL); c.hline(0, 15, 15, SD)
+    return c
+
+
+def sheet():
+    """Workshop floor: riveted steel sheets (ground level)."""
+    c = Canvas(S)
+    c.hline(0, 15, 0, SL); c.vline(0, 0, 15, SL); c.hline(0, 15, 15, SD); c.vline(15, 0, 15, SD)
+    for x, y in ((2, 2), (13, 2), (2, 13), (13, 13)):
+        c.px(x, y, SH); c.px(x + 1, y + 1, SD)
+    c.px(7, 6, SL); c.px(8, 9, SD)
+    return c
+
+
+def grate():
+    """Catwalk grating (middle level): open mesh with light trim."""
+    c = Canvas(SD)
+    for y in range(16):
+        for x in range(16):
+            if x % 3 == 0 or y % 3 == 0:
+                c.px(x, y, SL if (x + y) % 2 else S)
+    return c
+
+
+def beams():
+    """BYRON's floor (top): heavy plates over I-beams, bolted."""
+    c = Canvas(SM)
+    c.rect(0, 6, 15, 9, SD); c.hline(0, 15, 6, SL); c.hline(0, 15, 9, K)
+    for x in (3, 8, 13):
+        c.px(x, 7, SH); c.px(x, 8, K)
+    c.hline(0, 15, 0, SLL); c.hline(0, 15, 15, SD)
+    return c
+
+
+def pillar():
+    c = beams()
+    c.rect(4, 0, 11, 15, SD); c.rect(5, 0, 10, 15, S); c.vline(5, 0, 15, SL); c.vline(10, 0, 15, K)
+    for y in (2, 13):
+        c.hline(4, 11, y, YD)
+    return c
+
+
+def drop():
+    """The drop between catwalks: the workshop floor far below, in shadow (blocks)."""
+    c = Canvas(K)
+    for y in range(2, 16, 5):
+        c.hline(0, 15, y, SD)
+    for x in range(0, 16, 6):
+        c.vline(x, 0, 15, SD)
+    for x, y in ((3, 8), (11, 4)):
+        c.px(x, y, SM)
     return c
 
 
@@ -124,51 +179,89 @@ def build_tileset():
     p = lambda c: (c, P)
     floor = ('mt', FLOOR, 1)
     ts.add('plate', [p(plate()), None, None])
-    ts.add('rail', [floor, p(rail_top()), None])
+    ts.add('sheet', [p(sheet()), None, None])
+    ts.add('grate', [p(grate()), None, None])
+    ts.add('beams', [p(beams()), None, None])
+    ts.add('pillar', [p(pillar()), None, None])
+    ts.add('drop', [p(drop()), None, None])
+    ts.replace(0x21a, [p(sheet()), None, ('mt', 0x21a, 2)])       # statues and exit mat on sheet metal
+    ts.replace(0x221, [p(sheet()), ('mt', 0x221, 1), None])
+    for m in (0x222, 0x223, 0x224):
+        ts.replace(m, [p(sheet()), ('mt', m, 1), None])
+    ts.add('rail', [p(beams()), p(rail_top()), None])
     ts.add('rail_l', [p(rail_side(True)), None, None])
     ts.add('rail_r', [p(rail_side(False)), None, None])
     ts.add('face', [p(face()), None, None])
     ts.add('face_low', [p(face(False)), None, None])
     for k in ('gauge', 'pipe', 'vent'):
         ts.add('machine_' + k, [p(machine(k)), None, None])
-    for n in (1, 2, 3):
+    for n in (1, 2, 3, 4, 5):
         ts.add(f'pad{n}', [p(pad(n)), None, None])
-        ts.add(f'panel{n}', [floor, p(panel(n)), None])
-        ts.add(f'panel{n}_plate', [p(plate()), p(panel(n)), None])
     ts.save({P: STEEL})
     return ts.names
 
 
-# . floor  P plate  R rail  l/r side rails  F face  g/p/v machines
-# 1/2/3 lift pads (A,B,C on the arrival side use the same art)  a/b/c panels on floor,
-# A/B/C panels on plate.  rows 0-1 and 22-23 come from the original map.
+# . workshop sheet (ground)  P catwalk grating (middle)  T beam floor (top)  x pillar
+# R rail along the top edge of a level  F front face of a raised level  v drop  digits: lift pads
+# s/z statue top/base. Rows 0-1 and 22-23 come from the original map.
 PLAN = [
     None, None,
-    "c...................",   # 2  panel 3' (0,2); BYRON (9,2)
-    "3...................",   # 3  LIFT 3 arrival (0,3)
-    "....................",   # 4
-    "RRRRRRRRRRRRRRRRRRRR",   # 5  catwalk rail
-    "CPPPPPPPPPPPPPPPPBPP",   # 6  panels: LIFT 3 (0,6), LIFT 2 (17,6)
-    "3PPPPPPPPPPPPPPPP2PP",   # 7  LIFT 3 (0,7), LIFT 2 arrival (17,7)
-    "PPPPPPPPPPPPPPPPPPPP",   # 8
-    "FFFFFFFFFFFFFFFFFFFF",   # 9  catwalk face
-    "b...................",   # 10 panel 2 (0,10)
-    "2...................",   # 11 LIFT 2 (0,11)
-    "....................",   # 12
-    "gpvpgpvpgpvpgp.vpgpv",   # 13 machine row, one gap at (14,13)
+    "TTTTTTxTTTTTTTTTTTTT",   # 2  balcony x0-5 | BYRON's floor x7-19, BYRON (13,2)
+    "T3TTTTxTTTTTTTTTTT4T",   # 3  LIFT 3 top (1,3), LIFT 4 top (18,3)
+    "TTTTTTxTTTTTTTTTTTTT",   # 4
+    "RRRRRRRRRRRRRRRRRRRR",   # 5  top edge
+    "P3PPPPPPvvvvPPPPPP4P",   # 6  west catwalk x0-7 rows 6-10: LIFT 3 (1,6); east catwalk north: LIFT 4 (18,6)
+    "PPPPPPPPvvvv5PPPPPPP",   # 7  LIFT 5 east end (12,7)
+    "PPPPPPP5vvvvFFFFFFFF",   # 8  LIFT 5 west end (7,8); front of the east catwalk north
+    "PPPPPPPPvvvvPPPPPPPP",   # 9  east catwalk south x12-19 rows 9-10
+    "P1PPPPPPvvvvPPPPPP2P",   # 10 LIFT 1 top (1,10), LIFT 2 top (18,10)
+    "FFFFFFFFvvvvFFFFFFFF",   # 11 front of the catwalks
+    "........vvvv........",   # 12
+    ".1................2.",   # 13 LIFT 1 (1,13), LIFT 2 (18,13)
     "....................",   # 14
-    "a.......RARRR.......",   # 15 panel 1 (0,15); panel 1' (9,15)
-    "1.......l1PPr.......",   # 16 LIFT 1 (0,16); arrival (9,16)
-    "........lPPPr.......",   # 17
-    "........FFFFF.......",   # 18
+    "....................",   # 15
+    "....................",   # 16
+    "....................",   # 17
+    "....................",   # 18
     "...............s...s",   # 19 statues (15,19) and (19,19)
     "...............z...z",   # 20
     "....................",   # 21
     None, None,
 ]
+LIFTS = {   # number: (end A, end B, label A->B, label B->A)
+    1: ((1, 13), (1, 10), 'WEST CATWALK', 'WORKSHOP FLOOR'),
+    2: ((18, 13), (18, 10), 'EAST CATWALK', 'WORKSHOP FLOOR'),
+    3: ((1, 6), (1, 3), 'BALCONY', 'WEST CATWALK'),
+    4: ((18, 6), (18, 3), "BYRON'S FLOOR", 'EAST CATWALK'),
+    5: ((7, 8), (12, 7), 'EAST CATWALK', 'WEST CATWALK'),
+}
+
+
+def check():
+    from collections import deque
+    walk = lambda ch: ch in '.PT12345'
+    rows = {y: r for y, r in enumerate(PLAN) if r}
+    def ok(x, y): return y in rows and 0 <= x < 20 and walk(rows[y][x])
+    ends = {}
+    for n, (a, b, _, _) in LIFTS.items():
+        ends[a] = b; ends[b] = a
+    start = (16, 21)
+    seen = {start}; q = deque([start])
+    while q:
+        x, y = q.popleft()
+        nb = [(x + dx, y + dy) for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))]
+        if (x, y) in ends:
+            nb.append(ends[(x, y)])
+        for m in nb:
+            if m not in seen and ok(*m):
+                seen.add(m); q.append(m)
+    assert (13, 3) in seen, 'BYRON unreachable'
+    assert all(e in seen for e in ends), [e for e in ends if e not in seen]
+    return len(seen)
 
 
 def main():
+    print('reachable tiles:', check())
     names = build_tileset()
     n = lambda k: names[k]
     write_metatile_defs('data/maps/CanalaveCity_Gym_sinnoh', 'CanalaveGym', names)
@@ -183,14 +276,12 @@ def main():
         json.dump(state, open(TS + '/se_gymkit.json', 'w'), indent=1)
     rows = dict(state['orig_rows'])
     rows['1'] = [0x613] * 20                                   # plain wall: the old window is gone
-    rows['22'] = [r if 0x222 <= (r & 0x3FF) <= 0x224 else 0x3202 for r in rows['22']]   # floor + exit mat
+    rows['22'] = [r if 0x222 <= (r & 0x3FF) <= 0x224 else (n('sheet') | 0x3000) for r in rows['22']]   # floor + exit mat
     legend = {
-        '.': (FLOOR, 0, 3), 'P': (n('plate'), 0, 3), 'R': (n('rail'), 1, 3), 'l': (n('rail_l'), 1, 3),
-        'r': (n('rail_r'), 1, 3), 'F': (n('face'), 1, 3), 'g': (n('machine_gauge'), 1, 3),
-        'p': (n('machine_pipe'), 1, 3), 'v': (n('machine_vent'), 1, 3),
-        '1': (n('pad1'), 0, 3), '2': (n('pad2'), 0, 3), '3': (n('pad3'), 0, 3),
-        'a': (n('panel1'), 1, 3), 'b': (n('panel2'), 1, 3), 'c': (n('panel3'), 1, 3),
-        'A': (n('panel1'), 1, 3), 's': (0x21a, 0, 3), 'z': (0x221, 1, 3), 'B': (n('panel2_plate'), 1, 3), 'C': (n('panel3_plate'), 1, 3),
+        '.': (n('sheet'), 0, 3), 'P': (n('grate'), 0, 3), 'T': (n('beams'), 0, 3), 'x': (n('pillar'), 1, 3),
+        'R': (n('rail'), 1, 3), 'F': (n('face'), 1, 3), 'v': (n('drop'), 1, 3),
+        '1': (n('pad1'), 0, 3), '2': (n('pad2'), 0, 3), '3': (n('pad3'), 0, 3), '4': (n('pad4'), 0, 3),
+        '5': (n('pad5'), 0, 3), 's': (0x21a, 0, 3), 'z': (0x221, 1, 3),
     }
     keymap = {}
 
@@ -213,31 +304,41 @@ def main():
 
     d = json.load(open(MAP))
     pos = {
-        'CanalaveCity_Gym_EventScript_Jackson': (14, 10, 'MOVEMENT_TYPE_FACE_DOWN', '2'),   # watches the gap
-        'CanalaveCity_Gym_EventScript_Gary': (4, 10, 'MOVEMENT_TYPE_FACE_DOWN', '1'),
-        'CanalaveCity_Gym_EventScript_Gerardo': (5, 19, 'MOVEMENT_TYPE_FACE_LEFT', '3'),
-        'CanalaveCity_Gym_EventScript_Cesar': (11, 16, 'MOVEMENT_TYPE_FACE_LEFT', '1'),     # LIFT 1 platform
-        'CanalaveCity_Gym_EventScript_Breanna': (10, 6, 'MOVEMENT_TYPE_FACE_DOWN', '2'),    # catwalk, forced
-        'CanalaveCity_Gym_EventScript_David': (4, 8, 'MOVEMENT_TYPE_FACE_UP', '2'),         # catwalk, forced
-        'CanalaveCity_Gym_EventScript_Ricky': (14, 6, 'MOVEMENT_TYPE_FACE_DOWN', '1'),      # catwalk, optional
-        'SE_EventScript_SinnohLeader_Byron': (9, 2, 'MOVEMENT_TYPE_FACE_DOWN', '0'),
+        'CanalaveCity_Gym_EventScript_Jackson': (3, 13, 'MOVEMENT_TYPE_FACE_LEFT', '1'),     # guards LIFT 1
+        'CanalaveCity_Gym_EventScript_Gary': (19, 14, 'MOVEMENT_TYPE_FACE_LEFT', '2'),       # guards LIFT 2
+        'CanalaveCity_Gym_EventScript_David': (4, 8, 'MOVEMENT_TYPE_FACE_RIGHT', '3'),       # west catwalk, before LIFT 5
+        'CanalaveCity_Gym_EventScript_Breanna': (3, 6, 'MOVEMENT_TYPE_FACE_LEFT', '1'),      # west catwalk, by LIFT 3
+        'CanalaveCity_Gym_EventScript_Cesar': (15, 10, 'MOVEMENT_TYPE_FACE_RIGHT', '2'),     # east catwalk south (detour)
+        'CanalaveCity_Gym_EventScript_Gerardo': (4, 3, 'MOVEMENT_TYPE_FACE_LEFT', '2'),      # balcony (detour)
+        'CanalaveCity_Gym_EventScript_Ricky': (16, 7, 'MOVEMENT_TYPE_FACE_RIGHT', '1'),      # east catwalk north, by LIFT 4
+        'SE_EventScript_SinnohLeader_Byron': (13, 2, 'MOVEMENT_TYPE_FACE_DOWN', '0'),
         'CanalaveCity_Gym_EventScript_PtGymGuide': (14, 21, 'MOVEMENT_TYPE_FACE_RIGHT', '0'),
     }
     for o in d['object_events']:
-        x, y, mv, s = pos[o['script']]
+        x, y, mv, s_ = pos[o['script']]
         o['x'], o['y'], o['movement_type'], o['elevation'] = x, y, mv, 3
         if o['trainer_type'] != 'TRAINER_TYPE_NONE':
-            o['trainer_sight_or_berry_tree_id'] = s
+            o['trainer_sight_or_berry_tree_id'] = s_
     any_ = 'BG_EVENT_PLAYER_FACING_ANY'
-    sign = lambda x, y, s: {'type': 'sign', 'x': x, 'y': y, 'elevation': 0, 'player_facing_dir': any_,
-                            'script': 'CanalaveCity_Gym_EventScript_' + s}
-    d['bg_events'] = [sign(15, 20, 'PtGymStatue'), sign(19, 20, 'PtGymStatue'),
-                      sign(0, 15, 'Panel1'), sign(9, 15, 'Panel1'), sign(0, 10, 'Panel2'),
-                      sign(17, 6, 'Panel2'), sign(0, 6, 'Panel3'), sign(0, 2, 'Panel3')]
-    trig = lambda x, y, s: {'type': 'trigger', 'x': x, 'y': y, 'elevation': 3, 'var': 'VAR_TEMP_0',
-                            'var_value': '0', 'script': 'CanalaveCity_Gym_EventScript_' + s}
-    d['coord_events'] = [trig(0, 16, 'Lift1Up'), trig(9, 16, 'Lift1Down'), trig(0, 11, 'Lift2Up'),
-                         trig(17, 7, 'Lift2Down'), trig(0, 7, 'Lift3Up'), trig(0, 3, 'Lift3Down')]
+    sign = lambda x, y, s_: {'type': 'sign', 'x': x, 'y': y, 'elevation': 0, 'player_facing_dir': any_,
+                             'script': 'CanalaveCity_Gym_EventScript_' + s_}
+    d['bg_events'] = [sign(15, 20, 'PtGymStatue'), sign(19, 20, 'PtGymStatue')]
+    trig = lambda x, y, s_: {'type': 'trigger', 'x': x, 'y': y, 'elevation': 3, 'var': 'VAR_TEMP_0',
+                             'var_value': '0', 'script': 'CanalaveCity_Gym_EventScript_' + s_}
+    d['coord_events'] = []
+    lines = ['@ Generated by tools/sfr/gyms/canalave.py; do not edit.']
+    for num, (a_, b_, to_b, to_a) in LIFTS.items():
+        for tag, here, there, label in (('A', a_, b_, to_b), ('B', b_, a_, to_a)):
+            name = f'Lift{num}{tag}'
+            d['coord_events'].append(trig(here[0], here[1], name))
+            lines += [f'CanalaveCity_Gym_EventScript_{name}::', '\tlockall',
+                      f'\tmsgbox CanalaveCity_Gym_Text_{name}, MSGBOX_YESNO',
+                      '\tgoto_if_eq VAR_RESULT, NO, CanalaveCity_Gym_EventScript_LiftStay',
+                      '\tcall CanalaveCity_Gym_EventScript_LiftRide',
+                      f'\twarpsilent MAP_CANALAVE_CITY_GYM_SINNOH, {there[0]}, {there[1]}', '\twaitstate', '\tend', '',
+                      f'CanalaveCity_Gym_Text_{name}::', f'\t.string "LIFT {num}: to the {label}.\\n"',
+                      '\t.string "Ride it?$"', '']
+    open('data/maps/CanalaveCity_Gym_sinnoh/lifts.inc', 'w').write('\n'.join(lines) + '\n')
     open(MAP, 'w').write(json.dumps(d, indent=2, ensure_ascii=False) + '\n')
 
 
