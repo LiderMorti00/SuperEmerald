@@ -47,8 +47,28 @@ def pebbles(seed=3):
 
 
 def rock_wall_top(seed=5):
+    """Rock mass seen from above: irregular chunks (tiling cells), lit on their north-west edge
+    and split by dark cracks."""
+    import random
+    rnd = random.Random(seed)
+    pts = [(rnd.uniform(0, 16), rnd.uniform(0, 16)) for _ in range(5)]
+    def owner(x, y):
+        best = None
+        for i, (px, py) in enumerate(pts):
+            dx = min(abs(x - px), 16 - abs(x - px)); dy = min(abs(y - py), 16 - abs(y - py))
+            d = dx * dx + dy * dy
+            if best is None or d < best[0]: best = (d, i)
+        return best[1]
     c = Canvas(RD)
-    noise(c, [K, R], seed, 0.25)
+    for y in range(16):
+        for x in range(16):
+            o = owner(x, y)
+            if owner((x + 1) % 16, y) != o or owner(x, (y + 1) % 16) != o:
+                c.px(x, y, K)
+            elif owner((x - 1) % 16, y) != o or owner(x, (y - 1) % 16) != o:
+                c.px(x, y, R)
+            elif (x * 7 + y * 3 + o) % 11 == 0:
+                c.px(x, y, R)
     return c
 
 
@@ -117,6 +137,39 @@ def boulder():
     return c
 
 
+def outcrop(face, w_open, e_open, n_open, seed=21):
+    """Raised rock outcrop (blocks). Top: pale stratified rock in diagonal layers; where the dig
+    floor lies south a short dig face with dark seams drops to a black foot line; the west side
+    catches the light, the east side is in shadow."""
+    import random
+    rnd = random.Random(seed)
+    c = Canvas(RL)
+    for y in range(16):
+        for x in range(16):
+            band = (x + y * 2) // 5 % 3
+            c.px(x, y, (RL, R, RH)[band] if rnd.random() > .12 else RD)
+    if face:
+        bands = [(9, RD), (10, R), (12, DD), (13, D), (15, K)]
+        for y in range(9, 16):
+            col = [b for y0, b in bands if y >= y0][-1]
+            c.hline(0, 15, y, col)
+        c.hline(0, 15, 8, RH)
+        for x in range(0, 16, 5):
+            c.px(x, 11, K); c.px(x + 1, 12, K)
+    if n_open: c.hline(0, 15, 0, K); c.hline(0, 15, 1, RH)
+    if w_open: c.vline(0, 0, 15, K); c.vline(1, 0, 15 if not face else 8, RH)
+    if e_open: c.vline(15, 0, 15, K); c.vline(14, 0, 15 if not face else 8, RD)
+    return c
+
+
+def prop_face(seed=31):
+    """Dig face held up by a timber prop and a cross beam."""
+    c = rock_wall_face(seed)
+    c.rect(6, 0, 9, 15, W); c.vline(6, 0, 15, WD); c.vline(9, 0, 15, K); c.hline(6, 9, 0, WD)
+    c.rect(0, 1, 15, 3, W); c.hline(0, 15, 3, WD); c.hline(0, 15, 1, DH)
+    return c
+
+
 def rail_v(edge=None):
     c = dirt(15)
     for y in range(1, 16, 4):
@@ -170,6 +223,12 @@ def build_tileset():
     ts.add('wall_beam', [p(beam_face()), None, None])
     ts.add('wall_lamp', [p(lantern_face()), None, None])
     ts.add('boulder', [p(boulder()), None, None])
+    ts.add('wall_prop', [p(prop_face()), None, None])
+    for face in (0, 1):
+        for w in (0, 1):
+            for e in (0, 1):
+                for nn in (0, 1):
+                    ts.add('crop_%d%d%d%d' % (face, w, e, nn), [p(outcrop(face, w, e, nn)), None, None])
     ts.add('rail', [p(rail_v()), None, None])
     ts.add('rail_end', [p(rail_end()), None, None])
     ts.add('cart', [p(cart()), None, None])
@@ -239,7 +298,20 @@ def main():
                 plan[y][x] = 'W'
             elif x > 0 and PLAN[y][x - 1] in floor:
                 plan[y][x] = 'E'
-    build_map(LAYOUT, [''.join(r) for r in plan], legend, border=n('wall_top'))
+    fl = lambda ch: ch in floor - {'B'}
+    for y in range(len(plan)):
+        for x in range(len(plan[y])):
+            if PLAN[y][x] == 'B':
+                key = (int(y + 1 < len(PLAN) and fl(PLAN[y + 1][x])), int(fl(PLAN[y][x - 1])),
+                       int(fl(PLAN[y][x + 1])), int(fl(PLAN[y - 1][x])))
+                k = 'K%d%d%d%d' % key
+                legend[k] = (n('crop_%d%d%d%d' % key), 1, 3)
+                plan[y][x] = k
+    for x, y in ((5, 1), (11, 1)):
+        plan[y][x] = 'P'
+    legend['P'] = (n('wall_prop'), 1, 0)
+    from gymkit import build_cells
+    build_cells(LAYOUT, [[legend[ch] for ch in r] for r in plan], border=n('wall_top'))
     d = json.load(open(MAP))
     d['warp_events'] = [{'x': x, 'y': 26, 'elevation': 0, 'dest_map': 'MAP_OREBURGH_CITY_SINNOH', 'dest_warp_id': '6'}
                         for x in (7, 8, 9)]
