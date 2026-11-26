@@ -169,7 +169,7 @@ def main():
     d['warp_events'] = [{'x': x, 'y': 15, 'elevation': 0, 'dest_map': 'MAP_VEILSTONE_CITY_SINNOH', 'dest_warp_id': '11'}
                         for x in (8, 9)]
     pos = {
-        'VeilstoneCity_Gym_EventScript_Colby': (5, 10, 'MOVEMENT_TYPE_FACE_RIGHT', '3'),
+        'VeilstoneCity_Gym_EventScript_Colby': (11, 12, 'MOVEMENT_TYPE_FACE_UP', '2'),      # guards the push spot (11,10)
         'VeilstoneCity_Gym_EventScript_Jeffery': (14, 11, 'MOVEMENT_TYPE_FACE_LEFT', '2'),
         'VeilstoneCity_Gym_EventScript_Darren': (2, 7, 'MOVEMENT_TYPE_FACE_RIGHT', '2'),
         'VeilstoneCity_Gym_EventScript_Rafael': (15, 8, 'MOVEMENT_TYPE_FACE_LEFT', '2'),
