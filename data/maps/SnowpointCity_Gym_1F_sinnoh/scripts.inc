@@ -138,8 +138,8 @@ SnowpointCity_Gym_1F_Text_SNGuideInfo::
 	.string "start sliding, only a snow mound or a\l"
 	.string "wall will stop you.\p"
 	.string "The small room is for practice. If you\n"
-	.string "slide wrong, head back to the patch of\l"
-	.string "snow by the stairs and try again.\p"
+	.string "slide wrong, head back to the stone\l"
+	.string "slab by the stairs and try again.\p"
 	.string "Her TRAINERS train in the basement.\n"
 	.string "Take the ladder over there!$"
 

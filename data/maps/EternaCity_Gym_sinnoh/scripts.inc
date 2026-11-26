@@ -47,9 +47,9 @@ EternaCity_Gym_Text_GardenNotice::
 	.string "and BLUE flower beds.\p"
 	.string "Win against all three and the gate\n"
 	.string "to GARDENIA's garden will open.\p"
-	.string "RED: up the west path.\n"
-	.string "YELLOW: up the east path.\l"
-	.string "BLUE: west of the south path.$"
+	.string "RED roses: up the west path.\n"
+	.string "YELLOW sunflowers: east path.\l"
+	.string "BLUE pond: west of the south path.$"
 
 
 EternaCity_Gym_EventScript_Caroline::
@@ -220,8 +220,8 @@ EternaCity_Gym_EventScript_Guide::
 EternaCity_Gym_Text_SNGuideInfo::
 	.string "Let me tell you about this GYM!\p"
 	.string "The GYM LEADER is GARDENIA, the\n"
-	.string "Grass-Type Lover. Her GYM is an indoor\l"
-	.string "garden full of trees and flower beds.\p"
+	.string "Grass-Type Lover. Her GYM is a big\l"
+	.string "greenhouse of glass and iron.\p"
 	.string "She uses Grass-type POKéMON like\n"
 	.string "TURTWIG, CHERRIM and ROSERADE.\p"
 	.string "Grass types are weak to Fire, Flying,\n"
@@ -230,10 +230,10 @@ EternaCity_Gym_Text_SNGuideInfo::
 	.string "north of the central clearing.\p"
 	.string "It only opens once you've beaten\n"
 	.string "her three gardeners.\p"
-	.string "Each one tends a different flower\n"
-	.string "bed: RED, YELLOW and BLUE. Explore\l"
-	.string "the paths between the hedges and\l"
-	.string "follow the flowers!\p"
+	.string "Each one tends a different corner:\n"
+	.string "the RED roses by the white bench,\l"
+	.string "the tall YELLOW sunflowers, and the\l"
+	.string "BLUE flowers around the lily pond.\p"
 	.string "The notice in the clearing tells you\n"
 	.string "where to look.$"
 
