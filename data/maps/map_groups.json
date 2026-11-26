@@ -1530,7 +1530,7 @@
     "MtCoronet_Outside_North_sinnoh",
     "MtCoronet_Outside_South_sinnoh",
     "LakeVerity_LowWater_sinnoh",
-    "LakeValor_Drained_sinnoh",
+    "PalPark_sinnoh",
     "SendoffSpring_sinnoh",
     "SpringPath_sinnoh",
     "FullmoonIsland_sinnoh",
@@ -1545,8 +1545,7 @@
     "BattleTower_Sinnoh",
     "BattleTowe_Elevator_Sinnoh",
     "BattleTower_Corridor_Sinnoh",
-    "BattleTower_BattleRoom_Sinnoh",
-    "PalPark_sinnoh"
+    "BattleTower_BattleRoom_Sinnoh"
   ],
   "gMapGroup_DungeonsSinnoh_Sinnoh": [
     "OreburghGate_1F_sinnoh",

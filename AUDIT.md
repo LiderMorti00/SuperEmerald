@@ -1643,7 +1643,6 @@ ROM tests run: Goldenrod Dept. Store clerk, Goldenrod Radio Tower lottery, Celes
 | LakeAcuity_Cavern_sinnoh | complete |  |
 | LakeAcuity_sinnoh | complete | JUPITER step 2 |
 | LakeValor_Cavern_sinnoh | complete |  |
-| LakeValor_Drained_sinnoh | unreachable | no warp leads here (Platinum story map) |
 | LakeValor_sinnoh | complete | SATURN step 3 |
 | LakeVerity_Cavern_sinnoh | complete |  |
 | LakeVerity_LowWater_sinnoh | unreachable | no warp leads here (Platinum story map) |

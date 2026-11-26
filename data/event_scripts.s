@@ -1329,7 +1329,6 @@ gStdScripts_End::
 	.include "data/maps/MtCoronet_Outside_North_sinnoh/scripts.inc"
 	.include "data/maps/MtCoronet_Outside_South_sinnoh/scripts.inc"
 	.include "data/maps/LakeVerity_LowWater_sinnoh/scripts.inc"
-	.include "data/maps/LakeValor_Drained_sinnoh/scripts.inc"
 	.include "data/maps/SendoffSpring_sinnoh/scripts.inc"
 	.include "data/maps/SpringPath_sinnoh/scripts.inc"
 	.include "data/maps/FullmoonIsland_sinnoh/scripts.inc"

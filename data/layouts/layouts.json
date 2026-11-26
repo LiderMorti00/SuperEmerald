@@ -13444,17 +13444,14 @@
       "layout_version": "emerald"
     },
     {
-      "id": "LAYOUT_LAKE_VALOR_DRAINED_SINNOH",
-      "name": "LakeValor_Drained_Layout_Sinnoh",
-      "width": 50,
-      "height": 52,
+      "id": "LAYOUT_PAL_PARK_SINNOH",
+      "name": "PalPark_sinnoh_Layout",
+      "width": 60,
+      "height": 46,
       "primary_tileset": "gTileset_General_Sinnoh",
-      "secondary_tileset": "gTileset_Valor_Sinnoh",
-      "border_filepath": "data/layouts/LakeValor_Drained_sinnoh/border.bin",
-      "blockdata_filepath": "data/layouts/LakeValor_Drained_sinnoh/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "emerald"
+      "secondary_tileset": "gTileset_Petalburg_Sinnoh",
+      "border_filepath": "data/layouts/PalPark_sinnoh/border.bin",
+      "blockdata_filepath": "data/layouts/PalPark_sinnoh/map.bin"
     },
     {
       "id": "LAYOUT_SENDOFF_SPRING_SINNOH",
@@ -18064,16 +18061,6 @@
       "secondary_tileset": "gTileset_Pasos_Sinnoh",
       "border_filepath": "data/layouts/PalPark_Lobby_sinnoh/border.bin",
       "blockdata_filepath": "data/layouts/PalPark_Lobby_sinnoh/map.bin"
-    },
-    {
-      "id": "LAYOUT_PAL_PARK_SINNOH",
-      "name": "PalPark_sinnoh_Layout",
-      "width": 60,
-      "height": 46,
-      "primary_tileset": "gTileset_General_Sinnoh",
-      "secondary_tileset": "gTileset_Petalburg_Sinnoh",
-      "border_filepath": "data/layouts/PalPark_sinnoh/border.bin",
-      "blockdata_filepath": "data/layouts/PalPark_sinnoh/map.bin"
     }
   ]
 }
