@@ -128,14 +128,25 @@ def water(level, edges='', drain=''):
         c.px(x, y, WL if level == 0 else WM)
     if level == 0:
         c.px(11, 5, WH); c.px(5, 10, WH)
-    band = 3 if level == 0 else 7
     for e in edges:
         f = SIDES[e]
-        for i in range(16):
-            for k in range(band):
-                c.px(*f(i, k), CH if k == 0 else CL if k < 3 else CM if k < band - 1 else K)
-            if level == 1 and i % 4 == 1:
-                c.px(*f(i, 4), YE)                               # level marks on the tank wall
+        if e == 'n':          # the concrete wall or deck above shows its face down to the water
+            h = 4 if level == 0 else 10
+            for i in range(16):
+                for k in range(h):
+                    v = CM if k < h - 2 else CD
+                    if i % 8 == 7 and k < h - 2: v = CD                       # formwork joints
+                    if level == 1 and k == 4 and i % 4 < 2: v = YE           # level marks
+                    if level == 1 and 5 <= k < h - 2: v = CD if (i + k) % 5 == 0 else SD  # wet, stained
+                    c.px(i, k, v)
+                c.px(i, h - 1, K); c.px(i, h, WH if i % 3 else WL)
+        else:                 # rim of the tank seen from above
+            band = 2 if level == 0 else 4
+            for i in range(16):
+                for k in range(band):
+                    c.px(*f(i, k), CH if k == 0 else CL if k < band - 1 else CD)
+                if level == 1:
+                    c.px(*f(i, band), SD)
     if drain:
         f = SIDES[drain]
         for i in range(5, 11):
@@ -149,18 +160,25 @@ def water(level, edges='', drain=''):
 
 
 def pontoon(level):
+    """Floating walkway section. HIGH: a plank deck on two orange floats, its shadow on the water.
+    LOW: grounded on the tank floor, deep under the drained water, out of reach."""
     c = water(level)
-    if level == 0:     # floating at deck height: planks on orange floats
-        c.rect(1, 1, 14, 14, OR); c.rect(2, 2, 13, 13, CM)
-        for y in range(2, 14, 3):
-            c.hline(2, 13, y, CL)
-        c.hline(1, 14, 1, YE); c.hline(1, 14, 14, ORD)
-        for x, y in ((2, 2), (13, 2), (2, 13), (13, 13)):
-            c.px(x, y, K)
-    else:              # sunk to the bottom: a dim shape under dark water
-        c.rect(3, 3, 12, 12, ORD); c.rect(4, 4, 11, 11, WM)
-        for y in range(5, 11, 3):
-            c.hline(4, 11, y, WD)
+    if level == 0:
+        for y in range(16):
+            for x in range(16):
+                if x <= 3 or x >= 12:                       # float tubes
+                    c.px(x, y, ORD if x in (0, 15) else OR if x in (1, 2, 13, 14) else YE)
+                    if y % 8 in (3, 4) and x in (1, 2, 13, 14): c.px(x, y, K)   # straps
+        for y in range(16):                                  # deck planks between the floats
+            for x in range(4, 12):
+                c.px(x, y, CL if y % 4 else CD)
+            c.px(4, y, CD); c.px(11, y, CM)
+        c.hline(0, 15, 15, WD)                               # shadow on the water
+    else:
+        c.rect(2, 2, 13, 13, WD)
+        c.rect(3, 3, 5, 12, ORD); c.rect(10, 3, 12, 12, ORD)
+        for y in range(3, 13, 3):
+            c.hline(6, 9, y, WM)
     return c
 
 
@@ -187,8 +205,10 @@ def low_path(level):
 def concrete(edges=''):
     """Deck slab: poured concrete with joints; a yellow safety line along any edge over water."""
     c = Canvas(CL)
-    c.hline(0, 15, 7, CM); c.hline(0, 15, 15, CM); c.vline(7, 0, 6, CM); c.vline(15, 8, 14, CM)
-    for x, y in ((3, 3), (11, 4), (5, 11), (12, 12)):
+    c.hline(0, 15, 15, CM); c.vline(15, 0, 15, CM); c.hline(0, 14, 0, CH); c.vline(0, 0, 14, CH)
+    for x, y in ((3, 3), (11, 4), (5, 11), (12, 12), (8, 7), (2, 9)):
+        c.px(x, y, CM)
+    for x, y in ((4, 3), (6, 12), (13, 6)):
         c.px(x, y, CH)
     for e in edges:
         f = SIDES[e]
@@ -219,6 +239,58 @@ def gauge(level):
     top = 2 if level == 0 else 10
     c.rect(8, top, 10, 14, WL if level == 0 else WM)
     c.hline(5, 10, top, OR)
+    return c
+
+
+def plant_wall(cx, cy):
+    """Top wall of the hydraulic plant, 17x3 tiles: concrete cap, a big pipe with flanges and
+    a valve wheel, and grated outlets at the water line."""
+    c = Canvas(0)
+    for y in range(16):
+        for x in range(16):
+            X, Y = cx * 16 + x, cy * 16 + y
+            if Y < 8:
+                v = SD if Y in (0, 7) else SM if Y < 3 else CD
+            else:
+                v = CM if (X % 32) else CD
+                if Y == 8: v = CH
+                if Y % 16 == 0 and Y > 8: v = CD
+            if 14 <= Y <= 24:                                   # main pipe
+                v = SM if Y in (14, 24) else SD if Y > 21 else (CH if Y == 16 else SM)
+                if X % 48 in (0, 1, 2) and cx not in (0, 16): v = SD if Y in (14, 24) else CL   # flanges
+            if cy == 2:
+                if Y >= 44: v = K if Y == 47 else CD
+                if X % 64 in range(24, 40) and 34 <= Y <= 43:   # grated outlets above the water
+                    v = K if (X % 2 == 0 or Y in (34, 43)) else SD
+            c.px(x, y, v)
+    if cy == 1 and cx == 8:                                     # valve wheel in the middle
+        for y in range(16):
+            for x in range(16):
+                r = ((x - 7.5) ** 2 + (y - 3.5) ** 2) ** 0.5
+                if 5.0 <= r <= 6.5 or (r < 5 and (abs(x - 7.5) < 1 or abs(y - 3.5) < 1)):
+                    c.px(x, y, OR if r > 1.5 else K)
+    return c
+
+
+def side_wall(east):
+    """Retaining wall down the sides: concrete top with its inner face lit."""
+    c = Canvas(CM)
+    for y in range(16):
+        c.px(15 if east else 0, y, K)
+        c.px(0 if east else 15, y, CH)
+        c.px(1 if east else 14, y, CL)
+    for x in range(16):
+        c.px(x, 7, CD); c.px(x, 15, CD)
+    for y in (3, 11):
+        c.px(7, y, SM); c.px(8, y, SM)
+    return c
+
+
+def base_wall():
+    c = Canvas(CD)
+    c.hline(0, 15, 0, CL); c.hline(0, 15, 1, CM); c.hline(0, 15, 15, K)
+    for x in range(0, 16, 8):
+        c.vline(x, 2, 14, SD)
     return c
 
 
@@ -272,6 +344,11 @@ def main():
     ts.replace(0x24a, [(concrete(), P), None, ('mt', 0x24a, 2)])       # statues on concrete
     ts.replace(0x24b, [(concrete(), P), None, ('mt', 0x24b, 2)])
     ts.replace(0x24c, [(concrete(), P), ('mt', 0x24c, 1), None])
+    for cy in range(3):
+        for cx in range(17):
+            ts.add('top_%d_%d' % (cx, cy), [(plant_wall(cx, cy), P), None, None])
+    ts.add('side_w', [(side_wall(False), P), None, None]); ts.add('side_e', [(side_wall(True), P), None, None])
+    ts.add('base', [(base_wall(), P), None, None])
     ts.save({P: TANK})
     names = ts.names
     n = lambda k: names[k]
@@ -302,15 +379,17 @@ def main():
     out = []
     for y, r in enumerate(g):
         if r is None:
-            src = rows[str(y)] if y < 3 else rows['bottom']
-            out.append(''.join(raw(v) for v in src))
+            if y < 3:
+                out.append(''.join(raw((n('top_%d_%d' % (x, y)) & 0x3FF) | (1 << 10)) for x in range(W_)))
+            else:
+                out.append(''.join(raw((n('base') & 0x3FF) | (1 << 10)) for x in range(W_)))
             continue
         line = ''
         for x, ch in enumerate(r):
             if ch == 'm':
                 line += raw(rows['mat'][x])
-            elif ch == '|' and x == 16:
-                line += raw(0x062f)
+            elif ch == '|':
+                line += raw((n('side_e' if x == 16 else 'side_w') & 0x3FF) | (1 << 10))
             elif ch in '~d':
                 line += raw((n(wname(cell_kind[(x, y)]) + '_hi') & 0x3FF) | (1 << 10) | (3 << 12))
             elif ch == 'D':
