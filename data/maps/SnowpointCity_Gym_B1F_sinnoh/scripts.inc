@@ -102,10 +102,10 @@ SnowpointCity_Gym_B1F_EventScript_Sergio::
 	end
 
 SnowpointCity_Gym_B1F_Text_SergioPost::
-	.string "Up there, the ice cracks with every\n"
-	.string "step.\p"
-	.string "Cross each tile only once, or you'll end\n"
-	.string "up down here with us again!$"
+	.string "Up there, the ice is so slick you can't\n"
+	.string "stop until a snow mound gets in the way.\p"
+	.string "Pick where you want to stop before\n"
+	.string "you start sliding!$"
 
 SnowpointCity_Gym_B1F_Text_SergioDefeat::
 	.string "This result… …It's cold. Bitter cold.$"

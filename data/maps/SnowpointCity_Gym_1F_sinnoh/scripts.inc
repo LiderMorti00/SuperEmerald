@@ -1,85 +1,8 @@
 SnowpointCity_Gym_1F_sinnoh_MapScripts::
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, SnowpointCity_Gym_1F_OnFrame
-	map_script MAP_SCRIPT_ON_RESUME, SnowpointCity_Gym_1F_OnResume
-	map_script MAP_SCRIPT_ON_LOAD, SnowpointCity_Gym_1F_OnLoad
-	map_script MAP_SCRIPT_ON_TRANSITION, SnowpointCity_Gym_1F_OnTransition
 	.byte 0
 
-@ Super Emerald: ice puzzle from the Sinnoh repo
-SnowpointCity_Gym_1F_OnTransition::
-	setvar VAR_ICE_STEP_COUNT, 1
-	end
-
-SnowpointCity_Gym_1F_OnResume::
-	setstepcallback STEP_CB_SOOTOPOLIS_ICE
-	end
-
-SnowpointCity_Gym_1F_OnLoad::
-	call SnowpointCity_Gym_1F_EventScript_CheckSetStairMetatiles
-	special SetSootopolisGymCrackedIceMetatiles
-	end
-
-SnowpointCity_Gym_1F_EventScript_CheckSetStairMetatiles::
-	goto_if_lt VAR_ICE_STEP_COUNT, 8, SnowpointCity_Gym_1F_EventScript_StopCheckingStairs  @ All stairs ice
-	goto_if_lt VAR_ICE_STEP_COUNT, 28, SnowpointCity_Gym_1F_EventScript_OpenFirstStairs
-	goto_if_lt VAR_ICE_STEP_COUNT, 67, SnowpointCity_Gym_1F_EventScript_OpenFirstAndSecondStairs
-	setmetatile 8, 4, METATILE_SootopolisGym_Stairs, FALSE
-	setmetatile 8, 5, METATILE_SootopolisGym_Stairs, FALSE
-SnowpointCity_Gym_1F_EventScript_OpenFirstAndSecondStairs::
-	setmetatile 8, 10, METATILE_SootopolisGym_Stairs, FALSE
-	setmetatile 8, 11, METATILE_SootopolisGym_Stairs, FALSE
-SnowpointCity_Gym_1F_EventScript_OpenFirstStairs::
-	setmetatile 8, 15, METATILE_SootopolisGym_Stairs, FALSE
-	setmetatile 8, 16, METATILE_SootopolisGym_Stairs, FALSE
-SnowpointCity_Gym_1F_EventScript_StopCheckingStairs::
-	return
-
-SnowpointCity_Gym_1F_OnFrame::
-	map_script_2 VAR_ICE_STEP_COUNT, 8, SnowpointCity_Gym_1F_EventScript_UnlockFirstStairs
-	map_script_2 VAR_ICE_STEP_COUNT, 28, SnowpointCity_Gym_1F_EventScript_UnlockSecondStairs
-	map_script_2 VAR_ICE_STEP_COUNT, 67, SnowpointCity_Gym_1F_EventScript_UnlockThirdStairs
-	map_script_2 VAR_ICE_STEP_COUNT, 0, SnowpointCity_Gym_1F_EventScript_FallThroughIce
-	.2byte 0
-
-SnowpointCity_Gym_1F_EventScript_UnlockFirstStairs::
-	addvar VAR_ICE_STEP_COUNT, 1
-	delay 40
-	playse SE_ICE_STAIRS
-	call SnowpointCity_Gym_1F_EventScript_CheckSetStairMetatiles
-	special DrawWholeMapView
-	end
-
-SnowpointCity_Gym_1F_EventScript_UnlockSecondStairs::
-	addvar VAR_ICE_STEP_COUNT, 1
-	delay 40
-	playse SE_ICE_STAIRS
-	call SnowpointCity_Gym_1F_EventScript_CheckSetStairMetatiles
-	special DrawWholeMapView
-	end
-
-SnowpointCity_Gym_1F_EventScript_UnlockThirdStairs::
-	addvar VAR_ICE_STEP_COUNT, 1
-	delay 40
-	playse SE_ICE_STAIRS
-	call SnowpointCity_Gym_1F_EventScript_CheckSetStairMetatiles
-	special DrawWholeMapView
-	end
-
-SnowpointCity_Gym_1F_EventScript_FallThroughIce::
-	lockall
-	delay 20
-	applymovement LOCALID_PLAYER, SnowpointCity_Gym_1F_Movement_FallThroughIce
-	waitmovement 0
-	playse SE_FALL
-	delay 60
-	warphole MAP_SNOWPOINT_CITY_GYM_B1F_SINNOH
-	waitstate
-	end
-
-SnowpointCity_Gym_1F_Movement_FallThroughIce::
-	set_invisible
-	step_end
-
+@ Super Emerald: the three ice rooms are sliding ice (MB_ICE) with snow mounds as stoppers;
+@ see tools/sfr/gyms/snowpoint.py. No scripts are needed: nothing breaks and nothing locks.
 
 SnowpointCity_Gym_1F_EventScript_Leader::
 	goto_if_set FLAG_SYS_GAME_CLEAR, SnowpointCity_Gym_1F_EventScript_SNRematch
@@ -211,16 +134,17 @@ SnowpointCity_Gym_1F_Text_SNGuideInfo::
 	.string "FROSLASS.\p"
 	.string "Ice types are weak to Fire, Fighting,\n"
 	.string "Rock and Steel moves!\p"
-	.string "The floor is thin ice. It cracks when\n"
-	.string "you walk on it, and if you step on a\l"
-	.string "cracked tile you fall through!\p"
-	.string "Step on every ice tile of a room once\n"
-	.string "to open the stairs up. If you fall, you\l"
-	.string "land in the basement with her TRAINERS.$"
+	.string "The rooms are slippery ice. Once you\n"
+	.string "start sliding, only a snow mound or a\l"
+	.string "wall will stop you.\p"
+	.string "The small room is for practice. If you\n"
+	.string "slide wrong, head back to the patch of\l"
+	.string "snow by the stairs and try again.\p"
+	.string "Her TRAINERS train in the basement.\n"
+	.string "Take the ladder over there!$"
 
 SnowpointCity_Gym_1F_Text_PtGymGuide::
-	.string "Hey, there! How's it going,\n"
-	.string "CHAMP-to-be?\p"
+	.string "Hey there, CHAMPION!\p"
 	.string "I'm the GYM guide! I help out TRAINERS\n"
 	.string "who come to challenge the GYM LEADER.$"
 
