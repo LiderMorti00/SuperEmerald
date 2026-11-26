@@ -1,9 +1,59 @@
+	.include "data/maps/EternaCity_Gym_sinnoh/gym_metatiles.inc"
+
 EternaCity_Gym_sinnoh_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, EternaCity_Gym_OnLoad
 	.byte 0
+
+@ Super Emerald: the gate to GARDENIA (10,7) opens once the three gardeners are beaten.
+EternaCity_Gym_OnLoad::
+	call EternaCity_Gym_EventScript_TryOpenGate
+	end
+
+EternaCity_Gym_EventScript_TryOpenGate::
+	goto_if_not_defeated TRAINER_VITO_SINNOH, EternaCity_Gym_EventScript_GateStaysShut
+	goto_if_not_defeated TRAINER_OWEN_SINNOH, EternaCity_Gym_EventScript_GateStaysShut
+	goto_if_not_defeated TRAINER_WARREN_SINNOH, EternaCity_Gym_EventScript_GateStaysShut
+	setmetatile 10, 7, METATILE_EternaGym_gate_open, FALSE
+	setvar VAR_RESULT, TRUE
+	return
+
+EternaCity_Gym_EventScript_GateStaysShut::
+	setvar VAR_RESULT, FALSE
+	return
+
+@ After each gardener's battle
+EternaCity_Gym_EventScript_GardenerDefeated::
+	call EternaCity_Gym_EventScript_TryOpenGate
+	goto_if_eq VAR_RESULT, FALSE, EternaCity_Gym_EventScript_GardenerDefeatedEnd
+	special DrawWholeMapView
+	playse SE_DOOR
+	msgbox EternaCity_Gym_Text_GateOpened, MSGBOX_DEFAULT
+EternaCity_Gym_EventScript_GardenerDefeatedEnd::
+	release
+	end
+
+EternaCity_Gym_Text_GateOpened::
+	.string "Creak…\p"
+	.string "The garden gate north of the\n"
+	.string "clearing swung open!$"
+
+EternaCity_Gym_EventScript_GardenNotice::
+	msgbox EternaCity_Gym_Text_GardenNotice, MSGBOX_SIGN
+	end
+
+EternaCity_Gym_Text_GardenNotice::
+	.string "GARDEN NOTICE\p"
+	.string "Three gardeners tend the RED, YELLOW\n"
+	.string "and BLUE flower beds.\p"
+	.string "Win against all three and the gate\n"
+	.string "to GARDENIA's garden will open.\p"
+	.string "RED: up the west path.\n"
+	.string "YELLOW: up the east path.\l"
+	.string "BLUE: west of the south path.$"
 
 
 EternaCity_Gym_EventScript_Caroline::
-	trainerbattle_single TRAINER_VITO_SINNOH, EternaCity_Gym_Text_CarolineIntro, EternaCity_Gym_Text_CarolineDefeat
+	trainerbattle_single TRAINER_VITO_SINNOH, EternaCity_Gym_Text_CarolineIntro, EternaCity_Gym_Text_CarolineDefeat, EternaCity_Gym_EventScript_GardenerDefeated
 	msgbox EternaCity_Gym_Text_CarolinePost, MSGBOX_AUTOCLOSE
 	end
 
@@ -18,7 +68,7 @@ EternaCity_Gym_Text_CarolineIntro::
 	.string "Welcome! Without further ado, let's go!$"
 
 EternaCity_Gym_EventScript_Jenna::
-	trainerbattle_single TRAINER_OWEN_SINNOH, EternaCity_Gym_Text_JennaIntro, EternaCity_Gym_Text_JennaDefeat
+	trainerbattle_single TRAINER_OWEN_SINNOH, EternaCity_Gym_Text_JennaIntro, EternaCity_Gym_Text_JennaDefeat, EternaCity_Gym_EventScript_GardenerDefeated
 	msgbox EternaCity_Gym_Text_JennaPost, MSGBOX_AUTOCLOSE
 	end
 
@@ -35,7 +85,7 @@ EternaCity_Gym_Text_JennaIntro::
 	.string "I won't let you win…easily!$"
 
 EternaCity_Gym_EventScript_Angela::
-	trainerbattle_single TRAINER_WARREN_SINNOH, EternaCity_Gym_Text_AngelaIntro, EternaCity_Gym_Text_AngelaDefeat
+	trainerbattle_single TRAINER_WARREN_SINNOH, EternaCity_Gym_Text_AngelaIntro, EternaCity_Gym_Text_AngelaDefeat, EternaCity_Gym_EventScript_GardenerDefeated
 	msgbox EternaCity_Gym_Text_AngelaPost, MSGBOX_AUTOCLOSE
 	end
 
@@ -176,13 +226,20 @@ EternaCity_Gym_Text_SNGuideInfo::
 	.string "TURTWIG, CHERRIM and ROSERADE.\p"
 	.string "Grass types are weak to Fire, Flying,\n"
 	.string "Ice, Poison and Bug moves!\p"
-	.string "Her TRAINERS are waiting among the\n"
-	.string "trees. Beat them on your way to\l"
-	.string "GARDENIA!$"
+	.string "GARDENIA's garden is behind a gate\n"
+	.string "north of the central clearing.\p"
+	.string "It only opens once you've beaten\n"
+	.string "her three gardeners.\p"
+	.string "Each one tends a different flower\n"
+	.string "bed: RED, YELLOW and BLUE. Explore\l"
+	.string "the paths between the hedges and\l"
+	.string "follow the flowers!\p"
+	.string "The notice in the clearing tells you\n"
+	.string "where to look.$"
 
 EternaCity_Gym_Text_Guide::
 	.string "Hey, there! How's it going,\n"
-	.string "CHAMP-to-be?\p"
+	.string "CHAMPION?\p"
 	.string "I'm the GYM guide! I help out TRAINERS\n"
 	.string "who come to challenge the GYM LEADER.$"
 

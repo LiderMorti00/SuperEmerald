@@ -16056,8 +16056,8 @@
     {
       "id": "LAYOUT_ETERNA_CITY_GYM_SINNOH",
       "name": "EternaCity_Gym_Layout_Sinnoh",
-      "width": 13,
-      "height": 20,
+      "width": 21,
+      "height": 27,
       "primary_tileset": "gTileset_Building_Sinnoh",
       "secondary_tileset": "gTileset_EternaGym_Sinnoh",
       "border_filepath": "data/layouts/EternaCity_Gym_sinnoh/border.bin",

@@ -18,8 +18,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_LASS",
-      "x": 5,
-      "y": 9,
+      "x": 3,
+      "y": 17,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -32,10 +32,10 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MIDDLE_AGED_WOMAN",
-      "x": 11,
-      "y": 7,
+      "x": 17,
+      "y": 4,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -46,10 +46,10 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_MIDDLE_AGED_WOMAN",
-      "x": 1,
-      "y": 5,
+      "x": 3,
+      "y": 4,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -60,7 +60,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_GARDENIA",
-      "x": 6,
+      "x": 10,
       "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -74,8 +74,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GYM_GUY",
-      "x": 7,
-      "y": 16,
+      "x": 13,
+      "y": 24,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -88,23 +88,23 @@
   ],
   "warp_events": [
     {
-      "x": 5,
-      "y": 18,
-      "elevation": 3,
+      "x": 9,
+      "y": 25,
+      "elevation": 0,
       "dest_map": "MAP_ETERNA_CITY_SINNOH",
       "dest_warp_id": "2"
     },
     {
-      "x": 6,
-      "y": 18,
-      "elevation": 3,
+      "x": 10,
+      "y": 25,
+      "elevation": 0,
       "dest_map": "MAP_ETERNA_CITY_SINNOH",
       "dest_warp_id": "2"
     },
     {
-      "x": 7,
-      "y": 18,
-      "elevation": 3,
+      "x": 11,
+      "y": 25,
+      "elevation": 0,
       "dest_map": "MAP_ETERNA_CITY_SINNOH",
       "dest_warp_id": "2"
     }
@@ -113,19 +113,27 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 4,
-      "y": 16,
-      "elevation": 3,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "x": 7,
+      "y": 23,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "EternaCity_Gym_EventScript_GymStatue"
     },
     {
       "type": "sign",
-      "x": 8,
-      "y": 16,
-      "elevation": 3,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "x": 15,
+      "y": 23,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "EternaCity_Gym_EventScript_GymStatue"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "EternaCity_Gym_EventScript_GardenNotice"
     }
   ]
 }

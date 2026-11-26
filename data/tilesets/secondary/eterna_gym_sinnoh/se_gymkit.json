@@ -1,0 +1,19 @@
+{
+ "orig_tiles": 98,
+ "orig_metatiles": 60,
+ "names": {
+  "flowers_r": "0x23c",
+  "flowers2_r": "0x23d",
+  "planter_r": "0x23e",
+  "flowers_y": "0x23f",
+  "flowers2_y": "0x240",
+  "planter_y": "0x241",
+  "flowers_b": "0x242",
+  "flowers2_b": "0x243",
+  "planter_b": "0x244",
+  "gate_closed": "0x245",
+  "gate_open": "0x246",
+  "sign": "0x247",
+  "sign_sand": "0x248"
+ }
+}
