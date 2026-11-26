@@ -39,9 +39,10 @@ def dirt(seed=1, dug=False):
 
 
 def pebbles(seed=3):
+    """Loose debris: small, flat, walkable - unlike the round boulders, which block."""
     c = dirt(seed)
-    for x, y in ((3, 4), (11, 10), (6, 12)):
-        c.rect(x, y, x + 1, y + 1, R); c.px(x, y, RH); c.px(x + 1, y + 1, RD)
+    for x, y in ((3, 4), (11, 10), (6, 12), (12, 3), (8, 7)):
+        c.px(x, y, RL); c.px(x + 1, y, RD)
     return c
 
 
@@ -52,14 +53,33 @@ def rock_wall_top(seed=5):
 
 
 def rock_wall_face(seed=7, ore=False):
+    """Stratified dig face, after Oreburgh's cut walls: bands of rock, clay and coal-dark seams."""
+    import random
+    rnd = random.Random(seed)
     c = Canvas(R)
-    noise(c, [RD, RL], seed, 0.3)
-    for x in range(0, 16, 5):
-        c.vline(x, 0, 15, RD)
+    bands = [(0, RL), (3, R), (6, DD), (8, RD), (10, D), (13, R)]
+    for y in range(16):
+        col = [b for y0, b in bands if y >= y0][-1]
+        c.hline(0, 15, y, col)
+    for y0, _ in bands[1:]:                      # wavy band boundaries
+        for x in range(16):
+            if rnd.random() < 0.35:
+                c.px(x, y0 - 1 if rnd.random() < .5 else y0, K if y0 in (6, 10) else RD)
+    noise(c, [RH, RD], seed + 1, 0.08)
     c.hline(0, 15, 15, K); c.hline(0, 15, 14, RD)
     if ore:
         for x, y in ((3, 4), (4, 5), (5, 5), (10, 9), (11, 8), (12, 9), (7, 11)):
             c.px(x, y, ORE); c.px(x + 1, y, RH)
+    return c
+
+
+def wall_rim(side):
+    """Rock mass seen from above with a lit edge where it drops to the dig floor."""
+    c = rock_wall_top(17 if side == 'w' else 19)
+    for y in range(16):
+        x0 = 13 if side == 'w' else 0
+        for k in range(3):
+            c.px(x0 + k, y, (RL, R, RD)[k] if side == 'w' else (RD, R, RL)[k])
     return c
 
 
@@ -144,6 +164,8 @@ def build_tileset():
     ts.add('pebbles', [p(pebbles()), None, None])
     ts.add('wall_top', [p(rock_wall_top()), None, None])
     ts.add('wall_face', [p(rock_wall_face()), None, None])
+    ts.add('wall_rim_w', [p(wall_rim('w')), None, None])
+    ts.add('wall_rim_e', [p(wall_rim('e')), None, None])
     ts.add('wall_ore', [p(rock_wall_face(8, True)), None, None])
     ts.add('wall_beam', [p(beam_face()), None, None])
     ts.add('wall_lamp', [p(lantern_face()), None, None])
@@ -204,7 +226,20 @@ def main():
         '1': (0x207, 0, 3), '2': (0x208, 0, 3), '3': (0x209, 0, 3),
         '4': (0x201, 1, 0), '5': (0x202, 1, 0), '6': (0x203, 1, 0),
     }
-    build_map(LAYOUT, PLAN, legend, border=n('wall_top'))
+    legend.update({'F': (n('wall_face'), 1, 0), 'W': (n('wall_rim_w'), 1, 0), 'E': (n('wall_rim_e'), 1, 0)})
+    plan = [list(r) for r in PLAN]
+    floor = set('.,dpB=^Cst123')
+    for y in range(len(plan) - 1):           # cliff faces and rims where the rock meets the dig floor
+        for x in range(len(plan[y])):
+            if PLAN[y][x] != 'T':
+                continue
+            if PLAN[y + 1][x] in floor:
+                plan[y][x] = 'F'
+            elif x + 1 < len(plan[y]) and PLAN[y][x + 1] in floor:
+                plan[y][x] = 'W'
+            elif x > 0 and PLAN[y][x - 1] in floor:
+                plan[y][x] = 'E'
+    build_map(LAYOUT, [''.join(r) for r in plan], legend, border=n('wall_top'))
     d = json.load(open(MAP))
     d['warp_events'] = [{'x': x, 'y': 26, 'elevation': 0, 'dest_map': 'MAP_OREBURGH_CITY_SINNOH', 'dest_warp_id': '6'}
                         for x in (7, 8, 9)]
