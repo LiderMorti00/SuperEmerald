@@ -6243,6 +6243,54 @@ const struct TrainerMon gSEPwtMons[] =
         .nature = NATURE_ADAMANT,
         .ball = BALL_POKE
     },
+    [780] = {
+        .species = SPECIES_HAXORUS,
+        .moves = {MOVE_DUAL_CHOP, MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE, MOVE_POISON_JAB},
+        .heldItem = ITEM_LIFE_ORB,
+        .ev = TRAINER_PARTY_EVS(0,252,0,252,0,6),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [781] = {
+        .species = SPECIES_DRAGONITE,
+        .moves = {MOVE_OUTRAGE, MOVE_EXTREME_SPEED, MOVE_FIRE_PUNCH, MOVE_DRAGON_DANCE},
+        .heldItem = ITEM_WEAKNESS_POLICY,
+        .ev = TRAINER_PARTY_EVS(0,252,0,252,0,6),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [782] = {
+        .species = SPECIES_SALAMENCE,
+        .moves = {MOVE_OUTRAGE, MOVE_EARTHQUAKE, MOVE_STONE_EDGE, MOVE_CRUNCH},
+        .heldItem = ITEM_CHOICE_SCARF,
+        .ev = TRAINER_PARTY_EVS(0,252,0,252,0,6),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
+    [783] = {
+        .species = SPECIES_LAPRAS,
+        .moves = {MOVE_ICE_BEAM, MOVE_SURF, MOVE_THUNDERBOLT, MOVE_PERISH_SONG},
+        .heldItem = ITEM_LEFTOVERS,
+        .ev = TRAINER_PARTY_EVS(6,0,0,252,252,0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [784] = {
+        .species = SPECIES_HYDREIGON,
+        .moves = {MOVE_DRAGON_PULSE, MOVE_DARK_PULSE, MOVE_FLAMETHROWER, MOVE_EARTH_POWER},
+        .heldItem = ITEM_EXPERT_BELT,
+        .ev = TRAINER_PARTY_EVS(6,0,0,252,252,0),
+        .nature = NATURE_MODEST,
+        .ball = BALL_POKE
+    },
+    [785] = {
+        .species = SPECIES_ARCHEOPS,
+        .moves = {MOVE_ACROBATICS, MOVE_STONE_EDGE, MOVE_EARTHQUAKE, MOVE_DRAGON_CLAW},
+        .heldItem = ITEM_FOCUS_SASH,
+        .ev = TRAINER_PARTY_EVS(0,252,0,252,0,6),
+        .nature = NATURE_ADAMANT,
+        .ball = BALL_POKE
+    },
 };
 
 // CHAMPIONS CUP and default teams (leaders: World Leaders teams; champions: Champions teams)
@@ -8072,7 +8120,7 @@ const struct BattleFrontierTrainer gSEPwtTrainersWorld[] =
         .speechBefore = {EC_WORD_I_AM, EC_WORD_NEVER, EC_WORD_GOING, EC_WORD_TO, EC_WORD_LOSE, EC_WORD_EXCL},
         .speechWin = {EC_WORD_A, EC_WORD_WIN, EC_WORD_IS, EC_WORD_JUST, EC_WORD_AWESOME, EC_EMPTY_WORD},
         .speechLose = {EC_WORD_YOU, EC_WORD_WON, EC_WORD_EXCL, EC_WORD_MOVE, EC_WORD_ON, EC_WORD_EXCL},
-        .monSet = (const u16[]){384, 385, 386, 387, 388, 389, 0xFFFF}
+        .monSet = (const u16[]){780, 781, 782, 783, 784, 785, 0xFFFF}
     },
     [SE_PWT_TRAINER_KT_GRANT] = {
         .facilityClass = FACILITY_CLASS_SE_KT_GRANT,
@@ -8591,7 +8639,7 @@ const u8 gSEPwtLeaderRegions[SE_PWT_TRAINERS_COUNT] =
     [SE_PWT_TRAINER_WULFRIC] = (1 << SE_PWT_KALOS),
 };
 
-// The seven champions of the CHAMPIONS CUP
+// The champions of the CHAMPIONS CUP
 const bool8 gSEPwtInChampionsCup[SE_PWT_TRAINERS_COUNT] =
 {
     [SE_PWT_TRAINER_RED] = TRUE,
@@ -8601,4 +8649,5 @@ const bool8 gSEPwtInChampionsCup[SE_PWT_TRAINERS_COUNT] =
     [SE_PWT_TRAINER_WALLACE] = TRUE,
     [SE_PWT_TRAINER_CYNTHIA] = TRUE,
     [SE_PWT_TRAINER_DIANTHA] = TRUE,
+    [SE_PWT_TRAINER_IRIS] = TRUE,
 };

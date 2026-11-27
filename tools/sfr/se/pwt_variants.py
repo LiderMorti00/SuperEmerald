@@ -17,10 +17,10 @@
 #
 # DESIGNED TEAMS (to review) are marked with '# designed'.
 
-# Leaders of each region; champions of the CHAMPIONS CUP (Red, Blue, Lance, Steven, Wallace, Cynthia, Diantha).
-# Blue is both a Kanto leader and a champion. Alder and Iris are champions of the roster but only enter
-# the WORLD CUP (they aren't in the CHAMPIONS CUP list).
-CHAMPIONS_CUP = ['RED', 'BLUE', 'LANCE', 'STEVEN', 'WALLACE', 'CYNTHIA', 'DIANTHA']
+# Champions of the CHAMPIONS CUP: Red, Blue, Lance, Steven, Wallace, Cynthia, Diantha and Iris
+# (7 of them drawn each time). Blue is both a Kanto leader and a champion; Giovanni is a Kanto leader
+# (Kanto cup and WORLD CUP, like in B2W2). Alder only enters the WORLD CUP.
+CHAMPIONS_CUP = ['RED', 'BLUE', 'LANCE', 'STEVEN', 'WALLACE', 'CYNTHIA', 'DIANTHA', 'IRIS']
 EXTRA_LEADERS = {'BLUE': 'K'}
 
 REGIONAL = {
@@ -158,6 +158,14 @@ WORLD = {
         'LUCARIO|FOCUS_SASH|MODEST|S|AURA_SPHERE,FLASH_CANNON,DARK_PULSE,NASTY_PLOT',
         'GASTRODON|RINDO_BERRY|MODEST|S|MUDDY_WATER,EARTH_POWER,SLUDGE_BOMB,RECOVER',
         'TOGEKISS|EXPERT_BELT|MODEST|S|AIR_SLASH,DAZZLING_GLEAM,AURA_SPHERE,FLAMETHROWER',
+    ],
+    'IRIS': [  # dragon specialist, B2W2 champion
+        'HAXORUS|LIFE_ORB|ADAMANT|P|DUAL_CHOP,EARTHQUAKE,SWORDS_DANCE,POISON_JAB',
+        'DRAGONITE|WEAKNESS_POLICY|ADAMANT|P|OUTRAGE,EXTREME_SPEED,FIRE_PUNCH,DRAGON_DANCE',
+        'SALAMENCE|CHOICE_SCARF|ADAMANT|P|OUTRAGE,EARTHQUAKE,STONE_EDGE,CRUNCH',
+        'LAPRAS|LEFTOVERS|MODEST|S|ICE_BEAM,SURF,THUNDERBOLT,PERISH_SONG',
+        'HYDREIGON|EXPERT_BELT|MODEST|S|DRAGON_PULSE,DARK_PULSE,FLAMETHROWER,EARTH_POWER',
+        'ARCHEOPS|FOCUS_SASH|ADAMANT|P|ACROBATICS,STONE_EDGE,EARTHQUAKE,DRAGON_CLAW',
     ],
     'DIANTHA': [  # XY champion line-up
         'GARDEVOIR|CHOICE_SPECS|MODEST|S|MOONBLAST,PSYCHIC,THUNDERBOLT,SHADOW_BALL',

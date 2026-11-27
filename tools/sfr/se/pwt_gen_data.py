@@ -125,7 +125,7 @@ o += 'const u8 gSEPwtRegions[] =\n{\n' + ''.join('    [SE_PWT_TRAINER_%s] = %s,\
 o += 'const u8 gSEPwtRanks[] =\n{\n' + ''.join('    [SE_PWT_TRAINER_%s] = %s,\n' % (r[0], RANK[r[6]]) for r in R) + '};\n\n'
 o += '// Regions where the trainer is a gym leader (regional LEADERS cups)\nconst u8 gSEPwtLeaderRegions[SE_PWT_TRAINERS_COUNT] =\n{\n'
 o += ''.join('    [SE_PWT_TRAINER_%s] = %s,\n' % (k, ' | '.join('(1 << %s)' % REG[c] for c in leader_regions[k])) for k in KEYS if leader_regions[k]) + '};\n\n'
-o += '// The seven champions of the CHAMPIONS CUP\nconst bool8 gSEPwtInChampionsCup[SE_PWT_TRAINERS_COUNT] =\n{\n'
+o += '// The champions of the CHAMPIONS CUP\nconst bool8 gSEPwtInChampionsCup[SE_PWT_TRAINERS_COUNT] =\n{\n'
 o += ''.join('    [SE_PWT_TRAINER_%s] = TRUE,\n' % k for k in CHAMPIONS_CUP) + '};\n'
 o = o.replace('\n};\n\nconst u8 gSEPwtLeaderRegions', '\n};\n\nconst u8 gSEPwtLeaderRegions')
 out = os.path.join(ROOT, 'src/data/battle_frontier/se_pwt.h')

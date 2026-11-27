@@ -80,7 +80,7 @@ u16 SE_PwtFacilityClassGfx(u8 facilityClass)
 }
 
 // --- Choosing the opponents of the cup ---------------------------------------------
-// LEADERS cups: 7 gym leaders of the region. CHAMPIONS CUP: its 7 champions.
+// LEADERS cups: 7 gym leaders of the region. CHAMPIONS CUP: 7 of its 8 champions.
 // WORLD CUP: 15 among every gym leader, Elite Four member and champion (each one once).
 
 static bool32 IsInRegionCup(u32 id, u32 cup)
