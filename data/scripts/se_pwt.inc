@@ -28,10 +28,16 @@ SE_Pwt_ChooseCup::
 	dynmultistack 0, 0, FALSE, 5, FALSE, 0, DYN_MULTICHOICE_CB_NONE
 	goto_if_ge VAR_RESULT, SE_PWT_CUPS_COUNT, PokemonWorldTournamentLobby_EventScript_CancelChallenge
 	copyvar VAR_SE_PWT_CUP, VAR_RESULT
+	special SE_PwtCupHasEnoughTrainers
+	goto_if_eq VAR_RESULT, FALSE, SE_Pwt_CupNotEnoughTrainers
 	special SE_PwtBufferCupName
 	msgbox SE_Text_PwtCupChosen, MSGBOX_DEFAULT
 	setvar VAR_RESULT, FRONTIER_LVL_50
 	goto PokemonWorldTournamentLobby_EventScript_CheckEligible
+
+SE_Pwt_CupNotEnoughTrainers:
+	msgbox SE_Text_PwtCupNotEnoughTrainers, MSGBOX_DEFAULT
+	goto PokemonWorldTournamentLobby_EventScript_CancelChallenge
 
 @ First win of each cup: a prize typical of the region
 SE_Pwt_GiveCupPrize::
@@ -65,7 +71,7 @@ SE_Text_CupKalos:
 SE_Text_CupChampions:
 	.string "CHAMPIONS$"
 SE_Text_CupWorld:
-	.string "WORLD LEADERS$"
+	.string "WORLD CUP$"
 
 SE_Text_PwtWhichCup:
 	.string "Which tournament would you like\n"
@@ -80,16 +86,24 @@ SE_Text_PwtExplainCups:
 	.string "At the POKéMON WORLD TOURNAMENT,\n"
 	.string "you face the GYM LEADERS, ELITE FOUR\l"
 	.string "and CHAMPIONS of every region!\p"
-	.string "In the LEADERS cups you battle the\n"
-	.string "stars of KANTO, JOHTO, HOENN, SINNOH\l"
-	.string "or KALOS.\p"
-	.string "The CHAMPIONS CUP gathers the\n"
-	.string "CHAMPIONS, and in the WORLD LEADERS\l"
-	.string "CUP anyone could be your opponent.\p"
+	.string "In the LEADERS cups you battle seven\n"
+	.string "GYM LEADERS of KANTO, JOHTO, HOENN,\l"
+	.string "SINNOH or KALOS.\p"
+	.string "The CHAMPIONS CUP gathers seven\n"
+	.string "CHAMPIONS.\p"
+	.string "Win three matches to take one\n"
+	.string "of these cups.\p"
+	.string "In the WORLD CUP, sixteen TRAINERS\n"
+	.string "compete: GYM LEADERS, ELITE FOUR and\l"
+	.string "CHAMPIONS. It takes four wins!\p"
 	.string "Every POKéMON is set to level 50\n"
 	.string "while battling, whatever its level.\p"
 	.string "Win the tournament to earn\n"
 	.string "BATTLE POINTS!$"
+
+SE_Text_PwtCupNotEnoughTrainers:
+	.string "I'm sorry, this tournament can't be\n"
+	.string "held: there aren't enough TRAINERS.$"
 
 SE_Text_PwtFirstWinPrize:
 	.string "This is your first win in the\n"

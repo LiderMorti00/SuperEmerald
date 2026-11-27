@@ -13,6 +13,7 @@ Run from the repo root:  python3 tools/sfr/se/check_project.py
  - Hoenn-only things (secret bases...) outside Hoenn
  - silent Center/Mart music and lamppost halos on their entrances
  - direct trainer battles without a corresponding party
+ - PWT: enough different rivals for every cup, generated roster up to date
 """
 import json, re, glob, os, sys
 from collections import defaultdict
@@ -215,6 +216,35 @@ for f in glob.glob('data/maps/*/scripts.inc') + glob.glob('data/scripts/*.inc'):
         trainers = set(re.findall(r'^\s*trainerbattle_\w+\s+(TRAINER_\w+)\b', scripts.read(), re.M))
     for trainer in sorted(trainers - trainer_parties):
         err('trainer', '%s references %s without a party' % (f, trainer))
+
+# PWT cups: 7 rivals for the LEADERS cups and the CHAMPIONS CUP, 15 for the WORLD CUP
+sys.path.insert(0, 'tools/sfr/se')
+import importlib
+pwt_roster = importlib.import_module('pwt_roster')
+pwt_variants = importlib.import_module('pwt_variants')
+leaders = {}
+for r in pwt_roster.R:
+    regs = (r[5] if r[6] == 'L' else '') + pwt_variants.EXTRA_LEADERS.get(r[0], '')
+    for c in regs:
+        leaders.setdefault(c, set()).add(r[0])
+for region, name in (('K', 'KANTO'), ('J', 'JOHTO'), ('H', 'HOENN'), ('S', 'SINNOH'), ('X', 'KALOS')):
+    if len(leaders.get(region, ())) < 7:
+        err('pwt', '%s LEADERS cup: only %d leaders' % (name, len(leaders.get(region, ()))))
+if len(set(pwt_variants.CHAMPIONS_CUP)) != 7:
+    err('pwt', 'CHAMPIONS CUP: %d champions' % len(set(pwt_variants.CHAMPIONS_CUP)))
+world = {r[0] for r in pwt_roster.R if r[6] in 'LEC'} | set(pwt_variants.EXTRA_LEADERS)
+if len(world) < 15:
+    err('pwt', 'WORLD CUP: only %d trainers' % len(world))
+import subprocess, tempfile, shutil
+gen = 'src/data/battle_frontier/se_pwt.h'
+before = open(gen).read()
+r = subprocess.run([sys.executable, 'tools/sfr/se/pwt_gen_data.py'], capture_output=True, text=True)
+after = open(gen).read()
+if r.returncode != 0:
+    err('pwt', 'pwt_gen_data.py failed: ' + (r.stderr or r.stdout).strip())
+elif after != before:
+    open(gen, 'w').write(before)
+    err('pwt', '%s is out of date: run tools/sfr/se/pwt_gen_data.py' % gen)
 
 for k, m in sorted(bad): print('[%s] %s' % (k, m))
 print('%d problems' % len(bad))

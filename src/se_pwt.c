@@ -38,9 +38,24 @@ bool32 SE_IsPwt(void)
         || map == MAP_POKEMON_WORLD_TOURNAMENT_ROOM;
 }
 
+static u32 GetCup(void)
+{
+    u32 cup = VarGet(VAR_SE_PWT_CUP);
+    return cup < SE_PWT_CUPS_COUNT ? cup : SE_PWT_CUP_WORLD;
+}
+
+// The trainers bring the team of the cup: regional team in the LEADERS cups,
+// Champions team in the CHAMPIONS CUP, World team in the WORLD CUP (see tools/sfr/se/pwt_variants.py)
 const struct BattleFrontierTrainer *SE_FrontierTrainerList(void)
 {
-    return SE_IsPwt() ? gSEPwtTrainers : gBattleFrontierTrainers;
+    if (!SE_IsPwt())
+        return gBattleFrontierTrainers;
+    switch (GetCup())
+    {
+    case SE_PWT_CUP_WORLD:     return gSEPwtTrainersWorld;
+    case SE_PWT_CUP_CHAMPIONS: return gSEPwtTrainers;
+    default:                   return gSEPwtTrainersRegional;
+    }
 }
 
 const struct TrainerMon *SE_FrontierMonList(void)
@@ -64,42 +79,52 @@ u16 SE_PwtFacilityClassGfx(u8 facilityClass)
     return gSEPwtGfx[facilityClass - FACILITY_CLASS_SE_FIRST];
 }
 
-// --- Choosing the 15 opponents of the cup ----------------------------------------
+// --- Choosing the opponents of the cup ---------------------------------------------
+// LEADERS cups: 7 gym leaders of the region. CHAMPIONS CUP: its 7 champions.
+// WORLD CUP: 15 among every gym leader, Elite Four member and champion (each one once).
 
 static bool32 IsInRegionCup(u32 id, u32 cup)
 {
     switch (cup)
     {
-    case SE_PWT_CUP_KANTO:  return (gSEPwtRegions[id] & (1 << SE_PWT_KANTO)) != 0;
-    case SE_PWT_CUP_JOHTO:  return (gSEPwtRegions[id] & (1 << SE_PWT_JOHTO)) != 0;
-    case SE_PWT_CUP_HOENN:  return (gSEPwtRegions[id] & (1 << SE_PWT_HOENN)) != 0;
-    case SE_PWT_CUP_SINNOH: return (gSEPwtRegions[id] & (1 << SE_PWT_SINNOH)) != 0;
-    case SE_PWT_CUP_KALOS:  return (gSEPwtRegions[id] & (1 << SE_PWT_KALOS)) != 0;
+    case SE_PWT_CUP_KANTO:  return (gSEPwtLeaderRegions[id] & (1 << SE_PWT_KANTO)) != 0;
+    case SE_PWT_CUP_JOHTO:  return (gSEPwtLeaderRegions[id] & (1 << SE_PWT_JOHTO)) != 0;
+    case SE_PWT_CUP_HOENN:  return (gSEPwtLeaderRegions[id] & (1 << SE_PWT_HOENN)) != 0;
+    case SE_PWT_CUP_SINNOH: return (gSEPwtLeaderRegions[id] & (1 << SE_PWT_SINNOH)) != 0;
+    case SE_PWT_CUP_KALOS:  return (gSEPwtLeaderRegions[id] & (1 << SE_PWT_KALOS)) != 0;
     default:                return FALSE;
     }
 }
 
-// First choice: the stars of the cup (gym leaders, Elite Four and champions of the region)
 static bool32 IsInCup(u32 id, u32 cup)
 {
-    if (gSEPwtRanks[id] == SE_PWT_RANK_TRAINER)
-        return FALSE;
     if (cup == SE_PWT_CUP_CHAMPIONS)
-        return gSEPwtRanks[id] == SE_PWT_RANK_CHAMPION;
+        return gSEPwtInChampionsCup[id];
     if (cup == SE_PWT_CUP_WORLD)
-        return TRUE;
+        return gSEPwtLeaderRegions[id] != 0
+            || gSEPwtRanks[id] == SE_PWT_RANK_ELITE
+            || gSEPwtRanks[id] == SE_PWT_RANK_CHAMPION;
     return IsInRegionCup(id, cup);
 }
 
-// When the cup doesn't have 15 stars: the Elite Four for the Champions Cup,
-// the region's own trainers for the regional cups.
-static bool32 IsCupFiller(u32 id, u32 cup)
+// Trainers in the bracket: the player and 7 rivals, 15 in the WORLD CUP
+u32 SE_PwtEntrantsCount(void)
 {
-    if (cup == SE_PWT_CUP_CHAMPIONS)
-        return gSEPwtRanks[id] == SE_PWT_RANK_ELITE;
-    if (gSEPwtRanks[id] != SE_PWT_RANK_TRAINER)
-        return FALSE;
-    return IsInRegionCup(id, cup);
+    return GetCup() == SE_PWT_CUP_WORLD ? DOME_TOURNAMENT_TRAINERS_COUNT : DOME_TOURNAMENT_TRAINERS_COUNT / 2;
+}
+
+static u32 CountCupTrainers(u32 cup)
+{
+    u32 i, n = 0;
+    for (i = 0; i < SE_PWT_TRAINERS_COUNT; i++)
+        n += IsInCup(i, cup);
+    return n;
+}
+
+// VAR_RESULT = TRUE if the chosen cup has enough different rivals
+void SE_PwtCupHasEnoughTrainers(void)
+{
+    gSpecialVar_Result = CountCupTrainers(GetCup()) >= SE_PwtEntrantsCount() - 1;
 }
 
 static void SE_PwtShuffle(u16 *list, u32 count)
@@ -114,35 +139,31 @@ static void SE_PwtShuffle(u16 *list, u32 count)
     }
 }
 
-// Fills ids[0..count-1] with distinct PWT trainer ids for the current cup
-void SE_PwtPickTrainers(u16 *ids, u32 count)
+// Fills ids[0..count-1] with different PWT trainer ids eligible for the current cup.
+// Returns how many it found (less than count only if the cup's list is too short).
+u32 SE_PwtPickTrainers(u16 *ids, u32 count)
 {
     u16 pool[SE_PWT_TRAINERS_COUNT];
-    u32 cup = VarGet(VAR_SE_PWT_CUP);
-    u32 n = 0, pass, i, start;
-    bool8 used[SE_PWT_TRAINERS_COUNT] = {0};
+    u32 cup = GetCup();
+    u32 n = 0, i;
 
-    for (pass = 0; pass < 3 && n < count; pass++)
+    for (i = 0; i < SE_PWT_TRAINERS_COUNT; i++)
     {
-        u32 poolSize = 0;
-        for (i = 0; i < SE_PWT_TRAINERS_COUNT; i++)
-        {
-            if (used[i])
-                continue;
-            if ((pass == 0 && IsInCup(i, cup))
-             || (pass == 1 && IsCupFiller(i, cup))
-             || pass == 2)
-                pool[poolSize++] = i;
-        }
-        SE_PwtShuffle(pool, poolSize);
-        start = n;
-        for (i = 0; i < poolSize && n < count; i++)
-        {
-            ids[n++] = pool[i];
-            used[pool[i]] = TRUE;
-        }
-        (void)start;
+        if (IsInCup(i, cup))
+            pool[n++] = i;
     }
+    SE_PwtShuffle(pool, n);
+    if (n > count)
+        n = count;
+    for (i = 0; i < n; i++)
+        ids[i] = pool[i];
+    return n;
+}
+
+// The CHAMPIONS CUP has no seeding: the positions in the bracket are drawn
+bool32 SE_PwtRandomBracket(void)
+{
+    return SE_IsPwt() && GetCup() == SE_PWT_CUP_CHAMPIONS;
 }
 
 // --- Level 50 ---------------------------------------------------------------------
@@ -306,7 +327,7 @@ static const u8 *const sCupNames[SE_PWT_CUPS_COUNT] =
     [SE_PWT_CUP_SINNOH]    = COMPOUND_STRING("SINNOH LEADERS CUP"),
     [SE_PWT_CUP_KALOS]     = COMPOUND_STRING("KALOS LEADERS CUP"),
     [SE_PWT_CUP_CHAMPIONS] = COMPOUND_STRING("CHAMPIONS CUP"),
-    [SE_PWT_CUP_WORLD]     = COMPOUND_STRING("WORLD LEADERS CUP"),
+    [SE_PWT_CUP_WORLD]     = COMPOUND_STRING("WORLD CUP"),
 };
 
 // STR_VAR_3 = name of the cup in VAR_SE_PWT_CUP
@@ -409,7 +430,7 @@ bool32 SE_PwtFillOpponentParty(u16 trainerId, struct Pokemon *party, struct Faci
 
     if (!SE_IsPwt() || trainerId >= SE_PWT_TRAINERS_COUNT)
         return FALSE;
-    set = gSEPwtTrainers[trainerId].monSet;
+    set = SE_FrontierTrainerList()[trainerId].monSet;
     for (i = 0; i < PARTY_SIZE && set[i] != 0xFFFF; i++)
         CreateFacilityMon(&party[i], generator, set[i]);
     return TRUE;

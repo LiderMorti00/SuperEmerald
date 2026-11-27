@@ -1,0 +1,193 @@
+# B2W2 PWT regional Leaders tournaments (serebii.net/black2white2/pwt/{kanto,johto,hoenn,sinnoh}.shtml)
+BROCK|Onix|Salac Berry|Sand Tomb, Protect, Stealth Rock, Sandstorm
+BROCK|Golem|Dark Gem|Stone Edge, Earthquake, Sucker Punch, Iron Defense
+BROCK|Kabutops|Liechi Berry|Stone Edge, Aqua Jet, Superpower, Swords Dance
+BROCK|Omastar|Rindo Berry|Hydro Pump, Ancient Power, Earth Power, Ice Beam
+BROCK|Aerodactyl|Charti Berry|Rock Slide, Earthquake, Thunder Fang, Tailwind
+BROCK|Relicanth|Rock Gem|Rock Slide, Waterfall, Rock Polish, Yawn
+MISTY|Starmie|Petaya Berry|Hydro Pump, Psychic, Thunderbolt, Ice Beam
+MISTY|Golduck|Water Gem|Aqua Jet, Blizzard, Focus Blast, Hone Claws
+MISTY|Seaking|Wacan Berry|Waterfall, Megahorn, Poison Jab, Agility
+MISTY|Lapras|Ganlon Berry|Hydro Pump, Ice Beam, Thunderbolt, Confuse Ray
+MISTY|Slowbro|Apicot Berry|Scald, Psyshock, Slack Off, Yawn
+MISTY|Blastoise|Salac Berry|Hydro Pump, Iron Tail, Avalanche, Iron Defense
+SURGE|Raichu|Electric Gem|Thunderbolt, Focus Blast, Signal Beam, Thunder Wave
+SURGE|Electrode|Lum Berry|Rain Dance, Thunder, Mirror Coat, Magnet Rise
+SURGE|Magnezone|Air Balloon|Discharge, Flash Cannon, Signal Beam, Barrier
+SURGE|Electivire|Liechi Berry|Wild Charge, Low Kick, Rock Tomb, Fire Punch
+SURGE|Jolteon|Shuca Berry|Thunder, Shadow Ball, Signal Beam, Rain Dance
+SURGE|Ampharos|Petaya Berry|Discharge, Power Gem, Charge, Cotton Guard
+ERIKA|Vileplume|Grass Gem|Petal Dance, Sleep Powder, Moonlight, Sunny Day
+ERIKA|Venusaur|Sitrus Berry|Petal Dance, Toxic, Light Screen, Synthesis
+ERIKA|Victreebel|Salac Berry|Leaf Blade, Sucker Punch, Swords Dance, Reflect
+ERIKA|Exeggutor|Tanga Berry|Solar Beam, Psyshock, Hypnosis, Sunny Day
+ERIKA|Tangrowth|Liechi Berry|Power Whip, Earthquake, Rock Slide, Swords Dance
+ERIKA|Bellossom|Fighting Gem|Leaf Blade, Drain Punch, Swords Dance, Sunny Day
+JANINE|Venomoth|Petaya Berry|Sludge Bomb, Bug Buzz, Giga Drain, Quiver Dance
+JANINE|Weezing|Fire Gem|Sludge Bomb, Fire Blast, Shadow Ball, Pain Split
+JANINE|Ariados|Payapa Berry|Poison Jab, Struggle Bug, Electroweb, Sucker Punch
+JANINE|Crobat|Sitrus Berry|Toxic, Super Fang, Heat Wave, Tailwind
+JANINE|Arbok|Shuca Berry|Gunk Shot, Sucker Punch, Coil, Dragon Tail
+JANINE|Tentacruel|Apicot Berry|Toxic Spikes, Scald, Giga Drain, Barrier
+SABRINA|Alakazam|Colbur Berry|Psyshock, Shadow Ball, Focus Blast, Charge Beam
+SABRINA|Hypno|Sitrus Berry|Dream Eater, Shadow Ball, Hypnosis, Calm Mind
+SABRINA|Mr. Mime|Kasib Berry|Psychic, Charge Beam, Light Screen, Reflect
+SABRINA|Slowking|Ganlon Berry|Psyshock, Ice Beam, Slack Off, Calm Mind
+SABRINA|Espeon|Petaya Berry|Psyshock, Shadow Ball, Yawn, Reflect
+SABRINA|Jynx|Salac Berry|Dream Eater, Frost Breath, Energy Ball, Lovely Kiss
+BLAINE|Arcanine|Liechi Berry|Flare Blitz, Wild Charge, Close Combat, Extreme Speed
+BLAINE|Ninetales|Charti Berry|Heat Wave, Energy Ball, Hypnosis, Nasty Plot
+BLAINE|Charizard|Dragon Gem|Inferno, Dragon Rush, Focus Blast, Hone Claws
+BLAINE|Magmortar|Petaya Berry|Fire Blast, Psychic, Thunderbolt, Focus Blast
+BLAINE|Flareon|Salac Berry|Flame Charge, Superpower, Flail, Yawn
+BLAINE|Rapidash|Shuca Berry|Flare Blitz, Megahorn, Wild Charge, Hypnosis
+GIOVANNI|Rhyperior|Liechi Berry|Drill Run, Stone Edge, Megahorn, Hammer Arm
+GIOVANNI|Golem|Rindo Berry|Earthquake, Stealth Rock, Rock Blast, Roar
+GIOVANNI|Marowak|Yache Berry|Bonemerang, Stone Edge, Outrage, Thunder Punch
+GIOVANNI|Sandslash|Salac Berry|Earthquake, Rock Slide, Brick Break, Sandstorm
+GIOVANNI|Nidoking|Shuca Berry|Earth Power, Sludge Wave, Megahorn, Blizzard
+GIOVANNI|Nidoqueen|Passho Berry|Earth Power, Poison Jab, Superpower, Thunder
+FALKNER|Pidgeot|Sitrus Berry|Brave Bird, Heat Wave, U-turn, Tailwind
+FALKNER|Fearow|Liechi Berry|Drill Peck, Drill Run, Heat Wave, U-turn
+FALKNER|Dodrio|Wacan Berry|Brave Bird, Thrash, Pursuit, Acupressure
+FALKNER|Honchkrow|Salac Berry|Air Cutter, Dark Pulse, Icy Wind, Nasty Plot
+FALKNER|Xatu|Petaya Berry|Psychic, Shadow Ball, Heat Wave, Calm Mind
+FALKNER|Noctowl|Ganlon Berry|Air Slash, Dream Eater, Hypnosis, Reflect
+BUGSY|Scizor|Occa Berry|Bullet Punch, X-Scissor, Aerial Ace, Swords Dance
+BUGSY|Shuckle|Sitrus Berry|Struggle Bug, Gyro Ball, Substitute, Power Split
+BUGSY|Heracross|Coba Berry|Megahorn, Close Combat, Stone Edge, Swords Dance
+BUGSY|Pinsir|Liechi Berry|X-Scissor, Superpower, Earthquake, Bulk Up
+BUGSY|Forretress|Apicot Berry|Struggle Bug, Gyro Ball, Pain Split, Stealth Rock
+BUGSY|Yanmega|Charti Berry|Bug Buzz, Psychic, Protect, Hypnosis
+MORTY|Gengar|Petaya Berry|Shadow Ball, Focus Blast, Dark Pulse, Hypnosis
+MORTY|Mismagius|Kasib Berry|Shadow Ball, Power Gem, Perish Song, Pain Split
+MORTY|Banette|Liechi Berry|Shadow Claw, Sucker Punch, Curse, Will-O-Wisp
+MORTY|Dusknoir|Sitrus Berry|Shadow Punch, Bulldoze, Thunder Punch, Pain Split
+MORTY|Sableye|Ganlon Berry|Ominous Wind, Foul Play, Calm Mind, Recover
+MORTY|Froslass|Ice Gem|Shadow Ball, Ice Beam, Thunderbolt, Confuse Ray
+CHUCK|Poliwrath|Water Gem|Waterfall, Focus Punch, Hypnosis, Bulk Up
+CHUCK|Machamp|Payapa Berry|Dynamic Punch, Rock Slide, Dual Chop, Bulldoze
+CHUCK|Hitmontop|Ground Gem|Close Combat, Bullet Punch, Drill Run, Bulk Up
+CHUCK|Hitmonchan|Ice Gem|Mach Punch, Ice Punch, Thunder Punch, Bulk Up
+CHUCK|Hitmonlee|Salac Berry|Jump Kick, Sucker Punch, Blaze Kick, Bulk Up
+CHUCK|Primeape|Liechi Berry|Close Combat, Outrage, Stone Edge, U-turn
+JASMINE|Steelix|Steel Gem|Gyro Ball, Stone Edge, Earthquake, Curse
+JASMINE|Magnezone|Shuca Berry|Flash Cannon, Zap Cannon, Thunder Wave, Gravity
+JASMINE|Forretress|Occa Berry|Gyro Ball, Earthquake, Zap Cannon, Gravity
+JASMINE|Skarmory|Salac Berry|Brave Bird, Stealth Rock, Roost, Swords Dance
+JASMINE|Metagross|Liechi Berry|Meteor Mash, Earthquake, Bullet Punch, Gravity
+JASMINE|Mawile|Dark Gem|Iron Head, Sucker Punch, Super Fang, Swords Dance
+PRYCE|Mamoswine|Liechi Berry|Icicle Crash, Earthquake, Rock Slide, Double-Edge
+PRYCE|Jynx|Psychic Gem|Blizzard, Psychic, Focus Blast, Shadow Ball
+PRYCE|Dewgong|Sitrus Berry|Blizzard, Brine, Perish Song, Hail
+PRYCE|Cloyster|Salac Berry|Icicle Spear, Razor Shell, Rock Blast, Shell Smash
+PRYCE|Lapras|Petaya Berry|Blizzard, Hydro Pump, Psychic, Hail
+PRYCE|Weavile|Dark Gem|Ice Shard, Night Slash, X-Scissor, Fake Out
+CLAIR|Kingdra|Haban Berry|Dragon Pulse, Hydro Pump, Yawn, Agility
+CLAIR|Dragonite|Liechi Berry|Dragon Rush, Hurricane, Stone Edge, Hone Claws
+CLAIR|Altaria|Fire Gem|Dragon Breath, Fire Blast, Perish Song, Cotton Guard
+CLAIR|Salamence|Petaya Berry|Dragon Pulse, Heat Wave, Hydro Pump, Earthquake
+CLAIR|Druddigon|Salac Berry|Dragon Tail, Crunch, Superpower, Glare
+CLAIR|Garchomp|Yache Berry|Dual Chop, Earthquake, Aqua Tail, Rock Slide
+ROXANNE|Probopass|Shuca Berry|Power Gem, Flash Cannon, Thunder Wave, Sandstorm
+ROXANNE|Armaldo|Liechi Berry|Stone Edge, X-Scissor, Aqua Tail, Curse
+ROXANNE|Cradily|Sitrus Berry|Ancient Power, Giga Drain, Stockpile, Stealth Rock
+ROXANNE|Aggron|Chople Berry|Stone Edge, Iron Tail, Outrage, Thunder Wave
+ROXANNE|Relicanth|Rindo Berry|Stone Edge, Aqua Tail, Amnesia, Yawn
+ROXANNE|Golem|Salac Berry|Rock Slide, Iron Head, Steamroller, Rock Polish
+BRAWLY|Hariyama|Sitrus Berry|Close Combat, Bullet Punch, Earthquake, Bulk Up
+BRAWLY|Medicham|Psychic Gem|Brick Break, Psycho Cut, Thunder Punch, Ice Punch
+BRAWLY|Breloom|Coba Berry|Focus Punch, Spore, Stone Edge, Mach Punch
+BRAWLY|Machamp|Lum Berry|Close Combat, Earthquake, Stone Edge, Bulk Up
+BRAWLY|Hitmontop|Liechi Berry|Triple Kick, Drill Run, Rock Slide, Agility
+BRAWLY|Heracross|Salac Berry|Close Combat, Megahorn, Aerial Ace, Rock Slide
+WATTSON|Manectric|Petaya Berry|Thunderbolt, Flamethrower, Signal Beam, Charge
+WATTSON|Magnezone|Air Balloon|Discharge, Tri Attack, Magnet Rise, Metal Sound
+WATTSON|Electrode|Shuca Berry|Charge Beam, Signal Beam, Light Screen, Double Team
+WATTSON|Plusle|Salac Berry|Discharge, Agility, Nasty Plot, Baton Pass
+WATTSON|Minun|Electric Gem|Volt Switch, Charm, Fake Tears, Thunder Wave
+WATTSON|Raichu|Liechi Berry|Wild Charge, Brick Break, Return, Knock Off
+FLANNERY|Torkoal|Fire Gem|Fire Blast, Stone Edge, Gyro Ball, Yawn
+FLANNERY|Camerupt|Passho Berry|Fire Blast, Earth Power, Rock Slide, Yawn
+FLANNERY|Magcargo|Shuca Berry|Lava Plume, Ancient Power, Earth Power, Shell Smash
+FLANNERY|Blaziken|Salac Berry|Flare Blitz, Sky Uppercut, Brave Bird, Bulk Up
+FLANNERY|Houndoom|Petaya Berry|Fire Blast, Dark Pulse, Will-O-Wisp, Nasty Plot
+FLANNERY|Magmortar|Liechi Berry|Fire Blast, Cross Chop, Rock Slide, Thunder Punch
+NORMAN|Slaking|Sitrus Berry|Giga Impact, Hammer Arm, Earthquake, Slack Off
+NORMAN|Spinda|Dark Gem|Thrash, Sucker Punch, Teeter Dance, Assist
+NORMAN|Kecleon|Ganlon Berry|Fake Out, Shadow Claw, Recover, Skill Swap
+NORMAN|Castform|Ice Gem|Fire Blast, Hydro Pump, Icy Wind, Disable
+NORMAN|Exploud|Petaya Berry|Hyper Voice, Focus Blast, Fire Blast, Ice Beam
+NORMAN|Zangoose|Liechi Berry|Return, Close Combat, Rock Slide, Night Slash
+WINONA|Altaria|Apicot Berry|Roost, Dream Eater, Sing, Cotton Guard
+WINONA|Pelipper|Petaya Berry|Hurricane, Scald, Ice Beam, Tailwind
+WINONA|Swellow|Liechi Berry|Brave Bird, Endeavor, Double Team, U-turn
+WINONA|Skarmory|Wacan Berry|Brave Bird, Roost, Whirlwind, Stealth Rock
+WINONA|Tropius|Yache Berry|Air Slash, Leech Seed, Substitute, Roost
+WINONA|Honchkrow|Charti Berry|Brave Bird, Night Slash, Heat Wave, Icy Wind
+TATE|Solrock|Liechi Berry|Zen Headbutt, Rock Slide, Fire Blast, Trick Room
+TATE|Xatu|Wacan Berry|Psychic, Shadow Ball, Feather Dance, Trick Room
+TATE|Chimecho|Colbur Berry|Dream Eater, Energy Ball, Hypnosis, Trick Room
+TATE|Grumpig|Ganlon Berry|Psyshock, Rest, Sleep Talk, Calm Mind
+TATE|Gallade|Kasib Berry|Psycho Cut, Stone Edge, Night Slash, Leaf Blade
+TATE|Claydol|Sitrus Berry|Psychic, Earth Power, Cosmic Power, Trick Room
+LIZA|Lunatone|Petaya Berry|Dream Eater, Hypnosis, Ice Beam, Cosmic Power
+LIZA|Xatu|Charti Berry|Psyshock, Heat Wave, Thunder Wave, Tailwind
+LIZA|Chimecho|Colbur Berry|Psychic, Yawn, Light Screen, Reflect
+LIZA|Grumpig|Salac Berry|Psyshock, Focus Blast, Power Gem, Calm Mind
+LIZA|Gardevoir|Ghost Gem|Dream Eater, Shadow Ball, Thunderbolt, Hypnosis
+LIZA|Claydol|Sitrus Berry|Zen Headbutt, Stone Edge, Cosmic Power, Bulldoze
+JUAN|Kingdra|Haban Berry|Muddy Water, Dragon Pulse, Ice Beam, Rain Dance
+JUAN|Walrein|Sitrus Berry|Surf, Blizzard, Aqua Ring, Stockpile
+JUAN|Crawdaunt|Wacan Berry|Crabhammer, Night Slash, Superpower, Dragon Dance
+JUAN|Whiscash|Rindo Berry|Waterfall, Earthquake, Rock Slide, Dragon Dance
+JUAN|Huntail|Liechi Berry|Aqua Tail, Ice Fang, Crunch, Shell Smash
+JUAN|Gorebyss|Petaya Berry|Hydro Pump, Icy Wind, Psychic, Shell Smash
+ROARK|Rampardos|Salac Berry|Stone Edge, Zen Headbutt, Earthquake, Outrage
+ROARK|Probopass|Chople Berry|Power Gem, Earth Power, Sandstorm, Stealth Rock
+ROARK|Sudowoodo|Liechi Berry|Stone Edge, Hammer Arm, Wood Hammer, Sucker Punch
+ROARK|Onix|Rindo Berry|Stone Edge, Roar, Sandstorm, Stealth Rock
+ROARK|Golem|Passho Berry|Stone Edge, Gyro Ball, Hammer Arm, Curse
+ROARK|Relicanth|Ganlon Berry|Rock Slide, Amnesia, Sleep Talk, Rest
+GARDENIA|Roserade|Lum Berry|Petal Dance, Shadow Ball, Weather Ball, Sunny Day
+GARDENIA|Carnivine|Liechi Berry|Power Whip, Crunch, Bug Bite, Swords Dance
+GARDENIA|Cherrim|Grass Gem|Giga Drain, Leech Seed, Substitute, Sunny Day
+GARDENIA|Tangrowth|Salac Berry|Power Whip, Focus Blast, Ancient Power, Earthquake
+GARDENIA|Leafeon|Occa Berry|Leaf Blade, X-Scissor, Quick Attack, Swords Dance
+GARDENIA|Torterra|Yache Berry|Wood Hammer, Earthquake, Outrage, Curse
+FANTINA|Mismagius|Salac Berry|Shadow Ball, Psychic, Calm Mind, Power Gem
+FANTINA|Drifblim|Flying Gem|Shadow Ball, Thunder, Acrobatics, Tailwind
+FANTINA|Spiritomb|Sitrus Berry|Shadow Ball, Dark Pulse, Will-O-Wisp, Calm Mind
+FANTINA|Dusknoir|Apicot Berry|Shadow Sneak, Curse, Pain Split, Confuse Ray
+FANTINA|Rotom|Electric Gem|Shadow Ball, Charge Beam, Substitute, Pain Split
+FANTINA|Gengar|Psychic Gem|Hex, Dream Eater, Nightmare, Hypnosis
+MAYLENE|Lucario|Liechi Berry|Cross Chop, Bone Rush, Extreme Speed, Swords Dance
+MAYLENE|Infernape|Fire Gem|Close Combat, Fire Punch, Mach Punch, Bulk Up
+MAYLENE|Toxicroak|Payapa Berry|Drain Punch, Sucker Punch, Torment, Bulk Up
+MAYLENE|Gallade|Coba Berry|Close Combat, Psycho Cut, Slash, Bulk Up
+MAYLENE|Medicham|Kasib Berry|Brick Break, Zen Headbutt, Bullet Punch, Bulk Up
+MAYLENE|Machamp|Sitrus Berry|Cross Chop, Stone Edge, Ice Punch, Focus Energy
+WAKE|Floatzel|Liechi Berry|Aqua Jet, Ice Punch, Focus Blast, Bulk Up
+WAKE|Empoleon|Petaya Berry|Surf, Blizzard, Grass Knot, Feather Dance
+WAKE|Lumineon|Ice Gem|Scald, Icy Wind, U-turn, Rain Dance
+WAKE|Gastrodon|Apicot Berry|Muddy Water, Earth Power, Stockpile, Recover
+WAKE|Quagsire|Rindo Berry|Aqua Tail, Earthquake, Rain Dance, Curse
+WAKE|Gyarados|Wacan Berry|Aqua Tail, Stone Edge, Outrage, Dragon Dance
+BYRON|Bastiodon|Shuca Berry|Metal Burst, Fire Blast, Stealth Rock, Iron Defense
+BYRON|Steelix|Passho Berry|Gyro Ball, Dragon Tail, Curse, Stealth Rock
+BYRON|Bronzong|Sitrus Berry|Gyro Ball, Hypnosis, Zen Headbutt, Trick Room
+BYRON|Magnezone|Air Balloon|Flash Cannon, Charge Beam, Barrier, Light Screen
+BYRON|Aggron|Chople Berry|Iron Head, Rock Slide, Outrage, Autotomize
+BYRON|Forretress|Occa Berry|Gyro Ball, Light Screen, Iron Defense, Spikes
+CANDICE|Froslass|Petaya Berry|Blizzard, Shadow Ball, Thunderbolt, Hail
+CANDICE|Abomasnow|Occa Berry|Blizzard, Grass Knot, Earthquake, Ingrain
+CANDICE|Weavile|Chople Berry|Ice Punch, Night Slash, Revenge, Torment
+CANDICE|Glaceon|Salac Berry|Icy Wind, Shadow Ball, Signal Beam, Yawn
+CANDICE|Mamoswine|Liechi Berry|Icicle Crash, Bulldoze, Superpower, Rock Tomb
+CANDICE|Glalie|Rock Gem|Ice Beam, Crunch, Rollout, Hail
+VOLKNER|Electivire|Salac Berry|Wild Charge, Brick Break, Ice Punch, Bulldoze
+VOLKNER|Luxray|Shuca Berry|Wild Charge, Crunch, Superpower, Thunder Wave
+VOLKNER|Raichu|Grass Gem|Charge Beam, Focus Blast, Grass Knot, Charge
+VOLKNER|Rotom|Colbur Berry|Discharge, Hex, Pain Split, Will-O-Wisp
+VOLKNER|Jolteon|Sitrus Berry|Thunderbolt, Shadow Ball, Charm, Wish
+VOLKNER|Electrode|Electric Gem|Electro Ball, Signal Beam, Taunt, Torment

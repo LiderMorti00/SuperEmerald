@@ -21,7 +21,10 @@ PokemonWorldTournamentPreBattleRoom_OnFrame:
 	.2byte 0
 
 PokemonWorldTournamentPreBattleRoom_EventScript_EnterRoom::
-	goto_if_eq VAR_0x8006, 1, PokemonWorldTournamentPreBattleRoom_EventScript_ReturnFromBattle
+	@ Super Emerald: back from a battle the player arrives at (5, 3), from the corridor at (5, 7).
+	@ (VAR_0x8006 can be changed by the warp, so the room didn't tell them apart.)
+	getplayerxy VAR_TEMP_2, VAR_TEMP_3
+	goto_if_eq VAR_TEMP_3, 3, PokemonWorldTournamentPreBattleRoom_EventScript_ReturnFromBattle
 	frontier_set FRONTIER_DATA_RECORD_DISABLED, TRUE
 	setvar VAR_TEMP_0, 1
 	applymovement LOCALID_PLAYER, PokemonWorldTournamentPreBattleRoom_Movement_PlayerEnter
@@ -173,6 +176,7 @@ PokemonWorldTournamentPreBattleRoom_EventScript_ReadyForRound2::
 	message PokemonWorldTournamentPreBattleRoom_Text_ReadyForRound2
 	return
 
+
 PokemonWorldTournamentPreBattleRoom_EventScript_ReadyForSemifinals::
 	message PokemonWorldTournamentPreBattleRoom_Text_ReadyForSemifinals
 	return
@@ -230,11 +234,16 @@ PokemonWorldTournamentPreBattleRoom_EventScript_RoundCompleteMessage::
 	return
 
 PokemonWorldTournamentPreBattleRoom_EventScript_Round1Complete::
+	special SE_PwtIsEightTrainerTourney
+	goto_if_eq VAR_RESULT, TRUE, PokemonWorldTournamentPreBattleRoom_EventScript_NoRoundCompleteMessage
 	msgbox PokemonWorldTournamentPreBattleRoom_Text_Round1Complete, MSGBOX_DEFAULT
 	return
 
 PokemonWorldTournamentPreBattleRoom_EventScript_Round2Complete::
 	msgbox PokemonWorldTournamentPreBattleRoom_Text_Round2Complete, MSGBOX_DEFAULT
+	return
+
+PokemonWorldTournamentPreBattleRoom_EventScript_NoRoundCompleteMessage::
 	return
 
 PokemonWorldTournamentPreBattleRoom_EventScript_SemifinalsComplete::
@@ -263,11 +272,11 @@ PokemonWorldTournamentPreBattleRoom_Movement_PlayerEnterDoor:
 	step_end
 
 PokemonWorldTournamentPreBattleRoom_Text_ReadyForRound1:
-	.string "Your 1st-round match is next.\n"
+	.string "Your round-of-16 match is next.\n"
 	.string "Are you ready?$"
 
 PokemonWorldTournamentPreBattleRoom_Text_ReadyForRound2:
-	.string "Your 2nd-round match is next.\n"
+	.string "Your quarterfinal match is next.\n"
 	.string "Are you ready?$"
 
 PokemonWorldTournamentPreBattleRoom_Text_ReadyForSemifinals:
@@ -287,12 +296,12 @@ PokemonWorldTournamentPreBattleRoom_Text_RestoreMonsToFullHealth:
 	.string "full health.$"
 
 PokemonWorldTournamentPreBattleRoom_Text_Round1Complete:
-	.string "All 1st-round matches have been\n"
+	.string "All round-of-16 matches have been\n"
 	.string "completed.\p"
 	.string "These are the teams that advanced!$"
 
 PokemonWorldTournamentPreBattleRoom_Text_Round2Complete:
-	.string "All 2nd-round matches have been\n"
+	.string "All quarterfinal matches have been\n"
 	.string "completed.\p"
 	.string "These are the teams that advanced!$"
 
@@ -327,10 +336,10 @@ PokemonWorldTournamentPreBattleRoom_Text_PlayersNextOpponentIsTrainer:
 	.string "is this TRAINER.$"
 
 PokemonWorldTournamentPreBattleRoom_Text_TourneyInRound1:
-	.string "The tournament is in the 1st round.$"
+	.string "The tournament is in the round of 16.$"
 
 PokemonWorldTournamentPreBattleRoom_Text_TourneyInRound2:
-	.string "The tournament is in the 2nd round.$"
+	.string "The tournament is in the quarterfinals.$"
 
 PokemonWorldTournamentPreBattleRoom_Text_TourneyInSemifinals:
 	.string "The tournament is in the semifinals.$"
@@ -377,4 +386,5 @@ PokemonWorldTournamentPreBattleRoom_Text_ReadyForTuckerSilverShort:
 PokemonWorldTournamentPreBattleRoom_Text_ReadyForTuckerGoldShort:
 	.string "Your final battle against TUCKER is\n"
 	.string "next. Are you ready?$"
+
 

@@ -247,6 +247,8 @@ gSpecials::
 	def_special SE_SetContestHallStaffGfx
 	def_special SE_GetSinnohContestAudienceGfx
 	def_special SE_PwtSetCupPrizeReceived
+	def_special SE_PwtIsEightTrainerTourney
+	def_special SE_PwtCupHasEnoughTrainers
 	def_special DoLotteryCornerComputerEffect
 	def_special EndLotteryCornerComputerEffect
 	def_special ChooseMonForMoveRelearner, waitstate=1
