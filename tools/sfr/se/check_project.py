@@ -232,7 +232,7 @@ for region, name in (('K', 'KANTO'), ('J', 'JOHTO'), ('H', 'HOENN'), ('S', 'SINN
         err('pwt', '%s LEADERS cup: only %d leaders' % (name, len(leaders.get(region, ()))))
 if len(set(pwt_variants.CHAMPIONS_CUP)) < 7:
     err('pwt', 'CHAMPIONS CUP: %d champions' % len(set(pwt_variants.CHAMPIONS_CUP)))
-world = {r[0] for r in pwt_roster.R if r[6] in 'LEC'} | set(pwt_variants.EXTRA_LEADERS)
+world = {r[0] for r in pwt_roster.R if r[6] in 'LECG'} | set(pwt_variants.EXTRA_LEADERS)
 if len(world) < 15:
     err('pwt', 'WORLD CUP: only %d trainers' % len(world))
 import subprocess, tempfile, shutil

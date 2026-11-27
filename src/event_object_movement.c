@@ -622,6 +622,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_SEValerie, OBJ_EVENT_PAL_TAG_SE_VALERIE},
     {gObjectEventPal_SEViola, OBJ_EVENT_PAL_TAG_SE_VIOLA},
     {gObjectEventPal_SEWulfric, OBJ_EVENT_PAL_TAG_SE_WULFRIC},
+    {gObjectEventPal_SEKris, OBJ_EVENT_PAL_TAG_SE_KRIS},
 // Super Emerald: Sinnoh end
 // Super Emerald: HnS begin
     {gObjectEventPal_Bugsy_hns, OBJ_EVENT_PAL_TAG_BUGSY_HNS},

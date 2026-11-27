@@ -641,6 +641,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SERamos;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SEValerie;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SEViola;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SEWulfric;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SEKris;
 // Super Emerald: Sinnoh end
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -762,6 +763,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SE_VALERIE] = &gObjectEventGraphicsInfo_SEValerie,
     [OBJ_EVENT_GFX_SE_VIOLA] = &gObjectEventGraphicsInfo_SEViola,
     [OBJ_EVENT_GFX_SE_WULFRIC] = &gObjectEventGraphicsInfo_SEWulfric,
+    [OBJ_EVENT_GFX_SE_KRIS] = &gObjectEventGraphicsInfo_SEKris,
     // Super Emerald: Sinnoh end
     // Super Emerald: HnS begin
     [OBJ_EVENT_GFX_ARCHER_HNS] = &gObjectEventGraphicsInfo_Archer_hns,

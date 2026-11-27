@@ -83,7 +83,7 @@ if errors:
     sys.exit('\n'.join(errors))
 
 REG = {'K': 'SE_PWT_KANTO', 'J': 'SE_PWT_JOHTO', 'H': 'SE_PWT_HOENN', 'S': 'SE_PWT_SINNOH', 'X': 'SE_PWT_KALOS', 'U': 'SE_PWT_UNOVA'}
-RANK = {'L': 'SE_PWT_RANK_LEADER', 'E': 'SE_PWT_RANK_ELITE', 'C': 'SE_PWT_RANK_CHAMPION', 'B': 'SE_PWT_RANK_BRAIN', 'T': 'SE_PWT_RANK_TRAINER'}
+RANK = {'L': 'SE_PWT_RANK_LEADER', 'E': 'SE_PWT_RANK_ELITE', 'C': 'SE_PWT_RANK_CHAMPION', 'B': 'SE_PWT_RANK_BRAIN', 'T': 'SE_PWT_RANK_TRAINER', 'G': 'SE_PWT_RANK_GUEST'}
 leader_regions = {}
 for r in R:
     regs = r[5] if r[6] == 'L' else ''

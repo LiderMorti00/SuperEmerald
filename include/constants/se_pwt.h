@@ -85,6 +85,15 @@ enum
     SE_PWT_TRAINER_XT_CALEM,
     SE_PWT_TRAINER_XT_SINA,
     SE_PWT_TRAINER_XT_MIETTE,
+    SE_PWT_TRAINER_LEAF,
+    SE_PWT_TRAINER_GOLD,
+    SE_PWT_TRAINER_KRIS,
+    SE_PWT_TRAINER_SILVER,
+    SE_PWT_TRAINER_MAY,
+    SE_PWT_TRAINER_BRENDAN,
+    SE_PWT_TRAINER_LUCAS,
+    SE_PWT_TRAINER_DAWN,
+    SE_PWT_TRAINER_BARRY,
     SE_PWT_TRAINERS_COUNT
 };
 
@@ -100,7 +109,8 @@ enum
 #define SE_PWT_RANK_ELITE     1
 #define SE_PWT_RANK_CHAMPION  2
 #define SE_PWT_RANK_BRAIN     3
-#define SE_PWT_RANK_TRAINER   4 // regional trainers: only fill the regional cups
+#define SE_PWT_RANK_TRAINER   4 // regional trainers (not in the cups any more)
+#define SE_PWT_RANK_GUEST     5 // protagonists and rivals: WORLD CUP only
 
 // Cups (VAR_SE_PWT_CUP)
 #define SE_PWT_CUP_KANTO      0

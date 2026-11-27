@@ -81,7 +81,8 @@ u16 SE_PwtFacilityClassGfx(u8 facilityClass)
 
 // --- Choosing the opponents of the cup ---------------------------------------------
 // LEADERS cups: 7 gym leaders of the region. CHAMPIONS CUP: 7 of its 8 champions.
-// WORLD CUP: 15 among every gym leader, Elite Four member and champion (each one once).
+// WORLD CUP: 15 among every gym leader, Elite Four member and champion, and the protagonists and
+// rivals (Leaf, Gold, Kris, Silver, May or Brendan, Lucas, Dawn, Barry), each one once.
 
 static bool32 IsInRegionCup(u32 id, u32 cup)
 {
@@ -101,9 +102,17 @@ static bool32 IsInCup(u32 id, u32 cup)
     if (cup == SE_PWT_CUP_CHAMPIONS)
         return gSEPwtInChampionsCup[id];
     if (cup == SE_PWT_CUP_WORLD)
+    {
+        // May is the rival of a boy, Brendan of a girl
+        if (id == SE_PWT_TRAINER_MAY)
+            return gSaveBlock2Ptr->playerGender == MALE;
+        if (id == SE_PWT_TRAINER_BRENDAN)
+            return gSaveBlock2Ptr->playerGender == FEMALE;
         return gSEPwtLeaderRegions[id] != 0
             || gSEPwtRanks[id] == SE_PWT_RANK_ELITE
-            || gSEPwtRanks[id] == SE_PWT_RANK_CHAMPION;
+            || gSEPwtRanks[id] == SE_PWT_RANK_CHAMPION
+            || gSEPwtRanks[id] == SE_PWT_RANK_GUEST;
+    }
     return IsInRegionCup(id, cup);
 }
 

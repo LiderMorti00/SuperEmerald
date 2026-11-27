@@ -782,6 +782,11 @@ const u32 gTrainerFrontPic_SEViola[] = INCGFX_U32("graphics/trainers/front_pics/
 const u16 gTrainerPalette_SEViola[] = INCGFX_U16("graphics/trainers/front_pics/se/viola.png", ".gbapal");
 const u32 gTrainerFrontPic_SEWulfric[] = INCGFX_U32("graphics/trainers/front_pics/se/wulfric.png", ".4bpp.smol");
 const u16 gTrainerPalette_SEWulfric[] = INCGFX_U16("graphics/trainers/front_pics/se/wulfric.png", ".gbapal");
+// Super Emerald: from HnS (kris_hns, silver_hns)
+const u32 gTrainerFrontPic_SEKris[] = INCGFX_U32("graphics/trainers/front_pics/se/kris.png", ".4bpp.smol");
+const u16 gTrainerPalette_SEKris[] = INCGFX_U16("graphics/trainers/front_pics/se/kris.png", ".gbapal");
+const u32 gTrainerFrontPic_SESilver[] = INCGFX_U32("graphics/trainers/front_pics/se/silver.png", ".4bpp.smol");
+const u16 gTrainerPalette_SESilver[] = INCGFX_U16("graphics/trainers/front_pics/se/silver.png", ".gbapal");
 const u32 gTrainerFrontPic_SinnohGalacticGruntM[] = INCGFX_U32("graphics/trainers/front_pics/sinnoh/galactic_grunt_m.png", ".4bpp.smol");
 const u16 gTrainerPalette_SinnohGalacticGruntM[] = INCGFX_U16("graphics/trainers/front_pics/sinnoh/galactic_grunt_m.png", ".gbapal");
 const u32 gTrainerFrontPic_SinnohGalacticGruntF[] = INCGFX_U32("graphics/trainers/front_pics/sinnoh/galactic_grunt_f.png", ".4bpp.smol");
@@ -1850,5 +1855,13 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     [TRAINER_PIC_SE_WULFRIC] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_SEWulfric, gTrainerPalette_SEWulfric),
+    },
+    [TRAINER_PIC_SE_KRIS] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_SEKris, gTrainerPalette_SEKris),
+    },
+    [TRAINER_PIC_SE_SILVER] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_SESilver, gTrainerPalette_SESilver),
     },
 };

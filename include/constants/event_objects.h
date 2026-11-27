@@ -652,6 +652,7 @@ enum
     OBJ_EVENT_GFX_SE_VALERIE,
     OBJ_EVENT_GFX_SE_VIOLA,
     OBJ_EVENT_GFX_SE_WULFRIC,
+    OBJ_EVENT_GFX_SE_KRIS,
     // Super Emerald: Sinnoh end
     NUM_OBJ_EVENT_GFX,
 };
@@ -1047,6 +1048,7 @@ enum
 #define OBJ_EVENT_PAL_TAG_SE_VALERIE              0x1272
 #define OBJ_EVENT_PAL_TAG_SE_VIOLA                0x1273
 #define OBJ_EVENT_PAL_TAG_SE_WULFRIC              0x1274
+#define OBJ_EVENT_PAL_TAG_SE_KRIS                 0x1275
 // Super Emerald: Sinnoh end (tags)
 #define OBJ_EVENT_PAL_TAG_NONE                    0x11FF
 
