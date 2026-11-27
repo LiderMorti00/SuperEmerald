@@ -107,8 +107,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 7,
-      "y": 25,
+      "x": 2,
+      "y": 23,
       "elevation": 3,
       "item": "ITEM_ODD_KEYSTONE",
       "flag": "FLAG_SN_HIDDEN_ITEM_LAVARIDGE_TOWN_ICE_HEAL",

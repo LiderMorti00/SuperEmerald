@@ -551,8 +551,8 @@
     },
     {
       "type": "sign",
-      "x": 56,
-      "y": 36,
+      "x": 55,
+      "y": 34,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "JubilifeCity_EventScript_Sign7"
@@ -576,7 +576,7 @@
     {
       "type": "hidden_item",
       "x": 44,
-      "y": 55,
+      "y": 56,
       "elevation": 3,
       "item": "ITEM_STARDUST",
       "flag": "FLAG_SN_HIDDEN_ITEM_TRICK_HOUSE_NUGGET"

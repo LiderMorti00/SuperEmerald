@@ -438,7 +438,7 @@
     {
       "type": "sign",
       "x": 11,
-      "y": 42,
+      "y": 43,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "HearthomeCity_EventScript_PtSign1"
@@ -469,8 +469,8 @@
     },
     {
       "type": "sign",
-      "x": 46,
-      "y": 10,
+      "x": 47,
+      "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "HearthomeCity_EventScript_PtSign5"
@@ -486,7 +486,7 @@
     {
       "type": "sign",
       "x": 45,
-      "y": 17,
+      "y": 20,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "HearthomeCity_EventScript_PtSign7"
@@ -501,8 +501,8 @@
     },
     {
       "type": "sign",
-      "x": 20,
-      "y": 30,
+      "x": 19,
+      "y": 31,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "HearthomeCity_EventScript_PtSign9"
@@ -510,7 +510,7 @@
     {
       "type": "hidden_item",
       "x": 20,
-      "y": 3,
+      "y": 5,
       "elevation": 3,
       "item": "ITEM_BIG_MUSHROOM",
       "flag": "FLAG_SN_HIDDEN_ITEM_UNDERWATER_127_HP_UP"
