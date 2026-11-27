@@ -43,13 +43,12 @@ EternaCity_Gym_EventScript_GardenNotice::
 
 EternaCity_Gym_Text_GardenNotice::
 	.string "GARDEN NOTICE\p"
-	.string "Three gardeners tend the RED, YELLOW\n"
-	.string "and BLUE flower beds.\p"
-	.string "Win against all three and the gate\n"
-	.string "to GARDENIA's garden will open.\p"
-	.string "RED roses: up the west path.\n"
-	.string "YELLOW sunflowers: east path.\l"
-	.string "BLUE pond: west of the south path.$"
+	.string "Defeat all three gardeners to open\n"
+	.string "the gate to GARDENIA's garden.\p"
+	.string "From the main junction, take the\n"
+	.string "west and east paths to find two.\p"
+	.string "For the third, look west of the\n"
+	.string "path near the entrance.$"
 
 
 EternaCity_Gym_EventScript_Caroline::

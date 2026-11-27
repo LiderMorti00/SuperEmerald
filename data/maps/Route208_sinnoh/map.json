@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -21,6 +22,7 @@
   ],
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_HIKER",
       "x": 36,
       "y": 20,
@@ -34,6 +36,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_HIKER",
       "x": 8,
       "y": 23,
@@ -47,6 +50,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_HIKER",
       "x": 24,
       "y": 21,
@@ -60,6 +64,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_FRLG",
       "x": 21,
       "y": 12,
@@ -73,6 +78,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FISHER",
       "x": 29,
       "y": 25,
@@ -86,6 +92,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_AROMA_LADY",
       "x": 49,
       "y": 18,
@@ -99,6 +106,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_ARTIST",
       "x": 55,
       "y": 22,
@@ -112,6 +120,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_FRLG",
       "x": 53,
       "y": 32,
@@ -125,6 +134,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_FRLG",
       "x": 35,
       "y": 11,
@@ -138,6 +148,7 @@
       "flag": "FLAG_TEMP_11"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_FRLG",
       "x": 36,
       "y": 12,
@@ -151,6 +162,7 @@
       "flag": "FLAG_TEMP_12"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_FRLG",
       "x": 36,
       "y": 13,
@@ -164,6 +176,7 @@
       "flag": "FLAG_TEMP_13"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_FRLG",
       "x": 14,
       "y": 15,
@@ -177,6 +190,7 @@
       "flag": "FLAG_TEMP_14"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK_FRLG",
       "x": 9,
       "y": 20,
@@ -190,6 +204,7 @@
       "flag": "FLAG_TEMP_15"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 32,
       "y": 12,
@@ -203,6 +218,7 @@
       "flag": "FLAG_SN_ITEM_ROUTE_104_POKE_BALL"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 16,
       "y": 3,
@@ -216,6 +232,7 @@
       "flag": "FLAG_SN_ITEM_PETALBURG_WOODS_ETHER"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 15,
       "y": 18,
@@ -229,6 +246,7 @@
       "flag": "FLAG_SN_ITEM_MAGMA_HIDEOUT_3F_3R_ECAPE_ROPE"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 51,
       "y": 12,
@@ -242,6 +260,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 52,
       "y": 12,
@@ -255,6 +274,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 53,
       "y": 12,
@@ -268,6 +288,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 54,
       "y": 12,
@@ -281,6 +302,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 36,
       "y": 22,
@@ -367,6 +389,5 @@
       "item": "ITEM_TINY_MUSHROOM",
       "flag": "FLAG_SN_HIDDEN_ITEM_UNDERWATER_124_HEART_SCALE_2"
     }
-  ],
-  "floor_number": 0
+  ]
 }

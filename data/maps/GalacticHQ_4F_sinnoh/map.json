@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": false,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": null,
   "object_events": [
@@ -29,8 +30,8 @@
       "flag": "FLAG_SN_HIDE_HQ_CYRUS"
     },
     {
-      "type": "object",
       "local_id": "LOCALID_SE_FINAL_CYRUS",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_CYRUS",
       "x": 9,
       "y": 8,
