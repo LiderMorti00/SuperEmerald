@@ -11,6 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
+  "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
@@ -36,6 +37,7 @@
   ],
   "object_events": [
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_HIKER",
       "x": 18,
       "y": 62,
@@ -49,6 +51,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_AROMA_LADY",
       "x": 23,
       "y": 59,
@@ -62,6 +65,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CAMPER_FRLG",
       "x": 23,
       "y": 72,
@@ -75,6 +79,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER_FRLG",
       "x": 23,
       "y": 45,
@@ -88,6 +93,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_HIKER",
       "x": 16,
       "y": 36,
@@ -101,6 +107,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BATTLE_GIRL",
       "x": 15,
       "y": 25,
@@ -114,6 +121,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER_FRLG",
       "x": 16,
       "y": 21,
@@ -127,6 +135,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CAMPER_FRLG",
       "x": 14,
       "y": 51,
@@ -140,6 +149,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SINNOH_BUG_CATCHER",
       "x": 17,
       "y": 14,
@@ -153,6 +163,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 12,
       "y": 44,
@@ -166,6 +177,7 @@
       "flag": "FLAG_SN_ITEM_ROUTE_111_HP_UP"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 21,
       "y": 65,
@@ -179,6 +191,7 @@
       "flag": "FLAG_SN_ITEM_ROUTE_112_NUGGET"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 27,
       "y": 34,
@@ -192,6 +205,7 @@
       "flag": "FLAG_SN_ITEM_ROUTE_113_MAX_ETHER"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 11,
       "y": 30,
@@ -205,6 +219,7 @@
       "flag": "FLAG_SN_ITEM_ROUTE_113_SUPER_REPEL"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 10,
       "y": 84,
@@ -218,6 +233,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 11,
       "y": 84,
@@ -231,6 +247,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 19,
       "y": 40,
@@ -244,6 +261,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 20,
       "y": 40,
@@ -257,6 +275,7 @@
       "flag": "0"
     },
     {
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
       "x": 16,
       "y": 49,
@@ -327,6 +346,5 @@
       "item": "ITEM_STARDUST",
       "flag": "FLAG_SN_HIDDEN_ITEM_ROUTE_119_ULTRA_BALL"
     }
-  ],
-  "floor_number": 0
+  ]
 }
