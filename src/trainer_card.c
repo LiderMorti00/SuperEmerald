@@ -1062,9 +1062,7 @@ static void SetUpTrainerCardTask(void)
 #define BADGE_TITLE_W   6
 #define CARD_PLAIN_TILE 0x004
 #define BADGE_TITLE_PX  ((BADGE_TITLE_X - 1) * 8) // WIN_CARD_TEXT starts at tile (1, 1)
-#define BADGE_TITLE_PY  ((BADGE_TITLE_ROW - 1) * 8 - 5) // the 12 px cell must end above the badge boxes (y 120)
-
-static const u8 sBadgeTitleColors[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_DARK_GRAY};
+#define BADGE_TITLE_PY  ((BADGE_TITLE_ROW - 1) * 8)
 
 static bool32 ShowsBadgeTitle(void)
 {
@@ -1080,30 +1078,36 @@ static void HideCardBadgesLabel(void)
         sData->frontTilemap[BADGE_TITLE_ROW * 30 + BADGE_TITLE_X + i] = CARD_PLAIN_TILE;
 }
 
+// Titles drawn in the 2-px block letters of the original label (tools/sfr/se/card_titles.py)
+static const u32 sBadgeTitleKanto_Gfx[]  = INCGFX_U32("graphics/trainer_card/titles/kanto.png", ".4bpp");
+static const u32 sBadgeTitleJohto_Gfx[]  = INCGFX_U32("graphics/trainer_card/titles/johto.png", ".4bpp");
+static const u32 sBadgeTitleHoenn_Gfx[]  = INCGFX_U32("graphics/trainer_card/titles/hoenn.png", ".4bpp");
+static const u32 sBadgeTitleSinnoh_Gfx[] = INCGFX_U32("graphics/trainer_card/titles/sinnoh.png", ".4bpp");
+static const u32 sBadgeTitleArrowLeft_Gfx[]  = INCGFX_U32("graphics/trainer_card/titles/arrow_left.png", ".4bpp");
+static const u32 sBadgeTitleArrowRight_Gfx[] = INCGFX_U32("graphics/trainer_card/titles/arrow_right.png", ".4bpp");
+#define BADGE_TITLE_GFX_W 88
+
 static void PrintBadgeTitleOnCard(void)
 {
-    const u8 *title;
+    const u32 *title;
+    u32 width;
 
     if (!ShowsBadgeTitle())
         return;
     switch (GetCardBadgeRegion())
     {
-    case REGION_KANTO:  title = COMPOUND_STRING("KANTO BADGES");  break;
-    case REGION_JOHTO:  title = COMPOUND_STRING("JOHTO BADGES");  break;
-    case REGION_SINNOH: title = COMPOUND_STRING("SINNOH BADGES"); break;
-    default:            title = COMPOUND_STRING("HOENN BADGES");  break;
+    case REGION_KANTO:  title = sBadgeTitleKanto_Gfx;  width = 78; break;
+    case REGION_JOHTO:  title = sBadgeTitleJohto_Gfx;  width = 78; break;
+    case REGION_SINNOH: title = sBadgeTitleSinnoh_Gfx; width = 80; break;
+    default:            title = sBadgeTitleHoenn_Gfx;  width = 77; break;
     }
-    FillWindowPixelRect(WIN_CARD_TEXT, PIXEL_FILL(0), BADGE_TITLE_PX - 8, BADGE_TITLE_PY, 15 * 8, 12);
+    // same place as the original label: tile row 14, from tile 3 (the window starts at tile (1, 1))
+    FillWindowPixelRect(WIN_CARD_TEXT, PIXEL_FILL(0), BADGE_TITLE_PX - 8, BADGE_TITLE_PY, 15 * 8, 8);
+    BlitBitmapToWindow(WIN_CARD_TEXT, (const u8 *)title, BADGE_TITLE_PX, BADGE_TITLE_PY, BADGE_TITLE_GFX_W, 8);
     if (sData->canSwitchBadges)
     {
-        StringCopy(gStringVar4, COMPOUND_STRING("{LEFT_ARROW}"));
-        StringAppend(gStringVar4, title);
-        StringAppend(gStringVar4, COMPOUND_STRING("{RIGHT_ARROW}"));
-        AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_SMALL, BADGE_TITLE_PX - 8, BADGE_TITLE_PY, sBadgeTitleColors, TEXT_SKIP_DRAW, gStringVar4);
-    }
-    else
-    {
-        AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_SMALL, BADGE_TITLE_PX, BADGE_TITLE_PY, sBadgeTitleColors, TEXT_SKIP_DRAW, title);
+        BlitBitmapToWindow(WIN_CARD_TEXT, (const u8 *)sBadgeTitleArrowLeft_Gfx, BADGE_TITLE_PX - 7, BADGE_TITLE_PY, 8, 8);
+        BlitBitmapToWindow(WIN_CARD_TEXT, (const u8 *)sBadgeTitleArrowRight_Gfx, BADGE_TITLE_PX + width + 3, BADGE_TITLE_PY, 8, 8);
     }
 }
 
