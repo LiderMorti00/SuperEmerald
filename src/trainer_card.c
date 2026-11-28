@@ -1062,7 +1062,7 @@ static void SetUpTrainerCardTask(void)
 #define BADGE_TITLE_W   6
 #define CARD_PLAIN_TILE 0x004
 #define BADGE_TITLE_PX  ((BADGE_TITLE_X - 1) * 8) // WIN_CARD_TEXT starts at tile (1, 1)
-#define BADGE_TITLE_PY  ((BADGE_TITLE_ROW - 1) * 8 - 3)
+#define BADGE_TITLE_PY  ((BADGE_TITLE_ROW - 1) * 8 - 5) // the 12 px cell must end above the badge boxes (y 120)
 
 static const u8 sBadgeTitleColors[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_DARK_GRAY};
 
