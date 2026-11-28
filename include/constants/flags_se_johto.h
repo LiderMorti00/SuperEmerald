@@ -82,4 +82,10 @@
 #define FLAG_SE_KH_HIDDEN_VICTORYROADKANTO_B2F_HNS_8_38    0x276B
 // end Kanto HGSS maps
 
+// Regions the player has set foot in (set on every map load; the trainer card only lets you
+// browse the badges of these regions, Hoenn always)
+#define FLAG_SE_VISITED_KANTO                0x27F0
+#define FLAG_SE_VISITED_JOHTO                0x27F1
+#define FLAG_SE_VISITED_SINNOH               0x27F2
+
 #endif // GUARD_CONSTANTS_FLAGS_SE_JOHTO_H

@@ -78,6 +78,8 @@ struct TrainerCardData
     bool8 timeColonNeedDraw;
     u8 cardType;
     bool8 isHoenn;
+    u8 badgeRegion;      // Super Emerald: region whose badges are shown (REGION_NONE until chosen)
+    bool8 canSwitchBadges;
     u16 blendColor;
     MainCallback callback2;
     struct TrainerCard trainerCard;
@@ -109,6 +111,10 @@ static void CreateTrainerCardTrainerPic(void);
 static void DrawCardScreenBackground(u16 *);
 static void DrawCardFrontOrBack(u16 *);
 static void DrawStarsAndBadgesOnCard(void);
+static void SwitchBadgeRegion(s32 dir);
+static void HideCardBadgesLabel(void);
+static void SetBadgeCountsForRegion(void);
+static void PrintBadgeTitleOnCard(void);
 static void PrintTimeOnCard(void);
 static void FlipTrainerCard(void);
 static bool8 IsCardFlipTaskActive(void);
@@ -197,30 +203,94 @@ static const u16 sSinnohTrainerCardBadges_Pal[]  = INCGFX_U16("graphics/trainer_
 static const u32 sJohtoTrainerCardBadges_Gfx[]   = INCGFX_U32("graphics/trainer_card/johto/badges.png", ".4bpp.smol");
 static const u32 sSinnohTrainerCardBadges_Gfx[]  = INCGFX_U32("graphics/trainer_card/sinnoh/badges.png", ".4bpp.smol");
 
-// Super Emerald: the card shows the 8 badges of the region the player is in
-// (Kanto also in the Sevii Islands; Hoenn anywhere else)
+// Super Emerald: the card shows the 8 badges of the region the player is in (Kanto also in the
+// Sevii Islands; Hoenn anywhere else). With L/R the player browses the badges of the other regions
+// they have set foot in, in the order Kanto, Johto, Hoenn, Sinnoh.
+static const enum Region sBadgeRegionOrder[] = {REGION_KANTO, REGION_JOHTO, REGION_HOENN, REGION_SINNOH};
+
+static enum Region GetMapBadgeRegion(void)
+{
+    if (IsInKanto())  return REGION_KANTO;
+    if (IsInJohto())  return REGION_JOHTO;
+    if (IsInSinnoh()) return REGION_SINNOH;
+    return REGION_HOENN;
+}
+
+static enum Region GetCardBadgeRegion(void)
+{
+    if (sData->badgeRegion == REGION_NONE)
+        sData->badgeRegion = GetMapBadgeRegion();
+    return sData->badgeRegion;
+}
+
 static const u32 *GetRegionBadgesGfx(void)
 {
-    if (IsInKanto())  return sKantoTrainerCardBadges_Gfx;
-    if (IsInJohto())  return sJohtoTrainerCardBadges_Gfx;
-    if (IsInSinnoh()) return sSinnohTrainerCardBadges_Gfx;
-    return sHoennTrainerCardBadges_Gfx;
+    switch (GetCardBadgeRegion())
+    {
+    case REGION_KANTO:  return sKantoTrainerCardBadges_Gfx;
+    case REGION_JOHTO:  return sJohtoTrainerCardBadges_Gfx;
+    case REGION_SINNOH: return sSinnohTrainerCardBadges_Gfx;
+    default:            return sHoennTrainerCardBadges_Gfx;
+    }
 }
 
 static const u16 *GetRegionBadgesPal(void)
 {
-    if (IsInKanto())  return sKantoTrainerCardBadges_Pal;
-    if (IsInJohto())  return sJohtoTrainerCardBadges_Pal;
-    if (IsInSinnoh()) return sSinnohTrainerCardBadges_Pal;
-    return sHoennTrainerCardBadges_Pal;
+    switch (GetCardBadgeRegion())
+    {
+    case REGION_KANTO:  return sKantoTrainerCardBadges_Pal;
+    case REGION_JOHTO:  return sJohtoTrainerCardBadges_Pal;
+    case REGION_SINNOH: return sSinnohTrainerCardBadges_Pal;
+    default:            return sHoennTrainerCardBadges_Pal;
+    }
+}
+
+static u32 GetFirstBadgeFlag(enum Region region)
+{
+    switch (region)
+    {
+    case REGION_KANTO:  return FLAG_BADGE09_GET;
+    case REGION_JOHTO:  return FLAG_JOHTO_BADGE1_GET;
+    case REGION_SINNOH: return FLAG_SINNOH_BADGE1_GET;
+    default:            return FLAG_BADGE01_GET;
+    }
 }
 
 static u32 GetRegionFirstBadgeFlag(void)
 {
-    if (IsInKanto())  return FLAG_BADGE09_GET;
-    if (IsInJohto())  return FLAG_JOHTO_BADGE1_GET;
-    if (IsInSinnoh()) return FLAG_SINNOH_BADGE1_GET;
-    return FLAG_BADGE01_GET;
+    return GetFirstBadgeFlag(GetCardBadgeRegion());
+}
+
+// A region shows up once the player has set foot in it (older saves: or has one of its badges)
+static bool32 IsBadgeRegionVisible(enum Region region)
+{
+    u32 i, flag = GetFirstBadgeFlag(region);
+
+    if (region == REGION_HOENN || region == GetMapBadgeRegion())
+        return TRUE;
+    if (region == REGION_KANTO && FlagGet(FLAG_SE_VISITED_KANTO))
+        return TRUE;
+    if (region == REGION_JOHTO && FlagGet(FLAG_SE_VISITED_JOHTO))
+        return TRUE;
+    if (region == REGION_SINNOH && FlagGet(FLAG_SE_VISITED_SINNOH))
+        return TRUE;
+    for (i = 0; i < NUM_BADGES; i++)
+    {
+        if (FlagGet(flag + i))
+            return TRUE;
+    }
+    return FALSE;
+}
+
+static bool32 CanSwitchBadgeRegion(void)
+{
+    u32 i, n = 0;
+
+    if (sData->isLink || sData->cardType == CARD_TYPE_FRLG)
+        return FALSE;
+    for (i = 0; i < ARRAY_COUNT(sBadgeRegionOrder); i++)
+        n += IsBadgeRegionVisible(sBadgeRegionOrder[i]);
+    return n > 1;
 }
 
 static const struct BgTemplate sTrainerCardBgTemplates[4] =
@@ -494,6 +564,14 @@ static void Task_TrainerCard(u8 taskId)
                 sData->mainState = STATE_CLOSE_CARD;
             }
         }
+        else if (sData->canSwitchBadges && JOY_NEW(L_BUTTON))
+        {
+            SwitchBadgeRegion(-1);
+        }
+        else if (sData->canSwitchBadges && JOY_NEW(R_BUTTON))
+        {
+            SwitchBadgeRegion(1);
+        }
         break;
     case STATE_WAIT_FLIP_TO_BACK:
         if (IsCardFlipTaskActive() && Overworld_IsRecvQueueAtMax() != TRUE)
@@ -582,9 +660,14 @@ static bool8 LoadCardGfx(void)
         if (!sData->isLink)
         {
             if (sData->cardType != CARD_TYPE_FRLG)
+            {
                 DecompressDataWithHeaderWram(gHoennTrainerCardFront_Tilemap, sData->frontTilemap);
+                HideCardBadgesLabel();
+            }
             else
+            {
                 DecompressDataWithHeaderWram(gKantoTrainerCardFront_Tilemap, sData->frontTilemap);
+            }
         }
         else
         {
@@ -870,8 +953,6 @@ void CopyTrainerCardData(struct TrainerCard *dst, struct TrainerCard *src, u8 ga
 
 static void SetDataFromTrainerCard(void)
 {
-    u8 i;
-    u32 badgeFlag;
 
     sData->hasPokedex = FALSE;
     sData->hasHofResult = FALSE;
@@ -896,13 +977,10 @@ static void SetDataFromTrainerCard(void)
     if (sData->trainerCard.battleTowerWins || sData->trainerCard.battleTowerStraightWins)
         sData->hasBattleTowerWins++;
 
-    // Super Emerald: the badges of the region the player is in: Hoenn FLAG_BADGE01-08,
+    // Super Emerald: the badges of the region shown: Hoenn FLAG_BADGE01-08,
     // Kanto FLAG_BADGE09-16, Johto FLAG_JOHTO_BADGE1-8, Sinnoh FLAG_SINNOH_BADGE1-8
-    for (i = 0, badgeFlag = GetRegionFirstBadgeFlag(); i < NUM_BADGES; badgeFlag++, i++)
-    {
-        if (FlagGet(badgeFlag))
-            sData->badgeCount[i]++;
-    }
+    SetBadgeCountsForRegion();
+    sData->canSwitchBadges = CanSwitchBadgeRegion();
 }
 
 static void InitGpuRegs(void)
@@ -977,6 +1055,99 @@ static void SetUpTrainerCardTask(void)
     SetDataFromTrainerCard();
 }
 
+// Super Emerald: "BADGES" is part of the card graphic; it's hidden and the card prints the
+// title of the region shown instead, with arrows when L/R can switch region
+#define BADGE_TITLE_ROW 14
+#define BADGE_TITLE_X   3
+#define BADGE_TITLE_W   6
+#define CARD_PLAIN_TILE 0x004
+#define BADGE_TITLE_PX  ((BADGE_TITLE_X - 1) * 8) // WIN_CARD_TEXT starts at tile (1, 1)
+#define BADGE_TITLE_PY  ((BADGE_TITLE_ROW - 1) * 8 - 3)
+
+static const u8 sBadgeTitleColors[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_DARK_GRAY};
+
+static bool32 ShowsBadgeTitle(void)
+{
+    return !sData->isLink && sData->cardType != CARD_TYPE_FRLG;
+}
+
+static void HideCardBadgesLabel(void)
+{
+    u32 i;
+    if (!ShowsBadgeTitle())
+        return;
+    for (i = 0; i < BADGE_TITLE_W; i++)
+        sData->frontTilemap[BADGE_TITLE_ROW * 30 + BADGE_TITLE_X + i] = CARD_PLAIN_TILE;
+}
+
+static void PrintBadgeTitleOnCard(void)
+{
+    const u8 *title;
+
+    if (!ShowsBadgeTitle())
+        return;
+    switch (GetCardBadgeRegion())
+    {
+    case REGION_KANTO:  title = COMPOUND_STRING("KANTO BADGES");  break;
+    case REGION_JOHTO:  title = COMPOUND_STRING("JOHTO BADGES");  break;
+    case REGION_SINNOH: title = COMPOUND_STRING("SINNOH BADGES"); break;
+    default:            title = COMPOUND_STRING("HOENN BADGES");  break;
+    }
+    FillWindowPixelRect(WIN_CARD_TEXT, PIXEL_FILL(0), BADGE_TITLE_PX - 8, BADGE_TITLE_PY, 15 * 8, 12);
+    if (sData->canSwitchBadges)
+    {
+        StringCopy(gStringVar4, COMPOUND_STRING("{LEFT_ARROW}"));
+        StringAppend(gStringVar4, title);
+        StringAppend(gStringVar4, COMPOUND_STRING("{RIGHT_ARROW}"));
+        AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_SMALL, BADGE_TITLE_PX - 8, BADGE_TITLE_PY, sBadgeTitleColors, TEXT_SKIP_DRAW, gStringVar4);
+    }
+    else
+    {
+        AddTextPrinterParameterized3(WIN_CARD_TEXT, FONT_SMALL, BADGE_TITLE_PX, BADGE_TITLE_PY, sBadgeTitleColors, TEXT_SKIP_DRAW, title);
+    }
+}
+
+static void SetBadgeCountsForRegion(void)
+{
+    u32 i, badgeFlag;
+    memset(sData->badgeCount, 0, sizeof(sData->badgeCount));
+    for (i = 0, badgeFlag = GetRegionFirstBadgeFlag(); i < NUM_BADGES; badgeFlag++, i++)
+    {
+        if (FlagGet(badgeFlag))
+            sData->badgeCount[i]++;
+    }
+}
+
+// L/R on the front of the card: the badges of the previous/next visited region
+static void SwitchBadgeRegion(s32 dir)
+{
+    s32 i, cur = 0, n = ARRAY_COUNT(sBadgeRegionOrder);
+
+    for (i = 0; i < n; i++)
+    {
+        if (sBadgeRegionOrder[i] == GetCardBadgeRegion())
+            cur = i;
+    }
+    for (i = 1; i < n; i++)
+    {
+        enum Region region = sBadgeRegionOrder[(cur + dir * i + n * 2) % n];
+        if (IsBadgeRegionVisible(region))
+        {
+            sData->badgeRegion = region;
+            break;
+        }
+    }
+    DecompressDataWithHeaderWram(GetRegionBadgesGfx(), sData->badgeTiles);
+    LoadBgTiles(3, sData->badgeTiles, ARRAY_COUNT(sData->badgeTiles), 0);
+    LoadPalette(GetRegionBadgesPal(), BG_PLTT_ID(3), PLTT_SIZE_4BPP);
+    SetBadgeCountsForRegion();
+    FillBgTilemapBufferRect(3, 0, 4, 15, 3 * NUM_BADGES, 2, 0);
+    DrawStarsAndBadgesOnCard();
+    PrintBadgeTitleOnCard();
+    DrawTrainerCardWindow(WIN_CARD_TEXT);
+    PlaySE(SE_SELECT);
+}
+
 static bool8 PrintAllOnCardFront(void)
 {
     switch (sData->printState)
@@ -998,6 +1169,9 @@ static bool8 PrintAllOnCardFront(void)
         break;
     case 5:
         PrintProfilePhraseOnCard();
+        break;
+    case 6:
+        PrintBadgeTitleOnCard();
         break;
     default:
         sData->printState = 0;

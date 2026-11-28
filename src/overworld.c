@@ -673,6 +673,15 @@ static void LoadCurrentMapData(void)
     gMapHeader = *Overworld_GetMapHeaderByGroupAndId(gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
     gSaveBlock1Ptr->mapLayoutId = gMapHeader.mapLayoutId;
     gMapHeader.mapLayout = GetMapLayout(gMapHeader.mapLayoutId);
+
+    // Super Emerald: remember the regions the player has set foot in (trainer card badges)
+    switch (GetCurrentRegion())
+    {
+    case REGION_KANTO:  FlagSet(FLAG_SE_VISITED_KANTO);  break;
+    case REGION_JOHTO:  FlagSet(FLAG_SE_VISITED_JOHTO);  break;
+    case REGION_SINNOH: FlagSet(FLAG_SE_VISITED_SINNOH); break;
+    default: break;
+    }
 }
 
 static void LoadSaveblockMapHeader(void)
