@@ -190,6 +190,38 @@ static const u16 sTrainerCardSticker3_Pal[]      = INCGFX_U16("graphics/trainer_
 static const u16 sTrainerCardSticker4_Pal[]      = INCGFX_U16("graphics/trainer_card/frlg/stickers4.pal", ".gbapal");
 static const u32 sHoennTrainerCardBadges_Gfx[]   = INCGFX_U32("graphics/trainer_card/badges.png", ".4bpp.smol");
 static const u32 sKantoTrainerCardBadges_Gfx[]   = INCGFX_U32("graphics/trainer_card/frlg/badges.png", ".4bpp.smol");
+// Super Emerald: Johto badges from HnS (top row of hns/combined_badges.png, same palette as Hoenn's)
+// and Sinnoh badges from the Sinnoh project
+static const u16 sJohtoTrainerCardBadges_Pal[]   = INCGFX_U16("graphics/trainer_card/johto/badges.png", ".gbapal");
+static const u16 sSinnohTrainerCardBadges_Pal[]  = INCGFX_U16("graphics/trainer_card/sinnoh/badges.png", ".gbapal");
+static const u32 sJohtoTrainerCardBadges_Gfx[]   = INCGFX_U32("graphics/trainer_card/johto/badges.png", ".4bpp.smol");
+static const u32 sSinnohTrainerCardBadges_Gfx[]  = INCGFX_U32("graphics/trainer_card/sinnoh/badges.png", ".4bpp.smol");
+
+// Super Emerald: the card shows the 8 badges of the region the player is in
+// (Kanto also in the Sevii Islands; Hoenn anywhere else)
+static const u32 *GetRegionBadgesGfx(void)
+{
+    if (IsInKanto())  return sKantoTrainerCardBadges_Gfx;
+    if (IsInJohto())  return sJohtoTrainerCardBadges_Gfx;
+    if (IsInSinnoh()) return sSinnohTrainerCardBadges_Gfx;
+    return sHoennTrainerCardBadges_Gfx;
+}
+
+static const u16 *GetRegionBadgesPal(void)
+{
+    if (IsInKanto())  return sKantoTrainerCardBadges_Pal;
+    if (IsInJohto())  return sJohtoTrainerCardBadges_Pal;
+    if (IsInSinnoh()) return sSinnohTrainerCardBadges_Pal;
+    return sHoennTrainerCardBadges_Pal;
+}
+
+static u32 GetRegionFirstBadgeFlag(void)
+{
+    if (IsInKanto())  return FLAG_BADGE09_GET;
+    if (IsInJohto())  return FLAG_JOHTO_BADGE1_GET;
+    if (IsInSinnoh()) return FLAG_SINNOH_BADGE1_GET;
+    return FLAG_BADGE01_GET;
+}
 
 static const struct BgTemplate sTrainerCardBgTemplates[4] =
 {
@@ -563,8 +595,8 @@ static bool8 LoadCardGfx(void)
         }
         break;
     case 3:
-        if (sData->cardType != CARD_TYPE_FRLG && !IsInKanto())
-            DecompressDataWithHeaderWram(sHoennTrainerCardBadges_Gfx, sData->badgeTiles);
+        if (sData->cardType != CARD_TYPE_FRLG)
+            DecompressDataWithHeaderWram(GetRegionBadgesGfx(), sData->badgeTiles);
         else
             DecompressDataWithHeaderWram(sKantoTrainerCardBadges_Gfx, sData->badgeTiles);
         break;
@@ -864,10 +896,11 @@ static void SetDataFromTrainerCard(void)
     if (sData->trainerCard.battleTowerWins || sData->trainerCard.battleTowerStraightWins)
         sData->hasBattleTowerWins++;
 
-    // Super Emerald: in Kanto the card shows the Kanto badges (FLAG_BADGE09-16)
-    for (i = 0, badgeFlag = FLAG_BADGE01_GET; badgeFlag < FLAG_BADGE01_GET + NUM_BADGES; badgeFlag++, i++)
+    // Super Emerald: the badges of the region the player is in: Hoenn FLAG_BADGE01-08,
+    // Kanto FLAG_BADGE09-16, Johto FLAG_JOHTO_BADGE1-8, Sinnoh FLAG_SINNOH_BADGE1-8
+    for (i = 0, badgeFlag = GetRegionFirstBadgeFlag(); i < NUM_BADGES; badgeFlag++, i++)
     {
-        if (FlagGet(IsInKanto() ? FLAG_BADGE09_GET + i : badgeFlag))
+        if (FlagGet(badgeFlag))
             sData->badgeCount[i]++;
     }
 }
@@ -1458,7 +1491,7 @@ static u8 SetCardBgsAndPals(void)
         if (sData->cardType != CARD_TYPE_FRLG)
         {
             LoadPalette(sHoennTrainerCardPals[sData->trainerCard.stars], BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
-            LoadPalette(IsInKanto() ? sKantoTrainerCardBadges_Pal : sHoennTrainerCardBadges_Pal, BG_PLTT_ID(3), PLTT_SIZE_4BPP);
+            LoadPalette(GetRegionBadgesPal(), BG_PLTT_ID(3), PLTT_SIZE_4BPP);
             if (sData->trainerCard.gender != MALE)
                 LoadPalette(sHoennTrainerCardFemaleBg_Pal, BG_PLTT_ID(1), PLTT_SIZE_4BPP);
         }
